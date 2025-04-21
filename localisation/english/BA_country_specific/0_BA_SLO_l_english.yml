@@ -33,6 +33,7 @@
  SLO_with_skoda_idea:0 "슈코다와의 협력"
  SLO_with_skoda2_idea:0 "슈코다와의 협력"
  SLO_strike_idea:0 "파업"
+ SLO_illegal_government_idea:0 "불법 정권"
 
  ##국가중점##
  SLO_foc_1:0 "총선거"
@@ -239,6 +240,9 @@
  SLO_event.146.a:0 ""Zem robotnikom, moc ludu!"\n(땅은 노동자에게, 권력은 인민에게!)"
  SLO_event.146.b:0 ""Za slobodu, zakon a narod!"\n(자유, 법, 그리고 국민을 위하여!)"
  SLO_event.146.c:0 ""Slovensko Slovakom!"\n(슬로바키아는 슬로바키아인에게!)"
+ SLO_event.150.t:0 "브라티슬라바 진군"
+ SLO_event.150.e:0 "작성 예정"
+ SLO_event.150.a:0 "몰아내자 공산당!"
 
  ##디시전##
  SLO_decisions_1:0 "브라티슬라바 경제 협력 기구"
@@ -290,6 +294,7 @@
  SLO_tt_10:0 "§Y헝가리와의 전쟁§!을 개시했을 때:"
  SLO_tt_11:0 "§Y9개 보병 대대와 포병 지원§!으로 이루어진 §Y6개 사단§! 획득."
  SLO_tt_12:0 "§Y7개 보병 대대와 2개 포병 대대, 포병 지원§!으로 이루어진 §Y4개 정예 사단§! 획득."
+ SLO_tt_13:0 "§L파시즘§! 인기도가 §Y50%§! 미만이면, §R국민들은 분노할 것입니다!§!"
  SLO_tt_add_5:0 "§Y해당 국가§!에 대한 영향력: §G+5%§!."
  SLO_tt_remove_5:0 "§Y해당 국가§!에 대한 영향력: §R-5%§!."
  SLO_tt_2remove_5:0 "§Y슬로바키아§!의 영향력: §G-5%§!."
@@ -301,6 +306,7 @@
  SLO_party_1:0 "사회민주연합"
  SLO_party_2:0 "사회민주연합 - 당 내 좌익"
  SLO_party_3:0 "사회민주연합 - 당 내 우익"
+ SLO_party_4:0 "임시위원회"
  SLO_anti_hungary:0 "반헝가리 전선 조인"
  construction_effort_tt_NOT:0 "§Y민간공장§!을 위한 건설 슬롯이 충분함"
  SLO_faction_1:0 "소협상국"
@@ -329,6 +335,7 @@
 
  ##캐릭터##
  #SLO_jozef_tiso:0 "요제프 티소" >바닐라 로컬 존재
+ SLO_slobak_committee:0 "슬로바키아 임시위원회"
  SLO_slobak_council:0 "슬로바키아 임시의회"
  SLO_karol_smidke:0 "카롤 슈미트케"
  #SLO_rudolf_viest:0 "루돌프 비에스트" >바닐라 로컬 존재

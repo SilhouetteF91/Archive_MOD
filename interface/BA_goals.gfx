@@ -104,6 +104,18 @@ spriteTypes = {
 		name = "GFX_focus_TRN_improving_academy_industry"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_improving_academy_industry.tga"
 	}
+	SpriteType = {
+		name = "GFX_focus_TRN_Suzumi"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_Suzumi.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_cause_of_trinity"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_cause_of_trinity.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_savior_of_kivotos"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_savior_of_kivotos.tga"
+	}
 
 	SpriteType = {
 		name = "GFX_focus_BLM_gang_thugs_war_focus"

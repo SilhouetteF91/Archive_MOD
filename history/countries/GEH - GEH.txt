@@ -219,6 +219,7 @@ recruit_character = GEH_swimsuit_hina
 recruit_character = GEH_prefect_team_spy
 recruit_character = GEH_prefect_team_planning_department
 recruit_character = GEH_prefect_team_emergency_committee
+recruit_character = GEH_prefect_team_rescue_country_committee
 recruit_character = GEH_robot_hina
 
 recruit_character = GEH_piet_mondrian
@@ -244,8 +245,8 @@ add_timed_idea = {
 }
 
 add_ideas = {
-	disarmed_nation
 	BA_isolation
+	volunteer_only
 	civilian_economy
 	GEH_individualism_low
 	BA_a_divided_academy
@@ -277,7 +278,7 @@ if = {
 	## 1936 Start ##
 	# Light Cruisers #
 	create_equipment_variant = {
-		name = "치노미야급"
+		name = "Chinomiya Class"
 		type = light_cruiser_1
 		parent_version = 0
 		upgrades = {
@@ -293,7 +294,7 @@ if = {
 
 	limit = { has_dlc = "Man the Guns" }
 	create_equipment_variant = {
-		name = "시로미급"
+		name = "Shiromi Class"
 		type = ship_hull_light_1
 		name_group = GER_TB_HISTORICAL
 		parent_version = 0
@@ -309,7 +310,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "소라사키급"
+		name = "Kurodate Class"
 		type = ship_hull_submarine_1
 		name_group = GER_SS_HISTORICAL
 		parent_version = 0
@@ -321,7 +322,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "히노미야급"
+		name = "Chinomiya Class"
 		type = ship_hull_cruiser_1
 		name_group = GER_CL_HISTORICAL
 		parent_version = 0
@@ -339,7 +340,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "아마우급"
+		name = "Amau Class"
 		type = ship_hull_cruiser_2
 		name_group = GER_CL_HISTORICAL
 		parent_version = 0
@@ -357,7 +358,7 @@ if = {
 		}
 	}
 	create_equipment_variant = {
-		name = "이스보셋급"
+		name = "Ishbosheth Class"
 		type = ship_hull_super_heavy_1
 		name_group = GER_BB_HISTORICAL
 		parent_version = 0
@@ -383,3 +384,4 @@ if = {
 country_event = { id = GEH.flavor_event.2 days = 10 }
 country_event = { id = GEH.flavor_event.5 days = 40 }
 country_event = { id = GEH.flavor_event.10 days = 110 }
+country_event = { id = GEH.flavor_event.23 days = 440 random_days = 40 }

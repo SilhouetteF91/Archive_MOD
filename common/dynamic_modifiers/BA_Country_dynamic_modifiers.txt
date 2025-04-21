@@ -1458,7 +1458,7 @@ TRM_develop_the_heer_modifier = { # 트리니티 육군
 
 TRM_VVS = { #트리니티 공군
 
-    icon = GFX_idea_generic_air_research
+    icon = GFX_idea_TRM_Trinity_air_force
 
     air_cas_present_factor = TRM_VVS_air_cas_present_factor
 
