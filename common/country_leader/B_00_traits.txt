@@ -968,16 +968,14 @@ leader_traits = {
 	}
  	ABY_trait_shehd = { #"노동부장"
 		random = no
-		political_power_factor = -0.15
-		stability_factor = 0.05
-		Production_factory_efficiency_gain_factor = 0.1
-		production_factory_start_efficiency_factor = 0.1
-		production_factory_max_efficiency_factor = 0.1
+		army_core_defence_factor = 0.1
+		stability_factor = 0.1
+		resistance_target_on_our_occupied_states = 0.25
 	}
  	ABY_trait_dog = { #"맹견"
 		random = no
-		party_popularity_stability_factor = 0.2
-		army_core_defence_factor = 0.1
+		conscription_factor = 0.1
+		command_power_gain_mult = 0.15
 		army_attack_factor = 0.05
 	}
  	ABY_trait_resistance = { #"저항운동가"
@@ -994,14 +992,14 @@ leader_traits = {
  	ABY_trait_neptis = { #"네프티스 경제 전문가"
 		random = no
 		production_factory_max_efficiency_factor = 0.10
-		Production_factory_efficiency_gain_factor = 0.05
-		production_speed_rail_way_factor = 0.5
-		production_speed_supply_node_factor = 0.5
+		Production_factory_efficiency_gain_factor = 0.10
+		industrial_capacity_factory = 0.1
 	}
  	ABY_trait_abydos_leader = { #"아비도스 학생대표"
 		random = no
 		war_support_factor = 0.1
-		conscription = 0.01
+		army_core_attack_factor = 0.1
+		defensive_war_stability_factor = 0.2
 	}
  	ABY_trait_eotlqk = { #"아량넓은 신사"
 		random = no
@@ -1166,8 +1164,8 @@ leader_traits = {
 	}
  	ABY_trait_deplomacy = { #"외무장관"
 		random = no
-		improve_relations_maintain_cost_factor = -0.5
-		stability_factor = 0.1
+		surrender_limit = 0.1
+		war_support_factor = 0.1
 		political_power_factor = 0.1
 	}
  	ABY_trait_hard_government = { #"혼란스러운 정부"

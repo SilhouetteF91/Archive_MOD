@@ -1585,6 +1585,446 @@ guiTypes = {
 			clicksound = pop_up
 		}
 
+		instantTextboxType = {
+			name = "ABY_descision_focus_first_nametag"
+			position = { x = 240 y = 336 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_first_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_1_nametag"
+			position = { x = 186 y = 377 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_1_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_2_nametag"
+			position = { x = 240 y = 377 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_2_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_3_nametag"
+			position = { x = 294 y = 377 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_3_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_4_nametag"
+			position = { x = 186 y = 418 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_4_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_5_nametag"
+			position = { x = 240 y = 418 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_5_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_6_nametag"
+			position = { x = 294 y = 418 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_6_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_7_nametag"
+			position = { x = 186 y = 459 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_7_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_8_nametag"
+			position = { x = 240 y = 459 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_8_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_9_nametag"
+			position = { x = 294 y = 459 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_9_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_10_nametag"
+			position = { x = 240 y = 500 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_10_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_11_nametag"
+			position = { x = 240 y = 580 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_11_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_12_nametag"
+			position = { x = 213 y = 621 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_12_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_13_nametag"
+			position = { x = 213 y = 662 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_13_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_14_nametag"
+			position = { x = 267 y = 662 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_14_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_abydos_15_nametag"
+			position = { x = 240 y = 703 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_abydos_15_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_german_1_nametag"
+			position = { x = 23 y = 377 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_german_1_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_german_2_nametag"
+			position = { x = 77 y = 377 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_german_2_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_german_3_nametag"
+			position = { x = 23 y = 418 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_german_3_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_german_4_nametag"
+			position = { x = 77 y = 418 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_german_4_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_german_5_nametag"
+			position = { x = 77 y = 459 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_german_5_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_german_6_nametag"
+			position = { x = 50 y = 500 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_german_6_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_german_7_nametag"
+			position = { x = 131 y = 500 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_german_7_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_german_8_nametag"
+			position = { x = 50 y = 540 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_german_8_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_german_9_nametag"
+			position = { x = 131 y = 540 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_german_9_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_german_10_nametag"
+			position = { x = 104 y = 621 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_german_10_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_german_11_nametag"
+			position = { x = 77 y = 662 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_german_11_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_german_12_nametag"
+			position = { x = 131 y = 662 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_german_12_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_czecho_1_nametag"
+			position = { x = 376 y = 377 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_czecho_1_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_czecho_2_nametag"
+			position = { x = 457 y = 377 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_czecho_2_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_czecho_3_nametag"
+			position = { x = 376 y = 418 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_czecho_3_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_czecho_4_nametag"
+			position = { x = 430 y = 418 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_czecho_4_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_czecho_5_nametag"
+			position = { x = 376 y = 459 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_czecho_5_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_czecho_6_nametag"
+			position = { x = 457 y = 459 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_czecho_6_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_czecho_7_nametag"
+			position = { x = 430 y = 500 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_czecho_7_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_czecho_8_nametag"
+			position = { x = 376 y = 540 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_czecho_8_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_czecho_9_nametag"
+			position = { x = 376 y = 580 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_czecho_9_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_czecho_10_nametag"
+			position = { x = 349 y = 621 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_czecho_10_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_czecho_11_nametag"
+			position = { x = 403 y = 621 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_czecho_11_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "ABY_descision_focus_czecho_12_nametag"
+			position = { x = 376 y = 662 }
+			font = "hoi_6mbs"
+			text = "ABY_descision_focus_czecho_12_name"
+			
+			maxWidth = 30
+			maxHeight = 12
+			format = center		
+		}
+
 	}
 	containerWindowType = {
 		name = "ABY_national_focus_detail_view"
@@ -1629,7 +2069,7 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_24header"
 			borderSize = {x = 0 y = 0}
-			text = "focus name"
+			text = "[Getabydosfocusname]"
 			maxWidth = 450
 			maxHeight = 30
 			format = center
@@ -1638,7 +2078,7 @@ guiTypes = {
 		iconType = {
 			name = "symbol"
 			position = { x = 42 y = 88 }
-			spriteType = "GFX_goal_unknown"
+			spriteType = "[GetabydosfocusGFX]"
 			alwaystransparent = yes
 		}
 		iconType = {
@@ -1653,7 +2093,7 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
-			text = "other focuses"
+			text = "[Getabydosfocusprerequisites]"
 			maxWidth = 287
 			maxHeight = 100
 			scrollbarType = standardtext_slider
@@ -1681,7 +2121,7 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_18mbs"
 			borderSize = {x = 5 y = 0}
-			text = "focus description"
+			text = "[Getabydosfocusdesc]"
 			maxWidth = 485
 			maxHeight = 70
 			format = center
@@ -1711,7 +2151,7 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
-			text = "focus effects"
+			text = "[Getabydosfocuseffect]"
 			maxWidth = 455
 			maxHeight = 138
 			scrollbarType = standardtext_slider
@@ -1721,11 +2161,21 @@ guiTypes = {
 		buttonType = {
 			name = "start"
 			quadTextureSprite = "GFX_button_123x34"
-			buttonText = "START_FOCUS"
+			buttonText = "[Getabydosfocusstart]"
 			buttonFont = "hoi_20b"
 			position = { x=390 y=53 }
 			clicksound = select_focus
-			shortcut = "RETURN"
+			pdx_tooltip = ABY_descision_focus_button_available
+		}
+		
+		buttonType = {
+			name = "startbutton_unavailable"
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "[Getabydosfocusstart]"
+			buttonFont = "hoi_20b"
+			position = { x=390 y=53 }
+			clicksound = select_focus
+			pdx_tooltip = ABY_descision_focus_abydos_3_info_1
 		}
 		
 		iconType = {
