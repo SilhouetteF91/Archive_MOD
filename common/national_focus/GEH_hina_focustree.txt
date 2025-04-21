@@ -6659,6 +6659,13 @@ focus_tree = {
 				has_completed_focus = GEH_start_focus
 			}
 		}
+		
+		offset = {
+			x = 25
+			trigger = {
+				is_debug = yes
+			}
+		}
 
 		available = {
 			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
@@ -6701,158 +6708,26 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = { 
-					has_country_leader = {
-						ruling_only = yes # default = yes
-						character = GEH_prefect_team_emergency_committee
-					}
-				}
-				GEH_prefect_team_emergency_committee = {
-					retire = yes
-				}
-			}
 
-			if = {
+			if = { # 히나 독재
 				limit = { has_country_flag = hina_assembly_h_flag }
 				custom_effect_tooltip = GEH_three_congress_focus_no_hina_htt
-				
-				hidden_effect = {
-					GEH_robot_hina = {
-						add_country_leader_role = {
-							promote_leader = yes
-							country_leader = {
-								ideology = emergency_military_government
-								desc = "GEH_hina_fake_leader_desc"
-								expire = "1980.1.1"
-								traits = {
-									b_tjsehqnwkd3 GEH_friendly_sociopath
-								}
-							}
-						}
-
-						add_country_leader_role = {
-							promote_leader = yes
-							country_leader = {
-								ideology = fascism_ideology
-								desc = "GEH_hina_fake_leader_desc"
-								expire = "1980.1.1"
-								traits = {
-									b_tjsehqnwkd3 GEH_friendly_sociopath
-								}
-							}
-						}
-
-						add_corps_commander_role = {
-							traits = { BA_robot_general infantry_officer war_hero trait_cautious urban_assault_specialist }
-							attack_skill=4
-							defense_skill=5
-							planning_skill=5
-							logistics_skill= 5
-							skill=5
-							legacy_id=-1
-						}
-					}
-					country_event = { id = GEH.event.1004 }
-				}
+				set_country_flag = hina_assembly_h_serenade_flag
 			}
-			else_if = {
+			else_if = { # 아코
 				limit = { has_country_flag = hina_assembly_a_flag }
 				custom_effect_tooltip = GEH_three_congress_focus_no_hina_att
-
-				hidden_effect = {
-					add_popularity = {
-						ideology = democratic
-						popularity = 0.6
-					}
-		
-					set_politics = {
-						ruling_party = democratic #아코 리더
-						elections_allowed = no
-					}            
-					
-					if = {
-						limit = {
-							NOT = { 
-								has_country_leader = {
-									 character = GEH_dkzh 
-								} 
-							}
-						}
-		
-						GEH_dkzh = {
-							add_country_leader_role = {
-								promote_leader = yes
-								country_leader = {
-									ideology = technocracy
-									
-									expire = "1980.1.1"
-									traits = {
-										GEH_ako_trait_1
-									}
-								}
-							}
-						}
-					}
-	
-					set_portraits = {
-						character = GEH_dkzh
-						civilian = { large ="gfx/leaders/GEH/GEH_ako_amau_leader.dds" }
-					}
-	
-					set_country_leader_description = {
-						desc = GEH_ako_amau_bad_ending_leader_desc
-					}
-
-					country_event = { id = GEH.event.10 days = 30 }
-					
-				}
-
-				set_rule = { CAN_DECLARE_WAR_ON_SAME_IDEOLOGY = yes }
-				set_rule = { can_only_justify_war_on_threat_country = no }
-				set_rule = { can_join_opposite_factions = yes }
+				set_country_flag = hina_assembly_a_serenade_flag
 			}
-			else_if = {
+			else_if = { # 이오리
 				limit = { has_country_flag = hina_assembly_c_flag }
 				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ctt
-				
-				add_popularity = {
-					ideology = fascism
-					popularity = 0.6
-				}
-	
-				set_politics = {
-					ruling_party = fascism #이오리 리더
-					elections_allowed = no
-				}            
-				
-				if = {
-					limit = {
-						NOT = { 
-							has_country_leader = {
-								 character = GEH_dldhfl
-							} 
-						}
-					}
-	
-					GEH_dldhfl = {
-						add_country_leader_role = {
-							promote_leader = yes
-							country_leader = {
-								ideology = fascism_ideology
-								expire = "1980.1.1"
-								traits = {
-									dictator_1
-									GEH_blame_director
-								}
-							}
-						}
-					}
-				}
+				set_country_flag = hina_assembly_c_serenade_flag
 			}
-			else_if = {
+			else_if = { # 기본
 				limit = { has_country_flag = hina_assembly_normal_flag }
 				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ntt
+				set_country_flag = hina_assembly_normal_serenade_flag
 
 				set_politics = {
 					ruling_party = neutrality
@@ -6961,6 +6836,478 @@ focus_tree = {
 			}
 		}
 	}
+
+# /히나 탈주: 독재 중점 최종장 시작
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 2
+
+		relative_position_id = GEH_three_congress_focus_no_hina
+		x = 0
+		y = 1
+
+		allow_branch = {
+			OR = {
+				is_debug = yes
+				has_country_flag = hina_assembly_h_serenade_flag
+			}
+		}
+		
+		offset = {
+			x = 0
+			trigger = {
+				is_debug = yes
+			}
+		}
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = hina_assembly_h_serenade_flag
+			}
+		}
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			country_event = { id = GEH.event.1005 }
+		}
+	}
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 2
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h
+		x = 1
+		y = 1
+
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_h
+        }
+
+		mutually_exclusive = {
+			focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { 
+					has_country_leader = {
+						ruling_only = yes # default = yes
+						character = GEH_prefect_team_emergency_committee
+					}
+				}
+				GEH_prefect_team_emergency_committee = {
+					retire = yes
+				}
+			}
+			GEH_robot_hina = {
+				effect_tooltip = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							desc = "GEH_hina_fake_leader_desc"
+							expire = "1980.1.1"
+						}
+					}
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = emergency_military_government
+							desc = "GEH_hina_fake_leader_desc"
+							expire = "1980.1.1"
+							traits = {
+								b_tjsehqnwkd3_tooltip GEH_friendly_sociopath_tooltip
+							}
+						}
+					}
+				}
+				hidden_effect = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = emergency_military_government
+							desc = "GEH_hina_fake_leader_desc"
+							expire = "1980.1.1"
+							traits = {
+								b_tjsehqnwkd3 GEH_friendly_sociopath
+							}
+						}
+					}
+
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							desc = "GEH_hina_fake_leader_desc"
+							expire = "1980.1.1"
+							traits = {
+								b_tjsehqnwkd3 GEH_friendly_sociopath
+							}
+						}
+					}
+				}
+
+				add_corps_commander_role = {
+					traits = { BA_robot_general infantry_officer war_hero trait_cautious urban_assault_specialist }
+					attack_skill=4
+					defense_skill=5
+					planning_skill=5
+					logistics_skill= 5
+					skill=5
+					legacy_id=-1
+				}
+			}
+			country_event = { id = GEH.event.1004 }
+		}
+	}
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 2
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h
+		x = -1
+		y = 1
+
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_h
+        }
+
+		mutually_exclusive = {
+			focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1
+		}
+
+		available = {
+			has_country_flag = GAEBALJUNG
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+		}
+	}
+# 히나 탈주: 독재 중점 최종장 끝/
+
+# /히나 탈주: 아코 중점 최종장 시작
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_a
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 2
+
+		relative_position_id = GEH_three_congress_focus_no_hina
+		x = 0
+		y = 1
+
+		allow_branch = {
+			OR = {
+				is_debug = yes
+				has_country_flag = hina_assembly_a_serenade_flag
+			}
+		}
+		
+		offset = {
+			x = 5
+			trigger = {
+				is_debug = yes
+			}
+		}
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = hina_assembly_a_serenade_flag
+			}
+		}
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { 
+					has_country_leader = {
+						ruling_only = yes # default = yes
+						character = GEH_prefect_team_emergency_committee
+					}
+				}
+				GEH_prefect_team_emergency_committee = {
+					retire = yes
+				}
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.6
+			}
+
+			set_politics = {
+				ruling_party = democratic #아코 리더
+				elections_allowed = no
+			}            
+			
+			if = {
+				limit = {
+					NOT = { 
+						has_country_leader = {
+							 character = GEH_dkzh 
+						} 
+					}
+				}
+
+				GEH_dkzh = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = technocracy
+							
+							expire = "1980.1.1"
+							traits = {
+								GEH_ako_trait_1
+							}
+						}
+					}
+				}
+			}
+
+			hidden_effect = {
+				set_portraits = {
+					character = GEH_dkzh
+					civilian = { large ="gfx/leaders/GEH/GEH_ako_amau_leader.dds" }
+				}
+	
+				set_country_leader_description = {
+					desc = GEH_ako_amau_bad_ending_leader_desc
+				}
+
+				country_event = { id = GEH.event.10 days = 30 }
+			}
+
+			set_rule = { CAN_DECLARE_WAR_ON_SAME_IDEOLOGY = yes }
+			set_rule = { can_only_justify_war_on_threat_country = no }
+			set_rule = { can_join_opposite_factions = yes }
+			set_party_name = {
+				ideology = neutrality
+				long_name = neutrality
+				name = neutrality
+			}
+		}
+	}
+# 히나 탈주: 아코 중점 최종장 끝/
+
+# /히나 탈주: 이오리 중점 최종장 시작
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 2
+
+		relative_position_id = GEH_three_congress_focus_no_hina
+		x = 0
+		y = 1
+
+		allow_branch = {
+			OR = {
+				is_debug = yes
+				has_country_flag = hina_assembly_c_serenade_flag
+			}
+		}
+		
+		offset = {
+			x = 10
+			trigger = {
+				is_debug = yes
+			}
+		}
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = hina_assembly_c_serenade_flag
+			}
+		}
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { 
+					has_country_leader = {
+						ruling_only = yes # default = yes
+						character = GEH_prefect_team_emergency_committee
+					}
+				}
+				GEH_prefect_team_emergency_committee = {
+					retire = yes
+				}
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.6
+			}
+
+			set_politics = {
+				ruling_party = fascism #이오리 리더
+				elections_allowed = no
+			}            
+			
+			if = {
+				limit = {
+					NOT = {
+						has_country_leader = {
+							character = GEH_dldhfl
+							ruling_only = no
+						}
+					}
+				}
+				add_country_leader_role = {
+					character = GEH_dldhfl
+					promote_leader = yes
+					country_leader = {
+						ideology = fascism_ideology
+						expire = "1980.1.1"
+						traits = {
+							dictator_1
+							GEH_blame_director
+						}
+					}
+				}
+			}
+			else = {
+				promote_character = GEH_dldhfl
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = GEH_anti_iori_party_long
+				name = GEH_anti_iori_party
+			}
+
+			GEH_dkzh = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = oligarchism
+						expire = "1980.1.1"
+						traits = {
+						}
+					}
+				}
+			}
+
+			#add_ideas = GEH_kriegsrecht
+		}
+	}
+# 히나 탈주: 이오리 중점 최종장 끝/
+
+# /히나 탈주: 노말 중점 최종장 시작
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 2
+
+		relative_position_id = GEH_three_congress_focus_no_hina
+		x = 0
+		y = 1
+
+		allow_branch = {
+			OR = {
+				is_debug = yes
+				has_country_flag = hina_assembly_normal_serenade_flag
+			}
+		}
+		
+		offset = {
+			x = 15
+			trigger = {
+				is_debug = yes
+			}
+		}
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = hina_assembly_normal_serenade_flag
+			}
+		}
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { 
+					has_country_leader = {
+						ruling_only = yes # default = yes
+						character = GEH_prefect_team_emergency_committee
+					}
+				}
+				GEH_prefect_team_emergency_committee = {
+					retire = yes
+				}
+			}
+		}
+	}
+# 히나 탈주: 노말 중점 최종장 끝/
+
 ## 히나 탈주 중점 끝/
 
 ### 정치 루트 끝/

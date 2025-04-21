@@ -1299,10 +1299,6 @@ country_event = { #
 					id = GEH_ako_love_balance
 				}
 			}
-			#if = {
-			#	limit = { has_country_flag = hina_assembly_h_flag }
-			#	country_event = { id = GEH.event.1005 }
-			#}
 		}
 	}
 	

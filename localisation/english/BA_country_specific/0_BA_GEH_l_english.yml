@@ -564,6 +564,21 @@
  GEH_last_focus_effect_tt: "이 중점은 §Y$GEH_last_focus_3$§! 중점 완료시 온전한 중점 계통도로 변경될 것입니다."
  GEH_last_focus_effect_tt2: "아직 우리는 §Y$GEH_last_focus_3$§! 중점을 완료하지 않았습니다."
 
+### 히나 탈주!!! ###
+#### 히나 독재
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h: "급격한 변화"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1: "페르소나"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2: "천상의 혁명"
+
+#### 아코
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a: "선도부의 선임행정관"
+
+#### 이오리
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c: "혼란의 밤"
+
+#### 노말
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n: "네 자리, 세 명"
+
  ### 선도부 산업(문화) 중점 ###
  GEH_luxembourg_problem: "룩셈부르크 규정 문제"
  GEH_luxembourg_problem_desc: "대전이 이후 제정된 '룩셈부르크 규정'은 다시금 일어날 수 있는 학살을 효과적으로 막아냈습니다. 하지만 게헨나계의 반발과 현실적인 행정력 부족은 우리에게 피할 수 없는 룩셈부르크 규정의 개선을 요구하고 있습니다."
@@ -838,6 +853,7 @@
  GEH_heroism_propaganda_idea: "영웅주의"
  GEH_negotiation_with_german_delegation_idea: "바이에른 협상"
  GEH_negotiation_with_german_delegation_idea_tt: "게헨나의 목표 달성시 제거:\n§Y@GEM만마전§! 미존재 또는 §Y@TRM트리니티§! 미존재"
+ GEH_kriegsrecht: "군사 비상태세"
 
  GEH_luxembourg_rules: "룩셈부르크 규정"
  GEH_luxembourg_rules_desc: "게헨나 학생들이 법률이나 규제에 익숙하지 않으며, '혼돈의 학원'이라 불릴 만큼 자유분방한 것은 유명합니다. 자신들끼리의 말다툼에 수류탄을 사용하는 것은 기본이고, 총기 난사는 거의 일상에 가까웠습니다. 문제는 이러한 삶이 키보토스에서는 문제가 되지 않았지만 지구에서는 큰 문제가 된다는 것입니다.\n\n대전이 직후 룩셈부르크에서 일어난 게헨나계 주도의 학살 사건은 선도부에게 큰 경각심을 일으켰습니다. 아마우 아코가 제안하고 소라사키 히나가 결정한 '룩셈부르크 규정'은 폭력에 익숙한 게헨나계에 의한 총기 범죄를 막기 위해 도입되었습니다.\n\n1. 모든 게헨나계와 현지인의 거주지를 분리한다.\n2. 모든 게헨나계 인구는 현지인 거주지에 출입하기 전 총기를 반납해야 한다.\n\n두 가지 규정으로 이루어진 이 룩셈부르크 규정은 대전이 직후 선도부가 질서를 유지하는 데에 큰 도움을 주었습니다. 하지만 모든 현지인 거주지를 보호하고 총기를 압류하기에는 부족한 행정력, 그리고 키보토스인들에게는 옷과 같은 일상품으로 취급되는 총을 임의로 압류하는 정책은 게헨나 학생들의 분노를 사고 있습니다. 정말 우리가 이 정책을 장기적으로 유지할 수 있을까요?"
