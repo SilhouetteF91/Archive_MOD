@@ -1171,7 +1171,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = GEH_hidden.3
+	id = GEH_hidden.5
 
 	hidden = yes
 
@@ -1299,6 +1299,10 @@ country_event = { #
 					id = GEH_ako_love_balance
 				}
 			}
+			#if = {
+			#	limit = { has_country_flag = hina_assembly_h_flag }
+			#	country_event = { id = GEH.event.1005 }
+			#}
 		}
 	}
 	
@@ -1328,7 +1332,7 @@ country_event = { #
 		hidden_effect = {
 			activate_shine_on_focus = GEH_three_congress_focus_no_hina
 			set_country_flag = { flag = GEH_three_congress_focus_no_hina_in_progress_flag days = 35 value = 1 }
-			country_event = { id = GEH_hidden.3 days = 35 }
+			country_event = { id = GEH_hidden.5 days = 35 }
 			news_event = { id = GEH_news.6 }
 		}
 	}
@@ -1544,6 +1548,20 @@ country_event = { # 선도부는 뭐 하는 거야?!
 	}
 }
 
+country_event = { # 룩셈부르크 규정의 폐지
+	id = GEH.flavor_event.11
+	title = GEH.flavor_event.11.t
+	desc = GEH.flavor_event.11.desc
+	picture = GFX_report_event_generic_reloading
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.11.a 
+		
+	}
+}
+
 country_event = { # 리쿠하치마 아루의 정신 질환 치료
 	id = GEH.flavor_event.13
 	title = GEH.flavor_event.13.t
@@ -1566,7 +1584,7 @@ country_event = { # 아마우 아코, 만취 상태의 전화
 	id = GEH.flavor_event.14
 	title = GEH.flavor_event.14.t
 	desc = GEH.flavor_event.14.desc
-	picture = GFX_report_event_generic_city
+	picture = GFX_report_event_ako_amau_crying_2
 
 	trigger = {
 		NOT = { has_global_flag = GEH_BTBOTS_END_flag }
@@ -1577,6 +1595,11 @@ country_event = { # 아마우 아코, 만취 상태의 전화
 	option = { 
 		name = GEH.flavor_event.14.a 
 		
+		hidden_effect = {
+			GEH_dkzh = {
+				unit_leader_event = { id = GEH.flavor_event.25 days = 1 }
+			} 
+		}
 	}
 }
 
@@ -1651,6 +1674,19 @@ country_event = { # 게헨나-밀레니엄 야구 친선경기
 	
 	option = { 
 		name = GEH.flavor_event.24.a 
+
+	}
+}
+
+unit_leader_event = { #아무 일도 없었어
+	id = GEH.flavor_event.25
+	title = GEH.flavor_event.25.t
+	desc = GEH.flavor_event.25.desc
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.flavor_event.25.a 
 
 	}
 }
@@ -2215,6 +2251,43 @@ country_event = { #기계의 몸을 한 신
 	option = { 
 		name = GEH.event.1004.a
 		country_event = { id = GEH.event.1003 days = 3 }
+	}
+}
+
+country_event = { #영도자의 부재
+	id = GEH.event.1005
+	title = GEH.event.1005.t
+	desc = GEH.event.1005.desc
+
+	picture = GFX_report_event_generic_weebs
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1005.a
+		custom_effect_tooltip = GEH_robot_hina_route_tt
+		set_country_flag = GEH_robot_hina_route
+	}
+
+	option = { 
+		name = GEH.event.1005.b
+		custom_effect_tooltip = GEH_without_hina_route_tt
+		set_country_flag = GEH_without_hina_route
+	}
+}
+
+country_event = { #소라사키 히나 실종
+	id = GEH.event.1006
+	title = GEH.event.1006.t
+	desc = GEH.event.1006.desc
+
+	picture = GFX_report_event_ako_amau_generic_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1006.a
+		
 	}
 }
 
