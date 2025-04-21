@@ -956,83 +956,6 @@ focus_tree = {
             country_event = { id = hina.6 }
 		}
 	}
-	
-## 1차 선도부 총회 끝/
-## /2차 선도부 총회
-	focus = {
-		id = GEH_second_congress_focus
-		icon = GFX_goal_Perfect_team_first_congress
-		cost = 5
-		available = {
-			has_completed_focus = GEH_zero_congress_focus
-			has_completed_focus = GEH_focus_111111
-        }
-		prerequisite = {
-			focus = GEH_start_focus
-		}
-        ai_will_do = {
-            base = 80
-        }
-		offset = {
-			trigger = {
-				OR = {
-					is_debug = yes
-					has_completed_focus = GEH_zero_congress_focus
-				}
-			}
-			x = 11
-		}
-        select_effect = {
-			hidden_effect = {
-				country_event = { id = GEH_hidden.3 }
-			}
-        }
-        relative_position_id = GEH_zero_congress_focus
-		x = 3
-		y = 0
-		completion_reward = {
-			if = {
-				limit = { has_country_flag = GEH_administrative_personnel_shortage_flag }
-				set_country_flag = GEH_additional_leadership_personnel_employment_flag
-				effect_tooltip = { unlock_national_focus = GEH_additional_leadership_personnel_employment }
-			}
-			if = {
-				limit = { has_country_flag = GEH_establishment_of_german_autonomous_government_flag_flag }
-				set_country_flag = GEH_establishment_of_german_autonomous_government_flag
-				effect_tooltip = { unlock_national_focus = GEH_establishment_of_german_autonomous_government }
-			}
-			if = { #히나독재
-				limit = { has_country_flag = hina_assembly_12_flag }
-				add_stability = 0.05
-				set_country_flag = hina_assembly_h_flag
-				effect_tooltip = { unlock_national_focus = GEH_hina_route_focus }
-			}
-			else_if = { #아코
-				limit = { check_variable = { GEH_hina_a_var > 3 } }
-				add_stability = -0.03
-				set_country_flag = hina_assembly_a_flag
-				effect_tooltip = { unlock_national_focus = GEH_ako_route_focus }
-			}
-			else_if = { #이오리
-				limit = { check_variable = { GEH_hina_c_var > 3 } }
-				add_stability = -0.05
-				set_country_flag = hina_assembly_c_flag
-				effect_tooltip = { unlock_national_focus = GEH_iori_route_focus }
-			}
-			else = { #노멀
-				add_stability = 0.03
-				set_country_flag = hina_assembly_normal_flag
-				effect_tooltip = { unlock_national_focus = GEH_main_route_focus }
-			}
-			mark_focus_tree_layout_dirty = yes
-			
-			hidden_effect = {
-				news_event = { id = GEH_news.3 }
-			}
-
-			add_research_slot = 1 #4개
-		}
-	}
 
     ###
 	focus = {
@@ -1492,6 +1415,84 @@ focus_tree = {
 			custom_effect_tooltip = GEH_fear_eyes_tt
 		}
 	}
+	
+## 1차 선도부 총회 끝/
+
+## /2차 선도부 총회
+	focus = {
+		id = GEH_second_congress_focus
+		icon = GFX_goal_Perfect_team_first_congress
+		cost = 5
+		available = {
+			has_completed_focus = GEH_zero_congress_focus
+			has_completed_focus = GEH_focus_111111
+        }
+		prerequisite = {
+			focus = GEH_start_focus
+		}
+        ai_will_do = {
+            base = 80
+        }
+		offset = {
+			trigger = {
+				OR = {
+					is_debug = yes
+					has_completed_focus = GEH_zero_congress_focus
+				}
+			}
+			x = 11
+		}
+        select_effect = {
+			hidden_effect = {
+				country_event = { id = GEH_hidden.3 }
+			}
+        }
+        relative_position_id = GEH_zero_congress_focus
+		x = 3
+		y = 0
+		completion_reward = {
+			if = {
+				limit = { has_country_flag = GEH_administrative_personnel_shortage_flag }
+				set_country_flag = GEH_additional_leadership_personnel_employment_flag
+				effect_tooltip = { unlock_national_focus = GEH_additional_leadership_personnel_employment }
+			}
+			if = {
+				limit = { has_country_flag = GEH_establishment_of_german_autonomous_government_flag_flag }
+				set_country_flag = GEH_establishment_of_german_autonomous_government_flag
+				effect_tooltip = { unlock_national_focus = GEH_establishment_of_german_autonomous_government }
+			}
+			if = { #히나독재
+				limit = { has_country_flag = hina_assembly_12_flag }
+				add_stability = 0.05
+				set_country_flag = hina_assembly_h_flag
+				effect_tooltip = { unlock_national_focus = GEH_hina_route_focus }
+			}
+			else_if = { #아코
+				limit = { check_variable = { GEH_hina_a_var > 3 } }
+				add_stability = -0.03
+				set_country_flag = hina_assembly_a_flag
+				effect_tooltip = { unlock_national_focus = GEH_ako_route_focus }
+			}
+			else_if = { #이오리
+				limit = { check_variable = { GEH_hina_c_var > 3 } }
+				add_stability = -0.05
+				set_country_flag = hina_assembly_c_flag
+				effect_tooltip = { unlock_national_focus = GEH_iori_route_focus }
+			}
+			else = { #노멀
+				add_stability = 0.03
+				set_country_flag = hina_assembly_normal_flag
+				effect_tooltip = { unlock_national_focus = GEH_main_route_focus }
+			}
+			mark_focus_tree_layout_dirty = yes
+			
+			hidden_effect = {
+				news_event = { id = GEH_news.3 }
+			}
+
+			add_research_slot = 1 #4개
+		}
+	}
 
 # /이오리 중점 시작
 	focus = {
@@ -1603,7 +1604,7 @@ focus_tree = {
         relative_position_id = GEH_preparation_of_war_with_pantemonium
         x = 1
         y = 1
-        cost = 10
+        cost = 5
 		available = {
 			if = { 
 				limit = { has_global_flag = GEH_BTBOTS_END_flag }
@@ -1666,7 +1667,7 @@ focus_tree = {
         relative_position_id = GEH_preparation_of_war_with_pantemonium
         x = 0
         y = 3
-        cost = 5
+        cost = 10
 		available = {
 			if = { 
 				limit = { has_global_flag = GEH_BTBOTS_END_flag }
@@ -1753,7 +1754,7 @@ focus_tree = {
         relative_position_id = GEH_iori_route_focus
         x = -3
         y = 1
-        cost = 10
+        cost = 5
 		available = {
 			if = { 
 				limit = { has_global_flag = GEH_BTBOTS_END_flag }
@@ -3302,6 +3303,7 @@ focus_tree = {
         }
     }
 # 공용 중점 끝/
+
 ## 2차 선도부 총회 끝/
 ## /3차 선도부 총회
     focus = {
@@ -5469,6 +5471,7 @@ focus_tree = {
 ## 3차 선도부 총회 끝/
 
 ## /최종장
+
 # /최종장 공용 시작
     focus = {
 		id = GEH_three_congress_focus
@@ -6124,1624 +6127,7 @@ focus_tree = {
 		}
 	}
 # 최종장 공용 끝/
-# /해군 중점
 
-focus = {
-	id = GEH_prefect_team_navy
-	icon = GFX_focus_GER_navy
-	cost = 5
-
-	x = 10
-	y = 0
-
-	relative_position_id = GEH_Trinity_war
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
-
-	available = {
-		any_owned_state = {
-			is_coastal = yes
-		}
-	}
-
-	completion_reward = {
-		navy_experience = 25
-		custom_effect_tooltip = generic_skip_one_line_tt
-		every_core_state = {
-			limit = {
-				is_fully_controlled_by = ROOT
-				is_coastal = yes
-				free_building_slots = {
-					building = dockyard
-					size > 1
-					include_locked = yes
-				}
-			}
-			random_select_amount = 2
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_navy_marine
-	icon = GFX_goal_generic_amphibious_assault
-	cost = 3
-	x = -1
-	y = 1
-	
-	relative_position_id = GEH_prefect_team_navy
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	available = {
-		has_tech = marines
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_navy
-	}
-
-	search_filters = {FOCUS_FILTER_NAVY_XP}
-
-	completion_reward = {
-		navy_experience = 25
-		custom_effect_tooltip = generic_skip_one_line_tt
-		division_template = {
-			name = "Gehenna Marinestosstruppkompanie"
-			template_counter = 34
-			obsolete = yes
-			regiments = {
-				marine = { x = 0 y = 0 }
-				marine = { x = 0 y = 1 }
-				marine = { x = 0 y = 2 }
-				marine = { x = 1 y = 0 }
-				marine = { x = 1 y = 1 }
-				marine = { x = 1 y = 2 }
-			}
-		}
-
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
-				is_fully_controlled_by = ROOT
-			}
-			create_unit = {
-				division = "name = \"1st Gehenna Marinestosstruppkompanie\" division_template = \"Gehenna Marinestosstruppkompanie\" start_experience_factor = 0.6 start_equipment_factor = 1.0"
-				owner = ROOT
-				count = 1
-			}
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_navy_disciplinary_committee
-	icon = GFX_focus_generic_cruiser2
-	cost = 3
-	x = 1
-	y = 1
-	
-	relative_position_id = GEH_prefect_team_navy
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	available = {
-		any_owned_state = {
-			is_coastal = yes
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_navy
-	}
-
-	mutually_exclusive = {
-		focus = GEH_prefect_team_independent_navy
-	}
-
-	completion_reward = {
-		navy_experience = 25
-		custom_effect_tooltip = generic_skip_one_line_tt
-		every_core_state = {
-			limit = {
-				is_fully_controlled_by = ROOT
-				is_coastal = yes
-				free_building_slots = {
-					building = dockyard
-					size > 1
-					include_locked = yes
-				}
-			}
-			random_select_amount = 2
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_navy_disciplinary_committee_transport
-	icon = GFX_focus_generic_naval_discipline
-	cost = 5
-	x = 1
-	y = 1
-	
-	relative_position_id = GEH_prefect_team_navy_disciplinary_committee
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	available = {
-		any_owned_state = {
-			is_coastal = yes
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_navy_disciplinary_committee
-	}
-
-	completion_reward = {
-		add_equipment_to_stockpile = {
-			type = convoy
-			amount = 75
-			producer = GEH
-		}
-
-		add_tech_bonus = {
-			name = GEH_prefect_team_navy_disciplinary_committee_transport
-			bonus = 1
-			uses = 1
-			category = tp_tech
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_navy_disciplinary_committee_submarine
-	icon = GFX_focus_generic_midget_submarines
-	cost = 5
-	x = -1
-	y = 1
-	
-	relative_position_id = GEH_prefect_team_navy_disciplinary_committee
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	available = {
-		any_owned_state = {
-			is_coastal = yes
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_navy_disciplinary_committee
-	}
-
-	completion_reward = {
-		add_doctrine_cost_reduction = {
-			name = GEH_prefect_team_navy_disciplinary_committee_submarine
-			cost_reduction = 0.5
-			uses = 1
-			category = trade_interdiction_tree
-		}
-
-		add_tech_bonus = {
-			name = GEH_prefect_team_navy_disciplinary_committee_submarine
-			bonus = 1.0
-			uses = 1
-			category = ss_tech
-		}
-
-		if = {
-			limit = {
-				NOT = { is_special_project_completed = sp:sp_naval_midget_submarine }
-			}
-			complete_special_project = {
-				project = sp:sp_naval_midget_submarine
-				#scientist = ITA_curio_bernardis
-			}
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_navy_disciplinary_committee_destroyer
-	icon = GFX_goal_generic_wolf_pack
-	cost = 5
-	x = 0
-	y = 2
-	
-	relative_position_id = GEH_prefect_team_navy_disciplinary_committee
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	available = {
-		any_owned_state = {
-			is_coastal = yes
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_navy_disciplinary_committee_submarine
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_navy_disciplinary_committee_transport
-	}
-
-	completion_reward = {
-		create_equipment_variant = {
-			name = "Sorasaki Class"
-			type = ship_hull_light_1
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_light_battery_1
-				fixed_ship_anti_air_slot = ship_anti_air_2
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = light_ship_engine_1
-				fixed_ship_torpedo_slot = ship_torpedo_2
-				mid_1_custom_slot = ship_mine_layer_1
-				rear_1_custom_slot = ship_depth_charge_2
-			}
-		}
-
-		create_ship = { name = "Prefect Team Sorasaki" type = ship_hull_light_1 equipment_variant = "Sorasaki Class" creator = GEH }
-		create_ship = { name = "Prefect Team Amau" type = ship_hull_light_1 equipment_variant = "Sorasaki Class" creator = GEH }
-		create_ship = { name = "Prefect Team Hinomiya" type = ship_hull_light_1 equipment_variant = "Sorasaki Class" creator = GEH }
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_navy_disciplinary_committee_defense
-	icon = GFX_focus_generic_atlantic_coast
-	cost = 5
-	x = -2
-	y = 2
-	
-	relative_position_id = GEH_prefect_team_navy_disciplinary_committee
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	available = {
-		56 = {
-			state_is_fully_controlled_by_ROOT_or_subject = yes
-		}
-		58 = {
-			state_is_fully_controlled_by_ROOT_or_subject = yes
-		}
-		59 = {
-			state_is_fully_controlled_by_ROOT_or_subject = yes
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_navy_disciplinary_committee_submarine
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_navy_disciplinary_committee_transport
-	}
-
-	completion_reward = {
-		every_state = {
-			limit = { 
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-				is_coastal = yes 
-				naval_base < 10
-				OR = {
-					state = 56
-					state = 58
-					state = 59
-					state = 909
-					state = 61
-					state = 62
-					state = 63
-					state = 807
-					state = 85
-					state = 5
-					state = 763
-					state = 188
-				}
-			}
-			add_building_construction = {
-				type = naval_base
-				level = 1
-				instant_build = yes
-				province = {
-					all_provinces = yes
-					limit_to_naval_base = yes
-				}
-			}
-		}
-		every_state = {
-			limit = { 
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-				is_coastal = yes 
-				coastal_bunker < 10
-				OR = {
-					state = 56
-					state = 58
-					state = 59
-					state = 909
-					state = 61
-					state = 62
-					state = 63
-					state = 807
-					state = 85
-					state = 5
-					state = 763
-					state = 188
-				}
-			}
-			add_building_construction = {
-				type = coastal_bunker
-				level = 1
-				instant_build = yes
-				province = {
-					all_provinces = yes
-					limit_to_naval_base = yes
-				}
-			}
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_navy_disciplinary_committee_officer
-	icon = GFX_KSP_focus_gyeongbiguk_helping
-	cost = 5
-	x = 0
-	y = 3
-	
-	relative_position_id = GEH_prefect_team_navy_disciplinary_committee
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	available = {
-		any_owned_state = {
-			is_coastal = yes
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_navy_disciplinary_committee_destroyer
-	}
-
-	search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
-
-	completion_reward = {
-		create_navy_leader = {
-			skill = 3
-			female = yes
-			portrait_path = GFX_Portrait_BlueArchive_KSP_Generic_2
-			traits = { spotter bold }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 4
-			maneuvering_skill = 3
-			coordination_skill = 2
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_navy_disciplinary_committee_valkyrie_BD
-	icon = GFX_goal_HEU_junsulnote_1
-	cost = 5
-	x = -2
-	y = 3
-	
-	relative_position_id = GEH_prefect_team_navy_disciplinary_committee
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	available = {
-		any_owned_state = {
-			is_coastal = yes
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_navy_disciplinary_committee_destroyer
-	}
-
-	completion_reward = {
-		add_doctrine_cost_reduction = {
-			name = GEH_prefect_team_navy_disciplinary_committee_valkyrie_BD
-			cost_reduction = 0.25
-			uses = 1
-			category = trade_interdiction_tree	
-		}
-	}
-}
-
-
-focus = {
-	id = GEH_prefect_team_independent_navy
-	icon = GFX_focus_generic_navy_battleship2
-	cost = 3
-	x = 5
-	y = 1
-
-	relative_position_id = GEH_prefect_team_navy
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	available = {
-		any_owned_state = {
-			is_coastal = yes
-		}
-		has_completed_focus = GEH_hina_route_focus
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_navy
-	}
-
-	mutually_exclusive = {
-		focus = GEH_prefect_team_navy_disciplinary_committee
-	}
-
-	completion_reward = {
-		navy_experience = 25
-		custom_effect_tooltip = generic_skip_one_line_tt
-		every_core_state = {
-			limit = {
-				is_fully_controlled_by = ROOT
-				is_coastal = yes
-				free_building_slots = {
-					building = dockyard
-					size > 1
-					include_locked = yes
-				}
-			}
-			random_select_amount = 2
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-		}
-		
-		add_doctrine_cost_reduction = {
-			name = GEH_prefect_team_independent_navy
-			cost_reduction = 0.25
-			uses = 2
-			category = cat_base_strike
-		}
-
-		hidden_effect = {
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				set_technology = {
-					trade_interdiction = 0
-					base_strike = 1
-				}
-			}
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_independent_navy_oil
-	icon = GFX_focus_generic_stockpile_fuel
-	cost = 5
-	x = -1
-	y = 1
-	
-	relative_position_id = GEH_prefect_team_independent_navy
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-	
-	search_filters = {FOCUS_FILTER_INDUSTRY}
-
-	available = {
-		
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_independent_navy
-	}
-
-	completion_reward = {
-		add_political_power = -50
-
-		add_one_random_synthetic_refinery = yes
-		add_one_random_synthetic_refinery = yes
-		add_one_random_synthetic_refinery = yes
-
-		add_one_random_fuel_silo = yes
-		add_one_random_fuel_silo = yes
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_independent_navy_carrier
-	icon = GFX_focus_GER_graf_zeppelin
-	cost = 5
-	x = 1
-	y = 1
-	
-	relative_position_id = GEH_prefect_team_independent_navy
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-	
-	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
-
-	available = {
-		any_owned_state = {
-			is_coastal = yes
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_independent_navy
-	}
-
-	completion_reward = {
-		add_political_power = -50
-		navy_experience = 15
-		add_tech_bonus = {
-			name = GEH_prefect_team_independent_navy_carrier
-			bonus = 1.0
-			uses = 1
-			category = cv_tech
-		}
-		
-		if = {
-			limit = {
-				NOT = { has_tech = early_ship_hull_carrier }
-			}
-			set_technology = { early_ship_hull_carrier = 1 }
-		}
-
-		if = {
-			limit = {
-				NOT = { has_tech = basic_ship_hull_carrier }
-			}
-			set_technology = { basic_ship_hull_carrier = 1 }
-		}
-
-		#Equipment Variant
-		create_equipment_variant = {
-			name = "Sorasaki Class"
-			type = ship_hull_carrier_1
-			name_group = GER_CV_HISTORICAL
-			parent_version = 0
-			allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
-			modules = {
-				fixed_ship_deck_slot_1 = ship_deck_space
-				fixed_ship_deck_slot_2 = ship_deck_space
-				fixed_ship_anti_air_slot = ship_anti_air_2
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = carrier_ship_engine_2
-				fixed_ship_secondaries_slot = ship_secondaries_2
-				front_1_custom_slot = ship_deck_space
-			}
-			design_team = mio:GEK_deutsche_werke_organization
-		}
-		#Line Production
-		add_equipment_production = {
-			equipment = {
-				type = ship_hull_carrier_1
-				creator = "GEH"
-				version_name = "Sorasaki Class"
-			}
-			name = "Hina"
-			requested_factories = 2
-			progress = 0.45
-			amount = 1
-		}
-			
-		random_owned_controlled_state = {
-			limit = {
-				is_fully_controlled_by = ROOT
-				is_coastal = yes
-			}
-			prioritize = { 58 }
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-		}
-		
-		if = {
-			limit = { controls_state = 58 }
-			mio:GEK_deutsche_werke_organization = {
-				add_mio_size = 1
-				add_mio_funds_gain_factor = 0.25
-				add_mio_research_bonus = 0.05
-			}
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_independent_navy_navalized_aircraft
-	icon = GFX_focus_generic_air_carrier
-	cost = 5
-	x = 0
-	y = 2
-	
-	relative_position_id = GEH_prefect_team_independent_navy
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-	
-	search_filters = {FOCUS_FILTER_RESEARCH}
-
-	available = {
-		
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_independent_navy_carrier
-	}
-
-	completion_reward = {
-		navy_experience = 25
-		air_experience = 25
-		add_tech_bonus = {
-			name = GEH_prefect_team_independent_navy_navalized_aircraft
-			bonus = 1
-			uses = 2
-			category = cv_tech
-			category = naval_air
-		}
-
-		if = {
-			limit = {
-				has_completed_focus = GEH_prefect_team_luftwaffe_therese_junkers
-			}
-			mio:GEK_junkers_organization = {
-				add_mio_size = 1
-				add_mio_research_bonus = 0.05
-				add_mio_design_team_assign_cost = -0.5
-			}
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_independent_navy_destroyer
-	icon = GFX_goal_generic_navy_cruiser
-	cost = 5
-	x = 2
-	y = 2
-	
-	relative_position_id = GEH_prefect_team_independent_navy
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
- 
-	search_filters = { }
-
-	available = {
-		any_owned_state = {
-			is_coastal = yes
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_independent_navy_carrier
-	}
-
-	completion_reward = {
-		create_equipment_variant = {
-			name = "Judgment Class"
-			type = ship_hull_light_1
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_light_battery_1
-				fixed_ship_anti_air_slot = ship_anti_air_2
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = light_ship_engine_1
-				fixed_ship_torpedo_slot = ship_torpedo_2
-				mid_1_custom_slot = ship_mine_layer_1
-				rear_1_custom_slot = ship_depth_charge_2
-			}
-		}
-
-		create_ship = { name = "01-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
-		create_ship = { name = "02-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
-		create_ship = { name = "03-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
-		create_ship = { name = "04-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
-		create_ship = { name = "05-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
-		create_ship = { name = "06-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
-
-		add_political_power =  -100
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_independent_navy_dockyard
-	icon = GFX_goal_generic_construct_naval_dockyard
-	cost = 5
-	x = -2
-	y = 2
-	
-	relative_position_id = GEH_prefect_team_independent_navy
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
- 
-	search_filters = { }
-
-	available = {
-		any_owned_state = {
-			is_coastal = yes
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_independent_navy_carrier
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_independent_navy_oil
-	}
-
-	completion_reward = {
-		add_one_random_dockyard = yes
-		add_one_random_dockyard = yes
-		add_one_random_dockyard = yes
-		add_one_random_dockyard = yes
-
-		add_political_power =  -100
-	}
-}
-
-
-focus = {
-	id = GEH_prefect_team_independent_navy_german_officer
-	icon = GFX_focus_GER_seeherrschaft
-	cost = 5
-	x = -1
-	y = 3
-	
-	relative_position_id = GEH_prefect_team_independent_navy
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	available = {
-		any_owned_state = {
-			is_coastal = yes
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_independent_navy_oil
-	}
-
-	search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
-
-	completion_reward = {
-		create_navy_leader = {
-			skill = 3
-			female = yes
-			traits = { bold air_controller }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			maneuvering_skill = 3
-			coordination_skill = 2
-		}
-	}
-}
-
-# 해군 중점 끝/
-# /공군 중점 시작
-
-focus = {
-	id = GEH_prefect_team_luftwaffe
-	icon = GFX_focus_GER_airforce
-	cost = 5
-
-	x = 11
-	y = 0
-
-	relative_position_id = GEH_prefect_team_navy
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
-
-	available = {
-		has_completed_focus = GEH_second_congress_focus
-	}
-
-	completion_reward = {
-		air_experience = 25
-		custom_effect_tooltip = generic_skip_one_line_tt
-		add_doctrine_cost_reduction = {
-			name = GEH_prefect_team_luftwaffe
-			uses = 2
-			cost_reduction = 0.5
-			category = air_doctrine
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_luftwaffe_primitive_helicopter
-	icon = GFX_focus_generic_air_research_boost
-	cost = 5
-
-	x = -2
-	y = 1
-
-	relative_position_id = GEH_prefect_team_luftwaffe
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_luftwaffe
-	}
-
-	search_filters = {FOCUS_FILTER_INDUSTRY}
-
-	completion_reward = {
-		air_experience = 20
-		complete_special_project = {
-			project = sp:sp_air_helicopter
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_luftwaffe_true_helicopter
-	icon = GFX_goal_Helicopter
-	cost = 5
-
-	x = -1
-	y = 1
-
-	relative_position_id = GEH_prefect_team_luftwaffe_primitive_helicopter
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	available = {
-		has_completed_focus = GEH_first_congress_focus
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_luftwaffe_primitive_helicopter
-	}
-
-	search_filters = {FOCUS_FILTER_INDUSTRY}
-
-	completion_reward = {
-		complete_special_project = {
-			project = sp:BA_sp_air_helicopter
-		}
-		division_template = {
-			name = "Gehenna Helicopter Regiment"
-			priority = 1
-			division_names_group = GEH_INF_01
-			is_locked = no
-
-			regiments = {
-				attack_heli = { x = 0 y = 0 }
-				attack_heli = { x = 0 y = 1 }
-				attack_heli = { x = 0 y = 2 }
-				infantry = { x = 1 y = 0 }
-				infantry = { x = 1 y = 1 }
-				infantry = { x = 1 y = 2 }
-			}
-			support = {
-				engineer = { x = 0 y = 0 }
-			}
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_luftwaffe_therese_junkers
-	icon = GFX_focus_SOV_women_in_aviation
-	cost = 5
-
-	x = 1
-	y = 1
-
-	relative_position_id = GEH_prefect_team_luftwaffe_primitive_helicopter
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	available = {
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_luftwaffe_primitive_helicopter
-	}
-
-	search_filters = {FOCUS_FILTER_INDUSTRY}
-
-	completion_reward = {
-		mio:GEK_junkers_organization = {
-			add_mio_size = 1
-			add_mio_funds_gain_factor = 0.25
-			add_mio_research_bonus = 0.05
-		}
-	    set_rule = { can_generate_female_aces = yes }
-	}
-}
-
-
-focus = {
-	id = GEH_prefect_team_luftwaffe_junkers
-	icon = GFX_goal_generic_air_production
-	cost = 5
-
-	x = 0
-	y = 1
-
-	relative_position_id = GEH_prefect_team_luftwaffe
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_luftwaffe
-	}
-
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP }
-
-	completion_reward = {
-        air_experience = 25
-	    custom_effect_tooltip = tooltip_white_line
-	    add_one_random_military_factory = yes
-	    add_one_random_military_factory = yes
-	}
-}
-
-
-focus = {
-	id = GEH_prefect_team_luftwaffe_long_range_bombing
-	icon = GFX_focus_generic_long_range_aircraft
-	cost = 5
-
-	x = 0
-	y = 2
-
-	relative_position_id = GEH_prefect_team_luftwaffe_junkers
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_luftwaffe_junkers
-	}
-
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-
-	completion_reward = {
-	    add_one_random_military_factory = yes
-	    add_one_random_military_factory = yes
-	    custom_effect_tooltip = tooltip_white_line
-        add_tech_bonus = {
-			name = GEH_prefect_team_luftwaffe_long_range_bombing
-			bonus = 1
-			uses = 1
-			category = tactical_bomber
-		}
-		add_tech_bonus = {
-			name = GEH_prefect_team_luftwaffe_long_range_bombing
-			bonus = 1
-			uses = 1
-			category = cat_strategic_bomber
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_luftwaffe_jet
-	icon = GFX_focus_generic_jet_planes
-	cost = 5
-
-	x = -1
-	y = 3
-
-	relative_position_id = GEH_prefect_team_luftwaffe_junkers
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_luftwaffe_long_range_bombing
-	}
-
-	search_filters = { FOCUS_FILTER_RESEARCH }
-
-	completion_reward = {
-		add_breakthrough_progress = {
-			specialization = specialization_air
-			value = 0.5
-		}
-		custom_effect_tooltip = tooltip_white_line
-		add_tech_bonus = {
-			name = GEH_prefect_team_luftwaffe_jet
-			bonus = 1
-			uses = 1
-			category = air_equipment
-		}
-		add_tech_bonus = {
-			name = GEH_prefect_team_luftwaffe_jet
-			bonus = 1
-			uses = 1
-			category = jet_technology
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_luftwaffe_anti_air
-	icon = GFX_focus_generic_air_defense
-	cost = 5
-
-	x = 1
-	y = 3
-
-	relative_position_id = GEH_prefect_team_luftwaffe_junkers
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_luftwaffe_long_range_bombing
-	}
-
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-
-	completion_reward = {
-		if = {
-			limit = { NOT = { has_tech = interwar_antiair } }
-			set_technology = { interwar_antiair = 1 }
-		}
-		if = {
-			limit = { owns_state = 54 }
-			54 = {
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		if = {
-			limit = { owns_state = 55 }
-			55 = {
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		add_tech_bonus = {
-			name = GEH_prefect_team_luftwaffe_anti_air
-			bonus = 1
-			uses = 1
-			category = cat_anti_air
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_luftwaffe_nuke
-	icon = GFX_focus_rocketry
-	cost = 10
-
-	x = 0
-	y = 4
-
-	relative_position_id = GEH_prefect_team_luftwaffe_junkers
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-		modifier = {
-			factor = 4
-			has_completed_focus = GEH_hina_route_focus
-		}
-	}
-
-	available = {
-		OR = {
-			has_completed_focus = GEH_three_congress_focus
-			has_completed_focus = GEH_hina_route_focus
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_luftwaffe_jet
-		focus = GEH_prefect_team_luftwaffe_anti_air
-	}
-
-	search_filters = { FOCUS_FILTER_RESEARCH }
-
-	completion_reward = {
-		add_tech_bonus = {
-			name = secret_bonus
-			bonus = 0.5
-			uses = 2
-			category = electronics
-			category = nuclear
-			category = rocketry
-		}
-		
-		add_breakthrough_progress = {
-			specialization = specialization_nuclear
-			value = 0.5
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_luftwaffe_fighter_design
-	icon = GFX_focus_generic_copy_plane_designs
-	cost = 5
-
-	x = 2
-	y = 1
-
-	relative_position_id = GEH_prefect_team_luftwaffe
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_luftwaffe
-	}
-
-	search_filters = { FOCUS_FILTER_RESEARCH }
-
-	completion_reward = {
-		add_tech_bonus = {
-			name = GEH_prefect_team_luftwaffe_fighter_design
-			bonus = 1
-			uses = 1
-			category = light_fighter
-			category = cat_heavy_fighter
-		}
-		add_tech_bonus = {
-			name = GEH_prefect_team_luftwaffe_fighter_design
-			bonus = 1
-			uses = 1
-			category = plane_modules_tech
-		}
-
-		if = {
-			limit = {
-				has_dlc = "By Blood Alone"
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			create_equipment_variant = { 
-				name = "Ju 87 G" 
-				type = small_plane_cas_airframe_2
-				allow_without_tech = no
-				design_team = mio:GEK_junkers_organization
-				modules = {
-					fixed_main_weapon_slot = bomb_locks
-					fixed_auxiliary_weapon_slot_1 = tank_buster_1
-					engine_type_slot = engine_3_1x
-					special_type_slot_1 = lmg_defense_turret
-					special_type_slot_2 = empty
-				}
-				icon = "GFX_GER_CAS2_medium"
-				model = "GER_CAS_equipment_2_entity"
-			}
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_luftwaffe_tactical_bombers
-	icon = GFX_goal_generic_air_bomber
-	cost = 5
-
-	x = -1
-	y = 1
-
-	relative_position_id = GEH_prefect_team_luftwaffe_fighter_design
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_luftwaffe_fighter_design
-	}
-
-	search_filters = { FOCUS_FILTER_RESEARCH }
-
-	completion_reward = {
-		add_tech_bonus = {
-			name = GEH_prefect_team_luftwaffe_tactical_bombers
-			bonus = 0.5
-			uses = 1
-			category = medium_air
-		}
-
-		if = {
-			limit = {
-				has_dlc = "By Blood Alone"
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			create_equipment_variant = { 
-				name = "Ju 88" 
-				type = medium_plane_airframe_2
-				allow_without_tech = no
-				design_team = mio:GEK_dornier_organization
-				modules = {
-					fixed_main_weapon_slot = medium_bomb_bay
-					fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
-					fixed_auxiliary_weapon_slot_2 = torpedo_mounting
-					engine_type_slot = engine_3_2x
-					special_type_slot_1 = lmg_defense_turret_2x
-					special_type_slot_2 = empty	
-				}
-				icon = "GFX_GER_tactical_bomber2_medium"
-				model = "GER_medium_plane_entity"
-			}
-		}
-	}
-}
-
-focus = {
-	id = GEH_prefect_team_luftwaffe_multi_role_aircraft
-	icon = GFX_focus_generic_multi_role_aircraft
-	cost = 5
-
-	x = 1
-	y = 1
-
-	relative_position_id = GEH_prefect_team_luftwaffe_fighter_design
-
-	ai_will_do = { 
-		base = 1
-		modifier = {
-			factor = 2
-			has_war = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_war = no
-		}
-	}
-
-	prerequisite = {
-		focus = GEH_prefect_team_luftwaffe_fighter_design
-	}
-
-	search_filters = { FOCUS_FILTER_RESEARCH }
-
-	completion_reward = {
-		add_breakthrough_progress = {
-			specialization = specialization_air
-			value = 0.5
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		if = {
-			limit = {
-				has_dlc = "By Blood Alone"
-			}
-			create_equipment_variant = { 
-				name = "Me 262" 
-				allow_without_tech = no
-				type = small_plane_airframe_4
-				design_team = mio:GEK_messerschmitt_organization
-				modules = {
-					fixed_main_weapon_slot = aircraft_cannon_2_2x
-					fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_2x
-					engine_type_slot = jet_engine_2x
-					special_type_slot_1 = armor_plate_small
-					special_type_slot_2 = drop_tanks	
-					special_type_slot_3 = self_sealing_fuel_tanks_small	
-				}
-				icon = "GFX_GER_jet_plane_1_medium"
-				model = "GER_jet_plane_entity"
-			}
-			create_equipment_variant = { 
-				name = "Ar 234" 
-				allow_without_tech = no
-				type = medium_plane_airframe_4
-				design_team = mio:GEK_dornier_organization
-				modules = {
-					fixed_main_weapon_slot = medium_bomb_bay
-					fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
-					fixed_auxiliary_weapon_slot_2 = bomb_locks
-					engine_type_slot = jet_engine_2x
-					special_type_slot_1 = fuel_tanks_medium
-					special_type_slot_2 = empty	
-				}
-				icon = "GFX_medium_plane_4_medium"
-				model = "GER_medium_jet_plane_1_entity"
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-		}
-	}
-}
-
-# 공군 중점 끝/
 # /히나 독재 최종장 시작
     focus = {
 		id = GEH_last_focus_effect_h_rout
@@ -7790,6 +6176,7 @@ focus = {
 	}
 	
 # 히나 독재 최종장 끝/
+
 # /아코 중점 최종장 시작
     focus = {
 		id = GEH_last_focus_effect_a_rout
@@ -7948,6 +6335,7 @@ focus = {
 		}
 	}
 # 아코 중점 최종장 끝/
+
 # /이오리 중점 최종장 시작
     focus = {
 		id = GEH_last_focus_effect_c_rout
@@ -8199,6 +6587,7 @@ focus = {
 		}
 	}
 # 이오리 중점 최종장 끝/
+
 # /노말 중점 최종장 시작
     focus = {
 		id = GEH_last_focus_effect_normal_rout
@@ -8246,6 +6635,7 @@ focus = {
 		}
 	}
 # 노말 중점 최종장 끝/
+
 ## 최종장 끝/
 
 ## /히나 탈주 중점 시작
@@ -8572,5 +6962,1626 @@ focus = {
 		}
 	}
 ## 히나 탈주 중점 끝/
+
 ### 정치 루트 끝/
+
+# /해군 중점
+
+	focus = {
+		id = GEH_prefect_team_navy
+		icon = GFX_focus_GER_navy
+		cost = 5
+
+		x = 10
+		y = 0
+
+		relative_position_id = GEH_Trinity_war
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_navy_marine
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 3
+		x = -1
+		y = 1
+		
+		relative_position_id = GEH_prefect_team_navy
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		available = {
+			has_tech = marines
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_navy
+		}
+
+		search_filters = {FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {
+			navy_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			division_template = {
+				name = "Gehenna Marinestosstruppkompanie"
+				template_counter = 34
+				obsolete = yes
+				regiments = {
+					marine = { x = 0 y = 0 }
+					marine = { x = 0 y = 1 }
+					marine = { x = 0 y = 2 }
+					marine = { x = 1 y = 0 }
+					marine = { x = 1 y = 1 }
+					marine = { x = 1 y = 2 }
+				}
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+				}
+				create_unit = {
+					division = "name = \"1st Gehenna Marinestosstruppkompanie\" division_template = \"Gehenna Marinestosstruppkompanie\" start_experience_factor = 0.6 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_navy_disciplinary_committee
+		icon = GFX_focus_generic_cruiser2
+		cost = 3
+		x = 1
+		y = 1
+		
+		relative_position_id = GEH_prefect_team_navy
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_navy
+		}
+
+		mutually_exclusive = {
+			focus = GEH_prefect_team_independent_navy
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_navy_disciplinary_committee_transport
+		icon = GFX_focus_generic_naval_discipline
+		cost = 5
+		x = 1
+		y = 1
+		
+		relative_position_id = GEH_prefect_team_navy_disciplinary_committee
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_navy_disciplinary_committee
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 75
+				producer = GEH
+			}
+
+			add_tech_bonus = {
+				name = GEH_prefect_team_navy_disciplinary_committee_transport
+				bonus = 1
+				uses = 1
+				category = tp_tech
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_navy_disciplinary_committee_submarine
+		icon = GFX_focus_generic_midget_submarines
+		cost = 5
+		x = -1
+		y = 1
+		
+		relative_position_id = GEH_prefect_team_navy_disciplinary_committee
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_navy_disciplinary_committee
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = GEH_prefect_team_navy_disciplinary_committee_submarine
+				cost_reduction = 0.5
+				uses = 1
+				category = trade_interdiction_tree
+			}
+
+			add_tech_bonus = {
+				name = GEH_prefect_team_navy_disciplinary_committee_submarine
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+
+			if = {
+				limit = {
+					NOT = { is_special_project_completed = sp:sp_naval_midget_submarine }
+				}
+				complete_special_project = {
+					project = sp:sp_naval_midget_submarine
+					#scientist = ITA_curio_bernardis
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_navy_disciplinary_committee_destroyer
+		icon = GFX_goal_generic_wolf_pack
+		cost = 5
+		x = 0
+		y = 2
+		
+		relative_position_id = GEH_prefect_team_navy_disciplinary_committee
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_navy_disciplinary_committee_submarine
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_navy_disciplinary_committee_transport
+		}
+
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Sorasaki Class"
+				type = ship_hull_light_1
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = light_ship_engine_1
+					fixed_ship_torpedo_slot = ship_torpedo_2
+					mid_1_custom_slot = ship_mine_layer_1
+					rear_1_custom_slot = ship_depth_charge_2
+				}
+			}
+
+			create_ship = { name = "Prefect Team Sorasaki" type = ship_hull_light_1 equipment_variant = "Sorasaki Class" creator = GEH }
+			create_ship = { name = "Prefect Team Amau" type = ship_hull_light_1 equipment_variant = "Sorasaki Class" creator = GEH }
+			create_ship = { name = "Prefect Team Hinomiya" type = ship_hull_light_1 equipment_variant = "Sorasaki Class" creator = GEH }
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_navy_disciplinary_committee_defense
+		icon = GFX_focus_generic_atlantic_coast
+		cost = 5
+		x = -2
+		y = 2
+		
+		relative_position_id = GEH_prefect_team_navy_disciplinary_committee
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		available = {
+			56 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			58 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			59 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_navy_disciplinary_committee_submarine
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_navy_disciplinary_committee_transport
+		}
+
+		completion_reward = {
+			every_state = {
+				limit = { 
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					is_coastal = yes 
+					naval_base < 10
+					OR = {
+						state = 56
+						state = 58
+						state = 59
+						state = 909
+						state = 61
+						state = 62
+						state = 63
+						state = 807
+						state = 85
+						state = 5
+						state = 763
+						state = 188
+					}
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+				}
+			}
+			every_state = {
+				limit = { 
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					is_coastal = yes 
+					coastal_bunker < 10
+					OR = {
+						state = 56
+						state = 58
+						state = 59
+						state = 909
+						state = 61
+						state = 62
+						state = 63
+						state = 807
+						state = 85
+						state = 5
+						state = 763
+						state = 188
+					}
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_navy_disciplinary_committee_officer
+		icon = GFX_KSP_focus_gyeongbiguk_helping
+		cost = 5
+		x = 0
+		y = 3
+		
+		relative_position_id = GEH_prefect_team_navy_disciplinary_committee
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_navy_disciplinary_committee_destroyer
+		}
+
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			create_navy_leader = {
+				skill = 3
+				female = yes
+				portrait_path = GFX_Portrait_BlueArchive_KSP_Generic_2
+				traits = { spotter bold }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 4
+				maneuvering_skill = 3
+				coordination_skill = 2
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_navy_disciplinary_committee_valkyrie_BD
+		icon = GFX_goal_HEU_junsulnote_1
+		cost = 5
+		x = -2
+		y = 3
+		
+		relative_position_id = GEH_prefect_team_navy_disciplinary_committee
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_navy_disciplinary_committee_destroyer
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = GEH_prefect_team_navy_disciplinary_committee_valkyrie_BD
+				cost_reduction = 0.25
+				uses = 1
+				category = trade_interdiction_tree	
+			}
+		}
+	}
+
+
+	focus = {
+		id = GEH_prefect_team_independent_navy
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 3
+		x = 5
+		y = 1
+
+		relative_position_id = GEH_prefect_team_navy
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+			has_completed_focus = GEH_hina_route_focus
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_navy
+		}
+
+		mutually_exclusive = {
+			focus = GEH_prefect_team_navy_disciplinary_committee
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			add_doctrine_cost_reduction = {
+				name = GEH_prefect_team_independent_navy
+				cost_reduction = 0.25
+				uses = 2
+				category = cat_base_strike
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					set_technology = {
+						trade_interdiction = 0
+						base_strike = 1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_independent_navy_oil
+		icon = GFX_focus_generic_stockpile_fuel
+		cost = 5
+		x = -1
+		y = 1
+		
+		relative_position_id = GEH_prefect_team_independent_navy
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		available = {
+			
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_independent_navy
+		}
+
+		completion_reward = {
+			add_political_power = -50
+
+			add_one_random_synthetic_refinery = yes
+			add_one_random_synthetic_refinery = yes
+			add_one_random_synthetic_refinery = yes
+
+			add_one_random_fuel_silo = yes
+			add_one_random_fuel_silo = yes
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_independent_navy_carrier
+		icon = GFX_focus_GER_graf_zeppelin
+		cost = 5
+		x = 1
+		y = 1
+		
+		relative_position_id = GEH_prefect_team_independent_navy
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_independent_navy
+		}
+
+		completion_reward = {
+			add_political_power = -50
+			navy_experience = 15
+			add_tech_bonus = {
+				name = GEH_prefect_team_independent_navy_carrier
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
+			}
+			
+			if = {
+				limit = {
+					NOT = { has_tech = early_ship_hull_carrier }
+				}
+				set_technology = { early_ship_hull_carrier = 1 }
+			}
+
+			if = {
+				limit = {
+					NOT = { has_tech = basic_ship_hull_carrier }
+				}
+				set_technology = { basic_ship_hull_carrier = 1 }
+			}
+
+			#Equipment Variant
+			create_equipment_variant = {
+				name = "Sorasaki Class"
+				type = ship_hull_carrier_1
+				name_group = GER_CV_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = carrier_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					front_1_custom_slot = ship_deck_space
+				}
+				design_team = mio:GEK_deutsche_werke_organization
+			}
+			#Line Production
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_1
+					creator = "GEH"
+					version_name = "Sorasaki Class"
+				}
+				name = "Hina"
+				requested_factories = 2
+				progress = 0.45
+				amount = 1
+			}
+				
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_coastal = yes
+				}
+				prioritize = { 58 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			if = {
+				limit = { controls_state = 58 }
+				mio:GEK_deutsche_werke_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.05
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_independent_navy_navalized_aircraft
+		icon = GFX_focus_generic_air_carrier
+		cost = 5
+		x = 0
+		y = 2
+		
+		relative_position_id = GEH_prefect_team_independent_navy
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		available = {
+			
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_independent_navy_carrier
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			air_experience = 25
+			add_tech_bonus = {
+				name = GEH_prefect_team_independent_navy_navalized_aircraft
+				bonus = 1
+				uses = 2
+				category = cv_tech
+				category = naval_air
+			}
+
+			if = {
+				limit = {
+					has_completed_focus = GEH_prefect_team_luftwaffe_therese_junkers
+				}
+				mio:GEK_junkers_organization = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+					add_mio_design_team_assign_cost = -0.5
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_independent_navy_destroyer
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 5
+		x = 2
+		y = 2
+		
+		relative_position_id = GEH_prefect_team_independent_navy
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	
+		search_filters = { }
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_independent_navy_carrier
+		}
+
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Judgment Class"
+				type = ship_hull_light_1
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = light_ship_engine_1
+					fixed_ship_torpedo_slot = ship_torpedo_2
+					mid_1_custom_slot = ship_mine_layer_1
+					rear_1_custom_slot = ship_depth_charge_2
+				}
+			}
+
+			create_ship = { name = "01-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
+			create_ship = { name = "02-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
+			create_ship = { name = "03-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
+			create_ship = { name = "04-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
+			create_ship = { name = "05-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
+			create_ship = { name = "06-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
+
+			add_political_power =  -100
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_independent_navy_dockyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		x = -2
+		y = 2
+		
+		relative_position_id = GEH_prefect_team_independent_navy
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	
+		search_filters = { }
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_independent_navy_carrier
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_independent_navy_oil
+		}
+
+		completion_reward = {
+			add_one_random_dockyard = yes
+			add_one_random_dockyard = yes
+			add_one_random_dockyard = yes
+			add_one_random_dockyard = yes
+
+			add_political_power =  -100
+		}
+	}
+
+
+	focus = {
+		id = GEH_prefect_team_independent_navy_german_officer
+		icon = GFX_focus_GER_seeherrschaft
+		cost = 5
+		x = -1
+		y = 3
+		
+		relative_position_id = GEH_prefect_team_independent_navy
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_independent_navy_oil
+		}
+
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			create_navy_leader = {
+				skill = 3
+				female = yes
+				traits = { bold air_controller }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				maneuvering_skill = 3
+				coordination_skill = 2
+			}
+		}
+	}
+
+# 해군 중점 끝/
+
+# /공군 중점 시작
+
+	focus = {
+		id = GEH_prefect_team_luftwaffe
+		icon = GFX_focus_GER_airforce
+		cost = 5
+
+		x = 11
+		y = 0
+
+		relative_position_id = GEH_prefect_team_navy
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
+
+		available = {
+			has_completed_focus = GEH_second_congress_focus
+		}
+
+		completion_reward = {
+			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_doctrine_cost_reduction = {
+				name = GEH_prefect_team_luftwaffe
+				uses = 2
+				cost_reduction = 0.5
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_luftwaffe_primitive_helicopter
+		icon = GFX_focus_generic_air_research_boost
+		cost = 5
+
+		x = -2
+		y = 1
+
+		relative_position_id = GEH_prefect_team_luftwaffe
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_luftwaffe
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			air_experience = 20
+			complete_special_project = {
+				project = sp:sp_air_helicopter
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_luftwaffe_true_helicopter
+		icon = GFX_goal_Helicopter
+		cost = 5
+
+		x = -1
+		y = 1
+
+		relative_position_id = GEH_prefect_team_luftwaffe_primitive_helicopter
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		available = {
+			has_completed_focus = GEH_first_congress_focus
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_luftwaffe_primitive_helicopter
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			complete_special_project = {
+				project = sp:BA_sp_air_helicopter
+			}
+			division_template = {
+				name = "Gehenna Helicopter Regiment"
+				priority = 1
+				division_names_group = GEH_INF_01
+				is_locked = no
+
+				regiments = {
+					attack_heli = { x = 0 y = 0 }
+					attack_heli = { x = 0 y = 1 }
+					attack_heli = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_luftwaffe_therese_junkers
+		icon = GFX_focus_SOV_women_in_aviation
+		cost = 5
+
+		x = 1
+		y = 1
+
+		relative_position_id = GEH_prefect_team_luftwaffe_primitive_helicopter
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_luftwaffe_primitive_helicopter
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			mio:GEK_junkers_organization = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.25
+				add_mio_research_bonus = 0.05
+			}
+			set_rule = { can_generate_female_aces = yes }
+		}
+	}
+
+
+	focus = {
+		id = GEH_prefect_team_luftwaffe_junkers
+		icon = GFX_goal_generic_air_production
+		cost = 5
+
+		x = 0
+		y = 1
+
+		relative_position_id = GEH_prefect_team_luftwaffe
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_luftwaffe
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP }
+
+		completion_reward = {
+			air_experience = 25
+			custom_effect_tooltip = tooltip_white_line
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+		}
+	}
+
+
+	focus = {
+		id = GEH_prefect_team_luftwaffe_long_range_bombing
+		icon = GFX_focus_generic_long_range_aircraft
+		cost = 5
+
+		x = 0
+		y = 2
+
+		relative_position_id = GEH_prefect_team_luftwaffe_junkers
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_luftwaffe_junkers
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = GEH_prefect_team_luftwaffe_long_range_bombing
+				bonus = 1
+				uses = 1
+				category = tactical_bomber
+			}
+			add_tech_bonus = {
+				name = GEH_prefect_team_luftwaffe_long_range_bombing
+				bonus = 1
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_luftwaffe_jet
+		icon = GFX_focus_generic_jet_planes
+		cost = 5
+
+		x = -1
+		y = 3
+
+		relative_position_id = GEH_prefect_team_luftwaffe_junkers
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_luftwaffe_long_range_bombing
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = GEH_prefect_team_luftwaffe_jet
+				bonus = 1
+				uses = 1
+				category = air_equipment
+			}
+			add_tech_bonus = {
+				name = GEH_prefect_team_luftwaffe_jet
+				bonus = 1
+				uses = 1
+				category = jet_technology
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_luftwaffe_anti_air
+		icon = GFX_focus_generic_air_defense
+		cost = 5
+
+		x = 1
+		y = 3
+
+		relative_position_id = GEH_prefect_team_luftwaffe_junkers
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_luftwaffe_long_range_bombing
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_tech = interwar_antiair } }
+				set_technology = { interwar_antiair = 1 }
+			}
+			if = {
+				limit = { owns_state = 54 }
+				54 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { owns_state = 55 }
+				55 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = GEH_prefect_team_luftwaffe_anti_air
+				bonus = 1
+				uses = 1
+				category = cat_anti_air
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_luftwaffe_nuke
+		icon = GFX_focus_rocketry
+		cost = 10
+
+		x = 0
+		y = 4
+
+		relative_position_id = GEH_prefect_team_luftwaffe_junkers
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+			modifier = {
+				factor = 4
+				has_completed_focus = GEH_hina_route_focus
+			}
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = GEH_three_congress_focus
+				has_completed_focus = GEH_hina_route_focus
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_luftwaffe_jet
+			focus = GEH_prefect_team_luftwaffe_anti_air
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+			
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.5
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_luftwaffe_fighter_design
+		icon = GFX_focus_generic_copy_plane_designs
+		cost = 5
+
+		x = 2
+		y = 1
+
+		relative_position_id = GEH_prefect_team_luftwaffe
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_luftwaffe
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = GEH_prefect_team_luftwaffe_fighter_design
+				bonus = 1
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+			add_tech_bonus = {
+				name = GEH_prefect_team_luftwaffe_fighter_design
+				bonus = 1
+				uses = 1
+				category = plane_modules_tech
+			}
+
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				create_equipment_variant = { 
+					name = "Ju 87 G" 
+					type = small_plane_cas_airframe_2
+					allow_without_tech = no
+					design_team = mio:GEK_junkers_organization
+					modules = {
+						fixed_main_weapon_slot = bomb_locks
+						fixed_auxiliary_weapon_slot_1 = tank_buster_1
+						engine_type_slot = engine_3_1x
+						special_type_slot_1 = lmg_defense_turret
+						special_type_slot_2 = empty
+					}
+					icon = "GFX_GER_CAS2_medium"
+					model = "GER_CAS_equipment_2_entity"
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_luftwaffe_tactical_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+
+		x = -1
+		y = 1
+
+		relative_position_id = GEH_prefect_team_luftwaffe_fighter_design
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_luftwaffe_fighter_design
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = GEH_prefect_team_luftwaffe_tactical_bombers
+				bonus = 0.5
+				uses = 1
+				category = medium_air
+			}
+
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				create_equipment_variant = { 
+					name = "Ju 88" 
+					type = medium_plane_airframe_2
+					allow_without_tech = no
+					design_team = mio:GEK_dornier_organization
+					modules = {
+						fixed_main_weapon_slot = medium_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+						fixed_auxiliary_weapon_slot_2 = torpedo_mounting
+						engine_type_slot = engine_3_2x
+						special_type_slot_1 = lmg_defense_turret_2x
+						special_type_slot_2 = empty	
+					}
+					icon = "GFX_GER_tactical_bomber2_medium"
+					model = "GER_medium_plane_entity"
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_prefect_team_luftwaffe_multi_role_aircraft
+		icon = GFX_focus_generic_multi_role_aircraft
+		cost = 5
+
+		x = 1
+		y = 1
+
+		relative_position_id = GEH_prefect_team_luftwaffe_fighter_design
+
+		ai_will_do = { 
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_prefect_team_luftwaffe_fighter_design
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				create_equipment_variant = { 
+					name = "Me 262" 
+					allow_without_tech = no
+					type = small_plane_airframe_4
+					design_team = mio:GEK_messerschmitt_organization
+					modules = {
+						fixed_main_weapon_slot = aircraft_cannon_2_2x
+						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_2x
+						engine_type_slot = jet_engine_2x
+						special_type_slot_1 = armor_plate_small
+						special_type_slot_2 = drop_tanks	
+						special_type_slot_3 = self_sealing_fuel_tanks_small	
+					}
+					icon = "GFX_GER_jet_plane_1_medium"
+					model = "GER_jet_plane_entity"
+				}
+				create_equipment_variant = { 
+					name = "Ar 234" 
+					allow_without_tech = no
+					type = medium_plane_airframe_4
+					design_team = mio:GEK_dornier_organization
+					modules = {
+						fixed_main_weapon_slot = medium_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+						fixed_auxiliary_weapon_slot_2 = bomb_locks
+						engine_type_slot = jet_engine_2x
+						special_type_slot_1 = fuel_tanks_medium
+						special_type_slot_2 = empty	
+					}
+					icon = "GFX_medium_plane_4_medium"
+					model = "GER_medium_jet_plane_1_entity"
+				}
+				
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+		}
+	}
+
+# 공군 중점 끝/
 }
