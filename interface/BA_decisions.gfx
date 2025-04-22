@@ -537,6 +537,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_TRN_Mika_Honor_bar"
+		texturefile = "gfx/interface/decisions/icon/Mika_Honor_bar.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_GEH_perfect_team"
 		texturefile = "gfx/interface/decisions/GEH_perfect_team.tga"
 		legacy_lazy_load = no
