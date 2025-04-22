@@ -17,13 +17,12 @@ RED_minori_bop = {
 
 	side = { #좌측
 		id = RED_syndic_side
-		icon = GFX_idea_RED_syndicalism
+		icon = GFX_bop_ITA_communism_side
 		range = {
 			id = RED_syn_0
 			min = -0.30
 			max = -0.10
 			modifier = {
-				political_power_factor = 0.01
 				production_speed_buildings_factor = 0.01
 				consumer_goods_factor = 0.01
             }
@@ -37,24 +36,13 @@ RED_minori_bop = {
 			min = -0.60
 			max = -0.30
 			modifier = {
-				political_power_factor = 0.03
 				production_speed_buildings_factor = 0.03
 				consumer_goods_factor = 0.03
             }
 			on_activate = {
-				set_power_balance_gfx = {
-					id = RED_power_balance
-					side = RED_cherino_side
-					gfx = GFX_idea_RED_syndicalism_color
-				}
 				
 			}
 			on_deactivate = {
-				set_power_balance_gfx = {
-					id = RED_power_balance
-					side = RED_cherino_side
-					gfx = GFX_idea_RED_syndicalism
-				}
 				
 			}
 		}
@@ -63,7 +51,6 @@ RED_minori_bop = {
 			min = -0.90
 			max = -0.60
 			modifier = {
-				political_power_factor = 0.05
 				production_speed_buildings_factor = 0.05
 				consumer_goods_factor = 0.05
             }
@@ -79,41 +66,37 @@ RED_minori_bop = {
 			min = -1.00
 			max = -0.90
 			modifier = {
-				political_power_factor = 0.1
 				production_speed_buildings_factor = 0.075
 				consumer_goods_factor = 0.075
             }
 			on_activate = {
 				set_power_balance_gfx = {
-					id = RED_power_balance
-					side = RED_cherino_side
-					gfx = GFX_RED_bop_cherino_color_star
+					id = RED_minori_bop
+					side = RED_syndic_side
+					gfx = GFX_bop_ITA_communism_improved_side
 				}
-				
 			}
 			on_deactivate = {
 				set_power_balance_gfx = {
-					id = RED_power_balance
-					side = RED_cherino_side
-					gfx = GFX_idea_RED_syndicalism_color
+					id = RED_minori_bop
+					side = RED_syndic_side
+					gfx = GFX_bop_ITA_communism_side
 				}
-				
 			}
 		}
 	}
 
 	side = { #우측
 		id = RED_socdem_side
-		icon = GFX_RED_bop_trotsky
+		icon = GFX_bop_ITA_democratic_side
 		range = {
 			id = RED_soc_0
 			min = 0.10
 			max = 0.30
 			modifier = {
-				political_power_cost = 0.05
-				war_support_factor = 0.01
-				army_org_factor = 0.01
-				experience_gain_factor = 0.1
+				political_power_factor = 0.01
+				stability_factor = 0.01
+				production_factory_max_efficiency_factor = 0.01
 			}
 			on_activate = {
 				
@@ -127,16 +110,15 @@ RED_minori_bop = {
 			min = 0.30
 			max = 0.60
 			modifier = {
-				political_power_cost = 0.1
-				war_support_factor = 0.03
-				army_org_factor = 0.03
-				experience_gain_factor = 0.15
+				political_power_factor = 0.03
+				stability_factor = 0.03
+				production_factory_max_efficiency_factor = 0.03
 			}
 			on_activate = {
 				set_power_balance_gfx = {
-					id = RED_power_balance
-					side = RED_trotsky_side
-					gfx = GFX_RED_bop_trotsky_color
+					id = ITA_power_balance
+					side = ITA_democratic_side
+					gfx = GFX_bop_ITA_democratic_improved_side
 				}
 			}
 			on_deactivate = {
@@ -152,10 +134,9 @@ RED_minori_bop = {
 			min = 0.60
 			max = 0.90
 			modifier = {
-				political_power_cost = 0.15
-				war_support_factor = 0.05
-				army_org_factor = 0.05
-				experience_gain_factor = 0.2
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
 			}
 			on_activate = {
 			}
@@ -168,25 +149,23 @@ RED_minori_bop = {
 			min = 0.90
 			max = 1.00
 			modifier = {
-				political_power_cost = 0.2
-				war_support_factor = 0.075
-				army_org_factor = 0.075
-				experience_gain_factor = 0.3
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
 			}
 			on_activate = {
 				set_power_balance_gfx = {
-					id = RED_power_balance
-					side = RED_trotsky_side
-					gfx = GFX_RED_bop_trotsky_color_star
+					id = RED_minori_bop
+					side = RED_socdem_side
+					gfx = GFX_bop_ITA_democratic_improved_side
 				}
 			}
 			on_deactivate = {
 				set_power_balance_gfx = {
-					id = RED_power_balance
-					side = RED_trotsky_side
-					gfx = GFX_RED_bop_trotsky_color
+					id = RED_minori_bop
+					side = RED_socdem_side
+					gfx = GFX_bop_ITA_democratic_side
 				}
-				
 			}
 		}
 	}

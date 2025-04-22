@@ -19843,6 +19843,25 @@ ABY_descision_category_debug = {
 			}
 		}
 	}
+	ABY_descision_debug_divide_sov = {
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }     
+		available = {
+			is_ai = no
+		}                
+
+		complete_effect = {
+			ABY_scripted_effect_divide_SOV = yes
+		}
+	}
 }
 ABY_descision_category_abydos_highschool = {
 	ABY_descision_debug_rebuild_map = {

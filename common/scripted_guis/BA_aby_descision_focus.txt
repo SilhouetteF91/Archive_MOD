@@ -5,247 +5,1687 @@ scripted_gui = {
 
 		effects = {
 			ABY_descision_focus_first_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_first_selected_flag
 			}
 			ABY_descision_focus_abydos_1_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_1_selected_flag
 			}
 			ABY_descision_focus_abydos_2_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_2_selected_flag
 			}
 			ABY_descision_focus_abydos_3_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_3_selected_flag
 			}
 			ABY_descision_focus_abydos_4_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_4_selected_flag
 			}
 			ABY_descision_focus_abydos_5_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_5_selected_flag
 			}
 			ABY_descision_focus_abydos_6_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_6_selected_flag
 			}
 			ABY_descision_focus_abydos_7_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_7_selected_flag
 			}
 			ABY_descision_focus_abydos_8_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_8_selected_flag
 			}
 			ABY_descision_focus_abydos_9_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_9_selected_flag
 			}
 			ABY_descision_focus_abydos_10_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_10_selected_flag
 			}
 			ABY_descision_focus_abydos_11_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_11_selected_flag
 			}
 			ABY_descision_focus_abydos_12_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_12_selected_flag
 			}
 			ABY_descision_focus_abydos_13_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_13_selected_flag
 			}
 			ABY_descision_focus_abydos_14_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_14_selected_flag
 			}
 			ABY_descision_focus_abydos_15_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_15_selected_flag
 			}
 			ABY_descision_focus_german_1_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_1_selected_flag
 			}
 			ABY_descision_focus_german_2_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_2_selected_flag
 			}
 			ABY_descision_focus_german_3_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_3_selected_flag
 			}
 			ABY_descision_focus_german_4_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_4_selected_flag
 			}
 			ABY_descision_focus_german_5_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_5_selected_flag
 			}
 			ABY_descision_focus_german_6_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_6_selected_flag
 			}
 			ABY_descision_focus_german_7_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_7_selected_flag
 			}
 			ABY_descision_focus_german_8_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_8_selected_flag
 			}
 			ABY_descision_focus_german_9_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_9_selected_flag
 			}
 			ABY_descision_focus_german_10_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_10_selected_flag
 			}
 			ABY_descision_focus_german_11_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_11_selected_flag
 			}
 			ABY_descision_focus_german_12_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_12_selected_flag
 			}
 			ABY_descision_focus_czecho_1_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_1_selected_flag
 			}
 			ABY_descision_focus_czecho_2_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_2_selected_flag
 			}
 			ABY_descision_focus_czecho_3_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_3_selected_flag
 			}
 			ABY_descision_focus_czecho_4_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_4_selected_flag
 			}
 			ABY_descision_focus_czecho_5_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_5_selected_flag
 			}
 			ABY_descision_focus_czecho_6_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_6_selected_flag
 			}
 			ABY_descision_focus_czecho_7_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_7_selected_flag
 			}
 			ABY_descision_focus_czecho_8_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_8_selected_flag
 			}
 			ABY_descision_focus_czecho_9_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_9_selected_flag
 			}
 			ABY_descision_focus_czecho_10_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_10_selected_flag
 			}
 			ABY_descision_focus_czecho_11_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_11_selected_flag
 			}
 			ABY_descision_focus_czecho_12_unavailable_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
 				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_12_selected_flag
+			}
+			ABY_descision_focus_first_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_first_selected_flag
+			}
+			ABY_descision_focus_abydos_1_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_1_selected_flag
+			}
+			ABY_descision_focus_abydos_2_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_2_selected_flag
+			}
+			ABY_descision_focus_abydos_3_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_3_selected_flag
+			}
+			ABY_descision_focus_abydos_4_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_4_selected_flag
+			}
+			ABY_descision_focus_abydos_5_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_5_selected_flag
+			}
+			ABY_descision_focus_abydos_6_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_6_selected_flag
+			}
+			ABY_descision_focus_abydos_7_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_7_selected_flag
+			}
+			ABY_descision_focus_abydos_8_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_8_selected_flag
+			}
+			ABY_descision_focus_abydos_9_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_9_selected_flag
+			}
+			ABY_descision_focus_abydos_10_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_10_selected_flag
+			}
+			ABY_descision_focus_abydos_11_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_11_selected_flag
+			}
+			ABY_descision_focus_abydos_12_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_12_selected_flag
+			}
+			ABY_descision_focus_abydos_13_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_13_selected_flag
+			}
+			ABY_descision_focus_abydos_14_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_14_selected_flag
+			}
+			ABY_descision_focus_abydos_15_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_15_selected_flag
+			}
+			ABY_descision_focus_german_1_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_1_selected_flag
+			}
+			ABY_descision_focus_german_2_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_2_selected_flag
+			}
+			ABY_descision_focus_german_3_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_3_selected_flag
+			}
+			ABY_descision_focus_german_4_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_4_selected_flag
+			}
+			ABY_descision_focus_german_5_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_5_selected_flag
+			}
+			ABY_descision_focus_german_6_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_6_selected_flag
+			}
+			ABY_descision_focus_german_7_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_7_selected_flag
+			}
+			ABY_descision_focus_german_8_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_8_selected_flag
+			}
+			ABY_descision_focus_german_9_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_9_selected_flag
+			}
+			ABY_descision_focus_german_10_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_10_selected_flag
+			}
+			ABY_descision_focus_german_11_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_11_selected_flag
+			}
+			ABY_descision_focus_german_12_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_12_selected_flag
+			}
+			ABY_descision_focus_czecho_1_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_1_selected_flag
+			}
+			ABY_descision_focus_czecho_2_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_2_selected_flag
+			}
+			ABY_descision_focus_czecho_3_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_3_selected_flag
+			}
+			ABY_descision_focus_czecho_4_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_4_selected_flag
+			}
+			ABY_descision_focus_czecho_5_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_5_selected_flag
+			}
+			ABY_descision_focus_czecho_6_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_6_selected_flag
+			}
+			ABY_descision_focus_czecho_7_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_7_selected_flag
+			}
+			ABY_descision_focus_czecho_8_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_8_selected_flag
+			}
+			ABY_descision_focus_czecho_9_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_9_selected_flag
+			}
+			ABY_descision_focus_czecho_10_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_10_selected_flag
+			}
+			ABY_descision_focus_czecho_11_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_11_selected_flag
+			}
+			ABY_descision_focus_czecho_12_available_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_12_selected_flag
+			}
+			ABY_descision_focus_first_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_first_selected_flag
+			}
+			ABY_descision_focus_abydos_1_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_1_selected_flag
+			}
+			ABY_descision_focus_abydos_2_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_2_selected_flag
+			}
+			ABY_descision_focus_abydos_3_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_3_selected_flag
+			}
+			ABY_descision_focus_abydos_4_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_4_selected_flag
+			}
+			ABY_descision_focus_abydos_5_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_5_selected_flag
+			}
+			ABY_descision_focus_abydos_6_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_6_selected_flag
+			}
+			ABY_descision_focus_abydos_7_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_7_selected_flag
+			}
+			ABY_descision_focus_abydos_8_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_8_selected_flag
+			}
+			ABY_descision_focus_abydos_9_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_9_selected_flag
+			}
+			ABY_descision_focus_abydos_10_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_10_selected_flag
+			}
+			ABY_descision_focus_abydos_11_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_11_selected_flag
+			}
+			ABY_descision_focus_abydos_12_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_12_selected_flag
+			}
+			ABY_descision_focus_abydos_13_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_13_selected_flag
+			}
+			ABY_descision_focus_abydos_14_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_14_selected_flag
+			}
+			ABY_descision_focus_abydos_15_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_abydos_15_selected_flag
+			}
+			ABY_descision_focus_german_1_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_1_selected_flag
+			}
+			ABY_descision_focus_german_2_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_2_selected_flag
+			}
+			ABY_descision_focus_german_3_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_3_selected_flag
+			}
+			ABY_descision_focus_german_4_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_4_selected_flag
+			}
+			ABY_descision_focus_german_5_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_5_selected_flag
+			}
+			ABY_descision_focus_german_6_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_6_selected_flag
+			}
+			ABY_descision_focus_german_7_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_7_selected_flag
+			}
+			ABY_descision_focus_german_8_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_8_selected_flag
+			}
+			ABY_descision_focus_german_9_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_9_selected_flag
+			}
+			ABY_descision_focus_german_10_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_10_selected_flag
+			}
+			ABY_descision_focus_german_11_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_11_selected_flag
+			}
+			ABY_descision_focus_german_12_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_german_12_selected_flag
+			}
+			ABY_descision_focus_czecho_1_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_1_selected_flag
+			}
+			ABY_descision_focus_czecho_2_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_2_selected_flag
+			}
+			ABY_descision_focus_czecho_3_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_3_selected_flag
+			}
+			ABY_descision_focus_czecho_4_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_4_selected_flag
+			}
+			ABY_descision_focus_czecho_5_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_5_selected_flag
+			}
+			ABY_descision_focus_czecho_6_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_6_selected_flag
+			}
+			ABY_descision_focus_czecho_7_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_7_selected_flag
+			}
+			ABY_descision_focus_czecho_8_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_8_selected_flag
+			}
+			ABY_descision_focus_czecho_9_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_9_selected_flag
+			}
+			ABY_descision_focus_czecho_10_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_10_selected_flag
+			}
+			ABY_descision_focus_czecho_11_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_11_selected_flag
+			}
+			ABY_descision_focus_czecho_12_completed_click = {
+				ABY_scripted_effect_remove_focus_flag = yes
+				set_country_flag = ABY_flag_open_focus
+				set_country_flag = ABY_descision_focus_czecho_12_selected_flag
 			}
 		}
 
 		triggers = {
 			ABY_descision_focus_first_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				has_country_flag = GAEBALJUNG
 			}
 			ABY_descision_focus_abydos_1_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_1_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_1_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_2_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_2_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_2_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_3_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_3_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_3_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_4_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_4_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_4_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_1_completed_flag}
+					NOT = {has_country_flag = ABY_descision_focus_german_1_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_5_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_5_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_5_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_1_completed_flag}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_2_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_6_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_6_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_6_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_3_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_7_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_7_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_7_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_4_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_8_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_8_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_8_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_5_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_9_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_9_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_9_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_5_completed_flag}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_6_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_10_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_10_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_10_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_8_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_11_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_11_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_11_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_german_9_completed_flag}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_8_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_12_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_12_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_12_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_11_completed_flag}
+					NOT = {
+						any_state = {
+							OR = {
+								state = 9
+								state = 75
+								state = 72
+							}
+							is_controlled_by = SHA
+						}
+					}
+				}
 			}
 			ABY_descision_focus_abydos_13_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_13_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_13_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_12_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_14_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_14_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_14_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_11_completed_flag}
+				}
 			}
 			ABY_descision_focus_abydos_15_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_abydos_15_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_15_ongoing_flag}
+					}
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_13_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_abydos_14_completed_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_12_completed_flag}
+					NOT = {has_country_flag = ABY_flag_benes_down}
+				}
 			}
 			ABY_descision_focus_german_1_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_german_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_german_1_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_german_1_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+				}
 			}
 			ABY_descision_focus_german_2_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_german_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_german_2_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_german_2_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+					NOT = {has_country_flag = ABY_flag_died_czech}
+				}
 			}
 			ABY_descision_focus_german_3_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_german_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_german_3_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_german_3_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_german_1_completed_flag}
+				}
 			}
 			ABY_descision_focus_german_4_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_german_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_german_4_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_german_4_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_german_2_completed_flag}
+				}
 			}
 			ABY_descision_focus_german_5_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_german_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_german_5_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_german_5_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_german_4_completed_flag}
+				}
 			}
 			ABY_descision_focus_german_6_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_german_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_german_6_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_german_6_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_german_5_completed_flag}
+					has_global_flag = ABY_focus_operation_falling_flower_flag
+				}
 			}
 			ABY_descision_focus_german_7_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_german_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_german_7_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_german_7_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_german_5_completed_flag}
+				}
 			}
 			ABY_descision_focus_german_8_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_german_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_german_8_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_german_8_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_german_6_completed_flag}
+					has_global_flag = ABY_focus_operation_falling_flower_flag
+				}
 			}
 			ABY_descision_focus_german_9_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_german_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_german_9_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_german_9_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_german_7_completed_flag}
+				}
 			}
 			ABY_descision_focus_german_10_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_german_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_german_10_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_german_10_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_11_completed_flag}
+					NOT = {
+						any_state = {
+							OR = {
+								state = 1021
+								state = 972
+							}
+							is_controlled_by = SHA
+						}
+					}
+				}
 			}
 			ABY_descision_focus_german_11_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_german_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_german_11_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_german_11_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_german_10_completed_flag}
+					NOT = {has_war_with = SHA}
+				}
 			}
 			ABY_descision_focus_german_12_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_german_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_german_12_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_german_12_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_german_10_completed_flag}
+					NOT = {has_war_with = SHA}
+				}
 			}
 			ABY_descision_focus_czecho_1_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_1_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_czecho_1_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+				}
 			}
 			ABY_descision_focus_czecho_2_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_2_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_czecho_2_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+				}
 			}
 			ABY_descision_focus_czecho_3_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_3_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_czecho_3_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_1_completed_flag}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_3_completed_flag}
+				}
 			}
 			ABY_descision_focus_czecho_4_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_4_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_czecho_4_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_1_completed_flag}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_2_completed_flag}
+				}
 			}
 			ABY_descision_focus_czecho_5_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_5_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_czecho_5_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_3_completed_flag}
+				}
 			}
 			ABY_descision_focus_czecho_6_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_6_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_czecho_6_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_2_completed_flag}
+				}
 			}
 			ABY_descision_focus_czecho_7_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_7_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_czecho_7_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_6_completed_flag}
+				}
 			}
 			ABY_descision_focus_czecho_8_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_8_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_czecho_8_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_5_completed_flag}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_7_completed_flag}
+					NOT = {has_country_flag = ABY_descision_focus_abydos_9_completed_flag}
+				}
 			}
 			ABY_descision_focus_czecho_9_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_9_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_czecho_9_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_8_completed_flag}
+				}
 			}
 			ABY_descision_focus_czecho_10_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_10_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_czecho_10_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_9_completed_flag}
+				}
 			}
 			ABY_descision_focus_czecho_11_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_11_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_czecho_11_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_9_completed_flag}
+				}
 			}
 			ABY_descision_focus_czecho_12_unavailable_visible = {
-				NOT = {has_country_flag = GAEBALJUNG}
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_12_completed_flag}
+						NOT = {has_country_flag = ABY_descision_focus_czecho_12_ongoing_flag}
+					}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_10_completed_flag}
+					NOT = {has_country_flag = ABY_descision_focus_czecho_11_completed_flag}
+					NOT = {has_country_flag = ABY_flag_recovered_land}
+				}
+			}
+			ABY_descision_focus_first_available_visible = {
+				NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+			}
+			ABY_descision_focus_abydos_1_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_1_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_1_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_first_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_2_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_2_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_2_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_first_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_3_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_3_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_3_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_first_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_4_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_4_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_4_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_abydos_1_completed_flag
+					has_country_flag = ABY_descision_focus_german_1_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_5_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_5_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_5_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_abydos_1_completed_flag
+					has_country_flag = ABY_descision_focus_abydos_2_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_6_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_6_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_6_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_abydos_3_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_7_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_7_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_7_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_abydos_4_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_8_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_8_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_8_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_abydos_5_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_9_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_9_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_9_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_abydos_5_completed_flag
+					has_country_flag = ABY_descision_focus_abydos_6_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_10_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_10_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_10_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_abydos_8_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_11_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_11_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_11_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_german_9_completed_flag
+					has_country_flag = ABY_descision_focus_czecho_8_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_12_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_12_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_12_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_abydos_11_completed_flag
+					any_state = {
+						OR = {
+							state = 9
+							state = 75
+							state = 72
+						}
+						is_controlled_by = SHA
+					}
+				}
+			}
+			ABY_descision_focus_abydos_13_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_13_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_13_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_abydos_12_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_14_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_14_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_14_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_abydos_11_completed_flag
+				}
+			}
+			ABY_descision_focus_abydos_15_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_abydos_15_completed_flag}
+						has_country_flag = ABY_descision_focus_abydos_15_ongoing_flag
+					}
+					OR = {
+						has_country_flag = ABY_descision_focus_abydos_13_completed_flag
+						has_country_flag = ABY_descision_focus_abydos_14_completed_flag
+					}
+					has_country_flag = ABY_descision_focus_czecho_12_completed_flag
+					has_country_flag = ABY_flag_benes_down
+				}
+			}
+			ABY_descision_focus_german_1_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_german_1_completed_flag}
+						has_country_flag = ABY_descision_focus_german_1_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_first_completed_flag
+				}
+			}
+			ABY_descision_focus_german_2_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_german_2_completed_flag}
+						has_country_flag = ABY_descision_focus_german_2_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_first_completed_flag
+					has_country_flag = ABY_flag_died_czech
+				}
+			}
+			ABY_descision_focus_german_3_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_german_3_completed_flag}
+						has_country_flag = ABY_descision_focus_german_3_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_german_1_completed_flag
+				}
+			}
+			ABY_descision_focus_german_4_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_german_4_completed_flag}
+						has_country_flag = ABY_descision_focus_german_4_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_german_2_completed_flag
+				}
+			}
+			ABY_descision_focus_german_5_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_german_5_completed_flag}
+						has_country_flag = ABY_descision_focus_german_5_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_german_4_completed_flag
+				}
+			}
+			ABY_descision_focus_german_6_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_german_6_completed_flag}
+						has_country_flag = ABY_descision_focus_german_6_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_german_5_completed_flag
+					NOT = {has_global_flag = ABY_focus_operation_falling_flower_flag}
+				}
+			}
+			ABY_descision_focus_german_7_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_german_7_completed_flag}
+						has_country_flag = ABY_descision_focus_german_7_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_german_5_completed_flag
+				}
+			}
+			ABY_descision_focus_german_8_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_german_8_completed_flag}
+						has_country_flag = ABY_descision_focus_german_8_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_german_6_completed_flag
+					NOT = {has_global_flag = ABY_focus_operation_falling_flower_flag}
+				}
+			}
+			ABY_descision_focus_german_9_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_german_9_completed_flag}
+						has_country_flag = ABY_descision_focus_german_9_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_german_7_completed_flag
+				}
+			}
+			ABY_descision_focus_german_10_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_german_10_completed_flag}
+						has_country_flag = ABY_descision_focus_german_10_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_abydos_11_completed_flag
+					any_state = {
+						OR = {
+							state = 1021
+							state = 972
+						}
+						is_controlled_by = SHA
+					}
+				}
+			}
+			ABY_descision_focus_german_11_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_german_11_completed_flag}
+						has_country_flag = ABY_descision_focus_german_11_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_german_10_completed_flag
+					has_war_with = SHA
+				}
+			}
+			ABY_descision_focus_german_12_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_german_12_completed_flag}
+						has_country_flag = ABY_descision_focus_german_12_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_german_10_completed_flag
+					has_war_with = SHA
+				}
+			}
+			ABY_descision_focus_czecho_1_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_czecho_1_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_1_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_first_completed_flag
+				}
+			}
+			ABY_descision_focus_czecho_2_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_czecho_1_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_1_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_first_completed_flag
+				}
+			}
+			ABY_descision_focus_czecho_3_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_czecho_3_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_3_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_czecho_1_completed_flag
+					has_country_flag = ABY_descision_focus_abydos_3_completed_flag
+				}
+			}
+			ABY_descision_focus_czecho_4_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_czecho_4_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_4_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_czecho_1_completed_flag
+					has_country_flag = ABY_descision_focus_czecho_2_completed_flag
+				}
+			}
+			ABY_descision_focus_czecho_5_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_czecho_5_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_5_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_czecho_3_completed_flag
+				}
+			}
+			ABY_descision_focus_czecho_6_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_czecho_6_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_6_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_czecho_2_completed_flag
+				}
+			}
+			ABY_descision_focus_czecho_7_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_czecho_7_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_7_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_czecho_6_completed_flag
+				}
+			}
+			ABY_descision_focus_czecho_8_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_czecho_8_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_8_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_czecho_5_completed_flag
+					has_country_flag = ABY_descision_focus_czecho_7_completed_flag
+					has_country_flag = ABY_descision_focus_abydos_9_completed_flag
+				}
+			}
+			ABY_descision_focus_czecho_9_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_czecho_9_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_9_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_czecho_8_completed_flag
+				}
+			}
+			ABY_descision_focus_czecho_10_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_czecho_10_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_10_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_czecho_9_completed_flag
+				}
+			}
+			ABY_descision_focus_czecho_11_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_czecho_11_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_11_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_czecho_9_completed_flag
+				}
+			}
+			ABY_descision_focus_czecho_12_available_visible = {
+				AND = {
+					AND = {
+						NOT = {has_country_flag = ABY_descision_focus_czecho_12_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_12_ongoing_flag
+					}
+					has_country_flag = ABY_descision_focus_czecho_10_completed_flag
+					has_country_flag = ABY_descision_focus_czecho_11_completed_flag
+					has_country_flag = ABY_flag_recovered_land
+				}
+			}
+			ABY_descision_focus_first_completed_visible = {
+				has_country_flag = ABY_descision_focus_first_completed_flag
+			}
+			ABY_descision_focus_abydos_1_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_1_completed_flag
+			}
+			ABY_descision_focus_abydos_2_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_2_completed_flag
+			}
+			ABY_descision_focus_abydos_3_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_3_completed_flag
+			}
+			ABY_descision_focus_abydos_4_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_4_completed_flag
+			}
+			ABY_descision_focus_abydos_5_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_5_completed_flag
+			}
+			ABY_descision_focus_abydos_6_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_6_completed_flag
+			}
+			ABY_descision_focus_abydos_7_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_7_completed_flag
+			}
+			ABY_descision_focus_abydos_8_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_8_completed_flag
+			}
+			ABY_descision_focus_abydos_9_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_9_completed_flag
+			}
+			ABY_descision_focus_abydos_10_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_10_completed_flag
+			}
+			ABY_descision_focus_abydos_11_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_11_completed_flag
+			}
+			ABY_descision_focus_abydos_12_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_12_completed_flag
+			}
+			ABY_descision_focus_abydos_13_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_13_completed_flag
+			}
+			ABY_descision_focus_abydos_14_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_14_completed_flag
+			}
+			ABY_descision_focus_abydos_15_completed_visible = {
+				has_country_flag = ABY_descision_focus_abydos_15_completed_flag
+			}
+			ABY_descision_focus_german_1_completed_visible = {
+				has_country_flag = ABY_descision_focus_german_1_completed_flag
+			}
+			ABY_descision_focus_german_2_completed_visible = {
+				has_country_flag = ABY_descision_focus_german_2_completed_flag
+			}
+			ABY_descision_focus_german_3_completed_visible = {
+				has_country_flag = ABY_descision_focus_german_3_completed_flag
+			}
+			ABY_descision_focus_german_4_completed_visible = {
+				has_country_flag = ABY_descision_focus_german_4_completed_flag
+			}
+			ABY_descision_focus_german_5_completed_visible = {
+				has_country_flag = ABY_descision_focus_german_5_completed_flag
+			}
+			ABY_descision_focus_german_6_completed_visible = {
+				has_country_flag = ABY_descision_focus_german_6_completed_flag
+			}
+			ABY_descision_focus_german_7_completed_visible = {
+				has_country_flag = ABY_descision_focus_german_7_completed_flag
+			}
+			ABY_descision_focus_german_8_completed_visible = {
+				has_country_flag = ABY_descision_focus_german_8_completed_flag
+			}
+			ABY_descision_focus_german_9_completed_visible = {
+				has_country_flag = ABY_descision_focus_german_9_completed_flag
+			}
+			ABY_descision_focus_german_10_completed_visible = {
+				has_country_flag = ABY_descision_focus_german_10_completed_flag
+			}
+			ABY_descision_focus_german_11_completed_visible = {
+				has_country_flag = ABY_descision_focus_german_11_completed_flag
+			}
+			ABY_descision_focus_german_12_completed_visible = {
+				has_country_flag = ABY_descision_focus_german_12_completed_flag
+			}
+			ABY_descision_focus_czecho_1_completed_visible = {
+				has_country_flag = ABY_descision_focus_czecho_1_completed_flag
+			}
+			ABY_descision_focus_czecho_2_completed_visible = {
+				has_country_flag = ABY_descision_focus_czecho_2_completed_flag
+			}
+			ABY_descision_focus_czecho_3_completed_visible = {
+				has_country_flag = ABY_descision_focus_czecho_3_completed_flag
+			}
+			ABY_descision_focus_czecho_4_completed_visible = {
+				has_country_flag = ABY_descision_focus_czecho_4_completed_flag
+			}
+			ABY_descision_focus_czecho_5_completed_visible = {
+				has_country_flag = ABY_descision_focus_czecho_5_completed_flag
+			}
+			ABY_descision_focus_czecho_6_completed_visible = {
+				has_country_flag = ABY_descision_focus_czecho_6_completed_flag
+			}
+			ABY_descision_focus_czecho_7_completed_visible = {
+				has_country_flag = ABY_descision_focus_czecho_7_completed_flag
+			}
+			ABY_descision_focus_czecho_8_completed_visible = {
+				has_country_flag = ABY_descision_focus_czecho_8_completed_flag
+			}
+			ABY_descision_focus_czecho_9_completed_visible = {
+				has_country_flag = ABY_descision_focus_czecho_9_completed_flag
+			}
+			ABY_descision_focus_czecho_10_completed_visible = {
+				has_country_flag = ABY_descision_focus_czecho_10_completed_flag
+			}
+			ABY_descision_focus_czecho_11_completed_visible = {
+				has_country_flag = ABY_descision_focus_czecho_11_completed_flag
+			}
+			ABY_descision_focus_czecho_12_completed_visible = {
+				has_country_flag = ABY_descision_focus_czecho_12_completed_flag
+			}
+			mutual_normal_line_visible = {
+				NOT = {has_country_flag = ABY_descision_focus_abydos_13_completed_flag}
+				NOT = {has_country_flag = ABY_descision_focus_abydos_14_completed_flag}
+			}
+			mutual_left_line_visible = {
+				has_country_flag = ABY_descision_focus_abydos_13_completed_flag
+			}
+			mutual_right_line_visible = {
+				has_country_flag = ABY_descision_focus_abydos_14_completed_flag
+			}
+			ABY_completed_line_1_visible = {
+				has_country_flag = ABY_descision_focus_abydos_13_completed_flag
+			}
+			ABY_completed_line_2_visible = {
+				has_country_flag = ABY_descision_focus_czecho_12_completed_flag
+			}
+			ABY_completed_line_3_visible = {
+				has_country_flag = ABY_descision_focus_czecho_8_completed_flag
+			}
+			ABY_completed_line_4_visible = {
+				has_country_flag = ABY_descision_focus_czecho_8_completed_flag
+				has_country_flag = ABY_descision_focus_german_9_completed_flag
+			}
+			ABY_completed_line_5_visible = {
+				has_country_flag = ABY_descision_focus_german_9_completed_flag
+			}
+			ABY_completed_line_6_visible = {
+				has_country_flag = ABY_descision_focus_german_5_completed_flag
+			}
+			ABY_completed_line_7_visible = {
+				has_country_flag = ABY_descision_focus_abydos_14_completed_flag
+			}
+			ABY_completed_line_8_visible = {
+				has_country_flag = ABY_descision_focus_czecho_7_completed_flag
+			}
+			ABY_completed_line_9_visible = {
+				has_country_flag = ABY_descision_focus_czecho_6_completed_flag
+			}
+			ABY_completed_line_10_visible = {
+				has_country_flag = ABY_descision_focus_german_10_completed_flag
+			}
+			ABY_completed_line_11_visible = {
+				has_country_flag = ABY_descision_focus_abydos_11_completed_flag
+			}
+			ABY_completed_line_12_visible = {
+				has_country_flag = ABY_descision_focus_czecho_9_completed_flag
+			}
+			ABY_completed_line_13_visible = {
+				has_country_flag = ABY_descision_focus_czecho_11_completed_flag
+			}
+			ABY_completed_line_14_visible = {
+				has_country_flag = ABY_descision_focus_czecho_10_completed_flag
+			}
+			ABY_completed_line_15_visible = {
+				has_country_flag = ABY_descision_focus_czecho_2_completed_flag
+			}
+			ABY_completed_line_16_visible = {
+				has_country_flag = ABY_descision_focus_czecho_1_completed_flag
+			}
+			ABY_completed_line_17_visible = {
+				has_country_flag = ABY_descision_focus_abydos_3_completed_flag
+			}
+			ABY_completed_line_18_visible = {
+				has_country_flag = ABY_descision_focus_abydos_5_completed_flag
+			}
+			ABY_completed_line_19_visible = {
+				has_country_flag = ABY_descision_focus_abydos_9_completed_flag
+			}
+			ABY_completed_line_20_visible = {
+				has_country_flag = ABY_descision_focus_abydos_1_completed_flag
+			}
+			ABY_completed_line_21_visible = {
+				has_country_flag = ABY_descision_focus_german_1_completed_flag
+			}
+			ABY_completed_line_22_visible = {
+				has_country_flag = ABY_descision_focus_first_completed_flag
+			}
+			ABY_completed_line_23_visible = {
+				has_country_flag = ABY_descision_focus_german_2_completed_flag
+			}
+			ABY_completed_line_24_visible = {
+				has_country_flag = ABY_descision_focus_german_4_completed_flag
+			}
+			ABY_completed_line_25_visible = {
+				has_country_flag = ABY_descision_focus_german_6_completed_flag
+			}
+			ABY_completed_line_26_visible = {
+				has_country_flag = ABY_descision_focus_german_7_completed_flag
+			}
+			ABY_completed_line_27_visible = {
+				has_country_flag = ABY_descision_focus_czecho_3_completed_flag
+			}
+			ABY_completed_line_28_visible = {
+				has_country_flag = ABY_descision_focus_abydos_8_completed_flag
+			}
+			ABY_completed_line_29_visible = {
+				has_country_flag = ABY_descision_focus_abydos_12_completed_flag
+			}
+			ABY_completed_line_30_visible = {
+				has_country_flag = ABY_descision_focus_abydos_4_completed_flag
+			}
+			ABY_completed_line_31_visible = {
+				has_country_flag = ABY_descision_focus_abydos_1_completed_flag
+				has_country_flag = ABY_descision_focus_german_1_completed_flag
+			}
+			ABY_completed_line_32_visible = {
+				has_country_flag = ABY_descision_focus_abydos_2_completed_flag
+			}
+			ABY_completed_line_33_visible = {
+				has_country_flag = ABY_descision_focus_abydos_1_completed_flag
+				has_country_flag = ABY_descision_focus_abydos_2_completed_flag
+			}
+			ABY_completed_line_34_visible = {
+				has_country_flag = ABY_descision_focus_abydos_6_completed_flag
+			}
+			ABY_completed_line_35_visible = {
+				has_country_flag = ABY_descision_focus_abydos_5_completed_flag
+				has_country_flag = ABY_descision_focus_abydos_6_completed_flag
+			}
+			ABY_completed_line_36_visible = {
+				has_country_flag = ABY_descision_focus_abydos_3_completed_flag
+				has_country_flag = ABY_descision_focus_czecho_1_completed_flag
+			}
+			ABY_completed_line_37_visible = {
+				has_country_flag = ABY_descision_focus_czecho_5_completed_flag
+			}
+			ABY_completed_line_38_visible = {
+				has_country_flag = ABY_descision_focus_czecho_1_completed_flag
+				has_country_flag = ABY_descision_focus_czecho_2_completed_flag
+			}
+			ABY_completed_line_39_visible = {
+				has_country_flag = ABY_descision_focus_abydos_9_completed_flag
+				has_country_flag = ABY_descision_focus_czecho_5_completed_flag
+				has_country_flag = ABY_descision_focus_czecho_7_completed_flag
+			}
+			ABY_completed_line_40_visible = {
+				has_country_flag = ABY_descision_focus_czecho_10_completed_flag
+				has_country_flag = ABY_descision_focus_czecho_11_completed_flag
 			}
 		}
 	}
@@ -265,6 +1705,411 @@ scripted_gui = {
 			}
 			start_click = {
 				clr_country_flag = ABY_flag_open_focus
+			}
+		}
+
+		triggers = {
+			startbutton_unavailable_visible = {
+				OR = {
+					AND = {
+						has_country_flag = ABY_descision_focus_first_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_first_ongoing_flag
+							has_country_flag = ABY_descision_focus_first_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_1_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_1_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_1_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_2_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_2_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_2_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_3_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_3_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_3_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_4_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_4_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_4_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_abydos_1_completed_flag}
+							NOT = {has_country_flag = ABY_descision_focus_german_1_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_5_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_5_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_5_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_abydos_1_completed_flag}
+							NOT = {has_country_flag = ABY_descision_focus_abydos_2_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_6_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_6_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_6_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_abydos_3_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_7_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_7_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_7_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_abydos_4_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_8_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_8_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_8_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_abydos_5_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_9_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_9_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_9_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_abydos_5_completed_flag}
+							NOT = {has_country_flag = ABY_descision_focus_abydos_6_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_10_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_10_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_10_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_abydos_8_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_11_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_11_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_11_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_german_9_completed_flag}
+							NOT = {has_country_flag = ABY_descision_focus_czecho_8_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_12_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_12_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_12_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_abydos_11_completed_flag}
+							NOT = {
+								any_state = {
+									OR = {
+										state = 9
+										state = 75
+										state = 72
+									}
+									is_controlled_by = SHA
+								}
+							}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_13_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_13_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_13_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_abydos_12_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_14_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_14_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_14_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_abydos_11_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_abydos_15_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_abydos_15_ongoing_flag
+							has_country_flag = ABY_descision_focus_abydos_15_completed_flag
+							has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+							AND = {
+								NOT = {has_country_flag = ABY_descision_focus_abydos_13_completed_flag}
+								NOT = {has_country_flag = ABY_descision_focus_abydos_14_completed_flag}
+							}
+							NOT = {has_country_flag = ABY_descision_focus_czecho_12_completed_flag}
+							NOT = {has_country_flag = ABY_flag_benes_down}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_1_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_czecho_1_ongoing_flag
+							has_country_flag = ABY_descision_focus_czecho_1_completed_flag
+							has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_2_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_czecho_2_ongoing_flag
+							has_country_flag = ABY_descision_focus_czecho_2_completed_flag
+							has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_3_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_czecho_3_ongoing_flag
+							has_country_flag = ABY_descision_focus_czecho_3_completed_flag
+							has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_czecho_1_completed_flag}
+							NOT = {has_country_flag = ABY_descision_focus_abydos_3_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_4_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_czecho_4_ongoing_flag
+							has_country_flag = ABY_descision_focus_czecho_4_completed_flag
+							has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_czecho_1_completed_flag}
+							NOT = {has_country_flag = ABY_descision_focus_czecho_2_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_5_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_czecho_5_ongoing_flag
+							has_country_flag = ABY_descision_focus_czecho_5_completed_flag
+							has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_czecho_3_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_6_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_czecho_6_ongoing_flag
+							has_country_flag = ABY_descision_focus_czecho_6_completed_flag
+							has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_czecho_2_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_7_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_czecho_7_ongoing_flag
+							has_country_flag = ABY_descision_focus_czecho_7_completed_flag
+							has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_czecho_6_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_8_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_czecho_8_ongoing_flag
+							has_country_flag = ABY_descision_focus_czecho_8_completed_flag
+							has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_czecho_5_completed_flag}
+							NOT = {has_country_flag = ABY_descision_focus_czecho_7_completed_flag}
+							NOT = {has_country_flag = ABY_descision_focus_abydos_9_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_9_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_czecho_9_ongoing_flag
+							has_country_flag = ABY_descision_focus_czecho_9_completed_flag
+							has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_czecho_8_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_10_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_czecho_10_ongoing_flag
+							has_country_flag = ABY_descision_focus_czecho_10_completed_flag
+							has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_czecho_9_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_11_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_czecho_11_ongoing_flag
+							has_country_flag = ABY_descision_focus_czecho_11_completed_flag
+							has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_czecho_9_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_czecho_12_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_czecho_12_ongoing_flag
+							has_country_flag = ABY_descision_focus_czecho_12_completed_flag
+							has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_czecho_10_completed_flag}
+							NOT = {has_country_flag = ABY_descision_focus_czecho_11_completed_flag}
+							NOT = {has_country_flag = ABY_flag_recovered_land}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_german_1_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_german_1_ongoing_flag
+							has_country_flag = ABY_descision_focus_german_1_completed_flag
+							has_country_flag = ABY_descision_focus_german_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_german_2_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_german_2_ongoing_flag
+							has_country_flag = ABY_descision_focus_german_2_completed_flag
+							has_country_flag = ABY_descision_focus_german_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_first_completed_flag}
+							NOT = {has_country_flag = ABY_flag_died_czech}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_german_3_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_german_3_ongoing_flag
+							has_country_flag = ABY_descision_focus_german_3_completed_flag
+							has_country_flag = ABY_descision_focus_german_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_german_1_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_german_4_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_german_4_ongoing_flag
+							has_country_flag = ABY_descision_focus_german_4_completed_flag
+							has_country_flag = ABY_descision_focus_german_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_german_2_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_german_5_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_german_5_ongoing_flag
+							has_country_flag = ABY_descision_focus_german_5_completed_flag
+							has_country_flag = ABY_descision_focus_german_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_german_4_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_german_6_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_german_6_ongoing_flag
+							has_country_flag = ABY_descision_focus_german_6_completed_flag
+							has_country_flag = ABY_descision_focus_german_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_german_5_completed_flag}
+							has_global_flag = ABY_focus_operation_falling_flower_flag
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_german_7_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_german_7_ongoing_flag
+							has_country_flag = ABY_descision_focus_german_7_completed_flag
+							has_country_flag = ABY_descision_focus_german_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_german_5_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_german_8_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_german_8_ongoing_flag
+							has_country_flag = ABY_descision_focus_german_8_completed_flag
+							has_country_flag = ABY_descision_focus_german_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_german_6_completed_flag}
+							has_global_flag = ABY_focus_operation_falling_flower_flag
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_german_9_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_german_9_ongoing_flag
+							has_country_flag = ABY_descision_focus_german_9_completed_flag
+							has_country_flag = ABY_descision_focus_german_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_german_7_completed_flag}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_german_10_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_german_10_ongoing_flag
+							has_country_flag = ABY_descision_focus_german_10_completed_flag
+							has_country_flag = ABY_descision_focus_german_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_abydos_11_completed_flag}
+							NOT = {
+								any_state = {
+									OR = {
+										state = 1021
+										state = 972
+									}
+									is_controlled_by = SHA
+								}
+							}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_german_11_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_german_11_ongoing_flag
+							has_country_flag = ABY_descision_focus_german_11_completed_flag
+							has_country_flag = ABY_descision_focus_german_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_german_10_completed_flag}
+							NOT = {has_war_with = SHA}
+						}
+					}
+					AND = {
+						has_country_flag = ABY_descision_focus_german_12_selected_flag
+						OR = {
+							has_country_flag = ABY_descision_focus_german_12_ongoing_flag
+							has_country_flag = ABY_descision_focus_german_12_completed_flag
+							has_country_flag = ABY_descision_focus_german_line_doing_flag
+							NOT = {has_country_flag = ABY_descision_focus_german_10_completed_flag}
+							NOT = {has_war_with = SHA}
+						}
+					}
+				}
 			}
 		}
 		

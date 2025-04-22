@@ -147,7 +147,12 @@ TRN_Mika_honor_decision_cat = {
 	priority = 300
 
 	allowed = { original_tag = TRM }
-	visible = { always = no }
+	visible = { 
+		is_debug = yes 
+		is_ai = no
+	}
 	visible_when_empty = yes
+
+	scripted_gui = TRN_Mika_Honor_window
 	
 }

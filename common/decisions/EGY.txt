@@ -530,7 +530,6 @@ EGY_anti_colonialist_crusade = {
 
 		target_trigger = {
 			FROM = {
-				owns_state
 				capital_scope = {
 					NOT = { is_on_continent = africa }
 				}
@@ -552,9 +551,7 @@ EGY_anti_colonialist_crusade = {
 				}
 			}
 			any_state = {
-				limit = {
-					is_on_continent = africa
-				}
+				is_on_continent = africa
 				is_owned_by = FROM
 			}
 			NOT = {

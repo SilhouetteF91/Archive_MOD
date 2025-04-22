@@ -199,3 +199,50 @@ geh_discipline_system_setting_effect = {
 		set_variable = { geh_discipline_breakthrough_factor = -0.20 }
 	}
 }
+
+GEH_ako_route_dating_sim_ending_effect = {
+	set_global_flag = GEH_ako_route_dating_sim_ending_flag
+	if = {
+		limit = {
+			OR = {
+				is_power_balance_in_range = {
+					id = GEH_ako_love_balance
+					range = GEH_hina_love_ako_side_low
+				}
+				is_power_balance_in_range = {
+					id = GEH_ako_love_balance
+					range = GEH_hina_love_ako_side_win
+				}
+			}
+		}
+		country_event = { id = GEH.event.11 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_power_balance_in_range = {
+					id = GEH_ako_love_balance
+					range = GEH_hina_hate_ako_side_low
+				}
+				is_power_balance_in_range = {
+					id = GEH_ako_love_balance
+					range = GEH_hina_hate_ako_side_win
+				}
+			}
+		}
+		country_event = { id = GEH.event.9 }
+	}
+	else_if = {
+		limit = {
+			is_power_balance_in_range = {
+				id = GEH_ako_love_balance
+				range = GEH_ako_love_netural_side
+			}
+		}
+		country_event = { id = GEH.event.8 }
+	}
+
+	remove_power_balance = {
+		id = GEH_ako_love_balance
+	}
+}

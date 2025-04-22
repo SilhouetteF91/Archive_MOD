@@ -86,6 +86,18 @@ ideas = {
 				surrender_limit = -0.2
 			}
 		}
+		RED_anti_cherino_popular_front = { #반체리노 민중전선
+			picture = GER_iron_front
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cancel = {
+				RE2 = {
+					exists = no
+				}
+			}
+		}
 		RED_cherino_idea = { #렌카와 체리노
 			name = RED_cherino
 			picture = RED_cherino_small
@@ -1393,7 +1405,7 @@ ideas = {
 			picture = generic_communist_army
 			modifier = {
 				political_power_factor = -0.05
-				surrender_limit = 0.15
+				surrender_limit = 0.25
 				war_support_factor = 0.15
 				stability_factor = -0.05
 				communism_drift = 0.15

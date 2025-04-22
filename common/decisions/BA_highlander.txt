@@ -4,6 +4,11 @@ BA_highlander = { #하이랜더 철도학원
 		available = {
 			NOT = {has_country_flag = BA_nationalized_highlander}
 		}
+		cancel_trigger = {
+			NOT = {
+				has_idea = BA_highlander_academy_generic
+			}
+		}
 		icon = GFX_decision_ger_mefo_bills
 		complete_effect = {
 			country_event = Highlander.1

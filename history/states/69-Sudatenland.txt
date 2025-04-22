@@ -45,6 +45,7 @@ state = {
 			}
 			3585 = {
 				bunker = 1
+				BA_onsen = 1
 			}
 			6470 = {
 				bunker = 1

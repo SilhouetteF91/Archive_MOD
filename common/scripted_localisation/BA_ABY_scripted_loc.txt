@@ -53,3 +53,2442 @@ defined_text = { # Country
 		localization_key = ABY_army_dynamic_modifier_abydos
 	}
 }
+defined_text = { # Country
+	name = GetABY_descision_focus_first_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_first_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_1_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_1_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_2_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_2_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_3_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_3_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_4_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_4_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_5_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_5_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_6_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_6_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_7_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_7_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_8_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_8_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_9_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_9_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_10_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_10_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_11_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_11_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_12_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_12_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_13_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_13_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_14_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_14_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_15_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_15_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_1_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_1_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_2_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_2_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_3_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_3_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_4_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_4_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_5_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_5_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_6_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_6_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_7_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_7_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_8_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_8_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_9_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_9_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_10_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_10_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_11_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_11_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_12_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_12_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_1_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_1_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_2_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_2_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_3_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_3_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_4_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_4_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_5_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_5_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_6_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_6_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_7_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_7_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_8_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_8_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_9_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_9_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_10_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_10_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_11_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_11_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_12_name
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_12_name
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_first_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_first_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_1_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_1_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_2_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_2_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_3_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_3_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_4_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_4_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_5_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_5_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_6_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_6_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_7_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_7_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_8_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_8_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_9_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_9_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_10_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_10_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_11_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_11_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_12_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_12_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_13_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_13_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_14_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_14_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_15_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_15_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_1_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_1_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_2_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_2_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_3_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_3_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_4_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_4_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_5_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_5_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_6_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_6_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_7_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_7_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_8_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_8_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_9_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_9_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_10_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_10_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_11_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_11_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_12_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_12_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_1_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_1_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_2_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_2_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_3_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_3_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_4_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_4_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_5_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_5_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_6_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_6_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_7_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_7_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_8_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_8_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_9_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_9_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_10_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_10_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_11_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_11_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_12_desc
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_12_desc
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_first_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_first_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_1_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_1_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_2_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_2_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_3_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_3_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_4_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_4_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_5_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_5_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_6_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_6_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_7_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_7_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_8_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_8_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_9_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_9_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_10_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_10_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_11_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_11_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_12_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_12_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_13_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_13_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_14_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_14_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_15_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_abydos_15_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_1_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_1_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_2_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_2_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_3_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_3_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_4_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_4_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_5_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_5_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_6_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_6_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_7_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_7_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_8_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_8_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_9_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_9_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_10_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_10_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_11_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_11_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_12_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_german_12_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_1_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_1_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_2_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_2_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_3_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_3_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_4_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_4_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_5_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_5_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_6_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_6_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_7_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_7_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_8_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_8_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_9_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_9_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_10_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_10_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_11_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_11_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_12_effect
+	text = {
+		trigger = {			
+			always = yes
+		}
+		localization_key = ABY_descision_focus_czecho_12_effect
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_first_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_first_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_first_completed}
+		}
+		localization_key = ABY_descision_focus_first_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_1_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_1_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_1_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_1_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_2_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_2_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_2_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_2_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_3_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_3_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_3_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_3_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_4_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_4_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_4_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_4_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_5_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_5_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_5_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_5_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_6_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_6_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_6_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_6_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_7_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_7_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_7_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_7_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_8_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_8_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_8_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_8_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_9_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_9_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_9_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_9_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_10_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_10_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_10_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_10_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_11_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_11_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_11_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_11_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_12_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_12_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_12_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_12_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_13_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_13_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_13_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_13_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_14_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_14_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_14_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_14_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_15_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_15_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_15_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_15_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_1_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_1_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_1_completed}
+		}
+		localization_key = ABY_descision_focus_german_1_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_2_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_2_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_2_completed}
+		}
+		localization_key = ABY_descision_focus_german_2_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_3_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_3_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_3_completed}
+		}
+		localization_key = ABY_descision_focus_german_3_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_4_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_4_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_4_completed}
+		}
+		localization_key = ABY_descision_focus_german_4_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_5_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_5_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_5_completed}
+		}
+		localization_key = ABY_descision_focus_german_5_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_6_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_6_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_6_completed}
+		}
+		localization_key = ABY_descision_focus_german_6_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_7_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_7_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_7_completed}
+		}
+		localization_key = ABY_descision_focus_german_7_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_8_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_8_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_8_completed}
+		}
+		localization_key = ABY_descision_focus_german_8_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_9_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_9_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_9_completed}
+		}
+		localization_key = ABY_descision_focus_german_9_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_10_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_10_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_10_completed}
+		}
+		localization_key = ABY_descision_focus_german_10_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_11_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_11_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_11_completed}
+		}
+		localization_key = ABY_descision_focus_german_11_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_german_12_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_12_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_12_completed}
+		}
+		localization_key = ABY_descision_focus_german_12_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_1_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_1_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_1_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_1_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_2_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_2_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_2_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_2_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_3_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_3_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_3_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_3_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_4_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_4_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_4_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_4_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_5_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_5_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_5_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_5_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_6_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_6_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_6_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_6_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_7_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_7_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_7_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_7_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_8_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_8_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_8_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_8_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_9_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_9_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_9_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_9_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_10_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_10_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_10_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_10_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_11_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_11_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_11_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_11_need
+	}
+}
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_12_need
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_12_completed
+		}
+		localization_key = ABY_descision_focus_need_3
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_12_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_12_need
+	}
+}
+
+
+
+defined_text = { # Country
+	name = GetABY_descision_focus_first_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_first_completed
+		}
+		localization_key = ABY_descision_focus_first_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_first_completed}
+		}
+		localization_key = ABY_descision_focus_first_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_3_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_3_completed
+		}
+		localization_key = ABY_descision_focus_abydos_3_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_3_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_3_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_4_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_4_completed
+		}
+		localization_key = ABY_descision_focus_abydos_4_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_4_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_4_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_5_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_5_completed
+		}
+		localization_key = ABY_descision_focus_abydos_5_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_5_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_5_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_8_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_8_completed
+		}
+		localization_key = ABY_descision_focus_abydos_8_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_8_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_8_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_11_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_11_completed
+		}
+		localization_key = ABY_descision_focus_abydos_11_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_11_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_11_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_12_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_12_completed
+		}
+		localization_key = ABY_descision_focus_abydos_12_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_12_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_12_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_2_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_2_completed
+		}
+		localization_key = ABY_descision_focus_czecho_2_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_2_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_2_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_3_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_3_completed
+		}
+		localization_key = ABY_descision_focus_czecho_3_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_3_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_3_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_6_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_6_completed
+		}
+		localization_key = ABY_descision_focus_czecho_6_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_6_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_6_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_8_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_8_completed
+		}
+		localization_key = ABY_descision_focus_czecho_8_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_8_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_8_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_9_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_9_completed
+		}
+		localization_key = ABY_descision_focus_czecho_9_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_9_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_9_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_german_1_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_1_completed
+		}
+		localization_key = ABY_descision_focus_german_1_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_1_completed}
+		}
+		localization_key = ABY_descision_focus_german_1_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_german_2_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_2_completed
+		}
+		localization_key = ABY_descision_focus_german_2_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_2_completed}
+		}
+		localization_key = ABY_descision_focus_german_2_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_german_4_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_4_completed
+		}
+		localization_key = ABY_descision_focus_german_4_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_4_completed}
+		}
+		localization_key = ABY_descision_focus_german_4_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_german_5_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_5_completed
+		}
+		localization_key = ABY_descision_focus_german_5_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_5_completed}
+		}
+		localization_key = ABY_descision_focus_german_5_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_german_6_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_6_completed
+		}
+		localization_key = ABY_descision_focus_german_6_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_6_completed}
+		}
+		localization_key = ABY_descision_focus_german_6_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_german_7_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_7_completed
+		}
+		localization_key = ABY_descision_focus_german_7_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_7_completed}
+		}
+		localization_key = ABY_descision_focus_german_7_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_german_10_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_10_completed
+		}
+		localization_key = ABY_descision_focus_german_10_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_10_completed}
+		}
+		localization_key = ABY_descision_focus_german_10_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_9_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_9_completed
+		}
+		localization_key = ABY_descision_focus_czecho_9_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_9_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_9_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_12_need_no_yes
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_12_completed
+		}
+		localization_key = ABY_descision_focus_czecho_12_need_yes
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_12_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_12_need_no
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_1_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_1_completed
+		}
+		localization_key = ABY_descision_focus_abydos_1_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_1_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_1_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_2_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_2_completed
+		}
+		localization_key = ABY_descision_focus_abydos_2_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_2_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_2_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_5_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_5_completed
+		}
+		localization_key = ABY_descision_focus_abydos_5_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_5_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_5_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_6_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_6_completed
+		}
+		localization_key = ABY_descision_focus_abydos_6_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_6_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_6_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_3_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_3_completed
+		}
+		localization_key = ABY_descision_focus_abydos_3_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_3_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_3_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_abydos_9_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_9_completed
+		}
+		localization_key = ABY_descision_focus_abydos_9_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_9_completed}
+		}
+		localization_key = ABY_descision_focus_abydos_9_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_german_9_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_9_completed
+		}
+		localization_key = ABY_descision_focus_german_9_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_9_completed}
+		}
+		localization_key = ABY_descision_focus_german_9_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_german_1_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_german_1_completed
+		}
+		localization_key = ABY_descision_focus_german_1_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_german_1_completed}
+		}
+		localization_key = ABY_descision_focus_german_1_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_1_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_1_completed
+		}
+		localization_key = ABY_descision_focus_czecho_1_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_1_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_1_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_2_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_2_completed
+		}
+		localization_key = ABY_descision_focus_czecho_2_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_2_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_2_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_3_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_3_completed
+		}
+		localization_key = ABY_descision_focus_czecho_3_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_3_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_3_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_7_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_7_completed
+		}
+		localization_key = ABY_descision_focus_czecho_7_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_7_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_7_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_8_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_8_completed
+		}
+		localization_key = ABY_descision_focus_czecho_8_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_8_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_8_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_10_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_10_completed
+		}
+		localization_key = ABY_descision_focus_czecho_10_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_10_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_10_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_11_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_11_completed
+		}
+		localization_key = ABY_descision_focus_czecho_11_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_11_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_11_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = GetABY_descision_focus_czecho_12_need_no_yes_2
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_czecho_12_completed
+		}
+		localization_key = ABY_descision_focus_czecho_12_need_yes_2
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_czecho_12_completed}
+		}
+		localization_key = ABY_descision_focus_czecho_12_need_no_2
+	}
+}
+
+defined_text = { # Country
+	name = Get_2or_1
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_13_completed
+		}
+		localization_key = 2or_1_13
+	}
+	text = {
+		trigger = {			
+			has_country_flag = ABY_descision_focus_abydos_14_completed
+		}
+		localization_key = 2or_1_14
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_descision_focus_abydos_13_completed}
+			NOT = {has_country_flag = ABY_descision_focus_abydos_14_completed}
+		}
+		localization_key = 2or_1_normal
+	}
+}
+
+defined_text = { # Country
+	name = Get_abydos_12_state
+	text = {
+		trigger = {			
+			any_state = {
+				OR = {
+					state = 9
+					state = 75
+					state = 72
+				}
+				is_controlled_by = SHA
+			}
+		}
+		localization_key = abydos_state_ok
+	}
+	text = {
+		trigger = {			
+			NOT = {
+				any_state = {
+					OR = {
+						state = 9
+						state = 75
+						state = 72
+					}
+					is_controlled_by = SHA
+				}
+			}
+		}
+		localization_key = abydos_state_no
+	}
+}
+
+defined_text = { # Country
+	name = Get_abydos_15_VX
+	text = {
+		trigger = {			
+			has_country_flag = ABY_flag_benes_down
+		}
+		localization_key = abydos_state_ok
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_flag_benes_down}
+		}
+		localization_key = abydos_state_no
+	}
+}
+
+defined_text = { # Country
+	name = Get_czecho_12_VX
+	text = {
+		trigger = {			
+			has_country_flag = ABY_flag_recovered_land
+		}
+		localization_key = abydos_state_ok
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_flag_recovered_land}
+		}
+		localization_key = abydos_state_no
+	}
+}
+
+defined_text = { # Country
+	name = Get_german_2_VX
+	text = {
+		trigger = {			
+			has_country_flag = ABY_flag_died_czech
+		}
+		localization_key = abydos_state_ok
+	}
+	text = {
+		trigger = {			
+			NOT = {has_country_flag = ABY_flag_died_czech}
+		}
+		localization_key = abydos_state_no
+	}
+}
+
+defined_text = { # Country
+	name = Get_german_68_VX
+	text = {
+		trigger = {			
+			has_global_flag = ABY_focus_operation_falling_flower_flag
+		}
+		localization_key = abydos_state_no
+	}
+	text = {
+		trigger = {			
+			NOT = {has_global_flag = ABY_focus_operation_falling_flower_flag}
+		}
+		localization_key = abydos_state_ok
+	}
+}
+
+defined_text = { # Country
+	name = Get_german_10_VX
+	text = {
+		trigger = {			
+			any_state = {
+				OR = {
+					state = 1021
+					state = 972
+				}
+				is_controlled_by = SHA
+			}
+		}
+		localization_key = abydos_state_ok
+	}
+	text = {
+		trigger = {			
+			NOT = {
+				any_state = {
+					OR = {
+						state = 1021
+						state = 972
+					}
+					is_controlled_by = SHA
+				}
+			}
+		}
+		localization_key = abydos_state_no
+	}
+}
+
+defined_text = { # Country
+	name = Get_german_1112_VX
+	text = {
+		trigger = {			
+			has_war_with = SHA
+		}
+		localization_key = abydos_state_ok
+	}
+	text = {
+		trigger = {			
+			NOT = {has_war_with = SHA}
+		}
+		localization_key = abydos_state_no
+	}
+}

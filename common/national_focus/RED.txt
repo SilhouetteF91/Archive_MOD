@@ -10750,7 +10750,16 @@ focus_tree = {
 		x = 32
 		y = 0
 		relative_position_id = RED_our_leader_cherino
+		available = {
+			OR = {
+				has_country_flag = RED_first_focus
+				hidden_trigger = {
+					has_country_flag = RED_first_focus_okay
+				}
+			}
+		}
 		select_effect = {
+			set_country_flag = RED_first_focus_okay
 			RED_minori = {
 				unit_leader_event = {
 					id =  RED_revolution.1
@@ -10787,9 +10796,6 @@ focus_tree = {
 			NOT = {
 				has_character = RED_cherino
 			}
-		}
-		available = {
-			date < 1936.2.15
 		}
 		completion_reward = {
 			country_event = {
@@ -11327,7 +11333,7 @@ focus_tree = {
 				id = RED_minori_event.15
 				days = 1
 			}
-			add_political_power = 20
+			add_command_power = 15
 		}
 	}
 	focus = {

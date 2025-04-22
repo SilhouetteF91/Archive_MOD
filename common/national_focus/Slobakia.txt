@@ -2707,10 +2707,22 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-			set_politics = {
-				ruling_party = fascism
-				elections_allowed = yes
+			if = {
+				limit = {
+					has_completed_focus = SLO_foc_2
+				}
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
 			}
+			else = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = yes
+				}
+			}
+
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SLO_alexander_mach
 			show_ideas_tooltip = SLO_vojtech_tuka
@@ -3156,10 +3168,21 @@ focus_tree = {
 			focus = SLO_foc_1-6-12
 		}
 		available = {
-			date > 1940.1.1
 			OR = {
+				has_government = democratic
+				has_government = communism
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
 				NOT = {
 					has_completed_focus = SLO_foc_1-6-4
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
 				}
 				NOT = {
 					has_completed_focus = SLO_foc_1-6-8
@@ -3202,6 +3225,10 @@ focus_tree = {
 			focus = SLO_foc_1-6-11
 		}
 		available = {
+			OR = {
+				has_government = democratic
+				has_government = communism
+			}
 			has_completed_focus = SLO_foc_1-6-4
 			has_completed_focus = SLO_foc_1-6-8
 		}
@@ -3211,7 +3238,7 @@ focus_tree = {
 			add_stability = -0.10
 			add_popularity = {
 				ideology = ROOT
-				popularity = -0.20
+				popularity = -0.10
 			}
 			custom_effect_tooltip = SLO_love_tt_0
 			custom_effect_tooltip = SLO_love_tt_8
@@ -3243,7 +3270,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 59
+		x = 60
 		y = 1
 		prerequisite = {
 			focus = SLO_foc_1
@@ -3262,6 +3289,14 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
+			custom_effect_tooltip = SLO_tt_13
+			if = {
+				limit = {
+					fascism < 0.50
+				}
+				add_ideas = SLO_strike_idea
+				add_ideas = SLO_illegal_government_idea
+			}
 		}
 	}
 }

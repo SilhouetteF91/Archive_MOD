@@ -1381,5 +1381,12 @@ ideas = {
                 production_speed_industrial_complex_factor = 0.05
 			}
 		}
+		TRM_trinity_cause_ns = {
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = 0.1
+				modifier_army_sub_unit_category_halo_attack_factor = 0.05
+			}
+		}
 	}
 }

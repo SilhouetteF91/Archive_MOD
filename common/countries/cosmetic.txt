@@ -1737,6 +1737,50 @@ LAI_SPAIN = { ### 라 이베리아 이스터에그 ###
 	color = rgb { 255 222 94 }
 	color_ui = rgb { 255 222 94 }
 }
+ABY_soviet_nation_1 = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
+ABY_soviet_nation_2 = {
+	color = rgb { 127 14 25 }
+	color_ui = rgb { 163 17 31 }
+}
+ABY_soviet_nation_3 = {
+	color = rgb { 140 16 29 }
+	color_ui = rgb { 163 17 31 }
+}
+ABY_soviet_nation_4 = {
+	color = rgb { 216 26 45 }
+	color_ui = rgb { 163 17 31 }
+}
+ABY_soviet_nation_5 = {
+	color = rgb { 165 19 34 }
+	color_ui = rgb { 163 17 31 }
+}
+ABY_soviet_nation_6 = {
+	color = rgb { 191 22 39 }
+	color_ui = rgb { 163 17 31 }
+}
+ABY_soviet_nation_7 = {
+	color = rgb { 204 24 42 }
+	color_ui = rgb { 163 17 31 }
+}
+ABY_soviet_nation_8 = {
+	color = rgb { 153 18 31 }
+	color_ui = rgb { 163 17 31 }
+}
+ABY_soviet_nation_9 = {
+	color = rgb { 229 29 49 }
+	color_ui = rgb { 163 17 31 }
+}
+ABY_soviet_nation_10 = {
+	color = rgb { 173 193 163 }
+	color_ui = rgb { 173 193 163 }
+}
+ABY_soviet_nation_12 = {
+	color = rgb { 242 31 52 }
+	color_ui = rgb { 163 17 31 }
+}
 NEN_North_Russia = {
 	color = rgb { 125 13 24 }
 	color_ui = rgb { 163 17 31 }
@@ -2133,9 +2177,9 @@ ABY_austria = {
 	color = rgb { 194 198 215 }
 	color_ui = rgb { 255 255 255 }
 }
-ABY_abydos_union = {
-	color = rgb { 200 50 50 }
-	color_ui = rgb { 200 50 50 }
+ABY_abydos_republic = {
+	color = rgb { 0 51 153 }
+	color_ui = rgb { 0 51 153 }	
 }
 ABY_south_kivotos = {
 	color = rgb { 150 100 200 }

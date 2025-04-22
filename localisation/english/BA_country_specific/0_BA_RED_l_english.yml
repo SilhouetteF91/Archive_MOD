@@ -584,6 +584,7 @@
  
  
 #미노리 루트
+ RED_first_focus: "§G시작하자마자 선택한 중점입니다.§!"
  RED_dipose_cherino: "2월 총파업"
  RED_dipose_cherino_desc: "대전이의 여파로 민생이 피폐해짐에도 불구하고, 붉은겨울 사무국은 우리에게 관심을 가지지 않은 채 권력 싸움에만 몰두하고 있습니다. 썩어 빠진 체리노와 붉은겨울 사무국에 맞서는 거대한 투쟁을 준비해야 합니다."
  RED_labor_world: "농촌 지지 확보"
@@ -1558,6 +1559,9 @@
  RED_minori_event.31.t: "미노리의 퇴임"
  RED_minori_event.31.d: "붉은겨울 용역부의 전 부장이자, 5월 혁명의 주역이며, 혁명군사평의회의 정치장교이자 공화국 상임평의회의 중앙위원인 야스모리 미노리 동지가 이번 달을 마지막으로 임기를 종료하였습니다. 수많은 민중들의 환호 속에 성공적으로 임기를 마친 미노리는 퇴임 직전 지지율이 [RED.GetPartySupport]%에 이를 정도로 높은 인기를 보여줬습니다. 중앙위원회에선 그녀가 보여준 민중과 사회에의 영웅주의적 헌신을 기리기 위해 중앙위원장 직위를 결석으로 둔 채 지도체계를 집단지도로 전환하였습니다."
  RED_minori_event.31.a: "수고 많았소, 동지!"
+ RED_minori_event.32.t: "통일전선"
+ RED_minori_event.32.d: "사회민주노동자당은 반혁명의 위협에 있어서 우리와 협력하기로 결의했습니다. 이에 따라 반체리노 민중전선이 결성되었으며, 이는 우리가 스웨덴 전역에서 강력한 정통성을 지니고 무력을 행사할 수 있도록 할 것입니다."
+ RED_minori_event.32.a: "강철같은 연대로 나아가자!"
  RED_missions_char.1.t: "대중의 요구 - 주 3일제 실시"
  RED_missions_char.1.d: "인간다운 삶의 보장과 온전한 여가를 즐기기 위한 주3일제의 실시를 전노동대중이 요구하고 있습니다. 우리는 빠르게 주3일제와 관련한 법률을 제정할 필요가 있습니다."
  RED_missions_char.1.a: "인간다운 삶을 향해!"
@@ -1738,6 +1742,7 @@
  RED_busy_security_committee: "분주한 보안위원회"
  RED_threat_of_coup_1: "2월 총파업"
  RED_threat_of_coup_5: "정치적 불안정"
+ RED_anti_cherino_popular_front: "반체리노 민중전선"
  RED_disjointed_office: "분열된 사무국"
  RED_ThreatOfCovered5thLines_dynamic_modifier: "여전히 남아있는 위협"
  RED_labor_party_opposition: "꼭두각시화된 용역부"

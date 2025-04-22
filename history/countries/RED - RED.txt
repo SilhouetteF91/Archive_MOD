@@ -251,7 +251,11 @@ add_ideas = {
 	RED_threat_of_coup
 	RED_strike
 }
-
+set_country_flag = {
+	flag = RED_first_focus
+	value = 1
+	days = 10
+}
 set_rule = {
 	can_create_factions = no
 }

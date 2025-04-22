@@ -505,6 +505,7 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
 			NOT = {
 				has_completed_focus = GEH_gehenna_leader
 				has_completed_focus = GEH_three_congress_focus
+				has_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
 			}
 		}
 
@@ -518,6 +519,7 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
 				OR = {
 					has_completed_focus = GEH_gehenna_leader
 					has_completed_focus = GEH_three_congress_focus
+					has_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
 				}
 			}
 		}
@@ -915,9 +917,8 @@ GEH_discipline_system_category = {
 					}
 				}
 			}
+			activate_mission = GEH_discipline_system_weak_discipline
 		}
-
-		activate_mission = GEH_discipline_system_weak_discipline
 	}
 
 	GEH_discipline_system_attack_nazi = {
@@ -1237,7 +1238,7 @@ GEH_military_power_category = {
 		
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -15
+				add_command_power = -20
 			}
 		}
 	}
@@ -1291,7 +1292,7 @@ GEH_military_power_category = {
 		
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -15
+				add_command_power = -20
 			}
 		}
 	}
@@ -1345,7 +1346,7 @@ GEH_military_power_category = {
 		
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -15
+				add_command_power = -20
 			}
 		}
 	}
@@ -1407,6 +1408,49 @@ GEH_military_power_category = {
 			mio:GEH_maintenance_department_organization = {
 				add_mio_size = 1
 			}
+		}
+	}
+	
+	GEH_military_power_prefect_team_visit_world = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				AND = {
+					country_exists = ITA
+					NOT = { ITA = { has_war_with = ROOT } }
+				}
+				AND = {
+					country_exists = EGY
+					NOT = { EGY = { has_war_with = ROOT } }
+				}
+				AND = {
+					country_exists = JAP
+					NOT = { JAP = { has_war_with = ROOT } }
+					NOT = { JAP = { has_government = communism } }
+				}
+			}
+			has_war = no
+		}
+
+		visible = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cost = 100
+
+		complete_effect = {
+			country_event = { id = GEH.event.2000 }
 		}
 	}
 

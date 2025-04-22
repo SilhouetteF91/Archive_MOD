@@ -20,6 +20,7 @@ focus_tree = {
 		id = ABY_focus_order_111  #중점명
 		#icon = GFX_ABY_focus_2 
  		cost = 4.00          #중점 일수(주)
+		cancelable = no  
 		search_filters = {
 			#중점의 타입
 		}
@@ -435,12 +436,13 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
-			SHA = {
-				any_controlled_state = {
-					any_neighbor_state = {
-						is_controlled_by = ABY
-					}
+			any_state = {
+				OR = {
+					state = 9
+					state = 75
+					state = 72
 				}
+				is_controlled_by = SHA
 			}
 			#중점 선행조건
 		}
@@ -13780,6 +13782,38 @@ focus = { #키보토스인 우선
 		x = 2
 		y = 2
 		completion_reward = { }
+	}
+	
+	focus = {
+		id = ABY_focus_first  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 0
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+		}
 	}
 }
  

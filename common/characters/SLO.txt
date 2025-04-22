@@ -30,6 +30,19 @@ characters={
 			}
 		}	
 	}
+	SLO_slobak_committee={ #슬로바키아 임시의회회
+		name="SLO_slobak_committee"
+		portraits={
+			civilian={
+				large= "gfx/leaders/SLO/SLO_pot_1.tga"
+		#		small="gfx/interface/advisors/SLO/SLO_Spot_1.tga"
+			}
+		#	army={
+		#		large= "gfx/leaders/SLO/SLO_pot_1.tga"
+		#		small="gfx/interface/advisors/SLO/SLO_Spot_1.tga"
+		#	}
+		}
+	}
 	SLO_slobak_council={ #슬로바키아 임시의회회
 		name="SLO_slobak_council"
 		portraits={

@@ -1744,15 +1744,15 @@ characters={
 			}
 		}
 		gender = female
-		field_marshal={
+		corps_commander={
 			traits = {
-				front_line_general infantry_officer expert_delegator unyielding_defender adaptable
+				front_line_general adaptable reckless desert_fox
 			}
-			skill=5
-			attack_skill=5
-			defense_skill=6
-			planning_skill=3
-			logistics_skill=4
+			skill=4
+			attack_skill=4
+			defense_skill=5
+			planning_skill=2
+			logistics_skill=2
 			legacy_id=-1
 			visible = {
 				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
@@ -1846,13 +1846,13 @@ characters={
 		}
 		corps_commander={
 			traits = {
-				reckless adaptable harsh_leader aggressive_assaulter
+				front_line_general adaptable desert_fox harsh_leader
 			}
-			skill=5
+			skill=3
 			attack_skill=5
-			defense_skill=3
-			planning_skill=6
-			logistics_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
 			legacy_id=-1
 			visible = {
 				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
@@ -1920,13 +1920,13 @@ characters={
 		}
 		corps_commander={
 			traits = {
-				reckless scavenger infantry_officer adaptable
+				adaptable desert_fox reckless Scavenger
 			}
-			skill=4
-			attack_skill=4
-			defense_skill=3
+			skill=1
+			attack_skill=2
+			defense_skill=1
 			planning_skill=1
-			logistics_skill=3
+			logistics_skill=1
 			legacy_id=-1
 			visible = {
 				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
@@ -1965,13 +1965,13 @@ characters={
 		gender = female
 		corps_commander={
 			traits = {
-				logistics_wizard politically_connected adaptable
+				adaptable desert_fox politically_connected Media_Personality
 			}
-			skill=4
-			attack_skill=4
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=7
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
 			legacy_id=-1
 			visible = {
 				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
@@ -2031,13 +2031,13 @@ characters={
 		gender = female
 		field_marshal={
 			traits = {
-				brilliant_strategist skilled_staffer cautious thorough_planner adaptable
+				adaptable desert_fox brilliant_strategist cautious
 			}
-			skill=4
-			attack_skill=3
-			defense_skill=2
-			planning_skill=7
-			logistics_skill=4
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
 			legacy_id=-1
 			visible = {
 				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}

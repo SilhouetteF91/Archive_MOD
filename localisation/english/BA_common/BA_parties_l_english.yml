@@ -266,6 +266,9 @@
  GEH_planning_department:0 "선도부 기획부"
  GEH_planning_department_long:0 "선도부 기획부"
 
+ GEH_anti_iori_party:0 "크릭스레히츠게그너"
+ GEH_anti_iori_party_long:0 "크릭스레히츠게그너 (Kriegsrechtsgegner, 계엄령 반대파)"
+
  KaiserCorporationGeneralMeeting:0 "카이저 노동자 협동조합 운영위원회"
  GeneralMeeting:0 "협동조합 운영위원회"
  KaiserCorporationTradeUnion:0 "카이저 코퍼레이션 노동조합"

@@ -85,6 +85,19 @@ ideas = {
  				production_speed_industrial_complex_factor = -0.10
  			}
  		}
+        
+		GEH_kriegsrecht  = { # 지금 당장. 계엄령
+			picture = ARG_military_government
+			allowed = { always = no }
+			allowed_civil_war = { always = yes } 
+			
+			modifier = {
+				political_power_cost = 0.25
+				production_speed_buildings_factor = -0.10
+				stability_factor = -0.25
+				fascism_drift = -0.05
+			}
+		}
 
 		GEH_negotiation_with_german_delegation_idea = { # 바이에른 협상
 			picture = ger_rebuild_the_nation
