@@ -246,7 +246,7 @@ focus_tree = {
 				bonus = 0.75
 				uses = 1
 				category = infantry_weapons
-}
+			}
 		}
 	}
 
@@ -954,7 +954,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_technology = {
-				early_fighter = 1
+				fighter2 = 1
 			} 
 		}
 	}
@@ -1036,7 +1036,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_provoke_japan
-		icon = GFX_focus_SWE_let_fly_all_guns
+		icon = GFX_focus_CONGO_copper_cartridges
 		prerequisite = { focus = KAP_revolutionary_military_commission }
 		prerequisite = { focus = KAP_anti_japanese_expedition }
 		x = -3
@@ -1069,10 +1069,16 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			set_technology = {
-				artillery1 = 1
-				interwar_antiair = 1
-				interwar_antitank = 1
+			add_offsite_building = {
+				type = arms_factory
+				level = 5
+			}
+
+			add_tech_bonus = {
+				name = KAP_arms_industry
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
 			}
 		}
 	}
@@ -1104,13 +1110,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_ideas = KAP_cap
 		}
 	}
 
 	focus = {
 		id = KAP_mobile_warfare
-		icon = GFX_focus_generic_self_propelled_gun
+		icon = GFX_focus_SWE_let_fly_all_guns
 		prerequisite = { focus = KAP_provoke_japan }
 		x = 1
 		y = 1
@@ -1136,7 +1142,9 @@ focus_tree = {
 
 		completion_reward = {
 			set_technology = {
-				armored_car_at_upgrade = 1
+				artillery1 = 1
+				interwar_antiair = 1
+				interwar_antitank = 1
 			}
 		}
 	}
@@ -1168,13 +1176,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			add_ideas = KAP_human_tank
 		}
 	}
 
 	focus = {
 		id = KAP_100_regiments_campaign
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_generic_railway_gun
 		prerequisite = { focus = KAP_mobile_warfare }
 		x = 1
 		y = 2
@@ -1200,7 +1208,9 @@ focus_tree = {
 
 		completion_reward = {
 			set_technology = {
-				basic_heavy_tank_chassis = 1
+				basic_train = 1
+				armored_train = 1
+				railway_gun = 1
 			}
 		}
 	}
