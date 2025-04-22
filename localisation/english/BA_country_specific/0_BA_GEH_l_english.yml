@@ -610,6 +610,21 @@
  GEH_local_autonomy: "지방의회"
  GEH_local_autonomy_desc: "민권법 제정으로 인해 도이치인들은 자신들이 소수에 불과한 게헨나계에 의해 식민통치를 당하고 있다는 피해의식을 갖게 되었습니다. 게헨나의 중앙정치에 현지인의 간섭은 제한되어야 하지만, 도이치인들을 위한 제한적 지방의회를 통해 그들의 분노를 가라앉힐 수 있을 것입니다."
 
+ ### 히나 탈주!!! ###
+ #### 히나 독재
+  GEH_basking_in_the_brilliance_of_their_serenade_rout_h: "급격한 변화"
+  GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1: "페르소나"
+  GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2: "천상의 혁명"
+ 
+ #### 아코
+  GEH_basking_in_the_brilliance_of_their_serenade_rout_a: "선도부의 선임행정관"
+ 
+ #### 이오리
+  GEH_basking_in_the_brilliance_of_their_serenade_rout_c: "혼란의 밤"
+ 
+ #### 노말
+  GEH_basking_in_the_brilliance_of_their_serenade_rout_n: "네 자리, 세 명"
+  
  #########
  #중점 수정#
 #########
