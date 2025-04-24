@@ -2709,6 +2709,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.10
+
+			hidden_effect = {
+				country_event = { id = GEH.event.200 }
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2771,6 +2775,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 100
+
+			hidden_effect = {
+				country_event = { id = GEH.event.202 }
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2811,6 +2819,11 @@ focus_tree = {
 					mission = GEH_basking_in_the_brilliance_of_their_serenade_mission
 					days = 40
 				}
+
+			}
+
+			hidden_effect = {
+				country_event = { id = GEH.event.204 }
 			}
 		}
 		ai_will_do = {
@@ -2836,6 +2849,10 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.05
 			add_ideas = GEH_negotiation_with_german_delegation_idea
+
+			hidden_effect = {
+				country_event = { id = GEH.event.201 }
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2972,6 +2989,11 @@ focus_tree = {
 						}
 					}
 				}
+			}
+
+			if = {
+				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }
+				GEH_dkzh = { unit_leader_event = { id = GEH.event.203 } }
 			}
 		}
 		ai_will_do = {

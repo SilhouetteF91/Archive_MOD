@@ -1,13 +1,5 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_idea_TRN_rebuild_ns"
-		texturefile = "gfx/interface/ideas/TRN/idea_TRN_rebuild_ns.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_TRM_industries_ns"
-		texturefile = "gfx/interface/ideas/TRN/idea_TRM_industries.tga"
-	}
-	spriteType = {
 		name = "GFX_idea_RE4_Finland_committee"
 		texturefile = "gfx/interface/ideas/RED/RE4_Finland_committee.tga"
 	}
@@ -80,14 +72,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/anarchy.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_TRM_Endsige2"
-		texturefile = "gfx/interface/ideas/trn/TRN_cult_of_personality.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_TRM_Towards_National_Revolution"
-		texturefile = "gfx/interface/ideas/trn/TRN_towards_national_revolution.tga"
-	}
-	spriteType = {
 		name = "GFX_idea_BA_three_major_academies"
 		textureFile = "gfx/interface/ideas/BA_three_major_academies.tga"
 	}
@@ -98,14 +82,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_HND_last_Offensive_ideas"
 		textureFile = "gfx/interface/ideas/HND_last_offensive.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_TRM_Trinity_Grande_Armee"
-		textureFile = "gfx/interface/ideas/Trinity_Grande_Armee.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_TRM_Trinity_air_force"
-		textureFile = "gfx/interface/ideas/Trinity_air_force.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_HYA_mangryangz"
@@ -322,6 +298,34 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GEI_dimension_tunnel"
 		texturefile = "gfx/interface/ideas/gei/GEI_dimension_tunnel.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_TRM_trinity_cause_ns"
+		texturefile = "gfx/interface/ideas/TRN/idea_TRM_trinity_cause_ns.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_TRN_rebuild_ns"
+		texturefile = "gfx/interface/ideas/TRN/idea_TRN_rebuild_ns.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_TRM_industries_ns"
+		texturefile = "gfx/interface/ideas/TRN/idea_TRM_industries.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_TRM_Trinity_Grande_Armee"
+		textureFile = "gfx/interface/ideas/Trinity_Grande_Armee.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_TRM_Trinity_air_force"
+		textureFile = "gfx/interface/ideas/Trinity_air_force.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_TRM_Endsige2"
+		texturefile = "gfx/interface/ideas/trn/TRN_cult_of_personality.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_TRM_Towards_National_Revolution"
+		texturefile = "gfx/interface/ideas/trn/TRN_towards_national_revolution.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_TRN_mobilisation"

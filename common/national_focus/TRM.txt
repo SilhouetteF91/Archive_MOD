@@ -9128,7 +9128,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = TRN_Take_To_The_Seas
-	icon = GFX_focus_GER_navy
+	icon = GFX_focus_TRN_navy
 	cost = 8
 	relative_position_id = TRN_Luftwaffe
 	x = 8
@@ -9762,7 +9762,7 @@ shared_focus = {
 
 shared_focus = {
 	id = TRN_research_rifle # 소총 개발?
-	icon = GFX_focus_GER_army
+	icon = GFX_focus_TRN_army
 	available = {
 	}
 	ai_will_do = {

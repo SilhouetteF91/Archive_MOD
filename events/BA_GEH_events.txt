@@ -2091,6 +2091,75 @@ country_event = { # 선도부장 임명식 - 오니카타 카요코
 	}
 }
 
+country_event = { # 현상 유지
+	id = GEH.event.200
+	title = GEH.event.200.t
+	desc = GEH.event.200.desc
+	picture = GFX_event_mega_cities_GEH_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.200.a 
+
+	}
+}
+
+country_event = { # 사회민주당과의 협상
+	id = GEH.event.201
+	title = GEH.event.201.t
+	desc = GEH.event.201.desc
+	picture = GFX_report_event_german_politician_speech
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.201.a 
+
+	}
+}
+
+country_event = { # 조율의 기술
+	id = GEH.event.202
+	title = GEH.event.202.t
+	desc = GEH.event.202.desc
+	picture = GFX_report_event_hina_sorasaki_generic_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.202.a 
+
+	}
+}
+
+unit_leader_event = { #만마전과 협상?
+	id = GEH.event.203
+	title = GEH.event.203.t
+	desc = GEH.event.203.desc
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.203.a 
+
+	}
+}
+
+country_event = { # 바이에른 군벌?
+	id = GEH.event.204
+	title = GEH.event.204.t
+	desc = GEH.event.204.desc
+	picture = GFX_report_event_german_troops
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.204.a 
+
+	}
+}
+
 country_event = { #[GEH.GetName]의 [HEU.GetName] 병합
 	id = GEH.event.1000
 	title = GEH.event.1000.t
@@ -2263,12 +2332,6 @@ country_event = { #영도자의 부재
 		name = GEH.event.1005.a
 		custom_effect_tooltip = GEH_robot_hina_route_tt
 		set_country_flag = GEH_robot_hina_route
-	}
-
-	option = { 
-		name = GEH.event.1005.b
-		custom_effect_tooltip = GEH_without_hina_route_tt
-		set_country_flag = GEH_without_hina_route
 	}
 }
 
