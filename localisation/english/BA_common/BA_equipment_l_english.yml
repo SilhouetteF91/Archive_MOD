@@ -17,3 +17,63 @@
  HEU_infantry_equipment_2_short:0 "트릭 오어 트릭"
  HEU_infantry_equipment_3:0 "와인레드 어드마이어"
  HEU_infantry_equipment_3_short:0 "와인레드 어드마이어"
+
+ GEM_infantry_equipment_0:0 "만마전 제식 권총"
+ GEM_infantry_equipment_0_short:0 "만마전 제식 권총"
+ GEM_infantry_equipment_1:0 "Ideal"
+ GEM_infantry_equipment_1_short:0 "Ideal"
+ GEM_infantry_equipment_2:0 "빵야빵야! 쨩"
+ GEM_infantry_equipment_2_short:0 "빵야빵야! 쨩"
+ GEM_infantry_equipment_3:0 "유아독존"
+ GEM_infantry_equipment_3_short:0 "유아독존"
+
+ ### 발키리 경찰학교 ###
+ KSP_infantry_equipment_0:0 "발키리 제식 권총 3호"
+ KSP_infantry_equipment_0_short:0 "발키리 제식 권총 3호"
+ KSP_infantry_equipment_1:0 "발키리 제식 권총 17호"
+ KSP_infantry_equipment_1_short:0 "발키리 제식 권총 17호"
+ KSP_infantry_equipment_2:0 "발키리 제식 소총 14호"
+ KSP_infantry_equipment_2_short:0 "발키리 제식 소총 14호"
+ KSP_infantry_equipment_3:0 "발키리 제식 호루스의 눈"
+ KSP_infantry_equipment_3_short:0 "발키리 제식 호루스의 눈"
+
+ ### 트리니티 종합학원 ###
+ TRM_infantry_equipment_0:0 "블레싱"
+ TRM_infantry_equipment_0_short:0 "블레싱"
+ TRM_infantry_equipment_1:0 "볼륨 서프레서"
+ TRM_infantry_equipment_1_short:0 "볼륨 서프레서"
+ TRM_infantry_equipment_2:0 "Quis ut Deus"
+ TRM_infantry_equipment_2_short:0 "Quis ut Deus"
+ TRM_infantry_equipment_3:0 "Et Omnia Vanitas"
+ TRM_infantry_equipment_3_short:0 "Et Omnia Vanitas"
+
+ ### 총학생회 & 샬레 ###
+ ## (고유 총기 이미지 없음. 벨기에 무기 사용하는 것으로 간주)
+ COU_infantry_equipment_0:0 "Mauser M89"
+ COU_infantry_equipment_0_short:0 "Mauser M89"
+ COU_infantry_equipment_1:0 "Mauser M35"
+ COU_infantry_equipment_1_short:0 "Mauser M35"
+ COU_infantry_equipment_2:0 "FN mle30 Type D"
+ COU_infantry_equipment_2_short:0 "FN mle30 Type D"
+ COU_infantry_equipment_3:0 "FN Fusil Automatique Léger"
+ COU_infantry_equipment_3_short:0 "FN FAL"
+
+ SHE_infantry_equipment_0:0 "Mauser M89"
+ SHE_infantry_equipment_0_short:0 "Mauser M89"
+ SHE_infantry_equipment_1:0 "Mauser M35"
+ SHE_infantry_equipment_1_short:0 "Mauser M35"
+ SHE_infantry_equipment_2:0 "FN mle30 Type D"
+ SHE_infantry_equipment_2_short:0 "FN mle30 Type D"
+ SHE_infantry_equipment_3:0 "FN Fusil Automatique Léger"
+ SHE_infantry_equipment_3_short:0 "FN FAL"
+
+ ### 카이저 코퍼레이션 ###
+ ## (고유 총기 이미지 없음. 영국 총기 사용하는 것으로 간주)
+ KAI_infantry_equipment_0:0 "Rifle No.1 MkIII"
+ KAI_infantry_equipment_0_short:0 "Rifle No.1 MkIII"
+ KAI_infantry_equipment_1:0 "Rifle No.4 MkI"
+ KAI_infantry_equipment_1_short:0 "Rifle No.4 MkI"
+ KAI_infantry_equipment_2:0 "Sten MkII"
+ KAI_infantry_equipment_2_short:0 "Sten MkII"
+ KAI_infantry_equipment_3:0 "Sterling MkI"
+ KAI_infantry_equipment_3_short:0 "Sterling MkI"
