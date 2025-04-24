@@ -1857,4 +1857,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 		transparencecheck = yes
 	}
+
+	spriteType = {
+		name = "GFX_button_123x34_gray"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/button_123x34_gray.dds"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
 }

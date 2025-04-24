@@ -102,6 +102,8 @@ set_variable = {ABY_government_cost_var = 75}
 set_variable = {ABY_government_var = 0}
 set_variable = {ABY_plan_cost_var = 25}
 
+set_variable = {ABY_focus_time_flag_var = 0}
+
 every_state = {
     limit = {
         OR = {

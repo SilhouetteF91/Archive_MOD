@@ -995,6 +995,26 @@ leader_traits = {
 		Production_factory_efficiency_gain_factor = 0.10
 		industrial_capacity_factory = 0.1
 	}
+	ABY_trait_three_head = {
+		random = no
+		political_power_factor = 0.15
+		stability_factor = -0.2
+		war_support_factor = 0.15
+		democratic_drift = -0.15
+	}
+	ABY_trait_emergency_war_economy = {
+		random = no
+		stability_factor = -0.3
+		war_support_factor = 0.15
+		industrial_capacity_factory = 0.5
+		political_power_factor = 0.25
+		production_speed_buildings_factor = -1
+		consumer_goods_expected_value = 0.5
+		production_lack_of_resource_penalty_factor = -1
+		research_speed_factor = -0.25
+		neutrality_drift = 1
+		surrender_limit = 0.5
+	}
  	ABY_trait_abydos_leader = { #"아비도스 학생대표"
 		random = no
 		war_support_factor = 0.1
@@ -4036,7 +4056,49 @@ leader_traits = {
 			factor = 2
 		}
 	}
+	skoda_trait = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	skoda_trait_2 = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	skoda_trait_3 = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
 	saint_nephtys = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	saint_nephtys_2 = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	saint_nephtys_3 = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	saint_nephtys_4 = {
 		random = no
 
 		ai_will_do = {

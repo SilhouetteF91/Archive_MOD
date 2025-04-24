@@ -2170,24 +2170,26 @@ guiTypes = {
 		
 		buttonType = {
 			name = "startbutton_unavailable"
-			quadTextureSprite = "GFX_button_123x34"
+			quadTextureSprite = "GFX_button_123x34_gray"
 			buttonText = "[Getabydosfocusstart]"
 			buttonFont = "hoi_20b"
 			position = { x=390 y=53 }
 			clicksound = select_focus
-			pdx_tooltip = ABY_descision_focus_abydos_3_info_1
+			pdx_tooltip = ABY_descision_focus_button_tt
 		}
 		
 		iconType = {
 			name = "ABY_focus_progressbar"
 			spriteType = "GFX_ABY_focus_progressbar"
 			position = { x=200 y=59 }
+			pdx_tooltip_delayed = ABY_days_3
 		}
 
 		iconType = {
 			name = "research_progressbar_frame"
 			spriteType = "GFX_production_progressbar_frame2"
 			position = { x=205 y=57 }
+			pdx_tooltip_delayed = ABY_days_3
 		}		
 		
 		instantTextboxType = {
@@ -2195,7 +2197,7 @@ guiTypes = {
 			position = { x = 208 y = 60 }
 			font = "hoi_20b"
 			borderSize = {x = 0 y = 0}
-			text = "days"
+			text = "[Getabydosfocustime]"
 			maxWidth = 170
 			maxHeight = 13
 			format = center

@@ -198,6 +198,9 @@ opinion_modifiers = {
 	ABY_same_enemy = {
         value = 50
     }
+	ABY_syemmata_opinion = {
+        value = -1000
+    }
 	HOL_seeking_support = {
 		value = 25
 	}
