@@ -612,19 +612,19 @@
 
  ### 히나 탈주!!! ###
  #### 히나 독재
-  GEH_basking_in_the_brilliance_of_their_serenade_rout_h: "급격한 변화"
-  GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1: "페르소나"
-  GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2: "천상의 혁명"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h: "급격한 변화"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1: "페르소나"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2: "천상의 혁명"
+
+#### 아코
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a: "선도부의 선임행정관"
+
+#### 이오리
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c: "혼란의 밤"
+
+#### 노말
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n: "네 자리, 세 명"
  
- #### 아코
-  GEH_basking_in_the_brilliance_of_their_serenade_rout_a: "선도부의 선임행정관"
- 
- #### 이오리
-  GEH_basking_in_the_brilliance_of_their_serenade_rout_c: "혼란의 밤"
- 
- #### 노말
-  GEH_basking_in_the_brilliance_of_their_serenade_rout_n: "네 자리, 세 명"
-  
  #########
  #중점 수정#
 #########
@@ -1298,6 +1298,12 @@
  GEH_news.12.a: "어쨌거나, 무정부 체제는 끝이다."
  GEH_news.12.b: "그 무법자가 선도부장직을 제대로 수행할 수 있을까?"
  GEH_news.12.c: "...이건 정복당한 룩셈부르크가 정복자를 병합한 것 아닌가?"
+ 
+ GEH_news.13.t: "소라사키 히나의 은퇴식"
+ GEH_news.13.desc: "분열된 게헨나를 통합하고 외부의 위협으로부터 조국을 지켜낸 소라사키 히나는 게헨나 시민 전체로부터 추앙받는 지도자가 되었지만, 그녀는 권력을 추구하는 대신 정상에서의 명예로운 퇴임을 선택했습니다.\n\n게헨나 중앙구의 행사장에서 열린 축하 파티에서 선도부 간부들은 히나가 지금까지 이룬 업적에 감사를 표했으며, 히나는 선도부장 사임 이후 만마전의 의장으로 직책을 옮기게 되었습니다. 선도부의 게헨나 통일 이후 만마전이 사실상 모든 권한을 잃은 지금, 의장이라는 직책은 은퇴한 선도부장에 대한 예우로 제공되는 명예직 이상의 의미는 없을 것으로 보입니다.\n\n히나가 만마전 의장 자격으로 참여할 다음 선도부 내부 회의에서 차기 선도부장이 선출될 것입니다. 게헨나 내부 언론인들은 히나가 가장 신뢰하는 아코가 가장 유력한 차기 선도부장이라고 예상합니다."
+ GEH_news.13.a: "정말 고생하셨습니다, 부장님!"
+ GEH_news.13.b: "어쨌거나 만마전이 선도부를 지배하게 되었으니, 마코토도 기뻐하겠군."
+ GEH_news.13.c: "게헨나의 정치적 변화에 주목하자"
 
  ### 인물 설명문 ###
  ## 소라사키 히나 ##
@@ -1398,6 +1404,15 @@
 
  GEH_military_power_54_factory: "[54.GetName] 군수 공장 설립"
  GEH_military_power_54_factory_desc: "$GEH_military_power_52_factory_desc$"
+
+ GEH_military_power_52_steel_mill: "[52.GetName] 제철소 공단 설립"
+ GEH_military_power_52_steel_mill_desc: "군수품을 비롯한 기본적인 전시 자원 생산을 위하여, 우리는 필연적으로 새로운 제철소 건설을 위해 예산을 투자해야만 합니다."
+
+ GEH_military_power_53_steel_mill: "[53.GetName] 제철소 공단 설립"
+ GEH_military_power_53_steel_mill_desc: "$GEH_military_power_52_steel_mill_desc$"
+
+ GEH_military_power_54_steel_mill: "[54.GetName] 제철소 공단 설립"
+ GEH_military_power_54_steel_mill_desc: "$GEH_military_power_52_steel_mill_desc$"
 
  GEH_military_power_prefect_team_tank_levelup: "선도부 전차 연구소 확장"
  GEH_military_power_prefect_team_tank_levelup_desc: "선도부의 전차 기술은 명백하게 키보토스의 치안을 유지하기 위한 경전차에 치중되어 있었습니다. 대전이 이후 세계에서 총력전에 활용하기에는 우리의 기갑 능력은 상당히 부족합니다. 이러한 문제를 해결하기 위해 연구소 인력에 대한 투자가 필요한 이유입니다."
