@@ -2917,3 +2917,67 @@ news_event = {
 		}
 	}
 }
+
+# 리쿠하치마 내각 출범
+news_event = {
+	id = GEH_news.12
+	title = GEH_news.12.t
+	desc = GEH_news.12.desc
+	picture = GFX_news_event_GEH_news_congress_1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.12.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.12.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.12.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 소라사키 히나의 은퇴식
+news_event = {
+	id = GEH_news.13
+	title = GEH_news.13.t
+	desc = GEH_news.13.desc
+	picture = GFX_news_event_GEH_news_congress_1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.13.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.13.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.13.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
