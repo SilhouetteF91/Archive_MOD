@@ -7258,7 +7258,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mind
-		icon = GFX_focus_GEI_contact
+		icon = GFX_focus_GEH_ai_focus_1
 		cost = 3
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1
