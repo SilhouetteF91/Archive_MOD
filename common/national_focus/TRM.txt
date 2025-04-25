@@ -6886,6 +6886,7 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
+				activate_targeted_decision = { decision = TRN_destroy_TVC target = ROOT }
 				news_event = { id = trinitynews.2 days = 2 }
 				BA_ban_democratic_effect = yes
 				BA_ban_communism_effect = yes
@@ -6894,6 +6895,7 @@ focus_tree = {
 				country_event = { id = trinity.35 days = 30 } # 보안국 재편
 				country_event = { id = trnfla.12 days = 365 } # 세이아 음모론
 				country_event = { id = trinity.36 days = 140 } # 안보 상황
+				country_event = { id = trinity.37 days = 360 } # 소규모 동아리들의 운명
 			}
 		}
 	}
@@ -7066,9 +7068,9 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 소규모 동아리들의 운명
-		id = TRN_fate_of_small_club
-		icon = GFX_focus_TRN_fate_of_small_club
+	focus = { # 학원 방위대
+		id = TRN_national_guard
+		icon = GFX_focus_TRN_national_guard
 		prerequisite = { focus = TRN_second_trintiy }
 		x = 1
 		y = 1
@@ -7082,7 +7084,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			country_event = trinity.37
+			unlock_decision_tooltip = TRN_destroy_TVC
 		}
 	}
 
@@ -7241,15 +7243,14 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 키보토스의 구세주
-		id = TRN_savior_of_kivotos
-		icon = GFX_focus_TRN_savior_of_kivotos
+	focus = { # 정권의 성문화
+		id = TRN_codification_of_regime
+		icon = GFX_focus_POL_complete_april_constitution
 		prerequisite = { focus = TRN_cause_of_trinity }
 		mutually_exclusive = {
 			focus = TRN_supreme_leader
-			focus = TRN_codification_of_regime
 		}
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = TRN_cause_of_trinity
 		cost = 5
@@ -7265,54 +7266,10 @@ focus_tree = {
 				owns_state = 52
 				owns_state = 8
 			}
-			OR = {
-				is_power_balance_in_range = {
-					id = TRM_power_balance
-					range = TRM_bop_balanced
-				}
-				is_power_balance_in_range = {
-					id = TRM_power_balance
-					range < TRM_bop_balanced
-				}
-			}
-		}
-
-		ai_will_do = {
-
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = { # 정권의 성문화
-		id = TRN_codification_of_regime
-		icon = GFX_focus_POL_complete_april_constitution
-		prerequisite = { focus = TRN_cause_of_trinity }
-		mutually_exclusive = {
-			focus = TRN_savior_of_kivotos
-			focus = TRN_supreme_leader
-		}
-		x = -2
-		y = 0
-		relative_position_id = TRN_savior_of_kivotos
-		cost = 5
-
-		available = {
-			OR = {
-				NOT = { country_exists = GEH }
-				NOT = { country_exists = HEU }
-			}
-			NOT = { country_exists = GEM }
-			owns_state = 55
-			OR = {
-				owns_state = 52
-				owns_state = 8
-			}
 			has_government = fascism
-			is_power_balance_in_range = {
-				id = TRM_power_balance
-				range < TRM_bop_balanced
+			custom_trigger_tooltip = {
+				tooltip = TRN_Mika_Honor_high_trigger
+				check_variable = { TRN_Mika_Honor_var > 4 }
 			}
 		}
 
@@ -7329,12 +7286,11 @@ focus_tree = {
 		icon = GFX_focus_generic_limited_social_mobilization
 		prerequisite = { focus = TRN_cause_of_trinity }
 		mutually_exclusive = {
-			focus = TRN_savior_of_kivotos
 			focus = TRN_codification_of_regime
 		}
 		x = 2
-		y = 0
-		relative_position_id = TRN_savior_of_kivotos
+		y = 1
+		relative_position_id = TRN_cause_of_trinity
 		cost = 5
 
 		available = {
@@ -7348,9 +7304,13 @@ focus_tree = {
 				owns_state = 52
 				owns_state = 8
 			}
-			is_power_balance_in_range = {
-				id = TRM_power_balance
-				range > TRM_bop_balanced
+			has_country_leader = {
+				character = TRN_alzk
+				ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = TRN_Mika_Honor_low_trigger
+				check_variable = { TRN_Mika_Honor_var < 3 }
 			}
 		}
 
@@ -7360,6 +7320,30 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_country_leader_trait = TRM_Misono_the_tyrant
+
+		}
+	}
+
+	focus = { # 키보토스의 구세주
+		id = TRN_savior_of_kivotos
+		icon = GFX_focus_TRN_savior_of_kivotos
+		prerequisite = { 
+			focus = TRN_supreme_leader
+			focus = TRN_codification_of_regime
+		}
+		x = 0
+		y = 2
+		relative_position_id = TRN_cause_of_trinity
+		cost = 5
+
+		available = {
+
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
 
 		}
 	}
@@ -7688,7 +7672,7 @@ focus_tree = {
 		}
 		ai_will_do = { base = 40 }
 		icon = GFX_focus_generic_military_industry
-		x = 20
+		x = 22
 		y = 1
 		offset = {
 			trigger = { has_completed_focus = TRM_newfocus_7 }
@@ -8393,7 +8377,7 @@ focus_tree = {
 
 	shared_focus = {
 	id = TRN_Luftwaffe
-	icon = GFX_focus_GER_airforce
+	icon = GFX_focus_TRN_airforce
 	cost = 5
 	available = {
 	}
@@ -8401,7 +8385,7 @@ focus_tree = {
 		#focus = TRM_localization
 	}
 	#relative_position_id = TRN_kickstart_the_civilian_industry
-	x = 5
+	x = -5
 	y = 1
 	offset = {
 		trigger = { has_completed_focus = TRM_newfocus_7 }
@@ -8413,7 +8397,7 @@ focus_tree = {
 	}
 	offset = {
 		trigger = { has_focus_tree = Trinity_focus }
-		x = 4
+		x = 6
 		y = 8
 	}
     ai_will_do = {
@@ -9779,7 +9763,7 @@ shared_focus = {
 	prerequisite = { 
 		#focus = TRM_localization 
 	}
-	x = -5
+	x = 10
 	y = 1
 	offset = {
 		trigger = { has_completed_focus = TRM_newfocus_7 }
@@ -9791,7 +9775,7 @@ shared_focus = {
 	}
 	offset = {
 		trigger = { has_focus_tree = Trinity_focus }
-		x = 4
+		x = 6
 		y = 8
 	}
 	#relative_position_id = TRN_kickstart_the_civilian_industry

@@ -538,7 +538,12 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_TRN_Mika_Honor_bar"
-		texturefile = "gfx/interface/decisions/icon/Mika_Honor_bar.png"
+		texturefile = "gfx/interface/decisions/icon/TRN_Mika_Honor_bar.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TRN_Mika_Honor_icon"
+		texturefile = "gfx/interface/decisions/icon/TRN_Mika_Honor_icon.png"
 		legacy_lazy_load = no
 	}
 	spriteType = {

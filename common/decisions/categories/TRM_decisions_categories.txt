@@ -153,6 +153,6 @@ TRN_Mika_honor_decision_cat = {
 	}
 	visible_when_empty = yes
 
-	scripted_gui = TRN_Mika_Honor_window
+	#scripted_gui = TRN_Mika_Honor_window
 	
 }

@@ -361,6 +361,48 @@ defined_text = {
 		localization_key = TRM_sh_name_text
 	}
 }
+
+defined_text = {
+	name = TRN_Mika_Honor_Script_loc
+    
+	text = {
+		trigger = {
+            check_variable = { TRN_Mika_Honor_var > 7 } # 8, 9 
+		}
+		localization_key = TRN_Mika_Honor_very_high_text
+	}
+    
+	text = {
+		trigger = {
+            check_variable = { TRN_Mika_Honor_var > 5 } # 6, 7
+		}
+		localization_key = TRN_Mika_Honor_high_text
+	}
+    
+	text = {
+		trigger = {
+            check_variable = { TRN_Mika_Honor_var > 3 } # 4, 5
+		}
+		localization_key = TRN_Mika_Honor_middle_text
+	}
+    
+	text = {
+		trigger = {
+            check_variable = { TRN_Mika_Honor_var > 1 } # 2, 3 
+		}
+		localization_key = TRN_Mika_Honor_low_text
+	}
+    
+	text = {
+		trigger = {
+            check_variable = { TRN_Mika_Honor_var < 2 } # 0, 1
+		}
+		localization_key = TRN_Mika_Honor_very_low_text
+	}
+}
+
+# 1 1 1 1 1 1 1 1 1
+
 # ABY Scripted gui Text
 defined_text = {
 	name = ABY_german_terrorist_ratio_scripted_text

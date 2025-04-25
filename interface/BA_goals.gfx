@@ -128,6 +128,14 @@ spriteTypes = {
 		name = "GFX_focus_TRN_navy"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_navy.tga"
 	}
+	SpriteType = {
+		name = "GFX_focus_TRN_airforce"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_airforce.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_national_guard"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_national_guard.tga"
+	}
 
 	SpriteType = {
 		name = "GFX_focus_BLM_gang_thugs_war_focus"

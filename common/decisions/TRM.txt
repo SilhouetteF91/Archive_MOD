@@ -1,3 +1,44 @@
+BA_kivotos_school_country_category = {
+	TRN_destroy_TVC = {
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		allowed = { always = no }
+		available = { has_completed_focus = TRN_national_guard }
+		visible = {
+			has_idea = TRN_trinity_volunteer_corps_ns
+		}
+		
+		ai_hint_pp_cost = 50
+		custom_cost_text = TRN_destroy_TVC_cost
+		custom_cost_trigger = {
+			NOT = { has_political_power < 50 }
+			OR = {
+				is_ai = yes
+				NOT = { has_equipment = { infantry_equipment < 1000 } }
+			}
+		}
+		days_remove = 30
+
+		ai_will_do = { factor = 10000 } # AI가 안찍으면 자살 함
+
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -50
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				remove_targeted_decision = { decision = TRN_destroy_TVC target = ROOT }
+			}
+			remove_ideas = TRN_trinity_volunteer_corps_ns
+		}
+	}
+}
 TRN_country_collapse_decisions = {
 	TRM_issuance_of_laws_for_local_humanity = {
 		icon = GFX_decision_eng_trade_unions_support
@@ -7054,6 +7095,67 @@ debug_decisions = {
     }
 }
 TRN_Mika_honor_decision_cat = {
+	TRN_debug_set_honor = {
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		allowed = { original_tag = TRM }
+		available = {
+			is_debug = yes
+			is_ai = no
+		}
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+
+		complete_effect = {
+			set_variable = { TRN_Mika_Honor_var = 0 }
+		}
+	}
+	TRN_debug_get_honor = {
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		allowed = { original_tag = TRM }
+		available = {
+			is_debug = yes
+			is_ai = no
+		}
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+
+		complete_effect = {
+			add_to_variable = { TRN_Mika_Honor_var = 1 }
+			clamp_variable = {
+				var = TRN_Mika_Honor_var
+				min = 0
+				max = 9
+			}
+		}
+	}
+	TRN_debug_lost_honor = {
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		allowed = { original_tag = TRM }
+		available = {
+			is_debug = yes
+			is_ai = no
+		}
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+
+		complete_effect = {
+			add_to_variable = { TRN_Mika_Honor_var = -1 }
+			clamp_variable = {
+				var = TRN_Mika_Honor_var
+				min = 0
+				max = 9
+			}
+		}
+	}
 
 }
 TRN_economic_decisions_category = {
