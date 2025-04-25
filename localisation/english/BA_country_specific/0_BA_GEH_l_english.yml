@@ -613,11 +613,88 @@
  ### 히나 탈주!!! ###
  #### 히나 독재
  GEH_basking_in_the_brilliance_of_their_serenade_rout_h: "급격한 변화"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_desc: "소라사키 히나에 대한 광신적 지지를 가진 친위대원들이 정치를 장악한 상황에서, 히나 부장의 사임과 실종은 선도부에 지금까지 없었던 가장 큰 혼란을 가져왔습니다. 친위대원들은 히나의 실종을 납득하는 자들과 납득하지 못하는 자들로 분열되었습니다."
+
  GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1: "페르소나"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_desc: "소라사키 히나는 현인신이자 게헨나를 영광으로 이끌 영도자여야 했습니다. 그런 인간의 모습을 한 신이 신자들을 버리고 도망친다는 것은 있을 수 없는 일입니다. ...만약 그녀가 가짜 신이었다면, 우리에게 숭배해야 할 존재가 더 이상 없다면, 우리는 신을 만들어낼 것입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_purge: "조용한 숙청"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_purge_desc: "소라사키 히나가 '대체'되었으며, 지금의 히나가 가짜라고 주장하는 선도부원들이 있습니다. 친위대원들 중 히나를 로봇으로 대체하는 것을 거부했던 반대파들입니다. 참 시끄러운 바보들이지요. '히나 부장'이 멀쩡하게 본부를 걸어다니고 있는 만큼, 그들을 정신병자로 몰아 숙청하는 것은 손쉬운 일입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_internet_surveillance: "인터넷 감시"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_internet_surveillance_desc: "새로운 신은 기계장치이시기에, 인터넷과의 연결을 통하여 짧은 기간에 수많은 정보를 감시하는 것이 가능하십니다. 이 능력은 인터넷을 통해 활동하는 게헨나 내부의 '비국민'을 찾아내는 것에 매우 용이하게 사용될 것입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_will_of_steel: "민족적 굴종"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_will_of_steel_desc: "조금도 쉬지 않고 게헨나의 영광을 위하여 일하는 선도부장의 모습은 모든 이들이 따라야 할 덕목입니다. 선도부원들 사이에서만 퍼져 있는 기계신에 대한 '열성'은 도이칠란트의 기존 종교를 대체할 국교가 될 것입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_reform: "정부 부처 개혁"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_reform_desc: "비공식적인 조직이었던 친위대는 공식적인 친위부로 개칭될 것입니다. 아코 선임행정관이 명목상 친위부의 부장을 겸하게 될 것이며, 친위부는 소라사키 히나에 대한 불충을 가진 전국민의 사상을 감시하고 반체제적 쓰레기들에 대한 즉결처형권을 포함한 독립된 사법권을 가질 것입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_emergency_council: "긴급위원회 설립"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_emergency_council_desc: "위대한 철인 지도자가 탄생했습니다. 이전의 나약한 신과 달리, 새로운 철인 지도자는 아무런 망설임 없이 모든 국민들을 자원으로서 소모하여 조국의 위대한 발전을 위한 땔감으로 사용할 준비가 되어 있습니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mobilisation: "국가총동원령"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mobilisation_desc: "조국을 위한 부품이 되는 것은 국민 스스로에게도 영광스러운 일입니다. 그렇지 않나요?"
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_ogas: "OGAS"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_ogas_desc: "기계신께서 모든 경제를 통제하고, 각 기업에 생산량을 하달할 것입니다. 국가 경제 역시 당연히 선도부에 의해 통제되는 도구여야 하지 않을까요?"
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_ogas_2: "새로운 사회"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_ogas_2_desc: "모든 국민은 국가를 위한 부품이 되며, 경제는 새로운 지도자에 의해 통제됩니다. 모든 것이 잘 돌아가고 있습니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mind: "감정 모방 중추"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mind_desc: "감정은 새로운 소라사키 히나에게 있어서 상당히... 무의미한 개념이라고 여겨졌지만, 적어도 선도부원들 앞에서의 다정한 연기를 위해 최소한의 감정 중추 프로그램은 필요합니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_hina: "소라사키 히나 문제"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_hina_desc: "기계신의 재림 이전 소라사키 히나가 있었습니다. 신을 저버린 가짜 신이 여전히 살아서 어딘가에 숨어 있다는 것은 상당히 불쾌한 문제이며... 그녀를 찾아내 제거할 필요가 있습니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_end: "바알 사냥"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_end_desc: "자기가 '진짜 소라사키 히나'라고 주장하는 정신이상자를 붙잡았다는 아코 선임행정관의 충성스러운 보고가 있었습니다. 새로운 감정 중추 덕분에 '소라사키 히나'를 즐거운 마음으로 사살할 수 있을 것 같습니다."
+
  GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2: "천상의 혁명"
 
 #### 아코
  GEH_basking_in_the_brilliance_of_their_serenade_rout_a: "선도부의 선임행정관"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_desc: "히나 부장의 권력을 분산하고 기술관료제를 도입해 히나의 부담을 줄여주려 했던 아코의 노력에도 불구하고, 히나는 사직서 한 장을 남겨두고 실종되었습니다. 아코의 마음을 채운 것은 배신감이 아닌, 결과를 바꾸지 못한 무능력한 스스로에 대한 저주였습니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_iroha: "이로하 선도부장"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_iroha_desc: "우리가 만마전을 장악한 이후, 나츠메 이로하는 집단지도체제가 이어지는 사이 오랜 시간 공석이었던 선도부장직을 이어받을 수 있는 가장 합리적인 인물로 평가받았습니다. 그녀는 정파성이 없는 단순한 관료이며, 구 만마전 출신이기 때문에 선도부에 영향력이 없어 '다루기 쉬운' 인물이기도 합니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_kayoko: "카요코 선도부장"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_kayoko_desc: "오니카타 카요코는 집단지도체제가 이어지는 사이 오랜 시간 공석이었던 선도부장직을 이어받을 수 있는 뛰어난 인재이기도 합니다. 그녀는 아코 선임행정관이 '뛰어난 재능을 가지고 있다'며 신뢰하는 인물이며, 비록 꼭두각시에는 알맞지 않지만 우리의 기술관료 체제를 존중하고 게헨나의 미래에 득이 되는 판단을 내릴 것입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_seminar: "기획부의 예산안 간섭"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_seminar_desc: "밀레니엄의 '세미나'는 기술관료제의 보석이라고 할 수 있을 만큼 완벽하고 모범이 되는 집단입니다. 뛰어난 기술관료들로 구성된 조직이 예산편성을 담당하며, 다른 부서들은 자신들이 하려는 모든 기획을 세미나에 제출하고 그 예산안을 승인받아야 합니다. 비록 강경한 반발로 인해 [ROOT.GetLeader] 체제가 새로운 세미나를 만들 수는 없겠지만... 적어도 예산안 문제에서 우리의 강경함을 보여줄 수는 있을 것입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_reduction_in_defense_budget: "국방 예산 삭감"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_reduction_in_defense_budget_desc: "딱히 정치적 보복 때문은 아닙니다만, 기획부는 비대하게 많은 실행부의 예산을 축소하고 이를 산업 발전으로 돌리기를 바랍니다. 다시 한 번 말하지만, 이것은 정치적 보복이 아닌 효율적인 예산 재배분입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_centre_of_culture: "문화의 학원"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_centre_of_culture_desc: "$GEH_amau_centre_of_culture_desc$"
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_future: "소라사키 히나 기념 장학금"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_future_desc: "비록 우리를 저버리고 떠나가셨지만, 소라사키 히나는 아코 행정관과 기획부 모두에게 있어서 너무도 소중한 존재였습니다. 아코는 그녀의 이름을 딴 장학재단을 만들어, 키보토스계와 현지인 모두를 가리지 않고 뛰어난 예술대학 학생들에게 장학금을 전달하고자 합니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_start: "경찰국가를 향한 투쟁"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_start_desc: "히나 부장님을 떠나게 만든 것은 수많은 업무, 타락한 사회적 문화, 저열한 현지인 범죄자들... 그 모든 것들이었습니다. 기획부는 히나 부장을 떠나게 만든 현지인들에게는 일말의 자비도 허락되어서는 안 된다고 주장합니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_left_1: "현지인 기업 탄압"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_left_1_desc: "도이칠란트인들에게 권력을 쥐어주지 않기 위해서는 그들의 돈줄을 빼앗는 것이 중요합니다. 도이치계가 기업을 설립하는 것을 방해하고, 기업을 설립할 경우에는 반드시 키보토스계와의 합작회사로 이루어지도록 제약을 걸 필요가 있습니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_left_2: "국가 협동조합주의의 완성"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_left_2_desc: "우리는 국가 주도의 협동조합주의를 완성하고, 기술관료들에 의하여 통제되는 올바른 경제 체제를 만들었습니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_center: "히나 수색팀 구성"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_center_desc: "히나는 아코를 버렸을지언정, 아코는 히나를 버리지 않았습니다. 아코는 남은 자신의 인생 전체를 모두 버리는 한이 있더라도, 혹시라도 이미 히나가... 세상을 떠났다고 하더라도. 그녀의 유해라도 찾아내기 위해 남은 삶을 모두 바칠 것입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_right_1: "교육 계획"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_right_1_desc: "미래의 기술관료들을 육성하기 위하여, 전문적인 교육 프로그램이 실시될 것입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_right_2: "[ROOT.GetLeader] 법"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_right_2_desc: "새로운 게헨나에서 도이칠란트 원주민들의 권리는 어떻게 재설정되어야 할까요? 다원주의적인 카요코와 현지인에 대한 증오심을 가진 기획부 중 누구의 의견이 법률에 반영될 것인가는, 우리가 과거에 선출한 지도자에 따라 결정될 것입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_end: "World We Changed"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_a_end_desc: "\"부장님, 세상은 저 혼자 바꿔나갈 수 있는 게 아니에요. 물론 부장님 홀로 바꿀 수 있는 것도 아니고요. ...저와 부장님 두 사람이 함께 있어야만, 우리는 함께 세계를 바꿀 수 있어요.\""
 
 #### 이오리
  GEH_basking_in_the_brilliance_of_their_serenade_rout_c: "혼란의 밤"
@@ -848,6 +925,7 @@
  GEH_heroism_propaganda_idea: "영웅주의"
  GEH_negotiation_with_german_delegation_idea: "바이에른 협상"
  GEH_negotiation_with_german_delegation_idea_tt: "게헨나의 목표 달성시 제거:\n§Y@GEM만마전§! 미존재 또는 §Y@TRM트리니티§! 미존재"
+ GEH_kriegsrecht: "군사 비상태세"
 
  GEH_luxembourg_rules: "룩셈부르크 규정"
  GEH_luxembourg_rules_desc: "게헨나 학생들이 법률이나 규제에 익숙하지 않으며, '혼돈의 학원'이라 불릴 만큼 자유분방한 것은 유명합니다. 자신들끼리의 말다툼에 수류탄을 사용하는 것은 기본이고, 총기 난사는 거의 일상에 가까웠습니다. 문제는 이러한 삶이 키보토스에서는 문제가 되지 않았지만 지구에서는 큰 문제가 된다는 것입니다.\n\n대전이 직후 룩셈부르크에서 일어난 게헨나계 주도의 학살 사건은 선도부에게 큰 경각심을 일으켰습니다. 아마우 아코가 제안하고 소라사키 히나가 결정한 '룩셈부르크 규정'은 폭력에 익숙한 게헨나계에 의한 총기 범죄를 막기 위해 도입되었습니다.\n\n1. 모든 게헨나계와 현지인의 거주지를 분리한다.\n2. 모든 게헨나계 인구는 현지인 거주지에 출입하기 전 총기를 반납해야 한다.\n\n두 가지 규정으로 이루어진 이 룩셈부르크 규정은 대전이 직후 선도부가 질서를 유지하는 데에 큰 도움을 주었습니다. 하지만 모든 현지인 거주지를 보호하고 총기를 압류하기에는 부족한 행정력, 그리고 키보토스인들에게는 옷과 같은 일상품으로 취급되는 총을 임의로 압류하는 정책은 게헨나 학생들의 분노를 사고 있습니다. 정말 우리가 이 정책을 장기적으로 유지할 수 있을까요?"
