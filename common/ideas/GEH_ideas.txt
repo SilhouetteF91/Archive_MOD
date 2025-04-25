@@ -1255,6 +1255,10 @@ ideas = {
 				always = yes
 			}
 
+			cancel = {
+				NOT = { country_exists = GEH }
+			}
+
 			removal_cost = -1
 
 			modifier = {
