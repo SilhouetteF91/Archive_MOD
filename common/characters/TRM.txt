@@ -1205,6 +1205,18 @@ characters={
 			}
 			ai_will_do = { factor = 30 }
 		}
+		corps_commander={
+			traits={  }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+
+			visible = {
+				always = no # 유닛 리더 이벤트 용
+			}
+		}
 	}
 	TRN_Carl_Schmitt={
 		name=TRN_Carl_Schmitt
