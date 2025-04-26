@@ -1645,14 +1645,21 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			RED_Tomoe = {
-				remove_trait = {
-					trait = office_propagandist
-					slot = political_advisor
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = RED_dipose_cherino
+					}
 				}
-				add_trait = {
-					trait = office_propagandist_
-					slot = political_advisor
+				RED_Tomoe = {
+					remove_trait = {
+						trait = office_propagandist
+						slot = political_advisor
+					}
+					add_trait = {
+						trait = office_propagandist_
+						slot = political_advisor
+					}
 				}
 			}
 		}
@@ -10840,31 +10847,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		# 농촌 지지 확보
-		id = RED_labor_world
-		icon = GFX_focus_ITA_peasants_rise
-		prerequisite = {
-			focus = RED_native_leftists
-		}
-		prerequisite = {
-			focus = RED_the_threats_abound
-		}
-		x = 1
-		y = 1
-		relative_position_id = RED_native_leftists
-		available = {
-			has_war = no
-		}
-		cost = 2
-		ai_will_do = {
-			base = 9999
-		}
-		completion_reward = {
-			add_command_power = 10
-			custom_effect_tooltip = RED_labor_world_tt
-		}
-	}
-	focus = {
 		# 사회민주노동자당과의 제휴
 		id = RED_swe_sdwp
 		icon = GFX_focus_generic_social_democracy
@@ -10897,11 +10879,11 @@ focus_tree = {
 		id = RED_RMC
 		icon = GFX_focus_generic_workers
 		prerequisite = {
-			focus = RED_dipose_cherino
+			focus = RED_native_leftists
 		}
-		x = 2
+		x = 1
 		y = 1
-		relative_position_id = RED_dipose_cherino
+		relative_position_id = RED_native_leftists
 		available = {
 			NOT = {
 				has_completed_focus = RED_the_threats_abound
@@ -10932,43 +10914,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		# 무기고 장악
-		id = RED_sans_culotte
-		icon = GFX_focus_generic_spur_communist_revolutions
-		prerequisite = {
-			focus = RED_RMC
-		}
-		prerequisite = {
-			focus = RED_the_threats_abound
-		}
-		x = -1
-		y = 1
-		relative_position_id = RED_RMC
-		cost = 2
-		ai_will_do = {
-			base = 9999
-		}
-		completion_reward = {
-			add_command_power = 10
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 2000
-			}
-			add_equipment_to_stockpile = {
-				type = kivotos_infantry_equipment
-				amount = 500
-			}
-		}
-	}
-	focus = {
 		# 출판부 포섭
 		id = RED_take_publish_club
 		icon = GFX_focus_generic_printing_press
 		prerequisite = {
 			focus = RED_RMC
 		}
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		available = {
 			NOT = {
 				has_completed_focus = RED_the_threats_abound
@@ -11001,7 +10954,7 @@ focus_tree = {
 			focus = RED_dipose_cherino
 		}
 		icon = GFX_focus_focus_fra_revolution_utmost
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = RED_dipose_cherino
 		cost = 2
@@ -11026,7 +10979,70 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#혁명의 불꽃
+		#청년-생도 평의회
+		id = RED_freedom_of_thought
+		prerequisite = {
+			focus = RED_the_threats_abound
+		}
+		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 999
+		}
+		relative_position_id = RED_the_threats_abound
+		cost = 3
+		available_if_capitulated = yes
+		completion_reward = {
+			add_command_power = 10
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_command_power = 200
+			}
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = yes
+					}
+				}
+				hidden_effect = {
+					add_command_power = 1000
+				}
+			}
+			141 = {
+				create_unit = {
+					division = "name = \"Student Organisation\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+					owner = RED
+					count = 3
+				}
+			}
+		}
+	}
+	focus = {
+		#혁명방위전선
+		id = RED_deal_with_ger
+		prerequisite = {
+			focus = RED_freedom_of_thought
+		}
+		icon = GFX_focus_HUN_reinstate_the_lenin_boys
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 999
+		}
+		relative_position_id = RED_freedom_of_thought
+		cost = 3
+		completion_reward = {
+			country_event = {
+				id = RED_minori_event.7
+				days = 1
+			}
+		}
+	}
+	focus = {
+		#혁명의	 불꽃
 		id = RED_maintaining_the_fire
 		available = {
 		}
@@ -11036,12 +11052,12 @@ focus_tree = {
 			factor = 999
 		}
 		prerequisite = {
-			focus = RED_the_threats_abound
+			focus = RED_native_leftists
 		}
 		icon = GFX_focus_CHL_union_of_hispanic_republics
 		x = 0
 		y = 2
-		relative_position_id = RED_the_threats_abound
+		relative_position_id = RED_native_leftists
 		cost = 2
 		available_if_capitulated = yes
 		completion_reward = {
@@ -11060,20 +11076,66 @@ focus_tree = {
 		}
 	}
 	focus = {
+		# 농촌 지지 확보
+		id = RED_labor_world
+		icon = GFX_focus_ITA_peasants_rise
+		prerequisite = {
+			focus = RED_the_threats_abound
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_the_threats_abound
+		available = {
+			has_war = no
+		}
+		cost = 2
+		ai_will_do = {
+			base = 9999
+		}
+		completion_reward = {
+			add_command_power = 10
+			custom_effect_tooltip = RED_labor_world_tt
+		}
+	}
+	focus = {
+		# 무기고 장악
+		id = RED_sans_culotte
+		icon = GFX_focus_generic_spur_communist_revolutions
+		prerequisite = {
+			focus = RED_the_threats_abound
+		}
+		x = 3
+		y = 1
+		relative_position_id = RED_the_threats_abound
+		cost = 2
+		ai_will_do = {
+			base = 9999
+		}
+		completion_reward = {
+			add_command_power = 10
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+			}
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = 500
+			}
+		}
+	}
+	focus = {
 		#노동조합원 무장
 		id = RED_communist_diplo
 		icon = GFX_focus_GER_support_the_proletarian_uprising
-		x = -2
-		y = 2
+		x = -1
+		y = 1
 		ai_will_do = {
 			factor = 999
 		}
-		relative_position_id = RED_the_threats_abound
+		relative_position_id = RED_sans_culotte
 		prerequisite = {
-			focus = RED_native_leftists
-		}
-		prerequisite = {
-			focus = RED_the_threats_abound
+			focus = RED_sans_culotte
+			focus = RED_labor_world
 		}
 		cost = 3
 		completion_reward = {
@@ -11115,6 +11177,7 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = RED_communist_diplo_tt
 			every_owned_state = {
 				limit = {
 					is_demilitarized_zone = no
@@ -11130,7 +11193,7 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Public Works Department\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
 					owner = RED
-					count = 2
+					count = 3
 				}
 			}
 			if = {
@@ -11147,73 +11210,6 @@ focus_tree = {
 						owner = RED
 					}
 				}
-			}
-			custom_effect_tooltip = RED_communist_diplo_tt
-		}
-	}
-	focus = {
-		#청년-생도 평의회
-		id = RED_freedom_of_thought
-		prerequisite = {
-			focus = RED_RMC
-		}
-		prerequisite = {
-			focus = RED_the_threats_abound
-		}
-		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
-		x = 2
-		y = 2
-		ai_will_do = {
-			factor = 999
-		}
-		relative_position_id = RED_the_threats_abound
-		cost = 3
-		available_if_capitulated = yes
-		completion_reward = {
-			add_command_power = 10
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				add_command_power = 200
-			}
-			if = {
-				limit = {
-					ROOT = {
-						is_ai = yes
-					}
-				}
-				hidden_effect = {
-					add_command_power = 1000
-				}
-			}
-			141 = {
-				create_unit = {
-					division = "name = \"Student Organisation\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
-					owner = RED
-					count = 3
-				}
-			}
-		}
-	}
-	focus = {
-		#혁명방위전선
-		id = RED_deal_with_ger
-		prerequisite = {
-			focus = RED_freedom_of_thought
-		}
-		icon = GFX_focus_HUN_reinstate_the_lenin_boys
-		x = 1
-		y = 1
-		ai_will_do = {
-			factor = 999
-		}
-		relative_position_id = RED_freedom_of_thought
-		cost = 3
-		completion_reward = {
-			country_event = {
-				id = RED_minori_event.7
-				days = 1
 			}
 		}
 	}
@@ -11288,14 +11284,14 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Shipbuilding Workers\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
 					owner = RED
-					count = 2
+					count = 4
 				}
 			}
 			915 = {
 				create_unit = {
 					division = "name = \"Shipbuilding Workers\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
 					owner = RED
-					count = 2
+					count = 4
 				}
 			}
 		}
@@ -11304,13 +11300,18 @@ focus_tree = {
 		#구교사 습격
 		id = RED_defense_revolution
 		prerequisite = {
-			focus = RED_maintaining_the_fire
+			focus = RED_freedom_of_thought
 		}
 		icon = GFX_focus_BRA_utilize_security_law
 		x = 1
 		y = 1
 		ai_will_do = {
 			factor = 999
+		}
+		bypass = {
+			917 = {
+				is_demilitarized_zone = no
+			}
 		}
 		available = {
 			has_war = no
@@ -11326,7 +11327,7 @@ focus_tree = {
 				}
 			}
 		}
-		relative_position_id = RED_maintaining_the_fire
+		relative_position_id = RED_freedom_of_thought
 		cost = 3
 		completion_reward = {
 			country_event = {
@@ -11334,13 +11335,27 @@ focus_tree = {
 				days = 1
 			}
 			add_command_power = 15
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = RED_labor_world
+					}
+					917 = {
+						create_unit = {
+							division = "name = \"Public Works Department\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
+							owner = RED
+							count = 2
+						}
+					}
+				}
+			}
 		}
 	}
 	focus = {
 		#덴마크 군정청 기습
 		id = RED_attack_geh
 		prerequisite = {
-			focus = RED_maintaining_the_fire
+			focus = RED_freedom_of_thought
 		}
 		icon = GFX_focus_generic_invade_denmark
 		x = -1
@@ -11348,7 +11363,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 999
 		}
-		relative_position_id = RED_maintaining_the_fire
+		relative_position_id = RED_freedom_of_thought
 		cost = 2.9
 		available = {
 			139 = {

@@ -24,6 +24,7 @@ POL_intermarium_at_war = { #바다 사이의 개념
     visible = {
         is_ally_with = POL
         POL = {
+            is_faction_leader = yes
             has_completed_focus = POL_the_between_the_seas_concept
             NOT = {
                 has_completed_focus = POL_inter_4
