@@ -345,6 +345,42 @@ on_actions = {
 						}
 					}
 				}
+				D01 = {
+					add_opinion_modifier = {
+						target = prev
+						modifier = BA_another_demension
+					}
+					prev = {
+						add_opinion_modifier = {
+							target = prev
+							modifier = BA_another_demension
+						}
+					}
+				}
+				D02 = {
+					add_opinion_modifier = {
+						target = prev
+						modifier = BA_another_demension
+					}
+					prev = {
+						add_opinion_modifier = {
+							target = prev
+							modifier = BA_another_demension
+						}
+					}
+				}
+				D03 = {
+					add_opinion_modifier = {
+						target = prev
+						modifier = BA_another_demension
+					}
+					prev = {
+						add_opinion_modifier = {
+							target = prev
+							modifier = BA_another_demension
+						}
+					}
+				}
 			}
 		}
 		effect = {
