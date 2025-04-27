@@ -7109,7 +7109,7 @@ TRN_Mika_honor_decision_cat = {
 		}
 
 		complete_effect = {
-			set_variable = { TRN_Mika_Honor_var = 0 }
+			set_variable = { TRN_Mika_Honor_var = 5 }
 		}
 	}
 	TRN_debug_get_honor = {

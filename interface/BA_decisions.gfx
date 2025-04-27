@@ -532,6 +532,16 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_decision_cat_TRN_Mika_honor"
+		texturefile = "gfx/interface/decisions/decision_cat_TRN_Mika_honor.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_category_Trinity_mika_halo"
+		texturefile = "gfx/interface/decisions/decision_category_Trinity_mika_halo.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_ARI_trm_add_core"
 		texturefile = "gfx/interface/decisions/ARI_trm_add_core.tga"
 		legacy_lazy_load = no
