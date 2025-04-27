@@ -25,7 +25,7 @@ characters={
 
 		field_marshal={
 			traits={ Offensive_Doctrine Aggressive_Assaulter urban_assault_specialist }
-			skill=4
+			skill=3
 			attack_skill=4 #+1
 			defense_skill=2
 			planning_skill=1
@@ -100,7 +100,7 @@ characters={
 
 		corps_commander={
 			traits={ trait_cautious }
-			skill=2
+			skill=3
 			attack_skill=2
 			defense_skill=2
 			planning_skill=4
