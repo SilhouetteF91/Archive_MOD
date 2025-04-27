@@ -6851,7 +6851,6 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_effect_upon_focus_completion
 			add_ideas = TRM_trinity_farm_ns
-			add_stability = -0.02
 		}
 	}
 
@@ -6877,9 +6876,9 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 농업 현대화
-		id = TRN_agricultural_modernization
-		icon = GFX_focus_SOV_breadbasket_of_the_union
+	focus = { # 서부 공업화
+		id = TRN_revitalization_of_heavy_industry
+		icon = GFX_focus_GE2_start_focus
 		prerequisite = { 
 			focus = TRN_cooperation_with_junker 
 			focus = TRN_confiscation_distribution_collectivization
@@ -6887,7 +6886,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = TRN_fight_with_junker
-		cost = 5
+		cost = 7
 
 		available = {
 			
@@ -6897,6 +6896,14 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			63 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 }
+			}
+			68 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
 			
 		}
 	}
@@ -6979,6 +6986,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_research_slot_until_six = yes
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
 		}
 	}
 
@@ -7598,16 +7610,9 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			OR = {
-				NOT = { country_exists = GEH }
-				NOT = { country_exists = HEU }
-			}
+			NOT = { country_exists = GEH }
+			NOT = { country_exists = HEU }
 			NOT = { country_exists = GEM }
-			owns_state = 55
-			OR = {
-				owns_state = 52
-				owns_state = 8
-			}
 			has_government = fascism
 			custom_trigger_tooltip = {
 				tooltip = TRN_Mika_Honor_high_trigger
@@ -7636,16 +7641,9 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			OR = {
-				NOT = { country_exists = GEH }
-				NOT = { country_exists = HEU }
-			}
+			NOT = { country_exists = GEH }
+			NOT = { country_exists = HEU }
 			NOT = { country_exists = GEM }
-			owns_state = 55
-			OR = {
-				owns_state = 52
-				owns_state = 8
-			}
 			has_country_leader = {
 				character = TRN_alzk
 				ruling_only = yes
@@ -8426,7 +8424,7 @@ focus_tree = {
 	}
 	offset = {
 		trigger = { has_focus_tree = Trinity_focus }
-		x = 6
+		x = 8
 		y = 8
 	}
     ai_will_do = {
@@ -9804,7 +9802,7 @@ shared_focus = {
 	}
 	offset = {
 		trigger = { has_focus_tree = Trinity_focus }
-		x = 6
+		x = 8
 		y = 8
 	}
 	#relative_position_id = TRN_kickstart_the_civilian_industry
