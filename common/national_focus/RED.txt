@@ -10773,6 +10773,9 @@ focus_tree = {
 					days = 25
 				}
 			}
+			RE5 = {
+				set_cosmetic_tag = RE2_antirevolution
+			}
 		}
 		allow_branch = {
 			if = {
@@ -10918,7 +10921,7 @@ focus_tree = {
 		id = RED_take_publish_club
 		icon = GFX_focus_generic_printing_press
 		prerequisite = {
-			focus = RED_RMC
+			focus = RED_swe_sdwp
 		}
 		x = 0
 		y = 2
@@ -10927,7 +10930,7 @@ focus_tree = {
 				has_completed_focus = RED_the_threats_abound
 			}
 		}
-		relative_position_id = RED_RMC
+		relative_position_id = RED_swe_sdwp
 		cost = 3
 		ai_will_do = {
 			base = 9999
@@ -11042,9 +11045,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#혁명의	 불꽃
+		#혁명의	불꽃
 		id = RED_maintaining_the_fire
 		available = {
+			has_completed_focus = RED_the_threats_abound
 		}
 		bypass = {
 		}
@@ -11280,6 +11284,7 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = RED_back_to_workplace_tt
 			every_controlled_state = {
 				limit = {
 					is_demilitarized_zone = no
@@ -11411,7 +11416,7 @@ focus_tree = {
 		relative_position_id = RED_maintaining_the_fire
 		cost = 5
 		available = {
-			RE2 = {
+			REC = {
 				exists = no
 			}
 		}
@@ -11433,6 +11438,7 @@ focus_tree = {
 							tag = RE2
 							tag = RE3
 							tag = RE4
+							tag = REC
 						}
 					}
 					every_core_state = {

@@ -94,7 +94,7 @@ ideas = {
 				equipment_capture_factor = 0.15
 			}
 			cancel = {
-				RE2 = {
+				REC = {
 					exists = no
 				}
 			}

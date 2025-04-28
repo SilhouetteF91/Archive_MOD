@@ -467,7 +467,7 @@ country_event = { #자치공화국 작명
 	fire_only_once = yes
 	is_triggered_only = yes
 	picture = "GFX_report_event_RED_campus_day"
-	option = { #뭐라는거야미친놈이
+	option = { #뭐라는 거야미친놈이
 		name = RED_tro_event.6.a
 	}
 	option = { #
@@ -2455,16 +2455,16 @@ country_event = { #노동절 집회
 		set_cosmetic_tag = RED_revolution
 		complete_national_focus = RED_the_threats_abound
 		RED_cherino = {
-			set_nationality = RE2
+			set_nationality = REC
 		}
 		RED_tomoe = {
-			set_nationality = RE2
+			set_nationality = REC
 		}
 		RED_marina = {
-			set_nationality = RE2
+			set_nationality = REC
 		}
 		RED_lev_trotsky = {
-			set_nationality = RE2
+			set_nationality = REC
 		}
 		if = {
 			limit = {
@@ -2473,7 +2473,7 @@ country_event = { #노동절 집회
 				}
 			}
 			RED_yakumo = {
-				set_nationality = RE2
+				set_nationality = REC
 			}
 		}
 		hidden_effect = {
@@ -2485,10 +2485,10 @@ country_event = { #노동절 집회
 				id = RED_minori_event.3
 				days = 2
 			}
-			end_puppet = RE1
-			end_puppet = RE2
-			end_puppet = RE3
-			end_puppet = RE4
+			end_puppet = REC
+			end_puppet = REC
+			end_puppet = REC
+			end_puppet = REC
 		}
 	}
 }
@@ -2501,14 +2501,31 @@ country_event = { #엄습하는 반혁명
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.5.a
-		RE2 = {
+		REC = {
+			transfer_state = 110
+			transfer_state = 37
+			transfer_state = 918
+			if = {
+				limit = {
+					138 = {
+						NOT = {
+							is_controlled_by = RED
+						}
+					}
+				}
+				transfer_state = 138
+			}
 			promote_character = RED_cherino
 			puppet = RE1
+			puppet = RE2
 			puppet = RE3
 			hidden_effect={remove_ideas = { RED_democratic_resistancel_idea RED_democratic_resistancel_week_idea RED_academic_regime_dominance_idea RED_military_government_idea_1 RED_military_government_idea_2 RED_military_government_idea_3 RED_military_government_idea_4 RED_military_government_idea_exit }}
-			set_cosmetic_tag = RE2_antirevolution
 		}
 		hidden_effect = {
+			REC = {
+				add_ideas = RED_doomed_army_idea
+				add_ideas = RED_office_ss_anti_revolution_idea
+			}
 			RE1 = {
 				add_ideas = RED_doomed_army_idea
 				add_ideas = RED_office_ss_anti_revolution_idea
@@ -2545,6 +2562,7 @@ country_event = { #엄습하는 반혁명
 						is_owned_by = RE1
 						is_owned_by = RE2
 						is_owned_by = RE3
+						is_owned_by = REC
 					}
 				}
 				add_claim_by = RED
@@ -2554,7 +2572,7 @@ country_event = { #엄습하는 반혁명
 				days = 7
 			}
 			every_core_state = {
-				add_core_of = RE2
+				add_core_of = REC
 			}
 			RE1 = {
 				set_popularities = {
@@ -2567,6 +2585,11 @@ country_event = { #엄습하는 반혁명
 				}
 			}
 			RE3 = {
+				set_popularities = {
+					communism = 100
+				}
+			}
+			REC = {
 				set_popularities = {
 					communism = 100
 				}
@@ -2595,7 +2618,7 @@ country_event = { #진압된 오슬로 봉기
 		}
 		add_days_mission_timeout = {
 			mission = RED_aproaching_anti_revolution
-			days = 10
+			days = 15
 		}
 		hidden_effect = {
 			country_event = {
@@ -2634,6 +2657,9 @@ country_event = { #공장위원회
 	picture = GFX_report_event_generic_factory
 	immediate = {
 		hidden_effect = {
+			REC = {
+				country_event = RED_minori_event.10
+			}
 			RE2 = {
 				country_event = RED_minori_event.10
 			}
@@ -3428,7 +3454,7 @@ country_event = { #식량 재분배
 	desc = RED_minori_event.33.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	picture = GFX_report_event_ANZAC_day
+	picture = GFX_report_event_NOR_quisling_rally
 	option = { #굿
 		name = RED_minori_event.33.a
 		add_days_mission_timeout = {
@@ -3442,11 +3468,11 @@ country_event = { #오슬로 확보
 	title = RED_minori_event.34.t
 	desc = RED_minori_event.34.d
 	fire_only_once = yes
-	picture = GFX_report_event_ANZAC_day
+	picture = GFX_report_event_NOR_storting
 	trigger = {
 		tag = RED
 		has_completed_focus = RED_dipose_cherino
-		has_war_with = RE2
+		has_war_with = REC
 		NOT = {
 			has_completed_focus = RED_anti_fascism_policy
 		}
