@@ -2502,6 +2502,9 @@ country_event = { #엄습하는 반혁명
 	option = {
 		name = RED_minori_event.5.a
 		REC = {
+			set_capital = {
+				state = 110
+			}
 			transfer_state = 110
 			transfer_state = 37
 			transfer_state = 918
@@ -2966,9 +2969,6 @@ country_event = { #덴마크 군정청 좆바름
 	picture = GFX_report_event_spr_spanish_civil_war2
 	option = {
 		name = RED_minori_event.14.a
-		annex_country = {
-			target = RE1
-		}
 		add_war_support = 0.1
 		add_equipment_to_stockpile = {
 			type = infantry_equipment_0
@@ -3440,6 +3440,7 @@ country_event = { #통일전선
 			value = 0.1
 		}
 		add_ideas = RED_anti_cherino_popular_front
+		custom_effect_tooltip = RED_total_war_for_crashing_counter_revolution_tt
 		hidden_effect = {
 			country_event = {
 				id = RED_minori_event.33
@@ -3492,6 +3493,38 @@ country_event = { #오슬로 확보
 				count = 4
 			}
 		}
+	}
+}
+country_event = { #혁명 정부 구성
+	id = RED_minori_event.35
+	title = RED_minori_event.35.t
+	desc = RED_minori_event.35.d
+	fire_only_once = yes
+	picture = GFX_report_event_communists_cheer
+	trigger = {
+		tag = RED
+		has_completed_focus = RED_dipose_cherino
+		has_war_with = REC
+		NOT = {
+			has_completed_focus = RED_anti_fascism_policy
+		}
+		controls_state = 110
+	}
+	option = { #임시위원회
+		name = RED_minori_event.35.a
+		add_stability = 0.05
+		RED_population_solve = yes
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -1000
+		}
+		add_power_balance_value = {
+			id = RED_minori_bop
+			value = 0.05
+		}
+	}
+	option = { #혁명위원회
+		name = RED_minori_event.35.b
 	}
 }
 

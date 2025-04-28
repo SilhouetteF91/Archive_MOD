@@ -7,6 +7,24 @@ ideas = {
 		}
 	}
     country = {
+		RED_total_war_for_crashing_counter_revolution = {
+			picture = totaler_krieg_economy
+			modifier = {
+				war_support_weekly = -0.004
+				stability_weekly = -0.004
+				industrial_capacity_factory = 0.35
+				org_loss_at_low_org_factor = -0.25
+				army_org_factor = 0.1
+				ground_attack_factor = 0.2
+				army_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+			}
+			available = {
+				REC = {
+					exists = yes
+				}
+			}
+		}
 		RED_strike = { #산발적인 파업
 			picture = ICE_general_strike
 			modifier = {
@@ -93,9 +111,9 @@ ideas = {
 				army_core_defence_factor = 0.1
 				equipment_capture_factor = 0.15
 			}
-			cancel = {
+			available = {
 				REC = {
-					exists = no
+					exists = yes
 				}
 			}
 		}
