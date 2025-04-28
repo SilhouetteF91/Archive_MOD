@@ -7034,7 +7034,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			country_event = { id = GEH.event.1008 }
 
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
 		}
 	}
 
@@ -7064,7 +7069,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
 		}
 	}
 
@@ -7098,7 +7106,19 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.6
+			}
 
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}            
+
+			add_ideas = GEH_royal_guards
+
+			country_event = { id = GEH.event.1009 }
 		}
 	}
 
@@ -7128,7 +7148,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			country_event = { id = GEH.event.1007 }
 
+			add_ideas = GEH_sorasakism
 		}
 	}
 
@@ -7158,7 +7180,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			country_event = { id = GEH.event.1010 }
+			GEH_OGAS_increase_effect = yes
+			add_political_power = 75
 		}
 	}
 
@@ -7188,7 +7212,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			GEH_OGAS_increase_effect = yes
+
+			if = {
+				limit = {
+					NOT = { has_idea = tot_economic_mobilisation }
+					NOT = { has_idea = war_economy }
+				}
+				add_ideas = war_economy
+			}
 		}
 	}
 
@@ -7218,7 +7250,41 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			GEH_OGAS_increase_effect = yes
 			
+			random_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -7252,7 +7318,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			GEH_OGAS_increase_effect = yes
+			country_event = { id = GEH.event.1011 }
 			
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -7341,8 +7417,12 @@ focus_tree = {
 			}
 		}
 
+		available = {
+			has_completed_focus = GEH_first_congress_focus
+		}
+
 		completion_reward = {
-			
+			country_event = { id = GEH.event.1012 }
 		}
 	}
 	
@@ -7379,8 +7459,15 @@ focus_tree = {
 			}
 		}
 
+        select_effect = {
+			hidden_effect = {
+				country_event = { id = GEH.event.1013 }
+				country_event = { id = GEH.event.1014 days = 7 }
+			}
+        }
+
 		completion_reward = {
-			
+			country_event = { id = GEH.event.1015 }
 		}
 	}
 

@@ -787,6 +787,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/geh/GEH_prefect_team_culture.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_GEH_ogas"
+		textureFile = "gfx/interface/ideas/geh/GEH_ogas.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_BA_a_divided_academy"
 		textureFile = "gfx/interface/ideas/geh/BA_a_divided_academy.tga"
 	}
