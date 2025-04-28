@@ -2485,10 +2485,10 @@ country_event = { #노동절 집회
 				id = RED_minori_event.3
 				days = 2
 			}
-			end_puppet = REC
-			end_puppet = REC
-			end_puppet = REC
-			end_puppet = REC
+			end_puppet = RE4
+			end_puppet = RE1
+			end_puppet = RE2
+			end_puppet = RE3
 		}
 	}
 }
@@ -3500,23 +3500,14 @@ country_event = { #혁명 정부 구성
 	title = RED_minori_event.35.t
 	desc = RED_minori_event.35.d
 	fire_only_once = yes
+	is_triggered_only = yes
 	picture = GFX_report_event_communists_cheer
-	trigger = {
-		tag = RED
-		has_completed_focus = RED_dipose_cherino
-		has_war_with = REC
-		NOT = {
-			has_completed_focus = RED_anti_fascism_policy
-		}
-		controls_state = 110
-	}
 	option = { #임시위원회
 		name = RED_minori_event.35.a
-		add_stability = 0.05
 		RED_population_solve = yes
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
-			amount = -1000
+			amount = -1500
 		}
 		add_power_balance_value = {
 			id = RED_minori_bop

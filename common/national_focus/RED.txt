@@ -9300,7 +9300,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		# 남방 타격
+		# 남방 선제 공세
 		id = RED_attack_ger
 		icon = GFX_focus_attack_germany
 		x = 1
@@ -9326,7 +9326,31 @@ focus_tree = {
 				}
 			}
 		}
+		bypass_effect = {
+			hidden_effect = {
+				REC = {
+					138 = {
+						create_unit = {
+							division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 0.05 start_equipment_factor = 1"
+							owner = prev
+							count = 6
+						}
+					}
+				}
+			}
+		}
 		completion_reward = {
+			hidden_effect = {
+				REC = {
+					138 = {
+						create_unit = {
+							division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 0.05 start_equipment_factor = 1"
+							owner = prev
+							count = 6
+						}
+					}
+				}
+			}
 			add_state_claim = 910
 			add_state_claim = 909
 			start_border_war = {
@@ -12063,9 +12087,51 @@ focus_tree = {
 		}
 		cost = 3
 		completion_reward = {
+			if = {
+				limit = {NOT={
+					has_template = "militia"}
+				}
+				division_template = {
+					priority = 0
+					name = "militia"
+					regiments = {
+						irregular_infantry = {
+							x = 0
+							y = 0
+						}
+						irregular_infantry = {
+							x = 0
+							y = 1
+						}
+						irregular_infantry = {
+							x = 0
+							y = 2
+						}
+						irregular_infantry = {
+							x = 1
+							y = 0
+						}
+						irregular_infantry = {
+							x = 1
+							y = 1
+						}
+						irregular_infantry = {
+							x = 1
+							y = 2
+						}
+					}
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Shipbuilding Workers\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
+					owner = RED
+					count = 15
+				}
+			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 2000
+				amount = 5000
 			}
 			add_ideas = RED_total_war_for_crashing_counter_revolution
 			custom_effect_tooltip = RED_total_war_for_crashing_counter_revolution_tt
