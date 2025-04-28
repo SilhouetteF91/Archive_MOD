@@ -1832,6 +1832,7 @@
  RED_military_government_idea_2: "§W불안도§!§gㅣ§!§W균형§!"
  RED_military_government_idea_1: "§W불안도§!§gㅣ§!§G안정적§!"
  RED_military_government_idea_exit: "§W불안도§!§gㅣ§!§g전시 상태§!"
+ RED_military_government_idea_tt: "§R§Y민주주의 정당 인기도§!가 §Y35%§!를 초과할 시 불안도가 증가하고 §Y민주주의 정당 인기도§!가 하락합니다.§!"
 
  
  RED_technician: "붉은겨울 용역부"

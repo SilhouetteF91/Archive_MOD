@@ -3748,7 +3748,7 @@ country_event = { # 핀란드 점령
 		}
 	}
 }
-country_event = { # 군정청: 민주주의 지지도가 30% 이상일때 격발 히든 이벤트
+country_event = { # 군정청: 민주주의 지지도가 35% 이상일때 격발 히든 이벤트
 	id = RED_instability_system.1
 	title = RED_instability_system.1.t
 	desc = RED_instability_system.1.d
@@ -3762,7 +3762,7 @@ country_event = { # 군정청: 민주주의 지지도가 30% 이상일때 격발
 	trigger = {
 		RED_this_country_is_under_military_government = yes
 		RED_instability_system_operational = yes
-		democratic > 0.30
+		democratic > 0.35
 	}
 
 	immediate = {
@@ -3904,6 +3904,141 @@ country_event = { # 군정청: 00의 봄
 		}
 	}
 	
+	option = { #독립!
+		name = RED_instability_system.4.a
+		trigger = {
+			always = no
+		}
+		if = { limit = { is_subject = yes }
+			overlord = {
+				save_global_event_target_as = RED_instability_system_independence_overlord_target
+				set_truce = {
+					target = ROOT
+					days = 1080
+				}
+			}
+			set_global_flag = RED_instability_system_rebellion_overlordyes_flag
+		}
+		start_civil_war = {
+			ideology = democratic
+			size = 0
+			save_event_target_as = RED_instability_system_independence_country_target
+		}
+		event_target:RED_instability_system_independence_country_target = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+			set_technology = {
+				kivotos_infantry_weapons = 1
+			}
+			set_variable = { ROOT.halo_infantry_cap = 6 } # 사단 제한, 헤일로 보병의 사단 제한과 같아야 함
+			set_country_flag = kivotos_research_on
+			division_template = {
+				name = "Scandinavian Independence Army"
+				priority = 1
+				division_names_group = SWE_INF_01
+				is_locked = no
+
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			every_controlled_state = {
+				create_unit = {
+					division = "name = \"Scandinavian Independence Army\" division_template = \"Scandinavian Independence Army\" start_experience_factor = 0.8 start_equipment_factor = 0.35"
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Scandinavian Independence Army\" division_template = \"Scandinavian Independence Army\" start_experience_factor = 0.5 start_equipment_factor = 0.10"
+					owner = PREV
+				}
+			}
+			if = { limit = { country_exists = RE1 }
+				set_truce = {
+					target = RE1
+					days = 280
+				}
+			}
+			if = { limit = { country_exists = RE2 }
+				set_truce = {
+					target = RE2
+					days = 280
+				}
+			}
+			if = { limit = { country_exists = RE3 }
+				set_truce = {
+					target = RE3
+					days = 280
+				}
+			}
+			if = { limit = { country_exists = RE4 }
+				set_truce = {
+					target = RE4
+					days = 280
+				}
+			}
+			set_country_flag = RED_instability_system_military_government_rebellion
+			country_event = RED_instability_system.5
+			if = { limit = { ROOT = { is_ai = no } }
+				change_tag_from = ROOT
+			}
+		}
+	}
+	option = { #진압! (괴뢰국 전용)
+		name = RED_instability_system.4.b
+		trigger = {
+			always = no
+			is_subject = yes
+		}
+		start_civil_war = {
+			ideology = democratic
+			size = 0.5
+			save_event_target_as = RED_instability_system_independence_country_target
+		}
+
+		event_target:RED_instability_system_independence_country_target = {
+			division_template = {
+				name = "Scandinavian Independence Army"
+				priority = 1
+				division_names_group = SWE_INF_01
+				is_locked = no
+
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			every_controlled_state = {
+				create_unit = {
+					division = "name = \"Scandinavian Independence Army\" division_template = \"Scandinavian Independence Army\" start_experience_factor = 0.8 start_equipment_factor = 0.35"
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Scandinavian Independence Army\" division_template = \"Scandinavian Independence Army\" start_experience_factor = 0.5 start_equipment_factor = 0.10"
+					owner = PREV
+				}
+			}
+			ROOT = {
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+				add_civil_war_target = PREV
+			}
+			country_event = RED_instability_system.5
+		}
+	}
+
 	option = { #독립!
 		name = RED_instability_system.4.a	
 		if = { limit = { is_subject = yes }

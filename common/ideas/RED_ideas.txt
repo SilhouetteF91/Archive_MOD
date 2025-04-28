@@ -1764,6 +1764,7 @@ ideas = {
 			modifier = {
 				stability_factor = -0.10
 				democratic_drift = 0.15
+				custom_modifier_tooltip = RED_military_government_idea_tt
 			}
 		}
         RED_military_government_idea_3 = { # 불안도 높음
@@ -1777,6 +1778,7 @@ ideas = {
 			modifier = {
 				stability_factor = -0.10
 				democratic_drift = 0.10
+				custom_modifier_tooltip = RED_military_government_idea_tt
 			}
 		}
         RED_military_government_idea_2 = { # 불안도 보통
@@ -1790,6 +1792,7 @@ ideas = {
 			modifier = {
 				stability_factor = -0.10
 				democratic_drift = 0.05
+				custom_modifier_tooltip = RED_military_government_idea_tt
 			}
 		}
         RED_military_government_idea_1 = { # 불안도 낮음
@@ -1802,6 +1805,7 @@ ideas = {
 
 			modifier = {
 				stability_factor = -0.05
+				custom_modifier_tooltip = RED_military_government_idea_tt
 			}
 		}
         RED_military_government_idea_exit = { # 핀란드 침공
