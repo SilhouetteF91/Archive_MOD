@@ -1044,4 +1044,9 @@ spriteTypes = {
 		name = "GFX_idea_DEC_no_name_gods"
 		textureFile = "gfx/interface/ideas/gei/GEI_DEC_idea_no_name_gods.png"
 	}
+
+	spriteType = {
+		name = "GFX_idea_KAP_reconnaissance_Kaoru_small"
+		textureFile = "gfx/interface/ideas/KAP/KAP_reconnaissance_Kaoru_small.dds"
+	}
 }

@@ -309,9 +309,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			NOT = {
-
-			}
+	
 		}
 
 		cancel_if_invalid = yes
