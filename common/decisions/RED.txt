@@ -3432,7 +3432,7 @@ RED_minori_revolution_decision = {
 			always = no
 		}
 		timeout_effect = {
-			RE2 = {
+			REC = {
 				every_state = {
 					limit = {
 						is_owned_by = RED
@@ -3441,23 +3441,23 @@ RED_minori_revolution_decision = {
 					transfer_state_to = prev
 					create_unit = {
 						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 0.05 start_equipment_factor = 1"
-						owner = RE2
+						owner = REC
 					}
 					create_unit = {
 						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 0.05 start_equipment_factor = 1"
-						owner = RE2
+						owner = REC
 					}
 					create_unit = {
 						division = "name = \"Red winter army\" division_template = \"Red winter army\" start_experience_factor = 0.05 start_equipment_factor = 1"
-						owner = RE2
+						owner = REC
 					}
 				}
 			}
 			every_country = {
 				limit = {
 					OR = {
-						tag = RE2
-						is_puppet_of = RE2
+						tag = REC
+						is_puppet_of = REC
 					}
 				}
 				declare_war_on = {

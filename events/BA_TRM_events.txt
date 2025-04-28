@@ -9256,6 +9256,12 @@ country_event = { # 학원경제개발부 부장은 누구로 할까요
 			trait = TRN_AED_club_manager
 		}
 		set_country_flag = TRN_hjalmar_schacht_flag
+		effect_tooltip = { country_event = trnfla.19 }
+		hidden_effect = {
+			TRN_hjalmar_schacht = {
+				unit_leader_event = { id = trnfla.19 }
+			}
+		}
 
     }
 }
@@ -9297,7 +9303,7 @@ country_event = { # 안보상황
 
 	option = { 
 		name = trinity.36.a
-		add_stability = 0.05
+		add_war_support = 0.05
     }
 }
 
@@ -9320,6 +9326,52 @@ country_event = { # 소규모 동아리들의 운명
 		name = trinity.37.b
 		add_political_power = -45
 		add_stability = 0.05
+    }
+}
+
+country_event = { # 우리만의 자본가
+	id = trinity.38
+	title = trinity.38.t
+	desc = { 
+		text = trinity.38.desc_ui
+		trigger = {
+			TRN_Kozeki_Ui = { has_trait = TRN_AED_club_manager }
+		}
+	}
+	desc = { 
+		text = trinity.38.desc_Sch
+		trigger = {
+			NOT = { TRN_Kozeki_Ui = { has_trait = TRN_AED_club_manager } }
+		}
+	}
+	picture = GFX_event_Trinity_Campus
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = { 
+		name = trinity.38.a
+
+    }
+
+	option = { 
+		name = trinity.38.b
+
+    }
+
+	option = { 
+		name = trinity.38.c
+		trigger = {
+			TRN_Kozeki_Ui = { has_trait = TRN_AED_club_manager }
+		}
+    }
+
+	option = { 
+		name = trinity.38.d
+		trigger = {
+			NOT = { TRN_Kozeki_Ui = { has_trait = TRN_AED_club_manager } }
+		}
+
     }
 }
 

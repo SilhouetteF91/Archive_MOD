@@ -1,4 +1,6 @@
 add_namespace = ABY_event
+add_namespace = ABY_descision_focus_event
+add_namespace = ABY_hidden_event
 
 country_event = {
 	id = ABY_event.1
@@ -3408,8 +3410,8 @@ country_event = {
 		promote_character = ABYDOS_united_government
 		set_party_name = {
 			ideology = neutrality
-    		long_name = ABY_neutrality_governmant_party
-    		name = ABY_neutrality_governmant_party
+    		long_name = ABY_neutrality_party_united
+    		name = ABY_neutrality_party_united
 		}
 		set_cosmetic_tag = ABY_provisional_government
 	}
@@ -9129,8 +9131,8 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = neutrality
-    		long_name = ABY_neutrality_governmant_party
-    		name = ABY_neutrality_governmant_party
+    		long_name = ABY_neutrality_party_united
+    		name = ABY_neutrality_party_united
 		}
 		add_country_leader_trait = ABY_trait_emergency_government
 		set_cosmetic_tag = ABY_provisional_government
@@ -15811,4 +15813,473 @@ country_event = {
         name = ABY_recruit_event.3.a
         ai_chance = { factor = 100 }
     }
+}
+
+
+
+country_event = {
+	id = ABY_descision_focus_event.1
+	title = ABY_descision_focus_event.1.t
+	desc = ABY_descision_focus_event.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.1.a
+		ai_chance = { factor = 100 }
+		country_event = {
+			id = ABY_descision_focus_event.2
+		}
+		set_party_name = {
+    		ideology = democratic
+    		long_name = ABY_democratic_party_united
+    		name = ABY_democratic_party_united
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -1
+		}
+		set_party_name = {
+    		ideology = communism
+    		long_name = ABY_communism_party_united
+    		name = ABY_communism_party_united
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -1
+		}
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.2
+	title = ABY_descision_focus_event.2.t
+	desc = ABY_descision_focus_event.2.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.2.a
+		ai_chance = { factor = 100 }
+		country_event = {
+			id = ABY_descision_focus_event.3
+		}
+		add_ideas = {
+			ABY_idea_great_germanist
+		}
+		set_party_name = {
+    		ideology = fascism
+    		long_name = ABY_fascism_party_united
+    		name = ABY_fascism_party_united
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -1
+		}
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.3
+	title = ABY_descision_focus_event.3.t
+	desc = ABY_descision_focus_event.3.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.3.a
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 1
+		}
+		set_party_name = {
+			ideology = neutrality
+    		long_name = ABY_neutrality_party_united
+    		name = ABY_neutrality_party_united
+		}
+		promote_character = ABYDOS_sudete
+		set_cosmetic_tag = ABY_provisional_government
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.4
+	title = ABY_descision_focus_event.4.t
+	desc = ABY_descision_focus_event.4.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.4.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.1
+		add_political_power = 100
+	}
+	option = {
+		name = ABY_descision_focus_event.4.b
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = ABY_militia_div_cap_1_tt
+		hidden_effect = {
+			add_to_variable = { ABY_halo_milita_cap = 1 }
+			set_division_template_cap = {  division_template = "ABYDOS National Brigade" division_cap = ABY_halo_milita_cap }
+		}
+		random_owned_state = {
+			create_unit = {
+				division = "name = \"ABYDOS National Brigade\" division_template = \"ABYDOS National Brigade\" start_experience_factor = 0 start_equipment_factor = 1"
+				owner = ABY
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.5
+	title = ABY_descision_focus_event.5.t
+	desc = ABY_descision_focus_event.5.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.5.a
+		ai_chance = { factor = 100 }
+		country_event = {
+			id = ABY_descision_focus_event.6
+		}
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.6
+	title = ABY_descision_focus_event.6.t
+	desc = ABY_descision_focus_event.6.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.6.a
+		ai_chance = { factor = 100 }
+		country_event = {
+			id = ABY_descision_focus_event.7
+		}
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.7
+	title = ABY_descision_focus_event.7.t
+	desc = ABY_descision_focus_event.7.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.7.a
+		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_gehenna_support
+		custom_effect_tooltip = ABY_tt_gehenna_support
+	}
+
+	option = {
+		name = ABY_descision_focus_event.7.b
+		ai_chance = { factor = 0 }
+		create_railway_gun = {  
+			equipment = syemmata_railway_gun_equipment_1            
+			name = "Shemata Railway Gun"
+    		location = 3418
+		} 
+		add_ideas = {
+			ABY_idea_syemmata
+		}
+		every_country = {
+			limit = {
+				Kivotos_school_tag = yes
+			}
+			add_opinion_modifier = {
+				target = ABY
+				modifier = ABY_syemmata_opinion
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ABY_hidden_event.1
+	title = ABY_hidden_event.1.t
+	desc = ABY_hidden_event.1.desc
+
+	hidden = yes
+    is_triggered_only = yes
+	
+	option = { 
+		name = ABY_hidden_event.1.a 
+		if = {
+			limit = {
+				has_country_flag = ABY_focus_time_flag
+			}
+			add_to_variable = {
+        	    var = ABY_focus_time_flag_var
+        	    value = 1
+        	}
+			country_event = {
+				id = ABY_hidden_event.1
+				days = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {has_country_flag = ABY_focus_time_flag}
+			}
+			set_variable = {
+				var = ABY_focus_time_flag_var
+				value = 0
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_first_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_first
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_1_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_1
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_2_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_2
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_3_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_3
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_4_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_4
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_5_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_5
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_6_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_6
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_7_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_7
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_8_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_8
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_9_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_9
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_10_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_10
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_11_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_11
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_12_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_12
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_13_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_13
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_14_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_14
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_abydos_15_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_abydos_15
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_czecho_1_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_czecho_1
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_czecho_2_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_czecho_2
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_czecho_3_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_czecho_3
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_czecho_4_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_czecho_4
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_czecho_5_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_czecho_5
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_czecho_6_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_czecho_6
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_czecho_7_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_czecho_7
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_czecho_8_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_czecho_8
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_czecho_9_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_czecho_9
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_czecho_10_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_czecho_10
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_czecho_11_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_czecho_11
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_czecho_12_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_czecho_12
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_german_1_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_german_1
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_german_2_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_german_2
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_german_3_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_german_3
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_german_4_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_german_4
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_german_5_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_german_5
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_german_6_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_german_6
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_german_7_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_german_7
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_german_8_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_german_8
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_german_9_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_german_9
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_german_10_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_german_10
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_german_11_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_german_11
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_descision_focus_german_12_ongoing_flag
+				}
+				complete_national_focus = ABY_focus_german_12
+			}
+		}
+	}
 }

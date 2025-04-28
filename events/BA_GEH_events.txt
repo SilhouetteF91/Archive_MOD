@@ -2350,6 +2350,141 @@ country_event = { #소라사키 히나 실종
 	}
 }
 
+country_event = { #소라사키 신앙
+	id = GEH.event.1007
+	title = GEH.event.1007.t
+	desc = GEH.event.1007.desc
+
+	picture = GFX_event_GEH_hina_eventpicture
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1007.a
+
+	}
+}
+
+country_event = { #히나는 가짜다!
+	id = GEH.event.1008
+	title = GEH.event.1008.t
+	desc = GEH.event.1008.desc
+
+	picture = GFX_event_mega_cities_GEH_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1008.a
+
+	}
+}
+
+country_event = { #정부 부처 개혁
+	id = GEH.event.1009
+	title = GEH.event.1009.t
+	desc = GEH.event.1009.desc
+
+	picture = GFX_report_event_ako_amau_generic_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1009.a
+
+	}
+}
+
+country_event = { #오가스 프로그램
+	id = GEH.event.1010
+	title = GEH.event.1010.t
+	desc = GEH.event.1010.desc
+
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1010.a
+
+	}
+}
+
+country_event = { #완성된 계획경제
+	id = GEH.event.1011
+	title = GEH.event.1011.t
+	desc = GEH.event.1011.desc
+
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1011.a
+
+	}
+}
+
+country_event = { #바알 수색 작전
+	id = GEH.event.1012
+	title = GEH.event.1012.t
+	desc = GEH.event.1012.desc
+
+	picture = GFX_report_event_generic_door
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1012.a
+
+	}
+}
+
+country_event = { #무지는 행복
+	id = GEH.event.1014
+	title = GEH.event.1014.t
+	desc = GEH.event.1014.desc
+
+	picture = GFX_report_event_generic_door
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1014.a
+
+	}
+}
+
+country_event = { #바알 사냥 - 1
+	id = GEH.event.1015
+	title = GEH.event.1015.t
+	desc = GEH.event.1015.desc
+
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1015.a
+		country_event = { id = GEH.event.1016 }
+	}
+}
+
+country_event = { #바알 사냥 - 2
+	id = GEH.event.1016
+	title = GEH.event.1016.t
+	desc = GEH.event.1016.desc
+
+	picture = GFX_report_event_generic_flowers
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1016.a
+
+	}
+}
+
 country_event = { #선도부 해외 방문 계획
 	id = GEH.event.2000
 	title = GEH.event.2000.t
@@ -2912,6 +3047,70 @@ news_event = {
 	}
 	option = {
 		name = GEH_news.11.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 리쿠하치마 내각 출범
+news_event = {
+	id = GEH_news.12
+	title = GEH_news.12.t
+	desc = GEH_news.12.desc
+	picture = GFX_news_event_GEH_news_congress_1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.12.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.12.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.12.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 소라사키 히나의 은퇴식
+news_event = {
+	id = GEH_news.13
+	title = GEH_news.13.t
+	desc = GEH_news.13.desc
+	picture = GFX_news_event_GEH_news_congress_1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.13.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.13.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.13.c
 		trigger = {
 			Kivotos_tag = no
 		}

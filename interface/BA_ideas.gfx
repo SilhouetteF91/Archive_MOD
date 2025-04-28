@@ -1,5 +1,9 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_idea_GEH_luxembourg_rules"
+		texturefile = "gfx/interface/ideas/idea_GEH_luxembourg_rule.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_RE4_Finland_committee"
 		texturefile = "gfx/interface/ideas/RED/RE4_Finland_committee.tga"
 	}
@@ -785,6 +789,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GEH_prefect_team_culture"
 		textureFile = "gfx/interface/ideas/geh/GEH_prefect_team_culture.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_ogas"
+		textureFile = "gfx/interface/ideas/geh/GEH_ogas.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_BA_a_divided_academy"

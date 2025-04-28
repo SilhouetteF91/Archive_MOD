@@ -5064,7 +5064,7 @@ focus_tree = {
 
 		completion_reward = {
 			unlock_military_industrial_organization_tooltip = mio:SHA_artillery_equipment_organization
-			# MIO 지정 안해주면 코드명으로 출력 시키는거 같아서 날먹이 안되네 ;ㅅ;
+			# MIO 지정 안해주면 코드명으로 출력 시키는 거 같아서 날먹이 안되네 ;ㅅ;
 			mio:SHA_infantry_equipment_organization = {
 				unlock_mio_trait_tooltip = SHA_mio_trait_merge_plant_soft_attack
 			}

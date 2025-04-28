@@ -9490,7 +9490,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MIL_travel_africa
 		completion_reward = {
-			#프랑스 항복시키고 아프리카 먹은땅에다가 사람 청소시키는거 한 다음에 핵심주 박게 해주셈
+			#프랑스 항복시키고 아프리카 먹은땅에다가 사람 청소시키는 거 한 다음에 핵심주 박게 해주셈
 		}
 	}
 

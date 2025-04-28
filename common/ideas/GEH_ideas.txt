@@ -1255,6 +1255,10 @@ ideas = {
 				always = yes
 			}
 
+			cancel = {
+				NOT = { country_exists = GEH }
+			}
+
 			removal_cost = -1
 
 			modifier = {
@@ -2119,7 +2123,161 @@ ideas = {
 				unit_upkeep_attrition_factor = -0.05
 			}
 		}
+
+		### 선도부 ###
 		
+		GEH_ogas_1 = {
+			name = GEH_ogas
+			removal_cost = -1
+
+			picture = GEH_ogas
+				
+			allowed = {
+				original_tag = GEM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		
+		GEH_ogas_2 = {
+			name = GEH_ogas
+			removal_cost = -1
+
+			picture = GEH_ogas
+				
+			allowed = {
+				original_tag = GEM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		
+		GEH_ogas_3 = {
+			name = GEH_ogas
+			removal_cost = -1
+
+			picture = GEH_ogas
+				
+			allowed = {
+				original_tag = GEM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+			}
+		}
+		
+		GEH_ogas_4 = {
+			name = GEH_ogas
+			removal_cost = -1
+
+			picture = GEH_ogas
+				
+			allowed = {
+				original_tag = GEM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		GEH_sorasakism = {
+			removal_cost = -1
+
+			picture = state_shintoism
+				
+			allowed = {
+				original_tag = GEM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				conscription = 0.01
+				industry_air_damage_factor = -0.15
+				army_morale_factor = 0.15
+			}
+		}
+
+		GEH_royal_guards = {
+			removal_cost = -1
+
+			picture = state_shintoism
+				
+			allowed = {
+				original_tag = GEM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				is_puppet = no
+			}
+					
+			modifier = {
+				conscription = 0.03
+				training_time_army_factor = -0.1
+				fascism_drift = 0.04
+			}
+		}
 	}
 	
 	industrial_concern = {

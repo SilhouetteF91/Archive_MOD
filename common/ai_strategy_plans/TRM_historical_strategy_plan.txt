@@ -27,8 +27,8 @@ TRM_historical = {
         TRN_yurijono_seia #
         TRN_yurijono_seia_ser #
         TRM_JoJo_mika 
-        TRM_newfocus_21 # load oob 안되는거 방지
-        TRM_newfocus_33 # load oob 안되는거 방지
+        TRM_newfocus_21 # load oob 안되는 거 방지
+        TRM_newfocus_33 # load oob 안되는 거 방지
         # 미카 - 밤의 여왕까지
         TRM_newfocus_26
         TRM_newfocus_28

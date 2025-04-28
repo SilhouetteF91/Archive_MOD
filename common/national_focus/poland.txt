@@ -13669,6 +13669,7 @@ focus_tree = {
 			focus = POL_the_north_sea
 		}
 		available = {
+			has_global_flag = BA_second_great_northen_war_end
 			is_faction_leader = yes
 			FIN = {
 				is_in_faction = no

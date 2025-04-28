@@ -14,3 +14,7 @@ SEX = {
 	original_tag = GEI
 	has_cosmetic_tag = GEI_The_Colour
 }
+REC = { #체리노파 붉은겨울 //미노리 루트에서 등장
+	original_tag = RE5
+	has_cosmetic_tag = RE2_antirevolution
+}

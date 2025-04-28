@@ -3007,7 +3007,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = KSP_arms_factory_hwakjang
 
-		completion_reward = { #군수산업체 넣으면 여기 보너스 넣을것!
+		completion_reward = { #군수산업체 넣으면 여기 보너스 넣을 것!
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT

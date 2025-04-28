@@ -3715,39 +3715,43 @@ HEU_memorial_park_decision_category = {
 				HEU_something_KPL = 1
 			}
 			
-			if = {
-				limit = {
-					check_variable = { HEU_something_KPL = 1 }
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = { HEU_something_KPL = 1 }
+					}
+					country_event = { id = HEU_event.203 }
 				}
-				country_event = { id = HEU_event.203 }
-			}
-			else_if = {
-				limit = {
-					check_variable = { HEU_something_KPL = 2 }
+				else_if = {
+					limit = {
+						check_variable = { HEU_something_KPL = 2 }
+					}
+					country_event = { id = HEU_event.204 }
 				}
-				country_event = { id = HEU_event.204 }
-			}
-			else_if = {
-				limit = {
-					check_variable = { HEU_something_KPL = 3 }
+				else_if = {
+					limit = {
+						check_variable = { HEU_something_KPL = 3 }
+					}
+					country_event = { id = HEU_event.201 }
 				}
-				country_event = { id = HEU_event.201 }
-			}
-			else_if = {
-				limit = {
-					check_variable = { HEU_something_KPL = 4 }
+				else_if = {
+					limit = {
+						check_variable = { HEU_something_KPL = 4 }
+					}
+					country_event = { id = HEU_event.205 }
 				}
-				country_event = { id = HEU_event.205 }
-			}
-			else_if = {
-				limit = {
-					check_variable = { HEU_something_KPL = 5 }
+				else_if = {
+					limit = {
+						check_variable = { HEU_something_KPL = 5 }
+					}
+					country_event = { id = HEU_event.206 }
 				}
-				country_event = { id = HEU_event.206 }
+				else = {
+					country_event = { id = HEU_event.207 }
+				}
 			}
-			else = {
-				country_event = { id = HEU_event.207 }
-			}
+
+			custom_effect_tooltip = HEU_memorial_park_something_KPL_tt
 
 			activate_mission = HEU_memorial_park_something_KPL
 		}

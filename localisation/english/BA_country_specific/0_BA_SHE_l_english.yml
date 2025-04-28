@@ -67,7 +67,7 @@
  SHE_event.16.b:0 "우리는 새로운 길을 찾는다."
  SHE_event.17.t:0 "[FROM.GetName]의 탈퇴"
  SHE_event.17.desc:0 "[FROM.GetName]은 최근 우리가 벌인 쿠데타를 문제삼아서 우리 세력에서 떠났습니다."
- SHE_event.17.a:0 "그들은 없어도 되는거야."
+ SHE_event.17.a:0 "그들은 없어도 되는 거야."
  SHE_event.18.t:0 "[FROM.GetName]의 키보토스 연방 가입"
  SHE_event.18.desc:0 "우리의 종주국인 [FROM.GetName]이 키보토스 연방에 가입함에 따라 우리의 통제권 또한 키보토스 연방 측으로 이전되었습니다. 우리는 이제 이와 같은 상황에서 다음 대응을 생각해야 할 것입니다."
  SHE_event.18.a:0 "뭐, 문제 있나?."

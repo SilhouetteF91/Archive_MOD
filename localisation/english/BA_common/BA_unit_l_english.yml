@@ -15,6 +15,8 @@
  tokiwadai_infantry_desc: "초능력자로 이루어진 부대."
  color_infantry: "색채 보병"
  color_infantry_desc: "색채로 이루어진 보병."
+ decagrammaton_infantry: "데카그라마톤 보병"
+ decagrammaton_infantry_desc: "데카그라마톤의 군수공장에서 생산된 보병입니다."
  gei_otomaton: "오토마톤"
  gei_otomaton_desc: "데카그라마톤의 군수공장에서 생산된 오토마톤 기계부대입니다."
  #지원중대#

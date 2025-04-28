@@ -14,7 +14,7 @@ GEM_historical = {
 	}
 
 	ai_national_focuses = {
-		#트리니티랑 전쟁하는거
+		#트리니티랑 전쟁하는 거
 		GEM_defend_gehenna
 		GEM_ethnic_hatred
 		GEM_march_of_the_demons
