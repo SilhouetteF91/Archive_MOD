@@ -9521,6 +9521,51 @@ news_event = {
 		}
 	}
 }
+news_event = {
+	id = trinitynews.4
+	title = trinitynews.4.t
+	desc = trinitynews.4.desc
+	picture = GFX_news_event_trinity_building
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = trinitynews.4.a
+		trigger = {
+			TAG = TRM
+		}
+	}
+	option = {
+		name = trinitynews.4.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = TRM }
+			NOT = { original_tag = GEH }
+			NOT = { original_tag = GEM }
+			NOT = { original_tag = HEU }
+		}
+	}
+	option = {
+		name = trinitynews.4.c
+		trigger = {
+			OR = {
+				original_tag = GEM
+				original_tag = GEH
+				original_tag = HEU
+			}
+		}
+	}
+	option = {
+		name = trinitynews.4.d
+		trigger = {
+			NOT = { Kivotos_tag = yes }
+		}
+	}
+}
 
 unit_leader_event = { # 아이돌 마리 - 1
 	id = trnfla.1000

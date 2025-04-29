@@ -44,7 +44,6 @@ ideas = {
 			}
 		}
 		TRM_arius_problem_idea = { # 아리우스 문제
-			picture = citizen_militia_2
 			allowed = {
 				always = no
 			}

@@ -2213,3 +2213,27 @@ TRM_remove_inner_faction = {
 	custom_effect_tooltip = TRN_tooltip_delete_powers
 	set_country_flag = TRN_delete_power_flag
 }
+
+TRN_decrease_Honor_effect = {
+	add_to_variable = { 
+		TRN_Mika_Honor_var = -1 
+		tooltip = TRN_mika_Honor_change_tt
+	}
+	clamp_variable = {
+		var = TRN_Mika_Honor_var
+		min = 0
+		max = 9
+	}
+}
+
+TRN_increase_Honor_effect = {
+	add_to_variable = { 
+		TRN_Mika_Honor_var = 1 
+		tooltip = TRN_mika_Honor_change_tt
+	}
+	clamp_variable = {
+		var = TRN_Mika_Honor_var
+		min = 0
+		max = 9
+	}
+}

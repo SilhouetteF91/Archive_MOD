@@ -6712,8 +6712,8 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 9
-			tag = TRM
+			add = 11
+			tag = TGH
 		}
 	}
 	continuous_focus_position = { x = 0 y = 2300 }
@@ -6724,15 +6724,15 @@ focus_tree = {
 	shared_focus = TRN_Take_To_The_Seas
 
 
-	##########
+	###########
 	##공용중점##
-	##########
+	###########
 
 	focus = { # 자경단 투입
 		id = TRN_bring_in_vigilantes
 		icon = GFX_focus_TRN_Suzumi
-		x = 13
-		y = 1
+		x = 23
+		y = 0
 		cost = 5
 
 		available = {
@@ -6758,6 +6758,9 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			hidden_effect = {
+				set_variable = { TRN_completed_industrial_decisions = 0 }
+			}
 			add_to_variable = {
 				global.NSD_country_collapse_decisions_value = -5
 				tooltip = NSD_country_collapse_value_tt
@@ -6904,6 +6907,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = { type = industrial_complex level = 1 }
 			}
+			activate_targeted_decision = { target = 61 decision = TRN_Peat_Extraction } #메클렌부르크
 			
 		}
 	}
@@ -6926,6 +6930,13 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			activate_targeted_decision = { target = 65 decision = TRN_Infrastructure_Development } # 작센
+			activate_targeted_decision = { target = 60 decision = TRN_Infrastructure_Development } # 튀링겐
+
+			activate_targeted_decision = { target = 64 decision = TRN_Opelwerk_Brandenburg } # 브란덴부르크
+
+			activate_targeted_decision = { target = 65 decision = TRN_Lehnmuhle_Dam } # 작센
+			
 			add_stability = 0.03
 			random_core_state = {
 				limit = {
@@ -7325,7 +7336,7 @@ focus_tree = {
 		icon = GFX_focus_TRN_invite_of_carl_schmitt
 		prerequisite = { focus = TRN_new_trinity_culture }
 		prerequisite = { focus = TRN_cult_of_Mika }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = TRN_cult_of_Mika
 		cost = 5
@@ -7370,7 +7381,7 @@ focus_tree = {
 		icon = GFX_focus_TRN_alliance_of_faith
 		prerequisite = { focus = TRN_new_trinity_culture }
 		prerequisite = { focus = TRN_cult_of_Mika }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = TRN_cult_of_Mika
 		cost = 5
@@ -7442,10 +7453,8 @@ focus_tree = {
 	focus = { # 트리니티 재산업화
 		id = TRN_improving_academy_industry
 		icon = GFX_focus_generic_low_cost_housing
-		prerequisite = { 
-			focus = TRN_Justice_Task_Force_on_leash
-			focus = TRN_necessary_revenge
-		}
+		prerequisite = { focus = TRN_Justice_Task_Force_on_leash }
+		prerequisite = { focus = TRN_necessary_revenge }
 		x = 2
 		y = 1
 		relative_position_id = TRN_necessary_revenge
@@ -7526,19 +7535,11 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = TRM_industry_change
 			add_to_variable = {
-				TRM_industries_dynamic_production_lack_of_resource_penalty_factor = -0.05
-				tooltip = production_lack_of_resource_penalty_factor_tt
+				TRM_industries_dynamic_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
-				TRM_industries_dynamic_production_speed_industrial_complex_factor = 0.05
-				tooltip = production_speed_industrial_complex_factor_tt
-			}
-			add_to_variable = {
-				TRM_industries_dynamic_production_speed_arms_factory_factor = 0.05
-				tooltip = production_speed_arms_factory_factor_tt
-			}
-			add_to_variable = {
-				TRM_industries_dynamic_production_speed_buildings_factor = 0.1
+				TRM_industries_dynamic_production_speed_buildings_factor = 0.15
 				tooltip = production_speed_buildings_factor_tt
 			}
 		}
@@ -7561,15 +7562,23 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = TRN_expanded_corporatism }
 		completion_reward = {
-			add_ideas = TRN_Sie_merger
+			#add_ideas = TRN_Sie_merger
 			custom_effect_tooltip = TRM_industry_change
 			add_to_variable = {
 				TRM_industries_dynamic_production_factory_max_efficiency_factor = 0.1
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = {
-				TRM_industries_dynamic_local_resources_factor = 0.1
-				tooltip = local_resources_factor_tt
+				TRM_industries_dynamic_consumer_goods_factor = 0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				TRM_industries_dynamic_production_factory_efficiency_gain_factor = -0.1
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = {
+				TRM_industries_dynamic_production_factory_start_efficiency_factor = 0.1
+				tooltip = production_factory_start_efficiency_factor_tt
 			}
 		}
 	}
@@ -7600,11 +7609,19 @@ focus_tree = {
 	focus = { # 정권의 성문화
 		id = TRN_codification_of_regime
 		icon = GFX_focus_POL_complete_april_constitution
+		prerequisite = { 
+			focus = TRN_planned_economy 
+			focus = TRN_expanded_corporatism
+		}
+		prerequisite = { 
+			focus = TRN_hiring_german_thinkers 
+			focus = TRN_alliance_of_faith 
+		}
 		prerequisite = { focus = TRN_cause_of_trinity }
 		mutually_exclusive = {
 			focus = TRN_supreme_leader
 		}
-		x = -2
+		x = 2
 		y = 1
 		relative_position_id = TRN_cause_of_trinity
 		cost = 5
@@ -7614,9 +7631,9 @@ focus_tree = {
 			NOT = { country_exists = HEU }
 			NOT = { country_exists = GEM }
 			has_government = fascism
-			custom_trigger_tooltip = {
-				tooltip = TRN_Mika_Honor_high_trigger
-				check_variable = { TRN_Mika_Honor_var > 4 }
+			OR = {
+				TRN_very_high_honor = yes
+				TRN_high_honor = yes
 			}
 		}
 
@@ -7631,11 +7648,19 @@ focus_tree = {
 	focus = { # 최고지도자
 		id = TRN_supreme_leader
 		icon = GFX_focus_generic_limited_social_mobilization
+		prerequisite = { 
+			focus = TRN_planned_economy 
+			focus = TRN_expanded_corporatism
+		}
+		prerequisite = { 
+			focus = TRN_hiring_german_thinkers 
+			focus = TRN_alliance_of_faith 
+		}
 		prerequisite = { focus = TRN_cause_of_trinity }
 		mutually_exclusive = {
 			focus = TRN_codification_of_regime
 		}
-		x = 2
+		x = -2
 		y = 1
 		relative_position_id = TRN_cause_of_trinity
 		cost = 5
@@ -7648,9 +7673,9 @@ focus_tree = {
 				character = TRN_alzk
 				ruling_only = yes
 			}
-			custom_trigger_tooltip = {
-				tooltip = TRN_Mika_Honor_low_trigger
-				check_variable = { TRN_Mika_Honor_var < 3 }
+			OR = {
+				TRN_low_honor = yes
+				TRN_very_low_honor = yes
 			}
 		}
 
@@ -7684,6 +7709,62 @@ focus_tree = {
 
 		}
 		completion_reward = {
+
+		}
+	}
+
+
+	######
+	##외교##
+	######
+
+	focus = { # 에덴협정
+		id = TRN_eden_accord
+		icon = GFX_focus_TRN_eden_accord
+		x = 13
+		y = 0
+		cost = 3
+
+		available = {
+			NOT = { has_idea = TRN_political_instability_ns }
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			create_faction = eden_accord
+			hidden_effect = { news_event = trinitynews.4 }
+			add_named_threat = {
+				threat = 4
+				name = TRN_creation_of_faction
+			}
+
+		}
+	}
+
+	focus = { # 에덴협정
+		id = TRN_
+		icon = GFX_focus_TRN_eden_accord
+		x = 2
+		y = 1
+		relative_position_id = TRN_eden_accord
+		cost = 3
+
+		prerequisite = { focus = TRN_eden_accord }
+		available = {
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			create_faction = eden_accord
+			hidden_effect = { news_event = trinitynews.4 }
+			add_named_threat = {
+				threat = 4
+				name = TRN_creation_of_faction
+			}
 
 		}
 	}
@@ -8461,6 +8542,7 @@ focus_tree = {
         add_dynamic_modifier = {
             modifier = TRM_VVS 
         }
+
 	}
 }
 shared_focus = {
@@ -10063,6 +10145,17 @@ shared_focus = {
 	relative_position_id = TRM_Reorganise_Armament_Production
     cost = 5
 	completion_reward = {
+		if = {
+			limit = { has_focus_tree = Trinity_focus }
+			custom_effect_tooltip = GER_war_preparations_tt
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = GER_strengthened_supply_lines_ns
+					days = 730
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+		}
         custom_effect_tooltip = TRM_heer_modifier_change
         set_variable = { 
 			TRM_army_out_of_supply_factor = -0.1 

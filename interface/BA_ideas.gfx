@@ -1,5 +1,9 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_idea_TRM_arius_problem_idea"
+		texturefile = "gfx/interface/ideas/idea_TRM_arius_problem_idea.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_GEH_luxembourg_rules"
 		texturefile = "gfx/interface/ideas/idea_GEH_luxembourg_rule.tga"
 	}

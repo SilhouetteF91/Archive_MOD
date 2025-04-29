@@ -73,6 +73,7 @@ set_variable = { TRM_industries_dynamic_production_lack_of_resource_penalty_fact
 set_variable = { TRM_industries_dynamic_local_resources_factor = 0 }
 set_variable = { TRM_industries_dynamic_conversion_cost_civ_to_mil_factor = 0 }
 set_variable = { TRM_industrial_capacity_factory_factor = 0 }
+set_variable = { TRM_industrial_capacity_dockyard = 0 }
 
 set_variable = { TRM_army_planning_speed = 0 }
 set_variable = { TRM_army_max_planning_factor = 0 }
@@ -242,6 +243,7 @@ set_technology = {
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	interwar_artillery = 1
 }
 if = {
 	limit = {
@@ -300,6 +302,37 @@ if = {
 		basic_cruiser_armor_scheme = 1
 		coastal_defense_ships = 1
 		mtg_transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_medium_airframe = 1
+			iw_large_airframe = 1
+			air_torpedoe_1 = 1
+			photo_reconnaisance = 1
+			bba_early_transport_plane = 1
+		}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			early_bomber = 1
+			tactical_bomber1 = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			naval_bomber1 = 1
+			early_transport_plane = 1
+		}
 	}
 }
 

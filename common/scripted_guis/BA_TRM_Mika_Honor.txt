@@ -2,17 +2,5 @@ scripted_gui = {
 	TRN_Mika_Honor_window = {
 		context_type = decision_category
 		window_name = "TRN_Mika_Honor_window"
-
-		properties = {
-			
-		}
-
-		triggers = {
-			TRN_Mika_Honor_ball_icon_very_low_visible = {
-				check_variable = { TRN_Mika_Honor_var < 2 } # 매우 낮음
-			}
-
-		}
-
 	}
 }
