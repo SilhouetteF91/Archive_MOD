@@ -8,6 +8,8 @@ declare_war_on = {
 }
 add_civil_war_target = FIN
 
+set_global_flag = RE4_finland_war_flag
+
 set_technology = {
 	kivotos_infantry_weapons = 1
 	infantry_weapons = 1

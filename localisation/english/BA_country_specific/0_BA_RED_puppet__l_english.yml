@@ -8,7 +8,7 @@
  RE4_random_commander_1: "아리마 히즈메"
  RE4_random_commander_2: "마키하라 시호"
  RE4_council: "$RE4_finland_colonial_dynamic_modifier$"
- RE4_nodoka_desc: "노도카는 본래 227호 특별반의 유배자였습니다. 그러나 대전이 이후, 붉은겨울이 대북방전쟁을 치르는 과정에서 핀란드 전선을 담당하기 위해 -또는 핀란드 방면에서의 패배를 이유로 유배를 연장하기 위해- 핀란드와의 전쟁에서 승리하고 대북방전쟁을 완결짓는다면 유배를 풀어준다는 보안 위원장의 거래와 함께, 227호 특별반 전원은 핀란드 방면으로 파견되었습니다."
+ RE4_nodoka_desc: "노도카는 본래 227호 특별반의 유배자였습니다. 그러나 대전이 이후, 붉은겨울이 대전이 이후 북유럽 국가들과의 전쟁을 치르는 과정에서 핀란드 동방 공세를 담당하기 위해 -또는 핀란드 방면에서의 패배를 이유로 유배를 연장하기 위해- 핀란드와의 전쟁에서 승리하고 동방 공세를 완결짓는다면 유배를 풀어준다는 보안 위원장의 거래와 함께, 227호 특별반 전원은 핀란드 방면으로 파견되었습니다."
  
  RE4_Defense_Commission_Investment: "방위위원회 투자"
  RE4_Supervision_and_Management_Committee: "감독관리위원회 설립"
@@ -92,6 +92,7 @@
  RE4_Northern_War: "겨울 전쟁"
  RE4_Northern_War_timeattack: "겨울 전쟁"
  RE4_Northern_War_timeattack_FIN: "겨울 전쟁"
+ RE4_finland_war_flag: "방위위원회의 겨울 전쟁이 진행중"
 
 
 ############## 타 군정청 공용

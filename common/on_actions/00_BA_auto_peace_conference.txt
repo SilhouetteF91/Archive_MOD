@@ -27,8 +27,9 @@ on_actions = {
 				limit = {
 					tag = RE4
 					has_war_with = FIN
-					date < 1940.1.1
+					has_global_flag = RE4_finland_war_flag
 				}
+				clr_global_flag = RE4_finland_war_flag
 				RED = {
 					country_event = {
 						id = RED_generic.13
@@ -41,7 +42,6 @@ on_actions = {
 						limit = {
 							is_core_of = FIN
 						}
-						transfer_state_to = FIN
 					}
 					if = { 
 						limit = {

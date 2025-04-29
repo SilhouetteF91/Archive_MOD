@@ -353,6 +353,11 @@ leader_traits = {
 		drift_defence_factor = 0.30
 		democratic_drift = -0.01
 	}
+	RE4_military_government_commander = {
+		random = no
+		political_power_cost = 0.05
+		autonomy_gain = -2.5
+	}
 	BA_CHI_Great_commander = {
 		random = no
 		defensive_war_stability_factor = 0.5

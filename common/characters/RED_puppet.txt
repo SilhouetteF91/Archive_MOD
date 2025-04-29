@@ -87,7 +87,7 @@ characters = {
 		country_leader={
 			desc = RE4_nodoka_desc
 			ideology=war_communism
-			traits={ RED_military_government_commander }
+			traits={ RE4_military_government_commander }
 		}
 	}
 	
