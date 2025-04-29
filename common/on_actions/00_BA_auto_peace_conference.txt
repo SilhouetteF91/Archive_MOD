@@ -3,6 +3,28 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					tag = REC
+					has_war_with = RED
+				}
+				REC = {
+					end_puppet = RE1
+					end_puppet = RE2
+					end_puppet = RE3
+				}
+				RED = {
+					white_peace = RE1
+					white_peace = RE2
+					white_peace = RE3
+				}
+				RED = {
+					country_event = {
+						id = RED_minori_event.36
+						days = 2
+					}
+				}
+			}
+			if = {
+				limit = {
 					tag = RE4
 					has_war_with = FIN
 					date < 1940.1.1

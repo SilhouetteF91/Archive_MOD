@@ -2506,6 +2506,9 @@ country_event = { #엄습하는 반혁명
 				state = 110
 			}
 			transfer_state = 110
+			transfer_state = 920
+			transfer_state = 143
+			transfer_state = 923
 			transfer_state = 37
 			transfer_state = 918
 			if = {
@@ -3516,6 +3519,19 @@ country_event = { #혁명 정부 구성
 	}
 	option = { #혁명위원회
 		name = RED_minori_event.35.b
+	}
+}
+country_event = { #저지된 반혁명
+	id = RED_minori_event.36
+	title = RED_minori_event.36.t
+	desc = RED_minori_event.36.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_sanation_left_victory
+	option = { #
+		name = RED_minori_event.36.a
+		add_stability = 0.1
+		add_political_power = 50
 	}
 }
 

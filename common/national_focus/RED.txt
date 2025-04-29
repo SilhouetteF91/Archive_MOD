@@ -3601,6 +3601,7 @@ focus_tree = {
 		relative_position_id = RED_club_focus_2
 		cost = 5
 		available = {
+			always = no
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
@@ -12225,6 +12226,26 @@ focus_tree = {
 					}
 				}
 			}
+		}
+	}
+	focus = {
+		#현지 자본주의 정권 분쇄
+		id = RED_crush_local_capitalist_government
+		icon = GFX_focus_FIN_finnish_supremacy_in_the_north
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 999
+		}
+		relative_position_id = RED_communist_diplo
+		prerequisite = {
+			focus = RED_communist_diplo
+		}
+		available = {
+			always = no
+		}
+		cost = 4
+		completion_reward = {
 		}
 	}
 	focus = {
