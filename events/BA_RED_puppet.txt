@@ -376,7 +376,7 @@ country_event = { # 마리나 파견
 	id = redpuppet.16
 	title = redpuppet.16.t
 	desc = redpuppet.16.desc
-	picture = GFX_report_event_FIN_svinhufvud_speech
+	picture = GFX_report_event_RED_marina
 
 	is_triggered_only = yes 
 	
