@@ -15,9 +15,6 @@
 	default = no
 	reset_on_civilwar = no
 
-	initial_show_position = {
-		focus = RE4_industrial_effort
-	}
 	shared_focus = RE4_create_of_defense_committee
 	shared_focus = RE4_Defense_Commission_Investment
 }
@@ -599,6 +596,7 @@ joint_focus = {
 	}
 
 	completion_reward_joint_originator = {
+		remove_ideas = RED_academic_regime_dominance_idea
 
 		IF = {
 			limit = {
@@ -634,15 +632,6 @@ joint_focus = {
 			set_capital = {
 				state = 111
 				remember_old_capital = no
-			}
-			add_country_leader_role = {
-				character = RE4_council 
-				country_leader = {
-					ideology = stalinism
-					expire = "1965.1.1.1"
-					traits = {  }
-				}
-				promote_leader = yes
 			}
 			set_cosmetic_tag = RE4_finlandia_military_administration
 		}

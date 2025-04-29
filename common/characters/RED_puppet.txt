@@ -1,28 +1,117 @@
 characters = {
-	RED_Finnish_Commander={ # 핀란드 사령관
-		name=RE4_country_leader_name
+
+	RE4_marina = { #마리나
+		name = RED_marina
+		portraits = {
+			army = {
+				large="gfx/leaders/RED/RED_Ikekura_Marina_Portrait.dds"
+				small= "gfx/interface/advisors/RED/RED_Marina.tga"
+			}
+		}
+
+		corps_commander = {
+			traits = { media_personality winter_specialist infantry_officer politically_connected trait_reckless }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+			legacy_id = -1
+			visible = {
+				has_global_flag = RE4_marina_global_flag
+			}
+		}
+
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = RED_marina
+			ledger = army
+			allowed = {
+				tag = RED
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			visible = {
+				has_global_flag = RE4_marina_global_flag
+			}
+		}
+	}
+
+	RE4_nodoka={ #노도카
+		name=RED_nodoka
 		portraits={
-			civilian={
-				large="GFX_Portrait_BlueArchive_RED_Generic_1"
-			}
 			army={
-				large="GFX_Portrait_BlueArchive_RED_Generic_1"
+				large="gfx/leaders/RED/RED_Amami_Nodoka_Portrait.tga"
+				small="gfx/interface/advisors/RED/shehzk.dds"
 			}
 		}
-		country_leader={
-			ideology=war_communism
-			traits={ RED_military_government_commander }
-		}
-		field_marshal={
-			traits={  }
+		corps_commander={
+			traits={ winter_specialist trickster }
 			skill=2
 			attack_skill=2
-			defense_skill=2
-			planning_skill=1
+			defense_skill=1
+			planning_skill=3
 			logistics_skill=1
 			legacy_id=-1
 		}
+		scientist = {
+			traits = { scientist_trait_bright scientist_trait_nuclear_warfare_expert }
+			skills = {
+				specialization_nuclear = 2
+			}
+			visible = {
+				always = yes
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = RED_nodoka
+			allowed = {
+				tag = RED
+			}
+
+			available = {
+				#has_completed_focus = RED_227_speicial_class
+			}
+
+			traits = {
+				military_theorist
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 24.000
+			}
+		}
+		country_leader={
+			desc = RE4_nodoka_desc
+			ideology=war_communism
+			traits={ RED_military_government_commander }
+		}
 	}
+	
+	RE4_shigure = { #시구레
+		name = RED_shigure
+		portraits = {
+			civilian = {
+				large="gfx/leaders/RED/RED_Mayoi_Shigure_portrait.tga"
+			}
+			army = {
+				small= "gfx/interface/advisors/RED/hehzk.dds"
+			}
+		}
+		corps_commander = {
+			traits = { winter_specialist alcoholic }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
+
 	RE4_commander_1 = {
 		name = RE4_random_commander_1
 		portraits = {

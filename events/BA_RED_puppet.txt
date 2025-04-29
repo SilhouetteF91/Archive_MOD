@@ -355,6 +355,7 @@ country_event = { # 자치위원회 설립
 		ai_chance = { base = 100 }
 		
 		add_political_power = 75
+		RE4 = { country_event = { id = redpuppet.16 hours = 12 } }
 	}
 }
 country_event = { # 관리감독위원회 설립
@@ -369,5 +370,29 @@ country_event = { # 관리감독위원회 설립
 		name = redpuppet.15.a
 		ai_chance = { base = 100 }
 		
+	}
+}
+country_event = { # 마리나 파견
+	id = redpuppet.16
+	title = redpuppet.16.t
+	desc = redpuppet.16.desc
+	picture = GFX_report_event_FIN_svinhufvud_speech
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.16.a
+		ai_chance = { base = 100 }
+		set_global_flag = RE4_marina_global_flag
+		add_country_leader_role = {
+			character = RE4_marina
+			promote_leader = yes
+			country_leader = {
+				ideology = war_communism
+				traits = {
+					office_commander
+				}
+			}
+		}
 	}
 }

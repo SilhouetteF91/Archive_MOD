@@ -28,7 +28,9 @@ set_technology = {
 	panzerschiffe = 1
 }
 
-recruit_character = RED_Finnish_Commander
+recruit_character = RE4_marina
+recruit_character = RE4_nodoka
+recruit_character = RE4_shigure
 recruit_character = RE4_clone_marina
 recruit_character = RE4_clone_tomoe
 recruit_character = RE4_commander_1

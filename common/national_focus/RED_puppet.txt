@@ -26,18 +26,11 @@
 	focus = {
         id = REPP_army_effort
         text = army_effort
-        text = army_effort
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 1
 		y = 0
 		cost = 10
 		search_filters = {  FOCUS_FILTER_RESEARCH }
-
-		allow_branch = {
-			NOT = {
-				original_tag = RE4
-			}
-		}
 		
 		available_if_capitulated = yes
 
@@ -290,12 +283,6 @@
 		cost = 10
 		
 		search_filters = {   FOCUS_FILTER_RESEARCH }
-
-		allow_branch = {
-			NOT = {
-				original_tag = RE4
-			}
-		}
 
 		available_if_capitulated = yes
 
@@ -610,12 +597,6 @@
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
-
-		allow_branch = {
-			NOT = {
-				original_tag = RE4
-			}
-		}
 		
 		available_if_capitulated = yes
 
@@ -986,12 +967,6 @@
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-
-		allow_branch = {
-			NOT = {
-				original_tag = RE4
-			}
-		}
 		
 		available_if_capitulated = yes
 
