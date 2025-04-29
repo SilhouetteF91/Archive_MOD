@@ -17,6 +17,470 @@
 
 	shared_focus = RE4_create_of_defense_committee
 	shared_focus = RE4_Defense_Commission_Investment
+	
+	focus = {
+		# 이반 쿠팔라
+		id = RE4_ivan_kupla
+		icon = GFX_goal_generic_war_with_comintern
+		available = {
+			original_tag = RE4
+			NOT = {
+				OR = {
+					has_war_with = RED
+					has_war_with = RE4 
+				}
+				RE4 = { has_war_with = FIN }
+			}
+			RE4 = { owns_state = 111 }
+		}
+		x = 24
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 20
+			custom_effect_tooltip = RE4_ivan_kupla_tt
+		}
+	}
+	focus = {
+		# 보안위원회 본부 이전
+		id = RE4_security_committee_headquarters_relocation
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_ivan_kupla
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		x = -3
+		y = 1
+		relative_position_id = RE4_ivan_kupla
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			unlock_decision_category_tooltip = RED_northern_sovereignty_war
+		}
+	}
+	focus = {
+		# 군정청 회유
+		id = RE4_military_government_persuasion
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_security_committee_headquarters_relocation
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = RE4_security_committee_headquarters_relocation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 권력 균형 이관
+		id = RE4_transfer_of_power_balance
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_security_committee_headquarters_relocation
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = RE4_security_committee_headquarters_relocation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		# 소련 지원
+		id = RE4_request_for_soviet_support
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_security_committee_headquarters_relocation
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = RE4_security_committee_headquarters_relocation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 반트로츠키 공산주의 강령
+		id = RE4_anti_trotskyist_communist_program
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_military_government_persuasion
+			focus = RE4_transfer_of_power_balance
+			focus = RE4_request_for_soviet_support
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		x = -1
+		y = 2
+		relative_position_id = RE4_security_committee_headquarters_relocation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 체리노에 대한 반발
+		id = RE4_opposition_to_cherino
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_military_government_persuasion
+			focus = RE4_transfer_of_power_balance
+			focus = RE4_request_for_soviet_support
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		x = 1
+		y = 2
+		relative_position_id = RE4_security_committee_headquarters_relocation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 반혁명 방지위원회
+		id = RE4_counter_revolution_prevention_committee
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_anti_trotskyist_communist_program
+			focus = RE4_opposition_to_cherino
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		x = 0
+		y = 3
+		relative_position_id = RE4_security_committee_headquarters_relocation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 포섭
+		id = RE4_denmark_cooption
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_counter_revolution_prevention_committee
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = RE4_counter_revolution_prevention_committee
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 포섭
+		id = RE4_sweden_cooption
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_counter_revolution_prevention_committee
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = RE4_counter_revolution_prevention_committee
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 포섭
+		id = RE4_norway_cooption
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_counter_revolution_prevention_committee
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = RE4_counter_revolution_prevention_committee
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 작전명, 이반 쿠팔라
+		id = RE4_operation_ivan_kupala
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_denmark_cooption
+			focus = RE4_sweden_cooption
+			focus = RE4_norway_cooption
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		x = 0
+		y = 3
+		relative_position_id = RE4_counter_revolution_prevention_committee
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 레닌그라드 무역로 개설
+		id = RE4_opening_of_leningrad_trade_route
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_ivan_kupla
+		}
+		available = {
+			RE4 = { owns_state = 111 }
+			has_railway_connection = {
+				start_province = 11105
+				target_province = 3151
+			}
+		}
+		x = 3
+		y = 1
+		relative_position_id = RE4_ivan_kupla
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 코민테른 붉은겨울 지부
+		id = RE4_comintern_red_winter_branch
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_opening_of_leningrad_trade_route
+		}
+		available = {
+		}
+		x = 0
+		y = 3
+		relative_position_id = RE4_opening_of_leningrad_trade_route
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 코민테른 붉은겨울 지부
+		id = RE4_we_head_to_the_future
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_comintern_red_winter_branch
+		}
+		available = {
+		}
+		x = 0
+		y = 3
+		relative_position_id = RE4_comintern_red_winter_branch
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
 }
 
 shared_focus = {

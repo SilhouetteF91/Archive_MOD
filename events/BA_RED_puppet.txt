@@ -396,3 +396,30 @@ country_event = { # 마리나 파견
 		}
 	}
 }
+country_event = { # 이반 쿠팔라의 스캔들
+	id = redpuppet.17
+	title = redpuppet.17.t
+	desc = redpuppet.17.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.17.a
+		ai_chance = { base = 100 }
+		country_event = redpuppet.18
+	}
+}
+country_event = { # 이반 쿠팔라의 스캔들
+	id = redpuppet.18
+	title = redpuppet.18.t
+	desc = redpuppet.18.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.18.a
+		ai_chance = { base = 100 }
+	}
+}

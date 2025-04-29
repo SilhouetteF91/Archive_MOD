@@ -122,6 +122,21 @@ RED_demand_cat = { #대중의 요구
 	}
 }
 
+RED_northern_sovereignty_war = { #전공투 
+
+	icon = GFX_decision_category_SOV_civil_war
+	
+	allowed = {
+		original_tag = RE4
+	}
+	visible = {
+		has_completed_focus = RE4_security_committee_headquarters_relocation
+	}
+	priority = 500
+
+	visible_when_empty = yes
+}
+
 RED_zenkyoutou_cat = { #전공투 
 
 	icon = GFX_decision_category_SOV_civil_puppet_interaction

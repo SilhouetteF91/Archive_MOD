@@ -208,10 +208,6 @@ on_actions = {
             }
 			RED = {
 				country_event = {
-					id = RED_marina_event.7
-					days = 187
-				}
-				country_event = {
 					id = RED_marina_event.4
 					days = 187
 				}
@@ -222,6 +218,12 @@ on_actions = {
 				country_event = {
 					id = RED_event.32
 					days = 3
+				}
+			}
+			RE4 = {
+				country_event = {
+					id = 장
+					days = 187
 				}
 			}
 			FRA = {

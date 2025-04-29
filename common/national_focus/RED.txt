@@ -9532,6 +9532,7 @@ focus_tree = {
 		}
 		available = {
 			date < 1936.5.1
+			always = no
 		}
 		x = 22
 		y = 0
