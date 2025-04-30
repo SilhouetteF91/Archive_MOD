@@ -1,0 +1,21 @@
+
+scripted_gui = {
+	RED_northern_sovereignty_gui = {
+		context_type = decision_category
+		window_name = "red_northern_sovereignty_gui_window"
+		
+		properties = {
+			red_northern_sovereignty_re1_progressbar = {
+				frame = geh_discipline_var
+			}
+			red_northern_sovereignty_re2_progressbar = {
+				frame = geh_discipline_var
+			}
+			red_northern_sovereignty_re3_progressbar = {
+				frame = geh_discipline_var
+			}
+		}
+
+	}
+
+}

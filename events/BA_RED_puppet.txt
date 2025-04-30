@@ -293,6 +293,12 @@ country_event = { # 겨울전쟁 사건 - 방위위원회 승리
 	picture = GFX_report_event_FIN_motti_tactics
 
 	is_triggered_only = yes 
+
+	immediate = {
+		every_other_country = {
+			country_event = redpuppet.19
+		}
+	}
 	
 	option = { 
 		name = redpuppet.11.a
@@ -421,5 +427,34 @@ country_event = { # 이반 쿠팔라의 스캔들
 	option = { 
 		name = redpuppet.18.a
 		ai_chance = { base = 100 }
+	}
+}
+country_event = { # 군정청 붕괴 비활성!
+	id = redpuppet.19
+	title = redpuppet.19.t
+	desc = redpuppet.19.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.19.a
+		add_war_support = 0.05
+		add_political_power = 20
+		if = {
+			limit = { has_idea = RED_democratic_resistancel_week_idea }
+			swap_ideas = {
+				add_idea = RED_democratic_resistancel_week_idea_ori
+				remove_idea = RED_democratic_resistancel_week_idea
+			}
+		}
+		if = {
+			limit = { has_idea = RED_democratic_resistancel_idea }
+			swap_ideas = {
+				add_idea = RED_democratic_resistancel_week_idea_ori
+				remove_idea = RED_democratic_resistancel_idea
+			}
+		}
+		RED_instability_system_remove_effect = yes
 	}
 }

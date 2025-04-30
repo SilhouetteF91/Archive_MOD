@@ -1896,6 +1896,20 @@ ideas = {
 				democratic_drift = -0.05
 			}
 		}
+        RED_democratic_resistancel_week_idea_ori = { # 잠잠한 민주주의 저항
+			name = RED_democratic_resistancel_week_idea
+			picture = EST_democratic_opposition
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				stability_factor = -0.15
+				communism_acceptance = -25
+			}
+		}
         RED_democratic_resistancel_week_idea = { # 잠잠한 민주주의 저항
 			picture = EST_democratic_opposition
 			removal_cost = -1
