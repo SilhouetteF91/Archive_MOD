@@ -129,9 +129,32 @@
  RED_northern_sovereignty_war: "북방 주권 전쟁"
  RED_northern_sovereignty_war_desc: "§Y덴마크§!, §Y노르웨이§!, §Y스웨덴§!의 영토 위에 설립된 §Y군정청§!은 일반적으로 붉은겨울 연방학원의 일부로 여겨지나, §Y북방 주권 전쟁§!이 준비중인 현재 군정청을 §G포섭§! 하기 위한 시도가 체리노와 마리나에 의해 주도되고 있습니다. 영향력 경쟁에서 패배한다면 §Y군정청§!은 §Y북방 주권 전쟁§!에서 §R상대 편§!으로 참여할 것입니다.\n\n영향력의 경우 §Y북방 주권 전쟁§!에서 §Y군정청§!은 §g마리나§!의 편을 따르나, §S체리노§!의 영향력이 100에 도달할 경우 해당 §Y군정청§!은 §S체리노§!의 편으로 참여할 것입니다."
 
+ red_northern_sovereignty_re1_progressbar_tt: "§Y[RE1.GetNameWithFlag]§!: 체리노의 영향력 [?global.red_northern_sovereignty_re1_var|S.0]"
+ red_northern_sovereignty_re2_progressbar_tt: "§Y[RE2.GetNameWithFlag]§! 체리노의 영향력 [?global.red_northern_sovereignty_re2_var|S.0]"
+ red_northern_sovereignty_re3_progressbar_tt: "§Y[RE3.GetNameWithFlag]§! 체리노의 영향력 [?global.red_northern_sovereignty_re3_var|S.0]"
+
+ red_northern_sovereignty_war_1side_icon_tt: "현재 체리노는 아래와 같은 영향력을 발휘하고 있습니다:\n §Y[RE1.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re1_var|S.0]\n §Y[RE2.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re2_var|S.0]\n §Y[RE3.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re3_var|S.0]\n\n현재 체리노는 아래의 군정청을 통제하고 있습니다:[RED_northern_sovereignty_war_use_RE1_side1][RED_northern_sovereignty_war_use_RE2_side1][RED_northern_sovereignty_war_use_RE3_side1]"
+ red_northern_sovereignty_war_2side_icon_tt: "현재 마리나는 아래의 군정청을 통제하고 있습니다:[RED_northern_sovereignty_war_use_RE1][RED_northern_sovereignty_war_use_RE2][RED_northern_sovereignty_war_use_RE3]"
+
  red_northern_sovereignty_re1_text: "§Y[RE1.GetNameWithFlag]§!:"
  red_northern_sovereignty_re2_text: "§Y[RE2.GetNameWithFlag]§!:"
  red_northern_sovereignty_re3_text: "§Y[RE3.GetNameWithFlag]§!:"
+
+ RED_northern_sovereignty_war_use_RE1_tt: "\n §Y[RE1.GetNameWithFlag]§!"
+ RED_northern_sovereignty_war_use_RE2_tt: "\n §Y[RE2.GetNameWithFlag]§!"
+ RED_northern_sovereignty_war_use_RE3_tt: "\n §Y[RE3.GetNameWithFlag]§!"
+
+ red_northern_sovereignty_tt: "체리노의 영향력 변동: $RIGHT|=S.0$"
+ red_northern_sovereignty_var_upper_tt: "체리노의 영향력이 $RIGHT|S.0$ 보다 큼"
+
+ northern_sovereignty_war_RE4_military_government_RE1: "[RE1.GetName]: 충성의 대가 제공"
+ northern_sovereignty_war_RE4_military_government_RE2: "[RE2.GetName]: 충성의 대가 제공"
+ northern_sovereignty_war_RE4_military_government_RE3: "[RE3.GetName]: 충성의 대가 제공"
+
+ northern_sovereignty_war_RED_military_government_RE1: "[RE1.GetName]: 포섭 개시"
+ northern_sovereignty_war_RED_military_government_RE2: "[RE2.GetName]: 포섭 개시"
+ northern_sovereignty_war_RED_military_government_RE3: "[RE3.GetName]: 포섭 개시"
+ northern_sovereignty_war_RED_military_government_flag: "다른 군정청을 포섭중임"
 
 ############## 타 군정청 공용
  REPP_socialist_culture_struggle: "사회주의 문화투쟁"

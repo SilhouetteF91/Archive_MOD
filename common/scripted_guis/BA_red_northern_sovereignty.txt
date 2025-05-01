@@ -6,13 +6,13 @@ scripted_gui = {
 		
 		properties = {
 			red_northern_sovereignty_re1_progressbar = {
-				frame = geh_discipline_var
+				frame = global.red_northern_sovereignty_re1_var
 			}
 			red_northern_sovereignty_re2_progressbar = {
-				frame = geh_discipline_var
+				frame = global.red_northern_sovereignty_re2_var
 			}
 			red_northern_sovereignty_re3_progressbar = {
-				frame = geh_discipline_var
+				frame = global.red_northern_sovereignty_re3_var
 			}
 		}
 
