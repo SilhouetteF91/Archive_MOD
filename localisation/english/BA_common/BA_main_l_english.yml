@@ -436,6 +436,12 @@
  WAR_NAME_REC_RED: "노동절 봉기"
  WAR_NAME_RE4_FIN: "동방 공세"
  WAR_NAME_FIN_RE4: "동방 공세"
+ WAR_NAME_SHA_HYA: "남키보토스 전쟁"
+ WAR_NAME_HYA_SHA: "남키보토스 전쟁"
+ WAR_NAME_ABY_HYA: "낙화작전"
+ WAR_NAME_HYA_ABY: "낙화작전"
+ WAR_NAME_SHA_ABY: "다뉴브 전쟁"
+ WAR_NAME_ABY_SHA: "다뉴브 전쟁"
 
  BA_ideology_anti_revisionism_tt: "국가 지도자의 이념을 §Y$anti_revisionism$§!로 변경합니다."
  BA_ideology_stalinism_tt: "국가 지도자의 이념을 §Y$stalinism$§!로 변경합니다."

@@ -2177,7 +2177,7 @@ ABY_austria = {
 	color = rgb { 194 198 215 }
 	color_ui = rgb { 255 255 255 }
 }
-ABY_abydos_republic = {
+ABY_united_states = {
 	color = rgb { 0 51 153 }
 	color_ui = rgb { 0 51 153 }	
 }

@@ -6056,6 +6056,23 @@ ideas = {
 				army_morale_factor = 0.05
 			}
 		}
+        ABY_idea_interference_committee = {
+            picture = generic_secret_police
+            modifier = {
+                send_volunteer_divisions_required = -1
+                send_volunteers_tension = -1
+            }
+            available = {
+                ABY = {
+					NOT = {
+						has_country_flag = ABY_flag_recovered_land
+					}
+				}
+            }
+            rule = {
+                can_send_volunteers = yes
+            }
+        }
 		ABY_idea_intel_1 = {
 			allowed_civil_war = {
                 always = yes
