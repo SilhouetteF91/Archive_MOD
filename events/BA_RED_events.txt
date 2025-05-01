@@ -3843,8 +3843,12 @@ country_event = { # 군정청: 무작위로 발생하는 이벤트
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id = RED_instability_system.3 days = 80 random_days = 70 }
+			country_event = { id = RED_instability_system.3 days = 80 random_days = 25 }
 		}
+	}
+
+	trigger = {
+		has_idea = RED_democratic_resistancel_idea
 	}
 	
 	option = {

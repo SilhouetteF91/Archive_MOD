@@ -293,12 +293,6 @@ country_event = { # 겨울전쟁 사건 - 방위위원회 승리
 	picture = GFX_report_event_FIN_motti_tactics
 
 	is_triggered_only = yes 
-
-	immediate = {
-		every_other_country = {
-			country_event = redpuppet.19
-		}
-	}
 	
 	option = { 
 		name = redpuppet.11.a
@@ -361,7 +355,6 @@ country_event = { # 자치위원회 설립
 		ai_chance = { base = 100 }
 		
 		add_political_power = 75
-		RE4 = { country_event = { id = redpuppet.16 hours = 12 } }
 	}
 }
 country_event = { # 관리감독위원회 설립
@@ -439,6 +432,9 @@ country_event = { # 군정청 붕괴 비활성!
 	
 	option = { 
 		name = redpuppet.19.a
+		trigger = {
+			NOT = { original_tag = RED }
+		}
 		add_war_support = 0.05
 		add_political_power = 20
 		if = {
@@ -456,5 +452,28 @@ country_event = { # 군정청 붕괴 비활성!
 			}
 		}
 		RED_instability_system_remove_effect = yes
+	}
+	option = { 
+		name = redpuppet.19.b
+		trigger = {
+			original_tag = RED
+		}
+		add_stability = -0.05
+		add_war_support = 0.05
+		RE4 = { country_event = { id = redpuppet.16 hours = 12 } }
+	}
+}
+country_event = { # 어쩌면?
+	id = redpuppet.20
+	title = redpuppet.20.t
+	desc = redpuppet.20.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.20.a
+		add_political_power = 10
+		add_war_support = -0.05
 	}
 }

@@ -1122,6 +1122,12 @@ joint_focus = {
 			}
 		}
 
+		FIN = {
+			every_core_state = {
+				add_core_of = ROOT
+			}
+		}
+
 	}
 
 	completion_reward_joint_member = {

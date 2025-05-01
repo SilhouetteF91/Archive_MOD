@@ -71,6 +71,33 @@ on_actions = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					tag = FIN
+					has_war_with = RE4
+					has_global_flag = RE4_finland_war_flag
+				}
+				clr_global_flag = RE4_finland_war_flag
+				RE4 = {
+					every_other_country = {
+						limit = {
+							OR = {
+								original_tag = RED
+								original_tag = RE1
+								original_tag = RE2
+								original_tag = RE3
+							}
+						}
+						country_event = redpuppet.19
+					}
+					every_other_country = {
+						limit = {
+							original_tag = SOV
+						}
+						country_event = redpuppet.20
+					}
+				}
+			}
 			#if = { #미국 - 색채전 색채 승전
 			#	limit = {
 			#		TAG = USA

@@ -23,7 +23,7 @@ ideas = {
 				army_speed_factor = 0.25
 			}
 			available = {
-				REC = {
+				RED = {
 					exists = yes
 				}
 			}
@@ -1925,6 +1925,9 @@ ideas = {
 
 			on_remove = {
 				add_ideas = RED_democratic_resistancel_idea
+				hidden_effect = {
+					country_event = { id = RED_instability_system.3 days = 80 random_days = 70 }
+				}
 			}
 		}
         RED_democratic_resistancel_idea = { # 민주주의 저항
