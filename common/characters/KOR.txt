@@ -1,4 +1,5 @@
 characters = {
+
 	KOR_lyuh_woon_hyung = {
 		name = KOR_lyuh_woon_hyung
 		portraits = {
@@ -8,8 +9,11 @@ characters = {
 		}
         country_leader = {
             ideology = socialism
+			traits={ compassionate_gentleman }
+			expire="1965.1.1"
         }
 	}
+
 	KOR_pak_hon_yong = {
 		name = KOR_pak_hon_yong
 		portraits = {
@@ -21,6 +25,7 @@ characters = {
             ideology = stalinism
         }
 	}
+
 	KOR_ji_cheong_cheon = {
 		name = KOR_ji_cheong_cheon
 		portraits = {
@@ -32,15 +37,17 @@ characters = {
             ideology = fascism_ideology
         }
 	}
-	KOR_yi_un = {
-		name = KOR_yi_un
+
+	KOR_kim_ku = {
+		name = KOR_kim_ku
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/KOR/KOR_yi_un.png"
+				large = "GFX_Portrait_Asia_Generic_land_1"
 			}
 		}
         country_leader = {
             ideology = despotism
+			traits={ ideological_crusader }
         }
 	}
 }

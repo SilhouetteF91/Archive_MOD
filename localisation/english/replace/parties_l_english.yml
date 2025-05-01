@@ -76,12 +76,12 @@
  EGY_fascism_party:0 "청년 이집트당-무슬림 형제단 연정"
  EGY_neutrality_party:0 "무하마드 알리 왕실"
 
- KOR_communism_party:0 "조선 공산당"
- KOR_communism_party_long:0 "조선 공산당"
- KOR_democratic_party:0 "건국동맹"
- KOR_neutrality_party:0 "황실"
- KOR_fascism_party:0 "대동청년단"
- KOR_fascism_party_long:0 "대동청년단"
+ KOR_communism_party:0 "조선공산당"
+ KOR_communism_party_long:0 "조선공산당"
+ KOR_democratic_party:0 "근로인민당"
+ KOR_neutrality_party:0 "한국독립당"
+ KOR_fascism_party:0 "자유당"
+ KOR_fascism_party_long:0 "자유당"
 
  japanese_fascism: "일본 군부"
  japanese_fascism_desc: "만주 사변 이후 군부는 일본의 실질적 통치 세력으로 떠올랐습니다. 강력한 군사력을 바탕으로 내각과 정치 세력을 압도하며, 국가의 모든 중요한 결정을 주도하고 있습니다."
