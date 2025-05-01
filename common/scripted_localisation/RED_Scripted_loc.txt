@@ -97,6 +97,25 @@ defined_text = {
 					has_idea = RED_military_government_idea_3 
 					has_idea = RED_military_government_idea_4 
 				}
+				has_idea = RED_democratic_resistancel_week_idea_ori
+			}
+			RE1 = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+		}
+		localization_key = RED_military_government_1tt
+	}
+	text = {
+		trigger = {
+			RE1 = {
+				NOT = {
+					has_idea = RED_military_government_idea_1 
+					has_idea = RED_military_government_idea_2 
+					has_idea = RED_military_government_idea_3 
+					has_idea = RED_military_government_idea_4 
+					has_idea = RED_democratic_resistancel_week_idea_ori
+				}
 			}
 			RE1 = {
 				exists = yes
@@ -167,6 +186,25 @@ defined_text = {
 					has_idea = RED_military_government_idea_2 
 					has_idea = RED_military_government_idea_3 
 					has_idea = RED_military_government_idea_4 
+				}
+				has_idea = RED_democratic_resistancel_week_idea_ori
+			}
+			RE2 = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+		}
+		localization_key = RED_military_government_1tt
+	}
+	text = {
+		trigger = {
+			RE2 = {
+				NOT = {
+					has_idea = RED_military_government_idea_1 
+					has_idea = RED_military_government_idea_2 
+					has_idea = RED_military_government_idea_3 
+					has_idea = RED_military_government_idea_4 
+					has_idea = RED_democratic_resistancel_week_idea_ori
 				}
 			}
 			RE2 = {
@@ -239,6 +277,25 @@ defined_text = {
 					has_idea = RED_military_government_idea_3 
 					has_idea = RED_military_government_idea_4 
 				}
+				has_idea = RED_democratic_resistancel_week_idea_ori
+			}
+			RE3 = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+		}
+		localization_key = RED_military_government_1tt
+	}
+	text = {
+		trigger = {
+			RE3 = {
+				NOT = {
+					has_idea = RED_military_government_idea_1 
+					has_idea = RED_military_government_idea_2 
+					has_idea = RED_military_government_idea_3 
+					has_idea = RED_military_government_idea_4 
+					has_idea = RED_democratic_resistancel_week_idea_ori
+				}
 			}
 			RE3 = {
 				exists = yes
@@ -293,6 +350,25 @@ defined_text = {
 					has_idea = RED_military_government_idea_2 
 					has_idea = RED_military_government_idea_3 
 					has_idea = RED_military_government_idea_4 
+				}
+				has_idea = RED_democratic_resistancel_week_idea_ori
+			}
+			RE4 = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+		}
+		localization_key = RED_military_government_1tt
+	}
+	text = {
+		trigger = {
+			RE4 = {
+				NOT = {
+					has_idea = RED_military_government_idea_1 
+					has_idea = RED_military_government_idea_2 
+					has_idea = RED_military_government_idea_3 
+					has_idea = RED_military_government_idea_4 
+					has_idea = RED_democratic_resistancel_week_idea_ori
 				}
 			}
 			RE4 = {

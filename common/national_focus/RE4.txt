@@ -32,6 +32,10 @@
 				RE4 = { has_war_with = FIN }
 			}
 			RE4 = { owns_state = 111 }
+			has_country_leader = {
+				character = RE4_marina
+				ruling_only = yes
+			}
 		}
 		x = 24
 		y = 0

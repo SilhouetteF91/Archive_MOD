@@ -537,6 +537,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_decision_cat_TRN_Mika_honor_long"
+		texturefile = "gfx/interface/decisions/decision_cat_TRN_Mika_honor_long.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_decision_category_Trinity_mika_halo"
 		texturefile = "gfx/interface/decisions/decision_category_Trinity_mika_halo.tga"
 		legacy_lazy_load = no
@@ -1883,5 +1888,27 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/ABY_focus_gui/button_123x34_gray.dds"
 		legacy_lazy_load = no
 		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = GFX_red_northern_sovereignty
+		textureFile1 = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_progressbar.dds"
+		textureFile2 = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_background.dds"
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+		size = { 
+			x = 200
+			y = 20
+		}
+	}
+	spriteType = {
+		name = "GFX_red_northern_sovereignty_war_1side_icon"
+		texturefile = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_1side_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_red_northern_sovereignty_war_2side_icon"
+		texturefile = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_2side_icon.dds"
+		legacy_lazy_load = no
 	}
 }

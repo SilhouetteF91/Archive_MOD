@@ -95,6 +95,9 @@
  redpuppet.18.t: "이반 쿠팔라 스캔들!"
  redpuppet.18.desc: "$RED_marina$ 보안위원장은 온천에서 시간을 보내던 순간, 누군가가 자신과 227호 특별반 인원이 함께 휴식하는 모습을 촬영하는 소리를 들었습니다! 이 사진이 보도되거나, 혹여나 체리노에게 들어가는 순간 $RED_marina$ 보안위원장은 $RED_marina$ 227호 특별반이 되어 버리고 말 것이 분명합니다.\n\n\"아, 안돼!!!\""
  redpuppet.18.a: "..."
+ redpuppet.19.t: "붉은겨울 동방 공세 성공!"
+ redpuppet.19.desc: "붉은겨울 방위위원회라고 불리는 227호 특별반 인원들이 보내진 공공연한 '유배지' 에서, 조금 전 핀란드를 상대로 승전했다는 놀라운 보고서가 보내졌습니다. 방위위원회는 본국의 방치라는 열악한 상황을 극복하고 조금 전, 핀란드의 항복을 받아낸 것으로 보입니다.\n\n방위위원회의 승전으로 핀란드의 북유럽 망명 기구가 해체되어 군정청의 현지 반란 문제는 해결되었다고 볼 수 있으나, 방위위원회는 기존이 227호 특별반 출신의 유배자들인 만큼 다른 문제로 발달할 가능성이 높습니다."
+ redpuppet.19.a: "놀라운 성과다."
  RE4_Northern_War: "겨울 전쟁"
  RE4_Northern_War_timeattack: "겨울 전쟁"
  RE4_Northern_War_timeattack_FIN: "겨울 전쟁"
@@ -120,7 +123,11 @@
  RE4_operation_ivan_kupala: "작전명, 이반 쿠팔라"
 
  RED_northern_sovereignty_war: "북방 주권 전쟁"
- RED_northern_sovereignty_war_desc: "§Y덴마크§!, §Y노르웨이§!, §Y스웨덴§!의 영토 위에 설립된 §Y군정청§!은 일반적으로 붉은겨울 연방학원의 일부로 여겨지나, §Y북방 주권 전쟁§!이 준비중인 현재 군정청을 §G포섭§! 하기 위한 시도가 체리노와 마리나에 의해 주도되고 있습니다. 영향력 경쟁에서 패배한다면 §Y군정청§!은 §Y북방 주권 전쟁§!에서 §R상대 편§!으로 참여할 것입니다.\n\n영향력의 경우 §Y북방 주권 전쟁§!에서 음수는 §Y체리노§!, 양수는 §Y마리나§!를 가리키며, 0의 경우 §Y마리나§!의 편으로 참여할 것입니다.\n\n§Y[RE1.GetNameWithFlag]§!: 0\n§Y[RE2.GetNameWithFlag]§!: 0\n§Y[RE3.GetNameWithFlag]§!: 0\n§Y[RE4.GetNameWithFlag]§!: 0"
+ RED_northern_sovereignty_war_desc: "§Y덴마크§!, §Y노르웨이§!, §Y스웨덴§!의 영토 위에 설립된 §Y군정청§!은 일반적으로 붉은겨울 연방학원의 일부로 여겨지나, §Y북방 주권 전쟁§!이 준비중인 현재 군정청을 §G포섭§! 하기 위한 시도가 체리노와 마리나에 의해 주도되고 있습니다. 영향력 경쟁에서 패배한다면 §Y군정청§!은 §Y북방 주권 전쟁§!에서 §R상대 편§!으로 참여할 것입니다.\n\n영향력의 경우 §Y북방 주권 전쟁§!에서 §Y군정청§!은 §g마리나§!의 편을 따르나, §S체리노§!의 영향력이 100에 도달할 경우 해당 §Y군정청§!은 §S체리노§!의 편으로 참여할 것입니다."
+
+ red_northern_sovereignty_re1_text: "§Y[RE1.GetNameWithFlag]§!:"
+ red_northern_sovereignty_re2_text: "§Y[RE2.GetNameWithFlag]§!:"
+ red_northern_sovereignty_re3_text: "§Y[RE3.GetNameWithFlag]§!:"
 
 ############## 타 군정청 공용
  REPP_socialist_culture_struggle: "사회주의 문화투쟁"

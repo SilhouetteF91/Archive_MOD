@@ -7,7 +7,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=fascism_ideology
+			ideology=pure_socialism #순정사회주의
 			traits={ warrior_code emperor_showa imperial_sanction }
 			expire="1989.1.1.1"
 			id=700
@@ -1805,7 +1805,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=fascism_ideology
+			ideology=pure_socialism #순정사회주의
 			traits={ JAP_kita_ikki_trait }
 			expire="1989.1.1.1"
 			id=-1

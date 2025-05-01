@@ -164,10 +164,7 @@ MIL_Stellaris = {
 		MIL = {
 			custom_trigger_tooltip = {
 				tooltip = MIL_Stellaris_tooltip
-				has_country_flag = {
-					flag = BA_Super_Event_Visible
-					value = 15
-				}
+				has_country_flag = MIL_fly_me_to_the_moon
 			}
 		}
 	}
@@ -194,6 +191,19 @@ MIL_SVO = {
 			days < 61
 		}
 		SPR_scw_in_progress = no
+	}
+}
+
+MIL_unexpected_variable = {
+	possible {
+        tag = MIL
+    }
+
+	happened = {
+		has_country_leader = {
+			character = MIL_Koyuki
+			ruling_only = yes
+		}
 	}
 }
 
