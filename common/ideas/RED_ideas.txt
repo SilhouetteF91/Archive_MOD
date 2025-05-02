@@ -115,9 +115,7 @@ ideas = {
 				equipment_capture_factor = 0.15
 			}
 			available = {
-				REC = {
-					exists = yes
-				}
+				country_exists = REC
 			}
 		}
 		RED_cherino_idea = { #렌카와 체리노

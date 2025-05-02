@@ -136,6 +136,8 @@
  red_northern_sovereignty_war_1side_icon_tt: "현재 체리노는 아래와 같은 영향력을 발휘하고 있습니다:\n §Y[RE1.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re1_var|S.0]\n §Y[RE2.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re2_var|S.0]\n §Y[RE3.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re3_var|S.0]\n\n현재 체리노는 아래의 군정청을 통제하고 있습니다:[RED_northern_sovereignty_war_use_RE1_side1][RED_northern_sovereignty_war_use_RE2_side1][RED_northern_sovereignty_war_use_RE3_side1]"
  red_northern_sovereignty_war_2side_icon_tt: "현재 마리나는 아래의 군정청을 통제하고 있습니다:[RED_northern_sovereignty_war_use_RE1][RED_northern_sovereignty_war_use_RE2][RED_northern_sovereignty_war_use_RE3]"
 
+ RED_northern_sovereignty_war_1side_team_flag: "완전히 §S체리노§!에게 포섭됨"
+
  red_northern_sovereignty_re1_text: "§Y[RE1.GetNameWithFlag]§!:"
  red_northern_sovereignty_re2_text: "§Y[RE2.GetNameWithFlag]§!:"
  red_northern_sovereignty_re3_text: "§Y[RE3.GetNameWithFlag]§!:"
@@ -155,6 +157,9 @@
  northern_sovereignty_war_RED_military_government_RE2: "[RE2.GetName]: 포섭 개시"
  northern_sovereignty_war_RED_military_government_RE3: "[RE3.GetName]: 포섭 개시"
  northern_sovereignty_war_RED_military_government_flag: "다른 군정청을 포섭중임"
+ northern_sovereignty_war_RED_military_government_target_0: "[northern_sovereignty_war_RED_military_government_target.GetName] 완전 장악"
+ northern_sovereignty_war_RED_military_government_target_1: "[northern_sovereignty_war_RED_military_government_target.GetName] 장교 특혜"
+ northern_sovereignty_war_RED_military_government_target_2: "[northern_sovereignty_war_RED_military_government_target.GetName] 내 충성파 장교들"
 
 ############## 타 군정청 공용
  REPP_socialist_culture_struggle: "사회주의 문화투쟁"
