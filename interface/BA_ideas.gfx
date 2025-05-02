@@ -996,6 +996,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/ABY/CF.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_BA_utsumi_aoba"
+		textureFile = "gfx/interface/ideas/Aoba.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_BA_tachibana_nozomi"
 		textureFile = "gfx/interface/ideas/Nozomi.tga"
 	}
