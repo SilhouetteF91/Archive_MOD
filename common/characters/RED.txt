@@ -358,6 +358,12 @@ characters = {
 			slot = political_advisor
 			idea_token = RED_marina_idea
 			traits = { office_commander }
+			visible = {
+				NOT = { has_country_flag = redpuppet_go_to_marina_flag }
+			}
+			available = {
+				NOT = { has_country_flag = redpuppet_go_to_marina_flag }
+			}
 		}
 
 		corps_commander = {
@@ -368,6 +374,9 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 4
 			legacy_id = 0
+			visible = {
+				NOT = { has_country_flag = redpuppet_go_to_marina_flag }
+			}
 		}
 
 		advisor = {
@@ -380,6 +389,12 @@ characters = {
 			}
 			traits = {
 				army_chief_offensive_2
+			}
+			visible = {
+				NOT = { has_country_flag = redpuppet_go_to_marina_flag }
+			}
+			available = {
+				NOT = { has_country_flag = redpuppet_go_to_marina_flag }
 			}
 		}
 	}

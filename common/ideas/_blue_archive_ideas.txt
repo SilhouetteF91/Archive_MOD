@@ -1002,6 +1002,11 @@ ideas = {
 					production_factory_efficiency_gain_factor = 0.05
 				}
 			}
+			BA_utsumi_aoba = { #우츠미 아오바
+				traits = {
+					BA_highlander_aoba
+				}
+			}
 			BA_tachibana_nozomi = { #타지바나 노조미
 				traits = {
 					BA_highlander_nozomi
