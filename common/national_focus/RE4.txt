@@ -72,6 +72,9 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			unlock_decision_category_tooltip = RED_northern_sovereignty_war
+			RED = {
+				country_event = { id = redpuppet.21 hours = 8 }
+			}
 		}
 	}
 	focus = {

@@ -477,3 +477,19 @@ country_event = { # 어쩌면?
 		add_war_support = -0.05
 	}
 }
+country_event = { # 보안위원회 이관
+	id = redpuppet.21
+	title = redpuppet.21.t
+	desc = redpuppet.21.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.21.a
+		add_war_support = -0.05
+		set_country_flag = redpuppet_go_to_marina_flag
+		custom_effect_tooltip = redpuppet_go_to_marina_tt
+		unlock_decision_category_tooltip = RED_northern_sovereignty_war
+	}
+}
