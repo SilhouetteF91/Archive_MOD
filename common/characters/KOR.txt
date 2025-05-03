@@ -23,6 +23,7 @@ characters = {
 		}
         country_leader = {
             ideology = stalinism
+			traits = { GER_staunch_stalinist }
         }
 	}
 
@@ -42,7 +43,7 @@ characters = {
 		name = KOR_kim_ku
 		portraits = {
 			civilian = {
-				large = "GFX_Portrait_Asia_Generic_land_1"
+				large = "gfx/leaders/KOR/KOR_kim_koo.png"
 			}
 		}
         country_leader = {
