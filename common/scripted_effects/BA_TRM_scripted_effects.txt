@@ -2216,24 +2216,24 @@ TRM_remove_inner_faction = {
 
 TRN_decrease_Honor_effect = {
 	add_to_variable = { 
-		TRN_Mika_Honor_var = -1 
+		TRN_Mika_Honor_var = -10
 		tooltip = TRN_mika_Honor_change_tt
 	}
 	clamp_variable = {
 		var = TRN_Mika_Honor_var
 		min = 0
-		max = 9
+		max = 100
 	}
 }
 
 TRN_increase_Honor_effect = {
 	add_to_variable = { 
-		TRN_Mika_Honor_var = 1 
+		TRN_Mika_Honor_var = 10
 		tooltip = TRN_mika_Honor_change_tt
 	}
 	clamp_variable = {
 		var = TRN_Mika_Honor_var
 		min = 0
-		max = 9
+		max = 100
 	}
 }
