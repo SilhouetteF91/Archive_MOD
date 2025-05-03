@@ -1181,6 +1181,187 @@ country_event = { #아오바
 		custom_effect_tooltip = Highlander.6_tt
 	}
 }
+country_event = { #궤간
+	id = Highlander.15
+	title = Highlander.15.t
+	desc = Highlander.15.d
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_train
+	option = { #표준궤
+		name = Highlander.15.a
+		set_country_flag = BA_railroad_standard_gauge
+		every_neighbor_country = {
+			limit = {
+				exists = yes
+				is_subject = no
+				NOT = {
+					has_war_with = PREV
+				}
+				Kivotos_tag = no
+				has_country_flag = BA_railroad_standard_gauge
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = BA_interchangeable_gauge
+			}
+		}
+		every_other_country = {
+			limit = {
+				exists = yes
+				capital_scope = {is_on_continent = europe}
+				Kivotos_tag = yes
+				has_country_flag = BA_railroad_standard_gauge
+				is_subject = no
+				NOT = {
+					has_war_with = PREV
+				}
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = BA_interchangeable_gauge
+			}
+		}
+	}
+	option = { #협궤
+		name = Highlander.15.b
+		trigger = {
+			has_idea = BA_highlander_academy_generic
+		}
+		set_country_flag = BA_railroad_narrow_gauge
+		every_neighbor_country = {
+			limit = {
+				exists = yes
+				is_subject = no
+				NOT = {
+					has_war_with = PREV
+				}
+				Kivotos_tag = no
+				has_country_flag = BA_railroad_narrow_gauge
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = BA_interchangeable_gauge
+			}
+		}
+		every_other_country = {
+			limit = {
+				exists = yes
+				capital_scope = {is_on_continent = europe}
+				Kivotos_tag = yes
+				has_country_flag = BA_railroad_narrow_gauge
+				is_subject = no
+				NOT = {
+					has_war_with = PREV
+				}
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = BA_interchangeable_gauge
+			}
+		}
+		custom_effect_tooltip = Highlander.15.b_tt
+		custom_effect_tooltip = BA_highlander_invest_big_tt
+		add_to_variable = {
+			BA_highlander_invest = 4
+		}
+	}
+	option = { #이베리아 궤간을 쓰자
+		name = Highlander.15.c
+		set_country_flag = BA_railroad_iberian_gauge
+		trigger = {
+			any_neighbor_country = {
+				has_country_flag = BA_railroad_iberian_gauge
+			}
+		}
+		every_other_country = {
+			limit = {
+				exists = yes
+				OR = {
+					original_tag = SPR
+					original_tag = POR
+					AND = {
+						is_neighbor_of = PREV
+						is_subject = no
+						NOT = {
+							has_war_with = PREV
+						}
+						Kivotos_tag = no
+						has_country_flag = BA_railroad_iberian_gauge
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = BA_interchangeable_gauge
+			}
+		}
+		every_other_country = {
+			limit = {
+				exists = yes
+				capital_scope = {is_on_continent = europe}
+				Kivotos_tag = yes
+				has_country_flag = BA_railroad_iberian_gauge
+				is_subject = no
+				NOT = {
+					has_war_with = PREV
+				}
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = BA_interchangeable_gauge
+			}
+		}
+	}
+	option = { #광궤를 쓰자
+		name = Highlander.15.e
+		set_country_flag = BA_railroad_broad_gauge
+		trigger = {
+			any_neighbor_country = {
+				has_country_flag = BA_railroad_broad_gauge
+			}
+		}
+		every_other_country = {
+			limit = {
+				exists = yes
+				OR = {
+					original_tag = SOV
+					original_tag = LIT
+					original_tag = LAT
+					original_tag = EST
+					AND = {
+						is_neighbor_of = PREV
+						is_subject = no
+						NOT = {
+							has_war_with = PREV
+						}
+						Kivotos_tag = no
+						has_country_flag = BA_railroad_broad_gauge
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = BA_interchangeable_gauge
+			}
+		}
+		every_other_country = {
+			limit = {
+				exists = yes
+				capital_scope = {is_on_continent = europe}
+				Kivotos_tag = yes
+				has_country_flag = BA_railroad_broad_gauge
+				is_subject = no
+				NOT = {
+					has_war_with = PREV
+				}
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = BA_interchangeable_gauge
+			}
+		}
+	}
+}
 
 add_namespace = BA_kiovotos_spain_event #간섭위원회
 

@@ -1998,7 +1998,7 @@ focus_tree = {
 			}
 			add_ai_strategy = {
 				type = send_volunteers_desire
-				id = SPR
+				id = SPA
 				value = 100
 			}
 		}
@@ -2064,6 +2064,11 @@ focus_tree = {
 			add_popularity = {
 				ideology = communism
 				popularity = 0.01
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPD
+				value = 100
 			}
 		}
 	}

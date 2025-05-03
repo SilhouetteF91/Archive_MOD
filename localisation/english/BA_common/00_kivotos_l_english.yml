@@ -92,6 +92,13 @@
  Highlander.13.d: "하이랜더 철도에의 투자 비용이 감소했습니다."
  Highlander.13.a: "좋군."
  Highlander.13_tt: "§Y대규모 투자§!에 드는 §Y소비재 공장 변동치§! 감소"
+ Highlander.15.t: "궤간 문제"
+ Highlander.15.d: "철도 문제가 해소됨에 따라, 우리는 하나의 주요한 궤간을 표준으로 삼아 전역의 철도를 개편할 것입니다. 그러기 위해 우리는 여러 갈래의 궤간 중 하나를 표준으로 삼을 수 있습니다."
+ Highlander.15.a: "표준궤로 통일하자."
+ Highlander.15.b: "표준궤에 협궤를 섞어 쓰자."
+ Highlander.15.c: "이베리아 궤간을 쓰자."
+ Highlander.15.e: "광궤를 쓰자."
+ Highlander.15.b_tt: "\n§g협궤는 하이랜더 철도의 주류 규격입니다:§!\n"
  
  BA_highlander_aoba: "화물운송관리부"
  BA_highlander_nozomi: "중앙관제센터 간부"
