@@ -1,13 +1,13 @@
-add_namespace = ENG_british_warning_event
+add_namespace = ENG_ba
 country_event = {
-	id = ENG_british_warning_event.1	# 비상상태 선언
-	title = ENG_british_warning_event.1.t
-	desc = ENG_british_warning_event.1.desc
+	id = ENG_ba.1	# 비상상태 선언
+	title = ENG_ba.1.t
+	desc = ENG_ba.1.desc
 	picture = GFX_report_event_ast_navy
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.1.a
+		name = ENG_ba.1.a
 		add_timed_idea = {
 			idea = ENG_defence
 			days = 150
@@ -17,53 +17,53 @@ country_event = {
 }
 
 country_event = {
-	id = ENG_british_warning_event.2	# 해결책 파악
-	title = ENG_british_warning_event.2.t
-	desc = ENG_british_warning_event.2.desc
+	id = ENG_ba.2	# 해결책 파악
+	title = ENG_ba.2.t
+	desc = ENG_ba.2.desc
 	picture = GFX_report_event_ast_navy
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.2.a
+		name = ENG_ba.2.a
 	}
 }
 
 country_event = {
-	id = ENG_british_warning_event.3	# 자치령에게 도움 요청
-	title = ENG_british_warning_event.3.t
-	desc = ENG_british_warning_event.3.desc
+	id = ENG_ba.3	# 자치령에게 도움 요청
+	title = ENG_ba.3.t
+	desc = ENG_ba.3.desc
 	picture = GFX_report_event_ast_navy
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.3.a
+		name = ENG_ba.3.a
 		add_political_power = 300
 		add_manpower = 10000
 	}
 }
 
 country_event = {
-	id = ENG_british_warning_event.4	# 약점 확인
-	title = ENG_british_warning_event.4.t
-	desc = ENG_british_warning_event.4.desc
+	id = ENG_ba.4	# 약점 확인
+	title = ENG_ba.4.t
+	desc = ENG_ba.4.desc
 	picture = GFX_report_event_ast_navy
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.4.a
+		name = ENG_ba.4.a
 		add_ideas = ENG_identify_weaknesses
 	}
 }
 
 country_event = {
-	id = ENG_british_warning_event.5	# 게마트리아 문제
-	title = ENG_british_warning_event.5.t
-	desc = ENG_british_warning_event.5.desc
+	id = ENG_ba.5	# 게마트리아 문제
+	title = ENG_ba.5.t
+	desc = ENG_ba.5.desc
 	picture = GFX_report_event_ast_navy
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.5.a
+		name = ENG_ba.5.a
 		create_wargoal = {
 			target = GEI
 			type = annex_everything
@@ -72,14 +72,14 @@ country_event = {
 }
 
 country_event = {
-	id = ENG_british_warning_event.6	# 게마트리아의 퇴각
-	title = ENG_british_warning_event.6.t
-	desc = ENG_british_warning_event.6.desc
+	id = ENG_ba.6	# 게마트리아의 퇴각
+	title = ENG_ba.6.t
+	desc = ENG_ba.6.desc
 	picture = GFX_report_event_ast_navy
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.6.a
+		name = ENG_ba.6.a
 		ENG = {
 			transfer_state = 120
 			add_political_power = 120
@@ -88,15 +88,15 @@ country_event = {
 }
 
 country_event = {
-	id = ENG_british_warning_event.7	# 해외 식민지 문제 - 아프리카 분리 독립
-	title = ENG_british_warning_event.7.t
-	desc = ENG_british_warning_event.7.desc
+	id = ENG_ba.7	# 해외 식민지 문제 - 아프리카 분리 독립
+	title = ENG_ba.7.t
+	desc = ENG_ba.7.desc
 	picture = GFX_report_event_ast_navy
 	fire_only_once = yes
 	is_triggered_only = yes
 	hidden = no
 	option = {
-		name = ENG_british_warning_event.7.a
+		name = ENG_ba.7.a
 		complete_national_focus = IMP_collapse_of_imperial_hegemony
 		release = EGY
 		hidden_effect = {
@@ -113,7 +113,7 @@ country_event = {
 		remove_resource_rights = 291
 		remove_resource_rights = 676
 		country_event = {
-			id = ENG_british_warning_event.23
+			id = ENG_ba.23
 			days = 6
 		}
 	}
@@ -121,14 +121,14 @@ country_event = {
 
 country_event = {
 	# 아프리카 분리독립 - 강탈 당한 해외 식민지
-	id = ENG_british_warning_event.23
-	title = ENG_british_warning_event.23.t
-	desc = ENG_british_warning_event.23.d
+	id = ENG_ba.23
+	title = ENG_ba.23.t
+	desc = ENG_ba.23.d
 	hidden = no
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.23.a
+		name = ENG_ba.23.a
 		EGY = {
 			country_event = {
 				id = EGY_event.2
@@ -136,7 +136,7 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = {
-				id = ENG_british_warning_event.24
+				id = ENG_ba.24
 				days = 3
 			}
 		}
@@ -145,14 +145,14 @@ country_event = {
 
 country_event = {
 	# 아프리카 분리독립 - 동아프리카 식민지 붕괴
-	id = ENG_british_warning_event.24
-	title = ENG_british_warning_event.24.t
-	desc = ENG_british_warning_event.24.d
+	id = ENG_ba.24
+	title = ENG_ba.24.t
+	desc = ENG_ba.24.d
 	hidden = no
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.24.a
+		name = ENG_ba.24.a
 		add_stability = -0.03
 		random_owned_state = {
 			limit = { is_core_of = ROOT }
@@ -204,11 +204,11 @@ country_event = {
 					ideology = neutrality
 					popularity = 1.00
 				}
-				country_event = { id = ENG_british_warning_event.27 days = 15 }
+				country_event = { id = ENG_ba.27 days = 15 }
 			}
 		}
 		country_event = {
-			id = ENG_british_warning_event.25
+			id = ENG_ba.25
 			days = 3
 		}
 	}
@@ -216,14 +216,14 @@ country_event = {
 
 country_event = {
 	# 아프리카 분리독립 - 동아프리카 식민지 붕괴
-	id = ENG_british_warning_event.27
-	title = ENG_british_warning_event.27.t
-	desc = ENG_british_warning_event.27.d
+	id = ENG_ba.27
+	title = ENG_ba.27.t
+	desc = ENG_ba.27.d
 	hidden = no
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.27.a
+		name = ENG_ba.27.a
 		release = UGA
 		release = KEN
 		release = TZN
@@ -264,14 +264,14 @@ country_event = {
 
 country_event = {
 	# 아프리카 분리독립 - 서아프리카
-	id = ENG_british_warning_event.25
-	title = ENG_british_warning_event.25.t
-	desc = ENG_british_warning_event.25.d
+	id = ENG_ba.25
+	title = ENG_ba.25.t
+	desc = ENG_ba.25.d
 	hidden = no
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.25.a
+		name = ENG_ba.25.a
 		CAR = {
 			set_cosmetic_tag = CAR_ENG_free
 			transfer_state = 660
@@ -315,14 +315,14 @@ country_event = {
 }
 
 country_event = {
-	id = ENG_british_warning_event.8	#번국 독립
-	title = ENG_british_warning_event.8.t
-	desc = ENG_british_warning_event.8.desc
+	id = ENG_ba.8	#번국 독립
+	title = ENG_ba.8.t
+	desc = ENG_ba.8.desc
 	picture = GFX_report_event_ast_navy
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.8.a
+		name = ENG_ba.8.a
 		hidden_effect = { 
 			BRM = {
 				transfer_state = 288
@@ -477,14 +477,14 @@ country_event = {
 }
 
 country_event = {
-	id = ENG_british_warning_event.9	# 인도 분단
-	title = ENG_british_warning_event.9.t
-	desc = ENG_british_warning_event.9.desc
+	id = ENG_ba.9	# 인도 분단
+	title = ENG_ba.9.t
+	desc = ENG_ba.9.desc
 	picture = GFX_report_event_ast_navy
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.9.a
+		name = ENG_ba.9.a
 		PAK = {
 			transfer_state = 440
 			transfer_state = 442
@@ -492,7 +492,7 @@ country_event = {
 		hidden_effect = {
 			RAJ = {
 				country_event = {
-					id = ENG_british_warning_event.10
+					id = ENG_ba.10
 					days = 3
 				}
 			}
@@ -505,9 +505,9 @@ country_event = {
 }
 
 country_event = {
-	id = ENG_british_warning_event.10	#인도한테도 공지해야?
-	title = ENG_british_warning_event.10.t
-	desc = ENG_british_warning_event.10.d
+	id = ENG_ba.10	#인도한테도 공지해야?
+	title = ENG_ba.10.t
+	desc = ENG_ba.10.d
 	picture = GFX_report_event_ast_navy
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -532,7 +532,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ENG_british_warning_event.10.a
+		name = ENG_ba.10.a
 		ai_chance = {
 			factor = 100
 		}
@@ -545,7 +545,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ENG_british_warning_event.10.b
+		name = ENG_ba.10.b
 		declare_war_on = {
 			target = HND
 			type = annex_everything
@@ -559,7 +559,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ENG_british_warning_event.10.c
+		name = ENG_ba.10.c
 		declare_war_on = {
 			target = HND
 			type = annex_everything
@@ -578,14 +578,14 @@ country_event = {
 }
 
 country_event = {
-	id = ENG_british_warning_event.11	#인도 혁명군
-	title = ENG_british_warning_event.11.t
-	desc = ENG_british_warning_event.11.d
+	id = ENG_ba.11	#인도 혁명군
+	title = ENG_ba.11.t
+	desc = ENG_ba.11.d
 	picture = GFX_report_event_ast_navy
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.11.a
+		name = ENG_ba.11.a
 		hidden_effect = {
 			load_oob = HND
 			RAJ = {
@@ -598,7 +598,7 @@ country_event = {
 				add_core_of = HND
 			}
 			RAJ = {
-				country_event = ENG_british_warning_event.13
+				country_event = ENG_ba.13
 			}
 		}
 		add_ideas = HND_revolution
@@ -606,68 +606,115 @@ country_event = {
 }
 
 country_event = {
-	id = ENG_british_warning_event.13	#안 씀
-	title = ENG_british_warning_event.13.t
-	desc = ENG_british_warning_event.13.d
+	id = ENG_ba.13	#안 씀
+	title = ENG_ba.13.t
+	desc = ENG_ba.13.d
 	picture = GFX_report_event_ast_navy
 	hidden = no
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.13.a
+		name = ENG_ba.13.a
 	}
 }
 
 country_event = {
-	id = ENG_british_warning_event.14	#안 씀
-	title = ENG_british_warning_event.14.t
-	desc = ENG_british_warning_event.14.d
+	id = ENG_ba.14	#안 씀
+	title = ENG_ba.14.t
+	desc = ENG_ba.14.d
 	picture = GFX_report_event_ast_navy
 	hidden = yes
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.14.a
+		name = ENG_ba.14.a
 	}
 }
 
 country_event = {
 	#안 씀
-	id = ENG_british_warning_event.21
-	title = ENG_british_warning_event.21.t
-	desc = ENG_british_warning_event.21.d
+	id = ENG_ba.21
+	title = ENG_ba.21.t
+	desc = ENG_ba.21.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.21.a
+		name = ENG_ba.21.a
 	}
 }
 
 country_event = {
 	#안 씀
-	id = ENG_british_warning_event.22
-	title = ENG_british_warning_event.22.t
-	desc = ENG_british_warning_event.22.d
+	id = ENG_ba.22
+	title = ENG_ba.22.t
+	desc = ENG_ba.22.d
 	hidden = no
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.22.a
+		name = ENG_ba.22.a
 	}
 }
 
 country_event = {
 	#리버풀 사수
-	id = ENG_british_warning_event.26
-	title = ENG_british_warning_event.26.t
-	desc = ENG_british_warning_event.26.d
+	id = ENG_ba.26
+	title = ENG_ba.26.t
+	desc = ENG_ba.26.d
 	hidden = no
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = ENG_british_warning_event.26.a
+		name = ENG_ba.26.a
 		add_stability = 0.05
 		add_war_support = 0.1
 		add_ideas = ENG_save_the_liverpool
+	}
+}
+
+country_event = {
+	id = ENG_ba.100
+	title = ENG_ba.100.t
+	desc = ENG_ba.100.d
+	picture = GFX_report_event_soviet_soldiers_tank
+	hidden = no
+	is_triggered_only = yes
+	fire_only_once = yes
+	timeout_days = 14
+	
+	option = {
+		name = ENG_ba.100.a
+		add_war_support = 0.05
+		add_stability = 0.05
+		hidden_effect = {
+			load_focus_tree = ENG_independent
+			complete_national_focus = ENG_Victory_Mainland
+		}
+	}
+}
+
+country_event = {
+	id = ENG_ba.101
+
+	title = ENG_ba.101.t
+	desc = ENG_ba.101.d
+	picture = GFX_report_event_soviet_soldiers_tank
+	hidden = no
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = ENG_ba.101.a
+		set_stability = 0.7
+		set_war_support = 0.7
+		add_ideas = ENG_postwar_devastation
+		add_ideas = ENG_great_depression_01
+		add_ideas = ENG_dissolving_commonwealth
+		add_ideas = ENG_disassembled_parliment
+		add_ideas = ENG_homless_n_health_1
+		add_ideas = ENG_low_admin_Strength
 	}
 }
