@@ -3024,6 +3024,17 @@ form_european_union_category = {
 				state = 63
 				state = 5
 				state = 763
+				#/BA_MOD_FIX
+				state = 1018 # 아베네 쉬르 엘프
+				state = 1019 # 밀레니엄 캠퍼스 서부
+				state = 1020 # 밀레니엄 캠퍼스 동부
+				state = 1022 # 베스트 라인란트
+				state = 1023 # 알자스
+				state = 1024 # 오이펜말메디
+				state = 1025 # 쥐트 라인란트
+				state = 1027 # 오트잘프
+				state = 1028 # 니스 
+				#/BA_MOD_FIX
 			}
 		}
 
@@ -3131,6 +3142,9 @@ form_european_union_category = {
 				controls_state = 34
 				controls_state = 977
 				controls_state = 980
+				#/BA_MOD_FIX
+				controls_state = 1024
+				#/BA_MOD_FIX
 			}
 
 			# France
@@ -3161,6 +3175,14 @@ form_european_union_category = {
 				controls_state = 785
 				controls_state = 31
 				controls_state = 806
+				#/BA_MOD_FIX
+				controls_state = 1027 # 오트잘프
+				controls_state = 1028 # 니스 
+				controls_state = 1019 # 밀레니엄 캠퍼스 서부
+				controls_state = 1020 # 밀레니엄 캠퍼스 동부
+				controls_state = 1018 # 아베네 쉬르 엘프
+				controls_state = 1023 # 알자스
+				#/BA_MOD_FIX
 			}
 
 			# Italy
@@ -3211,6 +3233,10 @@ form_european_union_category = {
 				controls_state = 63
 				controls_state = 5
 				controls_state = 763
+				#/BA_MOD_FIX
+				controls_state = 1022 # 베스트 라인란트
+				controls_state = 1025 # 쥐트 라인란트
+				#/BA_MOD_FIX
 			}
 		}
 
@@ -3243,6 +3269,9 @@ form_european_union_category = {
 				34 = { add_core_of = ROOT } # Wallonie
 				977 = { add_core_of = ROOT } # Antwerp
 				980 = { add_core_of = ROOT } # Ardennes
+				#/BA_MOD_FIX
+				1024 = { add_core_of = ROOT } # 오이펜-말메디
+				#/BA_MOD_FIX
 			}
 
 			# France
@@ -3273,6 +3302,14 @@ form_european_union_category = {
 				785 = { add_core_of = ROOT } # Picardy
 				31 = { add_core_of = ROOT } # Midi Pyrinees
 				806 = { add_core_of = ROOT } # Pyrinees-Atlantique
+				#/BA_MOD_FIX
+				1027 = { add_core_of = ROOT } # 오트잘프
+				1028 = { add_core_of = ROOT } # 니스 
+				1019 = { add_core_of = ROOT } # 밀레니엄 캠퍼스 서부
+				1020 = { add_core_of = ROOT } # 밀레니엄 캠퍼스 동부
+				1018 = { add_core_of = ROOT } # 아베네 쉬르 엘프
+				1023 = { add_core_of = ROOT } # 알자스
+				#/BA_MOD_FIX
 			}
 
 			# Italy
@@ -3324,6 +3361,10 @@ form_european_union_category = {
 				63 = { add_core_of = ROOT } # Hinterpommern
 				5 = { add_core_of = ROOT } # Ermland-Masuren
 				763 = { add_core_of = ROOT } # Königsberg
+				#/BA_MOD_FIX
+				1022 = { add_core_of = ROOT } # 베스트 라인란트
+				1025 = { add_core_of = ROOT } # 쥐트 라인란트
+				#/BA_MOD_FIX
 			}
 
 			116 = { add_core_of = ROOT } # Malta
