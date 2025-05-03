@@ -372,7 +372,7 @@ ideologies = {
 
 			pure_socialism = {
 				can_be_randomly_selected = no
-				color = { 118 29 144 } #근왕사회주의와 동일한 색상 사용
+				color = { 119 15 0 }
 			}
 
 		#BA_MOD_FIX/
