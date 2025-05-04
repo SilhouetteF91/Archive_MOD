@@ -7663,10 +7663,9 @@ focus_tree = {
 			GEH_dlfhgk = {
 				add_country_leader_role = {
 					promote_leader = yes
-					desc = "GEH_iroha_natsume_prefect_team_leader_desc"
 					country_leader = {
 						ideology = technocracy
-						
+						desc = "GEH_iroha_natsume_prefect_team_leader_desc"
 						expire = "1980.1.1"
 						traits = {
 							
@@ -7721,10 +7720,9 @@ focus_tree = {
 			HEU_zkdyzh = {
 				add_country_leader_role = {
 					promote_leader = yes
-					desc = "GEH_kayoko_onikata_prefect_team_leader_desc"
 					country_leader = {
 						ideology = technocracy
-						
+						desc = "GEH_kayoko_onikata_prefect_team_leader_desc"
 						expire = "1980.1.1"
 						traits = {
 							
