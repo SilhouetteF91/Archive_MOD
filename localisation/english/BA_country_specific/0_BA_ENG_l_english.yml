@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
  #tt
  ENG_stop_exile_1_tt: "§R이 결정은 망명에 큰 차질이 발생할 것입니다.§!"
  ENG_tooltip_bonto_banger: "방어를 위한 §Y요새§!가 추가됩니다"
@@ -44,8 +44,8 @@ l_english:
  ENG_Victory_Mainland_desc: "우리는 본토에서의 싸움에서 승리했습니다."
  ENG_Government_Return: "망명정부의 귀환"
  ENG_Government_Return_desc: "망명정부의 귀환"
- ENG_Resume_Parliment: "영국 의회 활동 재개"
- ENG_Resume_Parliment_desc: "1935년 11월 14일. 원래 선거 예정일이였지만 카이저 코어퍼레이션의 침공으로 인해 의회가 해산된 채로 지금까지 있었습니다. 우선 사태의 혼란을 막기 위해 정치인들을 재소집해 의회를 해산되기 전 상태로 만들어야 합니다."
+ ENG_Resume_Parliment: "내각 소집"
+ ENG_Resume_Parliment_desc: "1935년 11월 14일. 원래 선거 예정일이였지만 카이저 코어퍼레이션의 침공으로 인해 의회가 해산된 채로 지금까지 있었습니다. 우선 사태의 혼란을 막기 위해 다음 선거까지의 공백 기간동안 나라를 이끌 내각을 구성해야 합니다."
  ENG_Reconstruction_committee: "연합왕국 재건 회의"
 
  ENG_rations: "배급"
@@ -111,6 +111,8 @@ l_english:
  ENG_edward_VIII: "에드워드 8세"
  ENG_george_VI: "조지 6세"
  ENG_elizabeth_II: "엘리자베스 2세"
+ ENG_kingsley_wood: "킹슬리 우드"
+ ENG_Health_minister: "보건부 장관"
 
  #트레잇
 
@@ -127,8 +129,10 @@ l_english:
  CAN_british_disease_desc: "모두 솔직해지자고요, '위대한 망명'이라고 아무리 포장해 봐도 옛 흑인 노예들처럼 국민을 포장해서 오는 과정 중에 질병이 없을 리가 없잖아요?"
  ENG_low_admin_Strength: "행정력 약화"
  ENG_low_admin_Strength_desc: "행정력의 약화로 인해 범죄가 난무하고, 식민지의 주둔군은 매복하는 게릴라군에게 당하고 있습니다."
- ENG_homless_n_health_1: "이재민 증가"
- ENG_homless_n_health_1_desc: "전쟁이 끝나고 포격으로 인해 집을 잃은 사람들은 임시 군용 텐트에 모여 살기 시작했습니다. 이재민들의 건강과 위생상태는 끔직합니다."
+ ENG_homless_n_health_1: "이재민 문제 - 심각"
+ ENG_homless_n_health_1_desc: "전쟁이 끝나고 포격으로 인해 집을 잃은 사람들은 다리 밑, 무너진 건물, 폐가 등 비바람을 피할 수 있는 곳에 모여 살기 시작했습니다. 이재민들의 건강과 위생상태는 끔직합니다."
+ ENG_homless_n_health_2: "이재민 문제 - 주의"
+ ENG_homless_n_health_2_desc: "군용 텐트와 군병원 덕분에 이재민들은 살 수 있는 공간이 생겼습니다. 하지만 제대로 된 상하수도와 쓰레기 수거시설이 부족해 위생상태가 처참합니다."
  ENG_disassembled_parliment: "해체된 의회"
  ENG_disassembled_parliment_desc: "1935년 10월, 영국 총리는 다가오는 선거를 위해 의회를 해산시켰습니다. 하지만"
  ENG_dissolving_commonwealth: "영연방의 일몰"
@@ -261,6 +265,10 @@ l_english:
  ENG_ba.101.t: "전후 황폐화"
  ENG_ba.101.d: "영국은 사수하는데 성공했지만 본토에서의 치열한 전투가 아름답던 영국을 심하게 망가뜨려놓았습니다. 재건 여부에 따라 영국의 생존 여부가 달립니다."
  ENG_ba.101.a: "'쓰레기통에 버려진 장미.'"
+
+ ENG_ba.102.t: "볼드윈의 고민"
+ ENG_ba.102.d: "영국 정부는 본토에 귀환했지만 더 커다란 문제가 있었습니다. 1935년 10월 주기적인 선거를 위해 해산된 의회가 선거가 카이저 코어퍼레이션과의 전쟁으로 인해 연기되는 바람에- 계속"
+ ENG_ba.102.a: "'우선 내각이라도 모아야지'"
 
  #######################
  #######Congo###########
