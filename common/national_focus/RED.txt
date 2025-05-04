@@ -4248,15 +4248,73 @@ focus_tree = {
 		}
 	}
 	focus = {
+		#점령지 행정
+		id = RED_administration_of_occupied_territories
+		icon = GFX_focus_FIN_strengthen_military_administration
+		cost = 4
+		x = 35
+		y = 5
+		available = {
+			always = no
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
+		completion_reward = {
+			custom_effect_tooltip = RED_enlarge_secret_police_tt
+			if = {
+				limit = {
+					RE1 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE1 = {
+					RED_instability_system_down_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					RE2 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE2 = {
+					RED_instability_system_down_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					RE3 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE3 = {
+					RED_instability_system_down_effect = yes
+				}
+			}
+			add_political_power = 30
+			add_stability = 0.05
+		}
+	}
+	focus = {
 		#공안부
 		id = RED_enlarge_secret_police
 		icon = GFX_focus_BEL_national_redoubt_at_antwerp
 		cost = 6 
-		relative_position_id = RED_restore_the_security
+		relative_position_id = RED_administration_of_occupied_territories
 		x = -1
 		y = 1
 		prerequisite = {
-			focus = RED_restore_the_security
+			focus = RED_administration_of_occupied_territories
 		}
 		available = {
 			NOT = {
@@ -4313,7 +4371,7 @@ focus_tree = {
 		id = RED_locals_problem
 		icon = GFX_focus_generic_scandinavia_flags
 		cost = 4
-		relative_position_id = RED_restore_the_security
+		relative_position_id = RED_administration_of_occupied_territories
 		x = 1
 		y = 1
 		available = {
@@ -4322,7 +4380,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = RED_restore_the_security
+			focus = RED_administration_of_occupied_territories
 		}
 		ai_will_do = {
 			base = 100
@@ -5211,10 +5269,6 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_enticing_locals
 		}
-		prerequisite = {
-			focus = RED_merger_of_educational_institutions
-			focus = RED_large_administrative
-		}
 		search_filters = {
 			FOCUS_FILTER_MILITARY_GOVERNMENT
 		}
@@ -5423,14 +5477,14 @@ focus_tree = {
 		id = RED_advance_security
 		icon = GFX_goal_generic_defence
 		cost = 4
-		relative_position_id = RED_enemy_of_class
-		x = 1
-		y = 1
+		relative_position_id = RED_restore_the_security
+		x = 2
+		y = 4
 		mutually_exclusive = {
 			focus = RED_all_power_to_redwinter
 		}
 		prerequisite = {
-			focus = RED_enemy_of_class
+			focus = RED_restore_the_security
 		}
 		available = {
 			NOT = {
@@ -10888,7 +10942,7 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 		}
-		x = 37
+		x = 40
 		y = 0
 		relative_position_id = RED_our_leader_cherino
 		available = {
@@ -12556,7 +12610,9 @@ focus_tree = {
 		relative_position_id = RED_maintaining_the_fire
 		cost = 5
 		available = {
-			country_exists = REC
+			NOT = {
+				country_exists = REC
+			}
 		}
 		completion_reward = {
 			add_ai_strategy = {
@@ -12591,13 +12647,923 @@ focus_tree = {
 		}
 	}
 	focus = {
+		#혁명과도정부
+		id = RED_revolutionary_transitional_government
+		icon = GFX_focus_HUN_a_revolutionary_greater_hungary
+		prerequisite = {
+			focus = RED_anti_fascism_policy
+		}
+		cancelable = no
+		x = 0
+		y = 3
+		relative_position_id = RED_anti_fascism_policy
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#임시위원회
+		id = RED_procom_focus_0
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = {
+			focus = RED_revolutionary_transitional_government
+		}
+		x = -2
+		y = 1
+		relative_position_id = RED_revolutionary_transitional_government
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#민생 우선
+		id = RED_procom_focus_1
+		icon = GFX_focus_generic_bad_medical
+		prerequisite = {
+			focus = RED_procom_focus_0
+		}
+		x = -2
+		y = 1
+		relative_position_id = RED_procom_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#당의 자원 봉사
+		id = RED_procom_focus_2
+		icon = GFX_focus_AUS_womens_education_initiative
+		prerequisite = {
+			focus = RED_procom_focus_1
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_procom_focus_1
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#긴급 구호
+		id = RED_procom_focus_3
+		icon = GFX_focus_generic_welfare
+		prerequisite = {
+			focus = RED_procom_focus_1
+		}
+		x = 0
+		y = 2
+		relative_position_id = RED_procom_focus_1
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#이계인 사회통합 지원
+		id = RED_procom_focus_4
+		icon = GFX_goal_generic_national_unity
+		prerequisite = {
+			focus = RED_procom_focus_1
+			focus = RED_procom_focus_5
+			focus = RED_procom_focus_6
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_procom_focus_1
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#자생 경제
+		id = RED_procom_focus_5
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = {
+			focus = RED_procom_focus_0
+		}
+		mutually_exclusive = {
+			focus = RED_procom_focus_6
+		}
+		x = 0
+		y = 1
+		relative_position_id = RED_procom_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#재정 계획
+		id = RED_procom_focus_6
+		icon = GFX_focus_ITA_devaluate_the_lire
+		prerequisite = {
+			focus = RED_procom_focus_0
+		}
+		mutually_exclusive = {
+			focus = RED_procom_focus_5
+		}
+		x = 2
+		y = 1
+		relative_position_id = RED_procom_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#공공사업
+		id = RED_procom_focus_7
+		icon = GFX_focus_generic_improve_roads
+		prerequisite = {
+			focus = RED_procom_focus_6
+		}
+		x = 0
+		y = 2
+		relative_position_id = RED_procom_focus_6
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#사업가와의 협력
+		id = RED_procom_focus_8
+		icon = GFX_focus_generic_industrialists
+		prerequisite = {
+			focus = RED_procom_focus_5
+		}
+		x = 0
+		y = 2
+		relative_position_id = RED_procom_focus_5
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#농촌 지원금
+		id = RED_procom_focus_9
+		icon = GFX_SOV_reverse_the_collectivization_process_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = RED_procom_focus_5
+			focus = RED_procom_focus_6
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_procom_focus_6
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#혁명위원회
+		id = RED_revcom_focus_0
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = {
+			focus = RED_revolutionary_transitional_government
+		}
+		x = 4
+		y = 1
+		relative_position_id = RED_revolutionary_transitional_government
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#적색전선 결성
+		id = RED_revcom_focus_1
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
+		prerequisite = {
+			focus = RED_revcom_focus_0
+		}
+		x = 0
+		y = 1
+		relative_position_id = RED_revcom_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#노동조합총회 설립
+		id = RED_revcom_focus_2
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = {
+			focus = RED_revcom_focus_0
+		}
+		x = 2
+		y = 1
+		relative_position_id = RED_revcom_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#산업 분권화
+		id = RED_revcom_focus_3
+		icon = GFX_goal_generic_production2
+		prerequisite = {
+			focus = RED_revcom_focus_2
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_revcom_focus_2
+		cost = 4
+		mutually_exclusive = {
+			focus = RED_revcom_focus_4
+			focus = RED_intwal_focus_8
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#과도기 경제
+		id = RED_revcom_focus_4
+		icon = GFX_goal_generic_construction
+		prerequisite = {
+			focus = RED_revcom_focus_2
+		}
+		x = 1
+		y = 1
+		mutually_exclusive = {
+			focus = RED_revcom_focus_3
+			focus = RED_intwal_focus_8
+		}
+		relative_position_id = RED_revcom_focus_2
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#혁명 주도
+		id = RED_revcom_focus_5
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		prerequisite = {
+			focus = RED_revcom_focus_1
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_revcom_focus_1
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#노농연대
+		id = RED_revcom_focus_6
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		prerequisite = {
+			focus = RED_revcom_focus_5
+		}
+		prerequisite = {
+			focus = RED_revcom_focus_9
+		}
+		prerequisite = {
+			focus = RED_procom_focus_9
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_revcom_focus_5
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#노동자의 힘
+		id = RED_revcom_focus_7
+		icon = GFX_focus_NOR_empower_sivorg
+		prerequisite = {
+			focus = RED_revcom_focus_5
+		}
+		mutually_exclusive = {
+			focus = RED_revcom_focus_8
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_revcom_focus_5
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#개량적 마르크스주의 수용
+		id = RED_revcom_focus_8
+		icon = GFX_focus_spr_unify_the_london_bureau
+		prerequisite = {
+			focus = RED_revcom_focus_5
+		}
+		x = 3
+		y = 1
+		mutually_exclusive = {
+			focus = RED_revcom_focus_7
+		}
+		relative_position_id = RED_revcom_focus_5
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#혁명적 농민조합 운동
+		id = RED_revcom_focus_9
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		prerequisite = {
+			focus = RED_revcom_focus_0
+		}
+		x = -2
+		y = 1
+		relative_position_id = RED_revcom_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#국제 노동자 동맹
+		id = RED_intwal_focus_0
+		icon = GFX_focus_AUS_austromarxism
+		prerequisite = {
+			focus = RED_revolutionary_transitional_government
+		}
+		x = 11
+		y = 1
+		relative_position_id = RED_revolutionary_transitional_government
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#혁명수호청
+		id = RED_intwal_focus_1
+		icon = GFX_focus_generic_whispers
+		prerequisite = {
+			focus = RED_revcom_focus_0
+			focus = RED_intwal_focus_0
+		}
+		x = -3
+		y = 1
+		relative_position_id = RED_intwal_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#계급 전위
+		id = RED_intwal_focus_2
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
+		prerequisite = {
+			focus = RED_intwal_focus_0
+		}
+		mutually_exclusive = {
+			focus = RED_intwal_focus_3
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_intwal_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#계급 정체성
+		id = RED_intwal_focus_3
+		icon = GFX_focus_GER_the_peoples_victory
+		prerequisite = {
+			focus = RED_intwal_focus_0
+		}
+		mutually_exclusive = {
+			focus = RED_intwal_focus_2
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_intwal_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#붉은 지식인
+		id = RED_intwal_focus_4
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
+		prerequisite = {
+			focus = RED_intwal_focus_2
+			focus = RED_intwal_focus_3
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_intwal_focus_3
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#중도파 자처
+		id = RED_intwal_focus_5
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = {
+			focus = RED_intwal_focus_4
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_intwal_focus_4
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#사법위원회
+		id = RED_intwal_focus_6
+		icon = GFX_focus_generic_court
+		prerequisite = {
+			focus = RED_intwal_focus_2
+			focus = RED_intwal_focus_3
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_intwal_focus_3
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#스탈린주의 반대
+		id = RED_intwal_focus_7
+		icon = GFX_focus_GER_end_european_communism
+		prerequisite = {
+			focus = RED_intwal_focus_6
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_intwal_focus_6
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#중앙 경제 기획
+		id = RED_intwal_focus_8
+		icon = GFX_focus_generic_central_planning
+		prerequisite = {
+			focus = RED_intwal_focus_2
+		}
+		x = -1
+		y = 1
+		mutually_exclusive = {
+			focus = RED_revcom_focus_4
+			focus = RED_revcom_focus_3
+		}
+		relative_position_id = RED_intwal_focus_2
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#사회대전환
+		id = RED_soctra_focus_0
+		icon = GFX_focus_AUS_danubian_socialist_communes
+		prerequisite = {
+			focus = RED_anti_fascism_policy
+		}
+		x = -9
+		y = 1
+		relative_position_id = RED_anti_fascism_policy
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#통제된 관료제
+		id = RED_soctra_focus_1
+		icon = GFX_focus_NOR_continue_nygaardsvold_government
+		prerequisite = {
+			focus = RED_soctra_focus_0
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_2
+		}
+		x = -4
+		y = 1
+		relative_position_id = RED_soctra_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#관료주의 혁파
+		id = RED_soctra_focus_2
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = {
+			focus = RED_soctra_focus_0
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_1
+		}
+		x = -2
+		y = 1
+		relative_position_id = RED_soctra_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#보안 기구 중앙화
+		id = RED_soctra_focus_3
+		icon = GFX_focus_BRA_utilize_security_law
+		prerequisite = {
+			focus = RED_soctra_focus_1
+			focus = RED_soctra_focus_2
+		}
+		available = {
+			has_completed_focus = RED_intwal_focus_1
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_4
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_soctra_focus_1
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#상호감시체계
+		id = RED_soctra_focus_4
+		icon = GFX_focus_generic_annex_country
+		prerequisite = {
+			focus = RED_soctra_focus_1
+			focus = RED_soctra_focus_2
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_3
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_soctra_focus_1
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#제헌위원회
+		id = RED_soctra_focus_5
+		icon = GFX_focus_AUS_lawmaking_leniency
+		prerequisite = {
+			focus = RED_soctra_focus_0
+		}
+		x = 0
+		y = 1
+		relative_position_id = RED_soctra_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#사회적 소유 확립
+		id = RED_soctra_focus_6
+		icon = GFX_focus_AFG_helmand_river_authority
+		prerequisite = {
+			focus = RED_soctra_focus_5
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_soctra_focus_5
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#산업 중앙화
+		id = RED_soctra_focus_7
+		icon = GFX_focus_BEL_the_grand_place
+		prerequisite = {
+			focus = RED_soctra_focus_6
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_8
+		}
+		x = -3
+		y = 1
+		relative_position_id = RED_soctra_focus_6
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#지방 평의회 권한 강화
+		id = RED_soctra_focus_8
+		icon = GFX_focus_BEL_antwerp_maritime_academy
+		prerequisite = {
+			focus = RED_soctra_focus_6
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_7
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_soctra_focus_6
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#사내 노동 기금
+		id = RED_soctra_focus_9
+		icon = GFX_focus_GER_customs_union
+		prerequisite = {
+			focus = RED_soctra_focus_7
+			focus = RED_soctra_focus_8
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_10
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_soctra_focus_7
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#노동이사제
+		id = RED_soctra_focus_10
+		icon = GFX_focus_SWE_socialist_reforms
+		prerequisite = {
+			focus = RED_soctra_focus_7
+			focus = RED_soctra_focus_8
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_9
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_soctra_focus_7
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#분산된 조합
+		id = RED_soctra_focus_11
+		icon = GFX_focus_CHL_la_corporacion_araucania
+		prerequisite = {
+			focus = RED_soctra_focus_9
+			focus = RED_soctra_focus_10
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_12
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_soctra_focus_9
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#집산화 중점
+		id = RED_soctra_focus_12
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = {
+			focus = RED_soctra_focus_9
+			focus = RED_soctra_focus_10
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_11
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_soctra_focus_9
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#토지 공개념
+		id = RED_soctra_focus_13
+		icon = GFX_focus_generic_land_reclamation
+		prerequisite = {
+			focus = RED_soctra_focus_5
+		}
+		x = 0
+		y = 2
+		relative_position_id = RED_soctra_focus_5
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#농촌 다루기
+		id = RED_soctra_focus_14
+		icon = GFX_focus_AFG_sugar_factory
+		prerequisite = {
+			focus = RED_soctra_focus_6
+		}
+		prerequisite = {
+			focus = RED_soctra_focus_13
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_soctra_focus_13
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#농어업협동조합
+		id = RED_soctra_focus_15
+		icon = GFX_focus_DEN_schleswigian_farmers
+		prerequisite = {
+			focus = RED_soctra_focus_14
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_16
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_soctra_focus_14
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#농림수산위원회
+		id = RED_soctra_focus_16
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = {
+			focus = RED_soctra_focus_14
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_15
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_soctra_focus_14
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#농촌 현대화
+		id = RED_soctra_focus_17
+		icon = GFX_focus_NZL_bob_semple_tank
+		prerequisite = {
+			focus = RED_soctra_focus_15
+			focus = RED_soctra_focus_16
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_soctra_focus_15
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#주택개발청
+		id = RED_soctra_focus_18
+		icon = GFX_focus_SWE_hygienic_housing
+		prerequisite = {
+			focus = RED_soctra_focus_13
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_soctra_focus_13
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#계획도시
+		id = RED_soctra_focus_19
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = {
+			focus = RED_soctra_focus_18
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_soctra_focus_18
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#지방 개발
+		id = RED_soctra_focus_20
+		icon = GFX_focus_GER_autarky_ambitions
+		prerequisite = {
+			focus = RED_soctra_focus_19
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_21
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_soctra_focus_19
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#산업 지구
+		id = RED_soctra_focus_21
+		icon = GFX_focus_generic_industry_1
+		prerequisite = {
+			focus = RED_soctra_focus_19
+		}
+		mutually_exclusive = {
+			focus = RED_soctra_focus_20
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_soctra_focus_19
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#공공부조
+		id = RED_soctra_focus_22
+		icon = GFX_focus_generic_welfare
+		prerequisite = {
+			focus = RED_soctra_focus_0
+		}
+		x = 2
+		y = 1
+		relative_position_id = RED_soctra_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#노동 보험 도입
+		id = RED_soctra_focus_23
+		icon = GFX_focus_generic_full_employment
+		prerequisite = {
+			focus = RED_soctra_focus_22
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_soctra_focus_22
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#보편 건강보험
+		id = RED_soctra_focus_24
+		icon = GFX_focus_generic_field_hostpital
+		prerequisite = {
+			focus = RED_soctra_focus_22
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_soctra_focus_22
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#대중교통 무상화
+		id = RED_soctra_focus_25
+		icon = GFX_focus_generic_railroad
+		prerequisite = {
+			focus = RED_soctra_focus_24
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_soctra_focus_24
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#포괄적 민중연금
+		id = RED_soctra_focus_26
+		icon = GFX_focus_RAJ_institutional_money_laundering
+		prerequisite = {
+			focus = RED_soctra_focus_24
+		}
+		x = 0
+		y = 2
+		relative_position_id = RED_soctra_focus_24
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#교육 무상화
+		id = RED_soctra_focus_27
+		icon = GFX_focus_NOR_moscows_education_centers
+		prerequisite = {
+			focus = RED_soctra_focus_24
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_soctra_focus_24
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
 		#사회주의 신헌법
 		id = RED_new_council
 		icon = GFX_focus_ARG_legitimize_the_PCA
 		prerequisite = {
 			focus = RED_anti_fascism_policy
 		}
-		x = -1
+		x = 30
 		y = 1
 		relative_position_id = RED_anti_fascism_policy
 		select_effect = {
