@@ -7364,6 +7364,36 @@ focus_tree = {
 	
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_hina
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 3
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mind
+		x = 0
+		y = 2
+
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mind
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			
+		}
+	}
+	
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_hina
 		icon = GFX_focus_generic_annex_country_2
 		cost = 3
 
@@ -7633,9 +7663,10 @@ focus_tree = {
 			GEH_dlfhgk = {
 				add_country_leader_role = {
 					promote_leader = yes
+					desc = "GEH_iroha_natsume_prefect_team_leader_desc"
 					country_leader = {
 						ideology = technocracy
-						desc = "GEH_iroha_natsume_prefect_team_leader_desc"
+						
 						expire = "1980.1.1"
 						traits = {
 							
@@ -7690,9 +7721,10 @@ focus_tree = {
 			HEU_zkdyzh = {
 				add_country_leader_role = {
 					promote_leader = yes
+					desc = "GEH_kayoko_onikata_prefect_team_leader_desc"
 					country_leader = {
 						ideology = technocracy
-						desc = "GEH_kayoko_onikata_prefect_team_leader_desc"
+						
 						expire = "1980.1.1"
 						traits = {
 							
@@ -8272,6 +8304,385 @@ focus_tree = {
 			}
 		}
 	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start_left
+		icon = GFX_focus_generic_field_hostpital 
+		cost = 2
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n
+        }
+		
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start_right
+		icon = GFX_focus_RAJ_a_tiger_unchained
+		cost = 2
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n
+        }
+		
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start
+		icon = GFX_focus_RAJ_union_busting 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n
+		x = 0
+		y = 2
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start_left
+        }
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start_right
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_late_reform
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start
+		x = -2
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_liaison_meeting
+		icon = GFX_focus_SWE_radiotjanst 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start
+		x = 0
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_decentralization_of_work
+		icon = GFX_focus_generic_printing_press 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start
+		x = 2
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_new_leadership
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start
+		x = 0
+		y = 2
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_late_reform
+        }
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_liaison_meeting
+        }
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_decentralization_of_work
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_investigative_operation
+		icon = GFX_focus_AFG_retire_the_uncles 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start
+		x = -1
+		y = 3
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_late_reform
+        }
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_liaison_meeting
+        }
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_decentralization_of_work
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_righteousness
+		icon = GFX_focus_CHL_union_of_hispanic_republics 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start
+		x = 1
+		y = 3
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_late_reform
+        }
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_liaison_meeting
+        }
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_decentralization_of_work
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_end
+		icon = GFX_focus_RAJ_the_sun_sets 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start
+		x = 0
+		y = 4
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_new_leadership
+        }
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_investigative_operation
+        }
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_righteousness
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
 # 히나 탈주: 노말 중점 최종장 끝/
 
 ## 히나 탈주 중점 끝/

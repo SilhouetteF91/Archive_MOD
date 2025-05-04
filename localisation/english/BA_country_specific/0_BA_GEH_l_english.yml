@@ -701,6 +701,37 @@
 
 #### 노말
  GEH_basking_in_the_brilliance_of_their_serenade_rout_n: "네 자리, 세 명"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_desc: "어떠한 말로도 변명할 수 없으며 어떠한 화려한 프로파간다로도 숨길 수 없습니다. 소라사키 히나는 한 장의 사직서만을 남긴 채 실종되었으며, 우리 정부는 마비 상태에 이르렀습니다. 아마우 아코가 선도부장 권한대행직을 맡게 되었으나 그녀는 새 업무를 맡고자 하는 의욕보다도 절망감과 죄의식에 더욱 시달리는 것 같습니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start_left: "의료 가방을 매고"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start_left_desc: "관료들은 소라사키 히나의 사임 이후 흔들리고 있습니다. 히나가 지고 있던 거대한 책임감의 짐이 일반 선도부원들에게 무겁게 내려옵니다. "
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start_right: "스페셜리스트의 의지를 다지며"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start_right_desc: "실행부원들을 비롯한 일반 선도부 병사들의 사기는 최악입니다. 우리 군이 붕괴되지 않도록 하는 것이야말로 가장 어려운 시기 이오리의 역할입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start: "당신을 구해내도록"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_start_desc: "선도부장의 사임 이후 아마우 아코는 죄책감으로 인해 정상적인 업무 수행을 하지 못하고 있습니다. 의학 전문가인 치나츠가 아니라도 아코의 상태가 우울장애에 해당한다는 것은 누구라도 알 수 있을 것입니다. 문제는 아코 행정관이 단순한 우울감 표현을 넘어, '히나 부장님에 대한 완전한 속죄'에 대한 이야기를 점점 공공연하게 하고 있다는 것입니다. ...나무에 목을 매단 선임행정관의 모습을 보기 전, 우리는 움직여야만 합니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_late_reform: "늦어버린 개혁"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_late_reform_desc: "선도부장에 대한 업무가 지나칠 정도로 과다했으며, 관료제 개혁을 통해 권한을 분산해야 했다는 아코 선임행정관의 고안이 옳았음이... 너무 늦게 드러났습니다. 기획부 중간 관료들에게 더 많은 권한을 주고, 기획부의 자율성을 보장하는 개혁이 필요합니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_liaison_meeting: "전쟁부 연락 회의"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_liaison_meeting_desc: "이오리의 군국주의적인 정책이 어쩌면 옳았을지 모릅니다. 이오리의 정책대로 우리가 강경책을 실시했더라면... 히나 부장은 게헨나를 지켜야 한다는 사명감으로 자신의 의지를 다질 수 있었을지도요. 연락 회의는 선도부 실행부를 중심으로 한 '전쟁부'를 세우고, 실행부 군사 지도자들이 더 자율적으로 예산을 사용할 수 있도록 허용합니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_decentralization_of_work: "열성부원들의 추억"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_decentralization_of_work_desc: "소라사키 히나만이 선도부를 이끌 수 있을 것이라 말하던 열성부원들의 열정도 옳은 점이 있었을지 모릅니다. 우리가 그녀를 소중하게 생각하지 않았기에, 그녀 역시 우리를 소중하게 생각하지 않았는지도요. 후회 속에서 다시 모인 열성부원들은 히나에 대한 기록을 모아 평전을 만들고, 그녀가 영원히 추억되도록 할 것입니다."
+ 
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_new_leadership: "선도부장 직선제"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_new_leadership_desc: "앞으로 선도부장은 선도부 간부들에 의한 투표를 통해 결정될 것입니다. 우리는 히나 부장에게 지나칠 정도로 부담을 몰아주었으며, 이는 선도부장이라는 직급이 가진 군벌 독재자 다운 면모에서 유래한다는 결론을 내렸습니다. 간부들의 투표에 의해 언제라도 재신임을 묻고, 낙선될 수 있는 지도자라면 책임과 정치적 부담도 경감될 것입니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_investigative_operation: "$GEH_basking_in_the_brilliance_of_their_serenade_rout_a_center$"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_investigative_operation_desc: "$GEH_basking_in_the_brilliance_of_their_serenade_rout_a_center_desc$"
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_righteousness: "정의의 깃발"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_righteousness_desc: "선도부는 영원히 잊을 수 없는 상처를 입었습니다. 우리는 개혁을 통하여 선도부가 저지른 과오를 넘어서서, 이제 없는 히나 부장에게 부끄럽지 않은 조직을 만들었습니다."
+
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_end: "내일의 태양이 뜨도록"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_n_end_desc: "아코 선임행정관에게서 실종된 히나 부장을 발견했다는 보고가 들어왔습니다. 히나 부장은 선도부장으로서의 업무 복귀를 거부하고 있지만, 설득을 통해 어떻게든... 적어도 우리의 곁에 비어버린 빈자리에 다시 앉아, 우리들을 지켜봐 주시기라도 하기를 바랄 수는 없을까요?" 
  
  #########
  #중점 수정#
@@ -928,7 +959,7 @@
  GEH_kriegsrecht: "군사 비상태세"
 
  GEH_luxembourg_rules: "룩셈부르크 규정"
- GEH_luxembourg_rules_desc: "게헨나 학생들이 법률이나 규제에 익숙하지 않으며, '혼돈의 학원'이라 불릴 만큼 자유분방한 것은 유명합니다. 자신들끼리의 말다툼에 수류탄을 사용하는 것은 기본이고, 총기 난사는 거의 일상에 가까웠습니다. 문제는 이러한 삶이 키보토스에서는 문제가 되지 않았지만 지구에서는 큰 문제가 된다는 것입니다.\n\n대전이 직후 룩셈부르크에서 일어난 게헨나계 주도의 학살 사건은 선도부에게 큰 경각심을 일으켰습니다. 아마우 아코가 제안하고 소라사키 히나가 결정한 '룩셈부르크 규정'은 폭력에 익숙한 게헨나계에 의한 총기 범죄를 막기 위해 도입되었습니다.\n\n1. 모든 게헨나계와 현지인의 거주지를 분리한다.\n2. 모든 게헨나계 인구는 현지인 거주지에 출입하기 전 총기를 반납해야 한다.\n\n두 가지 규정으로 이루어진 이 룩셈부르크 규정은 대전이 직후 선도부가 질서를 유지하는 데에 큰 도움을 주었습니다. 하지만 모든 현지인 거주지를 보호하고 총기를 압류하기에는 부족한 행정력, 그리고 키보토스인들에게는 옷과 같은 일상품으로 취급되는 총을 임의로 압류하는 정책은 게헨나 학생들의 분노를 사고 있습니다. 정말 우리가 이 정책을 장기적으로 유지할 수 있을까요?"
+ GEH_luxembourg_rules_desc: "게헨나 학생들이 법률이나 규제에 익숙하지 않으며, '혼돈의 학원'이라 불릴 만큼 자유분방한 것은 유명합니다. 자신들끼리의 말다툼에 수류탄을 사용하는 것은 기본이고, 총기 난사는 거의 일상에 가까웠습니다. 문제는 이러한 삶이 키보토스에서는 문제가 되지 않았지만 지구에서는 큰 문제가 된다는 것입니다.\n\n대전이 직후 룩셈부르크에서 일어난 게헨나계 주도의 학살 사건은 선도부에게 큰 경각심을 일으켰습니다. 아마우 아코가 제안하고 소라사키 히나가 결정한 '룩셈부르크 규정'은 폭력에 익숙한 게헨나계에 의한 총기 범죄를 막기 위해 도입되었습니다.\n\n1. 모든 게헨나계와 현지인의 거주지를 분리한다.\n2. 모든 게헨나계 인구는 현지인 거주지에 출입하기 전 총기를 반납해야 한다.\n\n두 가지 항목으로 이루어진 이 룩셈부르크 규정은 대전이 직후 선도부가 질서를 유지하는 데에 큰 도움을 주었습니다. 하지만 모든 현지인 거주지를 보호하고 총기를 압류하기에는 부족한 행정력, 그리고 키보토스인들에게는 옷과 같은 일상품으로 취급되는 총을 임의로 압류하는 정책은 게헨나 학생들의 분노를 사고 있습니다. 정말 우리가 이 정책을 장기적으로 유지할 수 있을까요?"
 
  GEH_centre_of_culture_idea: "게헨나-바이에른 문화"
  GEH_centre_of_culture_idea_desc: "두 개의 세계에서 온 이질적인 문화의 융합은 키보토스계와 현지인 사이의 갈등을 줄이고, 서로가 서로를 더 깊이 이해할 수 있게 만들어주는 무기입니다." 
