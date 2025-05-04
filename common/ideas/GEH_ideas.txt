@@ -407,7 +407,7 @@ ideas = {
 		}
 
 		GEH_luxembourg_rules = { # 룩셈부르크 규정
-			picture = HEU_grand_duchy_of_luxembourg
+			picture = GEH_luxembourg_rules
 
 			allowed = { always = no }
 
