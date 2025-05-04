@@ -46,7 +46,19 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_political_power = 20
+			if = {
+				limit = {
+					check_variable = {
+						global.RE4_northern_sovereignty_war_rdy_process = 0
+					}
+				}
+				set_variable = {
+					global.RE4_northern_sovereignty_war_rdy_process = 1
+				}
+			}
 			custom_effect_tooltip = RE4_ivan_kupla_tt
+			set_country_flag = RED_northern_sovereignty_war_unlock_flag
+			unlock_decision_category_tooltip = RED_northern_sovereignty_war
 		}
 	}
 	focus = {
@@ -71,10 +83,12 @@
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			unlock_decision_category_tooltip = RED_northern_sovereignty_war
 			RED = {
 				country_event = { id = redpuppet.21 hours = 8 }
 			}
+			unlock_decision_tooltip = northern_sovereignty_war_RE4_military_government_RE1
+			unlock_decision_tooltip = northern_sovereignty_war_RE4_military_government_RE2
+			unlock_decision_tooltip = northern_sovereignty_war_RE4_military_government_RE3
 		}
 	}
 	focus = {
@@ -503,13 +517,6 @@ shared_focus = {
 
 	x = 11
 	y = 0
-	offset = {
-		x = -11
-		y = 10
-		trigger = {
-			original_tag = RED
-		}
-	}
 	allow_branch = {
 		OR = {
 			original_tag = RED

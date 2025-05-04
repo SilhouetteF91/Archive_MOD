@@ -133,7 +133,7 @@ RED_northern_sovereignty_war = { #북방 주권 전쟁
 		}
 	}
 	visible = {
-		RE4 = { has_completed_focus = RE4_security_committee_headquarters_relocation }
+		has_country_flag = RED_northern_sovereignty_war_unlock_flag
 	}
 	priority = 500
 

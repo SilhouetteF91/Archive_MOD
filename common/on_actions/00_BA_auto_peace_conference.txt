@@ -29,7 +29,9 @@ on_actions = {
 					has_war_with = FIN
 					has_global_flag = RE4_finland_war_flag
 				}
+				remove_civil_war_target = FIN
 				clr_global_flag = RE4_finland_war_flag
+				set_global_flag = RE4_finland_war_flag_FINWIN
 				RED = {
 					country_event = {
 						id = RED_generic.13
@@ -78,6 +80,7 @@ on_actions = {
 					has_global_flag = RE4_finland_war_flag
 				}
 				clr_global_flag = RE4_finland_war_flag
+				set_global_flag = RE4_finland_war_flag_RE4WIN
 				RE4 = {
 					every_other_country = {
 						limit = {

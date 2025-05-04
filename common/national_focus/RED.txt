@@ -41,8 +41,8 @@ focus_tree = {
 		scroll_wheel_factor = 1
 	}
 	shortcut = {
-		name = RED_focus_politic_2
-		target = RED_no_error_at_ideology
+		name = RED_focus_MILITARY_POPULATION
+		target = RED_high_spirited
 		scroll_wheel_factor = 1
 	}
 	shortcut = {
@@ -55,12 +55,120 @@ focus_tree = {
 		x = 50
 		y = 1600
 	}
+	
+	focus = {
+		# 동방 공세 패배
+		id = REDF_eastern_offensive_defeat
+		icon = GFX_focus_EST_national_pride_in_finland
+		mutually_exclusive = {
+			focus = REDF_eastern_offensive_victory
+		}
+		x = 23
+		y = 0
+		cost = 2
+		ai_will_do = {
+			base = 9999
+		}
+		available = {
+			has_global_flag = RE4_finland_war_flag_FINWIN
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
+		completion_reward = {
+			add_political_power = 20
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		# 동방 공세 승리
+		id = REDF_eastern_offensive_victory
+		icon = GFX_focus_SWE_finnish_communists
+		mutually_exclusive = {
+			focus = REDF_eastern_offensive_defeat
+		}
+		x = 2
+		y = 0
+		relative_position_id = REDF_eastern_offensive_defeat
+		cost = 2
+		ai_will_do = {
+			base = 9999
+		}
+		available = {
+			has_global_flag = RE4_finland_war_flag_RE4WIN
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = communism
+				popularity = -0.02
+			}
+		}
+	}
+	focus = {
+		# 기세등등
+		id = RED_high_spirited
+		icon = GFX_focus_FIN_united_under_the_north_star
+		prerequisite = {
+			focus = REDF_eastern_offensive_defeat
+			focus = REDF_eastern_offensive_victory
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
+		x = 1
+		y = 1
+		relative_position_id = REDF_eastern_offensive_defeat
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 군정청 충성 확인
+		id = RED_army_government_loyalty_confirmation
+		icon = GFX_focus_FIN_united_under_the_north_star
+		prerequisite = {
+			focus = REDF_eastern_offensive_victory
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RED_army_government_loyalty_confirmation_tooltip
+				has_country_flag = RED_northern_sovereignty_war_unlock_flag
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = REDF_eastern_offensive_victory
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					check_variable = {
+						global.RED_northern_sovereignty_war_rdy_process = 1
+					}
+				}
+				set_variable = {
+					global.RED_northern_sovereignty_war_rdy_process = 2
+				}
+			}
+		}
+	}
 	# 붉은겨울 산업 중점
 	focus = {
 		# 남부 도로 재정비
 		id = RED_road_to_south
 		icon = GFX_goal_generic_construction
-		x = -11
+		x = 54
 		y = 0
 		cost = 4
 		ai_will_do = {
@@ -3756,7 +3864,7 @@ focus_tree = {
 			}
 		}
 		cost = 4
-		x = 62
+		x = 150
 		y = 0
 		offset = {
 			x = -11
@@ -10780,7 +10888,7 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 		}
-		x = 32
+		x = 37
 		y = 0
 		relative_position_id = RED_our_leader_cherino
 		available = {
@@ -12448,9 +12556,7 @@ focus_tree = {
 		relative_position_id = RED_maintaining_the_fire
 		cost = 5
 		available = {
-			REC = {
-				exists = no
-			}
+			country_exists = REC
 		}
 		completion_reward = {
 			add_ai_strategy = {
@@ -13776,8 +13882,8 @@ focus_tree = {
 		id = RED_rearming_focus_0
 		icon = GFX_goal_panzerwaffe
 		cost = 2
-		x = 24
-		y = 7
+		x = 94
+		y = 0
 		available = {
 			has_completed_focus = RED_club_focus_0
 		}
@@ -16713,7 +16819,7 @@ focus_tree = {
 			}
 			has_war_with = TRM
 		}
-		x = 29
+		x = 114
 		y = 0
 		ai_will_do = {
 			factor = 100

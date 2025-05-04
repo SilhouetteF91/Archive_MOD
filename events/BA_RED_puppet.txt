@@ -420,6 +420,11 @@ country_event = { # 이반 쿠팔라의 스캔들
 	option = { 
 		name = redpuppet.18.a
 		ai_chance = { base = 100 }
+		set_global_flag = redpuppet_22_trigger_flag
+		if = {
+			limit = { has_global_flag = RE4_finland_war_flag_RE4WIN }
+			RED = { country_event = { id = redpuppet.22 days = 15 } }
+		}
 	}
 }
 country_event = { # 군정청 붕괴 비활성!
@@ -461,6 +466,12 @@ country_event = { # 군정청 붕괴 비활성!
 		add_stability = -0.05
 		add_war_support = 0.05
 		RE4 = { country_event = { id = redpuppet.16 hours = 12 } }
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = redpuppet_22_trigger_flag }
+				country_event = { id = redpuppet.22 days = 15 }
+			}
+		}
 	}
 }
 country_event = { # 어쩌면?
@@ -490,6 +501,30 @@ country_event = { # 보안위원회 이관
 		add_war_support = -0.05
 		set_country_flag = redpuppet_go_to_marina_flag
 		custom_effect_tooltip = redpuppet_go_to_marina_tt
+	}
+}
+country_event = { # 스캔들 발견!
+	id = redpuppet.22
+	title = redpuppet.22.t
+	desc = redpuppet.22.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.22.a
+		add_war_support = -0.01
+		set_country_flag = RED_northern_sovereignty_war_unlock_flag
 		unlock_decision_category_tooltip = RED_northern_sovereignty_war
+		if = {
+			limit = {
+				check_variable = {
+					global.RED_northern_sovereignty_war_rdy_process = 0
+				}
+			}
+			set_variable = {
+				global.RED_northern_sovereignty_war_rdy_process = 1
+			}
+		}
 	}
 }

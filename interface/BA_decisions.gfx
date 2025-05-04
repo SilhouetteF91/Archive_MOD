@@ -1907,6 +1907,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_red_northern_sovereignty_war_side_icon_setBG"
+		texturefile = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_side_icon_setBG.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_red_northern_sovereignty_war_2side_icon"
 		texturefile = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_2side_icon.dds"
 		legacy_lazy_load = no

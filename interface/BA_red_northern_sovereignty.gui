@@ -25,6 +25,21 @@ guiTypes = {
 		}
 		
 		iconType = {
+			name = "red_northern_sovereignty_war_1icon_setBG"
+			spriteType = "GFX_red_northern_sovereignty_war_side_icon_setBG"
+			position = { x = 164 y = 12 }
+			scale = 0.7
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "red_northern_sovereignty_war_2icon_setBG"
+			spriteType = "GFX_red_northern_sovereignty_war_side_icon_setBG"
+			position = { x = 429 y = 12 }
+			scale = 0.7
+			alwaystransparent = yes
+		}
+
+		iconType = {
 			name = "red_northern_sovereignty_war_1side_icon"
 			spriteType = "GFX_red_northern_sovereignty_war_1side_icon"
 			position = { x = 170 y = 22 }

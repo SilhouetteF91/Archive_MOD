@@ -3133,6 +3133,7 @@ RED_northern_sovereignty_war = {
 			original_tag = RE4
 		}
 		visible = {
+			has_completed_focus = RE4_security_committee_headquarters_relocation
 			RE1 = {
 				exists = yes
 				has_capitulated = no
@@ -3184,6 +3185,7 @@ RED_northern_sovereignty_war = {
 			original_tag = RE4
 		}
 		visible = {
+			has_completed_focus = RE4_security_committee_headquarters_relocation
 			RE2 = {
 				exists = yes
 				has_capitulated = no
@@ -3235,6 +3237,7 @@ RED_northern_sovereignty_war = {
 			original_tag = RE4
 		}
 		visible = {
+			has_completed_focus = RE4_security_committee_headquarters_relocation
 			RE3 = {
 				exists = yes
 				has_capitulated = no
@@ -3297,6 +3300,7 @@ RED_northern_sovereignty_war = {
 					is_subject_of = RE4
 					is_subject = no
 				}
+				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
 		}
 		available = {
@@ -3304,6 +3308,9 @@ RED_northern_sovereignty_war = {
 				has_decision = northern_sovereignty_war_RED_military_government_RE1
 				has_decision = northern_sovereignty_war_RED_military_government_RE2
 				has_decision = northern_sovereignty_war_RED_military_government_RE3
+			}
+			RE1 = {
+				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
 		}
 		cancel_trigger = {
@@ -3357,6 +3364,7 @@ RED_northern_sovereignty_war = {
 					is_subject_of = RE4
 					is_subject = no
 				}
+				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
 		}
 		available = {
@@ -3364,6 +3372,9 @@ RED_northern_sovereignty_war = {
 				has_decision = northern_sovereignty_war_RED_military_government_RE1
 				has_decision = northern_sovereignty_war_RED_military_government_RE2
 				has_decision = northern_sovereignty_war_RED_military_government_RE3
+			}
+			RE2 = {
+				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
 		}
 		cancel_trigger = {
@@ -3417,6 +3428,7 @@ RED_northern_sovereignty_war = {
 					is_subject_of = RE4
 					is_subject = no
 				}
+				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
 		}
 		available = {
@@ -3424,6 +3436,9 @@ RED_northern_sovereignty_war = {
 				has_decision = northern_sovereignty_war_RED_military_government_RE1
 				has_decision = northern_sovereignty_war_RED_military_government_RE2
 				has_decision = northern_sovereignty_war_RED_military_government_RE3
+			}
+			RE3 = {
+				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
 		}
 		cancel_trigger = {

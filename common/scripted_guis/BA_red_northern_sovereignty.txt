@@ -16,6 +16,19 @@ scripted_gui = {
 			}
 		}
 
+		triggers = {
+			red_northern_sovereignty_war_1icon_setBG_visible = {
+				check_variable = {
+					global.RED_northern_sovereignty_war_rdy_process = 4
+				}
+			}
+			red_northern_sovereignty_war_2icon_setBG_visible = {
+				check_variable = {
+					global.RE4_northern_sovereignty_war_rdy_process = 4
+				}
+			}
+		}
+
 	}
 
 }

@@ -17,7 +17,7 @@
  RED_focus_shortcut_industry_4: "산업: A.E.P."
  RED_focus_shortcut_industry_2: "산업: 동아리"
  RED_focus_politic_1: "정치: 트로츠키"
- RED_focus_politic_2: "정치: 마리나"
+ RED_focus_MILITARY_POPULATION: "군정청 관리"
  RED_focus_politic_3: "정치: 2월 총파업"
 
  RED_cant_change_economy: "\n§R경제법 변경 불가§!"
@@ -2131,3 +2131,11 @@
  RED_cherino_communism_knowledge_tt: "공산주의적 지식: $RIGHT|+=1$\n"
  RED_cherino_ideal_values_tt: "이상주의적 가치관: $RIGHT|+=1$\n"
  RED_cherino_social_analyzing_tt: "사회 분석 능력: $RIGHT|+=1$\n"
+
+## 군정청 중점
+ REDF_eastern_offensive_defeat: "동방 공세 패배"
+ REDF_eastern_offensive_defeat_desc: "227호 특별반의 사면은 취소되었으며, 영웅적인 승리란 존재하지 않았습니다. 우리는 이제 당히 이루어졌을 일들에 대해 생각해야 합니다. 핀란드가 구성할 북유럽 망명위원회와, 그에 따른 군정청의 반란들을요."
+ REDF_eastern_offensive_victory: "동방 공세 승리"
+ RED_high_spirited: "기세등등"
+ RED_army_government_loyalty_confirmation: "군정청 충성 확인"
+ RED_army_government_loyalty_confirmation_tooltip: "마리나의 227호 특별반 스캔들 발생"
