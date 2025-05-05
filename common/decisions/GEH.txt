@@ -1436,6 +1436,10 @@ GEH_military_power_category = {
 					NOT = { JAP = { has_government = communism } }
 				}
 			}
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
 			has_war = no
 		}
 
@@ -1451,6 +1455,128 @@ GEH_military_power_category = {
 
 		complete_effect = {
 			country_event = { id = GEH.event.2000 }
+		}
+	}
+
+	GEH_military_power_52_steel_mill = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			controls_state = 52
+		}
+
+		visible = {
+			owns_state = 52
+		}
+
+		custom_cost_text = decision_cost_20_cp
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 50
+
+		days_remove = 30
+
+		remove_effect = {
+			52 = {
+				add_extra_state_shared_building_slots = 1
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}
+	}
+
+	GEH_military_power_53_steel_mill = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			controls_state = 53
+		}
+
+		visible = {
+			owns_state = 52
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 50
+
+		days_remove = 30
+
+		remove_effect = {
+			53 = {
+				add_extra_state_shared_building_slots = 1
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}
+	}
+
+	GEH_military_power_54_steel_mill = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			controls_state = 54
+		}
+
+		visible = {
+			owns_state = 54
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 50
+
+		days_remove = 30
+
+		remove_effect = {
+			54 = {
+				add_extra_state_shared_building_slots = 1
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
 		}
 	}
 

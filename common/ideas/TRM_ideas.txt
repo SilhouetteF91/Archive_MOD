@@ -44,7 +44,6 @@ ideas = {
 			}
 		}
 		TRM_arius_problem_idea = { # 아리우스 문제
-			picture = citizen_militia_2
 			allowed = {
 				always = no
 			}
@@ -1386,6 +1385,22 @@ ideas = {
 				conscription = 0.01
 				army_morale_factor = 0.1
 				modifier_army_sub_unit_category_halo_attack_factor = 0.05
+			}
+		}
+		TRM_trinity_farm_ns = {
+			picture = LIT_invested_in_farms
+			modifier = {
+				local_building_slots = 1
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.07
+			}
+		}
+		TRM_cop_of_junker_ns = {
+			picture = PER_unification_initiative_idea
+			modifier = {
+				political_power_factor = 0.05
+				local_building_slots = 1
+				consumer_goods_factor = 0.1
 			}
 		}
 	}

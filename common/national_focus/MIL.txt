@@ -9310,6 +9310,11 @@ focus_tree = {
 		completion_reward = { 
 			#슈퍼노바 장군 추가좀
 			custom_effect_tooltip = MIL_al_is_supernova_tt
+			hidden_effect = {
+				complete_special_project = {
+					project = sp:sp_nuclear_bomb
+				}				
+			}
 		}
 	}
 	
@@ -9490,7 +9495,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MIL_travel_africa
 		completion_reward = {
-			#프랑스 항복시키고 아프리카 먹은땅에다가 사람 청소시키는거 한 다음에 핵심주 박게 해주셈
+			#프랑스 항복시키고 아프리카 먹은땅에다가 사람 청소시키는 거 한 다음에 핵심주 박게 해주셈
 		}
 	}
 
@@ -9761,6 +9766,7 @@ focus_tree = {
 		completion_reward = {
 			set_variable = { MIL_purified_week = 0 }
 			set_variable = { MIL_taken_to_purify = 70 }
+			set_variable = { MIL_Millennium_robot_army_idea_civilian_factory_use = 10 }
 			custom_effect_tooltip = MIL_all_kill_tt
 			unlock_decision_tooltip = MIL_reskill_all
 		}

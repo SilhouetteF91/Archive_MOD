@@ -1,0 +1,83 @@
+guiTypes = {
+	containerWindowType = {
+		name = "red_northern_sovereignty_gui_window"
+		position = { x = 0 y = 0 }	
+		size = { width = 100% height= 100 }
+
+		@red_northern_sovereignty = 230
+		iconType = {
+			name = "red_northern_sovereignty_re1_progressbar"
+			spriteType = "GFX_red_northern_sovereignty"
+			position = { x = @red_northern_sovereignty y = 20 }
+			pdx_tooltip = red_northern_sovereignty_re1_progressbar_tt
+		}
+		iconType = {
+			name = "red_northern_sovereignty_re2_progressbar"
+			spriteType = "GFX_red_northern_sovereignty"
+			position = { x = @red_northern_sovereignty y = 42 }
+			pdx_tooltip = red_northern_sovereignty_re2_progressbar_tt
+		}
+		iconType = {
+			name = "red_northern_sovereignty_re3_progressbar"
+			spriteType = "GFX_red_northern_sovereignty"
+			position = { x = @red_northern_sovereignty y = 64 }
+			pdx_tooltip = red_northern_sovereignty_re3_progressbar_tt
+		}
+		
+		iconType = {
+			name = "red_northern_sovereignty_war_1icon_setBG"
+			spriteType = "GFX_red_northern_sovereignty_war_side_icon_setBG"
+			position = { x = 164 y = 12 }
+			scale = 0.7
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "red_northern_sovereignty_war_2icon_setBG"
+			spriteType = "GFX_red_northern_sovereignty_war_side_icon_setBG"
+			position = { x = 429 y = 12 }
+			scale = 0.7
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "red_northern_sovereignty_war_1side_icon"
+			spriteType = "GFX_red_northern_sovereignty_war_1side_icon"
+			position = { x = 170 y = 22 }
+			scale = 0.6
+			pdx_tooltip = red_northern_sovereignty_war_1side_icon_tt
+		}
+		iconType = {
+			name = "red_northern_sovereignty_war_2side_icon"
+			spriteType = "GFX_red_northern_sovereignty_war_2side_icon"
+			position = { x = 435 y = 22 }
+			scale = 0.6
+			pdx_tooltip = red_northern_sovereignty_war_2side_icon_tt
+		}
+
+		@red_northern_sovereignty_text = 10
+		instantTextBoxType = {
+			name ="red_northern_sovereignty_re1_text"
+			position = { x = @red_northern_sovereignty_text y = 21 }
+			font = "hoi_20b"
+			text = "red_northern_sovereignty_re1_text"
+			maxWidth = 150
+			orientation = LEFT
+		}
+		instantTextBoxType = {
+			name ="red_northern_sovereignty_re2_text"
+			position = { x = @red_northern_sovereignty_text y = 43 }
+			font = "hoi_20b"
+			text = "red_northern_sovereignty_re2_text"
+			maxWidth = 150
+			orientation = LEFT
+		}
+		instantTextBoxType = {
+			name ="red_northern_sovereignty_re3_text"
+			position = { x = @red_northern_sovereignty_text y = 65 }
+			font = "hoi_20b"
+			text = "red_northern_sovereignty_re3_text"
+			maxWidth = 150
+			orientation = LEFT
+		}
+	}
+}

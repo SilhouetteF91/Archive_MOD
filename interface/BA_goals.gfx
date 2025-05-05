@@ -4,6 +4,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/HEU/신뢰와우애.tga"
 	}
 	SpriteType = {
+		name = "GFX_focus_GEH_ai_focus_1"
+		texturefile = "gfx/interface/goals/GEH/focus_GEH_ai_focus_1.tga"
+	}
+	SpriteType = {
 		name = "GFX_focus_GEH_last_focus_effect"
 		texturefile = "gfx/interface/goals/GEH/focus_GEH_last_focus_effect.tga"
 	}
@@ -115,6 +119,38 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_TRN_savior_of_kivotos"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_savior_of_kivotos.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_army"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_army.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_navy"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_navy.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_airforce"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_airforce.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_national_guard"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_national_guard.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_eden_accord"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_eden_accord.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_kivotos_dip"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_kivotos_dip.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_northern_kivotos_dip"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_northern_kivotos_dip.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_alliance_with_devil"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_alliance_with_devil.tga"
 	}
 
 	SpriteType = {

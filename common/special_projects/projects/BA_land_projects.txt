@@ -22,6 +22,7 @@ BA_sp_land_syemmata_railway_gun = {
 		FROM = {
 			original_tag = ABY
 			has_tech = railway_gun
+			has_completed_focus = ABY_focus_abydos_10
 		}
 	}
 

@@ -1588,6 +1588,7 @@ country_event = {
 
     option = {
         name = MIL_event.23.a
+        set_country_flag = MIL_fly_me_to_the_moon
         news_event = { id = BA_news.27 hours = 10 }
         add_dynamic_modifier = {
             modifier = MIL_satellite_dynamic_modifier

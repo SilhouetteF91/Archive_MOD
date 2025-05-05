@@ -206,6 +206,7 @@ ideas = {
 	}
 }
 
+#개별과제
 ideas = {
 	country = {
 		KAP_solo_assignment = {
@@ -224,6 +225,52 @@ ideas = {
 			modifier = {
 				justify_war_goal_time = -0.5
 				annex_cost_factor = -0.3
+			}
+		}
+	}
+}
+
+#투사체 대응 비책
+ideas = {
+	country = {
+		KAP_cap = {
+			picture = KAP_zotdam
+
+			allowed = {
+				tag = KAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_infantry_attack_factor = 0.15
+			}
+		}
+	}
+}
+
+#인간전차
+ideas = {
+	country = {
+		KAP_human_tank = {
+			picture = KAP_zotdam
+
+			allowed = {
+				tag = KAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_infantry_defence_factor = 0.3
 			}
 		}
 	}

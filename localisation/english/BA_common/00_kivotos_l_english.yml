@@ -2,10 +2,6 @@
  kim_yong_ha_name: "김용하"
  kim_yong_ha_desc: "강한 마음을 다지기 위해 청계천에 나왔습니다"
 
- WAR_NAME_KAI_ENG: "브리튼 전쟁"
- WAR_NAME_ENG_KAI: "브리튼 전쟁"
- WAR_NAME_COU_SHE: "샬레 스캔들"
- WAR_NAME_SHE_COU: "샬레 스캔들"
 
  #공용
  GAEBALJUNG: "§Y미완성입니다!§!"
@@ -78,6 +74,7 @@
  Highlander.6.d: "하이랜더 철도학원에서 학원 내 선로를 관리할 간부를 파견하였습니다."
  Highlander.6_tt: "\n(£GFX_HTA_FLAG  §Y하이랜더 철도학원§!) @[THIS.gettag] §Y[THIS.getname]§!의 투자가 §G20§! 이상임에 따라 발동됩니다."
  Highlander.7_tt: "\n(£GFX_HTA_FLAG  §Y하이랜더 철도학원§!) @[THIS.gettag] §Y[THIS.getname]§!의 투자가 §G25§! 이상임에 따라 발동됩니다."
+ Highlander.7.5_tt: "\n(£GFX_HTA_FLAG  §Y하이랜더 철도학원§!) @[THIS.gettag] §Y[THIS.getname]§!의 투자가 §G30§! 이상임에 따라 발동됩니다."
  Highlander.8.t: "하이랜더 최대투자국 변경"
  Highlander.8.d: "하이랜더 최대투자국이 변경되었습니다."
  Highlander.8.a: "그렇군."
@@ -95,10 +92,18 @@
  Highlander.13.d: "하이랜더 철도에의 투자 비용이 감소했습니다."
  Highlander.13.a: "좋군."
  Highlander.13_tt: "§Y대규모 투자§!에 드는 §Y소비재 공장 변동치§! 감소"
+ Highlander.15.t: "궤간 문제"
+ Highlander.15.d: "철도 문제가 해소됨에 따라, 우리는 하나의 주요한 궤간을 표준으로 삼아 전역의 철도를 개편할 것입니다. 그러기 위해 우리는 여러 갈래의 궤간 중 하나를 표준으로 삼을 수 있습니다."
+ Highlander.15.a: "표준궤로 통일하자."
+ Highlander.15.b: "표준궤에 협궤를 섞어 쓰자."
+ Highlander.15.c: "이베리아 궤간을 쓰자."
+ Highlander.15.e: "광궤를 쓰자."
+ Highlander.15.b_tt: "\n§g협궤는 하이랜더 철도의 주류 규격입니다:§!\n"
  
-
+ BA_highlander_aoba: "화물운송관리부"
  BA_highlander_nozomi: "중앙관제센터 간부"
  BA_highlander_hikari: "중앙관제센터 간부"
+ BA_utsumi_aoba: "우츠미 아오바"
  BA_tachibana_nozomi: "타치바나 노조미"
  BA_tachibana_hikari: "타치바나 히카리"
 

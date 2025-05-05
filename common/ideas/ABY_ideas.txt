@@ -1289,6 +1289,21 @@ ideas = {
 				communism_drift = -0.1
 			}
 		}
+		ABY_idea_great_germanist = {
+			picture = SOV_factionalism_modifier
+
+			allowed_civil_war = {
+					always = yes
+			}
+
+			modifier = {
+				fascism_drift = 0.5
+				war_support_factor = -0.1
+				stability_weekly = -0.03
+				conscription_factor = -0.15
+				political_power_factor = -0.3
+			}
+		}
 		ABY_idea_abydos_army_control_center = {
 			picture = "GFX_idea_ABY_idea_department_3"
 
@@ -3509,7 +3524,7 @@ ideas = {
 					always = yes
 			}
 			modifier = {
-				consumer_goods_factor = 0.35
+				political_power_cost = 0.1
 			}
 		}
 		ABY_idea_cornjs_get = {
@@ -4608,13 +4623,11 @@ ideas = {
 			removal_cost = -1 
 			# picture = 
 			modifier = {
+				stability_factor = -0.15
 				war_support_factor = 0.25
-				army_attack_factor = 0.15
-				army_defence_factor = 0.15
-				army_speed_factor = 0.15
-				breakthrough_factor = 0.15
-				army_morale_factor = 0.15
-				political_power_gain = -0.75
+				breakthrough_factor = 0.1
+				army_morale_factor = 0.1
+				political_power_gain = -0.5
 			}
 		}
 		ABY_idea_kivotos_economy = {
@@ -6043,6 +6056,23 @@ ideas = {
 				army_morale_factor = 0.05
 			}
 		}
+        ABY_idea_interference_committee = {
+            picture = generic_secret_police
+            modifier = {
+                send_volunteer_divisions_required = -1
+                send_volunteers_tension = -1
+            }
+            available = {
+                ABY = {
+					NOT = {
+						has_country_flag = ABY_flag_recovered_land
+					}
+				}
+            }
+            rule = {
+                can_send_volunteers = yes
+            }
+        }
 		ABY_idea_intel_1 = {
 			allowed_civil_war = {
                 always = yes
@@ -6394,7 +6424,7 @@ ideas = {
 				factor = 100
 			}
 		}
-		ABY_industrial_concern_neptis_group_3 = {
+		ABY_industrial_concern_neptis_group_rothschild = {
 
 			picture = ABY_nephthys_concern
 			
@@ -6459,6 +6489,122 @@ ideas = {
 			
 			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
 						
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_neptis_group_PMC = {
+			picture = ABY_nephthys_concern
+			allowed = {
+				tag = ABY
+			}
+			available = {
+				always = no
+			}
+			visible = {
+				always = no
+			}
+			research_bonus = {
+				industry = 0.05
+			}
+			modifier = {	
+				weekly_manpower = 500
+				production_speed_naval_facility_factor = 0.15
+				production_speed_air_facility_factor = 0.15
+				production_speed_nuclear_facility_factor = 0.15
+				production_speed_land_facility_factor = 0.15
+			}
+			traits = { saint_nephtys_2 }
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_neptis_group_chemical = {
+			picture = ABY_nephthys_concern
+			allowed = {
+				tag = ABY
+			}
+			available = {
+				always = no
+			}
+			visible = {
+				always = no
+			}
+			research_bonus = {
+				industry = 0.10
+			}
+			modifier = {	
+				research_speed_factor = 0.1
+				local_resources_factor = 0.15
+			}
+			traits = { saint_nephtys_3 }
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_neptis_group_united = {
+			picture = ABY_nephthys_concern
+			allowed = {
+				tag = ABY
+			}
+			available = {
+				always = no
+			}
+			visible = {
+				always = no
+			}
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier = {	
+				political_power_cost = 0.3
+				production_speed_rail_way_factor = 0.25
+				production_speed_supply_node_factor = 0.25
+				supply_node_range = 0.15
+				research_speed_factor = 0.1
+				local_resources_factor = 0.15
+				weekly_manpower = 500
+				production_speed_naval_facility_factor = 0.15
+				production_speed_air_facility_factor = 0.15
+				production_speed_nuclear_facility_factor = 0.15
+				production_speed_land_facility_factor = 0.15
+			}
+			traits = { rothschild_unite }
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_neptis_group_united_2 = {
+			picture = ABY_nephthys_concern
+			allowed = {
+				tag = ABY
+			}
+			available = {
+				always = no
+			}
+			visible = {
+				always = no
+			}
+			research_bonus = {
+				industry = 0.15
+				electronics = 0.15
+			}
+			modifier = {	
+				party_popularity_stability_factor = 0.1
+				production_speed_rail_way_factor = 0.25
+				production_speed_supply_node_factor = 0.25
+				supply_node_range = 0.15
+				research_speed_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.25
+				weekly_manpower = 1000
+				production_speed_naval_facility_factor = 0.2
+				production_speed_air_facility_factor = 0.2
+				production_speed_nuclear_facility_factor = 0.2
+				production_speed_land_facility_factor = 0.2
+				consumer_goods_factor = 0.15
+			}
+			traits = { saint_nephtys_4 }
 			ai_will_do = {
 				factor = 100
 			}
@@ -6587,8 +6733,8 @@ ideas = {
 			}
 
 			modifier = {	
-				consumer_goods_factor = -0.1
-				research_speed_factor = 0.05
+				consumer_goods_factor = -0.15
+				production_speed_industrial_complex_factor = 0.1
 			}
 			
 			traits = { rothschild_swiss }
@@ -6616,12 +6762,12 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.15
+				industry = 0.5
 			}
 
 			modifier = {	
 				local_resources_factor = 0.1
-				resource_trade_cost_bonus_per_factory = 4
+				resource_trade_cost_bonus_per_factory = 8
 			}
 			
 			traits = { rothschild_america }
@@ -6655,10 +6801,10 @@ ideas = {
 			modifier = {	
 				political_power_cost = 0.3
 				local_resources_factor = 0.25
-				resource_trade_cost_bonus_per_factory = 4
-				consumer_goods_factor = -0.1
-				research_speed_factor = 0.05
-				production_speed_infrastructure_factor = 0.1
+				resource_trade_cost_bonus_per_factory = 8
+				consumer_goods_factor = -0.15
+				production_speed_infrastructure_factor = 0.15
+				production_speed_industrial_complex_factor = 0.1
 			}
 			
 			traits = { rothschild_unite }
@@ -6745,6 +6891,139 @@ ideas = {
 			
 			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
 						
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_skoda = {
+			picture = GFX_idea_CZE_skoda_works
+			allowed = {
+				tag = ABY
+			}
+			available = {
+				always = no
+			}
+			visible = {
+				always = no
+			}
+			research_bonus = {
+				industry = 0.10
+			}
+			modifier = {	
+				production_speed_arms_factory_factor = 0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+			}
+			traits = { skoda_trait }
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_skoda_2 = {
+			picture = GFX_idea_CZE_skoda_works
+			allowed = {
+				tag = ABY
+			}
+			available = {
+				always = no
+			}
+			visible = {
+				always = no
+			}
+			research_bonus = {
+				industry = 0.10
+			}
+			modifier = {	
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+			}
+			traits = { skoda_trait }
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_skoda_power = {
+			picture = GFX_idea_CZE_skoda_works
+			allowed = {
+				tag = ABY
+			}
+			available = {
+				always = no
+			}
+			visible = {
+				always = no
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+			modifier = {	
+				political_power_gain = 0.1
+			}
+			traits = { skoda_trait_2 }
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_skoda_auto = {
+			picture = GFX_idea_CZE_skoda_works
+			allowed = {
+				tag = ABY
+			}
+			available = {
+				always = no
+			}
+			visible = {
+				always = no
+			}
+			research_bonus = {
+				industry = 0.05
+			}
+			modifier = {	
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			traits = { skoda_trait_3 }
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ABY_industrial_concern_skoda_unite = {
+			picture = GFX_idea_CZE_skoda_works
+			allowed = {
+				tag = ABY
+			}
+			available = {
+				always = no
+			}
+			visible = {
+				always = no
+			}
+			research_bonus = {
+				industry = 0.15
+				electronics = 0.15
+			}
+			modifier = {
+				political_power_cost = 0.2	
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			traits = { rothschild_unite }
 			ai_will_do = {
 				factor = 100
 			}

@@ -1,3 +1,44 @@
+BA_kivotos_school_country_category = {
+	TRN_destroy_TVC = {
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		allowed = { always = no }
+		available = { has_completed_focus = TRN_national_guard }
+		visible = {
+			has_idea = TRN_trinity_volunteer_corps_ns
+		}
+		
+		ai_hint_pp_cost = 50
+		custom_cost_text = TRN_destroy_TVC_cost
+		custom_cost_trigger = {
+			NOT = { has_political_power < 50 }
+			OR = {
+				is_ai = yes
+				NOT = { has_equipment = { infantry_equipment < 1000 } }
+			}
+		}
+		days_remove = 30
+
+		ai_will_do = { factor = 10000 } # AI가 안찍으면 자살 함
+
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -50
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				remove_targeted_decision = { decision = TRN_destroy_TVC target = ROOT }
+			}
+			remove_ideas = TRN_trinity_volunteer_corps_ns
+		}
+	}
+}
 TRN_country_collapse_decisions = {
 	TRM_issuance_of_laws_for_local_humanity = {
 		icon = GFX_decision_eng_trade_unions_support
@@ -7046,97 +7087,67 @@ debug_decisions = {
             tag = TRM
 		}
 		complete_effect = {
-			activate_targeted_decision = { target = 65 decision = TRN_Infrastructure_Development } # 작센
-			activate_targeted_decision = { target = 60 decision = TRN_Infrastructure_Development } # 튀링겐
-
-			activate_targeted_decision = { target = 64 decision = TRN_Opelwerk_Brandenburg } # 브란덴부르크
+			
 		}
     }
 }
 TRN_Mika_honor_decision_cat = {
+	TRN_debug_set_honor = {
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		allowed = { original_tag = TRM }
+		available = {
+			is_debug = yes
+			is_ai = no
+		}
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+
+		complete_effect = {
+			set_variable = { TRN_Mika_Honor_var = 50 }
+		}
+	}
+	TRN_debug_get_honor = {
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		allowed = { original_tag = TRM }
+		available = {
+			is_debug = yes
+			is_ai = no
+		}
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+
+		complete_effect = {
+			TRN_increase_Honor_effect = yes
+		}
+	}
+	TRN_debug_lost_honor = {
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		allowed = { original_tag = TRM }
+		available = {
+			is_debug = yes
+			is_ai = no
+		}
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+
+		complete_effect = {
+			TRN_decrease_Honor_effect = yes
+		}
+	}
 
 }
 TRN_economic_decisions_category = {
-	TRN_Infrastructure_Development = {
-		icon = GFX_decision_generic_construction
-
-		allowed = { always = no } #activated by effect
-
-		available = {
-			FROM = { is_owned_and_controlled_by = ROOT }
-			num_of_civilian_factories_available_for_projects > 1
-		}
-
-		cost = 40
-		days_remove = 60
-		fire_only_once = yes
-		state_target = yes
-
-		modifier = {
-			civilian_factory_use = 2
-		}
-
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 0
-				has_political_power < 250
-			}
-		}
-		remove_effect = {
-			FROM = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	TRN_Opelwerk_Brandenburg = {
-		icon = GFX_decision_generic_construction
-
-		allowed = { always = no } #activated by effect
-
-		available = {
-			FROM = { is_owned_and_controlled_by = ROOT }
-			num_of_civilian_factories_available_for_projects > 1
-		}
-
-		cost = 40
-		days_remove = 60
-		fire_only_once = yes
-		state_target = yes
-
-		modifier = {
-			civilian_factory_use = 2
-		}
-
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 0
-				has_political_power < 250
-			}
-		}
-		remove_effect = {
-			FROM = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
 	TRN_Industrial_Regions= {
-		icon = GFX_decision_generic_factory
+		icon = GFX_decision_generic_merge_plant_materiel
 
 		allowed = { always = no } #activated by effect
 
@@ -7163,6 +7174,367 @@ TRN_economic_decisions_category = {
 		remove_effect = {
 			FROM = {
 				add_dynamic_modifier = { modifier = TRM_industrial_region_state }
+			}
+		}
+	}
+	TRN_Infrastructure_Development = {
+		icon = GFX_decision_generic_trucks
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = { is_owned_and_controlled_by = ROOT }
+			num_of_civilian_factories_available_for_projects > 1
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				has_political_power < 300
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	TRN_Opelwerk_Brandenburg = {
+		icon = GFX_decision_generic_motorized
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = { is_owned_and_controlled_by = ROOT }
+			num_of_civilian_factories_available_for_projects > 1
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_political_power < 250
+					check_variable = { TRN_completed_industrial_decisions < 5 }
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	TRN_Mittelland_Canal = {
+		icon = GFX_decision_generic_factory
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = { is_owned_and_controlled_by = ROOT }
+			59 = { is_owned_and_controlled_by = ROOT }
+			num_of_civilian_factories_available_for_projects > 4
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_political_power < 250
+					check_variable = { TRN_completed_industrial_decisions < 5 }
+				}
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = { TRN_completed_industrial_decisions = 1 }
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			59 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	TRN_Lehnmuhle_Dam = {
+		icon = GFX_decision_hol_inundate_water_lines
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 10
+				check_variable = { TRN_completed_industrial_decisions < 6 }
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = { TRN_completed_industrial_decisions = 1 }
+			FROM = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = { id = 11164 }
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+		}
+	}
+	TRN_Peat_Extraction = {
+		icon = GFX_decision_hol_inundate_water_lines
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = { is_owned_and_controlled_by = ROOT }
+			62 = { is_owned_and_controlled_by = ROOT }
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 10
+				check_variable = { TRN_completed_industrial_decisions < 6 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { TRN_completed_industrial_decisions > 5 }
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = { TRN_completed_industrial_decisions = 1 }
+			FROM = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			62 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	TRN_Basis_Scholar_development = {
+		icon = GFX_decision_generic_factory
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = { is_owned_and_controlled_by = ROOT }
+			66 = { is_owned_and_controlled_by = ROOT }
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 10
+				check_variable = { TRN_completed_industrial_decisions < 6 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { TRN_completed_industrial_decisions > 5 }
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = { TRN_completed_industrial_decisions = 1 }
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			66 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	TRN_Stettin_heavy_industry = {
+		icon = GFX_decision_generic_merge_plant_aircraft
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = { is_owned_and_controlled_by = ROOT }
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 10
+				check_variable = { TRN_completed_industrial_decisions < 6 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { TRN_completed_industrial_decisions > 5 }
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = { TRN_completed_industrial_decisions = 1 }
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	TRN_Kimigayama_shipbuilding_plant = {
+		icon = GFX_decision_generic_merge_plant_ship
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = { is_owned_and_controlled_by = ROOT }
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+
+		remove_effect = {
+			add_to_variable = { TRN_completed_industrial_decisions = 1 }
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = dockyard level = 2 }
+				add_building_construction = { type = naval_base level = 1 province = 6332 }
 			}
 		}
 	}

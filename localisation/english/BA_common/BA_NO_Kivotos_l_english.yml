@@ -50,6 +50,7 @@
  intermarium_research_desc: "미엥지모제 공동연구"
 
  sov_pol_war_superevent_trigger_flag: "§Y소비에트 - 폴란드 전쟁§!이 발발했습니다."
+ BA_second_great_northen_war_end: "§Y제2차 대북방전쟁§!이 종료되었습니다."
 
  POL_moving_germans_later: "독일 실향민 이주의 여파"
  POL_moving_germans_later_desc: "폴란드가 병합한 독일 동부 지역에서 실시된 폴란드화 정책으로 인해, 수많은 독일인들이 집을 잃어 [ROOT.getname]에 이주했습니다. 우리는 이들을 돌봐주어야 하는 처지에 놓였습니다."
@@ -957,6 +958,7 @@
  KOR_pak_hon_yong: "박헌영"
  KOR_ji_cheong_cheon: "지청천"
  KOR_yi_un: "이은"
+ KOR_kim_ku: "김구"
  
  BA_London: "런던"
  BA_Trinity_Basilica: "단치히 - 바실리카"

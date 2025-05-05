@@ -467,7 +467,7 @@ country_event = { #자치공화국 작명
 	fire_only_once = yes
 	is_triggered_only = yes
 	picture = "GFX_report_event_RED_campus_day"
-	option = { #뭐라는거야미친놈이
+	option = { #뭐라는 거야미친놈이
 		name = RED_tro_event.6.a
 	}
 	option = { #
@@ -2455,16 +2455,16 @@ country_event = { #노동절 집회
 		set_cosmetic_tag = RED_revolution
 		complete_national_focus = RED_the_threats_abound
 		RED_cherino = {
-			set_nationality = RE2
+			set_nationality = REC
 		}
 		RED_tomoe = {
-			set_nationality = RE2
+			set_nationality = REC
 		}
 		RED_marina = {
-			set_nationality = RE2
+			set_nationality = REC
 		}
 		RED_lev_trotsky = {
-			set_nationality = RE2
+			set_nationality = REC
 		}
 		if = {
 			limit = {
@@ -2473,7 +2473,7 @@ country_event = { #노동절 집회
 				}
 			}
 			RED_yakumo = {
-				set_nationality = RE2
+				set_nationality = REC
 			}
 		}
 		hidden_effect = {
@@ -2485,10 +2485,10 @@ country_event = { #노동절 집회
 				id = RED_minori_event.3
 				days = 2
 			}
+			end_puppet = RE4
 			end_puppet = RE1
 			end_puppet = RE2
 			end_puppet = RE3
-			end_puppet = RE4
 		}
 	}
 }
@@ -2501,22 +2501,48 @@ country_event = { #엄습하는 반혁명
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.5.a
-		RE2 = {
+		REC = {
+			set_capital = {
+				state = 110
+			}
+			transfer_state = 110
+			transfer_state = 920
+			transfer_state = 143
+			transfer_state = 923
+			transfer_state = 37
+			transfer_state = 918
+			if = {
+				limit = {
+					138 = {
+						NOT = {
+							is_controlled_by = RED
+						}
+					}
+				}
+				transfer_state = 138
+			}
 			promote_character = RED_cherino
 			puppet = RE1
+			puppet = RE2
 			puppet = RE3
 			hidden_effect={remove_ideas = { RED_democratic_resistancel_idea RED_democratic_resistancel_week_idea RED_academic_regime_dominance_idea RED_military_government_idea_1 RED_military_government_idea_2 RED_military_government_idea_3 RED_military_government_idea_4 RED_military_government_idea_exit }}
-			set_cosmetic_tag = RE2_antirevolution
 		}
 		hidden_effect = {
+			REC = {
+				add_ideas = RED_doomed_army_idea
+				add_ideas = RED_office_ss_anti_revolution_idea
+			}
 			RE1 = {
-				add_ideas = RED_doomed_army_idea_1
+				add_ideas = RED_doomed_army_idea
+				add_ideas = RED_office_ss_anti_revolution_idea
 			}
 			RE2 = {
-				add_ideas = RED_doomed_army_idea_1
+				add_ideas = RED_doomed_army_idea
+				add_ideas = RED_office_ss_anti_revolution_idea
 			}
 			RE3 = {
-				add_ideas = RED_doomed_army_idea_1
+				add_ideas = RED_doomed_army_idea
+				add_ideas = RED_office_ss_anti_revolution_idea
 			}
 		}
 		
@@ -2542,6 +2568,7 @@ country_event = { #엄습하는 반혁명
 						is_owned_by = RE1
 						is_owned_by = RE2
 						is_owned_by = RE3
+						is_owned_by = REC
 					}
 				}
 				add_claim_by = RED
@@ -2551,7 +2578,7 @@ country_event = { #엄습하는 반혁명
 				days = 7
 			}
 			every_core_state = {
-				add_core_of = RE2
+				add_core_of = REC
 			}
 			RE1 = {
 				set_popularities = {
@@ -2564,6 +2591,11 @@ country_event = { #엄습하는 반혁명
 				}
 			}
 			RE3 = {
+				set_popularities = {
+					communism = 100
+				}
+			}
+			REC = {
 				set_popularities = {
 					communism = 100
 				}
@@ -2592,7 +2624,7 @@ country_event = { #진압된 오슬로 봉기
 		}
 		add_days_mission_timeout = {
 			mission = RED_aproaching_anti_revolution
-			days = 10
+			days = 15
 		}
 		hidden_effect = {
 			country_event = {
@@ -2631,6 +2663,9 @@ country_event = { #공장위원회
 	picture = GFX_report_event_generic_factory
 	immediate = {
 		hidden_effect = {
+			REC = {
+				country_event = RED_minori_event.10
+			}
 			RE2 = {
 				country_event = RED_minori_event.10
 			}
@@ -2792,7 +2827,6 @@ country_event = { #체리노한테 군대 주는 이벤트
 	hidden = yes
 	option = {
 		hidden_effect = {
-			add_ideas = RED_office_ss_anti_revolution_idea
 			division_template = {
 				priority = 1
 				name = "Red winter army"
@@ -2938,9 +2972,6 @@ country_event = { #덴마크 군정청 좆바름
 	picture = GFX_report_event_spr_spanish_civil_war2
 	option = {
 		name = RED_minori_event.14.a
-		annex_country = {
-			target = RE1
-		}
 		add_war_support = 0.1
 		add_equipment_to_stockpile = {
 			type = infantry_equipment_0
@@ -2959,12 +2990,29 @@ country_event = { #구교사 해방
 		name = RED_minori_event.15.a
 		917 = {
 			set_demilitarized_zone = no
+			RED = {
+				custom_effect_tooltip = RED_kivotos_halo_militia_add2_tt
+				hidden_effect = {
+					add_to_variable = {
+						RED.halo_militia_cap = 1
+					}
+					set_division_template_cap = {
+						division_template = "Redwinter Garde populaire"
+						division_cap = ROOT.halo_militia_cap
+					}
+				}
+			}
+			create_unit = {
+				division = "name = \"Regional Defense Division\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RED
+				count = 1
+			}
 		}
 		RED_nodoka = {
-			unit_leader_event = {
-				id = RED_minori_event.1
-				days = 1
-			}
+			#unit_leader_event = {
+			#	id = RED_minori_event.1
+			#	days = 1
+			#}
 		}
 	}
 }
@@ -3412,6 +3460,95 @@ country_event = { #통일전선
 			value = 0.1
 		}
 		add_ideas = RED_anti_cherino_popular_front
+		custom_effect_tooltip = RED_total_war_for_crashing_counter_revolution_tt
+		hidden_effect = {
+			country_event = {
+				id = RED_minori_event.33
+				days = 8
+			}
+		}
+	}
+}
+country_event = { #식량 재분배
+	id = RED_minori_event.33
+	title = RED_minori_event.33.t
+	desc = RED_minori_event.33.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_NOR_quisling_rally
+	option = { #굿
+		name = RED_minori_event.33.a
+		add_days_mission_timeout = {
+			mission = RED_population_issue_no_food
+			days = 60
+		}
+	}
+}
+country_event = { #오슬로 확보
+	id = RED_minori_event.34
+	title = RED_minori_event.34.t
+	desc = RED_minori_event.34.d
+	fire_only_once = yes
+	picture = GFX_report_event_NOR_storting
+	trigger = {
+		tag = RED
+		has_completed_focus = RED_dipose_cherino
+		has_war_with = REC
+		NOT = {
+			has_completed_focus = RED_anti_fascism_policy
+		}
+		controls_state = 110
+	}
+	option = { #굿
+		name = RED_minori_event.34.a
+		add_war_support = 0.05
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2000
+		}
+		110 = {
+			create_unit = {
+				division = "name = \"Shipbuilding Workers\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
+				owner = RED
+				count = 4
+			}
+		}
+	}
+}
+country_event = { #혁명 정부 구성
+	id = RED_minori_event.35
+	title = RED_minori_event.35.t
+	desc = RED_minori_event.35.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_communists_cheer
+	option = { #임시위원회
+		name = RED_minori_event.35.a
+		RED_population_solve = yes
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -1500
+		}
+		add_power_balance_value = {
+			id = RED_minori_bop
+			value = 0.05
+		}
+	}
+	option = { #혁명위원회
+		name = RED_minori_event.35.b
+	}
+}
+country_event = { #저지된 반혁명
+	id = RED_minori_event.36
+	title = RED_minori_event.36.t
+	desc = RED_minori_event.36.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_sanation_left_victory
+	option = { #
+		name = RED_minori_event.36.a
+		add_stability = 0.1
+		add_political_power = 50
 	}
 }
 
@@ -3668,7 +3805,7 @@ country_event = { # 핀란드 점령
 		}
 	}
 }
-country_event = { # 군정청: 민주주의 지지도가 30% 이상일때 격발 히든 이벤트
+country_event = { # 군정청: 민주주의 지지도가 35% 이상일때 격발 히든 이벤트
 	id = RED_instability_system.1
 	title = RED_instability_system.1.t
 	desc = RED_instability_system.1.d
@@ -3682,7 +3819,7 @@ country_event = { # 군정청: 민주주의 지지도가 30% 이상일때 격발
 	trigger = {
 		RED_this_country_is_under_military_government = yes
 		RED_instability_system_operational = yes
-		democratic > 0.30
+		democratic > 0.35
 	}
 
 	immediate = {
@@ -3723,8 +3860,12 @@ country_event = { # 군정청: 무작위로 발생하는 이벤트
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id = RED_instability_system.3 days = 80 random_days = 70 }
+			country_event = { id = RED_instability_system.3 days = 80 random_days = 25 }
 		}
+	}
+
+	trigger = {
+		has_idea = RED_democratic_resistancel_idea
 	}
 	
 	option = {
@@ -3824,6 +3965,141 @@ country_event = { # 군정청: 00의 봄
 		}
 	}
 	
+	option = { #독립!
+		name = RED_instability_system.4.a
+		trigger = {
+			always = no
+		}
+		if = { limit = { is_subject = yes }
+			overlord = {
+				save_global_event_target_as = RED_instability_system_independence_overlord_target
+				set_truce = {
+					target = ROOT
+					days = 1080
+				}
+			}
+			set_global_flag = RED_instability_system_rebellion_overlordyes_flag
+		}
+		start_civil_war = {
+			ideology = democratic
+			size = 0
+			save_event_target_as = RED_instability_system_independence_country_target
+		}
+		event_target:RED_instability_system_independence_country_target = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+			set_technology = {
+				kivotos_infantry_weapons = 1
+			}
+			set_variable = { ROOT.halo_infantry_cap = 6 } # 사단 제한, 헤일로 보병의 사단 제한과 같아야 함
+			set_country_flag = kivotos_research_on
+			division_template = {
+				name = "Scandinavian Independence Army"
+				priority = 1
+				division_names_group = SWE_INF_01
+				is_locked = no
+
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			every_controlled_state = {
+				create_unit = {
+					division = "name = \"Scandinavian Independence Army\" division_template = \"Scandinavian Independence Army\" start_experience_factor = 0.8 start_equipment_factor = 0.35"
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Scandinavian Independence Army\" division_template = \"Scandinavian Independence Army\" start_experience_factor = 0.5 start_equipment_factor = 0.10"
+					owner = PREV
+				}
+			}
+			if = { limit = { country_exists = RE1 }
+				set_truce = {
+					target = RE1
+					days = 280
+				}
+			}
+			if = { limit = { country_exists = RE2 }
+				set_truce = {
+					target = RE2
+					days = 280
+				}
+			}
+			if = { limit = { country_exists = RE3 }
+				set_truce = {
+					target = RE3
+					days = 280
+				}
+			}
+			if = { limit = { country_exists = RE4 }
+				set_truce = {
+					target = RE4
+					days = 280
+				}
+			}
+			set_country_flag = RED_instability_system_military_government_rebellion
+			country_event = RED_instability_system.5
+			if = { limit = { ROOT = { is_ai = no } }
+				change_tag_from = ROOT
+			}
+		}
+	}
+	option = { #진압! (괴뢰국 전용)
+		name = RED_instability_system.4.b
+		trigger = {
+			always = no
+			is_subject = yes
+		}
+		start_civil_war = {
+			ideology = democratic
+			size = 0.5
+			save_event_target_as = RED_instability_system_independence_country_target
+		}
+
+		event_target:RED_instability_system_independence_country_target = {
+			division_template = {
+				name = "Scandinavian Independence Army"
+				priority = 1
+				division_names_group = SWE_INF_01
+				is_locked = no
+
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			every_controlled_state = {
+				create_unit = {
+					division = "name = \"Scandinavian Independence Army\" division_template = \"Scandinavian Independence Army\" start_experience_factor = 0.8 start_equipment_factor = 0.35"
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Scandinavian Independence Army\" division_template = \"Scandinavian Independence Army\" start_experience_factor = 0.5 start_equipment_factor = 0.10"
+					owner = PREV
+				}
+			}
+			ROOT = {
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+				add_civil_war_target = PREV
+			}
+			country_event = RED_instability_system.5
+		}
+	}
+
 	option = { #독립!
 		name = RED_instability_system.4.a	
 		if = { limit = { is_subject = yes }

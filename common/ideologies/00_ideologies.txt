@@ -370,6 +370,11 @@ ideologies = {
 				color = { 50 87 56 }
 			}
 
+			pure_socialism = {
+				can_be_randomly_selected = no
+				color = { 119 15 0 }
+			}
+
 		#BA_MOD_FIX/
 		}
 

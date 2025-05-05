@@ -246,3 +246,41 @@ GEH_ako_route_dating_sim_ending_effect = {
 		id = GEH_ako_love_balance
 	}
 }
+
+GEH_OGAS_increase_effect = {
+	if = {
+		limit = { 
+			NOT = { has_idea = GEH_ogas_1 } 
+			NOT = { has_idea = GEH_ogas_2 } 
+			NOT = { has_idea = GEH_ogas_3 } 
+			NOT = { has_idea = GEH_ogas_4 } 
+		}
+		add_ideas = GEH_ogas_1
+	}
+	else_if = {
+		limit = { has_idea = GEH_ogas_1 }
+		swap_ideas = {
+			add_idea = GEH_ogas_2
+			remove_idea = GEH_ogas_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_ogas_2 }
+		swap_ideas = {
+			add_idea = GEH_ogas_3
+			remove_idea = GEH_ogas_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_ogas_3 }
+		swap_ideas = {
+			add_idea = GEH_ogas_4
+			remove_idea = GEH_ogas_3
+		}
+	}
+	else = {
+		effect_tooltip = {
+			add_ideas = GEH_ogas_4
+		}
+	}
+}

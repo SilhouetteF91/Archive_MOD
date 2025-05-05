@@ -97,6 +97,25 @@ defined_text = {
 					has_idea = RED_military_government_idea_3 
 					has_idea = RED_military_government_idea_4 
 				}
+				has_idea = RED_democratic_resistancel_week_idea_ori
+			}
+			RE1 = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+		}
+		localization_key = RED_military_government_1tt
+	}
+	text = {
+		trigger = {
+			RE1 = {
+				NOT = {
+					has_idea = RED_military_government_idea_1 
+					has_idea = RED_military_government_idea_2 
+					has_idea = RED_military_government_idea_3 
+					has_idea = RED_military_government_idea_4 
+					has_idea = RED_democratic_resistancel_week_idea_ori
+				}
 			}
 			RE1 = {
 				exists = yes
@@ -167,6 +186,25 @@ defined_text = {
 					has_idea = RED_military_government_idea_2 
 					has_idea = RED_military_government_idea_3 
 					has_idea = RED_military_government_idea_4 
+				}
+				has_idea = RED_democratic_resistancel_week_idea_ori
+			}
+			RE2 = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+		}
+		localization_key = RED_military_government_1tt
+	}
+	text = {
+		trigger = {
+			RE2 = {
+				NOT = {
+					has_idea = RED_military_government_idea_1 
+					has_idea = RED_military_government_idea_2 
+					has_idea = RED_military_government_idea_3 
+					has_idea = RED_military_government_idea_4 
+					has_idea = RED_democratic_resistancel_week_idea_ori
 				}
 			}
 			RE2 = {
@@ -239,6 +277,25 @@ defined_text = {
 					has_idea = RED_military_government_idea_3 
 					has_idea = RED_military_government_idea_4 
 				}
+				has_idea = RED_democratic_resistancel_week_idea_ori
+			}
+			RE3 = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+		}
+		localization_key = RED_military_government_1tt
+	}
+	text = {
+		trigger = {
+			RE3 = {
+				NOT = {
+					has_idea = RED_military_government_idea_1 
+					has_idea = RED_military_government_idea_2 
+					has_idea = RED_military_government_idea_3 
+					has_idea = RED_military_government_idea_4 
+					has_idea = RED_democratic_resistancel_week_idea_ori
+				}
 			}
 			RE3 = {
 				exists = yes
@@ -293,6 +350,25 @@ defined_text = {
 					has_idea = RED_military_government_idea_2 
 					has_idea = RED_military_government_idea_3 
 					has_idea = RED_military_government_idea_4 
+				}
+				has_idea = RED_democratic_resistancel_week_idea_ori
+			}
+			RE4 = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+		}
+		localization_key = RED_military_government_1tt
+	}
+	text = {
+		trigger = {
+			RE4 = {
+				NOT = {
+					has_idea = RED_military_government_idea_1 
+					has_idea = RED_military_government_idea_2 
+					has_idea = RED_military_government_idea_3 
+					has_idea = RED_military_government_idea_4 
+					has_idea = RED_democratic_resistancel_week_idea_ori
 				}
 			}
 			RE4 = {
@@ -464,5 +540,208 @@ defined_text = {
 			}
 		}
 		localization_key = RED_redwinter_rightwing_1tt
+	}
+}
+
+defined_text = {
+	name = RED_northern_sovereignty_war_use_RE1
+	text = {
+		trigger = {
+			RE1 = {
+				NOT = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_use_RE1_tt
+	}
+	text = {
+		trigger = {
+			RE1 = {
+				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			}
+		}
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = RED_northern_sovereignty_war_use_RE2
+	text = {
+		trigger = {
+			RE2 = {
+				NOT = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_use_RE2_tt
+	}
+	text = {
+		trigger = {
+			RE2 = {
+				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			}
+		}
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = RED_northern_sovereignty_war_use_RE3
+	text = {
+		trigger = {
+			RE3 = {
+				NOT = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_use_RE3_tt
+	}
+	text = {
+		trigger = {
+			RE3 = {
+				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			}
+		}
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = RED_northern_sovereignty_war_use_RE1_side1
+	text = {
+		trigger = {
+			RE1 = {
+				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_use_RE1_tt
+	}
+	text = {
+		trigger = {
+			RE1 = {
+				NOT = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
+			}
+		}
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = RED_northern_sovereignty_war_use_RE2_side1
+	text = {
+		trigger = {
+			RE2 = {
+				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_use_RE2_tt
+	}
+	text = {
+		trigger = {
+			RE2 = {
+				NOT = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
+			}
+		}
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = RED_northern_sovereignty_war_use_RE3_side1
+	text = {
+		trigger = {
+			RE3 = {
+				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_use_RE3_tt
+	}
+	text = {
+		trigger = {
+			RE3 = {
+				NOT = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
+			}
+		}
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = RED_northern_sovereignty_war_rdy_process_tt
+	text = {
+		trigger = {
+			check_variable = {
+				global.RED_northern_sovereignty_war_rdy_process = 1
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_rdy_process_1_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				global.RED_northern_sovereignty_war_rdy_process = 2
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_rdy_process_2_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				global.RED_northern_sovereignty_war_rdy_process = 3
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_rdy_process_3_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				global.RED_northern_sovereignty_war_rdy_process = 4
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_rdy_process_4_tt
+	}
+	text = {
+		localization_key = RED_northern_sovereignty_war_rdy_process_ERR_tt
+	}
+}
+defined_text = {
+	name = RE4_northern_sovereignty_war_rdy_process_tt
+	text = {
+		trigger = {
+			check_variable = {
+				global.RE4_northern_sovereignty_war_rdy_process = 1
+			}
+		}
+		localization_key = RE4_northern_sovereignty_war_rdy_process_1_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				global.RE4_northern_sovereignty_war_rdy_process = 2
+			}
+		}
+		localization_key = RE4_northern_sovereignty_war_rdy_process_2_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				global.RE4_northern_sovereignty_war_rdy_process = 3
+			}
+		}
+		localization_key = RE4_northern_sovereignty_war_rdy_process_3_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				global.RE4_northern_sovereignty_war_rdy_process = 4
+			}
+		}
+		localization_key = RE4_northern_sovereignty_war_rdy_process_4_tt
+	}
+	text = {
+		localization_key = RED_northern_sovereignty_war_rdy_process_ERR_tt
 	}
 }

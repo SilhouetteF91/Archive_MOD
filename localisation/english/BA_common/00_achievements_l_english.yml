@@ -28,6 +28,8 @@
  MIL_extinguished_flame_DESC: "밀레니엄으로 프랑스 레지스탕스를 소탕하세요"
  MIL_SVO_NAME: "특별 군사 작전"
  MIL_SVO_DESC: "밀레니엄으로 60일 이내로 스페인을 점령하세요"
+ MIL_unexpected_variable_NAME: "뜻 밖의 변수"
+ MIL_unexpected_variable_DESC: "쿠로사키 코유키를 지도자로 등장시키세요\n\n§L니.하.하.하.§!"
 
  # 트리니티
  TRM_The_New_Order_NAME: "키보토스의 마지막 나날들"

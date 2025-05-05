@@ -209,40 +209,16 @@ HEU_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
-		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
+		name = HEU_PRO_GEH_FASCISM
+		text = "RULE_OPTION_PRO_GEH_FASCISM"
 		desc = "RULE_OPTION_HISTORICAL_HEU_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = WE_ARE_GEH
-		text = "RULE_OPTION_WE_ARE_GEH"
-		desc = "RULE_OPTION_WE_ARE_GEH_HEU_DESC"
-		allow_achievements = no
-	}
-	option = {
-		name = GEH_OK
-		text = "RULE_OPTION_GEH_OK"
-		desc = "RULE_OPTION_GEH_OK_HEU_DESC"
-		allow_achievements = no
-	}
-	option = {
-		name = GEM_OK
-		text = "RULE_OPTION_GEM_OK"
-		desc = "RULE_OPTION_GEM_OK_HEU_DESC"
-		allow_achievements = no
-	}
-	option = {
-		name = GEM_OK_PUPPET
-		text = "RULE_OPTION_GEM_OK_PUPPET"
-		desc = "RULE_OPTION_GEM_OK_PUPPET_HEU_DESC"
-		allow_achievements = no
-	}
-	option = {
-		name = RANDOM
-		text = "RULE_OPTION_RANDOM"
-		desc = "RULE_OPTION_RANDOM_AI_DESC"
-		allow_achievements = no
+		name = HEU_ANTI_GEH_COMMUNISM
+		text = "RULE_OPTION_ANTI_GEH_COMMUNISM"
+		desc = "RULE_OPTION_ANTI_GEH_COMMUNISM_DESC"
+		allow_achievements = yes
 	}
 }
 #BA_MOD_FIX/

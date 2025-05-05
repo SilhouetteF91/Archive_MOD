@@ -10,6 +10,7 @@ add_namespace = trnfla # 플레이버 이벤트
 add_namespace = trinity 
 add_namespace = trnhonor # 명예
 add_namespace = trinitynews # 뉴스 이벤트
+add_namespace = trnfor
 country_event = {
 	id = TRM_event.1
 	title = TRM_event.1.t
@@ -9256,8 +9257,11 @@ country_event = { # 학원경제개발부 부장은 누구로 할까요
 			trait = TRN_AED_club_manager
 		}
 		set_country_flag = TRN_hjalmar_schacht_flag
+		effect_tooltip = { country_event = trnfla.19 }
 		hidden_effect = {
-			
+			TRN_hjalmar_schacht = {
+				unit_leader_event = { id = trnfla.19 }
+			}
 		}
 
     }
@@ -9289,7 +9293,7 @@ country_event = { # 보안국 재편
     }
 }
 
-country_event = { # 보안국 재편
+country_event = { # 안보상황
 	id = trinity.36
 	title = trinity.36.t
 	desc = trinity.36.desc
@@ -9300,13 +9304,131 @@ country_event = { # 보안국 재편
 
 	option = { 
 		name = trinity.36.a
-		IF = {
-			limit = { has_intelligence_agency = no }
-			create_intelligence_agency = {
-				name = TRM_security_service_of_the_trinity
-				icon = GFX_intelligence_agency_logo_generic_6
+		add_war_support = 0.05
+    }
+}
+
+country_event = { # 소규모 동아리들의 운명
+	id = trinity.37
+	title = trinity.37.t
+	desc = trinity.37.desc
+	picture = GFX_event_Trinity_Campus
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = { 
+		name = trinity.37.a
+		add_political_power = 75
+		add_stability = -0.03
+    }
+
+	option = { 
+		name = trinity.37.b
+		add_political_power = -45
+		add_stability = 0.05
+    }
+}
+
+country_event = { # 우리만의 자본가
+	id = trinity.38
+	title = trinity.38.t
+	desc = { 
+		text = trinity.38.desc_ui
+		trigger = {
+			TRN_Kozeki_Ui = { has_trait = TRN_AED_club_manager }
+		}
+	}
+	desc = { 
+		text = trinity.38.desc_Sch
+		trigger = {
+			NOT = { TRN_Kozeki_Ui = { has_trait = TRN_AED_club_manager } }
+		}
+	}
+	picture = GFX_event_Trinity_Campus
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = { 
+		name = trinity.38.a
+		
+		add_political_power = -20
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
 			}
-			else = { gain_random_agency_upgrade = yes }
+		}
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
+
+    }
+
+	option = { 
+		name = trinity.38.b
+		
+		add_political_power = -70
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.05
+		}
+
+    }
+
+	option = { 
+		name = trinity.38.c
+		trigger = {
+			TRN_Kozeki_Ui = { has_trait = TRN_AED_club_manager }
+		}
+		add_stability = -0.03
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
+    }
+
+	option = { 
+		name = trinity.38.d
+		trigger = {
+			NOT = { TRN_Kozeki_Ui = { has_trait = TRN_AED_club_manager } }
+		}
+		add_political_power = -125
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.05
 		}
 
     }
@@ -9455,6 +9577,51 @@ news_event = {
 			TRN_akfl = {
 				unit_leader_event = { id = trnfla.1000 }
 			}
+		}
+	}
+}
+news_event = {
+	id = trinitynews.4
+	title = trinitynews.4.t
+	desc = trinitynews.4.desc
+	picture = GFX_news_event_trinity_building
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = trinitynews.4.a
+		trigger = {
+			TAG = TRM
+		}
+	}
+	option = {
+		name = trinitynews.4.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = TRM }
+			NOT = { original_tag = GEH }
+			NOT = { original_tag = GEM }
+			NOT = { original_tag = HEU }
+		}
+	}
+	option = {
+		name = trinitynews.4.c
+		trigger = {
+			OR = {
+				original_tag = GEM
+				original_tag = GEH
+				original_tag = HEU
+			}
+		}
+	}
+	option = {
+		name = trinitynews.4.d
+		trigger = {
+			NOT = { Kivotos_tag = yes }
 		}
 	}
 }
@@ -9839,5 +10006,18 @@ unit_leader_event = { # 우이 당황
 
 	option = {
 		name = trnfla.18.a 
+	}
+}
+unit_leader_event = { # 얄마르 샤흐트 - 작성 예정
+	id = trnfla.19
+	title = trnfla.19.t
+	desc = trnfla.19.desc
+	picture = GFX_event_kozeki_ui
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnfla.19.a 
 	}
 }

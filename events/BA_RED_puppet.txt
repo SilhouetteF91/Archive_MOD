@@ -371,3 +371,160 @@ country_event = { # 관리감독위원회 설립
 		
 	}
 }
+country_event = { # 마리나 파견
+	id = redpuppet.16
+	title = redpuppet.16.t
+	desc = redpuppet.16.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.16.a
+		ai_chance = { base = 100 }
+		set_global_flag = RE4_marina_global_flag
+		add_country_leader_role = {
+			character = RE4_marina
+			promote_leader = yes
+			country_leader = {
+				ideology = war_communism
+				traits = {
+					office_commander
+				}
+			}
+		}
+	}
+}
+country_event = { # 이반 쿠팔라의 스캔들
+	id = redpuppet.17
+	title = redpuppet.17.t
+	desc = redpuppet.17.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.17.a
+		ai_chance = { base = 100 }
+		country_event = redpuppet.18
+	}
+}
+country_event = { # 이반 쿠팔라의 스캔들
+	id = redpuppet.18
+	title = redpuppet.18.t
+	desc = redpuppet.18.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.18.a
+		ai_chance = { base = 100 }
+		set_global_flag = redpuppet_22_trigger_flag
+		if = {
+			limit = { has_global_flag = RE4_finland_war_flag_RE4WIN }
+			RED = { country_event = { id = redpuppet.22 days = 15 } }
+		}
+	}
+}
+country_event = { # 군정청 붕괴 비활성!
+	id = redpuppet.19
+	title = redpuppet.19.t
+	desc = redpuppet.19.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.19.a
+		trigger = {
+			NOT = { original_tag = RED }
+		}
+		add_war_support = 0.05
+		add_political_power = 20
+		if = {
+			limit = { has_idea = RED_democratic_resistancel_week_idea }
+			swap_ideas = {
+				add_idea = RED_democratic_resistancel_week_idea_ori
+				remove_idea = RED_democratic_resistancel_week_idea
+			}
+		}
+		if = {
+			limit = { has_idea = RED_democratic_resistancel_idea }
+			swap_ideas = {
+				add_idea = RED_democratic_resistancel_week_idea_ori
+				remove_idea = RED_democratic_resistancel_idea
+			}
+		}
+		RED_instability_system_remove_effect = yes
+	}
+	option = { 
+		name = redpuppet.19.b
+		trigger = {
+			original_tag = RED
+		}
+		add_stability = -0.05
+		add_war_support = 0.05
+		RE4 = { country_event = { id = redpuppet.16 hours = 12 } }
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = redpuppet_22_trigger_flag }
+				country_event = { id = redpuppet.22 days = 15 }
+			}
+		}
+	}
+}
+country_event = { # 어쩌면?
+	id = redpuppet.20
+	title = redpuppet.20.t
+	desc = redpuppet.20.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.20.a
+		add_political_power = 10
+		add_war_support = -0.05
+	}
+}
+country_event = { # 보안위원회 이관
+	id = redpuppet.21
+	title = redpuppet.21.t
+	desc = redpuppet.21.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.21.a
+		add_war_support = -0.05
+		set_country_flag = redpuppet_go_to_marina_flag
+		custom_effect_tooltip = redpuppet_go_to_marina_tt
+	}
+}
+country_event = { # 스캔들 발견!
+	id = redpuppet.22
+	title = redpuppet.22.t
+	desc = redpuppet.22.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.22.a
+		add_war_support = -0.01
+		set_country_flag = RED_northern_sovereignty_war_unlock_flag
+		unlock_decision_category_tooltip = RED_northern_sovereignty_war
+		if = {
+			limit = {
+				check_variable = {
+					global.RED_northern_sovereignty_war_rdy_process = 0
+				}
+			}
+			set_variable = {
+				global.RED_northern_sovereignty_war_rdy_process = 1
+			}
+		}
+	}
+}

@@ -1171,7 +1171,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = GEH_hidden.3
+	id = GEH_hidden.5
 
 	hidden = yes
 
@@ -1328,7 +1328,7 @@ country_event = { #
 		hidden_effect = {
 			activate_shine_on_focus = GEH_three_congress_focus_no_hina
 			set_country_flag = { flag = GEH_three_congress_focus_no_hina_in_progress_flag days = 35 value = 1 }
-			country_event = { id = GEH_hidden.3 days = 35 }
+			country_event = { id = GEH_hidden.5 days = 35 }
 			news_event = { id = GEH_news.6 }
 		}
 	}
@@ -1544,11 +1544,43 @@ country_event = { # 선도부는 뭐 하는 거야?!
 	}
 }
 
+country_event = { # 룩셈부르크 규정의 폐지
+	id = GEH.flavor_event.11
+	title = GEH.flavor_event.11.t
+	desc = GEH.flavor_event.11.desc
+	picture = GFX_report_event_generic_reloading
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.11.a 
+		
+	}
+}
+
+country_event = { # 리쿠하치마 아루의 정신 질환 치료
+	id = GEH.flavor_event.13
+	title = GEH.flavor_event.13.t
+	desc = GEH.flavor_event.13.desc
+	picture = GFX_report_event_aru_rikuhachima_dress
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.13.a 
+		HEU_aru = {
+			add_trait = {
+				trait = trait_cautious
+			}
+		}
+	}
+}
+
 country_event = { # 아마우 아코, 만취 상태의 전화
 	id = GEH.flavor_event.14
 	title = GEH.flavor_event.14.t
 	desc = GEH.flavor_event.14.desc
-	picture = GFX_report_event_generic_city
+	picture = GFX_report_event_ako_amau_crying_2
 
 	trigger = {
 		NOT = { has_global_flag = GEH_BTBOTS_END_flag }
@@ -1559,6 +1591,11 @@ country_event = { # 아마우 아코, 만취 상태의 전화
 	option = { 
 		name = GEH.flavor_event.14.a 
 		
+		hidden_effect = {
+			GEH_dkzh = {
+				unit_leader_event = { id = GEH.flavor_event.25 days = 1 }
+			} 
+		}
 	}
 }
 
@@ -1597,6 +1634,56 @@ unit_leader_event = { #정보부 조사 - 협력적 현지인
 			ideology = fascism
 			popularity = 0.04
 		}
+	}
+}
+
+country_event = { # 게헨나-밀레니엄 야구 친선경기
+	id = GEH.flavor_event.23
+	title = GEH.flavor_event.23.t
+	desc = GEH.flavor_event.23.desc
+	picture = GFX_report_event_generic_city
+
+	trigger = {
+		NOT = { has_war_with = MIL }
+		country_exists = MIL
+	}
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.23.a 
+		hidden_effect = {
+			MIL = { country_event = { id = GEH.flavor_event.24 } }
+		}
+
+		add_political_power = 5
+	}
+}
+
+country_event = { # 게헨나-밀레니엄 야구 친선경기
+	id = GEH.flavor_event.24
+	title = GEH.flavor_event.23.t
+	desc = GEH.flavor_event.23.desc
+	picture = GFX_report_event_generic_city
+
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.24.a 
+
+	}
+}
+
+unit_leader_event = { #아무 일도 없었어
+	id = GEH.flavor_event.25
+	title = GEH.flavor_event.25.t
+	desc = GEH.flavor_event.25.desc
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.flavor_event.25.a 
+
 	}
 }
 
@@ -2004,6 +2091,75 @@ country_event = { # 선도부장 임명식 - 오니카타 카요코
 	}
 }
 
+country_event = { # 현상 유지
+	id = GEH.event.200
+	title = GEH.event.200.t
+	desc = GEH.event.200.desc
+	picture = GFX_event_mega_cities_GEH_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.200.a 
+
+	}
+}
+
+country_event = { # 사회민주당과의 협상
+	id = GEH.event.201
+	title = GEH.event.201.t
+	desc = GEH.event.201.desc
+	picture = GFX_report_event_german_politician_speech
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.201.a 
+
+	}
+}
+
+country_event = { # 조율의 기술
+	id = GEH.event.202
+	title = GEH.event.202.t
+	desc = GEH.event.202.desc
+	picture = GFX_report_event_hina_sorasaki_generic_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.202.a 
+
+	}
+}
+
+unit_leader_event = { #만마전과 협상?
+	id = GEH.event.203
+	title = GEH.event.203.t
+	desc = GEH.event.203.desc
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.203.a 
+
+	}
+}
+
+country_event = { # 바이에른 군벌?
+	id = GEH.event.204
+	title = GEH.event.204.t
+	desc = GEH.event.204.desc
+	picture = GFX_report_event_german_troops
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.204.a 
+
+	}
+}
+
 country_event = { #[GEH.GetName]의 [HEU.GetName] 병합
 	id = GEH.event.1000
 	title = GEH.event.1000.t
@@ -2124,7 +2280,12 @@ country_event = { #선도부장 직속 흥신소 68
 
 	option = { 
 		name = GEH.event.1002.a
-
+		if = {
+			limit = {
+				has_global_flag = HEU_com_route_flag
+			}
+			country_event = { id = GEH.flavor_event.13 days = 14 }
+		}
 	}
 }
 
@@ -2155,6 +2316,172 @@ country_event = { #기계의 몸을 한 신
 	option = { 
 		name = GEH.event.1004.a
 		country_event = { id = GEH.event.1003 days = 3 }
+	}
+}
+
+country_event = { #영도자의 부재
+	id = GEH.event.1005
+	title = GEH.event.1005.t
+	desc = GEH.event.1005.desc
+
+	picture = GFX_report_event_generic_weebs
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1005.a
+		custom_effect_tooltip = GEH_robot_hina_route_tt
+		set_country_flag = GEH_robot_hina_route
+	}
+}
+
+country_event = { #소라사키 히나 실종
+	id = GEH.event.1006
+	title = GEH.event.1006.t
+	desc = GEH.event.1006.desc
+
+	picture = GFX_report_event_ako_amau_generic_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1006.a
+		
+	}
+}
+
+country_event = { #소라사키 신앙
+	id = GEH.event.1007
+	title = GEH.event.1007.t
+	desc = GEH.event.1007.desc
+
+	picture = GFX_event_GEH_hina_eventpicture
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1007.a
+
+	}
+}
+
+country_event = { #히나는 가짜다!
+	id = GEH.event.1008
+	title = GEH.event.1008.t
+	desc = GEH.event.1008.desc
+
+	picture = GFX_event_mega_cities_GEH_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1008.a
+
+	}
+}
+
+country_event = { #정부 부처 개혁
+	id = GEH.event.1009
+	title = GEH.event.1009.t
+	desc = GEH.event.1009.desc
+
+	picture = GFX_report_event_ako_amau_generic_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1009.a
+
+	}
+}
+
+country_event = { #오가스 프로그램
+	id = GEH.event.1010
+	title = GEH.event.1010.t
+	desc = GEH.event.1010.desc
+
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1010.a
+
+	}
+}
+
+country_event = { #완성된 계획경제
+	id = GEH.event.1011
+	title = GEH.event.1011.t
+	desc = GEH.event.1011.desc
+
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1011.a
+
+	}
+}
+
+country_event = { #바알 수색 작전
+	id = GEH.event.1012
+	title = GEH.event.1012.t
+	desc = GEH.event.1012.desc
+
+	picture = GFX_report_event_generic_door
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1012.a
+
+	}
+}
+
+country_event = { #무지는 행복
+	id = GEH.event.1014
+	title = GEH.event.1014.t
+	desc = GEH.event.1014.desc
+
+	picture = GFX_report_event_generic_door
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1014.a
+
+	}
+}
+
+country_event = { #바알 사냥 - 1
+	id = GEH.event.1015
+	title = GEH.event.1015.t
+	desc = GEH.event.1015.desc
+
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1015.a
+		country_event = { id = GEH.event.1016 }
+	}
+}
+
+country_event = { #바알 사냥 - 2
+	id = GEH.event.1016
+	title = GEH.event.1016.t
+	desc = GEH.event.1016.desc
+
+	picture = GFX_report_event_generic_flowers
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1016.a
+
 	}
 }
 
@@ -2720,6 +3047,70 @@ news_event = {
 	}
 	option = {
 		name = GEH_news.11.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 리쿠하치마 내각 출범
+news_event = {
+	id = GEH_news.12
+	title = GEH_news.12.t
+	desc = GEH_news.12.desc
+	picture = GFX_news_event_GEH_news_congress_1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.12.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.12.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.12.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 소라사키 히나의 은퇴식
+news_event = {
+	id = GEH_news.13
+	title = GEH_news.13.t
+	desc = GEH_news.13.desc
+	picture = GFX_news_event_GEH_news_congress_1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.13.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.13.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.13.c
 		trigger = {
 			Kivotos_tag = no
 		}

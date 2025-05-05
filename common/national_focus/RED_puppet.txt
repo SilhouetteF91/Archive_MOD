@@ -9,7 +9,6 @@
 				original_tag = RE1
 				original_tag = RE2
 				original_tag = RE3
-				original_tag = RE4
 			}
 		}
 	}
@@ -23,24 +22,15 @@
 	initial_show_position = {
 		focus = REPP_industrial_effort
 	}
-	shared_focus = RE4_create_of_defense_committee
-	shared_focus = RE4_Defense_Commission_Investment
 
 	focus = {
         id = REPP_army_effort
-        text = army_effort
         text = army_effort
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 1
 		y = 0
 		cost = 10
 		search_filters = {  FOCUS_FILTER_RESEARCH }
-
-		allow_branch = {
-			NOT = {
-				original_tag = RE4
-			}
-		}
 		
 		available_if_capitulated = yes
 
@@ -293,12 +283,6 @@
 		cost = 10
 		
 		search_filters = {   FOCUS_FILTER_RESEARCH }
-
-		allow_branch = {
-			NOT = {
-				original_tag = RE4
-			}
-		}
 
 		available_if_capitulated = yes
 
@@ -613,12 +597,6 @@
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
-
-		allow_branch = {
-			NOT = {
-				original_tag = RE4
-			}
-		}
 		
 		available_if_capitulated = yes
 
@@ -989,12 +967,6 @@
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-
-		allow_branch = {
-			NOT = {
-				original_tag = RE4
-			}
-		}
 		
 		available_if_capitulated = yes
 
@@ -1783,1407 +1755,311 @@
 		}
 	}
 
-}
 
-	shared_focus = {
-		id = RE4_create_of_defense_committee
-		
-		dynamic = yes 
-		
-		icon = GFX_focus_REDWINTER_defense_committee
-
-		cost = 2
-
-		text_icon = REDWINTER_RE4_focus_style
-
-		x = 11
+	focus = {
+        id = REPP_socialist_culture_struggle
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 20
 		y = 0
-		offset = {
-			x = -11
-			y = 10
-			trigger = {
-				original_tag = RED
-			}
-		}
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			original_tag = RE4
-			OR = {
-				is_in_faction_with = RED
-				is_subject_of = RED
-			}
-		} 
-
-		bypass = {
-			original_tag = RE4
-			NOT = {
-				OR = {
-					is_in_faction_with = RED
-					is_subject_of = RED
-				}
-				has_war_with = FIN
-			}
-		}
-
-		ai_will_do = {
-			base = 999
-		}
-
-		available_if_capitulated = no
-
-		select_effect = {
-			country_event = { id = redpuppet.10 }
-			FIN = {
-				country_event = { id = redpuppet.10 }
-			}
-		}
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
 
 		completion_reward = {
-			
-			IF = {
-				limit = { original_tag = RE4 }
-				add_political_power = 50
-				RED = {
-					country_event = { id = redpuppet.1 days = 04 }
-				}
-			}
-			ELSE_IF = {
-				limit = { original_tag = RED }
-				effect_tooltip = {
-					RE4 = { 
-						country_event = { id = redpuppet.10 }
-						add_political_power = 50 
-					}
-					country_event = { id = redpuppet.1 days = 04 }
-				}
-			}
-
-			hidden_effect = {
-				RED = { unlock_national_focus = RE4_create_of_defense_committee }
-			}
-
+			add_stability = 0.10
 		}
 	}
-
-	shared_focus = {
-		id = RE4_Invitation_of_military_advisors
-		
-		dynamic = yes 
-		
-		icon = GFX_focus_generic_military_academy
-
-		cost = 2
-
-		text_icon = REDWINTER_RE4_focus_style
-		
-		
-		prerequisite = { focus = RE4_create_of_defense_committee }
-
-		relative_position_id = RE4_create_of_defense_committee
-		x = -1
-		y = 1
-
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			original_tag = RE4
-			has_war_with = FIN
-		} 
-		ai_will_do = {
-			base = 500
-		}
-
-		available_if_capitulated = no
-
-		completion_reward = {
-			
-			IF = {
-				limit = { original_tag = RE4 }
-				RED = { 
-					country_event = { id = redpuppet.4 days = 04 } 
-				}
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = { add_ideas = RE4_redwinter_military_advisors }
-				custom_effect_tooltip = tooltip_white_line
-				add_days_mission_timeout = {
-					mission = RE4_Northern_War_timeattack
-					days = -70
-				}
-				hidden_effect = {
-					FIN = {
-						add_days_mission_timeout = {
-							mission = RE4_Northern_War_timeattack_FIN
-							days = -70
-						}
-					}
-				}
-			}
-			ELSE_IF = {
-				limit = { original_tag = RED }
-				effect_tooltip = {
-					country_event = { id = redpuppet.4 }
-				}
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					add_ideas = RED_redwinter_military_advisors
-					custom_effect_tooltip = tooltip_white_line
-					RE4 = { 
-						add_ideas = RE4_redwinter_military_advisors
-						add_days_mission_timeout = {
-							mission = RE4_Northern_War_timeattack
-							days = -70
-						}
-					}
-				}
-			}
-
-			hidden_effect = {
-				RED = { unlock_national_focus = RE4_Invitation_of_military_advisors }
-			}
-
-		}
-	}
-
-	shared_focus = {
-		id = RE4_redwinter_offficer_corps
-		dynamic = yes 
-		icon = GFX_focus_generic_military_mission
-		cost = 2
-
-		text_icon = REDWINTER_RE4_focus_style
-		
-		prerequisite = { focus = RE4_create_of_defense_committee }
-		relative_position_id = RE4_create_of_defense_committee
-		x = -2
-		y = 2
-
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			original_tag = RE4
-			has_war_with = FIN
-		} 
-
-		ai_will_do = {
-			base = 500
-		}
-
-		available_if_capitulated = no
-
-		completion_reward = {
-			IF = {
-				limit = { original_tag = RE4 }
-				RED = { 
-					country_event = { id = redpuppet.7 days = 04 } 
-				}
-				custom_effect_tooltip = tooltip_white_line
-				add_corps_commander_role = {
-					character = RE4_commander_1
-					traits = { winter_specialist }
-					skill=1
-					attack_skill=1
-					defense_skill=1
-					planning_skill=1
-					logistics_skill=1
-				}
-				add_corps_commander_role = {
-					character = RE4_commander_2
-					traits = { winter_specialist }
-					skill=1
-					attack_skill=1
-					defense_skill=1
-					planning_skill=1
-					logistics_skill=1
-				}
-			}
-			ELSE_IF = {
-				limit = { original_tag = RED }
-				effect_tooltip = {
-					country_event = { id = redpuppet.7 }
-					custom_effect_tooltip = tooltip_white_line
-				}
-				effect_tooltip = {
-					RE4 = {
-						add_corps_commander_role = {
-							character = RE4_commander_1
-							traits = { winter_specialist }
-							skill=1
-							attack_skill=1
-							defense_skill=1
-							planning_skill=1
-							logistics_skill=1
-						}
-						add_corps_commander_role = {
-							character = RE4_commander_2
-							traits = { winter_specialist }
-							skill=1
-							attack_skill=1
-							defense_skill=1
-							planning_skill=1
-							logistics_skill=1
-						}
-					}
-				}
-			}
-
-			hidden_effect = {
-				RED = { unlock_national_focus = RE4_redwinter_offficer_corps }
-			}
-
-		}
-	}
-
-	shared_focus = {
-		id = RE4_We_need_we_need_weapon
-		dynamic = yes 
-		icon = GFX_focus_generic_spur_communist_revolutions
-		cost = 2
-
-		text_icon = REDWINTER_RE4_focus_style
-		
-		prerequisite = { focus = RE4_create_of_defense_committee }
-		relative_position_id = RE4_create_of_defense_committee
-		x = -3
-		y = 1
-
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			original_tag = RE4
-			has_war_with = FIN
-		} 
-
-		ai_will_do = {
-			base = 1
-			modifier = {
-				add = 999
-				has_completed_focus = RE4_Invitation_of_military_advisors
-				has_completed_focus = RE4_redwinter_offficer_corps
-			}
-		}
-
-		available_if_capitulated = no
-
-		completion_reward = {
-			IF = {
-				limit = { original_tag = RE4 }
-				RED = {
-					country_event = { id = redpuppet.1 days = 04 }
-				}
-				custom_effect_tooltip = tooltip_white_line
-				add_days_mission_timeout = {
-					mission = RE4_Northern_War_timeattack
-					days = -70
-				}
-				hidden_effect = {
-					FIN = {
-						add_days_mission_timeout = {
-							mission = RE4_Northern_War_timeattack_FIN
-							days = -70
-						}
-					}
-				}
-			}
-			ELSE_IF = {
-				limit = { original_tag = RED }
-				effect_tooltip = {
-					RE4 = { add_political_power = 50 }
-					country_event = { id = redpuppet.1 days = 04 }
-				}
-			}
-
-			hidden_effect = {
-				RED = { unlock_national_focus = RE4_We_need_we_need_weapon }
-			}
-
-		}
-	}
-
-	shared_focus = {
-		id = RE4_925_munitions_factory
-		dynamic = yes 
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 2
-
-		text_icon = REDWINTER_RE4_focus_style
-		
-		prerequisite = { focus = RE4_create_of_defense_committee }
-		relative_position_id = RE4_create_of_defense_committee
+	focus = {
+        id = REPP_strike_suppression
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = REPP_socialist_culture_struggle }
 		x = 1
 		y = 1
-
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			original_tag = RE4
-			has_war_with = FIN
-		} 
-
-		ai_will_do = {
-			base = 1
-			modifier = {
-
-			}
-		}
-
-		available_if_capitulated = no
-
-		completion_reward = {
-			IF = {
-				limit = { original_tag = RE4 }
-				925 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			ELSE_IF = {
-				limit = { original_tag = RED }
-				effect_tooltip = {
-					RE4 = {
-						925 = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-								type = arms_factory
-								level = 1
-								instant_build = yes
-							}
-						}
-					}
-				}
-			}
-
-			hidden_effect = {
-				RED = { unlock_national_focus = RE4_kemi_munitions_factory }
-			}
-
-		}
-	}
-
-	shared_focus = {
-		id = RE4_capture_of_supplies
-		dynamic = yes 
-		icon = GFX_focus_ETH_freedom_at_gunpoint
-		cost = 2
-
-		text_icon = REDWINTER_RE4_focus_style
-		
-		prerequisite = { focus = RE4_create_of_defense_committee }
-		relative_position_id = RE4_create_of_defense_committee
-		x = 2
-		y = 2
-
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			original_tag = RE4
-			has_war_with = FIN
-		} 
-
-		ai_will_do = {
-			base = 200
-			modifier = {
-
-			}
-		}
-
-		available_if_capitulated = no
-
-		completion_reward = {
-			IF = {
-				limit = { original_tag = RE4 }
-				add_ideas = RE4_capture_of_supplies_ns
-			}
-			ELSE_IF = {
-				limit = { original_tag = RED }
-				effect_tooltip = {
-					RE4 = { add_ideas = RE4_capture_of_supplies_ns }
-				}
-			}
-
-			hidden_effect = {
-				RED = { unlock_national_focus = RE4_capture_of_supplies }
-			}
-
-		}
-	}
-
-	shared_focus = {
-		id = RE4_support_for_the_finland_communist_party
-		dynamic = yes 
-		icon = GFX_focus_FIN_suomalainen_sosialismi
-		cost = 2
-
-		text_icon = REDWINTER_RE4_focus_style
-		
-		prerequisite = { focus = RE4_create_of_defense_committee }
-		relative_position_id = RE4_create_of_defense_committee
-		x = 3
-		y = 1
-
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			original_tag = RE4
-			NOT = { has_completed_focus = RE4_Finland_Military_Administration}
-		} 
-
-		ai_will_do = {
-			base = 1
-			modifier = {
-
-			}
-		}
-
-		available_if_capitulated = no
-
-		completion_reward = {
-			IF = {
-				limit = { original_tag = RE4 }
-				custom_effect_tooltip = RE4_support_for_the_finland_communist_party_reward_tooltip
-				FIN = {
-					show_ideas_tooltip = RE4_kaisu_mirjami_rydberg
-					show_ideas_tooltip = RE4_sandra_lehtinen
-					show_ideas_tooltip = RE4_karl_harald_wiik
-					custom_effect_tooltip = RE4_support_for_the_finland_communist_party_reward_2_tooltip
-				}
-			}
-			ELSE_IF = {
-				limit = { original_tag = RED }
-				effect_tooltip = {
-					RE4 = {
-						custom_effect_tooltip = RE4_support_for_the_finland_communist_party_reward_tooltip
-					}
-				}
-			}
-
-			hidden_effect = {
-				RED = { unlock_national_focus = RE4_support_for_the_finland_communist_party }
-			}
-
-		}
-	}
-
-	joint_focus = {
-		id = RE4_Finland_Military_Administration
-		
-		dynamic = yes 
-		
-		icon = GFX_focus_REDWINTER_finland
-
+		relative_position_id = REPP_socialist_culture_struggle
 		cost = 5
-
-		text_icon = REDWINTER_RE4_focus_style
+		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
-		
-		prerequisite = { 
-			focus = RE4_create_of_defense_committee 
-			#focus = RE4_Defense_Commission_Investment
-		}
-
-		relative_position_id = RE4_create_of_defense_committee
-
-		joint_trigger = {
-			RED_is_a_redwinter_viable_nation = yes 
-		}
-		x = 0
-		y = 3
-
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			original_tag = RE4
-			NOT = {
-				OR = {
-					has_war_with = RED
-					has_war_with = RE4 
-				}
-				RE4 = { has_war_with = FIN }
-			}
-			RE4 = { owns_state = 111 }
-		}
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 999 
-				original_tag = RE4
-			}
-		}
-
-		available_if_capitulated = no
-
-		completion_reward = {
-
-		}
-
-		completion_reward_joint_originator = {
-
-			IF = {
-				limit = {
-					original_tag = RED
-				}
-				country_event = { id = redpuppet.14 days = 04 }
-			}
-			
-			IF = {
-				limit = {
-					original_tag = RE4
-					NOT = {
-						has_dynamic_modifier = {
-							modifier = RE4_finland_colonial_dynamic_modifier
-						}		
-					}
-				}
-				add_dynamic_modifier = { 
-					modifier = RE4_finland_colonial_dynamic_modifier
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = RE4_warning_this_idea_can_be_removed_tt
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					original_tag = RE4
-				}
-				custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
-				add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_research_speed_factor = 0.01 tooltip = research_speed_factor_tt }
-				set_capital = {
-					state = 111
-					remember_old_capital = no
-				}
-				add_country_leader_role = {
-					character = RE4_council 
-					country_leader = {
-						ideology = stalinism
-						expire = "1965.1.1.1"
-						traits = {  }
-					}
-					promote_leader = yes
-				}
-				set_cosmetic_tag = RE4_finlandia_military_administration
-			}
-			IF = {
-				limit = {
-					original_tag = RE4
-					has_completed_focus = RE4_support_for_the_finland_communist_party
-				}
-				FIN = {
-					every_character = {
-						limit = {
-							OR = {
-								is_character = RE4_karl_harald_wiik
-								is_character = RE4_kaisu_mirjami_rydberg
-								is_character = RE4_sandra_lehtinen
-							}
-						}
-						set_nationality = RE4
-					}
-				}
-			}
-
-		}
-
-		completion_reward_joint_member = {
-
-			IF = {
-				limit = {
-					original_tag = RED
-				}
-				country_event = { id = redpuppet.14 days = 04 }
-			}
-			
-			IF = {
-				limit = {
-					original_tag = RE4
-					NOT = {
-						has_dynamic_modifier = {
-							modifier = RE4_finland_colonial_dynamic_modifier
-						}		
-					}
-				}
-				add_dynamic_modifier = { 
-					modifier = RE4_finland_colonial_dynamic_modifier
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = RE4_warning_this_idea_can_be_removed_tt
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					original_tag = RE4
-				}
-				custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
-				add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_research_speed_factor = 0.01 tooltip = research_speed_factor_tt }
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-				set_capital = {
-					state = 111
-					remember_old_capital = no
-				}
-				add_country_leader_role = {
-					character = RE4_council 
-					country_leader = {
-						ideology = stalinism
-						expire = "1965.1.1.1"
-						traits = {  }
-					}
-					promote_leader = yes
-				}
-				set_cosmetic_tag = RE4_finlandia_military_administration
-			}
-			
-		}
-	}
-
-	shared_focus = {
-		id = RE4_Defense_Commission_Investment
-		dynamic = yes 
-		icon = GFX_focus_REDWINTER_investment
-		cost = 5
-
-		text_icon = REDWINTER_RED_focus_style
-		
-		prerequisite = {  }
-
-		relative_position_id = RE4_create_of_defense_committee
-		x = -6
-		y = 0
-
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			original_tag = RED
-			has_subject = RE4
-			NOT = {
-				OR = {
-					has_war_with = RED
-					has_war_with = RE4
-				}
-			}
-		} 
+		available_if_capitulated = yes
 
 		bypass = {
-
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
 		}
 
-		ai_will_do = {
-			base = 0
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
 		}
-
-		available_if_capitulated = no
 
 		completion_reward = {
-			
-			IF = {
-				limit = { original_tag = RE4 }
-				effect_tooltip = {
-					925 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
 						}
 					}
-					country_event = {
-						id = redpuppet.13 days = 04
-					}
 				}
-
-			}
-			ELSE_IF = {
-				limit = { original_tag = RED }
-				925 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-				}
-				RE4 = { 
-					country_event = { id = redpuppet.13 days = 04 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
-
-			hidden_effect = {
-				RE4 = { unlock_national_focus = RE4_Defense_Commission_Investment }
-			}
-
 		}
 	}
-
-	shared_focus = {
-		id = RE4_Supervision_and_Management_Committee
-		dynamic = yes 
-		icon = GFX_focus_ARG_strengthening_the_concordancia
-		cost = 5
-
-		text_icon = REDWINTER_RED_focus_style
-		
-		prerequisite = { 
-			focus = RE4_Defense_Commission_Investment 
-		}
-
-		relative_position_id = RE4_Defense_Commission_Investment
-		x = 0
-		y = 3
-
-		allow_branch = {
+	focus = {
+        id = REPP_people_committee_establishment
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = REPP_strike_suppression }
+		available = {
 			OR = {
-				original_tag = RED
-				original_tag = RE4
+				has_idea = RED_military_government_idea_4
+				has_idea = RED_military_government_idea_3
+				has_idea = RED_military_government_idea_2
 			}
 		}
-
-		available = { 
-			original_tag = RED
-			has_subject = RE4
-			NOT = {
-				OR = {
-					has_war_with = RED
-					has_war_with = RE4
-				}
-			}
-			RE4 = { has_war = no }
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-
-		available_if_capitulated = no
+		x = 0
+		y = 1
+		relative_position_id = REPP_strike_suppression
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
 
 		completion_reward = {
-			IF = {
-				limit = { 
-					RE4 ={
-						NOT = { 
-							has_dynamic_modifier = { modifier = RE4_finland_colonial_dynamic_modifier }
-						}
-					}
-				}
-				RE4 = { add_dynamic_modifier = { modifier = RE4_finland_colonial_dynamic_modifier } }
-				custom_effect_tooltip = tooltip_white_line
-			}
-			custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
-			add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_stability_factor = -0.05 tooltip = stability_factor_tt }
-			add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_consumer_goods_factor = 0.05 tooltip = consumer_goods_factor_tt }
-			add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_production_speed_buildings_factor = 0.02 tooltip = production_speed_buildings_factor_tt }
-
-			IF = {
-
-			}
-
-		hidden_effect = {
-			RE4 = { unlock_national_focus = RE4_Supervision_and_Management_Committee }
-			force_update_dynamic_modifier = yes
-		}
-
 		}
 	}
-
-	joint_focus = {
-		id = RE4_Infrastructure_connectivity
-		
-		dynamic = yes 
-		
-		icon = GFX_goal_generic_construct_infrastructure
-
-		cost = 10
-
-		text_icon = REDWINTER_RED_RE4_focus_style
-		
-		
-		prerequisite = { 
-			focus = RE4_Finland_Military_Administration 
-			#focus = RE4_Defense_Commission_Investment
+	focus = {
+        id = REPP_culture_struggle_continuation
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = REPP_socialist_culture_struggle }
+		available = {
+			OR = {
+				has_idea = RED_military_government_idea_4
+				has_idea = RED_military_government_idea_3
+				has_idea = RED_military_government_idea_2
+			}
 		}
+		x = -1
+		y = 1
+		relative_position_id = REPP_socialist_culture_struggle
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
 
-		relative_position_id = RE4_Finland_Military_Administration
+		completion_reward = {
+		}
+	}
+	focus = {
+        id = REPP_military_government_supreme_council
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = REPP_culture_struggle_continuation }
+		available = { 
+			OR = {
+				has_idea = RED_military_government_idea_4
+				has_idea = RED_military_government_idea_3
+			}
+		}
+		x = 1
+		y = 2
+		relative_position_id = REPP_culture_struggle_continuation
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
 
-		joint_trigger = {
-			RED_is_a_redwinter_viable_nation = yes 
+		completion_reward = {
+		}
+	}
+	focus = {
+        id = REPP_free_labor_union_establishment_permit
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = REPP_military_government_supreme_council }
+		mutually_exclusive = { focus = REPP_alliance_with_nationalists }
+		available = {
+			has_idea = RED_military_government_idea_4
+		}
+		x = -2
+		y = 1
+		relative_position_id = REPP_military_government_supreme_council
+		cost = 2
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	focus = {
+        id = REPP_voting_rights_restoration_procedure
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = REPP_free_labor_union_establishment_permit }
+		available = {
+		}
+		x = 0
+		y = 1
+		relative_position_id = REPP_free_labor_union_establishment_permit
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	focus = {
+        id = REPP_social_democrat_citation
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = REPP_free_labor_union_establishment_permit }
+		available = {
+		}
+		x = -2
+		y = 1
+		relative_position_id = REPP_free_labor_union_establishment_permit
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	focus = {
+        id = REPP_alliance_with_nationalists
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = REPP_military_government_supreme_council }
+		mutually_exclusive = { focus = REPP_free_labor_union_establishment_permit }
+		available = {
+			has_idea = RED_military_government_idea_4
 		}
 		x = 2
 		y = 1
-
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			any_country = {
-				original_tag = RE4
-				is_subject_of = RED
-			}
-			
-			111 = { state_is_fully_controlled_by_ROOT_or_subject = yes } 
-			926 = { state_is_fully_controlled_by_ROOT_or_subject = yes } 
-
-			NOT = {
-				OR = {
-					has_war_with = RED
-					has_war_with = RE4 
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 999 
-				original_tag = RE4
-			}
-		}
-
-		available_if_capitulated = no
+		relative_position_id = REPP_military_government_supreme_council
+		cost = 2
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
 
 		completion_reward = {
-
-		}
-
-		completion_reward_joint_originator = {
-			
-			IF = {
-				limit = { original_tag = RE4 }
-				custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
-				add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_production_speed_infrastructure_factor = 0.05 tooltip = production_speed_infrastructure_factor_tt }
-				every_owned_state = {
-					limit = {
-						infrastructure < 5
-						OR = {
-							state = 111
-							state = 926
-							state = 149
-							state = 929
-							state = 148
-							state = 925
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-
-				# 헬싱키 - 헤멘린나 - 탐페레
-				build_railway = {
-					path = { 3083 9194 11211 6108 11105 9129 11172 3025 3137 9167 }
-				}
-				
-				build_railway = { # 투르쿠 - 라우마 - 포리 - 바사
-					path = { 3083 6066 169 3117 11126 3122 11065 3172 66 195 11121 158 11081 11164 162 6087 11204 11167 6142 103 3097 9116 9140  }
-				}
-
-			}
-
-		}
-
-		completion_reward_joint_member = {
-			
-			IF = {
-				limit = { original_tag = RE4 }
-				custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
-				add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_production_speed_infrastructure_factor = 0.05 tooltip = production_speed_infrastructure_factor_tt }
-				
-				# 우사마
-				111 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-
-				# 투르쿠
-				926 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-
-				# 바사
-				149 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-
-				# 오울루 
-				929 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-
-				# 라피 
-				148 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-
-			}
-			
 		}
 	}
-
-	joint_focus = {
-		id = RE4_janiskoski_power_plant
-		
-		dynamic = yes 
-		
-		icon = GFX_focus_generic_energy
-
-		cost = 5
-
-		text_icon = REDWINTER_RED_RE4_focus_style
-		
-		
-		prerequisite = { 
-			focus = RE4_Finland_Military_Administration 
-			#focus = RE4_Defense_Commission_Investment
+	focus = {
+        id = REPP_anti_finland_anti_red_winter
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = REPP_free_labor_union_establishment_permit focus = REPP_alliance_with_nationalists }
+		available = {
 		}
-
-		relative_position_id = RE4_Finland_Military_Administration
-
-		joint_trigger = {
-			RED_is_a_redwinter_viable_nation = yes 
-		}
-		x = 4
+		x = 2
 		y = 1
-
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			any_country = {
-				original_tag = RE4
-				is_subject_of = RED
-			}
-
-			722 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
-
-			NOT = {
-				OR = {
-					has_war_with = RED
-					has_war_with = RE4 
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 999 
-				original_tag = RE4
-			}
-		}
-
-		available_if_capitulated = no
+		relative_position_id = REPP_free_labor_union_establishment_permit
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
 
 		completion_reward = {
-
-		}
-
-		completion_reward_joint_originator = {
-
-			IF = {
-				limit = { original_tag = RE4 }
-				722 = { #PETSAMO
-					set_state_category = rural
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					add_resource = {
-						type = steel
-						amount = 4
-					}
-				}
-			}
-
-		}
-
-		completion_reward_joint_member = {
-
-			IF = {
-				limit = { original_tag = RE4 }
-				722 = { #PETSAMO
-					set_state_category = rural
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					add_resource = {
-						type = steel
-						amount = 4
-					}
-				}
-			}
-			
 		}
 	}
-
-	joint_focus = {
-		id = RE4_expand_imatra_hydropower_plant
-		
-		dynamic = yes 
-		
-		icon = GFX_goal_generic_construction
-
-		cost = 5
-
-		text_icon = REDWINTER_RED_RE4_focus_style
-		
-		
-		prerequisite = { 
-			focus = RE4_janiskoski_power_plant 
-		}
-
-		relative_position_id = RE4_janiskoski_power_plant
-
-		joint_trigger = {
-			RED_is_a_redwinter_viable_nation = yes 
+	focus = {
+        id = REPP_national_reconstruction
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = REPP_alliance_with_nationalists }
+		available = {
 		}
 		x = 0
 		y = 1
-
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			any_country = {
-				original_tag = RE4
-				is_subject_of = RED
-			}
-
-			928 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
-
-			NOT = {
-				OR = {
-					has_war_with = RED
-					has_war_with = RE4 
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 999 
-				original_tag = RE4
-			}
-		}
-
-		available_if_capitulated = no
+		relative_position_id = REPP_alliance_with_nationalists
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
 
 		completion_reward = {
-
-		}
-
-		completion_reward_joint_originator = {
-
-			IF = {
-				limit = { original_tag = RE4 }
-				928 = { #KYME
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					add_resource = {
-						type = steel
-						amount = 4
-					}
-				}
-			}
-
-		}
-
-		completion_reward_joint_member = {
-
-			IF = {
-				limit = { original_tag = RE4 }
-				928 = { #KYME
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					add_resource = {
-						type = steel
-						amount = 4
-					}
-				}
-			}
-			
 		}
 	}
-
-	joint_focus = {
-		id = RE4_power_from_the_dams
-		
-		dynamic = yes 
-		
-		icon = GFX_focus_generic_hydroelectric_energy
-
-		cost = 10
-
-		text_icon = REDWINTER_RED_RE4_focus_style
-		
-		
-		prerequisite = { 
-			focus = RE4_expand_imatra_hydropower_plant 
+	focus = {
+        id = REPP_purge_of_red_winter_personnel
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = REPP_alliance_with_nationalists }
+		available = {
 		}
+		x = 2
+		y = 1
+		relative_position_id = REPP_alliance_with_nationalists
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
 
-		relative_position_id = RE4_expand_imatra_hydropower_plant
-
-		joint_trigger = {
-			RED_is_a_redwinter_viable_nation = yes 
+		completion_reward = {
+		}
+	}
+	focus = {
+        id = REPP_day_of_counter_revolution
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = {
+			focus = REPP_anti_finland_anti_red_winter
+		}
+		prerequisite = {
+			focus = REPP_social_democrat_citation
+			focus = REPP_voting_rights_restoration_procedure
+			focus = REPP_national_reconstruction
+			focus = REPP_purge_of_red_winter_personnel
+		}
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = REPP_free_labor_union_establishment_permit
+					has_completed_focus = REPP_social_democrat_citation
+					has_completed_focus = REPP_voting_rights_restoration_procedure
+				}
+				AND = {
+					has_completed_focus = REPP_alliance_with_nationalists
+					has_completed_focus = REPP_national_reconstruction
+					has_completed_focus = REPP_purge_of_red_winter_personnel
+				}
+			}
 		}
 		x = 0
-		y = 1
-
-		allow_branch = {
-			OR = {
-				original_tag = RED
-				original_tag = RE4
-			}
-		}
-
-		available = { 
-			any_country = {
-				original_tag = RE4
-				is_subject_of = RED
-			}
-			has_tech = construction3
-
-			148 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
-			929 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
-
-			NOT = {
-				OR = {
-					has_war_with = RED
-					has_war_with = RE4 
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 999 
-				original_tag = RE4
-			}
-		}
-
-		available_if_capitulated = no
+		y = 3
+		relative_position_id = REPP_military_government_supreme_council
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
 
 		completion_reward = {
-
-		}
-
-		completion_reward_joint_originator = {
-
-			IF = {
-				limit = { original_tag = RE4 }
-				
-				random_core_state = {
-					prioritize = { 927 } # 헤메 (탐페레)
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-						NOT = { has_state_flag = RE4_power_from_the_dams_flag }
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					set_state_flag = RE4_power_from_the_dams_flag
-				}
-			}
-
-			IF = {
-				limit = { original_tag = RE4 }
-				custom_effect_tooltip = generic_skip_one_line_tt
-				148 = {
-					add_building_construction = {
-						type = dam
-						level = 1
-						instant_build = yes
-						province = { id = 11164 }
-					}
-					custom_effect_tooltip = {
-						localization_key = building_state_modifier|dam
-						INDENT = "    "
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				929 = {
-					add_building_construction = {
-						type = dam
-						level = 1
-						instant_build = yes
-						province = { id = 158 }
-					}
-					custom_effect_tooltip = {
-						localization_key = building_state_modifier|dam
-						INDENT = "    "
-					}	
-				}
-			}
-
-		}
-
-		completion_reward_joint_member = {
-
-			IF = {
-				limit = { original_tag = RE4 }
-				
-				random_core_state = {
-					prioritize = { 927 } # 헤메 (탐페레)
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-						NOT = { has_state_flag = RE4_power_from_the_dams_flag }
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					set_state_flag = RE4_power_from_the_dams_flag
-				}
-			}
-
-			IF = {
-				limit = { original_tag = RE4 }
-				custom_effect_tooltip = generic_skip_one_line_tt
-				148 = {
-					add_building_construction = {
-						type = dam
-						level = 1
-						instant_build = yes
-						province = { id = 11164 }
-					}
-					custom_effect_tooltip = {
-						localization_key = building_state_modifier|dam
-						INDENT = "    "
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				929 = {
-					add_building_construction = {
-						type = dam
-						level = 1
-						instant_build = yes
-						province = { id = 158 }
-					}
-					custom_effect_tooltip = {
-						localization_key = building_state_modifier|dam
-						INDENT = "    "
-					}	
-				}
-			}
-			
 		}
 	}
+}

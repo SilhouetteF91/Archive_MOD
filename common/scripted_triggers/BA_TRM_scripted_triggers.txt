@@ -43,3 +43,40 @@ TRM_is_state_Trinity_want = {
 		state = 52
 	}
 }
+
+# 명예 조건
+
+TRN_very_low_honor = {
+	custom_trigger_tooltip = {
+		tooltip = TRN_Mika_Honor_very_low_trigger
+		check_variable = { TRN_Mika_Honor_var < 19 }
+	}
+}
+TRN_low_honor = {
+	custom_trigger_tooltip = {
+		tooltip = TRN_Mika_Honor_low_trigger
+		check_variable = { TRN_Mika_Honor_var > 19 }
+		check_variable = { TRN_Mika_Honor_var < 39 }
+	}
+}
+TRN_middle_honor = {
+	custom_trigger_tooltip = {
+		tooltip = TRN_Mika_Honor_middle_trigger
+		check_variable = { TRN_Mika_Honor_var > 39 }
+		check_variable = { TRN_Mika_Honor_var < 69 }
+	}
+}
+TRN_high_honor = {
+	custom_trigger_tooltip = {
+		tooltip = TRN_Mika_Honor_high_trigger
+		check_variable = { TRN_Mika_Honor_var > 69 }
+		check_variable = { TRN_Mika_Honor_var < 89 }
+	}
+}
+TRN_very_high_honor = {
+	custom_trigger_tooltip = {
+		tooltip = TRN_Mika_Honor_very_high_trigger
+		check_variable = { TRN_Mika_Honor_var > 89 }
+		check_variable = { TRN_Mika_Honor_var < 101 }
+	}
+}

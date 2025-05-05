@@ -23,6 +23,20 @@ BA_sp_air_helicopter = {
 			original_tag = COU
 			original_tag = ABY
 			original_tag = KAI
+			OR = {
+				AND = {
+					original_tag = GEH
+					has_country_flag = GEH_unified_gehenna_flag
+				}
+				AND = {
+					original_tag = GEM
+					has_country_flag = GEH_unified_gehenna_flag
+				}
+				AND = {
+					original_tag = HEU
+					has_country_flag = GEH_unified_gehenna_flag
+				}
+			}
 		}
 	}
 

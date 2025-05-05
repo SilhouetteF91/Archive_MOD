@@ -1,0 +1,81 @@
+HEU_pro_gehenna = {
+	name = "HEU Pro-Gehenna plan"
+	desc = ""
+	allowed = {
+		original_tag = HEU
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = HEU_ai_behavior
+				option = HEU_PRO_GEH_FASCISM
+			}
+		}
+	}
+	abort = {
+	}
+	ai_national_focuses = {
+		HEU_road_to_regency 
+		HEU_watch_right_wing_party
+		HEU_remove_right_wing_party
+		HEU_remove_nazi_party
+		HEU_rikuhachima_governemnt
+		HEU_ban_far_right_organizations
+		BA_new_world_technology #skip
+		BA_factoriesof_new_world
+		HEU_join_gehenna
+		BA_new_world_technology_army
+		HEU_doubt_valkyrie_police_academy
+		HEU_doubt_arona
+		HEU_end_of_holding_act #산업
+		HEU_guillaume_kroll_focus #산업
+		HEU_nationalisation_of_ARBED #산업
+		HEU_schuster_line #군사
+		HEU_benriya_strategy #군사
+		HEU_CLR_reconstruction #산업
+		HEU_BLEU_left #산업
+		HEU_general_student_council_aru
+		HEU_gehenna_labour_council #산업
+	}
+}
+
+HEU_anti_gehenna_com = {
+	name = "HEU Anti-Gehenna Com plan"
+	desc = ""
+	allowed = {
+		original_tag = HEU
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = HEU_ai_behavior
+				option = HEU_ANTI_GEH_COMMUNISM
+			}
+		}
+	}
+	abort = {
+	}
+	ai_national_focuses = {
+		HEU_road_to_regency 
+		HEU_watch_gehenna
+		HEU_calm_down_students
+		HEU_calm_down_native
+		HEU_negotiations_with_parties
+		HEU_civil_rights_act_1
+		BA_new_world_technology #skip
+		BA_factoriesof_new_world
+		HEU_we_still_hope
+		HEU_luxembourgism_focus_1
+		HEU_unwelcome_school
+		HEU_representative_of_the_germanic
+		HEU_end_of_holding_act #산업
+		HEU_guillaume_kroll_focus #산업
+		HEU_nationalisation_of_ARBED #산업
+		HEU_schuster_line #군사
+		HEU_benriya_strategy #군사
+		HEU_CLR_reconstruction #산업
+		HEU_BLEU_left #산업
+		HEU_doubt_pandemonium_society
+		HEU_gehenna_labour_council #산업
+	}
+}

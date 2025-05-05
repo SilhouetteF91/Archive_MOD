@@ -27,6 +27,84 @@ on_actions = {
 		}
 	}
 	on_startup = {
+		effect = { #궤간
+			NOR = {
+				set_country_flag = BA_railroad_standard_gauge
+			}
+			DEN = {
+				set_country_flag = BA_railroad_standard_gauge
+			}
+			SWE = {
+				set_country_flag = BA_railroad_standard_gauge
+			}
+			RE1 = {
+				set_country_flag = BA_railroad_standard_gauge
+			}
+			RE2 = {
+				set_country_flag = BA_railroad_standard_gauge
+			}
+			RE3 = {
+				set_country_flag = BA_railroad_standard_gauge
+			}
+			ITA = {
+				set_country_flag = BA_railroad_standard_gauge
+			}
+			HUN = {
+				set_country_flag = BA_railroad_standard_gauge
+			}
+			SLO = {
+				set_country_flag = BA_railroad_standard_gauge
+			}
+			ROM = {
+				set_country_flag = BA_railroad_standard_gauge
+			}
+			POL = {
+				set_country_flag = BA_railroad_standard_gauge
+			}
+			SWI = {
+				set_country_flag = BA_railroad_standard_gauge
+				set_country_flag = BA_railroad_narrow_gauge
+			}
+			YUG = {
+				set_country_flag = BA_railroad_narrow_gauge
+			}
+			BUL = {
+				set_country_flag = BA_railroad_narrow_gauge
+			}
+			POR = {
+				set_country_flag = BA_railroad_iberian_gauge
+			}
+			SPR = {
+				set_country_flag = BA_railroad_iberian_gauge
+			}
+			SPA = {
+				set_country_flag = BA_railroad_iberian_gauge
+			}
+			SPB = {
+				set_country_flag = BA_railroad_iberian_gauge
+			}
+			SPC = {
+				set_country_flag = BA_railroad_iberian_gauge
+			}
+			SPD = {
+				set_country_flag = BA_railroad_iberian_gauge
+			}
+			SOV = {
+				set_country_flag = BA_railroad_broad_gauge
+			}
+			LIT = {
+				set_country_flag = BA_railroad_broad_gauge
+			}
+			LAT = {
+				set_country_flag = BA_railroad_broad_gauge
+			}
+			EST = {
+				set_country_flag = BA_railroad_broad_gauge
+			}
+			FIN = {
+				set_country_flag = BA_railroad_broad_gauge
+			}
+		}
 		effect = {
 			SHE = {
 				SHE_Arona = {
@@ -144,6 +222,12 @@ on_actions = {
 				limit = {
 					Kivotos_tag = yes
 					has_idea = BA_exiles_of_the_future
+					NOT = {
+						original_tag = RE1
+						original_tag = RE2
+						original_tag = RE3
+						original_tag = RE4
+					}
 				}
 				add_timed_idea = {
 					idea = BA_railway_gauge_issue
@@ -208,10 +292,6 @@ on_actions = {
             }
 			RED = {
 				country_event = {
-					id = RED_marina_event.7
-					days = 187
-				}
-				country_event = {
 					id = RED_marina_event.4
 					days = 187
 				}
@@ -222,6 +302,12 @@ on_actions = {
 				country_event = {
 					id = RED_event.32
 					days = 3
+				}
+			}
+			RE4 = {
+				country_event = {
+					id = redpuppet.17
+					days = 187
 				}
 			}
 			FRA = {
@@ -334,6 +420,42 @@ on_actions = {
 					limit = {
 						Kivotos_tag = no
 					}
+					add_opinion_modifier = {
+						target = prev
+						modifier = BA_another_demension
+					}
+					prev = {
+						add_opinion_modifier = {
+							target = prev
+							modifier = BA_another_demension
+						}
+					}
+				}
+				D01 = {
+					add_opinion_modifier = {
+						target = prev
+						modifier = BA_another_demension
+					}
+					prev = {
+						add_opinion_modifier = {
+							target = prev
+							modifier = BA_another_demension
+						}
+					}
+				}
+				D02 = {
+					add_opinion_modifier = {
+						target = prev
+						modifier = BA_another_demension
+					}
+					prev = {
+						add_opinion_modifier = {
+							target = prev
+							modifier = BA_another_demension
+						}
+					}
+				}
+				D03 = {
 					add_opinion_modifier = {
 						target = prev
 						modifier = BA_another_demension
