@@ -1656,6 +1656,22 @@ ideas = {
 				army_defence_factor = 0.05
 			}
 		}# #"산불 작전"
+  		ABY_idea_SHA_war_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			cancel = {
+				SHA = {
+					exists = no
+				}
+			}
+			removal_cost = -1 
+			#picture = 
+			modifier = {
+				army_speed_factor = 0.5
+				army_org_factor = -0.25
+			}
+		}# #"산불 작전"
   		ABY_idea_POL_war = {
 			allowed_civil_war = {
                 always = yes
@@ -6351,6 +6367,39 @@ ideas = {
 				political_power_factor = -0.3
 				stability_factor = -0.3
 				war_support_factor = -0.3
+			}
+		}
+		ABY_idea_suspecious_move_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+		ABY_idea_suspecious_move_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.15
+			}
+		}
+		ABY_idea_suspecious_move_3 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
 			}
 		}
 	}
