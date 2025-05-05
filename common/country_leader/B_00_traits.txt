@@ -4512,5 +4512,12 @@ leader_traits = {
 		democratic_drift = 0.05
 		communism_drift = -0.05
 	}
+	ENG_Health_minister = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		monthly_population = +0.25
+		weekly_manpower = +100
+	}
 }
  
