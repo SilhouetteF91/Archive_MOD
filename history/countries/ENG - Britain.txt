@@ -27,7 +27,6 @@ recruit_character = IMP_winston_churchill
 recruit_character = IMP_mackenzie_king
 recruit_character = IMP_james_ilsley
 recruit_character = ENG_british_army
-recruit_character = ENG_kingsley_wood
 
 set_variable = { country_intro_page_count = 2 } #Intro screen
 #/BA_MOD_FIX
@@ -1698,40 +1697,3 @@ if = {
 		}
 	}
 }
-
-#######################
-#####WbDM Editing######
-#######################
-
-set_variable = { ENG_pwd_cgf = 0.8 }
-set_variable = { ENG_pwd_icfactory = -0.5 }
-set_variable = { ENG_pwd_icdockyard = -0.5 }
-set_variable = { ENG_pwd_stability = -0.3 }
-set_variable = { ENG_pwd_research_spd = -0.5 }
-set_variable = { ENG_pwd_building_slots = 2 }
-set_variable = { ENG_pwd_civ_use = 10 }
-
-set_variable = { ENG_gd_ppcost = 0.3 }
-set_variable = { ENG_gd_cgf = 0.5 }
-set_variable = { ENG_gd_stability = -0.3 }
-set_variable = { ENG_gd_icfactory = -0.3 }
-set_variable = { ENG_gd_icdockyard = -0.3 }
-set_variable = { ENG_gd_civspeed = -0.5 }
-set_variable = { ENG_gd_milspeed = -0.5 }
-set_variable = { ENG_gd_resources = -0.5 }
-
-set_variable = { ENG_dc_ppcost = 0.05 }
-set_variable = { ENG_dc_autonomygain = 0.1 }
-set_variable = { ENG_dc_civtoover = -0.2 }
-set_variable = { ENG_dc_miltoover = -0.2 }
-
-set_variable = { ENG_hnh_stability = -0.15 }
-set_variable = { ENG_hnh_popgrowth = -2.5 }
-set_variable = { ENG_hnh_weeklymp = -500 }
-
-set_variable = { ENG_las_stability = -0.05 }
-set_variable = { ENG_las_resistance = 1 }
-set_variable = { ENG_las_popgrowth = -0.7 }
-set_variable = { ENG_las_weeklymp = -100 }
-set_variable = { ENG_las_garrisondamage = 0.5 }
-

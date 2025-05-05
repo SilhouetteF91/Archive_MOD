@@ -5619,7 +5619,7 @@ focus_tree = {
 	}
 
 	default = no
-	continuous_focus_position = { x = 50 y = 3500 }
+	continuous_focus_position = { x = 50 y = 2000 }
 
     focus = {
 		id = ENG_Victory_Mainland #영국 수호
@@ -5631,7 +5631,7 @@ focus_tree = {
 			}
 		}
 
-		x = 20
+		x = 5
 		y = 0
 
 		completion_reward = {
@@ -5669,9 +5669,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ENG_assemble_cabinet #의회 활동 재개
+		id = ENG_Resume_Parliment #의회 활동 재개
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 1
+		cost = 2
 		
 		relative_position_id = ENG_Government_Return
 		x = 0
@@ -5687,21 +5687,19 @@ focus_tree = {
     			ideology = democratic
     			popularity = 0.45
 			}
-			unlock_decision_category_tooltip = britian_post_war_devastation
-			activate_decision = reconstrct_britian
 		}
 	}
 	#재건회의
 	focus = {
 		id = ENG_Reconstruction_committee #재건 회의
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 1
+		cost = 2
 		
-		relative_position_id = ENG_assemble_cabinet
+		relative_position_id = ENG_Resume_Parliment
 		x = 7
 		y = 1
 	
-		prerequisite = { focus = ENG_assemble_cabinet }
+		prerequisite = { focus = ENG_Resume_Parliment }
 		ai_will_do = { factor = 100 }
 		search_filters = { FOCUS_FILTER_INDUSTRY}	
 			
@@ -5745,7 +5743,7 @@ focus_tree = {
 	focus = {
 		id = ENG_temporary_hospitals #임시 병원
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 3
+		cost = 2
 		
 		relative_position_id = ENG_Reconstruction_committee
 		x = -3
@@ -5761,7 +5759,7 @@ focus_tree = {
 	focus = {
 		id = ENG_temporary_shelters #비상 대피소
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 1
+		cost = 2
 		
 		relative_position_id = ENG_Reconstruction_committee
 		x = -1
@@ -5792,9 +5790,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ENG_basic_hygine #질병과의 전쟁
+		id = ENG_combat_disease #질병과의 전쟁
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 3
+		cost = 2
 		
 		relative_position_id = ENG_temporary_hospitals
 		x = 1
@@ -5862,11 +5860,11 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 2
 		
-		relative_position_id = ENG_basic_hygine
+		relative_position_id = ENG_combat_disease
 		x = 1
 		y = 1
 	
-		prerequisite = { focus = ENG_basic_hygine }
+		prerequisite = { focus = ENG_combat_disease }
 		ai_will_do = { factor = 100 }
 		search_filters = { FOCUS_FILTER_INDUSTRY}	
 			
@@ -5981,11 +5979,11 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 2
 		
-		relative_position_id = ENG_assemble_cabinet
+		relative_position_id = ENG_Resume_Parliment
 		x = 0
 		y = 3
 	
-		prerequisite = { focus = ENG_assemble_cabinet }
+		prerequisite = { focus = ENG_Resume_Parliment }
 		ai_will_do = { factor = 100 }
 		search_filters = { FOCUS_FILTER_INDUSTRY}	
 			
@@ -6018,11 +6016,11 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 2
 		
-		relative_position_id = ENG_assemble_cabinet
+		relative_position_id = ENG_Resume_Parliment
 		x = 15
 		y = 2
 	
-		prerequisite = { focus = ENG_assemble_cabinet }
+		prerequisite = { focus = ENG_Resume_Parliment }
 		ai_will_do = { factor = 100 }
 		search_filters = { FOCUS_FILTER_INDUSTRY}	
 			
@@ -6072,28 +6070,11 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 2
 		
-		relative_position_id = ENG_assemble_cabinet
+		relative_position_id = ENG_Resume_Parliment
 		x = -7
 		y = 1
 	
-		prerequisite = { focus = ENG_assemble_cabinet }
-		ai_will_do = { factor = 100 }
-		search_filters = { FOCUS_FILTER_ARMY_XP }	
-			
-		completion_reward = {
-			
-		}
-	}
-	focus = {
-		id = ENG_colony_problem #재건 회의
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 2
-		
-		relative_position_id = ENG_national_security
-		x = -2
-		y = 1
-	
-		prerequisite = { focus = ENG_national_security }
+		prerequisite = { focus = ENG_Resume_Parliment }
 		ai_will_do = { factor = 100 }
 		search_filters = { FOCUS_FILTER_ARMY_XP }	
 			

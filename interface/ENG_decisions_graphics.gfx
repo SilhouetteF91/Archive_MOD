@@ -1,6 +1,0 @@
-spriteTypes = {
-    spriteType = {
-        name = "GFX_random_name"
-        texturefile = "GFX_decision_category_border_war"
-    }
-}

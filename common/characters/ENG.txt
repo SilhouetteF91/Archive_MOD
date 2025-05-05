@@ -2606,30 +2606,4 @@ characters={
 			id=-1
 		}
 	}
-	#추가
-	#######################################
-	ENG_kingsley_wood={
-		name=ENG_kingsley_wood
-		portraits={
-			civilian={
-				large="GFX_portrait_ENG_kingsley_wood"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_kingsley_wood
-			available  = {
-				has_government  = democratic
-			}
-			allowed  = {
-				original_tag  = ENG
-			}
-			traits  = {
-				ENG_Health_minister
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
-	}
 }

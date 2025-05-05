@@ -709,30 +709,12 @@ country_event = {
 	option = {
 		name = ENG_ba.101.a
 		set_stability = 0.7
-		set_war_support = 0.5
-		add_war_support = -0.45
-		add_dynamic_modifier = { modifier = ENG_postwar_devastation }
-		add_dynamic_modifier = { modifier = ENG_great_depression_01 }
-		add_dynamic_modifier = { modifier = ENG_dissolving_commonwealth }
-		add_dynamic_modifier = { modifier = ENG_homless_n_health_1 }
-		add_dynamic_modifier = { modifier = ENG_low_admin_Strength }
-	}
-}
-country_event = {
-	id = ENG_ba.102
-	title = ENG_ba.102.t
-	desc = ENG_ba.102.d
-	picture = GFX_report_event_soviet_soldiers_tank
-	hidden = no
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	trigger = {
-	}
-	
-	option = {
-		name = ENG_ba.102.a
+		set_war_support = 0.7
+		add_ideas = ENG_postwar_devastation
+		add_ideas = ENG_great_depression_01
+		add_ideas = ENG_dissolving_commonwealth
 		add_ideas = ENG_disassembled_parliment
-		activate_advisor = ENG_kingsley_wood
+		add_ideas = ENG_homless_n_health_1
+		add_ideas = ENG_low_admin_Strength
 	}
 }
