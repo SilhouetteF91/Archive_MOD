@@ -29,3 +29,10 @@ SLO_decisions_2 = { #브라티슬라바 경제 협력 기구
 	}
 	visible_when_empty = yes
 }	
+SLO_balance_of_power_category_1 = {
+	priority = 1
+	icon = GFX_decision_category_power_struggle
+	allowed = {
+		original_tag = SLO
+	}
+}

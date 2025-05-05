@@ -2763,14 +2763,26 @@ focus_tree = {
 					limit = {
 						has_government = democratic
 					}
+					set_power_balance = {
+						id = SLO_power_balance_1
+						left_side = SLO_COM_side
+						right_side = SLO_DEM_side
+						set_value = 0.25
+					}
+					activate_advisor = SLO_gustav_husak
 				}
-				activate_advisor = SLO_gustav_husak
 				if = {
 					limit = {
 						has_government = communism
 					}
+					set_power_balance = {
+						id = SLO_power_balance_1
+						left_side = SLO_COM_side
+						right_side = SLO_DEM_side
+						set_value = -0.25
+					}
+					activate_advisor = SLO_vavro_srobar
 				}
-				activate_advisor = SLO_vavro_srobar
 				set_country_flag = SLO_love_yes
 			}
 		}
@@ -2784,20 +2796,25 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = -2
+		x = -1
 		y = 1
 		prerequisite = {
 			focus = SLO_foc_1-6
 		}
 		available = {
+			has_country_flag = SLO_love_yes
 		}
 		bypass = {
 		}
 		completion_reward = {
-			add_political_power = 30
 			add_popularity = {
 				ideology = communism
 				popularity = 0.05
+			}
+			add_power_balance_value = {
+				id = SLO_power_balance_1
+				value = -0.05
+				tooltip_side = SLO_COM_side
 			}
 		}
 	}
@@ -2810,12 +2827,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = -3
+		x = -2
 		y = 2
 		prerequisite = {
 			focus = SLO_foc_1-6-1
 		}
 		available = {
+			has_country_flag = SLO_love_yes
 		}
 		bypass = {
 		}
@@ -2823,6 +2841,11 @@ focus_tree = {
 			custom_effect_tooltip = SLO_love_tt_0
 			custom_effect_tooltip = SLO_love_tt_1
 			custom_effect_tooltip = SLO_love_tt_2
+			add_power_balance_value = {
+				id = SLO_power_balance_1
+				value = -0.10
+				tooltip_side = SLO_COM_side
+			}
 			add_to_variable = {
 				SLO_love_political_power_factor = 0.04
 			}
@@ -2852,15 +2875,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = -3
-		y = 4
+		x = -2
+		y = 3
 		prerequisite = {
 			focus = SLO_foc_1-6-3
 		}
-		prerequisite = {
-			focus = SLO_foc_1-6-5
-		}
 		available = {
+			has_country_flag = SLO_love_yes
 		}
 		bypass = {
 		}
@@ -2868,6 +2889,11 @@ focus_tree = {
 			custom_effect_tooltip = SLO_love_tt_0
 			custom_effect_tooltip = SLO_love_tt_1
 			custom_effect_tooltip = SLO_love_tt_3
+			add_power_balance_value = {
+				id = SLO_power_balance_1
+				value = -0.10
+				tooltip_side = SLO_COM_side
+			}
 			add_to_variable = {
 				SLO_love_political_power_factor = 0.04
 			}
@@ -2897,18 +2923,24 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = -2
-		y = 3
+		x = -1
+		y = 4
 		prerequisite = {
-			focus = SLO_foc_1-6-1
+			focus = SLO_foc_1-6-4
 		}
 		available = {
+			has_country_flag = SLO_love_yes
 		}
 		bypass = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = SLO_love_tt_0
 			custom_effect_tooltip = SLO_love_tt_1
+			add_power_balance_value = {
+				id = SLO_power_balance_1
+				value = -0.10
+				tooltip_side = SLO_COM_side
+			}
 			add_to_variable = {
 				SLO_love_political_power_factor = 0.04
 			}
@@ -2933,12 +2965,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = {
 			focus = SLO_foc_1-6
 		}
 		available = {
+			has_country_flag = SLO_love_yes
 		}
 		bypass = {
 		}
@@ -2947,6 +2980,14 @@ focus_tree = {
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05
+			}
+			remove_power_balance = {
+				id = SLO_power_balance_1
+			}
+			add_power_balance_value = {
+				id = SLO_power_balance_1
+				value = 0.05
+				tooltip_side = SLO_DEM_side
 			}
 		}
 	}
@@ -2959,12 +3000,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 3
+		x = 2
 		y = 2
 		prerequisite = {
 			focus = SLO_foc_1-6-2
 		}
 		available = {
+			has_country_flag = SLO_love_yes
 		}
 		bypass = {
 		}
@@ -2972,6 +3014,11 @@ focus_tree = {
 			custom_effect_tooltip = SLO_love_tt_0
 			custom_effect_tooltip = SLO_love_tt_1
 			custom_effect_tooltip = SLO_love_tt_4
+			add_power_balance_value = {
+				id = SLO_power_balance_1
+				value = 0.10
+				tooltip_side = SLO_DEM_side
+			}
 			add_to_variable = {
 				SLO_love_political_power_factor = 0.04
 			}
@@ -2999,17 +3046,26 @@ focus_tree = {
 			factor = 1
 		}
 		x = 2
-		y = 3
+		y = 4
 		prerequisite = {
-			focus = SLO_foc_1-6-2
+			focus = SLO_foc_1-6-6
+		}
+		prerequisite = {
+			focus = SLO_foc_1-6-8
 		}
 		available = {
+			has_country_flag = SLO_love_yes
 		}
 		bypass = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = SLO_love_tt_0
 			custom_effect_tooltip = SLO_love_tt_1
+			add_power_balance_value = {
+				id = SLO_power_balance_1
+				value = 0.10
+				tooltip_side = SLO_DEM_side
+			}
 			add_to_variable = {
 				SLO_love_political_power_factor = 0.04
 			}
@@ -3035,14 +3091,12 @@ focus_tree = {
 			factor = 1
 		}
 		x = 3
-		y = 4
+		y = 3
 		prerequisite = {
 			focus = SLO_foc_1-6-6
 		}
-		prerequisite = {
-			focus = SLO_foc_1-6-7
-		}
 		available = {
+			has_country_flag = SLO_love_yes
 		}
 		bypass = {
 		}
@@ -3050,6 +3104,11 @@ focus_tree = {
 			custom_effect_tooltip = SLO_love_tt_0
 			custom_effect_tooltip = SLO_love_tt_1
 			custom_effect_tooltip = SLO_love_tt_5
+			add_power_balance_value = {
+				id = SLO_power_balance_1
+				value = 0.10
+				tooltip_side = SLO_DEM_side
+			}
 			add_to_variable = {
 				SLO_love_political_power_factor = 0.04
 			}
@@ -3076,13 +3135,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = -1
+		x = 0
 		y = 2
 		prerequisite = {
 			focus = SLO_foc_1-6-1
 			focus = SLO_foc_1-6-2
 		}
 		available = {
+			has_country_flag = SLO_love_yes
 		}
 		bypass = {
 		}
@@ -3090,16 +3150,16 @@ focus_tree = {
 			custom_effect_tooltip = SLO_love_tt_0
 			custom_effect_tooltip = SLO_love_tt_6
 			add_to_variable = {
-				SLO_love_political_power_factor = 0.12
+				SLO_love_political_power_factor = 0.08
 			}
 			add_to_variable = {
-				SLO_love_stability_factor = 0.08
+				SLO_love_stability_factor = 0.04
 			}
 			add_to_variable = {
-				SLO_love_drift_defence_factor = 0.12
+				SLO_love_drift_defence_factor = 0.08
 			}
 			add_to_variable = {
-				SLO_love_surrender_limit = 0.08
+				SLO_love_surrender_limit = 0.04
 			}
 		}
 	}
@@ -3112,34 +3172,30 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 1
-		y = 2
+		x = 0
+		y = 3
 		prerequisite = {
-			focus = SLO_foc_1-6-1
-			focus = SLO_foc_1-6-2
+			focus = SLO_foc_1-6-9
 		}
 		available = {
+			has_country_flag = SLO_love_yes
 		}
 		bypass = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = SLO_love_tt_0
-			custom_effect_tooltip = SLO_love_tt_1
-			custom_effect_tooltip = SLO_love_tt_7
+			custom_effect_tooltip = SLO_love_tt_6
 			add_to_variable = {
-				SLO_love_political_power_factor = 0.04
+				SLO_love_political_power_factor = 0.08
 			}
 			add_to_variable = {
-				SLO_love_stability_factor = 0.02
+				SLO_love_stability_factor = 0.04
 			}
 			add_to_variable = {
-				SLO_love_drift_defence_factor = 0.04
+				SLO_love_drift_defence_factor = 0.08
 			}
 			add_to_variable = {
-				SLO_love_surrender_limit = 0.02
-			}
-			add_to_variable = {
-				SLO_love_conscription_factor = 0.10
+				SLO_love_surrender_limit = 0.04
 			}
 		}
 	}
@@ -3155,37 +3211,29 @@ focus_tree = {
 		x = 1
 		y = 5
 		prerequisite = {
-			focus = SLO_foc_1-6-9
-		}
-		prerequisite = {
-			focus = SLO_foc_1-6-10
-		}
-		prerequisite = {
-			focus = SLO_foc_1-6-4
-			focus = SLO_foc_1-6-8
+			focus = SLO_foc_1-6-5
+			focus = SLO_foc_1-6-7
 		}
 		mutually_exclusive = {	
 			focus = SLO_foc_1-6-12
 		}
 		available = {
-			OR = {
-				has_government = democratic
-				has_government = communism
-			}
 			if = {
 				limit = {
 					has_government = democratic
 				}
-				NOT = {
-					has_completed_focus = SLO_foc_1-6-4
+				power_balance_value = {
+					id = SLO_power_balance_1
+					value > 0.90
 				}
 			}
 			if = {
 				limit = {
 					has_government = communism
 				}
-				NOT = {
-					has_completed_focus = SLO_foc_1-6-8
+				power_balance_value = {
+					id = SLO_power_balance_1
+					value < -0.90
 				}
 			}
 		}
@@ -3212,34 +3260,26 @@ focus_tree = {
 		x = -1
 		y = 5
 		prerequisite = {
-			focus = SLO_foc_1-6-9
-		}
-		prerequisite = {
-			focus = SLO_foc_1-6-10
-		}
-		prerequisite = {
-			focus = SLO_foc_1-6-4
-			focus = SLO_foc_1-6-8
+			focus = SLO_foc_1-6-5
+			focus = SLO_foc_1-6-7
 		}
 		mutually_exclusive = {	
 			focus = SLO_foc_1-6-11
 		}
 		available = {
-			OR = {
-				has_government = democratic
-				has_government = communism
+			power_balance_value = {
+				id = SLO_power_balance_1
+				value > -0.15
 			}
-			has_completed_focus = SLO_foc_1-6-4
-			has_completed_focus = SLO_foc_1-6-8
+			power_balance_value = {
+				id = SLO_power_balance_1
+				value < 0.15
+			}
 		}
 		bypass = {
 		}
 		completion_reward = {
 			add_stability = -0.10
-			add_popularity = {
-				ideology = ROOT
-				popularity = -0.10
-			}
 			custom_effect_tooltip = SLO_love_tt_0
 			custom_effect_tooltip = SLO_love_tt_8
 			add_to_variable = {

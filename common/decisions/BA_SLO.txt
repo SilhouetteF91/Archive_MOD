@@ -1342,7 +1342,6 @@ SLO_decisions_2 = {
 }
 debug_decisions = {
 	SLO_get_a_5_ROM = {
-		priority = 80
 		allowed = {
 			always = yes
 		}
@@ -1373,7 +1372,6 @@ debug_decisions = {
 		}
     }
 	SLO_remove_a_5_ROM = {
-		priority = 80
 		allowed = {
 			always = yes
 		}
@@ -1403,4 +1401,36 @@ debug_decisions = {
 			SLO_influence_check = yes
 		}
     }
+	SLO_bop_start = {
+		allowed = {
+			always = yes
+		}
+		visible = {
+			is_ai = no
+			is_debug = yes
+			tag = SLO
+		}
+		complete_effect = {
+			set_power_balance = {
+				id = SLO_power_balance_1
+				left_side = SLO_COM_side
+				right_side = SLO_DEM_side
+			}
+		}
+	}
+	SLO_bop_end = {
+		allowed = {
+			always = yes
+		}
+		visible = {
+			is_ai = no
+			is_debug = yes
+			tag = SLO
+		}
+		complete_effect = {
+			remove_power_balance = {
+				id = SLO_power_balance_1
+			}
+		}
+	}
 }
