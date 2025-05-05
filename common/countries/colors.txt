@@ -1212,6 +1212,10 @@ GEI = {
 	color = HSV { 0 0.71 0.49 }
 	color_ui = rgb { 124 36 36 }
 }
+DE1 = {
+	color = HSV { 0 0.71 0.49 }
+	color_ui = rgb { 124 36 36 }
+}
 SRT = {
 	color = rgb { 75 70 120 }
 	color_ui = rgb { 65 60 100 }
