@@ -152,6 +152,10 @@ spriteTypes = {
 		name = "GFX_focus_TRN_alliance_with_devil"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_alliance_with_devil.tga"
 	}
+	SpriteType = {
+		name = "GFX_focus_TRN_balkan_dip"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_balkan_dip.tga"
+	}
 
 	SpriteType = {
 		name = "GFX_focus_BLM_gang_thugs_war_focus"

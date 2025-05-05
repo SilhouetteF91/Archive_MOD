@@ -2395,13 +2395,13 @@ leader_traits = {
 		max_command_power = 20
 		mobilization_laws_cost_factor = -0.25
 	}
-	TRM_trinity_messiah = {
+	TRN_trinity_messiah = {
 		random = no 
 		power_balance_weekly = -0.01
 		stability_factor = 0.05
 		compliance_gain = 0.01
 	}
-	TRM_tough_soldier = {
+	TRN_der_fuhrer = {
 		random = no 
 		power_balance_weekly = 0.01
 		army_morale_factor = 0.06
