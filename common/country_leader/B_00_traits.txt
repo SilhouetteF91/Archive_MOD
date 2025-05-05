@@ -161,6 +161,14 @@ leader_traits = {
 		army_core_attack_factor = 0.20
 		army_core_defence_factor = 0.20 
 	}
+	BLM_kurihama_akemi_traits = {
+		random = no
+		stability_factor = 0.10
+		war_support_factor = 0.10
+		consumer_goods_factor = 0.05
+		war_stability_factor = 0.20
+		army_org_factor = 0.10
+	}
 	BLA_crime_syndicate_traits = {
 		random = no
 		stability_factor = -0.15
@@ -177,6 +185,10 @@ leader_traits = {
 		random = no
 		ai_call_ally_desire_factor = -60
 		ai_join_ally_desire_factor = -40
+	}
+	BA_highlander_aoba = {
+		random = no
+		industrial_capacity_factory = 0.05
 	}
 	BA_highlander_hikari = {
 		random = no
@@ -344,6 +356,11 @@ leader_traits = {
 		autonomy_gain = -2.5
 		drift_defence_factor = 0.30
 		democratic_drift = -0.01
+	}
+	RE4_military_government_commander = {
+		random = no
+		political_power_cost = 0.05
+		autonomy_gain = -2.5
 	}
 	BA_CHI_Great_commander = {
 		random = no
@@ -960,17 +977,15 @@ leader_traits = {
 	}
  	ABY_trait_shehd = { #"노동부장"
 		random = no
-		political_power_factor = -0.15
-		stability_factor = 0.05
-		Production_factory_efficiency_gain_factor = 0.1
-		production_factory_start_efficiency_factor = 0.1
-		production_factory_max_efficiency_factor = 0.1
+		army_core_defence_factor = 0.1
+		stability_factor = 0.1
+		resistance_target_on_our_occupied_states = 0.25
 	}
  	ABY_trait_dog = { #"맹견"
 		random = no
-		war_support_factor = 0.10
-		stability_factor = -0.1
-		conscription = 0.02
+		conscription_factor = 0.1
+		command_power_gain_mult = 0.15
+		army_attack_factor = 0.05
 	}
  	ABY_trait_resistance = { #"저항운동가"
 		random = no
@@ -986,15 +1001,34 @@ leader_traits = {
  	ABY_trait_neptis = { #"네프티스 경제 전문가"
 		random = no
 		production_factory_max_efficiency_factor = 0.10
-		Production_factory_efficiency_gain_factor = 0.05
-		production_speed_rail_way_factor = 0.5
-		production_speed_supply_node_factor = 0.5
+		Production_factory_efficiency_gain_factor = 0.10
+		industrial_capacity_factory = 0.1
+	}
+	ABY_trait_three_head = {
+		random = no
+		political_power_factor = 0.15
+		stability_factor = -0.2
+		war_support_factor = 0.15
+		democratic_drift = -0.15
+	}
+	ABY_trait_emergency_war_economy = {
+		random = no
+		stability_factor = -0.3
+		war_support_factor = 0.15
+		industrial_capacity_factory = 0.5
+		political_power_factor = 0.25
+		production_speed_buildings_factor = -1
+		consumer_goods_expected_value = 0.5
+		production_lack_of_resource_penalty_factor = -1
+		research_speed_factor = -0.25
+		neutrality_drift = 1
+		surrender_limit = 0.5
 	}
  	ABY_trait_abydos_leader = { #"아비도스 학생대표"
 		random = no
-		stability_factor = 0.05
-		war_support_factor = 0.05
-		conscription = 0.01
+		war_support_factor = 0.1
+		army_core_attack_factor = 0.1
+		defensive_war_stability_factor = 0.2
 	}
  	ABY_trait_eotlqk = { #"아량넓은 신사"
 		random = no
@@ -1159,12 +1193,9 @@ leader_traits = {
 	}
  	ABY_trait_deplomacy = { #"외무장관"
 		random = no
-		improve_relations_maintain_cost_factor = -0.25
-		trade_opinion_factor = 0.10
-		democratic_acceptance = 20
-		communism_acceptance = 20
-		fascism_acceptance = 20
-		neutrality_acceptance = 20
+		surrender_limit = 0.1
+		war_support_factor = 0.1
+		political_power_factor = 0.1
 	}
  	ABY_trait_hard_government = { #"혼란스러운 정부"
 		random = no
@@ -1546,6 +1577,30 @@ leader_traits = {
 		resistance_decay = 0.1
 		surrender_limit = 0.1
 	}
+	b_tjsehqnwkd3_tooltip = { #강철의 선도부장
+		random = no
+        war_support_factor = 0.15
+		political_power_factor = 0.15
+		army_core_defence_factor = 0.05
+		political_advisor_cost_factor = -0.15
+		economy_cost_factor = -0.15
+		trade_laws_cost_factor = -0.15
+		mobilization_laws_cost_factor = -0.15
+
+		compliance_gain = 0.05
+		resistance_decay = 0.1
+		surrender_limit = 0.1
+	}
+	GEH_blame_director = { #비난받을 만한 일
+		random = no
+		ai_desired_divisions_factor = -0.10
+        war_support_factor = -0.05
+	}
+	GEH_blame_director_2 = { #비난받을 만한 일
+		random = no
+		political_power_gain = 0.05
+        war_support_factor = 0.05
+	}
 	GEH_military_chairman = { #군인 행정관
 		random = no
 		hidden_modifier = {
@@ -1705,6 +1760,24 @@ leader_traits = {
 		training_time_army_factor = -0.1
 		army_defence_against_major_factor = 0.1
 	}
+	
+	GEH_paranoia_ako_bad = { # 무너진 선임행정관
+		random = no
+		sprite = 12
+		war_support_factor = 0.1
+		political_power_factor = -0.15
+		training_time_army_factor = -0.05
+		army_defence_against_major_factor = 0.05
+	}
+
+	GEH_paranoia_ako_good = { # 히나의 영원한 반려자
+		random = no
+		sprite = 12
+		war_support_factor = 0.2
+		training_time_army_factor = -0.1
+		army_defence_against_major_factor = 0.1
+		non_core_manpower = 0.05
+	}
 
 	GEH_artist = { # 예술가
 		random = no
@@ -1728,8 +1801,27 @@ leader_traits = {
 	GEH_composer = { # 클래식 작곡가
 		random = no
 		stability_factor = 0.05
+		opinion_gain_monthly_factor = 0.1
+		improve_relations_maintain_cost_factor = -0.1
 	}
 
+	GEH_friendly_sociopath = { # 다정한 소시오패스
+		random = no
+		improve_relations_maintain_cost_factor = 0.25
+		opinion_gain_monthly_factor = -0.25
+		war_support_factor = 0.1
+		subjects_autonomy_gain = -0.3
+		justify_war_goal_time = -0.25
+	}
+
+	GEH_friendly_sociopath_tooltip = { # 다정한 소시오패스
+		random = no
+		improve_relations_maintain_cost_factor = 0.25
+		opinion_gain_monthly_factor = -0.25
+		war_support_factor = 0.1
+		subjects_autonomy_gain = -0.3
+		justify_war_goal_time = -0.25
+	}
 
 	GEH_School_Lunch_Club_Juri = { # 급양부 - 주리
 		sprite = 13
@@ -2341,6 +2433,13 @@ leader_traits = {
 		army_morale_factor = 0.1
 		compliance_growth_on_our_occupied_states = -0.15
 	}
+	TRM_Misono_the_tyrant = {
+		random = no
+		political_power_gain = 0.1
+		fascism_drift = 0.06
+		compliance_growth = -0.05
+		non_core_manpower = 0.05
+	}
 	TRN_economist_ui = { # 경제학자
 		sprite = 10
 		random = no
@@ -2363,6 +2462,13 @@ leader_traits = {
 		consumer_goods_factor = -0.10
 		research_speed_factor = 0.15
 	}
+	TRN_AED_club_manager = { # 학원경제개발부
+ 		sprite = 13
+ 		random = no
+ 
+ 		production_factory_efficiency_gain_factor = 0.05
+ 		line_change_production_efficiency_factor = 0.05
+ 	}
 	TRN_queen_of_the_night = { # 무력의 대천사
 		sprite = 13
 		random = no
@@ -3190,17 +3296,29 @@ leader_traits = {
 	}
 	HYA_T1a = { #낙천적인 음양부장
 		random = no
-		political_power_factor = -0.30
+		political_power_factor = -0.3
+		stability_factor = 0.1
+		political_advisor_cost_factor = 0.10
+		hidden_modifier = {
+			ai_desired_divisions_factor = 1.2
+			ai_focus_defense_factor = 0.5
+		}
+	}
+	HYA_T1a_up = { #백귀야행의 음양부장
+		random = no
+		political_power_factor = -0.15
 		stability_factor = 0.15
 		hidden_modifier = {
 			ai_desired_divisions_factor = 1.2
 			ai_focus_defense_factor = 0.5
 		}
 	}
-	HYA_T1a_up = { #낙천적인 음양부장
+	HYA_trait_niya = { #인간적인 무도회
 		random = no
-		political_power_factor = -0.15
-		stability_factor = 0.15
+		political_power_gain = 0.15
+		mobilization_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
 		hidden_modifier = {
 			ai_desired_divisions_factor = 1.2
 			ai_focus_defense_factor = 0.5
@@ -3947,7 +4065,49 @@ leader_traits = {
 			factor = 2
 		}
 	}
+	skoda_trait = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	skoda_trait_2 = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	skoda_trait_3 = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
 	saint_nephtys = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	saint_nephtys_2 = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	saint_nephtys_3 = {
+		random = no
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	saint_nephtys_4 = {
 		random = no
 
 		ai_will_do = {
@@ -4225,15 +4385,13 @@ leader_traits = {
 		random = no
 		stability_factor = 0.1
 		political_power_factor = 0.1
-		army_attack_factor = 0.1
-		army_defence_factor = 0.1
 	}
 
-	KAP_2nd_sin_B = { # KV seia
+	KAP_3nd_sin_B = { # VK
 		random = no
-		stability_factor = 0.15
+		army_attack_factor = 0.15
+		army_defence_factor = 0.15
 		political_power_factor = -0.15
-		custom_modifier_tooltip = "불쌍함"
 	}
 
 	## 멕시코 ##
@@ -4331,6 +4489,11 @@ leader_traits = {
 		political_power_factor = -0.15
 		stability_factor = -0.10
 	}
+	SLO_incomplete = {
+		random = no
+		stability_weekly = -0.002
+		disabled_ideas = 1
+	}
 	SLO_war_hero_dem = {
 		random = no
 		political_power_factor = 0.10
@@ -4341,13 +4504,13 @@ leader_traits = {
 		production_speed_arms_factory_factor = 0.10
 		weekly_casualties_war_support = 0.001
 	}
-	###################################################################################
-	ENG_Health_minister = {
+	SLO_anticommunism_lawyer = {
 		random = no
 		sprite = 13
-		stability_factor = 0.05
-		monthly_population = +0.25
-		weekly_manpower = +100
+		drift_defence_factor = 0.25
+		stability_factor = 0.10
+		democratic_drift = 0.05
+		communism_drift = -0.05
 	}
 }
  
