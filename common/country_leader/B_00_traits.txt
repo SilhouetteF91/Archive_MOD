@@ -4504,5 +4504,13 @@ leader_traits = {
 		production_speed_arms_factory_factor = 0.10
 		weekly_casualties_war_support = 0.001
 	}
+	SLO_anticommunism_lawyer = {
+		random = no
+		sprite = 13
+		drift_defence_factor = 0.25
+		stability_factor = 0.10
+		democratic_drift = 0.05
+		communism_drift = -0.05
+	}
 }
  

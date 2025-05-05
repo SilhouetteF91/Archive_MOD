@@ -107,6 +107,8 @@ recruit_character = SLO_karol_sidor
 recruit_character = SLO_frano_kral
 recruit_character = SLO_jozef_turanec
 recruit_character = SLO_stefan_jurech
+recruit_character = SLO_jozef_lettrich
+recruit_character = SLO_laco_novomesky
 
 set_stability = 0.35
 set_war_support = 0.50

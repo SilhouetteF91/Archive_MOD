@@ -961,4 +961,58 @@ characters={
 			logistics_skill=1
 		}
 	}
+	SLO_jozef_lettrich={ #조셉 레트리히 / 정치
+		name="SLO_jozef_lettrich"
+		portraits={
+			civilian={
+				#large="gfx/leaders/SLO/SLO_pot_33.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_33.tga"
+			}
+			army={
+				#large="gfx/leaders/SLO/SLO_pot_33.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_33.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_jozef_lettrich
+			allowed = {
+				original_tag = SLO
+			}
+			traits  = {
+				SLO_anticommunism_lawyer
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			cost = 150
+		}
+	}
+	SLO_laco_novomesky={ #라코 노보메스키 / 정치
+		name="SLO_laco_novomesky"
+		portraits={
+			civilian={
+				#large="gfx/leaders/SLO/SLO_pot_34.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_34.tga"
+			}
+			army={
+				#large="gfx/leaders/SLO/SLO_pot_34.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_34.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_laco_novomesky
+			allowed = {
+				original_tag = SLO
+			}
+			traits  = {
+				socialist_journalist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			cost = 150
+		}
+	}
 }
