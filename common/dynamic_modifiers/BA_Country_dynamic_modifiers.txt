@@ -2458,3 +2458,47 @@ SLO_love_modifier = {
 	training_time_factor = SLO_love_training_time_factor
 	research_speed_factor = SLO_love_research_speed_factor
 }
+
+ENG_postwar_devastation = { # 전후 황폐화
+    icon = can_send_in_the_zombies
+	consumer_goods_factor = ENG_pwd_cgf
+	industrial_capacity_factory = ENG_pwd_icfactory
+	industrial_capacity_dockyard = ENG_pwd_icdockyard
+	stability_factor = ENG_pwd_stability
+	research_speed_factor = ENG_pwd_research_spd
+	global_building_slots = ENG_pwd_building_slots
+	civilian_factory_use = ENG_pwd_civ_use
+}
+ENG_great_depression_01 = { # 전후 대공황
+    icon = can_send_in_the_zombies
+	political_power_cost = ENG_gd_ppcost
+	consumer_goods_factor = ENG_gd_cgf
+	stability_factor = ENG_gd_stability
+	industrial_capacity_factory = ENG_gd_icfactory
+	industrial_capacity_dockyard = ENG_gd_icdockyard
+	production_speed_industrial_complex_factor = ENG_gd_civspeed
+	production_speed_arms_factory_factor = ENG_gd_milspeed
+	local_resources_factor = ENG_gd_resources
+}
+ENG_dissolving_commonwealth = { # 분해되어가는 영연방
+    icon = can_send_in_the_zombies
+	political_power_cost = ENG_dc_ppcost
+	subjects_autonomy_gain = ENG_dc_autonomygain
+	cic_to_overlord_factor = ENG_dc_civtoover
+	mic_to_overlord_factor = ENG_dc_miltoover
+}
+
+ENG_homless_n_health_1 = { # 이재민 문제 - 심각
+    icon = can_send_in_the_zombies
+	stability_factor = ENG_hnh_stability
+	monthly_population = ENG_hnh_popgrowth
+	weekly_manpower = ENG_hnh_weeklymp
+}
+ENG_low_admin_Strength = { # 행정력 약화
+    icon = can_send_in_the_zombies
+	stability_factor = ENG_las_stability
+	resistance_target = ENG_las_resistance
+	monthly_population = ENG_las_popgrowth
+	weekly_manpower = ENG_las_weeklymp
+	resistance_damage_to_garrison_on_our_occupied_states = ENG_las_garrisondamage
+}
