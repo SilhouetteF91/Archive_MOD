@@ -745,16 +745,6 @@ GEH_prefect_team_culture = { #게헨나 선도부-도이치계 관계
 	industry_repair_factor = GEH_prefect_team_culture_industry_repair_factor
 }
 
-geh_discipline_idea = { # 게헨나 규율
-
-	enable = { always = yes }
-	remove_trigger = { }
-
-	army_attack_factor = geh_discipline_army_attack_factor #사단 공격
-	army_defence_factor = geh_discipline_army_defence_factor # 사단 방어
-    	breakthrough_factor = geh_discipline_breakthrough_factor # 돌파
-}
-
 ##총학##
 
 COU_RIN_policy_lead_idea = { #린 루트 - 행정관의 주도 [행정관의 정책]
@@ -1389,21 +1379,17 @@ TRM_industries_dynamic = {
 	enable = {
 		always = yes
 	}
-
-	icon = GFX_idea_TRM_industries_ns
+	icon = GFX_idea_SOV_third_five_year_plan
 	consumer_goods_factor = TRM_industries_dynamic_consumer_goods_factor
 	production_speed_arms_factory_factor = TRM_industries_dynamic_production_speed_arms_factory_factor
 	production_speed_industrial_complex_factor = TRM_industries_dynamic_production_speed_industrial_complex_factor
 	production_speed_buildings_factor = TRM_industries_dynamic_production_speed_buildings_factor
     industrial_capacity_factory = TRM_industrial_capacity_factory_factor
-	industrial_capacity_dockyard = TRM_industrial_capacity_dockyard
 	production_factory_efficiency_gain_factor = TRM_industries_dynamic_production_factory_efficiency_gain_factor #생산 효율 증가
 	production_factory_max_efficiency_factor  = TRM_industries_dynamic_production_factory_max_efficiency_factor #생산 효율 한도
 	production_factory_start_efficiency_factor = TRM_industries_dynamic_production_factory_start_efficiency_factor #시작 생산 효율
 	production_lack_of_resource_penalty_factor = TRM_industries_dynamic_production_lack_of_resource_penalty_factor #자원부족 패널티
-	local_resources_factor = TRM_industries_dynamic_local_resources_factor # 현지 자원 변동치
     conversion_cost_civ_to_mil_factor = TRM_industries_dynamic_conversion_cost_civ_to_mil_factor # 민간공장에서 군수공장으로 전환하는 비용
-
 }
 TRM_develop_the_heer_modifier = { # 트리니티 육군
 	
@@ -1459,7 +1445,7 @@ TRM_develop_the_heer_modifier = { # 트리니티 육군
 
 TRM_VVS = { #트리니티 공군
 
-    icon = GFX_idea_TRM_Trinity_air_force
+    icon = GFX_idea_generic_air_research
 
     air_cas_present_factor = TRM_VVS_air_cas_present_factor
 
@@ -2433,28 +2419,47 @@ SLO_air_modifier = {
 	air_fuel_consumption_factor = SLO_air_air_fuel_consumption_factor
 	air_doctrine_cost_factor = SLO_air_air_doctrine_cost_factor
 }
-SLO_love_modifier = {
-	enable = {
-		always = yes
-	}
-	icon = GFX_idea_generic_disjointed_gov
-	political_power_factor = SLO_love_political_power_factor
-	stability_factor = SLO_love_stability_factor
-	drift_defence_factor = SLO_love_drift_defence_factor
-	surrender_limit = SLO_love_surrender_limit
+#######################################################################
+ENG_postwar_devastation = { # 전후 황폐화
+    icon = can_send_in_the_zombies
+	consumer_goods_factor = ENG_pwd_cgf
+	industrial_capacity_factory = ENG_pwd_icfactory
+	industrial_capacity_dockyard = ENG_pwd_icdockyard
+	stability_factor = ENG_pwd_stability
+	research_speed_factor = ENG_pwd_research_spd
+	global_building_slots = ENG_pwd_building_slots
+	civilian_factory_use = ENG_pwd_civ_use
+}
+ENG_great_depression_01 = { # 전후 대공황
+    icon = can_send_in_the_zombies
+	political_power_cost = ENG_gd_ppcost
+	consumer_goods_factor = ENG_gd_cgf
+	stability_factor = ENG_gd_stability
+	industrial_capacity_factory = ENG_gd_icfactory
+	industrial_capacity_dockyard = ENG_gd_icdockyard
+	production_speed_industrial_complex_factor = ENG_gd_civspeed
+	production_speed_arms_factory_factor = ENG_gd_milspeed
+	local_resources_factor = ENG_gd_resources
+}
+ENG_dissolving_commonwealth = { # 분해되어가는 영연방
+    icon = can_send_in_the_zombies
+	political_power_cost = ENG_dc_ppcost
+	subjects_autonomy_gain = ENG_dc_autonomygain
+	cic_to_overlord_factor = ENG_dc_civtoover
+	mic_to_overlord_factor = ENG_dc_miltoover
+}
 
-	war_support_factor = SLO_love_war_support_factor
-	communism_drift = SLO_love_communism_drift
-	democratic_drift = SLO_love_democratic_drift
-	fascism_drift = SLO_love_fascism_drift
-	production_factory_efficiency_gain_factor = SLO_love_production_factory_efficiency_gain_factor
-	production_factory_max_efficiency_factor = SLO_love_production_factory_max_efficiency_factor
-	production_speed_buildings_factor = SLO_love_production_speed_buildings_factor
-	production_speed_industrial_complex_factor = SLO_love_production_speed_industrial_complex_factor
-	production_speed_arms_factory_factor = SLO_love_production_speed_arms_factory_factor
-	consumer_goods_factor = SLO_love_consumer_goods_factor
-	industrial_capacity_factory = SLO_love_industrial_capacity_factory
-	conscription_factor = SLO_love_conscription_factor
-	training_time_factor = SLO_love_training_time_factor
-	research_speed_factor = SLO_love_research_speed_factor
+ENG_homless_n_health_1 = { # 이재민 문제 - 심각
+    icon = can_send_in_the_zombies
+	stability_factor = ENG_hnh_stability
+	monthly_population = ENG_hnh_popgrowth
+	weekly_manpower = ENG_hnh_weeklymp
+}
+ENG_low_admin_Strength = { # 행정력 약화
+    icon = can_send_in_the_zombies
+	stability_factor = ENG_las_stability
+	resistance_target = ENG_las_resistance
+	monthly_population = ENG_las_popgrowth
+	weekly_manpower = ENG_las_weeklymp
+	resistance_damage_to_garrison_on_our_occupied_states = ENG_las_garrisondamage
 }
