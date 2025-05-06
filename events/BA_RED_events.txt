@@ -2383,7 +2383,7 @@ country_event = { #사무국 재건
 }
 
 unit_leader_event = {
-	#"폭음"
+	#빠른 대처
 	id = RED_minori_event.1
 	title = RED_minori_event.1.t
 	desc = RED_minori_event.1.d
@@ -2391,11 +2391,10 @@ unit_leader_event = {
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.1.a
-		RED_shigure = {
-			unit_leader_event = {
-				id = RED_minori_event.2
-				hours = 2
-			}
+		set_party_name = {
+			ideology = communism
+			long_name = RED_SAC-PWD_long
+			name = RED_SAC-PWD
 		}
 	}
 }
@@ -2484,6 +2483,9 @@ country_event = { #노동절 집회
 			country_event = {
 				id = RED_minori_event.3
 				days = 2
+			}
+			RED_minori = {
+				unit_leader_event = RED_minori_event.1
 			}
 			end_puppet = RE4
 			end_puppet = RE1
@@ -4923,6 +4925,7 @@ country_event = { #트로츠키주의자들 튀기
 			}
 		}
 		SOV = {
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			effect_tooltip = {
 				SOV_ivan_smirnov = {
 					set_nationality = SPR
@@ -4931,7 +4934,6 @@ country_event = { #트로츠키주의자들 튀기
 			hidden_effect = {
 				retire_character = SOV_ivan_smirnov
 			}
-			custom_effect_tooltip = RED_event.14_tt
 			effect_tooltip = {
 				SOV_ivar_smilga = {
 					set_nationality = GEM
@@ -4940,7 +4942,6 @@ country_event = { #트로츠키주의자들 튀기
 			hidden_effect = {
 				retire_character = SOV_ivar_smilga
 			}
-			custom_effect_tooltip = RED_event.14_tt
 			effect_tooltip = {
 				SOV_karl_radek = {
 					set_nationality = GEM
@@ -4949,7 +4950,6 @@ country_event = { #트로츠키주의자들 튀기
 			hidden_effect = {
 				retire_character = SOV_karl_radek
 			}
-			custom_effect_tooltip = RED_event.14_tt
 			effect_tooltip = {
 				SOV_yevgeny_preobrazhensky = {
 					set_nationality = MIL
@@ -4958,7 +4958,6 @@ country_event = { #트로츠키주의자들 튀기
 			hidden_effect = {
 				retire_character = SOV_yevgeny_preobrazhensky
 			}
-			custom_effect_tooltip = RED_event.14_tt
 			effect_tooltip = {
 				SOV_aleksandr_shlyapnikov = {
 					set_nationality = COU
