@@ -7364,36 +7364,6 @@ focus_tree = {
 	
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_hina
-		icon = GFX_focus_GEH_last_focus_effect
-		cost = 3
-
-		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mind
-		x = 0
-		y = 2
-
-        prerequisite = {
-            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mind
-        }
-
-		ai_will_do = {
-			base = 100
-			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
-			}
-		}
-
-		completion_reward = {
-			
-		}
-	}
-	
-    focus = {
-		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_hina
 		icon = GFX_focus_generic_annex_country_2
 		cost = 3
 
