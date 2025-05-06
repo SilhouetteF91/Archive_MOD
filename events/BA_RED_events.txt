@@ -2900,7 +2900,7 @@ country_event = { #체리노의 운명
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.11.a
-		RE2 = {
+		REC = {
 			hidden_effect = {
 				kill_country_leader = yes
 			}
@@ -2910,29 +2910,24 @@ country_event = { #체리노의 운명
 		}
 		remove_ideas = RED_threat_of_coup_5
 		country_event = {
-			id = RED_minori_event.12
+			id = RED_minori_event.13
 			days = 5
 		}
 	}
 }
-country_event = { #마리나의 운명
+country_event = { #트로츠키의 재판
 	id = RED_minori_event.12
 	title = RED_minori_event.12.t
 	desc = RED_minori_event.12.d
 	is_triggered_only = yes
-	picture = "GFX_report_event_RED_marina"
+	picture = GFX_report_event_NOR_trotsky_speech
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.12.a
-		RE2 = {
-			RED_marina = {
+		REC = {
+			RED_lev_trotsky = {
 				retire = yes
 			}
-		}
-		remove_ideas = RED_office_ss_sabo_idea
-		country_event = {
-			id = RED_minori_event.13
-			days = 5
 		}
 		hidden_effect = {
 			country_event = {
@@ -2946,6 +2941,11 @@ country_event = { #마리나의 운명
 				}
 			}
 		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+		custom_effect_tooltip = RED_minori_event.12_tt
 	}
 }
 country_event = { #토모에의 운명
@@ -2957,12 +2957,12 @@ country_event = { #토모에의 운명
 	picture = "GFX_report_event_RED_tomoe"
 	option = {
 		name = RED_minori_event.13.a
-		RE2 = {
+		REC = {
 			RED_Tomoe = {
 				retire = yes
 			}
 		}
-		add_war_support = 0.01
+		remove_ideas = RED_office_ss_sabo_idea
 	}
 }
 country_event = { #덴마크 군정청 좆바름
@@ -3018,7 +3018,7 @@ country_event = { #구교사 해방
 		}
 	}
 }
-country_event = { #사회주의 신헌법 - 혁명위원회 해산
+country_event = { #지도자
 	id = RED_minori_event.16
 	title = RED_minori_event.16.t
 	desc = RED_minori_event.16.d
@@ -3026,21 +3026,6 @@ country_event = { #사회주의 신헌법 - 혁명위원회 해산
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.16.a
-		hidden_effect={
-		create_country_leader = {
-			name = RED_constitutionary_assembly
-			picture = GFX_portrait_SOV_supreme_soviet
-			ideology = syndicalism
-		}}
-		set_party_name = {
-			ideology = communism
-			long_name = RED_constitutionary_assembly
-			name = RED_constitutionary_assembly
-		}
-		country_event = {
-			id = RED_minori_event.17
-			days = 5
-		}
 	}
 }
 country_event = { #사회주의 신헌법 - 체제

@@ -3960,9 +3960,11 @@ focus_tree = {
 		relative_position_id = RED_club_focus_2
 		cost = 5
 		available = {
-			always = no
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
+			}
+			RE4 = {
+				exists = no
 			}
 		}
 		completion_reward = {
@@ -9413,9 +9415,7 @@ focus_tree = {
 			focus = RED_foreign_policy
 		}
 		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
+			has_country_flag =  unlock_focuses
 		}
 		mutually_exclusive = {
 			focus = RED_expansionism
@@ -9450,9 +9450,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RED_foreign_policy
 		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
+			has_country_flag =  unlock_focuses
 		}
 		prerequisite = {
 			focus = RED_foreign_policy
@@ -11406,7 +11404,7 @@ focus_tree = {
 				create_country_leader = {
 					name = RED_revolutionary_committee
 					picture = GFX_portrait_SOV_supreme_soviet
-					ideology = syndicalism
+					ideology = war_communism
 					traits = {
 						revolutionary_council
 					}
@@ -12854,7 +12852,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RED_maintaining_the_fire
-		cost = 5
+		cost = 6
 		available = {
 			NOT = {
 				country_exists = REC
@@ -12867,25 +12865,6 @@ focus_tree = {
 				value = 999
 			}
 			add_political_power = 50
-			unlock_decision_tooltip = RED_annex_NOR_decision
-			unlock_decision_tooltip = RED_annex_SWE_decision
-			unlock_decision_tooltip = RED_annex_DEN_decision
-			hidden_effect = {
-				every_country = {
-					limit = {
-						OR = {
-							tag = RE1
-							tag = RE2
-							tag = RE3
-							tag = RE4
-							tag = REC
-						}
-					}
-					every_core_state = {
-						remove_core_of = prev
-					}
-				}
-			}
 			add_timed_idea = {
 				idea = RED_after_civilwar_good
 				days = 365
@@ -12893,7 +12872,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#혁명과도정부
+		#혁명 과도 정부
 		id = RED_revolutionary_transitional_government
 		icon = GFX_focus_HUN_a_revolutionary_greater_hungary
 		prerequisite = {
@@ -12903,8 +12882,13 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = RED_anti_fascism_policy
-		cost = 4
+		cost = 2
 		completion_reward = {
+			set_cosmetic_tag = RED_revolutionary_provisional_government
+			country_event = {
+				id = RED_minori_event.16
+				days = 2
+			}
 		}
 	}
 	focus = {

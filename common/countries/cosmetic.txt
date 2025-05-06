@@ -2475,7 +2475,7 @@ RED_EUR_UNIFIED = {
 	color = rgb { 220 39 69 }
 	color_ui = rgb { 220 39 69 }
 }
-RED_marina_government = {
+RED_revolutionary_provisional_government = {
 	color = rgb { 210 29 49 }
 	color_ui = rgb { 210 29 49 }
 }

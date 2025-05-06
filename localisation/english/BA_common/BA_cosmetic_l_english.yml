@@ -1205,6 +1205,9 @@
  RED_worker_republic_DEF: "붉은겨울 노동자 공화국"
  RED_worker_republic_ADJ: "붉은겨울"
  RED_EUR_UNIFIED: "사회주의 세계공화국"
+ RED_revolutionary_provisional_government: "혁명 과도 정부"
+ RED_revolutionary_provisional_government_DEF: "붉은겨울 혁명 과도 정부"
+ RED_revolutionary_provisional_government_ADJ: "붉은겨울"
 
  RED_marina_government: "붉은겨울 군사혁명정부"
  RED_marina_government_DEF: "붉은겨울 군사혁명정부"
