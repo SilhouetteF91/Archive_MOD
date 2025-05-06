@@ -7005,6 +7005,10 @@ focus_tree = {
 				}
 			}
 			country_event = { id = GEH.event.1004 }
+
+			custom_effect_tooltip = enter_tt
+			custom_effect_tooltip = GEH_BTBOTS_END_NEXT_flag
+			set_global_flag = GEH_BTBOTS_END_NEXT_flag
 		}
 	}
 
@@ -7647,6 +7651,9 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = GEH_news.8 }
 			}
+			custom_effect_tooltip = enter_tt
+			custom_effect_tooltip = GEH_BTBOTS_END_NEXT_flag
+			set_global_flag = GEH_BTBOTS_END_NEXT_flag
 		}
 	}
 	
@@ -7704,6 +7711,9 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = GEH_news.9 }
 			}
+			custom_effect_tooltip = enter_tt
+			custom_effect_tooltip = GEH_BTBOTS_END_NEXT_flag
+			set_global_flag = GEH_BTBOTS_END_NEXT_flag
 		}
 	}
 	
@@ -8395,6 +8405,9 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = GEH.event.1022 }
+			custom_effect_tooltip = enter_tt
+			custom_effect_tooltip = GEH_BTBOTS_END_NEXT_flag
+			set_global_flag = GEH_BTBOTS_END_NEXT_flag
 		}
 	}
 
