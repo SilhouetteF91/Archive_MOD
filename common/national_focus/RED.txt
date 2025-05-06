@@ -11274,11 +11274,6 @@ focus_tree = {
 					}
 				}
 			}
-			set_party_name = {
-				ideology = communism
-				long_name = RED_revolutionary_committee_long
-				name = RED_revolutionary_committee
-			}
 			unlock_decision_tooltip = RED_ousting_office
 		}
 	}
@@ -12707,7 +12702,7 @@ focus_tree = {
 	focus = {
 		#혁명재판
 		id = RED_anti_fascism_policy
-		icon = GFX_focus_generic_court
+		icon = GFX_focus_BRA_tribunal
 		prerequisite = {
 			focus = RED_maintaining_the_fire
 		}
@@ -12924,6 +12919,29 @@ focus_tree = {
 		}
 	}
 	focus = {
+		#진보의 유산
+		id = RED_procom_focus_10
+		icon = GFX_focus_generic_social_democracy
+		prerequisite = {
+			focus = RED_procom_focus_8
+			focus = RED_procom_focus_7
+		}
+		prerequisite = {
+			focus = RED_procom_focus_3
+		}
+		mutually_exclusive = {
+			focus = RED_revcom_focus_7
+			focus = RED_intwal_focus_9
+			focus = RED_revcom_focus_8
+		}
+		x = 0
+		y = 1
+		relative_position_id = RED_procom_focus_8
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
 		#혁명위원회
 		id = RED_revcom_focus_0
 		icon = GFX_focus_generic_soviet_politics
@@ -13024,11 +13042,23 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = RED_revcom_focus_9
-		}
-		prerequisite = {
 			focus = RED_procom_focus_9
 		}
 		x = -1
+		y = 1
+		relative_position_id = RED_revcom_focus_5
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#노동조합 확대
+		id = RED_revcom_focus_10
+		icon = GFX_focus_ITA_workers_unions
+		prerequisite = {
+			focus = RED_revcom_focus_5
+		}
+		x = 1
 		y = 1
 		relative_position_id = RED_revcom_focus_5
 		cost = 4
@@ -13040,14 +13070,16 @@ focus_tree = {
 		id = RED_revcom_focus_7
 		icon = GFX_focus_NOR_empower_sivorg
 		prerequisite = {
-			focus = RED_revcom_focus_5
+			focus = RED_revcom_focus_10
 		}
 		mutually_exclusive = {
+			focus = RED_procom_focus_10
+			focus = RED_intwal_focus_9
 			focus = RED_revcom_focus_8
 		}
-		x = 1
+		x = -1
 		y = 1
-		relative_position_id = RED_revcom_focus_5
+		relative_position_id = RED_revcom_focus_10
 		cost = 4
 		completion_reward = {
 		}
@@ -13057,14 +13089,19 @@ focus_tree = {
 		id = RED_revcom_focus_8
 		icon = GFX_focus_spr_unify_the_london_bureau
 		prerequisite = {
-			focus = RED_revcom_focus_5
+			focus = RED_revcom_focus_6
+		}
+		prerequisite = {
+			focus = RED_revcom_focus_10
 		}
 		x = 3
 		y = 1
 		mutually_exclusive = {
+			focus = RED_procom_focus_10
+			focus = RED_intwal_focus_9
 			focus = RED_revcom_focus_7
 		}
-		relative_position_id = RED_revcom_focus_5
+		relative_position_id = RED_revcom_focus_10
 		cost = 4
 		completion_reward = {
 		}
@@ -13079,6 +13116,22 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = RED_revcom_focus_0
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#산업 재건
+		id = RED_revcom_focus_11
+		icon = GFX_focus_generic_public_works
+		prerequisite = {
+			focus = RED_revcom_focus_3
+			focus = RED_revcom_focus_4
+			focus = RED_intwal_focus_8
+		}
+		x = 0
+		y = 1
+		relative_position_id = RED_revcom_focus_4
 		cost = 4
 		completion_reward = {
 		}
@@ -13207,7 +13260,7 @@ focus_tree = {
 	focus = {
 		#중앙 경제 기획
 		id = RED_intwal_focus_8
-		icon = GFX_focus_generic_central_planning
+		icon = GFX_focus_puppet_economy
 		prerequisite = {
 			focus = RED_intwal_focus_2
 		}
@@ -13218,6 +13271,26 @@ focus_tree = {
 			focus = RED_revcom_focus_3
 		}
 		relative_position_id = RED_intwal_focus_2
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#레닌의 이름으로
+		id = RED_intwal_focus_9
+		icon = GFX_focus_AUS_danubian_socialist_communes
+		prerequisite = {
+			focus = RED_intwal_focus_5
+			focus = RED_intwal_focus_7
+		}
+		x = 1
+		y = 1
+		mutually_exclusive = {
+			focus = RED_procom_focus_10
+			focus = RED_revcom_focus_7
+			focus = RED_revcom_focus_8
+		}
+		relative_position_id = RED_intwal_focus_5
 		cost = 4
 		completion_reward = {
 		}
@@ -13239,7 +13312,7 @@ focus_tree = {
 	focus = {
 		#통제된 관료제
 		id = RED_soctra_focus_1
-		icon = GFX_focus_NOR_continue_nygaardsvold_government
+		icon = GFX_focus_BEL_government_resigns
 		prerequisite = {
 			focus = RED_soctra_focus_0
 		}
@@ -13256,7 +13329,7 @@ focus_tree = {
 	focus = {
 		#관료주의 혁파
 		id = RED_soctra_focus_2
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		icon = GFX_focus_BRA_repeale_national_security_law
 		prerequisite = {
 			focus = RED_soctra_focus_0
 		}
@@ -13340,7 +13413,7 @@ focus_tree = {
 	focus = {
 		#산업 중앙화
 		id = RED_soctra_focus_7
-		icon = GFX_focus_BEL_the_grand_place
+		icon = GFX_focus_DEN_heavy_regulations
 		prerequisite = {
 			focus = RED_soctra_focus_6
 		}
@@ -13357,7 +13430,7 @@ focus_tree = {
 	focus = {
 		#지방 평의회 권한 강화
 		id = RED_soctra_focus_8
-		icon = GFX_focus_BEL_antwerp_maritime_academy
+		icon = GFX_focus_DEN_no_regulations
 		prerequisite = {
 			focus = RED_soctra_focus_6
 		}
@@ -13392,7 +13465,7 @@ focus_tree = {
 	focus = {
 		#노동이사제
 		id = RED_soctra_focus_10
-		icon = GFX_focus_SWE_socialist_reforms
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		prerequisite = {
 			focus = RED_soctra_focus_7
 			focus = RED_soctra_focus_8
@@ -13408,9 +13481,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#분산된 조합
+		#협동조합주의 수용
 		id = RED_soctra_focus_11
-		icon = GFX_focus_CHL_la_corporacion_araucania
+		icon = GFX_focus_GER_form_organization_todt
 		prerequisite = {
 			focus = RED_soctra_focus_9
 			focus = RED_soctra_focus_10
@@ -13428,7 +13501,7 @@ focus_tree = {
 	focus = {
 		#집산화 중점
 		id = RED_soctra_focus_12
-		icon = GFX_focus_generic_modernize_industry
+		icon = GFX_focus_GER_total_control_over_domestic_affairs
 		prerequisite = {
 			focus = RED_soctra_focus_9
 			focus = RED_soctra_focus_10
