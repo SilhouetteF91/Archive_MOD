@@ -79,6 +79,50 @@ focus_tree = {
 			}
 		}
 	}
+	### 파시, 파시즘, 파시스트 루트 ###
+	focus = {
+		#relative_position_id = SLO_foc_
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2
+		icon = GFX_focus_usa_voter_registration_act
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 60
+		y = 1
+		prerequisite = {
+			focus = SLO_foc_1
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-1
+		}
+		available = {
+			has_country_flag = GAEBALJUNG
+			OR = {
+				has_country_flag = SLO_vote_flag_win_demcom
+				has_country_flag = SLO_vote_flag_win_comdem
+				has_country_flag = SLO_vote_flag_win_com
+			}
+		}
+		bypass = {
+		}
+		completion_reward = {
+			country_event = {
+				id = SLO_event.150
+			}
+			custom_effect_tooltip = SLO_tt_13
+			if = {
+				limit = {
+					fascism < 0.50
+				}
+				add_timed_idea = {
+					idea = SLO_illegal_government_idea
+					days = 360
+				}
+			}
+		}
+	}	
 	focus = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
@@ -171,10 +215,10 @@ focus_tree = {
 				ruling_party = communism
 				elections_allowed = yes
 			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SLO_gustav_husak
-			show_ideas_tooltip = SLO_frano_kral
-			show_ideas_tooltip = SLO_laco_novomesky
+			#custom_effect_tooltip = available_political_advisor
+			#show_ideas_tooltip = SLO_gustav_husak
+			#show_ideas_tooltip = SLO_frano_kral
+			#show_ideas_tooltip = SLO_laco_novomesky
 			activate_advisor = SLO_gustav_husak
 			hidden_effect = {
 				if = {
@@ -219,10 +263,10 @@ focus_tree = {
 				ruling_party = democratic
 				elections_allowed = yes
 			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SLO_ivan_derer
-			show_ideas_tooltip = SLO_vavro_srobar
-			show_ideas_tooltip = SLO_jozef_lettrich
+			#custom_effect_tooltip = available_political_advisor
+			#show_ideas_tooltip = SLO_ivan_derer
+			#show_ideas_tooltip = SLO_vavro_srobar
+			#show_ideas_tooltip = SLO_jozef_lettrich
 			activate_advisor = SLO_vavro_srobar
 			hidden_effect = {
 				if = {
@@ -492,7 +536,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-7
-		icon = GFX_SOV_increase_state_reserves_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_construction2
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -523,7 +567,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-8
-		icon = GFX_SOV_eastern_development_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -555,7 +599,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-9
-		icon = GFX_SOV_restore_the_glory_of_the_motherland_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_construction
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -710,7 +754,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-13
-		icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -929,7 +973,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-17
-		icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_improve_relations
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1056,7 +1100,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-20
-		icon = GFX_SOV_our_slavic_commitments_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_military_sphere
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1346,7 +1390,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-25
-		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1434,7 +1478,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-27
-		icon = GFX_SOV_superior_war_machines_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_tank_production
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1536,7 +1580,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 9
+		x = 10
 		y = 11
 		prerequisite = {
 			focus = SLO_foc_1-4-28
@@ -1563,7 +1607,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-30
-		icon = GFX_SOV_experts_in_camouflage_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_position_armies
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1599,37 +1643,6 @@ focus_tree = {
 				}
 			}
 		}
-	}
-	focus = {
-		relative_position_id = SLO_foc_1
-		#search_filters = {FOCUS_FILTER_}
-		id = SLO_foc_1-4-31
-		icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		x = 10
-		y = 12
-		prerequisite = {
-			focus = SLO_foc_1-4-28
-		}
-		mutually_exclusive = {	
-			#focus = SLO_foc_
-		}
-		available = {
-			NOT = {
-				has_war_with = SOV
-				is_puppet_of = SOV
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_political_power = 200
-			add_country_leader_trait = SLO_war_hero_dem
-		}
-		available_if_capitulated = yes
 	}
 	focus = {
 		relative_position_id = SLO_foc_1
@@ -1740,7 +1753,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-34
-		icon = GFX_SOV_barrier_troops_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_manpower
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1892,7 +1905,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-37
-		icon = GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility 
+		icon = GFX_goal_generic_major_war 
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2144,7 +2157,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-41
-		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility 
+		icon = GFX_focus_generic_industry_3 
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2201,7 +2214,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-42
-		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility 
+		icon = GFX_goal_generic_construct_civ_factory 
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2252,7 +2265,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-43
-		icon = GFX_SOV_restore_the_glory_of_the_motherland_ccp_2d_sov_compatibility 
+		icon = GFX_goal_generic_construction 
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2307,7 +2320,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-44
-		icon = GFX_SOV_increase_aircraft_production_ccp_2d_sov_compatibility 
+		icon = GFX_focus_generic_industry_3 
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2353,7 +2366,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-45
-		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility 
+		icon = GFX_goal_generic_construct_mil_factory 
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2451,7 +2464,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-47
-		icon = GFX_SOV_superior_war_machines_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_tank_production
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2682,12 +2695,12 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-5
-		icon = GFX_SOV_dismantle_the_zemsky_sobor_ccp_2d_sov_compatibility
+		icon = GFX_goal_support_fascism
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
-		x = 30
+		x = 26
 		y = 2
 		prerequisite = {
 			focus = SLO_foc_1-1
@@ -2695,9 +2708,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {	
 			focus = SLO_foc_1-3
-		}
-		mutually_exclusive = {	
 			focus = SLO_foc_1-4
+			focus = SLO_foc_1-7
 		}
 		available = {
 			has_country_flag = GAEBALJUNG
@@ -2709,28 +2721,538 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = yes
+			}
+
+			#custom_effect_tooltip = available_political_advisor
+			#show_ideas_tooltip = SLO_alexander_mach
+			#show_ideas_tooltip = SLO_vojtech_tuka
+			#show_ideas_tooltip = SLO_jozef_tiso
+			#show_ideas_tooltip = SLO_karol_sidor
+			add_country_leader_role = {
+				character = SLO_jozef_tiso
+				promote_leader = yes
+				country_leader = {
+					ideology = falangism
+					expire = "1965.1.1.1"
+					traits = { backroom_backstabber }
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-7
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 34
+		y = 2
+		prerequisite = {
+			focus = SLO_foc_2
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-5
+		}
+		available = {
+			has_country_flag = GAEBALJUNG
+			OR = {
+				has_completed_focus = SLO_foc_2
+				has_country_flag = SLO_vote_flag_win_fac
+			}
+		}
+		bypass = {
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			#custom_effect_tooltip = available_political_advisor
+			#show_ideas_tooltip = SLO_alexander_mach
+			#show_ideas_tooltip = SLO_vojtech_tuka
+			#show_ideas_tooltip = SLO_jozef_tiso
+			#show_ideas_tooltip = SLO_karol_sidor
+			SLO_vojtech_tuka = {
+				add_advisor_role = {
+					activate = yes
+					advisor = {
+						slot = political_advisor
+						cost = 150
+						idea_token = SLO_vojtech_tuka
+						traits = {
+							SLO_premier_ssnj
+						}
+					}
+				}
+				hidden_effect = {
+					set_can_be_fired_in_advisor_role = {
+						slot = political_advisor
+						value = no
+					}
+				}
+			}
+			hidden_effect = {
+				BA_ban_democratic_effect = yes
+				BA_ban_communism_effect = yes
+				BA_ban_neutrality_effect = yes
+			}
+			add_country_leader_role = {
+				character = SLO_andrej_hlinka
+				promote_leader = yes
+				country_leader = {
+					ideology = falangism
+					expire = "1965.1.1.1"
+					traits = { SLO_father_of_slovakia SLO_puppet_ssnj }
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_2
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2-1
+		icon = GFX_focus_generic_fascist_troops
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SLO_foc_1-5
+			focus = SLO_foc_1-7
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_ideas = SLO_hg_idea
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_2
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2-2
+		icon = GFX_focus_generic_fascist_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = -1
+		y = 3
+		prerequisite = {
+			focus = SLO_foc_2-1
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			has_tech = radio
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_war_support = 0.10
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_2
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2-3
+		icon = GFX_focus_befriend_italy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 1
+		y = 3
+		prerequisite = {
+			focus = SLO_foc_2-1
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+			OR = {
+				ITA = {
+					exists = no
+				}
+				ITA = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+			}
+		}
+		completion_reward = {
+			ITA = {
+				country_event = {
+					id = SLO_event.160
+					hours = 3
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_2
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2-4
+		icon = GFX_focus_generic_befriend_slovakia
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 3
+		y = 2
+		prerequisite = {
+			focus = SLO_foc_1-7
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_war_support = 0.05
 			if = {
 				limit = {
-					has_completed_focus = SLO_foc_2
+					HUN = {
+						exists = yes
+					}
 				}
-				set_politics = {
-					ruling_party = fascism
-					elections_allowed = no
+				HUN = {
+					add_opinion_modifier = { target = SLO modifier = large_decrease }
+				}
+			}
+			if = {
+				limit = {
+					HYA = {
+						exists = yes
+					}
+					NOT = {
+						has_government = fascism
+					}
+				}
+				HYA = {
+					add_opinion_modifier = { target = SLO modifier = large_decrease }
+				}
+			}
+			if = {
+				limit = {
+					SHA = {
+						exists = yes
+					}
+					NOT = {
+						has_government = fascism
+					}
+				}
+				SHA = {
+					add_opinion_modifier = { target = SLO modifier = large_decrease }
+				}
+			}
+			if = {
+				limit = {
+					POL = {
+						exists = yes
+					}
+					NOT = {
+						has_government = fascism
+					}
+				}
+				POL = {
+					add_opinion_modifier = { target = SLO modifier = large_decrease }
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_2
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2-5
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 3
+		y = 3
+		prerequisite = {
+			focus = SLO_foc_2-4
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_ideas = SLO_militarism_idea
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_2
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2-6
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 6
+		y = 2
+		prerequisite = {
+			focus = SLO_foc_1-7
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_2
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2-7
+		icon = GFX_focus_generic_steel
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 5
+		y = 3
+		prerequisite = {
+			focus = SLO_foc_2-6
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			controls_state = 71
+		}
+		bypass = {
+		}
+		completion_reward = {
+			71 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_2
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2-8
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 7
+		y = 3
+		prerequisite = {
+			focus = SLO_foc_2-6
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			SLO_economy_chaos_down = yes
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_2
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2-9
+		icon = GFX_focus_research
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 7
+		y = 4
+		prerequisite = {
+			focus = SLO_foc_2-6
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_2
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2-10
+		icon = GFX_focus_GER_integration_of_puppet_economies
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 6
+		y = 5
+		prerequisite = {
+			focus = SLO_foc_2-7
+		}
+		prerequisite = {
+			focus = SLO_foc_2-9
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			SLO_economy_chaos_down = yes
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_2
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2-11
+		icon = GFX_focus_generic_military_industry
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 5
+		y = 4
+		prerequisite = {
+			focus = SLO_foc_2-5
+		}
+		prerequisite = {
+			focus = SLO_foc_2-7
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			OR = {
+				has_war = yes
+				threat > 0.25
+			}
+		}
+		bypass = {
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = war_economy
+						has_idea = tot_economic_mobilisation
+					}
 				}
 			}
 			else = {
-				set_politics = {
-					ruling_party = fascism
-					elections_allowed = yes
+				add_stability = -0.05
+				add_ideas = war_economy
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
 				}
 			}
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SLO_alexander_mach
-			show_ideas_tooltip = SLO_vojtech_tuka
-			show_ideas_tooltip = SLO_jozef_tiso
-			show_ideas_tooltip = SLO_karol_sidor
-			activate_advisor = SLO_vojtech_tuka
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -2771,7 +3293,25 @@ focus_tree = {
 						right_side = SLO_DEM_side
 						set_value = 0.25
 					}
-					activate_advisor = SLO_gustav_husak
+					SLO_karol_smidke = {
+						add_advisor_role = {
+							activate = yes
+							advisor = {
+								slot = political_advisor
+								cost = 150
+								idea_token = SLO_karol_smidke
+								traits = {
+									SLO_premier2_com
+								}
+							}
+						}
+						hidden_effect = {
+							set_can_be_fired_in_advisor_role = {
+								slot = political_advisor
+								value = no
+							}
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -2783,7 +3323,25 @@ focus_tree = {
 						right_side = SLO_DEM_side
 						set_value = -0.25
 					}
-					activate_advisor = SLO_vavro_srobar
+					SLO_milan_hodza = {
+						add_advisor_role = {
+							activate = yes
+							advisor = {
+								slot = political_advisor
+								cost = 150
+								idea_token = SLO_milan_hodza
+								traits = {
+									SLO_premier2_dem
+								}
+							}
+						}
+						hidden_effect = {
+							set_can_be_fired_in_advisor_role = {
+								slot = political_advisor
+								value = no
+							}
+						}
+					}
 				}
 				set_country_flag = SLO_love_yes
 			}
@@ -3041,7 +3599,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1-6
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-6-7
-		icon = GFX_SOV_national_specialists_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_consumer_goods
 		cost = 4
 		ai_will_do = {
 			factor = 1
@@ -3247,6 +3805,28 @@ focus_tree = {
 			add_political_power = 150
 			add_stability = 0.10
 			clr_country_flag = SLO_love_yes
+			hidden_effect = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					SLO_karol_smidke = {
+						remove_advisor_role = {
+							slot = political_advisor
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_government = communism
+					}
+					SLO_milan_hodza = {
+						remove_advisor_role = {
+							slot = political_advisor
+						}
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -3298,45 +3878,6 @@ focus_tree = {
 				ideology = democratic
 				long_name = SLO_party_3
 				name = SLO_party_1
-			}
-		}
-	}
-	### 파시, 파시즘, 파시스트 루트 ###
-	focus = {
-		#relative_position_id = SLO_foc_
-		#search_filters = {FOCUS_FILTER_}
-		id = SLO_foc_2
-		icon = GFX_focus_usa_voter_registration_act
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		x = 60
-		y = 1
-		prerequisite = {
-			focus = SLO_foc_1
-		}
-		mutually_exclusive = {	
-			focus = SLO_foc_1-1
-		}
-		available = {
-			has_country_flag = GAEBALJUNG
-			OR = {
-				has_country_flag = SLO_vote_flag_win_demcom
-				has_country_flag = SLO_vote_flag_win_comdem
-				has_country_flag = SLO_vote_flag_win_com
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = SLO_tt_13
-			if = {
-				limit = {
-					fascism < 0.50
-				}
-				add_ideas = SLO_strike_idea
-				add_ideas = SLO_illegal_government_idea
 			}
 		}
 	}

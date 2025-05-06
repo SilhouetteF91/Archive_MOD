@@ -1074,3 +1074,135 @@ country_event = {
 		}
 	}
 }
+country_event = { 
+	id = SLO_event.160
+	title = SLO_event.160.t
+	desc = SLO_event.160.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.160.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 49
+				is_historical_focus_on = no
+			}
+		}
+		trigger = {
+            has_character = ITA_giovanni_messe
+        }
+		ITA_giovanni_messe = {
+			set_nationality = SLO
+		}
+		effect_tooltip = {
+			SLO = {
+				add_ideas = SLO_ita_military_advisory_group1_idea
+			}
+		}
+		SLO = {
+			country_event = {
+				id = SLO_event.161
+				hours = 3
+			}
+		}
+	}
+	option = {
+		name = SLO_event.160.b
+		ai_chance = {
+			base = 50
+		}
+		trigger = {
+            has_character = ITA_mario_berti
+        }
+		ITA_mario_berti = {
+			set_nationality = SLO
+		}
+		effect_tooltip = {
+			SLO = {
+				add_ideas = SLO_ita_military_advisory_group2_idea
+			}
+		}
+		SLO = {
+			country_event = {
+				id = SLO_event.162
+				hours = 3
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			base = 0
+		}
+		name = SLO_event.160.c
+		SLO = {
+			country_event = {
+				id = SLO_event.163
+				hours = 3
+			}
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.161
+	title = SLO_event.161.t
+	desc = SLO_event.161.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.161.a
+		add_ideas = SLO_ita_military_advisory_group1_idea
+	}
+}
+country_event = { 
+	id = SLO_event.162
+	title = SLO_event.162.t
+	desc = SLO_event.162.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.162.a
+		add_ideas = SLO_ita_military_advisory_group2_idea
+	}
+}
+country_event = { 
+	id = SLO_event.163
+	title = SLO_event.163.t
+	desc = SLO_event.163.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.163.a
+	}
+}
+country_event = {
+	id = SLO_event.164
+	title = SLO_event.164.t
+	desc = SLO_event.164.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.164.a
+		if = {
+			limit = {
+				has_character = ITA_giovanni_messe
+			}
+			ITA_giovanni_messe = {
+				set_nationality = ITA
+			}
+		}
+		if = {
+			limit = {
+				has_character = ITA_mario_berti
+			}
+			ITA_mario_berti = {
+				set_nationality = ITA
+			}
+		}
+	}
+}

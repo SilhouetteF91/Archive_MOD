@@ -81,6 +81,9 @@ characters={
 			ideology=marxism
 			expire="1965.1.1"
 			id=-1
+			traits = {
+				SLO_premier1_com
+			}
 		}
 	}
 	SLO_rudolf_viest={ #루돌프 비에스트
@@ -366,6 +369,9 @@ characters={
 			ideology=conservatism
 			expire="1965.1.1"
 			id=-1
+			traits = {
+				SLO_premier1_dem
+			}
 		}
 	}
 	SLO_ivan_derer={ #이반 데레르 / 정치고문
