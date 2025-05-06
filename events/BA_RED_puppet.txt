@@ -538,6 +538,7 @@ country_event = { # 북방 주권 전쟁!
 
 	immediate = {
 		hidden_effect = {
+			set_global_flag = RE4_northern_sovereignty_war_started
 			RE4 = {
 				RED = { end_puppet = RE4 }
 				declare_war_on = {

@@ -2208,6 +2208,8 @@
  RED_securing_bureaucracy_support: "사무국의 충성 확보"
  RED_command_of_nordic_labor_unions: "북유럽 노동조합 지휘"
  RED_military_support: "군의 지지"
+ RED_military_support_tt: "§Y군정청§! 내 신인 장교들을 회유하는 §Y결정§!이 해금됩니다."
  RED_infiltration_of_security_committee: "보안위원회 잠입"
+ RED_chairman_of_security_committee_dismissal: "보안위원장 직위 해임"
  RED_first_capital_trial: "제1차 [ROOT.capital.GetCapitalVictoryPointName] 재판"
  RED_first_capital_trial_trigger: "1개 이상의 군정청의 충성을 확보함"

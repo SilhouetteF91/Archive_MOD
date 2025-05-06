@@ -74,6 +74,12 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = -3
 		y = 1
 		relative_position_id = RE4_ivan_kupla
@@ -114,6 +120,12 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = -2
 		y = 1
 		relative_position_id = RE4_security_committee_headquarters_relocation
@@ -136,6 +148,12 @@
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
 			}
 		}
 		x = 2
@@ -261,6 +279,12 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = RE4_security_committee_headquarters_relocation
@@ -285,6 +309,12 @@
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
 			}
 		}
 		x = -1
@@ -313,6 +343,12 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = 1
 		y = 2
 		relative_position_id = RE4_security_committee_headquarters_relocation
@@ -336,6 +372,12 @@
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
 			}
 		}
 		x = 0
@@ -372,6 +414,12 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = -2
 		y = 1
 		relative_position_id = RE4_counter_revolution_prevention_committee
@@ -396,6 +444,12 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = RE4_counter_revolution_prevention_committee
@@ -418,6 +472,12 @@
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
 			}
 		}
 		x = 2
@@ -446,6 +506,12 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = 0
 		y = 3
 		relative_position_id = RE4_counter_revolution_prevention_committee
@@ -465,6 +531,37 @@
 					global.RE4_northern_sovereignty_war_rdy_process = 4
 				}
 			}
+		}
+	}
+	focus = {
+		# 작전명, 이반 쿠팔라
+		id = RE4_operation_ivan_kupala
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_operation_ivan_kupala
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = RE4_operation_ivan_kupala
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = redpuppet.1000
 		}
 	}
 	focus = {

@@ -3585,6 +3585,108 @@ RED_northern_sovereignty_war = {
 			}
 		}
 	}
+	northern_sovereignty_war_RED_military_government_all_1 = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		allowed = {
+			original_tag = RED
+		}
+		visible = {
+			has_completed_focus = RED_securing_bureaucracy_support
+			OR = {
+				AND = {
+					RE1 = {
+						exists = yes
+						has_capitulated = no
+						OR = {
+							is_subject_of = RED
+							is_subject_of = RE4
+							is_subject = no
+						}
+					}
+				}
+				AND = {
+					RE2 = {
+						exists = yes
+						has_capitulated = no
+						OR = {
+							is_subject_of = RED
+							is_subject_of = RE4
+							is_subject = no
+						}
+					}
+				}
+				AND = {
+					RE3 = {
+						exists = yes
+						has_capitulated = no
+						OR = {
+							is_subject_of = RED
+							is_subject_of = RE4
+							is_subject = no
+						}
+					}
+				}
+			}
+		}
+		available = {
+			has_completed_focus = RED_securing_bureaucracy_support
+			any_country = {
+				OR = {
+					tag = RE1
+					tag = RE2
+					tag = RE3
+				}
+				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		fire_only_once = no
+		cost = 10
+		days_remove = 70
+		days_re_enable = 120
+		modifier = {
+			political_power_factor = -0.15
+		}
+		complete_effect = {
+			RE1 = {
+				add_to_variable = {
+					global.red_northern_sovereignty_re1_var = 6
+					tooltip = red_northern_sovereignty_tt
+				}
+			}
+			RE2 = {
+				add_to_variable = {
+					global.red_northern_sovereignty_re2_var = 6
+					tooltip = red_northern_sovereignty_tt
+				}
+			}
+			RE3 = {
+				add_to_variable = {
+					global.red_northern_sovereignty_re3_var = 6
+					tooltip = red_northern_sovereignty_tt
+				}
+			}
+			hidden_effect = {
+				clamp_variable = {
+					var = global.red_northern_sovereignty_re1_var
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = global.red_northern_sovereignty_re2_var
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = global.red_northern_sovereignty_re3_var
+					min = 0
+					max = 100
+				}
+			}
+		}
+	}
 	northern_sovereignty_war_RED_military_government_target_0 = {
 		icon = GFX_decision_gre_faction_management
 		allowed = {
@@ -3806,6 +3908,91 @@ RED_northern_sovereignty_war = {
 					}
 					add_to_variable = {
 						global.red_northern_sovereignty_re3_var = 3
+						tooltip = red_northern_sovereignty_tt
+					}
+				}
+			}
+			hidden_effect = {
+				clamp_variable = {
+					var = global.red_northern_sovereignty_re1_var
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = global.red_northern_sovereignty_re2_var
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = global.red_northern_sovereignty_re3_var
+					min = 0
+					max = 100
+				}
+			}
+		}
+	}
+	northern_sovereignty_war_RED_military_government_target_3 = {
+		icon = GFX_decision_onmap_recruit_operative
+		allowed = {
+			original_tag = RED
+		}
+		visible = {
+			has_completed_focus = RED_military_support
+			OR = {
+				has_decision = northern_sovereignty_war_RED_military_government_RE1
+				has_decision = northern_sovereignty_war_RED_military_government_RE2
+				has_decision = northern_sovereignty_war_RED_military_government_RE3
+			}
+		}
+		available = {
+			has_completed_focus = RED_military_support
+			event_target:northern_sovereignty_war_RED_military_government_target = {
+				exists = yes
+				has_capitulated = no
+				OR = {
+					is_subject_of = RED
+					is_subject_of = RE4
+					is_subject = no
+				}
+			}
+		}
+		fire_only_once = no
+		custom_cost_trigger = {
+			command_power > 14
+		}
+		custom_cost_text = decision_cost_CP_15
+		days_remove = 25
+		days_re_enable = 25
+		modifier = {
+			experience_gain_army_factor = -0.05
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+			event_target:northern_sovereignty_war_RED_military_government_target = {
+				if = {
+					limit = {
+						original_tag = RE1
+					}
+					add_to_variable = {
+						global.red_northern_sovereignty_re1_var = 5
+						tooltip = red_northern_sovereignty_tt
+					}
+				} else_if = {
+					limit = {
+						original_tag = RE2
+					}
+					add_to_variable = {
+						global.red_northern_sovereignty_re2_var = 5
+						tooltip = red_northern_sovereignty_tt
+					}
+				} else_if = {
+					limit = {
+						original_tag = RE3
+					}
+					add_to_variable = {
+						global.red_northern_sovereignty_re3_var = 5
 						tooltip = red_northern_sovereignty_tt
 					}
 				}

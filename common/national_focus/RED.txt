@@ -146,6 +146,16 @@ focus_tree = {
 				tooltip = RED_army_government_loyalty_confirmation_tooltip
 				has_country_flag = RED_northern_sovereignty_war_unlock_flag
 			}
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
 		}
 		x = 2
 		y = 1
@@ -179,13 +189,26 @@ focus_tree = {
 			FOCUS_FILTER_MILITARY_POPULATION
 		}
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
 		}
 		x = -1
 		y = 1
 		relative_position_id = RED_high_spirited
 		cost = 5
 		completion_reward = {
-			unlock_decision_tooltip = northern_sovereignty_war_RED_military_government_all_0
+			unlock_decision_tooltip = {
+				decision = northern_sovereignty_war_RED_military_government_all_0
+				show_effect_tooltip = yes
+			}
 		}
 	}
 	focus = {
@@ -200,6 +223,16 @@ focus_tree = {
 			FOCUS_FILTER_MILITARY_POPULATION
 		}
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
 		}
 		x = 1
 		y = 1
@@ -219,12 +252,23 @@ focus_tree = {
 			FOCUS_FILTER_MILITARY_POPULATION
 		}
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
 		}
 		x = 1
 		y = 1
 		relative_position_id = RED_army_government_loyalty_confirmation
 		cost = 5
 		completion_reward = {
+			custom_effect_tooltip = RED_military_support_tt
 		}
 	}
 	focus = {
@@ -238,17 +282,31 @@ focus_tree = {
 			FOCUS_FILTER_MILITARY_POPULATION
 		}
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
 		}
 		x = 3
 		y = 1
 		relative_position_id = RED_army_government_loyalty_confirmation
 		cost = 5
 		completion_reward = {
+			unlock_decision_tooltip = {
+				decision = northern_sovereignty_war_RED_military_government_all_1
+				show_effect_tooltip = yes
+			}
 		}
 	}
 	focus = {
-		# 제1차 [ROOT.capital.GetCapitalVictoryPointName] 재판
-		id = RED_first_capital_trial
+		# 보안위원장 컷
+		id = RED_chairman_of_security_committee_dismissal
 		icon = GFX_focus_FIN_united_under_the_north_star
 		prerequisite = {
 			focus = RED_army_government_loyalty_confirmation
@@ -263,18 +321,97 @@ focus_tree = {
 					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
 				}
 			}
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
 		}
 		x = -1
 		y = 2
 		relative_position_id = RED_army_government_loyalty_confirmation
 		cost = 10
 		completion_reward = {
-			RED = {
-				country_event = redpuppet.1000
+			RE1 = {
+				add_to_variable = {
+					global.red_northern_sovereignty_re1_var = 8
+					tooltip = red_northern_sovereignty_tt
+				}
 			}
-			RE4 = {
-				country_event = redpuppet.1000
+			RE2 = {
+				add_to_variable = {
+					global.red_northern_sovereignty_re2_var = 8
+					tooltip = red_northern_sovereignty_tt
+				}
 			}
+			RE3 = {
+				add_to_variable = {
+					global.red_northern_sovereignty_re3_var = 8
+					tooltip = red_northern_sovereignty_tt
+				}
+			}
+			hidden_effect = {
+				clamp_variable = {
+					var = global.red_northern_sovereignty_re1_var
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = global.red_northern_sovereignty_re2_var
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = global.red_northern_sovereignty_re3_var
+					min = 0
+					max = 100
+				}
+			}
+		}
+	}
+	focus = {
+		# 제1차 [ROOT.capital.GetCapitalVictoryPointName] 재판
+		id = RED_first_capital_trial
+		icon = GFX_focus_FIN_united_under_the_north_star
+		prerequisite = {
+			focus = RED_chairman_of_security_committee_dismissal
+		}
+		prerequisite = {
+			focus = RED_military_support
+			focus = RED_infiltration_of_security_committee
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RED_first_capital_trial_trigger
+				any_other_country = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_chairman_of_security_committee_dismissal
+		cost = 10
+		completion_reward = {
+			country_event = redpuppet.1000
 		}
 	}
 	# 붉은겨울 산업 중점
