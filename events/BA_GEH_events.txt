@@ -2485,6 +2485,131 @@ country_event = { #바알 사냥 - 2
 	}
 }
 
+country_event = { #부화뇌동
+	id = GEH.event.1017
+	title = GEH.event.1017.t
+	desc = GEH.event.1017.desc
+
+	picture = GFX_report_event_generic_door
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1017.a
+		country_event = { id = GEH.event.1018 hours = 3 }
+	}
+}
+
+country_event = { #자아의 경계
+	id = GEH.event.1018
+	title = GEH.event.1018.t
+	desc = GEH.event.1018.desc
+
+	picture = GFX_report_event_generic_door
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1018.a
+
+	}
+}
+
+country_event = { #붕괴된 관료 집단
+	id = GEH.event.1019
+	title = GEH.event.1019.t
+	desc = GEH.event.1019.desc
+
+	picture = GFX_report_event_generic_building
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1019.a
+		add_stability = 0.05
+	}
+}
+
+country_event = { #군부 재규합
+	id = GEH.event.1020
+	title = GEH.event.1020.t
+	desc = GEH.event.1020.desc
+
+	picture = GFX_report_event_generic_reloading
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1020.a
+		add_war_support = 0.05
+	}
+}
+
+country_event = { #아코 행정관 문제
+	id = GEH.event.1021
+	title = GEH.event.1021.t
+	desc = GEH.event.1021.desc
+
+	picture = GFX_report_event_ako_amau_crying_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1021.a
+
+	}
+}
+
+country_event = { #다시 찾으면 돼
+	id = GEH.event.1022
+	title = GEH.event.1022.t
+	desc = GEH.event.1022.desc
+
+	picture = GFX_report_event_ako_amau_crying_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1022.a
+		swap_ruler_traits = {
+			remove = GEH_ako_trait_0
+			add = GEH_ako_trait_1
+		}
+	}
+}
+
+country_event = { #선도부장 간부 직선제 투표
+	id = GEH.event.1023
+	title = GEH.event.1023.t
+	desc = GEH.event.1023.desc
+
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1023.a
+		effect_tooltip = {
+			add_country_leader_trait = b_tjsehqnwkd_week
+		}
+	}
+}
+
+country_event = { #소라사키 태스크포스 설립
+	id = GEH.event.1024
+	title = GEH.event.1024.t
+	desc = GEH.event.1024.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1024.a
+		
+	}
+}
+
 country_event = { #선도부 해외 방문 계획
 	id = GEH.event.2000
 	title = GEH.event.2000.t

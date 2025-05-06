@@ -1,0 +1,15 @@
+scripted_gui = {
+
+	BA_ENG_test = {
+		context_type = decision_category
+		window_name = "BA_war_escalation_decision_ui_window"
+
+		properties = {
+			lon_we_1_icon = {
+				image = "[BA_GET_WAR_ESCALATION_LEVEL_1_COLOR]"
+				frame = 1	
+			}
+		}
+	}
+	
+}

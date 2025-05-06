@@ -1,144 +1,177 @@
 defined_text = {
 	name = GetCountryIntroBackground
-	### Kivotos ###
-	text = { trigger = { original_tag = TRM }  localization_key = "GFX_TRM_intro" }
-	text = { trigger = { original_tag = HEU }  localization_key = "GFX_HEU_intro" }
-	text = { trigger = { original_tag = GEM }  localization_key = "GFX_GEM_intro" }
-	text = { trigger = { original_tag = GEH }  localization_key = "GFX_GEH_intro" }
-	text = { trigger = { original_tag = SHE }  localization_key = "GFX_SHE_intro" }
-	text = { trigger = { original_tag = ABY }  localization_key = "GFX_ABY_intro" }
-	text = { trigger = { original_tag = RED }  localization_key = "GFX_RED_intro" }
-	text = { trigger = { original_tag = MIL }  localization_key = "GFX_MIL_intro" }
-	text = { trigger = { original_tag = ARI }  localization_key = "GFX_ARI_intro" }
-	text = { trigger = { original_tag = KSP }  localization_key = "GFX_KSP_intro" }
-	text = { trigger = { original_tag = SHA }  localization_key = "GFX_SHA_intro" }
-	text = { trigger = { original_tag = SRT }  localization_key = "GFX_SRT_intro" }
-	text = { trigger = { original_tag = GEI }  localization_key = "GFX_GEI_intro" }
-	text = { trigger = { original_tag = COU }  localization_key = "GFX_COU_intro" }
-	text = { trigger = { original_tag = KAI }  localization_key = "GFX_KAI_intro" }
 
-	### Non - Kivotos ###
-	text = { trigger = { original_tag = FRA }  localization_key = "GFX_FRA_intro" }
-	text = { trigger = { original_tag = POL }  localization_key = "GFX_POL_intro" }
-	text = { trigger = { original_tag = SOV }  localization_key = "GFX_SOV_intro" }
-	text = { trigger = { original_tag = ENG }  localization_key = "GFX_ENG_intro" }
-	text = { trigger = { original_tag = MEX }  localization_key = "GFX_MEX_intro" }
-	text = { trigger = { original_tag = EGY }  localization_key = "GFX_EGY_intro" }
+	### TAG ALIASES OR SPECIAL CASES ###
+	#text = {
+	#	trigger = {
+	#		tag = CAN
+	#		check_variable = { curr_page_country = 2 }
+	#	}
+	#	localization_key = GFX_CAN_intro_2
+	#}
+	#text = {
+	#	trigger = { tag = CAN }
+	#	localization_key = GFX_CAN_intro_1
+	#}
+	#text = {
+	#	trigger = { tag = GBR }
+	#	localization_key = GFX_GBR_intro
+	#}
 
-	text = { localization_key = "GFX_KR_default_intro" }
+	### DEFAULT ###
+	text = {
+		localization_key = country_culture|country_intro_background
+	}
 }
 
 defined_text = {
 	name = GetCountryIntroHeader
-	### Kivotos ###
-	text = { trigger = { original_tag = TRM check_variable = { curr_page = 0 } }  localization_key = TRM_country_intro_header }
-	text = { trigger = { original_tag = TRM check_variable = { curr_page = 1 } }  localization_key = TRM_country_intro_header_2 }
-	text = { trigger = { original_tag = TRM }  localization_key = TRM_country_intro_header }
-	text = { trigger = { original_tag = HEU }  localization_key = HEU_country_intro_header }
-	text = { trigger = { original_tag = GEM }  localization_key = GEM_country_intro_header }
-	text = { trigger = { original_tag = GEH }  localization_key = GEH_country_intro_header }
-	text = { trigger = { original_tag = SHE }  localization_key = SHE_country_intro_header }
-	text = { trigger = { original_tag = ABY }  localization_key = ABY_country_intro_header }
-	text = { trigger = { original_tag = RED }  localization_key = RED_country_intro_header }
-	text = { trigger = { original_tag = MIL }  localization_key = MIL_country_intro_header }
-	text = { trigger = { original_tag = ARI }  localization_key = ARI_country_intro_header }
-	text = { trigger = { original_tag = KSP }  localization_key = KSP_country_intro_header }
-	text = { trigger = { original_tag = SHA }  localization_key = SHA_country_intro_header }
-	text = { trigger = { original_tag = COU }  localization_key = COU_country_intro_header }
-	text = { trigger = { original_tag = KAI }  localization_key = KAI_country_intro_header }
 
-	### Non - Kivotos
-	text = { trigger = { original_tag = FRA }  localization_key = FRA_country_intro_header }
-	text = { trigger = { original_tag = POL }  localization_key = POL_country_intro_header }
-	text = { trigger = { original_tag = BEL }  localization_key = BEL_country_intro_header }
-	text = { trigger = { original_tag = SOV check_variable = { curr_page = 0 } }  localization_key = SOV_country_intro_header } # 제국의 발흥
-	text = { trigger = { original_tag = SOV check_variable = { curr_page = 1 } }  localization_key = SOV_country_intro_header_1 } # 몰락과 적백내전
-	text = { trigger = { original_tag = SOV check_variable = { curr_page = 2 } }  localization_key = SOV_country_intro_header_2 } # 소련
-	text = { trigger = { original_tag = SOV check_variable = { curr_page = 3 } }  localization_key = SOV_country_intro_header_3 } # 공산당 권력투쟁
-	text = { trigger = { original_tag = SOV check_variable = { curr_page = 4 } }  localization_key = SOV_country_intro_header_4 } # 제2차 소폴 전쟁
-	text = { trigger = { original_tag = YUG check_variable = { curr_page = 0 } }  localization_key = YUG_country_intro_header }
-	text = { trigger = { original_tag = YUG check_variable = { curr_page = 1 } }  localization_key = YUG_country_intro_header_1 }
-	text = { trigger = { original_tag = ENG check_variable = { curr_page = 0 } }  localization_key = ENG_country_intro_header }
-	text = { trigger = { original_tag = ENG check_variable = { curr_page = 1 } }  localization_key = ENG_country_intro_header_1 }
-	text = { trigger = { original_tag = ENG check_variable = { curr_page = 2 } }  localization_key = ENG_country_intro_header_2 }
-	text = { trigger = { original_tag = MEX check_variable = { curr_page = 0 } }  localization_key = MEX_country_intro_header } # 포르피리아토의 종말
-	text = { trigger = { original_tag = MEX check_variable = { curr_page = 1 } }  localization_key = MEX_country_intro_header_1 } # 로스 캄페시노스
-	text = { trigger = { original_tag = MEX check_variable = { curr_page = 2 } }  localization_key = MEX_country_intro_header_2 } # 계속되는 혁명
-	text = { trigger = { original_tag = MEX check_variable = { curr_page = 3 } }  localization_key = MEX_country_intro_header_3 } # 끝나지 않은 혁명
-	text = { trigger = { original_tag = MEX check_variable = { curr_page = 4 } }  localization_key = MEX_country_intro_header_4 } # 로스 키보토스
-	text = { trigger = { original_tag = EGY check_variable = { curr_page = 0 } }  localization_key = EGY_country_intro_header }
-	text = { trigger = { original_tag = EGY check_variable = { curr_page = 1 } }  localization_key = EGY_country_intro_header_1 }
-	text = { trigger = { original_tag = EGY check_variable = { curr_page = 2 } }  localization_key = EGY_country_intro_header_2 }
+	### TAG ALIASES OR SPECIAL CASES ###
+	#text = {
+	#	trigger = { tag = CAN }
+	#	localization_key = CAN_country_intro_header
+	#}
+
+	### DEFAULT ###
+	text = {
+		trigger = { check_variable = { curr_page_country = 5 } }
+		localization_key = country_culture|country_intro_header_5
+	}
+	text = {
+		trigger = { check_variable = { curr_page_country = 4 } }
+		localization_key = country_culture|country_intro_header_4
+	}
+	text = {
+		trigger = { check_variable = { curr_page_country = 3 } }
+		localization_key = country_culture|country_intro_header_3
+	}
+	text = {
+		trigger = { check_variable = { curr_page_country = 2 } }
+		localization_key = country_culture|country_intro_header_2
+	}
+	text = {
+		trigger = { check_variable = { curr_page_country = 1 } }
+		localization_key = country_culture|country_intro_header_1
+	}
+	text = {
+		localization_key = country_culture|country_intro_header
+	}
 }
 
 defined_text = {
 	name = GetCountryIntroContent
-	### Kivotos ###
-	text = { trigger = { original_tag = TRM check_variable = { curr_page = 0 } }  localization_key = TRM_country_intro_content }
-	text = { trigger = { original_tag = TRM check_variable = { curr_page = 1 } }  localization_key = TRM_country_intro_content_2 }
-	text = { trigger = { original_tag = HEU }  localization_key = HEU_country_intro_content }
-	text = { trigger = { original_tag = GEM }  localization_key = GEM_country_intro_content }
-	text = { trigger = { original_tag = GEH }  localization_key = GEH_country_intro_content }
-	text = { trigger = { original_tag = SHE }  localization_key = SHE_country_intro_content }
-	text = { trigger = { original_tag = ABY }  localization_key = ABY_country_intro_content }
-	text = { trigger = { original_tag = RED }  localization_key = RED_country_intro_content }
-	text = { trigger = { original_tag = MIL }  localization_key = MIL_country_intro_content }
-	text = { trigger = { original_tag = ARI }  localization_key = ARI_country_intro_content }
-	text = { trigger = { original_tag = KSP }  localization_key = KSP_country_intro_content }
-	text = { trigger = { original_tag = SHA }  localization_key = SHA_country_intro_content }
-	text = { trigger = { original_tag = COU }  localization_key = COU_country_intro_content }
-	text = { trigger = { original_tag = KAI }  localization_key = KAI_country_intro_content }
-	
-	### Non - Kivotos ###
-	text = { trigger = { original_tag = FRA }  localization_key = FRA_country_intro_content }
-	text = { trigger = { original_tag = POL }  localization_key = POL_country_intro_content }
-	text = { trigger = { original_tag = BEL }  localization_key = BEL_country_intro_content }
-	text = { trigger = { original_tag = SOV check_variable = { curr_page = 0 } }  localization_key = SOV_country_intro_content }
-	text = { trigger = { original_tag = SOV check_variable = { curr_page = 1 } }  localization_key = SOV_country_intro_content_1 }
-	text = { trigger = { original_tag = SOV check_variable = { curr_page = 2 } }  localization_key = SOV_country_intro_content_2 }
-	text = { trigger = { original_tag = SOV check_variable = { curr_page = 3 } }  localization_key = SOV_country_intro_content_3 }
-	text = { trigger = { original_tag = SOV check_variable = { curr_page = 4 } }  localization_key = SOV_country_intro_content_4 }
-	text = { trigger = { original_tag = YUG check_variable = { curr_page = 0 } }  localization_key = YUG_country_intro_content }
-	text = { trigger = { original_tag = YUG check_variable = { curr_page = 1 } }  localization_key = YUG_country_intro_content_1 }
-	text = { trigger = { original_tag = ENG check_variable = { curr_page = 0 } }  localization_key = ENG_country_intro_content }
-	text = { trigger = { original_tag = ENG check_variable = { curr_page = 1 } }  localization_key = ENG_country_intro_content_1 }
-	text = { trigger = { original_tag = ENG check_variable = { curr_page = 2 } }  localization_key = ENG_country_intro_content_2 }
-	text = { trigger = { original_tag = MEX check_variable = { curr_page = 0 } }  localization_key = MEX_country_intro_content }
-	text = { trigger = { original_tag = MEX check_variable = { curr_page = 1 } }  localization_key = MEX_country_intro_content_1 }
-	text = { trigger = { original_tag = MEX check_variable = { curr_page = 2 } }  localization_key = MEX_country_intro_content_2 }
-	text = { trigger = { original_tag = MEX check_variable = { curr_page = 3 } }  localization_key = MEX_country_intro_content_3 }
-	text = { trigger = { original_tag = MEX check_variable = { curr_page = 4 } }  localization_key = MEX_country_intro_content_4 }
-	text = { trigger = { original_tag = EGY check_variable = { curr_page = 0 } }  localization_key = EGY_country_intro_content }
-	text = { trigger = { original_tag = EGY check_variable = { curr_page = 1 } }  localization_key = EGY_country_intro_content_1 }
-	text = { trigger = { original_tag = EGY check_variable = { curr_page = 2 } }  localization_key = EGY_country_intro_content_2 }
+
+	### TAG ALIASES OR SPECIAL CASES ###
+	#text = {
+	#	trigger = {
+	#		tag = CAN
+	#		check_variable = { curr_page_country = 2 }
+	#	}
+	#	localization_key = CAN_country_intro_content_2
+	#}
+	#text = {
+	#	trigger = {
+	#		tag = CAN
+	#		check_variable = { curr_page_country = 1 }
+	#	}
+	#	localization_key = CAN_country_intro_content_1
+	#}
+	#text = {
+	#	trigger = { tag = CAN }
+	#	localization_key = CAN_country_intro_content
+	#}
+
+	### DEFAULT ###
+	text = {
+		trigger = { check_variable = { curr_page_country = 5 } }
+		localization_key = country_culture|country_intro_content_5
+	}
+	text = {
+		trigger = { check_variable = { curr_page_country = 4 } }
+		localization_key = country_culture|country_intro_content_4
+	}
+	text = {
+		trigger = { check_variable = { curr_page_country = 3 } }
+		localization_key = country_culture|country_intro_content_3
+	}
+	text = {
+		trigger = { check_variable = { curr_page_country = 2 } }
+		localization_key = country_culture|country_intro_content_2
+	}
+	text = {
+		trigger = { check_variable = { curr_page_country = 1 } }
+		localization_key = country_culture|country_intro_content_1
+	}
+	text = {
+		localization_key = country_culture|country_intro_content
+	}
 }
 
 defined_text = {
 	name = GetCountryGuide
-	### Kivotos ###
-	text = { trigger = { original_tag = TRM }  localization_key = TRM_guide }
-	text = { trigger = { original_tag = HEU }  localization_key = HEU_guide }
-	text = { trigger = { original_tag = GEM }  localization_key = GEM_guide }
-	text = { trigger = { original_tag = GEH }  localization_key = GEH_guide }
-	text = { trigger = { original_tag = SHE }  localization_key = SHE_guide }
-	text = { trigger = { original_tag = ABY }  localization_key = ABY_guide }
-	text = { trigger = { original_tag = RED }  localization_key = RED_guide }
-	text = { trigger = { original_tag = MIL }  localization_key = MIL_guide }
-	text = { trigger = { original_tag = ARI }  localization_key = ARI_guide }
-	text = { trigger = { original_tag = KSP }  localization_key = KSP_guide }
-	text = { trigger = { original_tag = SHA }  localization_key = SHA_guide }
-	text = { trigger = { original_tag = SRT }  localization_key = SRT_guide }
-	text = { trigger = { original_tag = COU }  localization_key = COU_guide }
-	text = { trigger = { original_tag = KAI }  localization_key = KAI_guide }
-	
-	### Non - Kivotos ###
-	text = { trigger = { original_tag = FRA }  localization_key = FRA_guide }
-	text = { trigger = { original_tag = POL }  localization_key = POL_guide }
-	text = { trigger = { original_tag = SOV }  localization_key = SOV_guide }
-	text = { trigger = { original_tag = BEL }  localization_key = BEL_guide }
-	text = { trigger = { original_tag = YUG }  localization_key = YUG_guide }
-	text = { trigger = { original_tag = ENG }  localization_key = ENG_guide }
-	text = { trigger = { original_tag = MEX }  localization_key = MEX_guide }
-	text = { trigger = { original_tag = EGY }  localization_key = EGY_guide }
+
+	### TAG ALIASES OR SPECIAL CASES ###
+	#text = {
+	#	trigger = { tag = CAN }
+	#	localization_key = CAN_guide
+	#}
+
+	### DEFAULT ###
+	text = {
+		trigger = { check_variable = { curr_page_guide = 3 } }
+		localization_key = country_culture|guide_3
+	}
+	text = {
+		trigger = { check_variable = { curr_page_guide = 2 } }
+		localization_key = country_culture|guide_2
+	}
+	text = {
+		trigger = { check_variable = { curr_page_guide = 1 } }
+		localization_key = country_culture|guide_1
+	}
+	text = {
+		localization_key = country_culture|guide
+	}
 }
 
+defined_text = {
+	name = GetCurrPageCountryIntro
+	text = {
+		trigger = {
+			set_temp_variable = { curr_page_display = curr_page_country }
+			add_to_temp_variable = { curr_page_display = 1 }
+		}
+		localization_key = "[?curr_page_display]"
+	}
+}
+defined_text = {
+	name = GetPageCountCountryIntro
+	text = {
+		trigger = {
+			set_temp_variable = { page_count_display = country_intro_page_count }
+			add_to_temp_variable = { page_count_display = 1 }
+		}
+		localization_key = "[?page_count_display]"
+	}
+}
+defined_text = {
+	name = GetCurrPageCountryGuide
+	text = {
+		trigger = {
+			set_temp_variable = { curr_page_display = curr_page_guide }
+			add_to_temp_variable = { curr_page_display = 1 }
+		}
+		localization_key = "[?curr_page_display]"
+	}
+}
+defined_text = {
+	name = GetPageCountCountryGuide
+	text = {
+		trigger = {
+			set_temp_variable = { page_count_display = country_guide_page_count }
+			add_to_temp_variable = { page_count_display = 1 }
+		}
+		localization_key = "[?page_count_display]"
+	}
+}

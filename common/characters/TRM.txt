@@ -1253,7 +1253,7 @@ characters={
 		portraits = {
 			army = {
 				small = GFX_Z_TRM_hans_zehrer_idea
-				large = GFX_Z_TRM_hans_zehrer_idea
+				large = GFX_Z_TRN_hans_fritzsche_Portrait
 			}
 		}
 		advisor = {
@@ -1266,20 +1266,25 @@ characters={
 				if = { limit = { has_character_flag = TRM_forced_dismissal_flag }
 					NOT = { has_character_flag = TRM_forced_dismissal_flag }
 				}
-				OR = { 
-					has_completed_focus = TMR_support_with_germany 
-					has_completed_focus = TRN_hiring_german_thinkers
-				}
 			}
 			visible = { 
-				OR = { 
-					has_completed_focus = TMR_support_with_germany 
-					has_completed_focus = TRN_hiring_german_thinkers
-				}
+				has_country_flag = TRN_hans_zehrer_flag
 			}
     		traits = { KR_schleicher_mouthpiece }
 			cost = 75
 			ai_will_do = { base = 4000 }
+		}
+		corps_commander={
+			traits={  }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+
+			visible = {
+				always = no # 유닛 리더 이벤트 용
+			}
 		}
 	}
 	TRM_alfred_rosenberg = {

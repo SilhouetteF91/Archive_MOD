@@ -8,6 +8,8 @@ focus_tree = {
 	shared_focus = TRN_Luftwaffe
 	shared_focus = TRN_Take_To_The_Seas
 	shared_focus = TRN_research_rifle
+	shared_focus = TRM_after_war
+
 	country = {
 		factor = 0
 		modifier = {
@@ -574,10 +576,9 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = TRN_Carl_Schmitt_idea
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = TRM_hans_zehrer_idea
+			custom_effect_tooltip = tooltip_white_line 
             hidden_effect = {
+				TRM_hans_zehrer = { unit_leader_event = { id = trinity.39 days = 04 } }
 			    #country_event = { id = TRM_event.99 days = 10 }
 			    country_event = { id = TRN_after_war_event.1 days = 20 }
             }
@@ -951,111 +952,6 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			add_ideas = TRM_mucahbyueol_jingbyeong_idea
-		}
-	}
-
-	focus = {#전후 처리
-		id = TRM_after_war 
-		icon = GFX_goal_after_war
-		cost = 10.00
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRINITY_WON_THE_GEHENNA_tt
-				has_global_flag = TRINITY_WON_THE_GEHENNA
-			}
-		}
-		ai_will_do = {
-			base = 4000
-		}
-		allow_branch = {
-			NOT = {
-				OR = {
-					has_completed_focus = TRN_nagisa_gyehek
-					has_country_flag = TRN_Seia_Sandevistan
-				}
-			}
-		}
-		relative_position_id = TRM_Library_Committee
-		x = 0
-		y = 2
-		completion_reward = {
-			#country_event = { id = TRM_event.35 }
-			unlock_decision_category_tooltip = TRN_after_war_decisions
-			mark_focus_tree_layout_dirty = yes
-			hidden_effect = {
-				country_event = { 
-					id = TRN_after_war_event.24
-					days = 14
-				}
-			}
-		}
-	}
-	
-	#게헨나 저항군 소탕
-	focus = {
-		id = TRM_anti_gehenna_focus_2 
-		icon = GFX_goal_hmmngshinso_broken
-		cost = 2.00
-		prerequisite = {
-			focus = TRM_after_war
-		}
-		ai_will_do = {
-			base = 4000
-		}
-        available = { }
-		relative_position_id = TRM_after_war
-		x = 2
-		y = 1
-		completion_reward = {
-			unlock_decision_tooltip = TRM_raid_gehenna_resistance
-		}
-	}
-
-	focus = {# 군정 수립
-		id = TRM_anti_gehenna_focus_3 
-		icon = GFX_goal_after_war_focus_3
-		cost = 2.00
-		prerequisite = {
-			focus = TRM_after_war
-		}
-		ai_will_do = {
-			base = 4000
-		}
-		relative_position_id = TRM_after_war
-		x = -2
-		y = 1
-		completion_reward = {
-            unlock_decision_tooltip = TRM_Gehenna_Military_Civil_Administration
-		}
-	}
-
-	focus = { # 연합법
-		id = TRM_germany_union
-		icon = GFX_focus_TRM_united_law
-		cost = 8.00
-
-		prerequisite = { focus = TRM_after_war }
-		relative_position_id = TRM_after_war
-		available = {
-			has_completed_focus = TRM_anti_gehenna_focus_2
-			has_completed_focus = TRM_anti_gehenna_focus_3
-		}
-		ai_will_do = {
-			base = 4000
-		}
-		x = -0
-		y = 1
-		completion_reward = {
-			country_event = { id = TRM_event.5 hours = 02 }
-			hidden_effect = { 
-				news_event = { id = BA_news.7 days = 04 } 
-			}
-			add_political_power = 50
-			add_command_power = 75
-			unlock_decision_tooltip = TRM_unification_propaganda
-			unlock_decision_tooltip = TRM_Decline_of_the_anti_gehenna_sentiment
-			unlock_decision_tooltip = TRM_tighten_control
-			#custom_effect_tooltip = TRM_germany_union_tt
 		}
 	}
 	focus = {
@@ -6722,6 +6618,7 @@ focus_tree = {
 	shared_focus = TRN_Luftwaffe
 	shared_focus = TRN_research_rifle
 	shared_focus = TRN_Take_To_The_Seas
+	shared_focus = TRM_after_war
 
 
 	###########
@@ -7195,6 +7092,7 @@ focus_tree = {
 			
 			hidden_effect = {
 				country_event = { id = trinity.22 days = 15 } # 충성조항
+				country_event = { id = trinity.22 days = 15 } # 한스 프리체
 			}
 		}
 	}
@@ -7237,6 +7135,7 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
+			set_variable = { TRN_Mika_Honor_var = 50 }
 				set_party_name = {
 	    			ideology = fascism
     				long_name = MIKA_FASCISM_LONG
@@ -7723,10 +7622,9 @@ focus_tree = {
 	######
 	##외교##
 	######
-
-	focus = { # 에덴협정
-		id = TRN_eden_accord
-		icon = GFX_focus_TRN_eden_accord
+	focus = { # 키보토스 외교
+		id = TRN_kivotos_dip
+		icon = GFX_focus_TRN_kivotos_dip
 		x = 18
 		y = 0
 		relative_position_id = TRN_control_tea_party
@@ -7735,6 +7633,27 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = TRN_political_instability_ns }
 		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # 에덴협정
+		id = TRN_eden_accord
+		icon = GFX_focus_TRN_eden_accord
+		x = 0
+		y = 1
+		relative_position_id = TRN_kivotos_dip
+		cost = 5
+
+		available = {
+			date > 1937.1.1
+		}
+		prerequisite = { focus = TRN_kivotos_dip }
 
 		ai_will_do = {
 
@@ -7751,37 +7670,18 @@ focus_tree = {
 	}
 
 	###
-	### 폴란드및 발트 외교 분기
+	### 폴란드 등 동유럽 외교 분기
 	###
 	focus = { # 폴란드 문제
 		id = TRN_poland_problem
 		icon = GFX_focus_POL_common_organization_of_society
-		x = -4
-		y = 1
-		relative_position_id = TRN_eden_accord
-		cost = 3
-
-		available = { }
-		prerequisite = { focus = TRN_eden_accord }
-
-		ai_will_do = {
-
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = { # 발트해
-		id = TRN_influence_the_baltic
-		icon = GFX_focus_SOV_baltic_security
 		x = -2
 		y = 1
-		relative_position_id = TRN_eden_accord
+		relative_position_id = TRN_kivotos_dip
 		cost = 3
 
 		available = { }
-		prerequisite = { focus = TRN_eden_accord }
+		prerequisite = { focus = TRN_kivotos_dip }
 
 		ai_will_do = {
 
@@ -7790,19 +7690,51 @@ focus_tree = {
 
 		}
 	}
-	###
-	### 키보토스, 게헨나랑 전쟁 분기
-	###
-	focus = { # 키보토스 외교
-		id = TRN_kivotos_dip
-		icon = GFX_focus_TRN_kivotos_dip
-		x = 0
+
+	focus = { # 발트에 영향력 행사
+		id = TRN_influence_the_baltic
+		icon = GFX_focus_SOV_baltic_security
+		x = 1
 		y = 1
-		relative_position_id = TRN_eden_accord
-		cost = 5
+		relative_position_id = TRN_poland_problem
+		cost = 3
 
 		available = { }
-		prerequisite = { focus = TRN_eden_accord }
+		prerequisite = { focus = TRN_poland_problem }
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # 폴란드 침공! 히히
+		id = TRN_attack_on_poland
+		icon = GFX_focus_generic_attack_poland
+		x = 0
+		y = 2
+		relative_position_id = TRN_poland_problem
+		cost = 3
+
+		available = {
+			is_puppet = no
+			has_global_flag = sov_pol_war_superevent_trigger_flag
+			POL = {
+				NOT = {
+					custom_trigger_tooltip = {
+						tooltip = BA_pol_win_polsovwar
+						has_global_flag = sov_pol_war_superevent_trigger_flag
+						NOT = {
+							has_war_with = SOV
+						}
+						is_puppet = no
+					}
+				}
+			}
+		}
+		prerequisite = { focus = TRN_poland_problem }
 
 		ai_will_do = {
 
@@ -7815,12 +7747,14 @@ focus_tree = {
 	focus = { # 남부 외교
 		id = TRN_southern_kivotos_dip
 		icon = GFX_goal_SHA_Southern_Kivotos
-		x = -1
+		x = -4
 		y = 1
 		relative_position_id = TRN_kivotos_dip
 		cost = 5
 
-		available = { }
+		available = {
+
+		}
 		prerequisite = { focus = TRN_kivotos_dip }
 
 		ai_will_do = {
@@ -7831,16 +7765,90 @@ focus_tree = {
 		}
 	}
 
+	focus = { # 남부 외교 - 산해경 지지하기
+		id = TRN_support_SHA
+		icon = GFX_focus_chi_mission_to_the_SHA
+		x = -1
+		y = 1
+		relative_position_id = TRN_southern_kivotos_dip
+		cost = 5
+
+		available = {
+			has_government = fascism
+			SHA = { has_government = TRM }
+		}
+		prerequisite = { focus = TRN_southern_kivotos_dip }
+		mutually_exclusive = { focus = TRN_support_HYA }
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # 남부 외교 - 백귀야행 지지
+		id = TRN_support_HYA
+		icon = GFX_focus_chi_mission_to_the_HYA
+		x = 1
+		y = 1
+		relative_position_id = TRN_southern_kivotos_dip
+		cost = 5
+
+		available = {
+
+		}
+		prerequisite = { focus = TRN_southern_kivotos_dip }
+		mutually_exclusive = { focus = TRN_support_SHA }
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+	
+
+	focus = { # 발칸
+		id = TRN_balkan_dip
+		icon = GFX_focus_TRN_balkan_dip
+		x = 0
+		y = 2
+		relative_position_id = TRN_southern_kivotos_dip
+		cost = 3
+
+		available = { }
+		prerequisite = { 
+			focus = TRN_support_HYA
+			focus = TRN_support_SHA
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
+	###
+	### 키보토스, 게헨나랑 전쟁 분기
+	###
+
 	focus = { # 밀레니엄과 친선
 		id = TRN_friendship_millennium
 		icon = GFX_focus_chi_mission_to_the_MIL
 		x = 1
 		y = 1
-		relative_position_id = TRN_kivotos_dip
+		relative_position_id = TRN_eden_accord
 		cost = 5
 
-		available = { }
-		prerequisite = { focus = TRN_kivotos_dip }
+		available = {
+			NOT = { has_completed_focus = TRN_spiritual_warfare }
+		}
+		prerequisite = { focus = TRN_eden_accord }
 
 		ai_will_do = {
 
@@ -7858,11 +7866,11 @@ focus_tree = {
 		icon = GFX_focus_TRN_northern_kivotos_dip
 		x = 3
 		y = 1
-		relative_position_id = TRN_kivotos_dip
+		relative_position_id = TRN_eden_accord
 		cost = 5
 
 		available = { }
-		prerequisite = { focus = TRN_kivotos_dip }
+		prerequisite = { focus = TRN_eden_accord }
 
 		ai_will_do = {
 
@@ -7917,11 +7925,11 @@ focus_tree = {
 		icon = GFX_goal_war_with_gehenna
 		x = 0
 		y = 2
-		relative_position_id = TRN_kivotos_dip
+		relative_position_id = TRN_eden_accord
 		cost = 5
 
 		available = { }
-		prerequisite = { focus = TRN_kivotos_dip }
+		prerequisite = { focus = TRN_eden_accord }
 
 		ai_will_do = {
 
@@ -7986,7 +7994,15 @@ focus_tree = {
 		relative_position_id = TRN_impossible_to_coexist
 		cost = 2
 
-		available = { }
+		available = {
+			NOT = { has_completed_focus = TRN_spiritual_warfare }
+			country_exists = HEU
+		}
+		allow_branch = {
+			HEU = {
+				NOT = { has_completed_focus = HEU_watch_right_wing_party }
+			}
+		}
 		prerequisite = { focus = TRN_impossible_to_coexist }
 
 		ai_will_do = {
@@ -8006,11 +8022,11 @@ focus_tree = {
 		icon = GFX_focus_GER_strafbataillon
 		x = 2
 		y = 1
-		relative_position_id = TRN_eden_accord
+		relative_position_id = TRN_kivotos_dip
 		cost = 3
 		will_lead_to_war_with  = ARI
 
-		prerequisite = { focus = TRN_eden_accord }
+		prerequisite = { focus = TRN_kivotos_dip }
 		ai_will_do = {
 			base = 200
 		}
@@ -10920,5 +10936,117 @@ shared_focus = {
 		    uses = 1
 		    category = cas_bomber
 	    }
+	}
+}
+
+shared_focus = {#전후 처리
+	id = TRM_after_war 
+	icon = GFX_goal_after_war
+	cost = 10.00
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = TRINITY_WON_THE_GEHENNA_tt
+			has_global_flag = TRINITY_WON_THE_GEHENNA
+		}
+	}
+	ai_will_do = {
+		base = 4000
+	}
+	allow_branch = {
+		NOT = {
+			OR = {
+				has_completed_focus = TRN_nagisa_gyehek
+				has_country_flag = TRN_Seia_Sandevistan
+			}
+		}
+	}
+	#relative_position_id = TRM_Library_Committee
+	x = 0
+	y = 10
+	offset = {
+		trigger = { has_focus_tree = TRM_focus_tree }
+		y = 3
+		x = 46
+	}
+	offset = {
+		trigger = { has_focus_tree = Trinity_focus }
+		y = -7
+		x = 15
+	}
+	completion_reward = {
+		#country_event = { id = TRM_event.35 }
+		unlock_decision_category_tooltip = TRN_after_war_decisions
+		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			country_event = { 
+				id = TRN_after_war_event.24
+				days = 14
+			}
+		}
+	}
+}
+
+#게헨나 저항군 소탕
+shared_focus = {
+	id = TRM_anti_gehenna_focus_2 
+	icon = GFX_goal_hmmngshinso_broken
+	cost = 2.00
+	prerequisite = {
+		focus = TRM_after_war
+	}
+	ai_will_do = {
+		base = 4000
+	}
+       available = { }
+	relative_position_id = TRM_after_war
+	x = 2
+	y = 1
+	completion_reward = {
+		unlock_decision_tooltip = TRM_raid_gehenna_resistance
+	}
+}
+shared_focus = {# 군정 수립
+	id = TRM_anti_gehenna_focus_3 
+	icon = GFX_goal_after_war_focus_3
+	cost = 2.00
+	prerequisite = {
+		focus = TRM_after_war
+	}
+	ai_will_do = {
+		base = 4000
+	}
+	relative_position_id = TRM_after_war
+	x = -2
+	y = 1
+	completion_reward = {
+           unlock_decision_tooltip = TRM_Gehenna_Military_Civil_Administration
+	}
+}
+shared_focus = { # 연합법
+	id = TRM_germany_union
+	icon = GFX_focus_TRM_united_law
+	cost = 8.00
+	prerequisite = { focus = TRM_after_war }
+	relative_position_id = TRM_after_war
+	available = {
+		has_completed_focus = TRM_anti_gehenna_focus_2
+		has_completed_focus = TRM_anti_gehenna_focus_3
+	}
+	ai_will_do = {
+		base = 4000
+	}
+	x = -0
+	y = 1
+	completion_reward = {
+		country_event = { id = TRM_event.5 hours = 02 }
+		hidden_effect = { 
+			news_event = { id = BA_news.7 days = 04 } 
+		}
+		add_political_power = 50
+		add_command_power = 75
+		unlock_decision_tooltip = TRM_unification_propaganda
+		unlock_decision_tooltip = TRM_Decline_of_the_anti_gehenna_sentiment
+		unlock_decision_tooltip = TRM_tighten_control
+		#custom_effect_tooltip = TRM_germany_union_tt
 	}
 }

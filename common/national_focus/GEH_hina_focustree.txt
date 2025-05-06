@@ -7358,37 +7358,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
-		}
-	}
-	
-    focus = {
-		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_hina
-		icon = GFX_focus_GEH_last_focus_effect
-		cost = 3
-
-		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mind
-		x = 0
-		y = 2
-
-        prerequisite = {
-            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mind
-        }
-
-		ai_will_do = {
-			base = 100
-			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
-			}
-		}
-
-		completion_reward = {
-			
+            GEH_popular_support_up_effect = yes
 		}
 	}
 	
@@ -7468,6 +7438,7 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = GEH.event.1015 }
+            GEH_popular_support_up_effect = yes
 		}
 	}
 
@@ -7908,7 +7879,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+            GEH_popular_support_up_effect = yes
 		}
 	}
 	
@@ -8013,7 +7984,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			country_event = { id = GEH.event.1024 }
 		}
 	}
 	
@@ -8126,7 +8097,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+            GEH_popular_support_up_effect = yes
 		}
 	}
 
@@ -8302,6 +8273,8 @@ focus_tree = {
 			}
 			
 			add_political_power = -100
+			add_stability = -0.05
+			add_war_support = -0.05
 		}
 	}
 
@@ -8336,7 +8309,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			country_event = { id = GEH.event.1019 }
 
+            custom_effect_tooltip = GEH_chinatsu_focus_4_tt
+            add_to_variable = { GEH_CH_conscription_factor = 0.05 }
 		}
 	}
 
@@ -8371,7 +8347,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			country_event = { id = GEH.event.1020 }
+			custom_effect_tooltip = kivotos_halo_add3_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
 		}
 	}
 
@@ -8408,8 +8389,12 @@ focus_tree = {
 			}
 		}
 
-		completion_reward = {
+        select_effect = {
+			country_event = { id = GEH.event.1021 }
+        }
 
+		completion_reward = {
+			country_event = { id = GEH.event.1022 }
 		}
 	}
 
@@ -8536,6 +8521,10 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = GEH_sorasaki_hina_quotes_compilation_idea
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.07
+			}
 		}
 	}
 
@@ -8577,7 +8566,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			country_event = { id = GEH.event.1023 }
 			add_country_leader_trait = b_tjsehqnwkd_week
+            GEH_popular_support_up_effect = yes
 		}
 	}
 
@@ -8619,7 +8610,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			country_event = { id = GEH.event.1024 }
 		}
 	}
 
@@ -8661,7 +8652,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.15
+			mio:GEH_maintenance_department_organization = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.15
+				add_mio_research_bonus = 0.05
+			}
+			mio:GEH_tank_department_organization = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.15
+				add_mio_research_bonus = 0.05
+			}
 		}
 	}
 
@@ -8703,7 +8703,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+            GEH_popular_support_up_effect = yes
 		}
 	}
 
