@@ -135,16 +135,23 @@
  RE4_operation_ivan_kupala: "작전명, 이반 쿠팔라"
 
  RED_northern_sovereignty_war: "북방 주권 전쟁"
- RED_northern_sovereignty_war_desc: "§Y덴마크§!, §Y노르웨이§!, §Y스웨덴§!의 영토 위에 설립된 §Y군정청§!은 일반적으로 붉은겨울 연방학원의 일부로 여겨지나, §Y북방 주권 전쟁§!이 준비중인 현재 군정청을 §G포섭§! 하기 위한 시도가 체리노와 마리나에 의해 주도되고 있습니다. 영향력 경쟁에서 패배한다면 §Y군정청§!은 §Y북방 주권 전쟁§!에서 §R상대 편§!으로 참여할 것입니다.\n\n영향력의 경우 §Y북방 주권 전쟁§!에서 §Y군정청§!은 §g마리나§!의 편을 따르나, §S체리노§!의 영향력이 100에 도달할 경우 해당 §Y군정청§!은 §S체리노§!의 편으로 참여할 것입니다."
+ RED_northern_sovereignty_war_desc: "§Y덴마크§!, §Y노르웨이§!, §Y스웨덴§!의 영토 위에 설립된 §Y군정청§!은 일반적으로 붉은겨울 연방학원의 일부로 여겨지나, §Y북방 주권 전쟁§!이 준비중인 현재 군정청을 §G포섭§! 하기 위한 시도가 [RENSW_RED_leader_ADJ]와 [RENSW_RE4_leader_ADJ]에 의해 주도되고 있습니다. 영향력 경쟁에서 패배한다면 §Y군정청§!은 §Y북방 주권 전쟁§!에서 §R상대 편§!으로 참여할 것입니다.\n\n영향력의 경우 §Y북방 주권 전쟁§!에서 §Y군정청§!은 §g[RENSW_RE4_leader_ADJ]§!의 편을 따르나, §S[RENSW_RED_leader_ADJ]§!의 영향력이 100에 도달할 경우 해당 §Y군정청§!은 §S[RENSW_RED_leader_ADJ]§!의 편으로 참여할 것입니다."
 
- red_northern_sovereignty_re1_progressbar_tt: "§Y[RE1.GetNameWithFlag]§!: 체리노의 영향력 [?global.red_northern_sovereignty_re1_var|S.0]"
- red_northern_sovereignty_re2_progressbar_tt: "§Y[RE2.GetNameWithFlag]§! 체리노의 영향력 [?global.red_northern_sovereignty_re2_var|S.0]"
- red_northern_sovereignty_re3_progressbar_tt: "§Y[RE3.GetNameWithFlag]§! 체리노의 영향력 [?global.red_northern_sovereignty_re3_var|S.0]"
+ RENSW_cherino: "체리노"
+ RENSW_marina: "마리나"
+ RENSW_minori: "미노리"
 
- red_northern_sovereignty_war_1side_icon_tt: "현재 체리노는 아래와 같은 영향력을 발휘하고 있습니다:\n §Y[RE1.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re1_var|S.0]\n §Y[RE2.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re2_var|S.0]\n §Y[RE3.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re3_var|S.0]\n\n현재 체리노는 아래의 군정청을 통제하고 있습니다:[RED_northern_sovereignty_war_use_RE1_side1][RED_northern_sovereignty_war_use_RE2_side1][RED_northern_sovereignty_war_use_RE3_side1]\n\n현재 체리노는 침공을 준비하고 있습니다:\n[RED_northern_sovereignty_war_rdy_process_tt]"
- red_northern_sovereignty_war_2side_icon_tt: "현재 마리나는 아래의 군정청을 통제하고 있습니다:[RED_northern_sovereignty_war_use_RE1][RED_northern_sovereignty_war_use_RE2][RED_northern_sovereignty_war_use_RE3]\n\n현재 마리나는 침공을 준비하고 있습니다:\n[RE4_northern_sovereignty_war_rdy_process_tt]"
+ red_northern_sovereignty_re1_progressbar_tt: "§Y[RE1.GetNameWithFlag]§!: [RENSW_RED_leader_ADJ]의 영향력 [?global.red_northern_sovereignty_re1_var|S.0]"
+ red_northern_sovereignty_re2_progressbar_tt: "§Y[RE2.GetNameWithFlag]§! [RENSW_RED_leader_ADJ]의 영향력 [?global.red_northern_sovereignty_re2_var|S.0]"
+ red_northern_sovereignty_re3_progressbar_tt: "§Y[RE3.GetNameWithFlag]§! [RENSW_RED_leader_ADJ]의 영향력 [?global.red_northern_sovereignty_re3_var|S.0]"
 
- RED_northern_sovereignty_war_1side_team_flag: "완전히 §S체리노§!에게 포섭됨"
+ red_northern_sovereignty_war_1side_icon_cherino_tt: "현재 체리노는 아래와 같은 영향력을 발휘하고 있습니다:\n §Y[RE1.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re1_var|S.0]\n §Y[RE2.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re2_var|S.0]\n §Y[RE3.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re3_var|S.0]\n\n현재 체리노는 아래의 군정청을 통제하고 있습니다:[RED_northern_sovereignty_war_use_RE1_side1][RED_northern_sovereignty_war_use_RE2_side1][RED_northern_sovereignty_war_use_RE3_side1]\n\n현재 체리노는 침공을 준비하고 있습니다:\n[RED_northern_sovereignty_war_rdy_process_cherino_tt]"
+
+ red_northern_sovereignty_war_1side_icon_minori_tt: "현재 미노리는 아래와 같은 영향력을 발휘하고 있습니다:\n §Y[RE1.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re1_var|S.0]\n §Y[RE2.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re2_var|S.0]\n §Y[RE3.GetNameWithFlag]§! 영향력 [?global.red_northern_sovereignty_re3_var|S.0]\n\n현재 미노리는 아래의 군정청을 해방시켰습니다:[RED_northern_sovereignty_war_use_RE1_side1][RED_northern_sovereignty_war_use_RE2_side1][RED_northern_sovereignty_war_use_RE3_side1]\n\n현재 미노리는 침공을 준비하고 있습니다:\n[RED_northern_sovereignty_war_rdy_process_minori_tt]"
+
+ red_northern_sovereignty_war_2side_icon_marina_tt: "현재 마리나는 아래의 군정청을 통제하고 있습니다:[RED_northern_sovereignty_war_use_RE1][RED_northern_sovereignty_war_use_RE2][RED_northern_sovereignty_war_use_RE3]\n\n현재 마리나는 침공을 준비하고 있습니다:\n[RE4_northern_sovereignty_war_rdy_process_marina_tt]"
+
+ RED_northern_sovereignty_war_1side_team_flag: "완전히 §S[RENSW_RED_leader_ADJ]§!에게 포섭됨"
 
  red_northern_sovereignty_re1_text: "§Y[RE1.GetNameWithFlag]§!:"
  red_northern_sovereignty_re2_text: "§Y[RE2.GetNameWithFlag]§!:"
@@ -154,20 +161,25 @@
  RED_northern_sovereignty_war_use_RE2_tt: "\n §Y[RE2.GetNameWithFlag]§!"
  RED_northern_sovereignty_war_use_RE3_tt: "\n §Y[RE3.GetNameWithFlag]§!"
 
- RED_northern_sovereignty_war_rdy_process_1_tt: "§g체리노가 마리나의 227호 스캔들을 발견함§! §G(1/4)§!"
- RED_northern_sovereignty_war_rdy_process_2_tt: "§g체리노가 마리나의 227호 스캔들을 발견함\n군정청 포섭을 시작함§! §Y(2/4)§!"
- RED_northern_sovereignty_war_rdy_process_3_tt: "§g체리노가 마리나의 227호 스캔들을 발견함\n군정청 포섭을 시작함\n군정청을 하나 이상 포섭함§! §Y(3/4)§!"
- RED_northern_sovereignty_war_rdy_process_4_tt: "§g체리노가 마리나의 227호 스캔들을 발견함\n군정청 포섭을 시작함\n군정청을 하나 이상 포섭함\n\"보안위원장 직위 해임\" 중점 완료§! §R(4/4)§!\n\n§R\"현재 체리노는 북방 주권 전쟁을 선포할 수 있습니다.\"§!"
+ RED_northern_sovereignty_war_rdy_process_cherino_1_tt: "§g체리노가 마리나의 227호 스캔들을 발견함§! §G(1/4)§!"
+ RED_northern_sovereignty_war_rdy_process_cherino_2_tt: "§g체리노가 마리나의 227호 스캔들을 발견함\n군정청 포섭을 시작함§! §Y(2/4)§!"
+ RED_northern_sovereignty_war_rdy_process_cherino_3_tt: "§g체리노가 마리나의 227호 스캔들을 발견함\n군정청 포섭을 시작함\n군정청을 하나 이상 포섭함§! §Y(3/4)§!"
+ RED_northern_sovereignty_war_rdy_process_cherino_4_tt: "§g체리노가 마리나의 227호 스캔들을 발견함\n군정청 포섭을 시작함\n군정청을 하나 이상 포섭함\n\"보안위원장 직위 해임\" 중점 완료§! §R(4/4)§!\n\n§R\"현재 [RENSW_RED_leader_ADJ]는 북방 주권 전쟁을 선포할 수 있습니다.\"§!"
 
- RE4_northern_sovereignty_war_rdy_process_1_tt: "§g마리나가 227호와 스캔들로 인해 혁명을 결심함§! §G(1/4)§!"
- RE4_northern_sovereignty_war_rdy_process_2_tt: "§g마리나가 227호와 스캔들로 인해 혁명을 결심함\n보안위원회 본부 이전§! §Y(2/4)§!"
- RE4_northern_sovereignty_war_rdy_process_3_tt: "§g마리나가 227호와 스캔들로 인해 혁명을 결심함\n보안위원회 본부 이전\n반혁명 방지위원회 설립§! §Y(3/4)§!"
- RE4_northern_sovereignty_war_rdy_process_4_tt: "§g마리나가 227호와 스캔들로 인해 혁명을 결심함\n보안위원회 본부 이전\n반혁명 방지위원회 설립\n\"작전명, 이반 쿠팔라\" 중점 완료§! §R(4/4)§!\n\n§R\"현재 마리나는 북방 주권 전쟁을 선포할 수 있습니다.\"§!"
+ RED_northern_sovereignty_war_rdy_process_minori_1_tt: "§g미노리가 붉은겨울 혁명을 완수함§! §G(1/4)§!"
+ RED_northern_sovereignty_war_rdy_process_minori_2_tt: "§g미노리가 붉은겨울 혁명을 완수함\n군정청에 혁명을 전파함§! §Y(2/4)§!"
+ RED_northern_sovereignty_war_rdy_process_minori_3_tt: "§g미노리가 붉은겨울 혁명을 완수함\n군정청에 혁명을 전파함\n해방청을 하나 이상 설립함§! §Y(3/4)§!"
+ RED_northern_sovereignty_war_rdy_process_minori_4_tt: "§g미노리가 붉은겨울 혁명을 완수함\n군정청에 혁명을 전파함\n해방청을 하나 이상 설립함\n\"노르드의 혁명\" 중점 완료§! §R(4/4)§!\n\n§R\"현재 [RENSW_RED_leader_ADJ]는 북방 주권 전쟁을 선포할 수 있습니다.\"§!"
+
+ RE4_northern_sovereignty_war_rdy_process_marina_1_tt: "§g마리나가 227호와 스캔들로 인해 혁명을 결심함§! §G(1/4)§!"
+ RE4_northern_sovereignty_war_rdy_process_marina_2_tt: "§g마리나가 227호와 스캔들로 인해 혁명을 결심함\n보안위원회 본부 이전§! §Y(2/4)§!"
+ RE4_northern_sovereignty_war_rdy_process_marina_3_tt: "§g마리나가 227호와 스캔들로 인해 혁명을 결심함\n보안위원회 본부 이전\n반혁명 방지위원회 설립§! §Y(3/4)§!"
+ RE4_northern_sovereignty_war_rdy_process_marina_4_tt: "§g마리나가 227호와 스캔들로 인해 혁명을 결심함\n보안위원회 본부 이전\n반혁명 방지위원회 설립\n\"작전명, 이반 쿠팔라\" 중점 완료§! §R(4/4)§!\n\n§R\"현재 마리나는 북방 주권 전쟁을 선포할 수 있습니다.\"§!"
 
  RED_northern_sovereignty_war_rdy_process_ERR_tt: "§g아무 것도 하고 있지 않음§! (0/4)"
 
- red_northern_sovereignty_tt: "체리노의 영향력 변동: $RIGHT|=S.0$"
- red_northern_sovereignty_var_upper_tt: "체리노의 영향력이 $RIGHT|S.0$ 보다 큼"
+ red_northern_sovereignty_tt: "[RENSW_RED_leader_ADJ]의 영향력 변동: $RIGHT|=S.0$"
+ red_northern_sovereignty_var_upper_tt: "[RENSW_RED_leader_ADJ]의 영향력이 $RIGHT|S.0$ 보다 큼"
 
  northern_sovereignty_war_RE4_military_government_RE1: "[RE1.GetName]: 충성의 대가 제공"
  northern_sovereignty_war_RE4_military_government_RE2: "[RE2.GetName]: 충성의 대가 제공"

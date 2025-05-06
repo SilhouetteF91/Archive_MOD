@@ -39,20 +39,34 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
+		#
+
+		## 1사이드
 		iconType = {
-			name = "red_northern_sovereignty_war_1side_icon"
-			spriteType = "GFX_red_northern_sovereignty_war_1side_icon"
+			name = "red_northern_sovereignty_war_1side_icon_cherino"
+			spriteType = "GFX_red_northern_sovereignty_war_1side_icon_cherino"
 			position = { x = 170 y = 22 }
 			scale = 0.6
-			pdx_tooltip = red_northern_sovereignty_war_1side_icon_tt
+			pdx_tooltip = red_northern_sovereignty_war_1side_icon_cherino_tt
 		}
 		iconType = {
-			name = "red_northern_sovereignty_war_2side_icon"
+			name = "red_northern_sovereignty_war_1side_icon_minori"
+			spriteType = "GFX_red_northern_sovereignty_war_1side_icon_minori"
+			position = { x = 170 y = 22 }
+			scale = 0.6
+			pdx_tooltip = red_northern_sovereignty_war_1side_icon_minori_tt
+		}
+
+		## 2사이드
+		iconType = {
+			name = "red_northern_sovereignty_war_2side_icon_marina"
 			spriteType = "GFX_red_northern_sovereignty_war_2side_icon"
 			position = { x = 435 y = 22 }
 			scale = 0.6
-			pdx_tooltip = red_northern_sovereignty_war_2side_icon_tt
+			pdx_tooltip = red_northern_sovereignty_war_2side_icon_marina_tt
 		}
+
+		#
 
 		@red_northern_sovereignty_text = 10
 		instantTextBoxType = {

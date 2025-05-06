@@ -3302,6 +3302,7 @@ RED_northern_sovereignty_war = {
 				}
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+			has_completed_focus = RED_army_government_loyalty_confirmation
 		}
 		available = {
 			NOT = {
@@ -3312,6 +3313,7 @@ RED_northern_sovereignty_war = {
 			RE1 = {
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+			has_completed_focus = RED_army_government_loyalty_confirmation
 		}
 		cancel_trigger = {
 			event_target:northern_sovereignty_war_RED_military_government_target = {
@@ -3366,6 +3368,7 @@ RED_northern_sovereignty_war = {
 				}
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+			has_completed_focus = RED_army_government_loyalty_confirmation
 		}
 		available = {
 			NOT = {
@@ -3376,6 +3379,7 @@ RED_northern_sovereignty_war = {
 			RE2 = {
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+			has_completed_focus = RED_army_government_loyalty_confirmation
 		}
 		cancel_trigger = {
 			event_target:northern_sovereignty_war_RED_military_government_target = {
@@ -3430,6 +3434,7 @@ RED_northern_sovereignty_war = {
 				}
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+			has_completed_focus = RED_army_government_loyalty_confirmation
 		}
 		available = {
 			NOT = {
@@ -3440,6 +3445,7 @@ RED_northern_sovereignty_war = {
 			RE3 = {
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+			has_completed_focus = RED_army_government_loyalty_confirmation
 		}
 		cancel_trigger = {
 			event_target:northern_sovereignty_war_RED_military_government_target = {

@@ -670,14 +670,14 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = RED_northern_sovereignty_war_rdy_process_tt
+	name = RED_northern_sovereignty_war_rdy_process_cherino_tt
 	text = {
 		trigger = {
 			check_variable = {
 				global.RED_northern_sovereignty_war_rdy_process = 1
 			}
 		}
-		localization_key = RED_northern_sovereignty_war_rdy_process_1_tt
+		localization_key = RED_northern_sovereignty_war_rdy_process_cherino_1_tt
 	}
 	text = {
 		trigger = {
@@ -685,7 +685,7 @@ defined_text = {
 				global.RED_northern_sovereignty_war_rdy_process = 2
 			}
 		}
-		localization_key = RED_northern_sovereignty_war_rdy_process_2_tt
+		localization_key = RED_northern_sovereignty_war_rdy_process_cherino_2_tt
 	}
 	text = {
 		trigger = {
@@ -693,7 +693,7 @@ defined_text = {
 				global.RED_northern_sovereignty_war_rdy_process = 3
 			}
 		}
-		localization_key = RED_northern_sovereignty_war_rdy_process_3_tt
+		localization_key = RED_northern_sovereignty_war_rdy_process_cherino_3_tt
 	}
 	text = {
 		trigger = {
@@ -701,21 +701,59 @@ defined_text = {
 				global.RED_northern_sovereignty_war_rdy_process = 4
 			}
 		}
-		localization_key = RED_northern_sovereignty_war_rdy_process_4_tt
+		localization_key = RED_northern_sovereignty_war_rdy_process_cherino_4_tt
 	}
 	text = {
 		localization_key = RED_northern_sovereignty_war_rdy_process_ERR_tt
 	}
 }
 defined_text = {
-	name = RE4_northern_sovereignty_war_rdy_process_tt
+	name = RED_northern_sovereignty_war_rdy_process_minori_tt
+	text = {
+		trigger = {
+			check_variable = {
+				global.RED_northern_sovereignty_war_rdy_process = 1
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_rdy_process_minori_1_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				global.RED_northern_sovereignty_war_rdy_process = 2
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_rdy_process_minori_2_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				global.RED_northern_sovereignty_war_rdy_process = 3
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_rdy_process_minori_3_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				global.RED_northern_sovereignty_war_rdy_process = 4
+			}
+		}
+		localization_key = RED_northern_sovereignty_war_rdy_process_minori_4_tt
+	}
+	text = {
+		localization_key = RED_northern_sovereignty_war_rdy_process_ERR_tt
+	}
+}
+defined_text = {
+	name = RE4_northern_sovereignty_war_rdy_process_marina_tt
 	text = {
 		trigger = {
 			check_variable = {
 				global.RE4_northern_sovereignty_war_rdy_process = 1
 			}
 		}
-		localization_key = RE4_northern_sovereignty_war_rdy_process_1_tt
+		localization_key = RE4_northern_sovereignty_war_rdy_process_marina_1_tt
 	}
 	text = {
 		trigger = {
@@ -723,7 +761,7 @@ defined_text = {
 				global.RE4_northern_sovereignty_war_rdy_process = 2
 			}
 		}
-		localization_key = RE4_northern_sovereignty_war_rdy_process_2_tt
+		localization_key = RE4_northern_sovereignty_war_rdy_process_marina_2_tt
 	}
 	text = {
 		trigger = {
@@ -731,7 +769,7 @@ defined_text = {
 				global.RE4_northern_sovereignty_war_rdy_process = 3
 			}
 		}
-		localization_key = RE4_northern_sovereignty_war_rdy_process_3_tt
+		localization_key = RE4_northern_sovereignty_war_rdy_process_marina_3_tt
 	}
 	text = {
 		trigger = {
@@ -739,9 +777,50 @@ defined_text = {
 				global.RE4_northern_sovereignty_war_rdy_process = 4
 			}
 		}
-		localization_key = RE4_northern_sovereignty_war_rdy_process_4_tt
+		localization_key = RE4_northern_sovereignty_war_rdy_process_marina_4_tt
 	}
 	text = {
 		localization_key = RED_northern_sovereignty_war_rdy_process_ERR_tt
+	}
+}
+defined_text = {
+	name = RENSW_RED_leader_ADJ
+	text = {
+		trigger = {
+			RED = {
+				NOT = {
+					has_completed_focus = RED_dipose_cherino
+				}
+			}
+		}
+		localization_key = RENSW_cherino
+	}
+	text = {
+		trigger = {
+			RED = {
+				has_completed_focus = RED_dipose_cherino
+			}
+		}
+		localization_key = RENSW_minori
+	}
+	text = {
+		localization_key = RENSW_cherino
+	}
+}
+defined_text = {
+	name = RENSW_RE4_leader_ADJ
+	text = {
+		trigger = {
+			RE4 = {
+				has_country_leader = {
+					character = RE4_marina
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = RENSW_marina
+	}
+	text = {
+		localization_key = RENSW_marina
 	}
 }

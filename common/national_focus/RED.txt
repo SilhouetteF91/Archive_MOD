@@ -70,6 +70,7 @@ focus_tree = {
 			base = 9999
 		}
 		available = {
+			always = no
 			has_global_flag = RE4_finland_war_flag_FINWIN
 		}
 		search_filters = {
@@ -161,6 +162,112 @@ focus_tree = {
 					global.RED_northern_sovereignty_war_rdy_process = 2
 				}
 			}
+			unlock_decision_tooltip = northern_sovereignty_war_RED_military_government_RE1
+			unlock_decision_tooltip = northern_sovereignty_war_RED_military_government_RE2
+			unlock_decision_tooltip = northern_sovereignty_war_RED_military_government_RE3
+		}
+	}
+	focus = {
+		# 사무국 충성 확보
+		id = RED_securing_bureaucracy_support
+		icon = GFX_focus_FIN_united_under_the_north_star
+		prerequisite = {
+			focus = RED_high_spirited
+			focus = RED_army_government_loyalty_confirmation
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
+		available = {
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_high_spirited
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 북유럽 노동조합 지휘
+		id = RED_command_of_nordic_labor_unions
+		icon = GFX_focus_FIN_united_under_the_north_star
+		prerequisite = {
+			focus = RED_high_spirited
+			focus = RED_army_government_loyalty_confirmation
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
+		available = {
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_high_spirited
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 군의 지지
+		id = RED_military_support
+		icon = GFX_focus_FIN_united_under_the_north_star
+		prerequisite = {
+			focus = RED_army_government_loyalty_confirmation
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
+		available = {
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_army_government_loyalty_confirmation
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 보안위원회 잠입
+		id = RED_infiltration_of_security_committee
+		icon = GFX_focus_FIN_united_under_the_north_star
+		prerequisite = {
+			focus = RED_army_government_loyalty_confirmation
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
+		available = {
+		}
+		x = 3
+		y = 1
+		relative_position_id = RED_army_government_loyalty_confirmation
+		cost = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 제1차 [ROOT.capital.GetCapitalVictoryPointName] 재판
+		id = RED_first_capital_trial
+		icon = GFX_focus_FIN_united_under_the_north_star
+		prerequisite = {
+			focus = RED_army_government_loyalty_confirmation
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RED_first_capital_trial_trigger
+				any_other_country = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
+			}
+		}
+		x = -1
+		y = 2
+		relative_position_id = RED_army_government_loyalty_confirmation
+		cost = 5
+		completion_reward = {
 		}
 	}
 	# 붉은겨울 산업 중점

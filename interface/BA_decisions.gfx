@@ -1902,7 +1902,12 @@ spriteTypes = {
 		}
 	}
 	spriteType = {
-		name = "GFX_red_northern_sovereignty_war_1side_icon"
+		name = "GFX_red_northern_sovereignty_war_1side_icon_minori"
+		texturefile = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_1side_icon_minori.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_red_northern_sovereignty_war_1side_icon_cherino"
 		texturefile = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_1side_icon.dds"
 		legacy_lazy_load = no
 	}

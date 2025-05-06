@@ -27,6 +27,18 @@ scripted_gui = {
 					global.RE4_northern_sovereignty_war_rdy_process = 4
 				}
 			}
+			red_northern_sovereignty_war_1side_icon_cherino_visible = {
+				RED = {
+					NOT = {
+						has_completed_focus = RED_dipose_cherino
+					}
+				}
+			}
+			red_northern_sovereignty_war_1side_icon_minori_visible = {
+				RED = {
+					has_completed_focus = RED_dipose_cherino
+				}
+			}
 		}
 
 	}
