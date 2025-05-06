@@ -423,7 +423,7 @@ country_event = { # 이반 쿠팔라의 스캔들
 		set_global_flag = redpuppet_22_trigger_flag
 		if = {
 			limit = { has_global_flag = RE4_finland_war_flag_RE4WIN }
-			RED = { country_event = { id = redpuppet.22 days = 15 } }
+			RED = { country_event = { id = redpuppet.22 days = 45 } }
 		}
 	}
 }
@@ -469,7 +469,7 @@ country_event = { # 군정청 붕괴 비활성!
 		hidden_effect = {
 			if = {
 				limit = { has_global_flag = redpuppet_22_trigger_flag }
-				country_event = { id = redpuppet.22 days = 15 }
+				country_event = { id = redpuppet.22 days = 45 }
 			}
 		}
 	}

@@ -185,6 +185,7 @@
 
  red_northern_sovereignty_tt: "[RENSW_RED_leader_ADJ]의 영향력 변동: $RIGHT|=S.0$"
  red_northern_sovereignty_var_upper_tt: "[RENSW_RED_leader_ADJ]의 영향력이 $RIGHT|S.0$ 보다 큼"
+ red_northern_sovereignty_var_downer_tt: "[RENSW_RED_leader_ADJ]의 영향력이 $RIGHT|S.0$ 보다 작음"
 
  northern_sovereignty_war_RE4_military_government_RE1: "[RE1.GetName]: 충성의 대가 제공"
  northern_sovereignty_war_RE4_military_government_RE2: "[RE2.GetName]: 충성의 대가 제공"
@@ -194,6 +195,7 @@
  northern_sovereignty_war_RED_military_government_RE2: "[RE2.GetName]: 포섭 개시"
  northern_sovereignty_war_RED_military_government_RE3: "[RE3.GetName]: 포섭 개시"
  northern_sovereignty_war_RED_military_government_flag: "다른 군정청을 포섭중임"
+ northern_sovereignty_war_RED_military_government_all_0: "사무국의 충성 확인"
  northern_sovereignty_war_RED_military_government_target_0: "[northern_sovereignty_war_RED_military_government_target.GetName] 완전 장악"
  northern_sovereignty_war_RED_military_government_target_1: "[northern_sovereignty_war_RED_military_government_target.GetName] 장교 특혜"
  northern_sovereignty_war_RED_military_government_target_2: "[northern_sovereignty_war_RED_military_government_target.GetName] 내 충성파 장교들"

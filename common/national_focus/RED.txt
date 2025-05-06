@@ -185,6 +185,7 @@ focus_tree = {
 		relative_position_id = RED_high_spirited
 		cost = 5
 		completion_reward = {
+			unlock_decision_tooltip = northern_sovereignty_war_RED_military_government_all_0
 		}
 	}
 	focus = {
