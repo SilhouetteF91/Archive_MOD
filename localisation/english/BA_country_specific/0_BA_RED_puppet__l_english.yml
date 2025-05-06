@@ -137,6 +137,11 @@
  RED_northern_sovereignty_war: "북방 주권 전쟁"
  RED_northern_sovereignty_war_desc: "§Y덴마크§!, §Y노르웨이§!, §Y스웨덴§!의 영토 위에 설립된 §Y군정청§!은 일반적으로 붉은겨울 연방학원의 일부로 여겨지나, §Y북방 주권 전쟁§!이 준비중인 현재 군정청을 §G포섭§! 하기 위한 시도가 [RENSW_RED_leader_ADJ]와 [RENSW_RE4_leader_ADJ]에 의해 주도되고 있습니다. 영향력 경쟁에서 패배한다면 §Y군정청§!은 §Y북방 주권 전쟁§!에서 §R상대 편§!으로 참여할 것입니다.\n\n영향력의 경우 §Y북방 주권 전쟁§!에서 §Y군정청§!은 §g[RENSW_RE4_leader_ADJ]§!의 편을 따르나, §S[RENSW_RED_leader_ADJ]§!의 영향력이 100에 도달할 경우 해당 §Y군정청§!은 §S[RENSW_RED_leader_ADJ]§!의 편으로 참여할 것입니다."
 
+
+ redpuppet.1000.t: "북방 주권 전쟁!"
+ redpuppet.1000.desc: "붉은겨울의 내전이 시작되었습니다. 수 많은 쿠데타와 혁명 그리고 반복되는 실각이라는 위협 속에서 벌어진 수년간의 정치적 내분 끝에, 붉은겨울 사무국은 마침내 분열되었고, 이 두 집단은 이제 이 나라를 통제하기 위해 거리에서 서로 싸우고 있습니다.\n\n[RE4.GetLeader](은)는 자기 자신을 붉은겨울 연방학원의 지도자라고 선언했고, [RE4.Capital.GetName]에 있는 [RE4.GetLeader.GetHerHis] 임시수도에서 [RED.Getleader]에 대항한 내전을 이끌고 있습니다."
+ redpuppet.1000.a: "전투 준비!"
+
  RENSW_cherino: "체리노"
  RENSW_marina: "마리나"
  RENSW_minori: "미노리"

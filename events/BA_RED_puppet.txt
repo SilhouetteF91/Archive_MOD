@@ -528,3 +528,82 @@ country_event = { # 스캔들 발견!
 		}
 	}
 }
+country_event = { # 북방 주권 전쟁!
+	id = redpuppet.1000
+	title = redpuppet.1000.t
+	desc = redpuppet.1000.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+
+	immediate = {
+		hidden_effect = {
+			RE4 = {
+				RED = { end_puppet = RE4 }
+				declare_war_on = {
+					target = ROOT
+					type = civil_war
+				}
+				add_civil_war_target = ROOT
+			}
+			if = {
+				limit = { original_tag = RE4 }
+				RED = { country_event = redpuppet.1001 }
+			}
+			if = {
+				limit = { original_tag = RED }
+				RE4 = { country_event = redpuppet.1001 }
+			}
+		}
+	}
+	
+	option = { 
+		name = redpuppet.1000.a
+		every_other_country = {
+			limit =  {
+				OR = {
+					original_tag = RE1
+					original_tag = RE2
+					original_tag = RE3
+				}
+				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			}
+			add_war_support = 0.10
+		}
+		every_other_country = {
+			limit =  {
+				OR = {
+					original_tag = RE1
+					original_tag = RE2
+					original_tag = RE3
+				}
+				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
+			}
+			RED = {
+				end_puppet = PREV
+			}
+			RE4 = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_supervised_state
+				}
+			}
+			add_to_war = {
+				targeted_alliance = RE4
+				enemy = ROOT
+			}
+		}
+	}
+}
+country_event = { # 북방 주권 전쟁! (반대쪽에 뜨는 가짜이벤트)
+	id = redpuppet.1001
+	title = redpuppet.1000.t
+	desc = redpuppet.1000.desc
+	picture = GFX_report_event_RED_marina
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.1000.a
+	}
+}

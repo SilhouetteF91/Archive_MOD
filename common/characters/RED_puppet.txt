@@ -2,6 +2,7 @@ characters = {
 
 	RE4_marina = { #마리나
 		name = RED_marina
+		gender = female
 		portraits = {
 			army = {
 				large="gfx/leaders/RED/RED_Ikekura_Marina_Portrait.dds"
@@ -41,6 +42,7 @@ characters = {
 
 	RE4_nodoka={ #노도카
 		name=RED_nodoka
+		gender = female
 		portraits={
 			army={
 				large="gfx/leaders/RED/RED_Amami_Nodoka_Portrait.tga"
@@ -93,6 +95,7 @@ characters = {
 	
 	RE4_shigure = { #시구레
 		name = RED_shigure
+		gender = female
 		portraits = {
 			civilian = {
 				large="gfx/leaders/RED/RED_Mayoi_Shigure_portrait.tga"
@@ -114,6 +117,7 @@ characters = {
 
 	RE4_commander_1 = {
 		name = RE4_random_commander_1
+		gender = female
 		portraits = {
 			army={
 				large="GFX_Portrait_BlueArchive_RED_Generic_1"
@@ -122,6 +126,7 @@ characters = {
 	}
 	RE4_commander_2 = {
 		name = RE4_random_commander_2
+		gender = female
 		portraits = {
 			army={
 				large="GFX_Portrait_BlueArchive_RED_Generic_2"
@@ -130,6 +135,7 @@ characters = {
 	}
 	RE4_clone_marina = {
 		name = RED_marina
+		gender = female
 		portraits = {
 			civilian = {
 				large="gfx/leaders/RED/RED_Ikekura_Marina_Portrait.dds"
@@ -151,6 +157,7 @@ characters = {
 	}
 	RE4_clone_tomoe = {
 		name = RED_Tomoe
+		gender = female
 		portraits = {
 			civilian = {
 				large="gfx/leaders/RED/RED_Sashiro_Tomoe_Portrait.tga"
@@ -172,6 +179,7 @@ characters = {
 	}
 	RE4_council = {
 		name = RE4_council
+		gender = female
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_RE4_council"

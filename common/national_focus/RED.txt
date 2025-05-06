@@ -266,8 +266,14 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = RED_army_government_loyalty_confirmation
-		cost = 5
+		cost = 10
 		completion_reward = {
+			RED = {
+				country_event = redpuppet.1000
+			}
+			RE4 = {
+				country_event = redpuppet.1000
+			}
 		}
 	}
 	# 붉은겨울 산업 중점

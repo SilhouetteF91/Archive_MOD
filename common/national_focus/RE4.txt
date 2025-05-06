@@ -1098,6 +1098,36 @@ joint_focus = {
 	}
 
 	completion_reward_joint_originator = {
+
+		hidden_effect = { #만약 이 중점을 찍는데 핀란드 전쟁이 안끝난 판정이면...디버그용 수리
+			if = {
+				limit = {
+					has_global_flag = RE4_finland_war_flag
+				}
+				clr_global_flag = RE4_finland_war_flag
+				set_global_flag = RE4_finland_war_flag_RE4WIN
+				RE4 = {
+					every_other_country = {
+						limit = {
+							OR = {
+								original_tag = RED
+								original_tag = RE1
+								original_tag = RE2
+								original_tag = RE3
+							}
+						}
+						country_event = redpuppet.19
+					}
+					every_other_country = {
+						limit = {
+							original_tag = SOV
+						}
+						country_event = redpuppet.20
+					}
+				}
+			}
+		}
+
 		remove_ideas = RED_academic_regime_dominance_idea
 
 		IF = {
