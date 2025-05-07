@@ -186,3 +186,17 @@ CAN_current_situation_categories = {
 	}
 	visible_when_empty = yes
 }
+
+britain_colonial_subjugation = {
+	icon = GFX_decision_category_eng_imperial_conference
+	priority = 1000
+	allowed = { tag = ENG }
+	visible_when_empty = yes
+}
+
+britian_post_war_devastation = {
+	priority = 1000
+	icon = GFX_decision_category_eng_imperial_conference
+	allowed = { tag = ENG }
+	visible_when_empty = yes
+}

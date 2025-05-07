@@ -25,7 +25,7 @@ add_breakthrough_progress = {
 	value = 0.3
 }
 
-set_variable = { country_intro_page_count = 1 } #Intro screen
+set_variable = { country_intro_page_count = 4 } #Intro screen
 
 set_variable = { TRN_opp_auto_var = 2 }
 activate_mission = TRN_opp_auto

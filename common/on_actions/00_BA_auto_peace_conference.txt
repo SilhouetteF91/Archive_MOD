@@ -29,7 +29,9 @@ on_actions = {
 					has_war_with = FIN
 					has_global_flag = RE4_finland_war_flag
 				}
+				remove_civil_war_target = FIN
 				clr_global_flag = RE4_finland_war_flag
+				set_global_flag = RE4_finland_war_flag_FINWIN
 				RED = {
 					country_event = {
 						id = RED_generic.13
@@ -68,6 +70,34 @@ on_actions = {
 								}
 							}
 						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = FIN
+					has_war_with = RE4
+					has_global_flag = RE4_finland_war_flag
+				}
+				clr_global_flag = RE4_finland_war_flag
+				set_global_flag = RE4_finland_war_flag_RE4WIN
+				RE4 = {
+					every_other_country = {
+						limit = {
+							OR = {
+								original_tag = RED
+								original_tag = RE1
+								original_tag = RE2
+								original_tag = RE3
+							}
+						}
+						country_event = redpuppet.19
+					}
+					every_other_country = {
+						limit = {
+							original_tag = SOV
+						}
+						country_event = redpuppet.20
 					}
 				}
 			}

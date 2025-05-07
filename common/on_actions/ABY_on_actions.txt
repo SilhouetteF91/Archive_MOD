@@ -73,6 +73,13 @@ on_actions = {
 					}
 					FROM = { country_event = { id = ABY_new_event.201 hours = 8 } }
 				}
+				if = {
+					limit = {
+						has_country_flag = ABY_flag_gehenna_support
+						NOT = {has_idea = ABY_idea_interference_committee}
+					}
+					GEH = { country_event = { id = ABY_descision_focus_event.8 hours = 8 } }
+				}
 			}
 			if = {
 				limit = {
@@ -102,6 +109,49 @@ on_actions = {
 							controls_state = 72
 						}
 						country_event = { id = ABY_new_event.201 hours = 8 }
+					}
+					if = {
+						limit = {
+							has_country_flag = ABY_flag_gehenna_support
+							NOT = {has_idea = ABY_idea_interference_committee}
+						}
+						GEH = { country_event = { id = ABY_descision_focus_event.8 hours = 8 } }
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { 
+						tag = ABY
+					}
+					FROM = { 
+						original_tag = SHA
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = ABY_flag_gehenna_support
+						NOT = {has_idea = ABY_idea_interference_committee}
+					}
+					GEH = { country_event = { id = ABY_descision_focus_event.8 hours = 8 } }
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { 
+						original_tag = SHA
+					}
+					FROM = { 
+						tag = ABY
+					}
+				}
+				ROOT = {
+					if = {
+						limit = {
+							has_country_flag = ABY_flag_gehenna_support
+							NOT = {has_idea = ABY_idea_interference_committee}
+						}
+						GEH = { country_event = { id = ABY_descision_focus_event.8 hours = 8 } }
 					}
 				}
 			}

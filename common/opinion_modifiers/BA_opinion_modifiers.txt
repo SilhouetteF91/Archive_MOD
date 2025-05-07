@@ -1,4 +1,11 @@
 opinion_modifiers = {
+	### 무역 거래 의견
+	BA_interchangeable_gauge = { #서로 호환되는 궤간
+		value = 200
+		trade = yes
+	}
+
+	### 걍 의견
 	hostile_with_western = { #서방과의 적대
 		value = -50
 	}

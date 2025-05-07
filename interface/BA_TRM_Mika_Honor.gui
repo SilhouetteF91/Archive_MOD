@@ -11,7 +11,6 @@ guiTypes = {
 			spriteType = "GFX_focus_TRN_MisonoMika"
 			scale = 0.9
 			pdx_tooltip = "Trinity_Mika_Honor_TT"
-			pdx_tooltip_delayed = "Trinity_Mika_Honor_TT"
 		}
 
 	}

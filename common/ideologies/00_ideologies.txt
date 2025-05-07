@@ -16,7 +16,7 @@ ideologies = {
 			populism = {
 			}
 
-			#/Project KV 
+		#/Project KV 
 			manyoshu = {
 				can_be_randomly_selected = no
 				color = { 147 196 255 }
@@ -81,14 +81,13 @@ ideologies = {
 				can_be_randomly_selected = no
 				color = { 44 71 130 }
 			}
-				
-			
-		#BA_MOD_FIX/
 
 			monarchist_socialism_democratic = {
 				can_be_randomly_selected = no
 				color = { 118 29 144 }
 			}
+			
+		#BA_MOD_FIX/
 		}
 
 		dynamic_faction_names = {
@@ -165,7 +164,7 @@ ideologies = {
 			anarchist_communism = {
 			}
 
-			#/Project KV
+		#/Project KV
 			yunowka = {
 				can_be_randomly_selected = no
 				color = { 204 41 66 }
@@ -287,7 +286,7 @@ ideologies = {
 			rexism = {
 			}
 
-			#/Project KV
+		#/Project KV
 			singican = {
 				can_be_randomly_selected = no
 				color = { 254 193 69 }
@@ -372,7 +371,7 @@ ideologies = {
 
 			pure_socialism = {
 				can_be_randomly_selected = no
-				color = { 118 29 144 } #근왕사회주의와 동일한 색상 사용
+				color = { 119 15 0 }
 			}
 
 		#BA_MOD_FIX/
@@ -436,7 +435,7 @@ ideologies = {
 			centrism = {
 			}
 
-			#/Project KV
+		#/Project KV
 			uranotsukasa = {
 				can_be_randomly_selected = no
 				color = { 0 102 79 }
@@ -450,18 +449,18 @@ ideologies = {
 			}
 
 			#/카이저
-			corporate_state_workplace_democracy = {
-				can_be_randomly_selected = no
-				color = { 190 62 62 }
-			}
-			corporate_state_corporatism = {
-				can_be_randomly_selected = no
-				color = { 62 62 190 }
-			}
-			corporate_state_private_enterprise = {
-				can_be_randomly_selected = no
-				color = { 137 100 62 }
-			}
+				corporate_state_workplace_democracy = {
+					can_be_randomly_selected = no
+					color = { 190 62 62 }
+				}
+				corporate_state_corporatism = {
+					can_be_randomly_selected = no
+					color = { 62 62 190 }
+				}
+				corporate_state_private_enterprise = {
+					can_be_randomly_selected = no
+					color = { 137 100 62 }
+				}
 			#카이저/
 
 			aicontrol = { #아로나 고유 이념

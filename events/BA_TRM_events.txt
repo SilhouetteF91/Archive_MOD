@@ -10,6 +10,7 @@ add_namespace = trnfla # 플레이버 이벤트
 add_namespace = trinity 
 add_namespace = trnhonor # 명예
 add_namespace = trinitynews # 뉴스 이벤트
+add_namespace = trnfor
 country_event = {
 	id = TRM_event.1
 	title = TRM_event.1.t
@@ -9035,7 +9036,7 @@ country_event = { # 미소노 미카의 인상
 		ai_chance = { 
 			base = 10
 		}
-		add_country_leader_trait = TRM_trinity_messiah
+		add_country_leader_trait = TRN_trinity_messiah
 		TRM_bop_very_low_decrease_effect = yes
     }
 
@@ -9044,7 +9045,7 @@ country_event = { # 미소노 미카의 인상
 		ai_chance = { 
 			base = 0
 		}
-		add_country_leader_trait = TRM_tough_soldier
+		add_country_leader_trait = TRN_der_fuhrer
 		TRM_bop_very_low_increase_effect = yes
 		
     }
@@ -9351,11 +9352,41 @@ country_event = { # 우리만의 자본가
 
 	option = { 
 		name = trinity.38.a
+		
+		add_political_power = -20
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
 
     }
 
 	option = { 
 		name = trinity.38.b
+		
+		add_political_power = -70
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.05
+		}
 
     }
 
@@ -9364,6 +9395,20 @@ country_event = { # 우리만의 자본가
 		trigger = {
 			TRN_Kozeki_Ui = { has_trait = TRN_AED_club_manager }
 		}
+		add_stability = -0.03
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
     }
 
 	option = { 
@@ -9371,7 +9416,38 @@ country_event = { # 우리만의 자본가
 		trigger = {
 			NOT = { TRN_Kozeki_Ui = { has_trait = TRN_AED_club_manager } }
 		}
+		add_political_power = -125
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.05
+		}
 
+    }
+}
+
+unit_leader_event = { # 한스 프리체
+	id = trinity.39
+	title = trinity.39.t
+	desc = trinity.39.desc
+	picture = GFX_event_Trinity_Campus
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = { 
+		name = trinity.39.a
+		set_country_flag = TRN_hans_zehrer_flag
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = TRM_hans_zehrer_idea
     }
 }
 
@@ -9561,6 +9637,51 @@ news_event = {
 	}
 	option = {
 		name = trinitynews.4.d
+		trigger = {
+			NOT = { Kivotos_tag = yes }
+		}
+	}
+}
+news_event = {
+	id = trinitynews.5
+	title = trinitynews.5.t
+	desc = trinitynews.5.desc
+	picture = GFX_event_news_event_5
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = trinitynews.5.a
+		trigger = {
+			TAG = TRM
+		}
+	}
+	option = {
+		name = trinitynews.5.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = TRM }
+			NOT = { original_tag = GEH }
+			NOT = { original_tag = GEM }
+			NOT = { original_tag = HEU }
+		}
+	}
+	option = {
+		name = trinitynews.5.c
+		trigger = {
+			OR = {
+				original_tag = GEM
+				original_tag = GEH
+				original_tag = HEU
+			}
+		}
+	}
+	option = {
+		name = trinitynews.5.d
 		trigger = {
 			NOT = { Kivotos_tag = yes }
 		}

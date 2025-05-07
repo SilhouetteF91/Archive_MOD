@@ -26,5 +26,5 @@ set_popularities = {
 recruit_character = KOR_lyuh_woon_hyung
 recruit_character = KOR_pak_hon_yong
 recruit_character = KOR_ji_cheong_cheon
-recruit_character = KOR_yi_un
+recruit_character = KOR_kim_ku
 

@@ -4053,6 +4053,9 @@ MIL_upgrade_AL_1S_decision_categorie = {
 		}
 
 		visible = {
+			check_variable = {
+				mil_aris_enhancement_calculate_module_level = 0				
+			}
 		}
 
 		cost = 0
@@ -4249,6 +4252,9 @@ MIL_upgrade_AL_1S_decision_categorie = {
 		}
 
 		visible = {
+			check_variable = {
+				mil_aris_enhancement_movement_module_level = 0				
+			}
 		}
 
 		cost = 0
@@ -4443,6 +4449,9 @@ MIL_upgrade_AL_1S_decision_categorie = {
 		}
 
 		visible = {
+			check_variable = {
+				mil_aris_enhancement_body_module_level = 0				
+			}
 		}
 
 		cost = 0

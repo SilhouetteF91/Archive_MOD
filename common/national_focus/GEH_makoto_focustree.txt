@@ -4904,6 +4904,9 @@ focus_tree = {
 		relative_position_id = GEM_Neutralize_Makoto
 		x = 15
 		y = 0 
+		allow_branch = {
+			is_debug = yes
+		}
 
 		completion_reward = {
 			

@@ -754,18 +754,30 @@ focus_tree = {
 		prerequisite = { focus = GEI_DEC_army_student }
 		prerequisite = { focus = GEI_DEC_radio_disturbance }
 		text_icon = The_New_Order_focus_style
-		
+		available = { }
 
-		available = {
-			
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
-		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			
+			DE1 = {
+				transfer_state = 15
+				division_template = {
+					name = "Security Guard"
+					division_names_group = KIV_SEC_01
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+					}
+					priority = 0
+				}
+				15 = {
+					create_unit = {
+						division = "division_template = \"Security Guard\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+						count = 10
+						owner = DE1
+					}
+				}
+			}
+			GEI = { puppet = DE1 }
 		}
 	}
 

@@ -2383,7 +2383,7 @@ country_event = { #사무국 재건
 }
 
 unit_leader_event = {
-	#"폭음"
+	#빠른 대처
 	id = RED_minori_event.1
 	title = RED_minori_event.1.t
 	desc = RED_minori_event.1.d
@@ -2391,11 +2391,10 @@ unit_leader_event = {
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.1.a
-		RED_shigure = {
-			unit_leader_event = {
-				id = RED_minori_event.2
-				hours = 2
-			}
+		set_party_name = {
+			ideology = communism
+			long_name = RED_SAC-PWD_long
+			name = RED_SAC-PWD
 		}
 	}
 }
@@ -2484,6 +2483,9 @@ country_event = { #노동절 집회
 			country_event = {
 				id = RED_minori_event.3
 				days = 2
+			}
+			RED_minori = {
+				unit_leader_event = RED_minori_event.1
 			}
 			end_puppet = RE4
 			end_puppet = RE1
@@ -2898,7 +2900,7 @@ country_event = { #체리노의 운명
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.11.a
-		RE2 = {
+		REC = {
 			hidden_effect = {
 				kill_country_leader = yes
 			}
@@ -2908,29 +2910,24 @@ country_event = { #체리노의 운명
 		}
 		remove_ideas = RED_threat_of_coup_5
 		country_event = {
-			id = RED_minori_event.12
+			id = RED_minori_event.13
 			days = 5
 		}
 	}
 }
-country_event = { #마리나의 운명
+country_event = { #트로츠키의 재판
 	id = RED_minori_event.12
 	title = RED_minori_event.12.t
 	desc = RED_minori_event.12.d
 	is_triggered_only = yes
-	picture = "GFX_report_event_RED_marina"
+	picture = GFX_report_event_NOR_trotsky_speech
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.12.a
-		RE2 = {
-			RED_marina = {
+		REC = {
+			RED_lev_trotsky = {
 				retire = yes
 			}
-		}
-		remove_ideas = RED_office_ss_sabo_idea
-		country_event = {
-			id = RED_minori_event.13
-			days = 5
 		}
 		hidden_effect = {
 			country_event = {
@@ -2944,6 +2941,11 @@ country_event = { #마리나의 운명
 				}
 			}
 		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+		custom_effect_tooltip = RED_minori_event.12_tt
 	}
 }
 country_event = { #토모에의 운명
@@ -2955,12 +2957,12 @@ country_event = { #토모에의 운명
 	picture = "GFX_report_event_RED_tomoe"
 	option = {
 		name = RED_minori_event.13.a
-		RE2 = {
+		REC = {
 			RED_Tomoe = {
 				retire = yes
 			}
 		}
-		add_war_support = 0.01
+		remove_ideas = RED_office_ss_sabo_idea
 	}
 }
 country_event = { #덴마크 군정청 좆바름
@@ -2990,16 +2992,33 @@ country_event = { #구교사 해방
 		name = RED_minori_event.15.a
 		917 = {
 			set_demilitarized_zone = no
+			RED = {
+				custom_effect_tooltip = RED_kivotos_halo_militia_add2_tt
+				hidden_effect = {
+					add_to_variable = {
+						RED.halo_militia_cap = 1
+					}
+					set_division_template_cap = {
+						division_template = "Redwinter Garde populaire"
+						division_cap = ROOT.halo_militia_cap
+					}
+				}
+			}
+			create_unit = {
+				division = "name = \"Regional Defense Division\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RED
+				count = 1
+			}
 		}
 		RED_nodoka = {
-			unit_leader_event = {
-				id = RED_minori_event.1
-				days = 1
-			}
+			#unit_leader_event = {
+			#	id = RED_minori_event.1
+			#	days = 1
+			#}
 		}
 	}
 }
-country_event = { #사회주의 신헌법 - 혁명위원회 해산
+country_event = { #지도자
 	id = RED_minori_event.16
 	title = RED_minori_event.16.t
 	desc = RED_minori_event.16.d
@@ -3007,21 +3026,6 @@ country_event = { #사회주의 신헌법 - 혁명위원회 해산
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.16.a
-		hidden_effect={
-		create_country_leader = {
-			name = RED_constitutionary_assembly
-			picture = GFX_portrait_SOV_supreme_soviet
-			ideology = syndicalism
-		}}
-		set_party_name = {
-			ideology = communism
-			long_name = RED_constitutionary_assembly
-			name = RED_constitutionary_assembly
-		}
-		country_event = {
-			id = RED_minori_event.17
-			days = 5
-		}
 	}
 }
 country_event = { #사회주의 신헌법 - 체제
@@ -3843,8 +3847,12 @@ country_event = { # 군정청: 무작위로 발생하는 이벤트
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id = RED_instability_system.3 days = 80 random_days = 70 }
+			country_event = { id = RED_instability_system.3 days = 80 random_days = 25 }
 		}
+	}
+
+	trigger = {
+		has_idea = RED_democratic_resistancel_idea
 	}
 	
 	option = {
@@ -4902,6 +4910,7 @@ country_event = { #트로츠키주의자들 튀기
 			}
 		}
 		SOV = {
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			effect_tooltip = {
 				SOV_ivan_smirnov = {
 					set_nationality = SPR
@@ -4910,7 +4919,6 @@ country_event = { #트로츠키주의자들 튀기
 			hidden_effect = {
 				retire_character = SOV_ivan_smirnov
 			}
-			custom_effect_tooltip = RED_event.14_tt
 			effect_tooltip = {
 				SOV_ivar_smilga = {
 					set_nationality = GEM
@@ -4919,7 +4927,6 @@ country_event = { #트로츠키주의자들 튀기
 			hidden_effect = {
 				retire_character = SOV_ivar_smilga
 			}
-			custom_effect_tooltip = RED_event.14_tt
 			effect_tooltip = {
 				SOV_karl_radek = {
 					set_nationality = GEM
@@ -4928,7 +4935,6 @@ country_event = { #트로츠키주의자들 튀기
 			hidden_effect = {
 				retire_character = SOV_karl_radek
 			}
-			custom_effect_tooltip = RED_event.14_tt
 			effect_tooltip = {
 				SOV_yevgeny_preobrazhensky = {
 					set_nationality = MIL
@@ -4937,7 +4943,6 @@ country_event = { #트로츠키주의자들 튀기
 			hidden_effect = {
 				retire_character = SOV_yevgeny_preobrazhensky
 			}
-			custom_effect_tooltip = RED_event.14_tt
 			effect_tooltip = {
 				SOV_aleksandr_shlyapnikov = {
 					set_nationality = COU

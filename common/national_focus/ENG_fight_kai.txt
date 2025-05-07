@@ -4005,6 +4005,9 @@ focus_tree = {
 			NOT = {
 				has_global_flag = ENG_lose_global_flag
 			}
+			NOT = {
+				has_global_flag = ENG_KAI_war_end
+			}			
 		}
     	cost = 5
     	completion_reward = {
@@ -4038,14 +4041,8 @@ focus_tree = {
 					instant_build = yes
 					province = 6384
 				}
-				custom_effect_tooltip = ENG_the_defense_of_liverfool_tt_2
-				add_building_construction = {
-					type = bunker
-					level = 2
-					instant_build = yes
-					province = 6318
-				}
 			}
+			add_ideas = ENG_save_the_liverpool
 		}
 	}
 	
@@ -5611,3 +5608,497 @@ focus_tree = {
 	}
 }
 
+focus_tree = {
+	id = ENG_independent
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = ENG
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 50 y = 3500 }
+
+    focus = {
+		id = ENG_Victory_Mainland #영국 수호
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 1
+		available = {
+			NOT = {
+				has_global_flag = ENG_lose_global_flag
+			}
+		}
+
+		x = 20
+		y = 0
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = ENG_Government_Return #망명정부의 귀환
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+		
+		relative_position_id = ENG_Victory_Mainland
+		x = 0
+		y = 1
+	
+		prerequisite = { focus = ENG_Victory_Mainland }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+			
+		completion_reward = {
+			add_political_power = 100
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+				last_election = "1931.10.27"
+				#election_frequency = 48
+			}
+			set_popularities = {
+				democratic = 50
+				neutrality = 43
+				fascism = 6
+				communism = 1
+			}
+			ENG = { country_event = ENG_ba.102 }
+		}
+	}
+	focus = {
+		id = ENG_assemble_cabinet #의회 활동 재개
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 1
+		
+		relative_position_id = ENG_Government_Return
+		x = 0
+		y = 1
+	
+		prerequisite = { focus = ENG_Government_Return }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+			
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+    			ideology = democratic
+    			popularity = 0.45
+			}
+			unlock_decision_category_tooltip = britian_post_war_devastation
+			activate_decision = reconstrct_britian
+		}
+	}
+	#재건회의
+	focus = {
+		id = ENG_Reconstruction_committee #재건 회의
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 1
+		
+		relative_position_id = ENG_assemble_cabinet
+		x = 7
+		y = 1
+	
+		prerequisite = { focus = ENG_assemble_cabinet }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ENG_rations #배급제
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_Reconstruction_committee
+		x = 3
+		y = 1
+	
+		prerequisite = { focus = ENG_Reconstruction_committee }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ENG_mass_reconstruction #대규모 건설 동원
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_Reconstruction_committee
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = ENG_Reconstruction_committee }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_temporary_hospitals #임시 병원
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 3
+		
+		relative_position_id = ENG_Reconstruction_committee
+		x = -3
+		y = 1
+	
+		prerequisite = { focus = ENG_Reconstruction_committee }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_temporary_shelters #비상 대피소
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 1
+		
+		relative_position_id = ENG_Reconstruction_committee
+		x = -1
+		y = 1
+	
+		prerequisite = { focus = ENG_Reconstruction_committee }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_rebuild_roads #도로 복구
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_temporary_shelters
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = ENG_temporary_shelters }
+		prerequisite = { focus = ENG_mass_reconstruction }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_basic_hygine #질병과의 전쟁
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 3
+		
+		relative_position_id = ENG_temporary_hospitals
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = ENG_temporary_hospitals }
+		prerequisite = { focus = ENG_temporary_shelters }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_address_inflation #인플레이션 잡기
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_Reconstruction_committee
+		x = 2
+		y = 2
+	
+		prerequisite = { focus = ENG_Reconstruction_committee }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_handle_unemployment #임시 병원
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_address_inflation
+		x = 0
+		y = 1
+	
+		prerequisite = { focus = ENG_address_inflation }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_public_construction #임시 병원
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_rebuild_roads
+		x = 1
+		y = 2
+	
+		prerequisite = { focus = ENG_rebuild_roads }
+		prerequisite = { focus = ENG_handle_unemployment }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}	
+	focus = {
+		id = ENG_public_health #임시 병원
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_basic_hygine
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = ENG_basic_hygine }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_worker_saftey #노동자 안전 보장
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_public_health
+		x = 0
+		y = 1
+	
+		prerequisite = { focus = ENG_public_health }
+		prerequisite = { focus = ENG_handle_unemployment }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_raise_farmhands #임시 병원
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_rations
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = ENG_rations }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_import_foods #임시 병원
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_rations
+		x = 3
+		y = 1
+	
+		prerequisite = { focus = ENG_rations }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_british_new_deal #영국판 뉴딜
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_worker_saftey
+		x = 2
+		y = 2
+	
+		prerequisite = { focus = ENG_worker_saftey }
+		prerequisite = { focus = ENG_public_construction }
+		prerequisite = { focus = ENG_nationalization_industries }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_price_control #임시 병원
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_address_inflation
+		x = 2
+		y = 1
+	
+		prerequisite = { focus = ENG_address_inflation }
+		prerequisite = { focus = ENG_raise_farmhands }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ENG_nationalization_industries #임시 병원
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_price_control
+		x = 0
+		y = 1
+	
+		prerequisite = { focus = ENG_price_control }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+		}
+	}
+	#####################################
+	#내정관리
+	#####################################
+	focus = {
+		id = ENG_state_of_britain #재건 회의
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_assemble_cabinet
+		x = 0
+		y = 3
+	
+		prerequisite = { focus = ENG_assemble_cabinet }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ENG_kaiser_problem #재건 회의
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_state_of_britain
+		x = 3
+		y = 1
+	
+		prerequisite = { focus = ENG_state_of_britain }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+			
+		}
+	}
+	#####################################
+	#외교
+	#####################################
+	focus = {
+		id = ENG_look_outwards #재건 회의
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_assemble_cabinet
+		x = 15
+		y = 2
+	
+		prerequisite = { focus = ENG_assemble_cabinet }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ENG_look_kivotos #재건 회의
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_look_outwards
+		x = 5
+		y = 1
+	
+		prerequisite = { focus = ENG_look_outwards }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ENG_old_world #재건 회의
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_look_outwards
+		x = 2
+		y = 1
+	
+		prerequisite = { focus = ENG_look_outwards }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY}	
+			
+		completion_reward = {
+			
+		}
+	}
+	#####################################
+	#안보
+	#####################################
+	focus = {
+		id = ENG_national_security #재건 회의
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_assemble_cabinet
+		x = -7
+		y = 1
+	
+		prerequisite = { focus = ENG_assemble_cabinet }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_ARMY_XP }	
+			
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ENG_colony_problem #재건 회의
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+		
+		relative_position_id = ENG_national_security
+		x = -2
+		y = 1
+	
+		prerequisite = { focus = ENG_national_security }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_ARMY_XP }	
+			
+		completion_reward = {
+			
+		}
+	}
+}

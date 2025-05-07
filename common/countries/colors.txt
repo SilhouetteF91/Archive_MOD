@@ -464,8 +464,8 @@ PAK = {
 #    color_ui = rgb { 150 180 120 }
 #}
 KOR = {
-	color = rgb { 255  240  195 }
-	color_ui = rgb { 255 248 229 }	
+	color = rgb { 31 71 136 }
+	color_ui = rgb { 31 71 136 }
 }
 ISR = {
 	color = rgb { 152  130  191 }
@@ -1209,6 +1209,10 @@ KAI = {
 	color_ui = rgb { 138 155 116 }
 }
 GEI = {
+	color = HSV { 0 0.71 0.49 }
+	color_ui = rgb { 124 36 36 }
+}
+DE1 = {
 	color = HSV { 0 0.71 0.49 }
 	color_ui = rgb { 124 36 36 }
 }

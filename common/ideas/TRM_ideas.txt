@@ -1388,6 +1388,7 @@ ideas = {
 			}
 		}
 		TRM_trinity_farm_ns = {
+			picture = LIT_invested_in_farms
 			modifier = {
 				local_building_slots = 1
 				production_speed_buildings_factor = 0.05
@@ -1395,10 +1396,11 @@ ideas = {
 			}
 		}
 		TRM_cop_of_junker_ns = {
+			picture = PER_unification_initiative_idea
 			modifier = {
 				political_power_factor = 0.05
 				local_building_slots = 1
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 			}
 		}
 	}

@@ -174,7 +174,6 @@ britian_war = {
 		available = {
 			has_idea = ENG_operation_exile_week
 			surrender_progress < 0.50
-			surrender_progress > 0.25
 		}
 
 		cost = 25
@@ -1319,4 +1318,57 @@ debug_decisions = {
 			}
 		}
     }
+}
+
+britian_post_war_devastation = {
+	reconstrct_britian = {
+		days_mission_timeout = 700
+		activation = { 
+			NOT = {
+				has_war_with = KAI
+			}
+		}
+		available = {
+			NOT = {
+				tag = ENG
+			}
+		}
+		cancel_trigger = {
+			always = no
+		}
+ 		icon = mission_icon     # For GFX_decision_mission_icon
+    	is_good = yes
+		complete_effect = {
+
+		}
+		timeout_effect = {
+        	start_civil_war = {
+				ideology = fascism
+				size = 0.3
+				army_ratio = 0.7
+				navy_ratio = 0.9
+				air_ratio = 0.9
+				keep_all_characters = yes
+			}
+    	}
+	}
+}
+
+britain_colonial_subjugation = {
+	congo_surpress = {
+		allowed = {
+			tag = ENG
+		}
+		icon = GFX_decision_POL_looming_peasants_strike
+		days_remove = 30
+		modifier = {
+			political_power_gain = -0.05
+		}
+		remove_effect = {
+			add_political_power = 100
+		}
+		cancel_trigger = {
+			always = no
+		}
+	}
 }

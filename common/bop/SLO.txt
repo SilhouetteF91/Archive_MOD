@@ -1,0 +1,159 @@
+SLO_power_balance_1 = {
+	initial_value = 0
+	left_side = SLO_COM_side
+	right_side = SLO_DEM_side
+	decision_category = SLO_balance_of_power_category_1
+
+	range = { #중간
+		id = SLO_MID_side
+		min = -0.15
+		max = 0.15
+		modifier = {
+			stability_weekly = 0.002
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+		}
+	}
+
+	side = { #좌측
+		id = SLO_COM_side
+		icon = GFX_bop_ITA_communism_side
+		range = {
+			id = SLO_COM_1
+			min = -0.35
+			max = -0.15
+			modifier = {
+				communism_drift = 0.01
+				stability_weekly = 0.001
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+		range = {
+			id = SLO_COM_2
+			min = -0.65
+			max = -0.35
+			modifier = {
+				communism_drift = 0.02
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+		range = {
+			id = SLO_COM_3
+			min = -0.90
+			max = -0.65
+			modifier = {
+				communism_drift = 0.05
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+		range = {
+			id = SLO_COM_4
+			min = -1.00
+			max = -0.90
+			modifier = {
+				communism_drift = 0.10
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = ITA_power_balance
+					side = ITA_communism_side
+					gfx = GFX_bop_ITA_communism_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = ITA_power_balance
+					side = ITA_communism_side
+					gfx = GFX_bop_ITA_communism_side
+				}
+			}
+		}
+	}
+
+	side = { #우측
+		id = SLO_DEM_side
+		icon = GFX_bop_ITA_democratic_side
+		range = {
+			id = SLO_DEM_1
+			min = 0.15
+			max = 0.35
+			modifier = {
+				democratic_drift = 0.01
+				stability_weekly = 0.001
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+		range = {
+			id = SLO_DEM_2
+			min = 0.35
+			max = 0.65
+			modifier = {
+				democratic_drift = 0.02
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+		range = {
+			id = SLO_DEM_3
+			min = 0.65
+			max = 0.90
+			modifier = {
+				democratic_drift = 0.05
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+		range = {
+			id = SLO_DEM_4
+			min = 0.90
+			max = 1.00
+			modifier = {
+				democratic_drift = 0.10
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = ITA_power_balance
+					side = ITA_democratic_side
+					gfx = GFX_bop_ITA_democratic_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = ITA_power_balance
+					side = ITA_democratic_side
+					gfx = GFX_bop_ITA_democratic_side
+				}
+			}
+		}
+	}
+}

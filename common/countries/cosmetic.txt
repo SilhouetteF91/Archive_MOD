@@ -2177,7 +2177,7 @@ ABY_austria = {
 	color = rgb { 194 198 215 }
 	color_ui = rgb { 255 255 255 }
 }
-ABY_abydos_republic = {
+ABY_united_states = {
 	color = rgb { 0 51 153 }
 	color_ui = rgb { 0 51 153 }	
 }
@@ -2475,7 +2475,7 @@ RED_EUR_UNIFIED = {
 	color = rgb { 220 39 69 }
 	color_ui = rgb { 220 39 69 }
 }
-RED_marina_government = {
+RED_revolutionary_provisional_government = {
 	color = rgb { 210 29 49 }
 	color_ui = rgb { 210 29 49 }
 }

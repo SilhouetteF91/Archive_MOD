@@ -46,7 +46,19 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_political_power = 20
+			if = {
+				limit = {
+					check_variable = {
+						global.RE4_northern_sovereignty_war_rdy_process = 0
+					}
+				}
+				set_variable = {
+					global.RE4_northern_sovereignty_war_rdy_process = 1
+				}
+			}
 			custom_effect_tooltip = RE4_ivan_kupla_tt
+			set_country_flag = RED_northern_sovereignty_war_unlock_flag
+			unlock_decision_category_tooltip = RED_northern_sovereignty_war
 		}
 	}
 	focus = {
@@ -62,16 +74,37 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = -3
 		y = 1
 		relative_position_id = RE4_ivan_kupla
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			unlock_decision_category_tooltip = RED_northern_sovereignty_war
+			RED = {
+				country_event = { id = redpuppet.21 hours = 8 }
+			}
+			if = {
+				limit = {
+					check_variable = {
+						global.RE4_northern_sovereignty_war_rdy_process = 1
+					}
+				}
+				set_variable = {
+					global.RE4_northern_sovereignty_war_rdy_process = 2
+				}
+			}
+			unlock_decision_tooltip = northern_sovereignty_war_RE4_military_government_RE1
+			unlock_decision_tooltip = northern_sovereignty_war_RE4_military_government_RE2
+			unlock_decision_tooltip = northern_sovereignty_war_RE4_military_government_RE3
 		}
 	}
 	focus = {
@@ -85,6 +118,12 @@
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
 			}
 		}
 		x = -2
@@ -109,6 +148,12 @@
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
 			}
 		}
 		x = 2
@@ -234,6 +279,12 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = RE4_security_committee_headquarters_relocation
@@ -258,6 +309,12 @@
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
 			}
 		}
 		x = -1
@@ -286,6 +343,12 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = 1
 		y = 2
 		relative_position_id = RE4_security_committee_headquarters_relocation
@@ -311,15 +374,31 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = 0
 		y = 3
 		relative_position_id = RE4_security_committee_headquarters_relocation
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			if = {
+				limit = {
+					check_variable = {
+						global.RE4_northern_sovereignty_war_rdy_process = 2
+					}
+				}
+				set_variable = {
+					global.RE4_northern_sovereignty_war_rdy_process = 3
+				}
+			}
 		}
 	}
 	focus = {
@@ -333,6 +412,12 @@
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
 			}
 		}
 		x = -2
@@ -359,6 +444,12 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = RE4_counter_revolution_prevention_committee
@@ -381,6 +472,12 @@
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
 			}
 		}
 		x = 2
@@ -409,15 +506,62 @@
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = RE4_counter_revolution_prevention_committee
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			if = {
+				limit = {
+					check_variable = {
+						global.RE4_northern_sovereignty_war_rdy_process = 3
+					}
+				}
+				set_variable = {
+					global.RE4_northern_sovereignty_war_rdy_process = 4
+				}
+			}
+		}
+	}
+	focus = {
+		# 작전명, 이반 쿠팔라
+		id = RE4_our_war
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = RE4_operation_ivan_kupala
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_not_started_tt
+				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RE4_northern_sovereignty_war_started_tt
+				has_global_flag = RE4_northern_sovereignty_war_started
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = RE4_operation_ivan_kupala
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			country_event = redpuppet.1000
 		}
 	}
 	focus = {
@@ -466,7 +610,7 @@
 		}
 	}
 	focus = {
-		# 코민테른 붉은겨울 지부
+		# 우리는 미래를 향한다
 		id = RE4_we_head_to_the_future
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = {
@@ -500,19 +644,6 @@ shared_focus = {
 
 	x = 11
 	y = 0
-	offset = {
-		x = -11
-		y = 10
-		trigger = {
-			original_tag = RED
-		}
-	}
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
 
 	available = { 
 		original_tag = RE4
@@ -1064,6 +1195,36 @@ joint_focus = {
 	}
 
 	completion_reward_joint_originator = {
+
+		hidden_effect = { #만약 이 중점을 찍는데 핀란드 전쟁이 안끝난 판정이면...디버그용 수리
+			if = {
+				limit = {
+					has_global_flag = RE4_finland_war_flag
+				}
+				clr_global_flag = RE4_finland_war_flag
+				set_global_flag = RE4_finland_war_flag_RE4WIN
+				RE4 = {
+					every_other_country = {
+						limit = {
+							OR = {
+								original_tag = RED
+								original_tag = RE1
+								original_tag = RE2
+								original_tag = RE3
+							}
+						}
+						country_event = redpuppet.19
+					}
+					every_other_country = {
+						limit = {
+							original_tag = SOV
+						}
+						country_event = redpuppet.20
+					}
+				}
+			}
+		}
+
 		remove_ideas = RED_academic_regime_dominance_idea
 
 		IF = {
@@ -1119,6 +1280,12 @@ joint_focus = {
 					}
 					set_nationality = RE4
 				}
+			}
+		}
+
+		FIN = {
+			every_core_state = {
+				add_core_of = ROOT
 			}
 		}
 
