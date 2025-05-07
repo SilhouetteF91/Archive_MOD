@@ -236,15 +236,15 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = KAP_increase_artillery_production
-				bonus = 0.5
-				uses = 3
+				bonus = 2
+				uses = 5
 				category = industry
 			}
 
 			add_tech_bonus = {
 				name = ITA_brescia_small_arms_industry
-				bonus = 0.75
-				uses = 1
+				bonus = 3
+				uses = 3
 				category = infantry_weapons
 			}
 		}
@@ -1279,6 +1279,7 @@ focus_tree = {
 	focus = {
 		id = KAP_peoples_volunteer_army
 		icon = GFX_goal_focus_KAP_kv20
+		available = { has_country_flag = GAEBALJUNG }
 		prerequisite = { focus = KAP_central_military_commission }
 		mutually_exclusive = { focus = KAP_peoples_liberation_army }
 		x = 2
