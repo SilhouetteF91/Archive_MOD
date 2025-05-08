@@ -2606,9 +2606,76 @@ country_event = { #소라사키 태스크포스 설립
 
 	option = { 
 		name = GEH.event.1024.a
+		country_event = { id = GEH.event.1025 days = 3 }
+	}
+}
+
+country_event = { #소라사키 히나의 삶
+	id = GEH.event.1025
+	title = GEH.event.1025.t
+	desc = GEH.event.1025.desc
+
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1025.a
 		
 	}
 }
+
+country_event = { #소라사키 히나의 끝 - 1
+	id = GEH.event.1026
+	title = GEH.event.1026.t
+	desc = GEH.event.1026.desc
+
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1026.a
+		country_event = { id = GEH.event.1027 }
+	}
+}
+
+country_event = { #소라사키 히나의 끝 - 2
+	id = GEH.event.1027
+	title = GEH.event.1027.t
+	desc = GEH.event.1027.desc
+
+	picture = GFX_report_event_ako_amau_generic_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1027.a
+		country_event = { id = GEH.event.1028 }
+	}
+}
+
+country_event = { #소라사키 히나의 끝 - 3
+	id = GEH.event.1028
+	title = GEH.event.1028.t
+	desc = GEH.event.1028.desc
+
+	picture = GFX_report_event_generic_flowers
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1028.a
+		set_global_flag = GEH_hina_return_flag
+
+		GEH_hina = {
+			add_trait = {
+				trait = militias_officer #헬멧단 간부
+			}
+		}
+	}
+}
+
 
 country_event = { #선도부 해외 방문 계획
 	id = GEH.event.2000
