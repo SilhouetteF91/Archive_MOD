@@ -15874,6 +15874,7 @@ country_event = {
     		long_name = ABY_fascism_party_united
     		name = ABY_fascism_party_united
 		}
+		promote_character = ABYDOS_KHF
 		add_popularity = {
 			ideology = fascism
 			popularity = -1
@@ -16054,8 +16055,8 @@ country_event = {
 					is_core_of = SHA
 					is_core_of = HYA
 				}
-				add_resistance = 5
 			}
+			add_resistance = 5
 		}
 	}
 }
@@ -16100,8 +16101,8 @@ country_event = {
 					is_core_of = SHA
 					is_core_of = HYA
 				}
-				add_resistance = 25
 			}
+			add_resistance = 25
 		}
 	}
 }
@@ -16128,8 +16129,8 @@ country_event = {
 					is_core_of = SHA
 					is_core_of = HYA
 				}
-				add_resistance = 25
 			}
+			add_resistance = 25
 		}
 	}
 }
@@ -16156,8 +16157,8 @@ country_event = {
 					is_core_of = SHA
 					is_core_of = HYA
 				}
-				add_resistance = 15
 			}
+			add_resistance = 15
 		}
 	}
 }

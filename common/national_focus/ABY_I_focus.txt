@@ -14552,10 +14552,10 @@ focus = { #키보토스인 우선
 						is_core_of = SHA
 						is_core_of = HYA
 					}
-					add_core_of = ABY
-					add_dynamic_modifier = {
-						modifier = ABY_modifier_rebuild_1
-					}
+				}
+				add_core_of = ABY
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
 				}
 			}
 			set_country_flag = ABY_flag_union_descision
@@ -14902,7 +14902,6 @@ focus = { #키보토스인 우선
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_7_ongoing_flag
 			set_country_flag = ABY_descision_focus_czecho_7_completed_flag
-			custom_effect_tooltip = ABY_industrial_concern_allow_skoda
 			69 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -14995,8 +14994,8 @@ focus = { #키보토스인 우선
 						is_core_of = SHA
 						is_core_of = HYA
 					}
-					add_claim_by = ABY
 				}
+				add_claim_by = ABY
 			}
 		}
 	}

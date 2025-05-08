@@ -1,0 +1,141 @@
+﻿###### NEW NAMES #######
+
+ABY_battleship_name = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { ABY }
+
+	type = ship
+	ship_types = { battleship battle_cruiser }
+	
+	fallback_name = "FAS Battleship %d"
+	
+	ordered = {
+		1 = {"FAS Abydos"} 
+		2 = {"FAS Danubia"}
+		3 = {"FAS Prague"}
+		4 = {"FAS Wien"}
+		5 = {"FAS Kivotos"}
+		6 = {"FAS Europe"}
+		7 = {"FAS Sunaomachi"}
+		8 = {"FAS Karlovy Vary"}
+		9 = {"FAS Zalzburg"}
+		10 = {"FAS Akita"}
+		11 = {"FAS Brno"}
+		12 = {"FAS Graz"}
+		13 = {"FAS Yotsuba"}
+	}
+}
+
+ABY_cruiser_name = {
+	name = NAME_THEME_HISTORICAL_PZ
+
+	for_countries = { ABY }
+
+	type = ship
+	ship_types = { heavy_cruiser light_cruiser }
+	
+	fallback_name = "FAS Cruiser %d"
+	
+	ordered = {
+		1 = {"FAS Tamagawa"} 
+		2 = {"FAS Budejovice"}
+		3 = {"FAS Innsbruck"}
+		4 = {"FAS Nishigawa"}
+		5 = {"FAS Jihlava"}
+		6 = {"FAS Villach"}
+		7 = {"FAS Shiromori"}
+		8 = {"FAS Pardubice"}
+		9 = {"FAS Klagenfurt"}
+		10 = {"FAS Synkiroo"}
+		11 = {"FAS Tabor"}
+		12 = {"FAS Steyr"}
+		13 = {"FAS Kitayama"}
+		14 = {"FAS Pilsen"}
+		15 = {"FAS Neustadt"}
+		16 = {"FAS Hachi"}
+		17 = {"FAS Teplice"}
+		18 = {"FAS Eisenstadt"}
+		19 = {"FAS Kishu"}
+		20 = {"FAS Opava"}
+		21 = {"FAS Freistadt"}
+		22 = {"FAS Zarigawa"}
+		23 = {"FAS Ostrava"}
+		24 = {"FAS Bregenz"}
+	}		 
+}
+
+
+
+ABY_submarine_name = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { ABY }
+
+	type = ship
+	ship_types = { submarine }
+	
+	fallback_name = "FAS U-%d"
+	
+	ordered = {
+		1 = {"FAS U-1"}
+	}
+}
+
+ABY_destroyer_name = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { ABY }
+
+	type = ship
+	ship_types = { destroyer }
+	
+	fallback_name = "FAS Destroyer %d"
+
+	ordered = {
+		1 = {"FAS Ludwig Czech"}
+		2 = {"FAS Konrad Henlein"}
+		3 = {"FAS Takahashi Hoshino"}
+		4 = {"FAS Emil Hacha"}
+		5 = {"FAS Karel Capek"}
+		6 = {"FAS Sigmund Freud"}
+	}
+}
+
+ABY_carrier_name = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { ABY }
+
+	type = ship
+	ship_types = { carrier }
+	
+	fallback_name = "FAS Carrier %d"
+	
+	ordered = {
+		1 = {"FAS Masaryk"}      		
+		2 = {"FAS Comenius"}
+		3 = {"FAS Syemata"}
+		4 = {"FAS Ennead"}
+		5 = {"FAS Federation"}
+		6 = {"FAS Horus"}
+		7 = {"FAS Anubis"}
+		8 = {"FAS Thoth"}
+		9 = {"FAS Nephthys"}
+		10 = {"FAS Bastet"}
+	}
+}
+
+ABY_THEME_FISH = {
+	name = NAME_THEME_FISH
+
+	for_countries = { ABY }
+
+	type = ship
+	
+	fallback_name = "Schiff %d"
+	
+	ordered = {
+		1 = {"Schiff 1"}
+	}
+}
