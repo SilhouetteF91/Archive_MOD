@@ -1304,6 +1304,51 @@ ideas = {
 				political_power_factor = -0.3
 			}
 		}
+		ABY_idea_great_germanist_2 = {
+			picture = SOV_factionalism_modifier
+
+			allowed_civil_war = {
+					always = yes
+			}
+
+			modifier = {
+				fascism_drift = 0.25
+				war_support_factor = -0.1
+				stability_weekly = -0.02
+				conscription_factor = -0.10
+				political_power_factor = -0.2
+			}
+		}
+		ABY_idea_great_germanist_3 = {
+			picture = SOV_factionalism_modifier
+
+			allowed_civil_war = {
+					always = yes
+			}
+
+			modifier = {
+				fascism_drift = 0.25
+				stability_weekly = -0.01
+				conscription_factor = -0.05
+				political_power_factor = -0.1
+			}
+		}
+		ABY_idea_thaya_plan = {
+			picture = SOV_factionalism_modifier
+
+			allowed_civil_war = {
+					always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = -0.1
+				army_speed_factor = 0.1
+				command_power_gain_mult = 0.5
+				max_planning_factor = -0.25
+				planning_speed = 0.5
+			}
+		}
 		ABY_idea_abydos_army_control_center = {
 			picture = "GFX_idea_ABY_idea_department_3"
 

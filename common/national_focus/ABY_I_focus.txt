@@ -15179,6 +15179,17 @@ focus = { #키보토스인 우선
 			clr_country_flag = ABY_descision_focus_german_1_ongoing_flag
 			set_country_flag = ABY_descision_focus_german_1_completed_flag
 			#중점 완료시 얻는 보상
+			add_manpower = 3000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+			69 = {
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 		}
 	}
 	
@@ -15213,6 +15224,9 @@ focus = { #키보토스인 우선
 			clr_country_flag = ABY_descision_focus_german_2_ongoing_flag
 			set_country_flag = ABY_descision_focus_german_2_completed_flag
 			#중점 완료시 얻는 보상
+			country_event = {
+				id = ABY_descision_focus_event.22
+			}
 		}
 	}
 	
@@ -15247,6 +15261,17 @@ focus = { #키보토스인 우선
 			clr_country_flag = ABY_descision_focus_german_3_ongoing_flag
 			set_country_flag = ABY_descision_focus_german_3_completed_flag
 			#중점 완료시 얻는 보상
+			add_manpower = 3000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+			69 = {
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 		}
 	}
 	
@@ -15281,6 +15306,9 @@ focus = { #키보토스인 우선
 			clr_country_flag = ABY_descision_focus_german_4_ongoing_flag
 			set_country_flag = ABY_descision_focus_german_4_completed_flag
 			#중점 완료시 얻는 보상
+			country_event = {
+				id = ABY_descision_focus_event.23
+			}
 		}
 	}
 	
@@ -15315,6 +15343,9 @@ focus = { #키보토스인 우선
 			clr_country_flag = ABY_descision_focus_german_5_ongoing_flag
 			set_country_flag = ABY_descision_focus_german_5_completed_flag
 			#중점 완료시 얻는 보상
+			country_event = {
+				id = ABY_descision_focus_event.38
+			}
 		}
 	}
 	
@@ -15349,6 +15380,11 @@ focus = { #키보토스인 우선
 			clr_country_flag = ABY_descision_focus_german_6_ongoing_flag
 			set_country_flag = ABY_descision_focus_german_6_completed_flag
 			#중점 완료시 얻는 보상
+			custom_effect_tooltip = ABY_new_tt_18
+			set_country_flag = ABY_flag_german_resistance_1
+			74 = {
+				set_demilitarized_zone = yes
+			}
 		}
 	}
 	
@@ -15383,6 +15419,21 @@ focus = { #키보토스인 우선
 			clr_country_flag = ABY_descision_focus_german_7_ongoing_flag
 			set_country_flag = ABY_descision_focus_german_7_completed_flag
 			#중점 완료시 얻는 보상
+			add_manpower = 3000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+			69 = {
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+				}
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 		}
 	}
 	
@@ -15417,6 +15468,9 @@ focus = { #키보토스인 우선
 			clr_country_flag = ABY_descision_focus_german_8_ongoing_flag
 			set_country_flag = ABY_descision_focus_german_8_completed_flag
 			#중점 완료시 얻는 보상
+			custom_effect_tooltip = ABY_new_tt_19
+			clr_country_flag = ABY_flag_german_resistance_1
+			set_country_flag = ABY_flag_german_resistance_2
 		}
 	}
 	
@@ -15451,6 +15505,10 @@ focus = { #키보토스인 우선
 			clr_country_flag = ABY_descision_focus_german_9_ongoing_flag
 			set_country_flag = ABY_descision_focus_german_9_completed_flag
 			#중점 완료시 얻는 보상
+			add_timed_idea = {
+				idea = ABY_idea_thaya_plan
+				days = 360
+			}
 		}
 	}
 	
@@ -15485,6 +15543,9 @@ focus = { #키보토스인 우선
 			clr_country_flag = ABY_descision_focus_german_10_ongoing_flag
 			set_country_flag = ABY_descision_focus_german_10_completed_flag
 			#중점 완료시 얻는 보상
+			1021 = {
+				set_demilitarized_zone = yes
+			}
 		}
 	}
 	
@@ -15519,6 +15580,18 @@ focus = { #키보토스인 우선
 			clr_country_flag = ABY_descision_focus_german_11_ongoing_flag
 			set_country_flag = ABY_descision_focus_german_11_completed_flag
 			#중점 완료시 얻는 보상
+			1021 = {
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
 		}
 	}
 	
@@ -15553,6 +15626,18 @@ focus = { #키보토스인 우선
 			clr_country_flag = ABY_descision_focus_german_12_ongoing_flag
 			set_country_flag = ABY_descision_focus_german_12_completed_flag
 			#중점 완료시 얻는 보상
+			153 = {
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
 		}
 	}
 }
