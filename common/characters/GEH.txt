@@ -21,9 +21,9 @@ characters={
 			logistics_skill= 5
 			legacy_id=250
 			visible = {
-				AND = {
+				OR = {
 					NOT = { has_global_flag = GEH_BTBOTS_END_flag }
-					NOT = { has_global_flag = GEH_hina_return_flag }
+					has_global_flag = GEH_hina_return_flag
 				}
 			}
 		}
