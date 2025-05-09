@@ -132,6 +132,6 @@ GEH_gehenna_art_category = {
     }
 
     visible = {
-        is_debug = yes
+        has_idea_with_trait = GEH_artist
     }
 }
