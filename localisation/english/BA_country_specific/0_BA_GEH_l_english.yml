@@ -636,7 +636,7 @@
  GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mobilisation: "국가총동원령"
  GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_mobilisation_desc: "조국을 위한 부품이 되는 것은 국민 스스로에게도 영광스러운 일입니다. 그렇지 않나요?"
 
- GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_ogas: "OGAS"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_ogas: "국가자본주의 완성"
  GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_ogas_desc: "기계신께서 모든 경제를 통제하고, 각 기업에 생산량을 하달할 것입니다. 국가 경제 역시 당연히 선도부에 의해 통제되는 도구여야 하지 않을까요?"
 
  GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1_ogas_2: "새로운 사회"
@@ -1677,6 +1677,27 @@
 
  GEH_gehenna_art_pool: "히나를 위한 개인 수영장"
  GEH_gehenna_art_pool_desc: "소라사키 히나 부장이 수영을 할 줄 모른다는, 그러니까... 바다에 들어가면 바로 가라앉는다는 말도 안 되는 소문이 있습니다! 음, 정말 말도 안 되는 소문이죠? ...그렇죠? 소라사키 히나는 튜브 없이 남들 앞에서 멋지게! 수영할 수 있는 그 날을 위해, 작은 개인 수영장 하나의 건축을 요청했습니다. ...취미 생활을 잘 만들지 않고, 자신의 이익을 위해 행동하지 않는 그녀에게는 드문 일입니다. 어쩌면 욕조에서 미끄러졌다 익사할 뻔이라도 한 것일지도요."
+
+ GEH_gehenna_art_hot_spring: "힌놈 온천사업"
+ GEH_gehenna_art_hot_spring_desc: "온천개발부는 딱히 온천이 없을 것 같은 장소도 일단 발파하고 보지만, 우리는 게헨나 학원 중앙구 뒤에 있던 '힌놈 산맥'에 유황 온천이 이미 존재했다는 것을 알고 있습니다. 대전이 이후 아비도스의 사막 모래 폭풍이 함께 전이되어 일시적으로 바이에른을 엉망으로 만든 것처럼, 중앙구에도 힌놈 산맥의 천연 온천이 전이된 상태입니다.\n\n우리는 이 온천을 더 정교하게 재개발하는 것을 고려해 볼 수 있습니다."
+
+ GEH_gehenna_art_munich_academys: "뮌헨 미술원 후원"
+ GEH_gehenna_art_munich_academys_desc: "뮌헨 미술원(Akademie der Bildenden Künste München)은 1770년에 설립되어 지금까지 이어져 오고 있는 도이칠란트의 위대한 미술대학입니다. 수백년의 역사를 거치는 동안 이곳에서 수많은 미술가들이 탄생했으며, 탄생하고 있으며, 앞으로도 탄생할 예정입니다. 이 대학을 후원하는 것은 우리 정부가 예술에 대해 가진 관심을 보여주기에 알맞습니다."
+
+ GEH_gehenna_art_exhibition: "퇴폐 전시전"
+ GEH_gehenna_art_exhibition_desc: "과거 나치 정권은 자신들의 규정에 맞지 않는 모든 미술 작품들을 '퇴폐 미술'이라며 조롱했습니다. 이러한 '퇴폐적' 미술 전시회를 후원하는 것은 게헨나가 다양한 문화적 자유를 수용하게 하며, 도이칠란트에서 나치의 영향력을 일소시킬 것입니다."
+
+ GEH_gehenna_art_propaganda: "게헨나 홍보 만화 제작"
+ GEH_gehenna_art_propaganda_desc: "미술의 범주에 만화가 들어가지 않는다는 것은 상상할 수 없는 일입니다. 게헨나 학원을 홍보하기 위한 프로파간다성 만화 제작을 위해, 여러 만화가들에게 국비 지원을 할 것입니다."
+
+ GEH_gehenna_art_hina_propaganda: "소라사키 히나 일대기 만화 제작"
+ GEH_gehenna_art_hina_propaganda_desc: "대전이 이전 소라사키 히나가 어떠한 업적을 이루었고 어떤 범죄 수사를 진행하였는가를 홍보 자료로 만들 수 있을 것입니다. 이것을 '프로파간다'라고 부를 수도 있겠죠. 하지만 여기에 거짓된 내용을 담을 것도 아니지 않습니까?"
+
+ GEH_gehenna_art_ibuki_university: "이부키 화가 교육"
+ GEH_gehenna_art_ibuki_university_desc: "탄가 이부키는 화가가 되고 싶어 합니다. 차라리 그게 나은 일이겠죠. 그녀가 성장한 이후에도 다시는 정치에 신경쓰지 않고, 만마전보다는 미술관에 틀어박혀 있도록 하는 것이 게헨나 정치에도 좋은 일일 것입니다. 그녀는 위험할 정도로 게헨나에서 대중적 인기가 높으면서도, 정치보다 다른 곳에 더 관심이 많거든요. 이부키는 정계를 떠나 화가가 되기 위한 교육을 받게 될 것입니다."
+
+ GEH_gehenna_art_headquartersy: "선도부 본부 장식"
+ GEH_gehenna_art_headquartersy_desc: "미술가들을 모아, 선도부 본부의 위엄을 더하기 위한 내부 그림들을 걸고, 역대 선도부장들의 초상화를 보관하는 특별한 공간을 만들 것입니다. 이러한 내부 장식 과정은 단순한 사치가 아닌, 우리 선도부의 성공을 대중들에게 보이기 위한 작업이기도 합니다."
 
  ## 툴팁
  GEH_benriya_dominate_tt: "우리가 §Y흥신소 68§!을 병합한 §Y최초의 국가§!일 경우, 이벤트로 중점이 개방됩니다."

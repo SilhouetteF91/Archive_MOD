@@ -1581,3 +1581,720 @@ GEH_military_power_category = {
 	}
 
 }
+
+GEH_gehenna_art_category = {
+
+	# 작곡가 (리하르트 슈트라우스)
+
+	GEH_gehenna_art_music_munich_conservatory = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_composer
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 30
+
+		days_remove = 60
+		days_re_enable = 365
+
+		remove_effect = {
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	GEH_gehenna_art_music_concert = {
+		icon = GFX_decision_generic_welfare
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_composer
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 30
+
+		days_remove = 30
+		days_re_enable = 90
+
+		modifier = {
+			war_support_weekly = 0.01
+			consumer_goods_factor = -0.10
+		}
+	}
+
+	GEH_gehenna_art_music_jazz = {
+		icon = GFX_decision_generic_welfare
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_composer
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 30
+
+		days_remove = 30
+		days_re_enable = 90
+
+		modifier = {
+			political_power_factor = 0.25
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_max_efficiency_factor = 0.05
+		}
+	}
+
+	GEH_gehenna_art_gehenna_music_make = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = GEH_centre_of_culture_c
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_composer
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 100
+
+		days_remove = 180
+
+		remove_effect = {
+			custom_effect_tooltip = GEH_PL
+			add_to_variable = {
+				GEH_PL_production_lack_of_resource_penalty_factor = -0.1
+				tooltip = production_lack_of_resource_penalty_factor_tt
+			}
+			GEH_popular_support_up_effect = yes
+		}
+	}
+
+	GEH_gehenna_art_gehenna_music_new_military_song = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = GEH_centre_of_culture_c
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_composer
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 100
+
+		days_remove = 180
+
+		remove_effect = {
+			custom_effect_tooltip = GEH_RU
+			add_to_variable = {
+				GEH_RU_army_sub_unit_halo_infantry_attack_factor = 0.05
+				tooltip = HEU_rikuhachimaism_focus_3_1_tt
+			}
+
+			add_to_variable = {
+				GEH_RU_army_sub_unit_halo_infantry_defence_factor = 0.05
+				tooltip = HEU_rikuhachimaism_focus_3_2_tt
+			}
+		}
+	}
+
+	GEH_gehenna_art_music_serenade = {
+		icon = GFX_decision_Prefect_team
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = GEH_centre_of_culture_c
+			OR = {
+				NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_completed_focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1
+			}
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_composer
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 75
+
+		days_remove = 21
+
+		remove_effect = {
+			add_stability = 0.1
+		}
+	}
+
+	# 건축가
+
+	GEH_gehenna_art_bauhaus = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_bauhaus
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 60
+
+		days_remove = 100
+		days_re_enable = 365
+
+		remove_effect = {
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	GEH_gehenna_art_urban_aesthetic_project = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_bauhaus
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 45
+
+		days_remove = 60
+		days_re_enable = 90
+
+		modifier = {
+			production_speed_buildings_factor = 0.10
+		}
+	}
+
+	GEH_gehenna_art_efficient_factory = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_bauhaus
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 50
+
+		days_remove = 100
+		days_re_enable = 90
+
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.15
+			production_factory_max_efficiency_factor = 0.1
+		}
+	}
+
+	GEH_gehenna_art_reconstruction_of_headquartersy = {
+		icon = GFX_decision_Prefect_team
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = GEH_unified_gehenna_flag
+			owns_state = 55
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_bauhaus
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 75
+
+		days_remove = 120
+
+		remove_effect = {
+            custom_effect_tooltip = GEH_Army_focus_2_tt
+            add_to_variable = { GEH_RU_terrain_penalty_reduction = 0.05 }
+		}
+	}
+
+	GEH_gehenna_art_reconstruction_of_pandemonium_society = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = GEH_unified_gehenna_flag
+			owns_state = 55
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_bauhaus
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 75
+
+		days_remove = 120
+
+		remove_effect = {
+			add_war_support = 0.1
+			GEH_popular_support_up_effect = yes
+		}
+	}
+
+	GEH_gehenna_art_hot_spring = {
+		icon = GFX_decision_Prefect_team
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = GEH_unified_gehenna_flag
+			has_completed_focus = GEH_centre_of_culture_a
+			owns_state = 55
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_bauhaus
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 75
+
+		days_remove = 120
+
+		remove_effect = {
+			55 = {
+				add_building_construction = {
+					type = BA_onsen
+					level = 1
+					province = 6488
+				}
+			}
+		}
+	}
+
+	# 화가
+
+	GEH_gehenna_art_munich_academys = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_degenerate_art
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 25
+
+		days_remove = 50
+		days_re_enable = 365
+
+		remove_effect = {
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	GEH_gehenna_art_exhibition = {
+		icon = GFX_decision_generic_wreckers
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_degenerate_art
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 30
+
+		days_remove = 120
+		days_re_enable = 90
+
+		modifier = {
+			resistance_damage_to_garrison_on_our_occupied_states = 0.2
+			resistance_decay_on_our_occupied_states = -0.2
+			compliance_growth_on_our_occupied_states = -0.2
+			resistance_growth_on_our_occupied_states = 0.2
+			resistance_target_on_our_occupied_states = 0.2
+		}
+	}
+
+	GEH_gehenna_art_propaganda = {
+		icon = GFX_decision_generic_brainwash
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_degenerate_art
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 50
+
+		days_remove = 100
+		days_re_enable = 90
+
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.15
+			production_factory_max_efficiency_factor = 0.1
+		}
+	}
+
+	GEH_gehenna_art_hina_propaganda = {
+		icon = GFX_decision_Prefect_team
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = GEH_centre_of_culture_b
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_degenerate_art
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 75
+
+		days_remove = 120
+
+		remove_effect = {
+			add_war_support = 0.1
+		}
+	}
+
+	GEH_gehenna_art_ibuki_university = {
+		icon = GFX_decision_generic_political_rally
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = GEH_centre_of_culture_b
+			has_country_flag = GEH_unified_gehenna_flag
+			has_completed_focus = GEH_legitimate_dominion
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_degenerate_art
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 75
+
+		days_remove = 120
+
+		remove_effect = {
+			add_stability = 0.2
+		}
+	}
+
+	GEH_gehenna_art_headquartersy = {
+		icon = GFX_decision_Prefect_team
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = GEH_centre_of_culture_b
+		}
+
+		visible = {
+			has_idea_with_trait = GEH_degenerate_art
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 10
+				has_war = no
+			}
+		}
+
+		cost = 75
+
+		days_remove = 120
+
+		remove_effect = {
+			custom_effect_tooltip = kivotos_halo_add3_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+
+			GEH_popular_support_up_effect = yes
+		}
+	}
+
+}
