@@ -2002,6 +2002,26 @@ focus_tree = {
 				}
 			}
 		}
+		bypass = {
+			NOT = {
+				custom_trigger_tooltip = {
+					tooltip = GEM_policing_tt
+					OR = {
+						has_idea = GEH_hot_spring_department_1
+						has_idea = GEH_hot_spring_department_2
+						has_idea = GEH_hot_spring_department_3
+						has_idea = GEH_hot_spring_department_4
+						has_idea = GEH_gourmet_research_society_1
+						has_idea = GEH_gourmet_research_society_2
+						has_idea = GEH_gourmet_research_society_3
+						has_idea = GEH_gourmet_research_society_4
+					}
+				}
+			}
+		}
+		bypass_effect = {
+			GEH_Manmajun_Bupae_down_effect = yes
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_MANMAJUN_BUPAE

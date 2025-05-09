@@ -20,6 +20,7 @@
  GEH_hot_spring_cooperation_GEM:0 "§Y$GEM_pandemonium_modifier$§! 변동치\n소비재 공장: §Y-2.0%§!\n주 내 최대 공장 수: §G+10%§!\n건설 속도: §G+5.00%§!\n\n"
  GEH_representation_GEM:0 "§Y$GEM_pandemonium_modifier$§! 변동치\n동원 속도: §G+5.00%§!\n최소 항복 한계치: §G+5.00%§!\n방어전쟁 불이익의 안정도 변동치: §G+25.00%§!\n\n"
  GEM_policing_tt:0 "§Y온천개발부§!와 §Y미식연구회§!가 학원에서 §Y위협 세력§!으로 활동중임."
+ GEM_policing_tt_NOT:0 "해당하지 않음: §Y온천개발부§!와 §Y미식연구회§!가 학원에서 §Y위협 세력§!으로 활동중임."
  GEH_gastronomy_research_group_arrested_tt:0 "국민정신 없이도 §Y미식연구회§!의 활동이 보장됨"
  GEH_hot_spring_cooperation_tt:0 "국민정신 없이도 §Y온천개발부§!의 활동이 보장됨"
 #
