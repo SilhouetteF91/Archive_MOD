@@ -4940,8 +4940,12 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_war_with = TRM
+			OR = {
+				has_war_with = TRM
+				NOT = { country_exists = TRM }
+			}
 		}
+		
 		will_lead_to_war_with = TRM
 		completion_reward = {
 			create_wargoal = {
@@ -7749,7 +7753,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
+            custom_effect_tooltip=GEH_first_five_year_plan_tt
+            add_to_variable = { GEH_PL_production_factory_efficiency_gain_factor = 0.05 } # 생산 효율성 성장
+            add_to_variable = { GEH_PL_consumer_goods_factor = -0.03 } # 소비재
 
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = construction_tech
+			}
 		}
 	}
 	
@@ -7784,7 +7796,53 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_manpower = -140000
+			random_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					arms_factory > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = -1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					arms_factory > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = -1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	

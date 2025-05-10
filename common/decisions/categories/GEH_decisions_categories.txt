@@ -135,3 +135,19 @@ GEH_gehenna_art_category = {
         has_idea_with_trait = GEH_artist
     }
 }
+
+GEH_gehenna_legitimacy_category = {
+    icon = GFX_decision_category_usa_intervention_mandate
+
+    picture = GFX_decision_cat_picture_SWI_federal_council
+
+    priority = 25
+
+    allowed = {
+        tag = GEH
+    }
+
+    visible = {
+
+    }
+}

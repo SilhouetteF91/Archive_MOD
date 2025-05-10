@@ -2298,3 +2298,44 @@ GEH_gehenna_art_category = {
 	}
 
 }
+
+GEH_gehenna_legitimacy_category = {
+	
+	GEH_gehenna_legitimacy_up = {
+		icon = GFX_decision_Prefect_team
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+			has_completed_focus = GEH_war_focus_1
+			has_army_experience > 99
+		}
+
+		visible = {
+			NOT = {
+				has_idea = GEH_popular_support_5
+			}
+		}
+
+		ai_will_do = {
+			factor = 500
+		}
+
+		cost = 0
+
+		days_remove = 90
+
+		remove_effect = {
+			GEH_popular_support_up_effect = yes
+		}
+
+		complete_effect = {
+			army_experience = -100						
+		}	
+	}
+
+}
