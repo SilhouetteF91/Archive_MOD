@@ -924,6 +924,17 @@ RED_the_office_good_dynamic_modifier = { #사무국
 	consumer_goods_factor = RED_the_politburo_consumer_goods_factor
 	industry_repair_factor = RED_the_politburo_industry_repair_factor
 }
+RE4_investment_in_finland_dynamic_modifier = { # 겨울군대
+	enable = { always = yes }
+
+	remove_trigger = {
+		NOT = { has_war_with = RED }
+	}
+
+	icon = 	GFX_idea_NORDIC_army_communist
+
+	army_infantry_attack_factor = RE4_investment_in_finland
+}
 RED_winter_army_dynamic_modifier = { # 겨울군대
 	enable = { always = yes }
 

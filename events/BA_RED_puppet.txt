@@ -542,10 +542,14 @@ country_event = { # 북방 주권 전쟁!
 			RE4 = {
 				RED = { end_puppet = RE4 }
 				declare_war_on = {
-					target = ROOT
+					target = RED
 					type = civil_war
 				}
-				add_civil_war_target = ROOT
+				add_civil_war_target = RED
+
+				add_dynamic_modifier = {
+					modifier = RE4_investment_in_finland_dynamic_modifier
+				}
 			}
 			if = {
 				limit = { original_tag = RE4 }
@@ -558,7 +562,7 @@ country_event = { # 북방 주권 전쟁!
 		}
 	}
 	
-	option = { 
+	option = {
 		name = redpuppet.1000.a
 		every_other_country = {
 			limit =  {
@@ -570,6 +574,10 @@ country_event = { # 북방 주권 전쟁!
 				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
 			}
 			add_war_support = 0.10
+			add_to_war = {
+				targeted_alliance = RED
+				enemy = RE4
+			}
 		}
 		every_other_country = {
 			limit =  {
@@ -591,7 +599,7 @@ country_event = { # 북방 주권 전쟁!
 			}
 			add_to_war = {
 				targeted_alliance = RE4
-				enemy = ROOT
+				enemy = RED
 			}
 		}
 	}
@@ -606,5 +614,6 @@ country_event = { # 북방 주권 전쟁! (반대쪽에 뜨는 가짜이벤트)
 	
 	option = { 
 		name = redpuppet.1000.a
+		add_war_support = -0.02
 	}
 }

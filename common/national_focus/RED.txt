@@ -339,19 +339,19 @@ focus_tree = {
 		completion_reward = {
 			RE1 = {
 				add_to_variable = {
-					global.red_northern_sovereignty_re1_var = 8
+					global.red_northern_sovereignty_re1_var = 14
 					tooltip = red_northern_sovereignty_tt
 				}
 			}
 			RE2 = {
 				add_to_variable = {
-					global.red_northern_sovereignty_re2_var = 8
+					global.red_northern_sovereignty_re2_var = 14
 					tooltip = red_northern_sovereignty_tt
 				}
 			}
 			RE3 = {
 				add_to_variable = {
-					global.red_northern_sovereignty_re3_var = 8
+					global.red_northern_sovereignty_re3_var = 14
 					tooltip = red_northern_sovereignty_tt
 				}
 			}
@@ -389,12 +389,6 @@ focus_tree = {
 			FOCUS_FILTER_MILITARY_POPULATION
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = RED_first_capital_trial_trigger
-				any_other_country = {
-					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
-				}
-			}
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }

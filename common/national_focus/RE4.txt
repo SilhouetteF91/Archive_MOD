@@ -419,16 +419,55 @@
 				tooltip = RE4_northern_sovereignty_war_started_tt
 				has_global_flag = RE4_northern_sovereignty_war_started
 			}
+			RE1 = { NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag } }
 		}
 		x = -2
 		y = 1
 		relative_position_id = RE4_counter_revolution_prevention_committee
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			RE1 = {
+				add_political_power = 120
+				hidden_effect = {
+					if = {
+						limit = { has_template = "Local Divisoin" }
+						delete_unit_template_and_units = {
+							division_template = "Local Divisoin"
+						}
+					}
+					division_template = {
+						name = "Local Divisoin"
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Local Divisoin\" division_template = \"Local Divisoin\" start_experience_factor = 0.1 start_equipment_factor = 1"
+							owner = PREV
+							count = 3
+						}
+					}
+				}
+				capital_scope = {
+					custom_effect_tooltip = RE4_cooption_tt
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -449,16 +488,55 @@
 				tooltip = RE4_northern_sovereignty_war_started_tt
 				has_global_flag = RE4_northern_sovereignty_war_started
 			}
+			RE3 = { NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag } }
 		}
 		x = 0
 		y = 1
 		relative_position_id = RE4_counter_revolution_prevention_committee
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			RE3 = {
+				add_political_power = 120
+				hidden_effect = {
+					if = {
+						limit = { has_template = "Local Divisoin" }
+						delete_unit_template_and_units = {
+							division_template = "Local Divisoin"
+						}
+					}
+					division_template = {
+						name = "Local Divisoin"
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Local Divisoin\" division_template = \"Local Divisoin\" start_experience_factor = 0.1 start_equipment_factor = 1"
+							owner = PREV
+							count = 3
+						}
+					}
+				}
+				capital_scope = {
+					custom_effect_tooltip = RE4_cooption_tt
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -479,16 +557,55 @@
 				tooltip = RE4_northern_sovereignty_war_started_tt
 				has_global_flag = RE4_northern_sovereignty_war_started
 			}
+			RE2 = { NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag } }
 		}
 		x = 2
 		y = 1
 		relative_position_id = RE4_counter_revolution_prevention_committee
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			RE2 = {
+				add_political_power = 120
+				hidden_effect = {
+					if = {
+						limit = { has_template = "Local Divisoin" }
+						delete_unit_template_and_units = {
+							division_template = "Local Divisoin"
+						}
+					}
+					division_template = {
+						name = "Local Divisoin"
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Local Divisoin\" division_template = \"Local Divisoin\" start_experience_factor = 0.1 start_equipment_factor = 1"
+							owner = PREV
+							count = 3
+						}
+					}
+				}
+				capital_scope = {
+					custom_effect_tooltip = RE4_cooption_tt
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -722,13 +839,6 @@ shared_focus = {
 	x = -1
 	y = 1
 
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
-
 	available = { 
 		original_tag = RE4
 		has_war_with = FIN
@@ -800,13 +910,6 @@ shared_focus = {
 	relative_position_id = RE4_create_of_defense_committee
 	x = -2
 	y = 2
-
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
 
 	available = { 
 		original_tag = RE4
@@ -895,13 +998,6 @@ shared_focus = {
 	x = -3
 	y = 1
 
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
-
 	available = { 
 		original_tag = RE4
 		has_war_with = FIN
@@ -966,13 +1062,6 @@ shared_focus = {
 	x = 1
 	y = 1
 
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
-
 	available = { 
 		original_tag = RE4
 		has_war_with = FIN
@@ -1035,13 +1124,6 @@ shared_focus = {
 	x = 2
 	y = 2
 
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
-
 	available = { 
 		original_tag = RE4
 		has_war_with = FIN
@@ -1087,13 +1169,6 @@ shared_focus = {
 	relative_position_id = RE4_create_of_defense_committee
 	x = 3
 	y = 1
-
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
 
 	available = { 
 		original_tag = RE4
@@ -1160,13 +1235,6 @@ joint_focus = {
 	}
 	x = 0
 	y = 3
-
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
 
 	available = { 
 		original_tag = RE4
@@ -1359,13 +1427,6 @@ shared_focus = {
 	x = -6
 	y = 0
 
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
-
 	available = { 
 		original_tag = RED
 		has_subject = RE4
@@ -1444,13 +1505,6 @@ shared_focus = {
 	x = 0
 	y = 3
 
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
-
 	available = { 
 		original_tag = RED
 		has_subject = RE4
@@ -1523,13 +1577,6 @@ joint_focus = {
 	x = 2
 	y = 1
 
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
-
 	available = { 
 		any_country = {
 			original_tag = RE4
@@ -1563,6 +1610,19 @@ joint_focus = {
 
 	completion_reward_joint_originator = {
 		
+		IF = {
+			limit = { original_tag = RED }
+			add_to_variable = {
+				RE4.RE4_investment_in_finland = -0.01
+				tooltip = RE4_investment_in_finland_tt
+			}
+			clamp_variable = {
+				var = RE4.RE4_investment_in_finland
+				min = -0.25
+				max = 0
+			}
+		}
+
 		IF = {
 			limit = { original_tag = RE4 }
 			custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
@@ -1602,6 +1662,19 @@ joint_focus = {
 
 	completion_reward_joint_member = {
 		
+		IF = {
+			limit = { original_tag = RED }
+			add_to_variable = {
+				RE4.RE4_investment_in_finland = -0.01
+				tooltip = RE4_investment_in_finland_tt
+			}
+			clamp_variable = {
+				var = RE4.RE4_investment_in_finland
+				min = -0.25
+				max = 0
+			}
+		}
+
 		IF = {
 			limit = { original_tag = RE4 }
 			custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
@@ -1687,13 +1760,6 @@ joint_focus = {
 	x = 4
 	y = 1
 
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
-
 	available = { 
 		any_country = {
 			original_tag = RE4
@@ -1725,6 +1791,19 @@ joint_focus = {
 	}
 
 	completion_reward_joint_originator = {
+		
+		IF = {
+			limit = { original_tag = RED }
+			add_to_variable = {
+				RE4.RE4_investment_in_finland = -0.01
+				tooltip = RE4_investment_in_finland_tt
+			}
+			clamp_variable = {
+				var = RE4.RE4_investment_in_finland
+				min = -0.25
+				max = 0
+			}
+		}
 
 		IF = {
 			limit = { original_tag = RE4 }
@@ -1746,6 +1825,19 @@ joint_focus = {
 	}
 
 	completion_reward_joint_member = {
+		
+		IF = {
+			limit = { original_tag = RED }
+			add_to_variable = {
+				RE4.RE4_investment_in_finland = -0.01
+				tooltip = RE4_investment_in_finland_tt
+			}
+			clamp_variable = {
+				var = RE4.RE4_investment_in_finland
+				min = -0.25
+				max = 0
+			}
+		}
 
 		IF = {
 			limit = { original_tag = RE4 }
@@ -1791,13 +1883,6 @@ joint_focus = {
 	x = 0
 	y = 1
 
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
-
 	available = { 
 		any_country = {
 			original_tag = RE4
@@ -1829,6 +1914,19 @@ joint_focus = {
 	}
 
 	completion_reward_joint_originator = {
+		
+		IF = {
+			limit = { original_tag = RED }
+			add_to_variable = {
+				RE4.RE4_investment_in_finland = -0.01
+				tooltip = RE4_investment_in_finland_tt
+			}
+			clamp_variable = {
+				var = RE4.RE4_investment_in_finland
+				min = -0.25
+				max = 0
+			}
+		}
 
 		IF = {
 			limit = { original_tag = RE4 }
@@ -1849,6 +1947,19 @@ joint_focus = {
 	}
 
 	completion_reward_joint_member = {
+		
+		IF = {
+			limit = { original_tag = RED }
+			add_to_variable = {
+				RE4.RE4_investment_in_finland = -0.01
+				tooltip = RE4_investment_in_finland_tt
+			}
+			clamp_variable = {
+				var = RE4.RE4_investment_in_finland
+				min = -0.25
+				max = 0
+			}
+		}
 
 		IF = {
 			limit = { original_tag = RE4 }
@@ -1893,13 +2004,6 @@ joint_focus = {
 	x = 0
 	y = 1
 
-	allow_branch = {
-		OR = {
-			original_tag = RED
-			original_tag = RE4
-		}
-	}
-
 	available = { 
 		any_country = {
 			original_tag = RE4
@@ -1930,9 +2034,25 @@ joint_focus = {
 
 	completion_reward = {
 
+		add_dynamic_modifier = {
+			modifier = RE4_investment_in_finland_dynamic_modifier
+		}
 	}
 
 	completion_reward_joint_originator = {
+		
+		IF = {
+			limit = { original_tag = RED }
+			add_to_variable = {
+				RE4.RE4_investment_in_finland = -0.01
+				tooltip = RE4_investment_in_finland_tt
+			}
+			clamp_variable = {
+				var = RE4.RE4_investment_in_finland
+				min = -0.25
+				max = 0
+			}
+		}
 
 		IF = {
 			limit = { original_tag = RE4 }
@@ -1991,6 +2111,19 @@ joint_focus = {
 	}
 
 	completion_reward_joint_member = {
+		
+		IF = {
+			limit = { original_tag = RED }
+			add_to_variable = {
+				RE4.RE4_investment_in_finland = -0.01
+				tooltip = RE4_investment_in_finland_tt
+			}
+			clamp_variable = {
+				var = RE4.RE4_investment_in_finland
+				min = -0.25
+				max = 0
+			}
+		}
 
 		IF = {
 			limit = { original_tag = RE4 }
