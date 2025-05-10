@@ -2911,7 +2911,7 @@ country_event = { #체리노의 운명
 		remove_ideas = RED_threat_of_coup_5
 		country_event = {
 			id = RED_minori_event.13
-			days = 5
+			days = 6
 		}
 	}
 }
@@ -2960,6 +2960,12 @@ country_event = { #토모에의 운명
 		REC = {
 			RED_Tomoe = {
 				retire = yes
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = RED_minori_event.12
+				days = 6
 			}
 		}
 		remove_ideas = RED_office_ss_sabo_idea

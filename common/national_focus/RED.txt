@@ -12942,9 +12942,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#이계인 사회통합 지원
+		#푸딩 배급
 		id = RED_procom_focus_4
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_RED_pudding
 		prerequisite = {
 			focus = RED_procom_focus_1
 			focus = RED_procom_focus_5
@@ -12955,6 +12955,12 @@ focus_tree = {
 		relative_position_id = RED_procom_focus_1
 		cost = 4
 		completion_reward = {
+			add_timed_idea = {
+				idea = RED_additional_pudding
+				days = 720
+			}
+			set_country_flag = RED_got_pudding_flag
+			custom_effect_tooltip = RED_long_live_the_workers_government_tt
 		}
 	}
 	focus = {
@@ -14929,10 +14935,6 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
-			add_timed_idea = {
-				idea = RED_additional_pudding
-				days = 720
-			}
 			set_country_flag = RED_got_pudding_flag
 			custom_effect_tooltip = RED_long_live_the_workers_government_tt
 		}

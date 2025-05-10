@@ -1439,5 +1439,58 @@ characters = {
 			}
 		}
 	}
+
+	## 스웨덴 사회민주노동자당
+	SWE_ernst_wigforss={
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			advisor={
+				slot = political_advisor
+				idea_token = SWE_ernst_wigforss
+				allowed = {
+					original_tag  = SWE	
+				}
+				traits  = {
+					financial_expert
+				}
+				available = {
+					is_country_leader = no
+				}
+			}
+
+			name=SWE_ernst_wigforss
+			portraits={
+				army={
+					large ="GFX_portrait_SWE_ernst_wigforss"
+					small = "GFX_portrait_SWE_ernst_wigforss_small"
+				}
+
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny"}
+			}
+
+			advisor={
+				slot = political_advisor
+				idea_token = SWE_ernst_wigforss
+				allowed  = {
+						original_tag  = SWE
+					}
+					traits  = {
+						captain_of_industry 
+					}
+			}
+			name=SWE_ernst_wigforss
+			portraits={
+				army={
+					small="GFX_idea_generic_political_advisor_europe_3"
+				}
+			}
+		}
+	}
 }
 

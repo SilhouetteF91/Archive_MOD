@@ -469,7 +469,7 @@ ideas = {
 
 			modifier = {
 				min_export = 0
-				trade_opinion_factor = -2
+				trade_opinion_factor = -1
 				trade_laws_cost_factor = 0.50
 				lend_lease_tension = 0.75
 				cic_construction_boost = -0.1

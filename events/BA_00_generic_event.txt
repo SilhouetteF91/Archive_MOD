@@ -1219,6 +1219,8 @@ country_event = { #궤간
 				modifier = BA_interchangeable_gauge
 			}
 		}
+		set_country_flag = BA_can_remove_isolation_flag
+		custom_effect_tooltip = BA_factoriesof_new_world_tt
 	}
 	option = { #협궤
 		name = Highlander.15.b
@@ -1255,6 +1257,8 @@ country_event = { #궤간
 				modifier = BA_interchangeable_gauge
 			}
 		}
+		set_country_flag = BA_can_remove_isolation_flag
+		custom_effect_tooltip = BA_factoriesof_new_world_tt
 		custom_effect_tooltip = Highlander.15.b_tt
 		custom_effect_tooltip = BA_highlander_invest_big_tt
 		add_to_variable = {
@@ -1305,6 +1309,8 @@ country_event = { #궤간
 				modifier = BA_interchangeable_gauge
 			}
 		}
+		set_country_flag = BA_can_remove_isolation_flag
+		custom_effect_tooltip = BA_factoriesof_new_world_tt
 	}
 	option = { #광궤를 쓰자
 		name = Highlander.15.e
@@ -1352,6 +1358,8 @@ country_event = { #궤간
 				modifier = BA_interchangeable_gauge
 			}
 		}
+		set_country_flag = BA_can_remove_isolation_flag
+		custom_effect_tooltip = BA_factoriesof_new_world_tt
 	}
 }
 

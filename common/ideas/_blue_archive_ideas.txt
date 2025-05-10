@@ -874,6 +874,7 @@ ideas = {
 					country_event = Highlander.15
 				}
 				modifier = {
+					trade_opinion_factor = -0.35
 					research_speed_factor = -0.05
 					global_building_slots = -3.0
 					production_speed_buildings_factor = -0.10
