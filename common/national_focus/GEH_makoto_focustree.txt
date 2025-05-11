@@ -4400,8 +4400,10 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = { focus = GEM_first_vienna_award focus = GEM_treaty_with_the_soviet_union }
 		bypass = {
-			has_war_with = TRM
-			NOT = { country_exists = TRM }
+			OR = {
+				has_war_with = TRM
+				NOT = { country_exists = TRM }
+			}
 		}
 		cancel = {
 			OR = {
