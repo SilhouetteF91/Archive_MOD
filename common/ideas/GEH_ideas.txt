@@ -519,6 +519,7 @@ ideas = {
 
 			modifier = {
 				stability_factor = 0.05
+				consumer_goods_factor = -0.05
 				political_power_factor = 0.1
 			}
 		}
@@ -536,7 +537,29 @@ ideas = {
 
 			modifier = {
 				stability_factor = 0.05
+				consumer_goods_factor = -0.05
 				political_power_factor = 0.15
+			}
+		}
+
+		GEH_denazification = { # 탈나치주의
+			picture = generic_fascism_banned
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription = 0.02
+				custom_modifier_tooltip = GEH_denazification_tt
+			}
+
+			targeted_modifier = {
+				tag = NSD
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 		}
 
@@ -1246,7 +1269,7 @@ ideas = {
 		}
 
 		GEM_geh_leadership = { #선도부의 치안 유지
-			picture = generic_neutrality_drift_bonus
+			picture = GEH_prefect_team_armband
 			allowed = {
 				always = no
 			}
@@ -1264,10 +1287,11 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.5
 				stability_weekly = 0.006
-				stability_factor = 0.40
+				stability_factor = 0.30
 				resistance_target = -0.05
 				resistance_damage_to_garrison = -0.10
 			}
+
 			targeted_modifier = {
 				tag = GEH
 				cic_to_target_factor = 0.10

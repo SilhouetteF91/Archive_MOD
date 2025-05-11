@@ -319,7 +319,7 @@ bookmarks = {
 			history = GEH_GATHERING_STORM_DESC
 			ideology = neutrality
 			ideas = {
-				BA_exiles_of_the_future
+				GEH_luxembourg_rules
                 GEH_popular_support_1
                 GEH_individualism_low
 			}

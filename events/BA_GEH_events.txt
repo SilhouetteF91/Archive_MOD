@@ -2807,6 +2807,44 @@ country_event = { #일본에서의 여행
 	}
 }
 
+country_event = { #탈나치주의
+	id = GEH.event.2004
+	title = GEH.event.2004.t
+	desc = GEH.event.2004.desc
+
+	picture = GFX_report_event_ITA_partisans
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GEM
+		has_idea = GEM_geh_leadership
+		GEH = { has_idea = GEH_denazification }
+		country_exists = GEH
+	}
+
+	option = { 
+		name = GEH.event.2004.a
+		remove_ideas = GEM_geh_leadership
+		GEH = { country_event = { id = GEH.event.2005 } }
+	}
+}
+
+country_event = { #탈나치주의
+	id = GEH.event.2005
+	title = GEH.event.2005.t
+	desc = GEH.event.2004.desc
+
+	picture = GFX_report_event_ITA_partisans
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.2005.a
+
+	}
+}
+
 # 완전한 규율을 장악한 게헨나 선도부
 news_event = {
 	id = GEH_news.1

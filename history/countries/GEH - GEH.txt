@@ -252,6 +252,7 @@ add_ideas = {
 	BA_a_divided_academy
     GEH_popular_support_1
 	GEH_luxembourg_rules
+	GEH_denazification
 }
 
 add_intel = {
