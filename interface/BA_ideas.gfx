@@ -799,6 +799,14 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/geh/GEH_ogas.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_GEH_denazification"
+		textureFile = "gfx/interface/ideas/geh/GEH_denazification.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_gun_and_cure"
+		textureFile = "gfx/interface/ideas/geh/GEH_gun_and_cure.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_BA_a_divided_academy"
 		textureFile = "gfx/interface/ideas/geh/BA_a_divided_academy.tga"
 	}

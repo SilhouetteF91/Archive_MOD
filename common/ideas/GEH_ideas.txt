@@ -543,7 +543,7 @@ ideas = {
 		}
 
 		GEH_denazification = { # 탈나치주의
-			picture = generic_fascism_banned
+			picture = GEH_denazification
 
 			allowed = { always = no }
 
@@ -1287,7 +1287,7 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.5
 				stability_weekly = 0.006
-				stability_factor = 0.30
+				stability_factor = 0.40
 				resistance_target = -0.05
 				resistance_damage_to_garrison = -0.10
 			}
