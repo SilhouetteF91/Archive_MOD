@@ -23,6 +23,12 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_decision_category_Trinity_border"
+		texturefile = "gfx/interface/decisions/decision_category_Trinity_border.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_decision_scissors"
 		texturefile = "gfx/interface/decisions/decision_scissors.tga"
 		legacy_lazy_load = no

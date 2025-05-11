@@ -6609,7 +6609,7 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 11
-			tag = TGH
+			tag = TRM
 		}
 	}
 	continuous_focus_position = { x = 0 y = 2300 }
@@ -6630,7 +6630,7 @@ focus_tree = {
 		icon = GFX_focus_TRN_Suzumi
 		x = 12
 		y = 0
-		cost = 5
+		cost = 4
 
 		available = {
 			OR = {
@@ -6905,6 +6905,8 @@ focus_tree = {
 				specialization = specialization_land
 				value = 0.5
 			}
+
+			activate_targeted_decision = { decision = TRN_expansion_of_KWG target = TRM }
 		}
 	}
 
@@ -6999,6 +7001,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = trinity.1
+			set_variable = { TRN_Mika_Honor_var = 50 }
 		}
 	}
 
@@ -7024,14 +7027,18 @@ focus_tree = {
 			country_event = trinity.3
 		}
 		completion_reward = {
+			set_temp_variable = { TRN_Honor_change = -5 }
+			TRN_add_Honor = yes
+
 			country_event = trinity.4
 			add_political_power = 100
-			add_country_leader_trait = TRM_supreme_commander
+			#add_country_leader_trait = TRM_supreme_commander
 			hidden_effect = {
 				country_event = { id = trnfla.13 days = 20 } # 나치즘
 				country_event = { id = trnfla.15 days = 40 } # 동행인
-				country_event = { id = trnfla.14 days = 60 } # 충성경쟁
+				#country_event = { id = trnfla.14 days = 60 } # 충성경쟁
 				country_event = { id = trinity.22 days = 43 } # 충성 조항
+				set_variable = { TRN_Mika_Honor_var = 50 }
 			}
 		}
 	}
@@ -7084,6 +7091,8 @@ focus_tree = {
 			country_event = { id = trinity.21 days = 50 random_days = 50 } # 트리니티 의용군단
 		}
 		completion_reward = {
+			set_temp_variable = { TRN_Honor_change = -10 }
+			TRN_add_Honor = yes
 			add_popularity = { ideology = democratic popularity = -0.06 }
 			add_popularity = { ideology = communism popularity = -0.06 }
 			add_stability = 0.05
@@ -7092,7 +7101,7 @@ focus_tree = {
 			
 			hidden_effect = {
 				country_event = { id = trinity.22 days = 15 } # 충성조항
-				country_event = { id = trinity.22 days = 15 } # 한스 프리체
+				country_event = { id = trinity.39 days = 70 } # 한스 프리체
 			}
 		}
 	}
@@ -7117,6 +7126,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_cosmetic_tag = TRINITY_REICH
+			set_country_flag = TRN_mika_honor_activate
 			if = {
 				limit = { has_idea = TRN_broken_balance_ns }
 				remove_ideas = TRN_broken_balance_ns
@@ -7135,7 +7145,6 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-			set_variable = { TRN_Mika_Honor_var = 50 }
 				set_party_name = {
 	    			ideology = fascism
     				long_name = MIKA_FASCISM_LONG
@@ -7154,6 +7163,7 @@ focus_tree = {
 				country_event = { id = trinity.36 days = 200 } # 안보 상황
 				country_event = { id = trinity.37 days = 140 } # 소규모 동아리들의 운명
 			}
+			unlock_decision_category_tooltip = TRN_Mika_honor_decision_cat
 		}
 	}
 
@@ -7318,6 +7328,7 @@ focus_tree = {
 			}
 			add_trait = {
 				character = TRN_dnxkwmal_tkznfkzh
+				slot = political_advisor
 				trait = TRM_defender_of_faith
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -7631,14 +7642,19 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			NOT = { has_idea = TRN_political_instability_ns }
+			NOT = { 
+				has_idea = TRN_political_instability_ns 
+				has_idea = TRN_broken_balance_ns
+			}
 		}
 
 		ai_will_do = {
 
 		}
 		completion_reward = {
-
+			unlock_decision_category_tooltip = TRN_trinity_world_cat
+			activate_targeted_decision = { target = TRM decision = TRN_lend_our_support }
+			activate_targeted_decision = { target = TRM decision = TRN_international_propaganda }
 		}
 	}
 
@@ -7668,6 +7684,68 @@ focus_tree = {
 
 		}
 	}
+	
+	###
+	### 붉은겨울 외교
+	###
+	focus = { # 북방 외교
+		id = TRN_northern_kivotos_dip
+		icon = GFX_focus_TRN_northern_kivotos_dip
+		x = 6
+		y = 1
+		relative_position_id = TRN_kivotos_dip
+		cost = 5
+
+		available = { }
+		prerequisite = { focus = TRN_kivotos_dip }
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # 붉은겨울과의 친선
+		id = TRN_new_friend
+		icon = GFX_focus_chi_mission_to_the_RED
+		x = 1
+		y = 1
+		relative_position_id = TRN_northern_kivotos_dip
+		cost = 5
+
+		available = { }
+		prerequisite = { focus = TRN_northern_kivotos_dip }
+		mutually_exclusive = { focus = TRN_invasion_of_redwinter }
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # 붉은겨울과의 친선
+		id = TRN_invasion_of_redwinter
+		icon = GFX_focus_attack_RED
+		x = -1
+		y = 1
+		relative_position_id = TRN_northern_kivotos_dip
+		cost = 5
+
+		available = { }
+		prerequisite = { focus = TRN_northern_kivotos_dip }
+		mutually_exclusive = { focus = TRN_new_friend }
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
 
 	###
 	### 폴란드 등 동유럽 외교 분기
@@ -7687,7 +7765,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
+			activate_targeted_decision = { target = POL decision = TRN_border_fortifications }
 		}
 	}
 
@@ -7699,7 +7777,22 @@ focus_tree = {
 		relative_position_id = TRN_poland_problem
 		cost = 3
 
-		available = { }
+		available = {
+			OR = {
+				LIT = { 
+					is_puppet = no 
+					has_war = no
+				}
+				EST = { 
+					is_puppet = no 
+					has_war = no
+				}
+				LAT = { 
+					is_puppet = no 
+					has_war = no
+				}
+			}
+		}
 		prerequisite = { focus = TRN_poland_problem }
 
 		ai_will_do = {
@@ -7711,7 +7804,7 @@ focus_tree = {
 	}
 
 	focus = { # 폴란드 침공! 히히
-		id = TRN_attack_on_poland
+		id = TRN_invasion_of_poland
 		icon = GFX_focus_generic_attack_poland
 		x = 0
 		y = 2
@@ -7726,12 +7819,11 @@ focus_tree = {
 					custom_trigger_tooltip = {
 						tooltip = BA_pol_win_polsovwar
 						has_global_flag = sov_pol_war_superevent_trigger_flag
-						NOT = {
-							has_war_with = SOV
-						}
-						is_puppet = no
+						NOT = { has_war_with = SOV }
 					}
 				}
+				is_puppet = no
+				has_war = no
 			}
 		}
 		prerequisite = { focus = TRN_poland_problem }
@@ -7740,6 +7832,10 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			declare_war_on = {
+				target = POL
+				type = annex_everything
+			}
 
 		}
 	}
@@ -7797,6 +7893,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
+			HYA = {
+				NOT = { has_government = communism }
+				NOT = { has_government = fascism }
+			}
 
 		}
 		prerequisite = { focus = TRN_southern_kivotos_dip }
@@ -7809,27 +7909,71 @@ focus_tree = {
 
 		}
 	}
-	
 
-	focus = { # 발칸
-		id = TRN_balkan_dip
-		icon = GFX_focus_TRN_balkan_dip
-		x = 0
-		y = 2
-		relative_position_id = TRN_southern_kivotos_dip
-		cost = 3
+	focus = { # 헝가리 확보
+		id = TRN_secure_hungary
+		icon = GFX_focus_generic_attack_hungary
+		x = -1
+		y = 1
+		relative_position_id = TRN_support_SHA
+		cost = 4
 
-		available = { }
+		available = {
+			is_subject = no
+			HUN = {
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
 		prerequisite = { 
-			focus = TRN_support_HYA
+			focus = TRN_support_HYA 
+			focus = TRN_support_SHA
+		}
+		#mutually_exclusive = { focus = TRN_support_SHA }
+
+		ai_will_do = {
+
+		}
+
+		will_lead_to_war_with = HUN
+		completion_reward = {
+			create_wargoal = {
+				target = HUN
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+
+	focus = { # 루마니아 유전 지대 확보
+		id = TRN_securing_romanian_oil
+		icon = GFX_focus_generic_attack_romania
+		x = -1
+		y = 1
+		relative_position_id = TRN_support_HYA
+		cost = 4
+
+		available = {
+			is_subject = no
+			ROM = {
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+		bypass = {
+			is_in_faction_with = ROOT
+		}
+		prerequisite = { 
+			focus = TRN_support_HYA 
 			focus = TRN_support_SHA
 		}
 
 		ai_will_do = {
 
 		}
-		completion_reward = {
 
+		will_lead_to_war_with = ROM
+		completion_reward = {
+			activate_targeted_decision = { decision = TRN_romania_give_the_oil target = ROM }
 		}
 	}
 
@@ -7837,16 +7981,16 @@ focus_tree = {
 	### 키보토스, 게헨나랑 전쟁 분기
 	###
 
-	focus = { # 밀레니엄과 친선
-		id = TRN_friendship_millennium
-		icon = GFX_focus_chi_mission_to_the_MIL
+	focus = { # 신성통치령
+		id = TRN_divine_mandate
+		icon = GFX_goal_TRN_domination
 		x = 1
 		y = 1
 		relative_position_id = TRN_eden_accord
 		cost = 5
 
 		available = {
-			NOT = { has_completed_focus = TRN_spiritual_warfare }
+			is_puppet = no
 		}
 		prerequisite = { focus = TRN_eden_accord }
 
@@ -7854,22 +7998,22 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
+		    unlock_decision_category_tooltip = TRM_kivotos_core_states_categories
+            set_country_flag = TRM_Reichskommissariat_flag
 		}
 	}
-	
-	###
-	### 붉은겨울 외교
-	###
-	focus = { # 북방 외교
-		id = TRN_northern_kivotos_dip
-		icon = GFX_focus_TRN_northern_kivotos_dip
+
+	focus = { # 서방 외교
+		id = TRN_western_diplomacy
+		icon = GFX_goal_TRM_New_fascism_friend
 		x = 3
 		y = 1
 		relative_position_id = TRN_eden_accord
 		cost = 5
 
-		available = { }
+		available = {
+
+		}
 		prerequisite = { focus = TRN_eden_accord }
 
 		ai_will_do = {
@@ -7880,17 +8024,20 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 붉은겨울과의 친선
-		id = TRN_new_friend
-		icon = GFX_focus_chi_mission_to_the_RED
+	focus = { # 밀레니엄과 친선
+		id = TRN_friendship_millennium
+		icon = GFX_focus_chi_mission_to_the_MIL
 		x = 1
 		y = 1
-		relative_position_id = TRN_northern_kivotos_dip
+		relative_position_id = TRN_western_diplomacy
 		cost = 5
 
-		available = { }
-		prerequisite = { focus = TRN_northern_kivotos_dip }
-		mutually_exclusive = { focus = TRN_attack_redwinter }
+		available = {
+			country_exists = MIL
+			NOT = { has_war_with = MIL }
+		}
+		prerequisite = { focus = TRN_western_diplomacy }
+		mutually_exclusive = { focus = TRN_invasion_of_millennium }
 
 		ai_will_do = {
 
@@ -7900,17 +8047,19 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 붉은겨울과의 친선
-		id = TRN_attack_redwinter
-		icon = GFX_focus_attack_RED
+	focus = { # 밀레니엄 침공
+		id = TRN_invasion_of_millennium
+		icon = GFX_focus_attack_MIL
 		x = -1
 		y = 1
-		relative_position_id = TRN_northern_kivotos_dip
+		relative_position_id = TRN_western_diplomacy
 		cost = 5
 
-		available = { }
-		prerequisite = { focus = TRN_northern_kivotos_dip }
-		mutually_exclusive = { focus = TRN_new_friend }
+		available = {
+			country_exists = MIL
+		}
+		prerequisite = { focus = TRN_western_diplomacy }
+		mutually_exclusive = { focus = TRN_friendship_millennium }
 
 		ai_will_do = {
 
@@ -7935,6 +8084,10 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			add_opinion_modifier = {
+				target = GEM
+				modifier = BUL_old_enemies
+			}
 
 		}
 	}
@@ -7948,6 +8101,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
+			is_faction_leader = yes
 			has_army_manpower = { size > 249999 }
 			has_war_support > 0.4
 			check_variable = { num_equipment_in_armies_k@infantry_equipment > 16 }
@@ -8051,8 +8205,16 @@ focus_tree = {
 				85 = { is_fully_controlled_by = TRM }
 			}
 		}
+		bypass_effect = {
+			add_state_core = 85
+		}
 
 		completion_reward = {
+			add_state_core = 85
+			declare_war_on = {
+				target = ARI
+				type = annex_everything
+			}
 
 		}
 	}

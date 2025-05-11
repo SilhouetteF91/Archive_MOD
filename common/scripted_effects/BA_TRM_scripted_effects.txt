@@ -2214,26 +2214,8 @@ TRM_remove_inner_faction = {
 	set_country_flag = TRN_delete_power_flag
 }
 
-TRN_decrease_Honor_effect = {
-	add_to_variable = { 
-		TRN_Mika_Honor_var = -10
-		tooltip = TRN_mika_Honor_change_tt
-	}
-	clamp_variable = {
-		var = TRN_Mika_Honor_var
-		min = 0
-		max = 100
-	}
-}
-
-TRN_increase_Honor_effect = {
-	add_to_variable = { 
-		TRN_Mika_Honor_var = 10
-		tooltip = TRN_mika_Honor_change_tt
-	}
-	clamp_variable = {
-		var = TRN_Mika_Honor_var
-		min = 0
-		max = 100
-	}
+TRN_add_Honor = {
+	custom_effect_tooltip = TRN_mika_Honor_change_tt
+	add_to_variable = { TRN_Mika_Honor_var = TRN_Honor_change }
+	clamp_variable = { var = TRN_Mika_Honor_var min = 0 max = 100 }
 }

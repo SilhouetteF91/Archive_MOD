@@ -1,43 +1,4 @@
 BA_kivotos_school_country_category = {
-	TRN_destroy_TVC = {
-		icon = GFX_decision_generic_reorganize_irregulars
-
-		allowed = { always = no }
-		available = { has_completed_focus = TRN_national_guard }
-		visible = {
-			has_idea = TRN_trinity_volunteer_corps_ns
-		}
-		
-		ai_hint_pp_cost = 50
-		custom_cost_text = TRN_destroy_TVC_cost
-		custom_cost_trigger = {
-			NOT = { has_political_power < 50 }
-			OR = {
-				is_ai = yes
-				NOT = { has_equipment = { infantry_equipment < 1000 } }
-			}
-		}
-		days_remove = 30
-
-		ai_will_do = { factor = 10000 } # AI가 안찍으면 자살 함
-
-		complete_effect = {
-			hidden_effect = {
-				add_political_power = -50
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = -1000
-				}
-			}
-		}
-
-		remove_effect = {
-			hidden_effect = {
-				remove_targeted_decision = { decision = TRN_destroy_TVC target = ROOT }
-			}
-			remove_ideas = TRN_trinity_volunteer_corps_ns
-		}
-	}
 }
 TRN_country_collapse_decisions = {
 	TRM_issuance_of_laws_for_local_humanity = {
@@ -7092,21 +7053,48 @@ debug_decisions = {
     }
 }
 TRN_Mika_honor_decision_cat = {
-	TRN_debug_set_honor = {
+	TRN_destroy_TVC = {
 		icon = GFX_decision_generic_reorganize_irregulars
 
-		allowed = { original_tag = TRM }
-		available = {
-			is_debug = yes
-			is_ai = no
-		}
+		allowed = { always = no }
+		available = { has_completed_focus = TRN_national_guard }
 		visible = {
-			is_debug = yes
-			is_ai = no
+			has_idea = TRN_trinity_volunteer_corps_ns
 		}
+		
+		ai_hint_pp_cost = 50
+		custom_cost_text = TRN_destroy_TVC_cost
+		custom_cost_trigger = {
+			NOT = { has_political_power < 50 }
+			OR = {
+				is_ai = yes
+				NOT = { has_equipment = { infantry_equipment < 1000 } }
+			}
+		}
+		days_remove = 30
+
+		ai_will_do = { factor = 10000 } # AI가 안찍으면 자살 함
 
 		complete_effect = {
-			set_variable = { TRN_Mika_Honor_var = 50 }
+			hidden_effect = {
+				add_political_power = -50
+				if = {
+					limit = { is_ai = no }
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -1000
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			set_temp_variable = { TRN_Honor_change = 7 }
+			TRN_add_Honor = yes
+			hidden_effect = {
+				remove_targeted_decision = { decision = TRN_destroy_TVC target = ROOT }
+			}
+			remove_ideas = TRN_trinity_volunteer_corps_ns
 		}
 	}
 	TRN_debug_get_honor = {
@@ -7123,24 +7111,8 @@ TRN_Mika_honor_decision_cat = {
 		}
 
 		complete_effect = {
-			TRN_increase_Honor_effect = yes
-		}
-	}
-	TRN_debug_lost_honor = {
-		icon = GFX_decision_generic_reorganize_irregulars
-
-		allowed = { original_tag = TRM }
-		available = {
-			is_debug = yes
-			is_ai = no
-		}
-		visible = {
-			is_debug = yes
-			is_ai = no
-		}
-
-		complete_effect = {
-			TRN_decrease_Honor_effect = yes
+			set_temp_variable = { TRN_Honor_change = -8 }
+			TRN_add_Honor = yes
 		}
 	}
 
@@ -7193,7 +7165,7 @@ TRN_economic_decisions_category = {
 		state_target = yes
 
 		modifier = {
-			civilian_factory_use = 2
+			civilian_factory_use = 1
 		}
 
 		ai_will_do = {
@@ -7538,6 +7510,197 @@ TRN_economic_decisions_category = {
 			}
 		}
 	}
+	TRN_expansion_of_KWG = {
+		icon = GFX_decision_generic_research
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+
+		}
+
+		cost = 56
+		days_remove = 56
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			#civilian_factory_use = 1
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+
+		remove_effect = {
+			add_research_slot_until_six = yes
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+
+		}
+	}
+}
+TRN_trinity_world_cat = {
+	TRN_lend_our_support = {
+		icon = GFX_decision_CHL_mapuche_liberate_isthmo_amerindia
+		allowed = { always = no }
+		available = {
+			has_war = no
+			NOT = { has_completed_focus = TRN_spiritual_warfare }
+		}
+		visible = {
+			NOT = { has_completed_focus = TRN_spiritual_warfare }
+		}
+		cost = 35
+		days_remove = 365
+		modifier = {
+			send_volunteer_size = 2
+			air_volunteer_cap = 2
+		}
+		ai_will_do = { base = 0 }
+		complete_effect = {
+
+		}
+	}
+	TRN_international_propaganda = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		allowed = { always = no }
+		available = {
+			has_war = no
+			NOT = { has_completed_focus = TRN_spiritual_warfare }
+		}
+		visible = {
+			NOT = { has_completed_focus = TRN_spiritual_warfare }
+		}
+		cost = 56
+		days_remove = 70
+		modifier = {
+			war_support_weekly = 0.005
+			political_power_factor = 0.1
+		}
+		ai_will_do = { base = 1 }
+		complete_effect = {
+			add_political_power = num_of_factories
+			custom_effect_tooltip = TRN_international_propaganda_tt
+
+		}
+	}
+
+	TRN_border_fortifications = {
+		icon = GFX_decision_generic_fortification
+		allowed = { always = no }
+		available = {
+			has_war = no
+			has_completed_focus = TRN_poland_problem
+			OR = {
+				has_full_control_of_state = 807
+				has_full_control_of_state = 86
+				has_full_control_of_state = 67
+				has_full_control_of_state = 762
+			}
+		}
+		visible = {
+
+		}
+		cost = 40
+		days_remove = 40
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = { base = 0 }
+		complete_effect = {
+			hidden_effect = { POL = { country_event = { id = TRMDIP.50 days = 35 } } }
+		}
+		remove_effect = {
+			86 = { # 포즈난
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = {
+							id = 17
+							id = 6558
+						}
+						instant_build = yes
+					}
+					hidden_effect = {
+					}
+				}
+			}
+			807 = { # 단치히
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = {
+							id = 243
+							id = 3295
+							id = 6347
+						}
+						instant_build = yes
+					}
+					hidden_effect = {
+					}
+				}
+			}
+			67 = { # 오버슐레지엔
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = {
+							id = 479
+						}
+						instant_build = yes
+					}
+				}
+			}
+			762 = { # 카토비체
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = {
+							id = 6464
+						}
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	TRN_romania_give_the_oil = {
+		icon = GFX_decision_eng_trade_unions_demand
+		allowed = { always = no }
+		available = {
+			#has_completed_focus = TRN_securing_romanian_oil
+		}
+		visible = {
+
+		}
+		days_remove = 30
+		ai_will_do = { base = 0 }
+		complete_effect = {
+			FROM = {
+				country_event = { id = TRMDIP.52 days = 01 }
+			}
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = FROM
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+
 }
 
 

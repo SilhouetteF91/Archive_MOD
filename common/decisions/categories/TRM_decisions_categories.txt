@@ -135,7 +135,7 @@ TRN_economic_decisions_category = {
 	icon = GFX_decision_category_SOV_merge_designers
 	picture = GFX_decision_cat_picture_soviet_comecon
 	
-	priority = 80
+	priority = 270
 
 	allowed = {
 		original_tag = TRM
@@ -148,11 +148,21 @@ TRN_Mika_honor_decision_cat = {
 	priority = 300
 
 	allowed = { original_tag = TRM }
-	visible = { 
-		is_debug = yes 
-		is_ai = no
+	visible = {
+		has_country_flag = TRN_mika_honor_activate
 	}
 	visible_when_empty = yes
 
 	scripted_gui = TRN_Mika_Honor_window
+}
+TRN_trinity_world_cat = {
+	icon = GFX_decision_category_Trinity_border
+	priority = 280
+
+	allowed = { original_tag = TRM }
+	visible = {
+		#is_faction_leader = yes
+		has_completed_focus = TRN_kivotos_dip
+	}
+	visible_when_empty = yes
 }
