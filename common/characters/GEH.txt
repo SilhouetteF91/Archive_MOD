@@ -677,4 +677,23 @@ characters={
 
 		gender = female
 	}
+
+	GEH_hertha_gordon ={ #헤르타 고르돈
+		name=GEH_hertha_gordon
+		portraits={
+			army={
+				large="GFX_portrait_ITA_generic_female_1"
+			}
+		}
+
+		country_leader={
+			ideology=stalinism
+			desc = ""
+			traits={  }
+			expire="1990.1.1"
+		}
+		#https://de.wikipedia.org/wiki/Hertha_Gordon-Walcher
+
+		gender = female
+	}
 }

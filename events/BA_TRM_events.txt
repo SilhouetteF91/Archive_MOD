@@ -10,10 +10,7 @@ add_namespace = trnfla # 플레이버 이벤트
 add_namespace = trinity 
 add_namespace = trnhonor # 명예
 add_namespace = trinitynews # 뉴스 이벤트
-##
-# TRMDIP 1 ~ 49 리워크 이전 외교 이벤트
-# TRMDIP 50~ 리워크 이후 외교 이벤트
-##
+add_namespace = trnfor
 country_event = {
 	id = TRM_event.1
 	title = TRM_event.1.t
@@ -3679,143 +3676,6 @@ country_event = { 	# 이탈리아 전용 세력 초대
 			country_event = { id = generic.7 hours = 6 }
 		}
 		
-	}
-}
-
-
-country_event = { # 폴란드의 요새화 계획 반대
-	id = TRMDIP.50 
-	title = TRMDIP.50.t
-	desc = TRMDIP.50.d
-	picture = GFX_report_event_generic_read_write
-
-	fire_only_once = no
-	is_triggered_only = yes
-	
-	option = { # 항의
-		name = TRMDIP.50.a
-		ai_chance = { base = 80 }
-		FROM = {
-			
-		}
-		add_opinion_modifier = {
-			target = TRM
-			modifier = SWI_fortified_border
-		}
-	}
-	
-	option = { # 알빠노
-		name = TRMDIP.50.b
-		ai_chance = { base = 20 }
-		add_opinion_modifier = {
-			target = TRM
-			modifier = SWI_fortified_border
-		}
-	}
-}
-
-country_event = { # 폴란드의 외교적 항의
-	id = TRMDIP.51
-	title = TRMDIP.51.t
-	desc = TRMDIP.51.d
-	picture = GFX_report_event_generic_read_write
-
-	fire_only_once = no
-	is_triggered_only = yes 
-	
-	option = { # 알빠노
-		name = TRMDIP.51.a
-		effect_tooltip = {
-			POL = {
-				add_opinion_modifier = {
-					target = TRM
-					modifier = SWI_fortified_border
-				}
-			}
-		}
-	}
-}
-
-country_event = { # 유전지대를 요구한 [TRM.GetAdjective]
-	id = TRMDIP.52
-	title = TRMDIP.52.t
-	desc = TRMDIP.52.d
-	picture = GFX_report_event_generic_read_write
-
-	fire_only_once = no
-	is_triggered_only = yes 
-	
-	option = { # 유전 지대 넘기기
-		name = TRMDIP.52.a
-		ai_chance = {
-			base = 30
-			modifier = {
-				ROM = { has_government = TRM }
-				factor = 10
-			}
-		}
-		effect_tooltip = {
-			ROM = { give_resource_rights = { receiver = TRM state = 46 } }
-			TRM = { add_to_faction = ROM }
-		}
-		hidden_effect = {
-			TRM = { country_event = { id = TRMDIP.53 days = 01 } }
-		}
-		
-	}
-	
-	option = { # 못넘겨
-		name = TRMDIP.52.b
-		ai_chance = {
-			base = 70
-			modifier = {
-				NOT = { ROM = { has_government = TRM } }
-				factor = 999
-			}
-		}
-		effect_tooltip = {
-			TRM = {
-				create_wargoal = {
-					target = ROM
-					type = puppet_wargoal_focus
-				}
-			}
-		}
-		hidden_effect = {
-			TRM = { country_event = { id = TRMDIP.54 days = 01 } }
-		}
-		
-	}
-}
-
-country_event = { # 유전지대를 요구한 [TRM.GetAdjective] - 루마니아의 수락
-	id = TRMDIP.53
-	title = TRMDIP.53.t
-	desc = TRMDIP.53.d
-	picture = GFX_report_event_generic_read_write
-
-	fire_only_once = no
-	is_triggered_only = yes 
-	
-	option = { # 유전 지대 넘기기
-		name = TRMDIP.53.a
-		ROM = { give_resource_rights = { receiver = TRM state = 46 } }
-		TRM = { add_to_faction = ROM }
-		remove_targeted_decision = { decision = TRN_romania_give_the_oil target = ROM }
-	}
-}
-
-country_event = { # 유전지대를 요구한 [TRM.GetAdjective] - 루마니아의 거부
-	id = TRMDIP.54
-	title = TRMDIP.54.t
-	desc = TRMDIP.54.d
-	picture = GFX_report_event_generic_read_write
-
-	fire_only_once = no
-	is_triggered_only = yes 
-	
-	option = { # 
-		name = TRMDIP.54.a
 	}
 }
 ##############################
@@ -8544,8 +8404,6 @@ country_event = { # 바시스 스콜라 시위
 		ai_chance = {
 			base = 100
 		}
-		set_temp_variable = { TRN_Honor_change = 3 }
-		TRN_add_Honor = yes
 		add_popularity = {
 			ideology = fascism
 			popularity = -0.03
@@ -8588,10 +8446,6 @@ country_event = { # 미소노 미카 법
 
 	option = {
 		name = trinity.4.a
-		swap_ruler_traits = {
-			remove = TRN_mika_trait_1
-			add = TRN_mika_trait_2
-		}
 		TRM_remove_inner_faction = yes
 		add_popularity = {
 			ideology = democratic
@@ -8693,6 +8547,10 @@ country_event = { # 가슴에 3발
 			trait = TRN_Hurt_Seia
 		}
 		country_event = { id = trinity.10 days = 04 }
+
+		GEH = {
+			country_event = { id = GEH.flavor_event.26 days = 06 } #유리조노 세이아의 죽음
+		}
 		hidden_effect = {
 			remove_trait = {
 				character = TRN_tpdldk
@@ -8783,8 +8641,8 @@ unit_leader_event = { # 미카의 호스트 취임
 				ideology = tea_party_ideology
 				expire = "1965.1.1.1"
 				traits = { 
-					TRN_mika_trait_1
 					TRM_pater_faction
+					TRN_mika_trait_1
 				}
 				desc = TRN_alzk_leader_desc
 			}
@@ -8905,8 +8763,6 @@ country_event = { # 필리우스 분파의 운명
 		ai_chance = {
 			base = 0
 		}
-		set_temp_variable = { TRN_Honor_change = -7 }
-		TRN_add_Honor = yes
 		add_popularity = { ideology = neutrality popularity = -0.06 }
 		custom_effect_tooltip = TRM_filius_del_tt
 		set_variable = { TRM_internal_factions_remove_var = 2 } #지울 세력 코드
@@ -8967,24 +8823,28 @@ country_event = { # 파테르 분파 내부의 불충
 		TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
 		
 		set_politics = { ruling_party = fascism elections_allowed = no }
-		effect_tooltip = {
+		hidden_effect = {
 			add_country_leader_role = {
 				character = TRN_alzk
 				promote_leader = yes
 				country_leader = {
 					ideology = tea_party_fascism_ideology
-					traits = { TRN_mika_trait_2 }
+					expire = "1978.1.1.1"
+					traits = { 
+						TRN_mika_trait_1
+						TRM_supreme_commander
+					}
 					desc = TRN_alzk_leader_desc
 				}
 			}
-		}
-		
-		hidden_effect = {
-			add_country_leader_trait = TRN_mika_trait_2
-			remove_country_leader_trait = TRM_pater_faction
-			promote_character = {
+			add_country_leader_role = {
 				character = TRN_empty
-				ideology = tea_party_ideology
+				promote_leader = yes
+				country_leader = {
+					ideology = tea_party_ideology
+					expire = "1978.1.1.1"
+					traits = {  }
+				}
 			}
 		}
     }
