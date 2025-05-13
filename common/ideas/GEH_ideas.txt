@@ -2157,7 +2157,7 @@ ideas = {
 			picture = GEH_ogas
 				
 			allowed = {
-				original_tag = GEM
+				original_tag = GEH
 			}
 
 			allowed_civil_war = {
@@ -2183,7 +2183,7 @@ ideas = {
 			picture = GEH_ogas
 				
 			allowed = {
-				original_tag = GEM
+				original_tag = GEH
 			}
 
 			allowed_civil_war = {
@@ -2209,7 +2209,7 @@ ideas = {
 			picture = GEH_ogas
 				
 			allowed = {
-				original_tag = GEM
+				original_tag = GEH
 			}
 
 			allowed_civil_war = {
@@ -2235,7 +2235,7 @@ ideas = {
 			picture = GEH_ogas
 				
 			allowed = {
-				original_tag = GEM
+				original_tag = GEH
 			}
 
 			allowed_civil_war = {
@@ -2261,7 +2261,7 @@ ideas = {
 			picture = state_shintoism
 				
 			allowed = {
-				original_tag = GEM
+				original_tag = GEH
 			}
 
 			allowed_civil_war = {
@@ -2273,19 +2273,19 @@ ideas = {
 			}
 					
 			modifier = {
-				conscription = 0.01
-				industry_air_damage_factor = -0.15
-				army_morale_factor = 0.15
+				conscription = 0.03
+				training_time_army_factor = -0.1
+				fascism_drift = 0.04
 			}
 		}
 
 		GEH_royal_guards = {
 			removal_cost = -1
 
-			picture = state_shintoism
+			picture = GEH_gun_and_cure
 				
 			allowed = {
-				original_tag = GEM
+				original_tag = GEH
 			}
 
 			allowed_civil_war = {
@@ -2300,6 +2300,30 @@ ideas = {
 				conscription = 0.03
 				training_time_army_factor = -0.1
 				fascism_drift = 0.04
+			}
+		}
+
+		GEH_victory_trinity = {
+			removal_cost = -1
+
+			picture = citizen_militia_1
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				is_puppet = no
+			}
+					
+			modifier = {
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				modifier_army_sub_unit_halo_infantry_org_recovery_cap_factor = 0.10
 			}
 		}
 	}

@@ -13,6 +13,8 @@ add_namespace = GEH_BTBOTS
 add_namespace = GEH.flavor_event
 #기본 중점 이벤트
 add_namespace = GEH.event
+#전쟁 관련 이벤트
+add_namespace = GEH.war_event
 #선도부 뉴스 이벤트
 add_namespace = GEH_news
 
@@ -3002,6 +3004,62 @@ country_event = { #탈나치주의
 	option = { 
 		name = GEH.event.2005.a
 
+	}
+}
+
+country_event = { # 에덴 결전 - 질서의 비상
+	id = GEH.war_event.1
+	title = GEH.war_event.1.t
+
+	desc = { 
+		text = GEH.war_event.1.desc.a
+		trigger = {
+			NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+		}
+	}
+
+	desc = { 
+		text = GEH.war_event.1.desc.b
+		trigger = {
+			has_global_flag = GEH_BTBOTS_END_flag
+		}
+	}
+
+	picture = GFX_report_event_generic_reloading
+	
+    is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GEH
+		has_global_flag = BA_Trinity_Gehenna_War
+		NOT = { has_global_flag = TRINITY_WON_THE_GEHENNA }
+		TRM = {
+			OR = {
+				exists = no
+				has_capitulated = yes
+				is_subject = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = { 
+		days = 5
+	}
+	
+	option = { 
+		name = GEH.war_event.1.a
+		if = {
+			limit = {
+				NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+			}
+			add_days_mission_timeout = {
+				mission = GEH_basking_in_the_brilliance_of_their_serenade_mission
+				days = 100
+			}
+		}
+		
+		add_ideas = GEH_victory_trinity
 	}
 }
 
