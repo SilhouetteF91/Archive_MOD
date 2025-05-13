@@ -36,13 +36,13 @@ focus_tree = {
 		scroll_wheel_factor = 1
 	}
 	shortcut = {
-		name = RED_focus_politic_3
-		target = RED_dipose_cherino
+		name = RED_focus_MILITARY_POPULATION
+		target = RED_high_spirited
 		scroll_wheel_factor = 1
 	}
 	shortcut = {
-		name = RED_focus_MILITARY_POPULATION
-		target = RED_high_spirited
+		name = RED_focus_politic_3
+		target = RED_dipose_cherino
 		scroll_wheel_factor = 1
 	}
 	shortcut = {
@@ -13112,7 +13112,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_revcom_focus_2
 		}
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = RED_revcom_focus_2
 		cost = 4
@@ -13130,7 +13130,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_revcom_focus_2
 		}
-		x = 1
+		x = -1
 		y = 1
 		mutually_exclusive = {
 			focus = RED_revcom_focus_3
@@ -13253,7 +13253,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
-		relative_position_id = RED_revcom_focus_4
+		relative_position_id = RED_revcom_focus_3
 		cost = 4
 		completion_reward = {
 		}
@@ -16268,6 +16268,10 @@ focus_tree = {
 			add_to_variable = {
 				RED_prepare = 1
 			}
+			add_timed_idea = {
+				idea = RED_redwinter_military_science
+				days = 600
+			}
 		}
 	}
 	focus = {
@@ -16421,6 +16425,10 @@ focus_tree = {
 			}
 			add_to_variable = {
 				RED_prepare = 1
+			}
+			add_timed_idea = {
+				idea = RED_redwinter_military_science
+				days = 600
 			}
 		}
 	}
@@ -16815,10 +16823,17 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 			OR = {
-				has_completed_focus = RED_army_focus_5
-				has_completed_focus = RED_army_focus_7
+				AND = {
+					OR = {
+						has_completed_focus = RED_army_focus_5
+						has_completed_focus = RED_army_focus_7
+					}
+					NOT = {
+						has_idea = RED_redwinter_military_science
+					}
+				}
+				has_completed_focus = RED_revolution_war_focus_15
 			}
-			has_completed_focus = RED_revolution_war_focus_15
 		}
 		bypass = {
 			NOT = {
