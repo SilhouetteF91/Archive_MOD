@@ -9409,6 +9409,7 @@ shared_focus = { #이계 자산 활용
 	y = 3
 	cost = 5
 	completion_reward = {
+		unlock_decision_category_tooltip = GEK_seize_future_material_reserves_cat
 		if = {
 			limit = {
 				has_idea = GEK_eating_property

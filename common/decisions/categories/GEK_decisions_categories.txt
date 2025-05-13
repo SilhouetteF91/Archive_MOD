@@ -179,7 +179,7 @@ GEK_seize_future_material_reserves_cat = { #미래 소재 먹기
 	priority = 1200
 
 	visible = {
-		has_completed_focus = GEK_RM_kiv_focus_9
+		has_completed_focus = GEK_RM_kiv_focus_16
 	}
 }
 GEK_operational_planning_category = { #작전 입안
