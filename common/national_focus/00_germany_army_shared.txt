@@ -8859,7 +8859,7 @@ shared_focus = { #'자본주의 정신'
 		unlock_decision_tooltip = GEK_insist_spirit_of_capitalism
 	}
 }
-shared_focus = { #애국주의적 개신교
+shared_focus = { #애국주의적 기독교
 	id = GEK_RM_rel_focus_5
 	icon = GFX_focus_FIN_chaplains
 	prerequisite = {
@@ -8871,7 +8871,7 @@ shared_focus = { #애국주의적 개신교
 	y = 2
 	cost = 5
 	completion_reward = {
-		custom_effect_tooltip = GEK_RM_DNVP_focus_2_tt
+		custom_effect_tooltip = GEK_christianity_tt
 		every_controlled_state = {
 			limit = {
 				has_dynamic_modifier = {
@@ -8887,7 +8887,7 @@ shared_focus = { #애국주의적 개신교
 				country_exists = GEM
 			}
 			GEM = {
-				custom_effect_tooltip = GEK_RM_DNVP_focus_2_tt
+				custom_effect_tooltip = GEK_christianity_tt
 				every_controlled_state = {
 					limit = {
 						has_dynamic_modifier = {
@@ -8905,7 +8905,7 @@ shared_focus = { #애국주의적 개신교
 				country_exists = GEH
 			}
 			GEH = {
-				custom_effect_tooltip = GEK_RM_DNVP_focus_2_tt
+				custom_effect_tooltip = GEK_christianity_tt
 				every_controlled_state = {
 					limit = {
 						has_dynamic_modifier = {
@@ -8923,7 +8923,7 @@ shared_focus = { #애국주의적 개신교
 				country_exists = TRM
 			}
 			TRM = {
-				custom_effect_tooltip = GEK_RM_DNVP_focus_2_tt
+				custom_effect_tooltip = GEK_christianity_tt
 				every_controlled_state = {
 					limit = {
 						has_dynamic_modifier = {

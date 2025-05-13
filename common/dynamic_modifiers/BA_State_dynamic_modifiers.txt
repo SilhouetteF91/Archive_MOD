@@ -572,7 +572,7 @@ GEK_protestant_patriotism = { #애국주의적 개신교
 	}
 	icon = GFX_modifiers_GEK_patriot_protestant
 
-	recruitable_population_factor = 0.15
+	recruitable_population_factor = 0.05
 }
 GEK_protestant_patriotism_for_TRM = { #애국주의적 개신교
 	enable = {
@@ -585,7 +585,7 @@ GEK_protestant_patriotism_for_TRM = { #애국주의적 개신교
 	}
 	icon = GFX_modifiers_GEK_patriot_protestant
 
-	recruitable_population_factor = -0.15
+	recruitable_population_factor = -0.05
 }
 GEK_catholic_state = { # 주 모디파이어
 	enable = { always = yes }
