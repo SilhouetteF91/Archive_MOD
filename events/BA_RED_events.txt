@@ -2986,8 +2986,50 @@ country_event = { #지도자
 	desc = RED_minori_event.16.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #비그포르스
 		name = RED_minori_event.16.a
+		retire_country_leader = yes
+		RED_ernst_wigforss = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = scandinavian_social_democracy
+					expire="1965.1.1.1"
+					traits = { captain_of_industry } 
+				}
+				promote_leader = yes
+			}
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.15
+		}
+		add_power_balance_value = {
+			id = RED_minori_bop
+			value = 0.15
+		}
+	}
+	option = { #미노리
+		name = RED_minori_event.16.b
+		retire_country_leader = yes
+		RED_minori = {
+			promote_character = yes
+		}
+		add_power_balance_value = {
+			id = RED_minori_bop
+			value = -0.15
+		}
+	}
+	option = { #집단지도체제
+		name = RED_minori_event.16.c
+		retire_country_leader = yes
+		hidden_effect = {
+			create_country_leader = {
+				name = RED_collective_leadership
+				picture = GFX_portrait_SWE_fallen_riksdag
+				ideology = marxism
+			}
+		}
+		add_country_leader_trait = RED_socialist_cabinet
 	}
 }
 country_event = { #사회주의 신헌법 - 체제

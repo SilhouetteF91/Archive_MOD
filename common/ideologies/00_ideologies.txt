@@ -193,6 +193,10 @@ ideologies = {
 			war_communism = { #전시 공산주의 / 좌익 군사정부
 				can_be_randomly_selected = no
 			}
+			scandinavian_social_democracy = { #(스칸디나비아) 사회민주주의
+				can_be_randomly_selected = no
+				color = { 165 92 118}
+			}
 			
 			left_council_communism = {
 				can_be_randomly_selected = no
