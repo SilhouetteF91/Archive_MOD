@@ -1894,7 +1894,7 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 			visible = {
-				has_completed_focus = KSP_reorganize_nationale_volksarmee
+				has_completed_focus = KPD_reorganize_nationale_volksarmee
 			}
 		}
 	}
@@ -1915,7 +1915,7 @@ characters={
 			planning_skill = 3
 			logistics_skill = 2
 			visible = {
-				has_completed_focus = KSP_reorganize_nationale_volksarmee
+				has_completed_focus = KPD_reorganize_nationale_volksarmee
 			}
 		}
 	}
