@@ -4686,7 +4686,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = SHA_military_change
 			add_to_variable = {
-				SHA_militray_army_attack_factor = 0.1
+				SHA_militray_army_attack_factor = 0.05
 				tooltip = army_attack_factor_tt
 			}
 		}
@@ -4734,7 +4734,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SHA_National_Guard_Expansion
 		search_filters = { }
-		cost = 4
+		cost = 5
 
 		prerequisite = { focus = SHA_National_Guard_Expansion }
 		mutually_exclusive = { }
@@ -4746,7 +4746,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SHA_military_change
 			add_to_variable = {
-				SHA_military_breakthrough_factor = 0.05
+				SHA_military_breakthrough_factor = 0.03
 				tooltip = breakthrough_factor_tt
 			}
 			add_to_variable = {
@@ -4849,7 +4849,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = SHA_military_change
 			add_to_variable = {
-				SHA_militray_army_org_factor = 0.1
+				SHA_militray_army_org_factor = 0.05
 				tooltip = army_org_factor_tt
 			}
 		}

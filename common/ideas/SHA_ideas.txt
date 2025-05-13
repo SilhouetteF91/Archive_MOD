@@ -443,6 +443,11 @@ ideas = {
 			picture = generic_army_problems
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
+			cancel = {
+				NOT = {
+					has_war_with = HYA
+				}
+			}
 			modifier = {
 				army_org_factor = 0.05
 				army_morale_factor = 0.05
