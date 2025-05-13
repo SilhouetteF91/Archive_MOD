@@ -1993,24 +1993,12 @@ RED_invite_trotskists_dec_cat = {
 								unit_leader_event = RED_racing_sov.2
 							}
 						}
-						SOV = {
-							RED_ivan_smirnov = {
-								unit_leader_event = RED_racing_sov.2
-							}
-						}
 					}
 				}
 				65 = {
 					ROOT = {
 						RED_ivan_smirnov = {
 							unit_leader_event = RED_racing_sov.1
-						}
-					}
-					hidden_effect = {
-						SOV = {
-							RED_ivan_smirnov = {
-								unit_leader_event = RED_racing_sov.1
-							}
 						}
 					}
 				}
@@ -2085,24 +2073,12 @@ RED_invite_trotskists_dec_cat = {
 								unit_leader_event = RED_racing_sov.2
 							}
 						}
-						SOV = {
-							RED_ivar_smilga = {
-								unit_leader_event = RED_racing_sov.2
-							}
-						}
 					}
 				}
 				65 = {
 					ROOT = {
 						RED_ivar_smilga = {
 							unit_leader_event = RED_racing_sov.1
-						}
-					}
-					hidden_effect = {
-						SOV = {
-							RED_ivar_smilga = {
-								unit_leader_event = RED_racing_sov.1
-							}
 						}
 					}
 				}
@@ -2177,24 +2153,12 @@ RED_invite_trotskists_dec_cat = {
 								unit_leader_event = RED_racing_sov.2
 							}
 						}
-						SOV = {
-							RED_karl_radek = {
-								unit_leader_event = RED_racing_sov.2
-							}
-						}
 					}
 				}
 				65 = {
 					ROOT = {
 						RED_karl_radek = {
 							unit_leader_event = RED_racing_sov.1
-						}
-					}
-					hidden_effect = {
-						SOV = {
-							RED_karl_radek = {
-								unit_leader_event = RED_racing_sov.1
-							}
 						}
 					}
 				}
@@ -2258,24 +2222,12 @@ RED_invite_trotskists_dec_cat = {
 								unit_leader_event = RED_racing_sov.2
 							}
 						}
-						SOV = {
-							RED_yevgeny_preobrazhensky = {
-								unit_leader_event = RED_racing_sov.2
-							}
-						}
 					}
 				}
 				65 = {
 					ROOT = {
 						RED_yevgeny_preobrazhensky = {
 							unit_leader_event = RED_racing_sov.1
-						}
-					}
-					hidden_effect = {
-						SOV = {
-							RED_yevgeny_preobrazhensky = {
-								unit_leader_event = RED_racing_sov.1
-							}
 						}
 					}
 				}
@@ -2355,24 +2307,12 @@ RED_invite_trotskists_dec_cat = {
 								unit_leader_event = RED_racing_sov.2
 							}
 						}
-						SOV = {
-							RED_aleksandr_shlyapnikov = {
-								unit_leader_event = RED_racing_sov.2
-							}
-						}
 					}
 				}
 				65 = {
 					ROOT = {
 						RED_aleksandr_shlyapnikov = {
 							unit_leader_event = RED_racing_sov.1
-						}
-					}
-					hidden_effect = {
-						SOV = {
-							RED_aleksandr_shlyapnikov = {
-								unit_leader_event = RED_racing_sov.1
-							}
 						}
 					}
 				}
