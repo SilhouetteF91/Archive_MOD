@@ -39,6 +39,11 @@
 @air_command_factor_3 = 0.80
 
 leader_traits = {
+	GEM_rising_star = {
+		random = no
+		stability_factor = 0.05
+		army_core_defence_factor = 0.1
+	}
 	GEK_GEH_megu_trait = {
 		random = no
 		stability_factor = -0.1

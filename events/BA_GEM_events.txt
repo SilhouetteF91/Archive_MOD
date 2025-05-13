@@ -2180,6 +2180,36 @@ country_event = { # 반복되는 군 개혁 이벤트
 	}
 }
 country_event = { # 협력
+	id = GEH_event.100
+	title = GEH_event.100.t
+	desc = GEH_event.100.desc
+	picture = GFX_report_event_gem_makoto_ibuki
+	
+    is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GEM
+		has_global_flag = BA_Trinity_Gehenna_War
+		NOT = { has_global_flag = TRINITY_WON_THE_GEHENNA }
+		TRM = {
+			OR = {
+				exists = no
+				has_capitulated = yes
+				is_subject = yes
+			}
+		}
+	}
+	mean_time_to_happen = { 
+		days = 5
+	}
+	
+	option = { 
+		name = GEH_event.100.a
+		add_country_leader_trait = GEM_rising_star
+	}
+}
+country_event = { # 협력
 	id = GEH_event.255
 	title = GEH_event.255.t
 	desc = GEH_event.255.desc

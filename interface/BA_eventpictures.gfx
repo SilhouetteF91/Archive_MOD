@@ -328,6 +328,11 @@ spriteTypes = {
 	##
 
 	spriteType = {
+		name = "GFX_report_event_gem_makoto_ibuki"
+		texturefile = "gfx/event_pictures/report_event_gem_makoto_ibuki.png"
+	}
+
+	spriteType = {
 		name = "GFX_report_event_akeshiro_rumi_memorial"
 		texturefile = "gfx/event_pictures/report_event_akeshiro_rumi_memorial.png"
 	}
