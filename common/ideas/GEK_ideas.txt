@@ -377,24 +377,12 @@ ideas = {
 			traits = {
 				GEK_GEH_iroha_trait
 			}
-			on_remove = {
-				country_event = {
-					id = GEK_rm_event.23
-					days = 3
-				}
-			}
 		}
 		GEK_ibuki = {
 			name = GEH_dlqnzl
 			picture = GEH_ibuki
 			traits = {
 				GEK_GEH_ibuki_trait
-			}
-			on_remove = {
-				country_event = {
-					id = GEK_rm_event.23
-					days = 3
-				}
 			}
 		}
 		GEK_iori = {
@@ -403,24 +391,12 @@ ideas = {
 			traits = {
 				princess_of_terror
 			}
-			on_remove = {
-				country_event = {
-					id = GEK_rm_event.24
-					days = 3
-				}
-			}
 		}
 		GEK_chinatsu = {
 			name = GEH_chinatsu
 			picture = GEH_iori
 			traits = {
 				GEH_Emergency_Medicine_Club
-			}
-			on_remove = {
-				country_event = {
-					id = GEK_rm_event.24
-					days = 3
-				}
 			}
 		}
 		GEK_ako = {
@@ -429,24 +405,12 @@ ideas = {
 			traits = {
 				financial_expert
 			}
-			on_remove = {
-				country_event = {
-					id = GEK_rm_event.24
-					days = 3
-				}
-			}
 		}
 		GEK_haruna = {
 			name = GEH_gkfnsk
 			picture = GEH_haruna
 			traits = {
 				b_dlsrldlTsmsaltlrrk
-			}
-			on_remove = {
-				country_event = {
-					id = GEK_rm_event.25
-					days = 3
-				}
 			}
 		}
 		GEK_megu = {
@@ -455,12 +419,6 @@ ideas = {
 			traits = {
 				GEK_GEH_megu_trait
 			}
-			on_remove = {
-				country_event = {
-					id = GEK_rm_event.25
-					days = 3
-				}
-			}
 		}
 		GEK_sena = {
 			name = GEH_Himuro_Sena_name
@@ -468,11 +426,61 @@ ideas = {
 			traits = {
 				GEH_Emergency_Medicine_Sena_Club
 			}
-			on_remove = {
-				country_event = {
-					id = GEK_rm_event.25
-					days = 3
-				}
+		}
+		GEK_mine = {
+			name = TRN_dkdhahfl_alsp
+			picture = GFX_TRN_Aomori_Mine_idea
+			traits = {
+				army_concealment_1
+			}
+		}
+		GEK_serina = {
+			name = TRN_tmaltpflsk
+			picture = GFX_TRN_Sumi_Serina_idea
+			traits = {
+				army_logistics_1
+			}
+		}
+		GEK_hanae = {
+			name = TRN_dktkrkdhgkskdp
+			picture = GFX_TRN_Asagao_Hanae_idea
+			traits = {
+				army_regrouping_1
+			}
+		}
+		GEK_ui = {
+			name = TRN_Kozeki_Ui
+			picture = GFX_TRN_Kozeki_Ui_idea
+			traits = {
+				army_armored_1
+			}
+		}
+		GEK_shimiko = {
+			name = TRN_tlalzh
+			picture = GFX_TRN_Enduo_Shimiko_idea
+			traits = {
+				army_CombinedArms_1
+			}
+		}
+		GEK_sakurako = {
+			name = TRN_dnxkwmal_tkznfkzh
+			picture = GFX_TRN_Utazumi_Sakurako_idea
+			traits = {
+				army_infantry_1
+			}
+		}
+		GEK_hinata = {
+			name = hinata
+			picture = GFX_TRN_Wakaba_Hinata_idea
+			traits = {
+				army_commando_1
+			}
+		}
+		GEK_mari = {
+			name = TRN_akfl
+			picture = GFX_TRN_Iochi_Mari_2_idea
+			traits = {
+				army_artillery_1
 			}
 		}
 	}

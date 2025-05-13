@@ -1,5 +1,5 @@
 focus_tree = {
-	id = KPD_focus_tree
+	id = NSD_focus_tree
 	shared_focus = TCA_invite_foreign_investors
 	shared_focus = GEAF_Mefo_return
 	shared_focus = GE1_start_focus

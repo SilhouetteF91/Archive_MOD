@@ -8172,7 +8172,7 @@ shared_focus = { #국가인민군
 	available = {
 		has_government = communism
 	}
-	x = -2
+	x = -12
 	y = 2
 	cost = 5
 	completion_reward = {
@@ -8231,7 +8231,7 @@ shared_focus = { #군주주의 정서
 	available = {
 		has_government = neutrality
 	}
-	x = 4
+	x = -9
 	y = 1
 	cost = 5
 	completion_reward = {
@@ -8386,7 +8386,7 @@ shared_focus = { #동독 통일
 			controls_state = 763
 		}
 	}
-	x = 40
+	x = 7
 	y = 0
 	cost = 2
 	completion_reward = {
@@ -8425,611 +8425,9 @@ shared_focus = { #동독 통일
 	}
 }
 
-shared_focus = {
-	id = GE2_start_the_proletarian_revolution
-	icon = GFX_focus_SWE_refuge_for_revolutionaries
-	mutually_exclusive = {
-		focus = GE2_return_of_the_kaiserreich
-	}
-	prerequisite = { focus = GE2_start_focus }
-
-	x = -4
-	y = 1
-	relative_position_id = GE2_start_focus
-	cost = 2
-	available = {
-		has_government = communism
-	}
-
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL_CHARACTER } 
-
-	completion_reward = {
-		add_political_power = 60
-		add_popularity = {
-			ideology = communism
-			popularity = 0.05
-		}
-	}
-}
-
-shared_focus = {
-	id = GE2_legacy_of_the_spartacus_league
-	text = GER_legacy_of_the_spartacus_league
-	icon = GFX_focus_GER_legacy_of_the_spartacus_league
-	prerequisite = { focus = GE2_start_the_proletarian_revolution }
-	mutually_exclusive = { focus = GE2_proletarian_dictatorship }
-	x = 4
-	y = 1
-	relative_position_id = GE2_start_the_proletarian_revolution
-	cost = 5
-	available = {
-	}
-
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
-
-	completion_reward = {
-
-		add_political_power = 50
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		set_politics = {
-			ruling_party = communism
-			elections_allowed = no
-			last_election = "1933.3.5"
-			election_frequency = 48
-			long_name = GER_communism_arbeit_party_long
-			name = GER_communism_arbeit_party
-		}
-
-		country_event = GE2_event.1
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-		
-
-		if = {
-			limit = { has_character = GEK_otto_ruhle }
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = GER_otto_ruhle
-		}
-
-
-		set_cosmetic_tag = GER_peoples_republic
-	}
-}
-
-shared_focus = {
-	id = GE2_proletarian_dictatorship
-	text = GER_proletarian_dictatorship
-	icon = GFX_focus_GER_proletarian_dictatorship
-	prerequisite = { focus = GE2_start_the_proletarian_revolution }
-	mutually_exclusive = { focus = GE2_legacy_of_the_spartacus_league }
-	x = 6
-	y = 1
-	relative_position_id = GE2_start_the_proletarian_revolution
-	cost = 5
-	available = {
-	}
-
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
-
-	completion_reward = {
-		add_political_power = 50
-		add_war_support = 0.05
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		GER_add_or_modify_politburo = yes
-
-		add_to_variable = { GER_politburo_defensive_war_stability_factor = 0.1 tooltip = defensive_war_stability_factor_tt }
-		add_to_variable = { GER_politburo_offensive_war_stability_factor = 0.2 tooltip = offensive_war_stability_factor_tt }
-	}
-}
-
-shared_focus = {
-	id = GE2_nationalize_industries
-	text = GER_nationalize_industries
-	icon = GFX_focus_generic_communist_industry
-	prerequisite = { focus = GE2_legacy_of_the_spartacus_league focus = GE2_proletarian_dictatorship }
-
-	x = 1
-	y = 2
-	relative_position_id = GE2_legacy_of_the_spartacus_league
-	cost = 10
-	available = {
-		OR = {
-			has_completed_focus = GEAF_prioritize_economic_growth
-			has_completed_focus = GEAF_the_four_year_plan
-		}
-	}
-
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
-
-	completion_reward = {
-
-		every_core_state = {
-			limit = {
-				is_fully_controlled_by = ROOT
-				free_building_slots = {
-					building = industrial_complex
-					size > 1
-					include_locked = yes
-				}
-			}
-			random_select_amount = 3
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		if = {
-			limit = {
-				OR = {
-					has_completed_focus = GEAF_prioritize_economic_growth
-					has_completed_focus = GEAF_the_four_year_plan
-				}
-			}
-			GER_modify_industrial_modifier = yes
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-	
-				add_to_variable = { GER_industrial_capacity_military_industrial_organization_funds_gain = 0.1 tooltip =  military_industrial_organization_funds_gain_tt }
-				add_to_variable  = { GER_industrial_capacity_military_industrial_organization_research_bonus = 0.1 tooltip = military_industrial_organization_research_bonus_tt }
-			}
-			ELSE = {
-				add_to_variable = { GER_industrial_capacity_tank_manufacturer_cost_factor = -0.2 tooltip = tank_manufacturer_cost_factor_tt }
-				add_to_variable = { GER_industrial_capacity_naval_manufacturer_cost_factor = -0.2 tooltip = naval_manufacturer_cost_factor_tt }
-				add_to_variable = { GER_industrial_capacity_aircraft_manufacturer_cost_factor = -0.2 tooltip = aircraft_manufacturer_cost_factor_tt }
-				add_to_variable = { GER_industrial_capacity_materiel_manufacturer_cost_factor = -0.2 tooltip = materiel_manufacturer_cost_factor_tt }
-			}
-			add_to_variable = { GER_industrial_industrial_concern_cost_factor = -0.2 tooltip = industrial_concern_cost_factor_tt }
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		if = {
-			limit = { has_character = KPD_fritz_selbmann }
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = KPD_fritz_selbmann_idea
-		}
-	}
-}
-shared_focus = {
-	id = GE2_ressurect_the_red_front_fighters_league
-	text = GER_ressurect_the_red_front_fighters_league
-	icon = GFX_focus_YUG_pan_slavic_congress
-	prerequisite = { focus = GE2_start_the_proletarian_revolution }
-
-	x = 2
-	y = 1
-	relative_position_id = GE2_start_the_proletarian_revolution
-	cost = 5
-	available = {
-		has_government = communism
-	}
-
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL_CHARACTER } 
-
-	completion_reward = {
-		add_popularity = {
-			ideology = communism
-			popularity = 0.03
-		}
-		add_war_support = 0.05
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		division_template = {
-			name = "Roter Frontkämpferbund Division"
-			priority = 1
-			division_names_group = GEK_MIL_03
-			template_counter = 69 #nice!
-			is_locked = no
-			regiments = {
-				militia = { x = 0 y = 0 }
-				militia = { x = 0 y = 1 }
-				militia = { x = 0 y = 2 }
-				militia = { x = 1 y = 0 }
-				militia = { x = 1 y = 1 }
-			
-			}
-			override_model = GER_militia_alt_0_entity
-		}
-		every_core_state = {
-			limit = {
-				controller = {
-					has_government = communism
-					original_tag = ROOT
-				}
-			}
-			random_select_amount = 3
-
-			create_unit = {
-				division = "division_template =\"Roter Frontkämpferbund Division\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
-				owner = PREV
-				count = 2
-			}
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		add_country_leader_trait = GER_proletarian_leader
-	}
-}
-shared_focus = {
-	id = GE2_reorganize_nationale_volksarmee
-	icon = GFX_focus_generic_full_social_mobilization
-	prerequisite = { focus = GE2_ressurect_the_red_front_fighters_league }
-
-	x = -1
-	y = 1
-	relative_position_id = GE2_ressurect_the_red_front_fighters_league
-	cost = 5
-	available = {
-		has_civil_war = no
-	}
-
-	search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
-
-	completion_reward = {
-		add_command_power = 15
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		BA_GER_modify_army_modifier = yes
-		add_to_variable = { GER_military_planning_speed = -0.1 tooltip = planning_speed_factor_tt }
-		add_to_variable = { GER_military_unit_leader_as_advisor_cp_cost_factor = -0.1 tooltip = unit_leader_as_advisor_cp_cost_factor_tt }
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		if = { 
-			limit = { has_character = GEK_hans_marchwitza }
-			show_unit_leaders_tooltip = GEK_hans_marchwitza
-		}
-		if = { 
-			limit = { has_character = GEK_arno_von_lenski }
-			show_unit_leaders_tooltip = GEK_arno_von_lenski
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-		if = {
-			limit = {
-				has_character = GEK_maximilian_von_weichs
-			}
-			retire_character = GEK_maximilian_von_weichs
-		}
-		if = {
-			limit = {
-				has_character = GEK_ewald_von_kleist
-			}
-			retire_character = GEK_ewald_von_kleist
-		}
-	}
-}
-shared_focus = {
-	id = GE2_political_commissars
-	text = GER_political_commissars
-	icon = GFX_focus_SOV_mobilization_plan
-	prerequisite = { focus = GE2_ressurect_the_red_front_fighters_league }
-
-	x = 1
-	y = 1
-	relative_position_id = GE2_ressurect_the_red_front_fighters_league
-	cost = 5
-	available = {
-	}
-
-	search_filters = { FOCUS_FILTER_POLITICAL }
-
-	completion_reward = {
-		add_popularity = {
-			ideology = communism
-			popularity = 0.03
-		}
-		add_command_power = 15
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		BA_GER_modify_army_modifier = yes
-		add_to_variable = { GER_military_army_morale_factor = 0.1 tooltip = army_morale_factor_tt }
-		add_to_variable = { GER_military_army_org_factor = -0.05 tooltip = army_org_factor_tt }
-		add_to_variable = { GER_military_command_power_gain_mult = 0.1 tooltip = command_power_gain_mult_tt }		
-	}
-}
-shared_focus = {
-	id = GE2_rapid_army_expansion
-	text = GER_rapid_army_expansion
-	icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
-	prerequisite = { focus = GE2_reorganize_nationale_volksarmee }
-	prerequisite = { focus = GE2_political_commissars }
-
-	x = 1
-	y = 1
-	relative_position_id = GE2_reorganize_nationale_volksarmee
-	cost = 10
-	available = {
-	}
-
-	search_filters = { FOCUS_FILTER_MANPOWER }
-
-	completion_reward = {
-
-
-		GER_add_or_modify_politburo = yes
-		add_to_variable = { GER_politburo_mobilization_laws_cost_factor = -0.15 tooltip = mobilization_laws_cost_factor_tt }
-		add_to_variable = { GER_politburo_conscription_factor = 0.05 tooltip = conscription_factor_tt }
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		BA_GER_modify_army_modifier = yes
-		add_to_variable = { GER_military_mobilization_speed = 0.1 tooltip = mobilization_speed_tt }
-		add_to_variable = { GER_military_experience_gain_army_factor = -0.1 tooltip = experience_gain_army_factor_tt }
-		add_to_variable = { GER_military_minimum_training_level = -0.1 tooltip = minimum_training_level_tt }
-
-		
-	}
-}
-
-shared_focus = { #공산 정보부
-	id = GE2_formalize_the_intelligence_wing
-	icon = GFX_focus_generic_whispers
-	prerequisite = {
-		focus = GE2_start_the_proletarian_revolution
-	}
-	relative_position_id = GE2_start_the_proletarian_revolution
-	available = {
-		has_government = communism
-	}
-	x = -2
-	y = 1
-	cost = 5
-	completion_reward = {
-		add_dynamic_modifier = {
-			modifier = GER_communist_intel_modifier
-		}
-		if = {
-			limit = {
-				has_dlc = "La Resistance"
-				has_character = GEK_wilhelm_zaisser
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = GER_wilhelm_zaisser			
-		}
-	}
-}
-	
-shared_focus = {
-	id = GE2_form_the_stasi
-	text = GER_form_the_stasi
-	icon = GFX_focus_GER_form_the_stasi
-	prerequisite = { focus = GE2_formalize_the_intelligence_wing }
-
-	x = 1
-	y = 1
-	relative_position_id = GE2_formalize_the_intelligence_wing
-	cost = 10
-	available = {
-		has_government = communism
-	}
-
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
-
-	completion_reward = {
-
-		IF = {
-			limit = { has_dlc = "La Resistance" }
-
-			IF = {
-				limit = { has_intelligence_agency = no }
-
-				create_intelligence_agency = {
-					name = "Stasi"
-					icon = GFX_intelligence_agency_logo_GER_stasi
-				}
-			}
-			ELSE = {
-				gain_random_agency_upgrade = yes
-			}
-
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			remove_dynamic_modifier = { #for tooltip reasons this appears twice
-				modifier = GER_communist_intel_modifier
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_dynamic_modifier = {
-				modifier = GER_stasi_modifier
-			}
-
-			IF = {
-				limit = {
-					NOT = {
-						has_country_flag = GER_has_done_stasi_focus_flag
-					}
-				}
-				add_to_variable = { GER_communist_intel_operative_slot = 1 tooltip = operative_slot_tt }
-				add_to_variable = { GER_communist_intel_stability_factor = -0.05 tooltip = stability_factor_tt }
-			}
-
-			set_country_flag = GER_has_done_stasi_focus_flag
-		}
-
-		ELSE = {
-
-			remove_dynamic_modifier = { #for tooltip reasons this appears twice
-				modifier = GER_communist_intel_modifier
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_dynamic_modifier = {
-				modifier = GER_stasi_modifier
-			}
-
-			add_to_variable = { GER_communist_intel_subversive_activities_upkeep = -0.3 tooltip = subversive_activites_upkeep_tt }
-			add_to_variable = { GER_communist_intel_stability_factor = -0.05 tooltip = stability_factor_tt }
-		}
-
-		if = {
-			limit = {
-				has_dlc = "La Resistance"
-				has_character = GEK_wilhelm_zaisser
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			GEK_wilhelm_zaisser = {
-				remove_trait = {
-					slot = political_advisor
-					trait = GER_intelligence_coordinator
-				}
-			}
-			GEK_wilhelm_zaisser = {
-				 add_trait = { 
-					 slot = political_advisor
-					 trait = GER_secretary_of_state_security
-				 }
-			 }
-		}
-	}
-}
-shared_focus = {
-	id = GE2_effective_operations
-	text = GER_effective_operations
-	icon = GFX_focus_generic_secret_service_agency
-	prerequisite = { focus = GE2_formalize_the_intelligence_wing }
-
-	x = -1
-	y = 1
-	relative_position_id = GE2_formalize_the_intelligence_wing
-	cost = 5
-	available = {
-	}
-
-	search_filters = {}
-
-	completion_reward = {
-		IF = {
-			limit = {
-				has_dynamic_modifier = {
-					modifier = GER_stasi_modifier
-				}
-			}
-			custom_effect_tooltip = GER_stasi_modifier_intro_tt
-		}
-		ELSE = {
-			custom_effect_tooltip = GER_communist_intel_modifier_intro_tt
-		}
-
-		IF = {
-			limit = { has_dlc = "La Resistance" }
-
-
-			add_to_variable = { GER_communist_intel_subversive_activities_upkeep = -0.25 tooltip = subversive_activites_upkeep_tt }
-			add_to_variable = { GER_communist_intel_intel_network_gain = 0.2 tooltip = intel_network_gain_factor_tt }
-		}
-		ELSE = {
-			add_to_variable = { GER_communist_intel_decryption_factor = 0.2 tooltip = decryption_factor_tt }
-			add_to_variable = { GER_communist_intel_encryption_factor = 0.2 tooltip = encryption_factor_tt }
-
-		}
-	}
-}
-shared_focus = {
-	id = GE2_assemble_red_orchestra
-	text = GER_assemble_red_orchestra
-	icon = GFX_focus_SWI_embrace_rote_drei
-	prerequisite = { focus = GE2_form_the_stasi }
-	prerequisite = { focus = GE2_effective_operations }
-
-	x = 1
-	y = 1
-	relative_position_id = GE2_effective_operations
-	cost = 5
-	available = {
-	}
-
-	search_filters = {}
-
-	completion_reward = {
-
-		IF = {
-			limit = { has_dlc = "La Resistance"}
-
-			create_operative_leader = {
-				name = GER_erich_mielke
-				bypass_recruitment = no 
-				traits = { operative_commando operative_escape_artist operative_master_interrogator }
-				available_to_spy_master = yes  
-				GFX = GFX_portrait_GER_erich_mielke
-				gender = male
-			}
-
-			create_operative_leader = {
-				name = GER_marie_luise_hammerstein
-				bypass_recruitment = no 
-				traits = { operative_natural_orator }
-				available_to_spy_master = yes 
-				nationalities = { GER SOU } 
-				GFX = GFX_portrait_GER_marie_luise_hammerstein
-				gender = female
-			}
-
-			create_operative_leader = {
-				name = GER_rudolf_herrnstadt
-				bypass_recruitment = no 
-				traits = { operative_linguist }
-				available_to_spy_master = yes 
-				nationalities = { GER SOU } 
-				GFX = GFX_portrait_GER_rudolf_herrnstadt
-				gender = male
-			}
-
-			create_operative_leader = {
-				name = GER_ernst_wollweber
-				bypass_recruitment = no 
-				traits = { operative_tough }
-				available_to_spy_master = yes 
-				nationalities = { GER SOU } 
-				GFX = GFX_portrait_GER_ernst_wollweber
-				gender = male
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = GER_stasi_modifier_intro_tt
-
-			add_to_variable = { GER_communist_intel_operative_slot = 2 tooltip = operative_slot_tt }
-		}
-
-		ELSE = {
-			custom_effect_tooltip = GER_stasi_modifier_intro_tt
-			add_to_variable = { GER_communist_intel_decryption_factor = 0.2 tooltip = decryption_factor_tt }
-			add_to_variable = { GER_communist_intel_encryption_factor = 0.2 tooltip = encryption_factor_tt }
-		}
-
-		
-	}
-}
-
 shared_focus = { #제국
 	id = GE2_return_of_the_kaiserreich
 	icon = GFX_focus_ger_return_of_the_kaiser
-	mutually_exclusive = {
-		focus = GE2_start_the_proletarian_revolution
-	}
 	prerequisite = {
 		focus = GE2_start_focus
 	}
@@ -9037,7 +8435,7 @@ shared_focus = { #제국
 	available = {
 		has_government = neutrality
 	}
-	x = 5
+	x = 8
 	y = 1
 	cost = 5
 	completion_reward = {
@@ -9102,7 +8500,7 @@ shared_focus = { #경제 정책
 		focus = GE1_start_focus
 	}
 	relative_position_id = GE1_start_focus
-	x = 8
+	x = -5
 	y = 1
 	cost = 2
 	completion_reward = {
@@ -9192,7 +8590,7 @@ shared_focus = { #전시 산업 재건
 	completion_reward = {
 		random_owned_controlled_state = {
 			limit = {
-				is_core_of = GEK
+				BA_is_GER_core = yes
 			}
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
@@ -9333,9 +8731,9 @@ shared_focus = { #종교 정책
 		focus = GE1_start_focus
 		focus = GE2_start_focus
 	}
-	relative_position_id = GEK_RM_eco_focus_0
-	x = 7
-	y = 0
+	relative_position_id = GE1_start_focus
+	x = 1
+	y = 1
 	cost = 2
 	completion_reward = {
 		country_event = {
@@ -9361,7 +8759,7 @@ shared_focus = { #개신교 지원
 		focus = GEK_RM_rel_focus_3
 	}
 	relative_position_id = GEK_RM_rel_focus_0
-	x = -2
+	x = 0
 	y = 1
 	cost = 2
 	completion_reward = {
@@ -9377,8 +8775,11 @@ shared_focus = { #개신교 지원
 				days = 3
 			}
 		}
-		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = GER_dietrich_bonhoeffer
+		if = {
+			limit = { has_character = GEK_dietrich_bonhoeffer }
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_dietrich_bonhoeffer
+		}
 	}
 }
 shared_focus = { #세속주의 유지
@@ -9392,7 +8793,7 @@ shared_focus = { #세속주의 유지
 		focus = GEK_RM_rel_focus_3
 		focus = GEK_RM_rel_focus_1
 	}
-	x = 0
+	x = -2
 	y = 1
 	cost = 2
 	completion_reward = {
@@ -9440,7 +8841,7 @@ shared_focus = { #'자본주의 정신'
 		focus = GEK_RM_rel_focus_1
 	}
 	relative_position_id = GEK_RM_rel_focus_0
-	x = -3
+	x = -1
 	y = 2
 	cost = 5
 	completion_reward = {
@@ -9463,10 +8864,11 @@ shared_focus = { #애국주의적 개신교
 	icon = GFX_focus_FIN_chaplains
 	prerequisite = {
 		focus = GEK_RM_rel_focus_1
+		focus = GEK_RM_rel_focus_3
 	}
 	relative_position_id = GEK_RM_rel_focus_0
-	x = -2
-	y = 3
+	x = 1
+	y = 2
 	cost = 5
 	completion_reward = {
 		custom_effect_tooltip = GEK_RM_DNVP_focus_2_tt
@@ -9548,8 +8950,8 @@ shared_focus = { #신앙의 자유
 		focus = GEK_RM_rel_focus_7
 	}
 	relative_position_id = GEK_RM_rel_focus_0
-	x = -1
-	y = 2
+	x = 2
+	y = 3
 	cost = 4
 	completion_reward = {
 		custom_effect_tooltip = GEK_RM_rel_focus_6_tt
@@ -9583,8 +8985,8 @@ shared_focus = { #반종교 정책
 		focus = GEK_RM_rel_focus_6
 	}
 	relative_position_id = GEK_RM_rel_focus_0
-	x = 1
-	y = 2
+	x = -2
+	y = 3
 	cost = 4
 	completion_reward = {
 		add_political_power = -30
@@ -9600,7 +9002,7 @@ shared_focus = { #이계 종교 포용
 		focus = GEK_RM_rel_focus_6
 	}
 	relative_position_id = GEK_RM_rel_focus_0
-	x = -1
+	x = 2
 	y = 4
 	cost = 2
 	completion_reward = {
@@ -9625,7 +9027,7 @@ shared_focus = { #트리니티 기독교 포용
 		}
 	}
 	relative_position_id = GEK_RM_rel_focus_0
-	x = -4
+	x = 5
 	y = 5
 	cost = 2
 	completion_reward = {
@@ -9664,7 +9066,7 @@ shared_focus = { #게헨나 토속신앙
 		}
 	}
 	relative_position_id = GEK_RM_rel_focus_0
-	x = -2
+	x = 3
 	y = 5
 	cost = 2
 	completion_reward = {
@@ -9704,7 +9106,7 @@ shared_focus = { #아리우스 기독교 포용
 		}
 	}
 	relative_position_id = GEK_RM_rel_focus_0
-	x = 0
+	x = 1
 	y = 5
 	cost = 2
 	completion_reward = {
@@ -9748,7 +9150,7 @@ shared_focus = { #'고트글로이비히'
 	}
 	relative_position_id = GEK_RM_rel_focus_0
 	x = 0
-	y = 3
+	y = 4
 	cost = 4
 	completion_reward = {
 		add_dynamic_modifier = {
@@ -9767,8 +9169,8 @@ shared_focus = { #성전 선포
 		has_war_with_major = yes
 	}
 	relative_position_id = GEK_RM_rel_focus_0
-	x = 1
-	y = 4
+	x = 0
+	y = 6
 	cost = 2
 	completion_reward = {
 		effect_tooltip = {
@@ -9798,8 +9200,8 @@ shared_focus = { #국가무신론
 		has_government = communism
 	}
 	relative_position_id = GEK_RM_rel_focus_0
-	x = 2
-	y = 3
+	x = -2
+	y = 4
 	cost = 4
 	completion_reward = {
 		add_popularity = {
@@ -9816,8 +9218,8 @@ shared_focus = { #유물론과 생산성
 		focus = GEK_RM_rel_focus_11
 	}
 	relative_position_id = GEK_RM_rel_focus_0
-	x = 3
-	y = 4
+	x = -2
+	y = 6
 	cost = 5
 	completion_reward = {
 		custom_effect_tooltip = GEK_RM_rel_focus_12_tt
@@ -9832,19 +9234,6 @@ shared_focus = { #유물론과 생산성
 			}
 		}
 		unlock_decision_tooltip = GEK_insist_materialism
-	}
-}
-shared_focus = { #교회 억압 정책
-	id = GEK_RM_rel_focus_13
-	icon = GFX_focus_mex_triumph_over_the_cristeros
-	prerequisite = {
-		focus = GEK_RM_rel_focus_7
-	}
-	relative_position_id = GEK_RM_rel_focus_0
-	x = 4
-	y = 3
-	cost = 4
-	completion_reward = {
 		add_timed_idea = {
 			idea = GEK_tax_christian
 			years = 1
@@ -9876,22 +9265,6 @@ shared_focus = { #가톨릭 노동조합
 		unlock_decision_tooltip = GEK_insist_catholic_union
 	}
 }
-shared_focus = { #교황청과의 제휴
-	id = GEK_RM_rel_focus_15
-	icon = GFX_focus_generic_catholic_dominion
-	prerequisite = {
-		focus = GEK_RM_rel_focus_3
-	}
-	relative_position_id = GEK_RM_rel_focus_0
-	x = 5
-	y = 2
-	cost = 2
-	completion_reward = {
-		add_political_power = 50
-		add_stability = 0.05
-		add_war_support = 0.05
-	}
-}
 
 # 학생 중점
 
@@ -9904,7 +9277,7 @@ shared_focus = { #학생 정책
 		focus = GE2_start_focus
 	}
 	relative_position_id = GE1_start_focus
-	x = 27
+	x = 6
 	y = 1
 	cost = 2
 	completion_reward = {
@@ -9914,31 +9287,17 @@ shared_focus = { #학생 정책
 		}
 	}
 }
-shared_focus = { #이해
-	id = GEK_RM_kiv_focus_1
-	icon = GFX_goal_generic_major_alliance
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_0
-	}
-	mutually_exclusive = {
-		focus = GEK_RM_kiv_focus_2
-	}
-	relative_position_id = GEK_RM_kiv_focus_0
-	x = -1
-	y = 1
-	cost = 2
-	completion_reward = {
-		add_stability = 0.05
-	}
-}
 shared_focus = { #경계
 	id = GEK_RM_kiv_focus_2
 	icon = GFX_goal_generic_political_pressure
 	prerequisite = {
 		focus = GEK_RM_kiv_focus_0
 	}
+	available = {
+		Kivotos_tag = no
+	}
 	mutually_exclusive = {
-		focus = GEK_RM_kiv_focus_1
+		focus = GEK_RM_kiv_focus_11
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
 	x = 1
@@ -9948,82 +9307,35 @@ shared_focus = { #경계
 		add_war_support = 0.05
 	}
 }
-shared_focus = { #게헨나 방위대
-	id = GEK_RM_kiv_focus_3
-	icon = GFX_goal_GEH_take_Benriya
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_4
-	}
-	available = {
-		has_completed_focus = GE1_start_focus
-	}
-	relative_position_id = GEK_RM_kiv_focus_0
-	x = -2
-	y = 4
-	cost = 2
-	completion_reward = {
-		add_to_variable = { ROOT.halo_militia_cap = 3 } 
-		GEK = {
-			set_division_template_cap = {  division_template = "Abteilung für Studenten" division_cap = ROOT.halo_militia_cap }
-		}
-		custom_effect_tooltip = GEK_RM_kiv_focus_4_tt
-		capital_scope = {
-			create_unit = {
-				division = "name = \"Gehenna Verteidigung\" division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
-				owner = ROOT
-				count = 3
-			}
-		}
-	}
-}
-shared_focus = { #공동 복무
-	id = GEK_RM_kiv_focus_4
-	icon = GFX_focus_generic_advanced_military_studies
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_11
-	}
-	relative_position_id = GEK_RM_kiv_focus_0
-	x = -3
-	y = 3
-	cost = 5
-	completion_reward = {
-		custom_effect_tooltip = kivotos_halo_add3_tt
-		hidden_effect = {
-			set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-			BA_halo_infantry_cap_edit_effect = yes
-		}
-		add_manpower = 30000
-	}
-}
-shared_focus = { #게헨나 협력자
+shared_focus = { #학생 협력자
 	id = GEK_RM_kiv_focus_5
 	icon = GFX_goal_GEH_bureaucracy
 	prerequisite = {
 		focus = GEK_RM_kiv_focus_11
 	}
 	available = {
-		has_completed_focus = GE1_start_focus
+		Kivotos_tag = no
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
 	x = -1
 	y = 3
 	cost = 2
 	completion_reward = {
-		country_event = {
-			id = GEK_rm_event.22
-			days = 2
-		}
+		unlock_decision_category_tooltip = GEAF_student_collaborator_category
 	}
 }
 shared_focus = { #동등한 권리
 	id = GEK_RM_kiv_focus_11
-	icon = GFX_focus_focus_fra_revolution_utmost
+	icon = GFX_focus_generic_the_giant_wakes
 	prerequisite = {
-		focus = GEK_RM_kiv_focus_1
+		focus = GEK_RM_kiv_focus_0
+	}
+	mutually_exclusive = {
+		focus = GEK_RM_kiv_focus_2
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
-	x = -2
-	y = 2
+	x = -1
+	y = 1
 	cost = 2
 	completion_reward = {
 		if = {
@@ -10043,64 +9355,11 @@ shared_focus = { #동등한 권리
 		}
 	}
 }
-shared_focus = { #고서관 활용
-	id = GEK_RM_kiv_focus_12
-	icon = GFX_focus_SOV_third_rome
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_11
-	}
-	available = {
-		has_completed_focus = GE2_start_focus
-	}
-	relative_position_id = GEK_RM_kiv_focus_0
-	x = -5
-	y = 3
-	cost = 2
-	completion_reward = {
-		add_tech_bonus = {
-			name = GEK_RM_kiv_focus_9
-			bonus = 0.2
-			uses = 2
-			category = mystic_engineering
-		}
-	}
-}
-shared_focus = { #아리우스 특수군
-	id = GEK_RM_kiv_focus_13
-	icon = GFX_focus_POL_belarus_army
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_4	
-	}
-	available = {
-		ARI = {
-			exists = no
-		}
-		controls_state = 85
-	}
-	relative_position_id = GEK_RM_kiv_focus_0
-	x = -4
-	y = 4
-	cost = 2
-	completion_reward = {
-		custom_effect_tooltip = kivotos_halo_add3_tt
-		hidden_effect = {
-			set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-			BA_halo_infantry_cap_edit_effect = yes
-		}
-		capital_scope = {
-			create_unit = {
-				division = "name = \"Arius Spezialtruppe\" division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
-				owner = ROOT
-				count = 3
-			}
-		}
-	}
-}
 shared_focus = { #재교육 캠프
 	id = GEK_RM_kiv_focus_6
 	icon = GFX_focus_generic_military_academy
 	prerequisite = {
-		focus = GEK_RM_kiv_focus_1
+		focus = GEK_RM_kiv_focus_11
 		focus = GEK_RM_kiv_focus_2
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
@@ -10117,109 +9376,36 @@ shared_focus = { #재교육 캠프
 }
 shared_focus = { #이계관리청
 	id = GEK_RM_kiv_focus_7
-	icon = GFX_focus_generic_self_management
+	icon = GFX_focus_research2
+	prerequisite = {
+		focus = GEK_RM_kiv_focus_5
+		focus = GEK_RM_kiv_focus_16
+	}
 	prerequisite = {
 		focus = GEK_RM_kiv_focus_6
 	}
+	available = {
+		Kivotos_tag = no
+	}
 	relative_position_id = GEK_RM_kiv_focus_0
-	x = 1
-	y = 3
+	x = 0
+	y = 4
 	cost = 2
 	completion_reward = {
 		add_research_slot = 1
 	}
 }
-shared_focus = { #제2시민
-	id = GEK_RM_kiv_focus_8
-	icon = GFX_focus_usa_voter_registration_act
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_2
-	}
-	mutually_exclusive = {
-		focus = GEK_RM_kiv_focus_15
-	}
-	relative_position_id = GEK_RM_kiv_focus_0
-	x = 2
-	y = 2
-	cost = 2
-	completion_reward = {
-		add_political_power = 60
-		every_controlled_state = {
-			limit = {
-				OR = {
-					state = 59
-					state = 55
-					state = 51
-					state = 52
-					state = 64
-					state = 85
-					state = 86
-					state = 763
-				}
-			}
-			add_dynamic_modifier = {
-				modifier = GEK_secondary_citizenship
-			}
-		}
-	}
-}
-shared_focus = { #이계인 분리
-	id = GEK_RM_kiv_focus_15
-	icon = GFX_goal_generic_forceful_treaty
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_2
-	}
-	mutually_exclusive = {
-		focus = GEK_RM_kiv_focus_8
-	}
-	relative_position_id = GEK_RM_kiv_focus_0
-	x = 4
-	y = 2
-	cost = 2
-	completion_reward = {
-		add_stability = 0.05
-		every_controlled_state = {
-			limit = {
-				OR = {
-					state = 59
-					state = 55
-					state = 51
-					state = 52
-					state = 64
-					state = 85
-					state = 86
-					state = 763
-				}
-			}
-			add_dynamic_modifier = {
-				modifier = GEK_separation_law
-			}
-		}
-	}
-}
-shared_focus = { #기술 확보
-	id = GEK_RM_kiv_focus_9
-	icon = GFX_focus_generic_university_3
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_15
-		focus = GEK_RM_kiv_focus_8
-	}
-	relative_position_id = GEK_RM_kiv_focus_0
-	x = 5
-	y = 3
-	cost = 2
-	completion_reward = {
-	}
-}
 shared_focus = { #이계 자산 활용
 	id = GEK_RM_kiv_focus_16
-	icon = GFX_focus_generic_industry_1
+	icon = GFX_goal_generic_construct_civ_factory
 	prerequisite = {
-		focus = GEK_RM_kiv_focus_8
-		focus = GEK_RM_kiv_focus_15
+		focus = GEK_RM_kiv_focus_2
+	}
+	available = {
+		Kivotos_tag = no
 	}
 	relative_position_id = GEK_RM_kiv_focus_0
-	x = 3
+	x = 1
 	y = 3
 	cost = 5
 	completion_reward = {
@@ -10236,70 +9422,6 @@ shared_focus = { #이계 자산 활용
 			add_timed_idea = {
 				idea = GEK_eating_property
 				years = 1
-			}
-		}
-	}
-}
-shared_focus = { #게헨나 학생 동원
-	id = GEK_RM_kiv_focus_10
-	icon = GFX_focus_generic_limited_social_mobilization
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_16
-	}
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_7
-	}
-	available = {
-		has_completed_focus = GE1_start_focus
-	}
-	relative_position_id = GEK_RM_kiv_focus_0
-	x = 4
-	y = 4
-	cost = 5
-	completion_reward = {
-		add_war_support = -0.05
-		add_to_variable = { ROOT.halo_militia_cap = 3 } 
-		GEK = {
-			set_division_template_cap = {  division_template = "Abteilung für Studenten" division_cap = ROOT.halo_militia_cap }
-		}
-		custom_effect_tooltip = GEK_RM_kiv_focus_4_tt
-		capital_scope = {
-			create_unit = {
-				division = "name = \"Gehenna Volksstrum\" division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
-				owner = ROOT
-				count = 3
-			}
-		}
-	}
-}
-shared_focus = { #트리니티 학생 동원
-	id = GEK_RM_kiv_focus_14
-	icon = GFX_focus_generic_limited_social_mobilization
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_16
-	}
-	prerequisite = {
-		focus = GEK_RM_kiv_focus_7
-	}
-	available = {
-		has_completed_focus = GE2_start_focus
-	}
-	relative_position_id = GEK_RM_kiv_focus_0
-	x = 2
-	y = 4
-	cost = 5
-	completion_reward = {
-		add_war_support = -0.05
-		add_to_variable = { ROOT.halo_militia_cap = 3 } 
-		GEK = {
-			set_division_template_cap = {  division_template = "Abteilung für Studenten" division_cap = ROOT.halo_militia_cap }
-		}
-		custom_effect_tooltip = GEK_RM_kiv_focus_4_tt
-		capital_scope = {
-			create_unit = {
-				division = "name = \"Trinity Volksstrum\" division_template = \"Abteilung für Studenten\" start_experience_factor = 0.1" 
-				owner = ROOT
-				count = 3
 			}
 		}
 	}
