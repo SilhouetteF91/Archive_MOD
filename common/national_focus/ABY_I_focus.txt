@@ -13894,6 +13894,9 @@ focus = { #키보토스인 우선
 				remove_idea = ABY_idea_katakata
 				add_idea = ABY_idea_katakata3
 			}
+			country_event = {
+				id = ABY_descision_focus_event.15
+			}
 			clr_country_flag = ABY_descision_focus_abydos_2_ongoing_flag
 			set_country_flag = ABY_descision_focus_abydos_2_completed_flag
 			#중점 완료시 얻는 보상
@@ -14868,6 +14871,9 @@ focus = { #키보토스인 우선
 			add_timed_idea = {
 				idea = ABY_idea_jew_comming
 				days = 720
+			}
+			country_event = {
+				id = ABY_new_event.63
 			}
 		}
 	}

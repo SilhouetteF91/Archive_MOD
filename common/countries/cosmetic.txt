@@ -2166,8 +2166,8 @@ ABY_ohung = {
 	color_ui = rgb { 250 150 150 }
 }
 ABY_greater_abydos = {	
-	color = rgb { 25 75 125 }
-	color_ui = rgb { 25 75 125 }
+	color = rgb { 0 100 150 }
+	color_ui = rgb { 0 100 150 }
 }
 ABY_republic = {
 	color = rgb { 50 150 150 }
