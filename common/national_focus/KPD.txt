@@ -1046,6 +1046,8 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = generic_skip_one_line_tt
+
+			country_event = { id = GE2_event.1 hours = 8 }
 			
 
 			if = {
