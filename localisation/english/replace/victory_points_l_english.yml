@@ -78,6 +78,8 @@
  VICTORY_POINTS_3683: "베스프렘"
  VICTORY_POINTS_6720: "죄르"
  VICTORY_POINTS_679: "세게드"
+ VICTORY_POINTS_13205: "오비시엥침"
+ TRM_VICTORY_POINTS_13205: "아우슈비츠"
 
 #코리아
  VICTORY_POINTS_7125: "한성"
@@ -148,17 +150,17 @@
  ABY_VICTORY_POINTS_362: "아리우스-단치히 연방구"
  ABY_VICTORY_POINTS_11506: "밀레니엄-파리 연방구"
  ABY_VICTORY_POINTS_6103: "카이저-런던 연방구"
- ABY_VICTORY_POINTS_6469:0 "스나오마치"
- ABY_VICTORY_POINTS_6377:0 "타마가와"
- ABY_VICTORY_POINTS_6332:0 "니시가와"
- ABY_VICTORY_POINTS_512:0 "시로모리"
- ABY_VICTORY_POINTS_3552:0 "요츠바"
- ABY_VICTORY_POINTS_3522:0 "신키로오"
- ABY_VICTORY_POINTS_9471:0 "키타야마"
- ABY_VICTORY_POINTS_6562:0 "하치"
- ABY_VICTORY_POINTS_9665:0 "키슈"
- ABY_VICTORY_POINTS_3673:0 "아키타"
- ABY_VICTORY_POINTS_3700:0 "자리가와"
+ #ABY_VICTORY_POINTS_6469:0 "스나오마치"    #디시전으로 뺄지 고려중
+ #ABY_VICTORY_POINTS_6377:0 "타마가와"    #디시전으로 뺄지 고려중
+ #ABY_VICTORY_POINTS_6332:0 "니시가와"    #디시전으로 뺄지 고려중
+ #ABY_VICTORY_POINTS_512:0 "시로모리"    #디시전으로 뺄지 고려중
+ #ABY_VICTORY_POINTS_3552:0 "요츠바"    #디시전으로 뺄지 고려중
+ #ABY_VICTORY_POINTS_3522:0 "신키로오"    #디시전으로 뺄지 고려중
+ #ABY_VICTORY_POINTS_9471:0 "키타야마"    #디시전으로 뺄지 고려중
+ #ABY_VICTORY_POINTS_6562:0 "하치"    #디시전으로 뺄지 고려중
+ #ABY_VICTORY_POINTS_9665:0 "키슈"    #디시전으로 뺄지 고려중
+ #ABY_VICTORY_POINTS_3673:0 "아키타"    #디시전으로 뺄지 고려중
+ #ABY_VICTORY_POINTS_3700:0 "자리가와"    #디시전으로 뺄지 고려중
  ABY_VICTORY_POINTS_9515:0 "렝슈부르히"
  ABY_VICTORY_POINTS_11544:0 "넴베르크"
  ABY_VICTORY_POINTS_6421:0 "코부르히"
