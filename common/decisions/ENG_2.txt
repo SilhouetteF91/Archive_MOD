@@ -1038,7 +1038,7 @@ CAN_current_situation_categories = {
 		
 		modifier ={
 			consumer_goods_factor = 0.05
-			democratic_drift = 0.02
+			democratic_drift = 0.01
 			political_power_factor = -0.05
 		}
 		complete_effect = {
@@ -1069,7 +1069,7 @@ CAN_current_situation_categories = {
 		
 		modifier ={
 			consumer_goods_factor = 0.05
-			neutrality_drift = 0.02
+			neutrality_drift = 0.01
 			political_power_factor = -0.05
 		}
 		complete_effect = {
@@ -1100,7 +1100,7 @@ CAN_current_situation_categories = {
 		
 		modifier ={
 			consumer_goods_factor = 0.05
-			communism_drift = 0.02
+			communism_drift = 0.01
 			political_power_factor = -0.05
 		}
 		complete_effect = {
@@ -1321,37 +1321,37 @@ debug_decisions = {
 }
 
 britian_post_war_devastation = {
-	reconstrct_britian = {
-		days_mission_timeout = 700
-		activation = { 
-			NOT = {
-				has_war_with = KAI
-			}
-		}
-		available = {
-			NOT = {
-				tag = ENG
-			}
-		}
-		cancel_trigger = {
-			always = no
-		}
- 		icon = mission_icon     # For GFX_decision_mission_icon
-    	is_good = yes
-		complete_effect = {
-
-		}
-		timeout_effect = {
-        	start_civil_war = {
-				ideology = fascism
-				size = 0.3
-				army_ratio = 0.7
-				navy_ratio = 0.9
-				air_ratio = 0.9
-				keep_all_characters = yes
-			}
-    	}
-	}
+	#reconstrct_britian = {
+	#	days_mission_timeout = 700
+	#	activation = { 
+	#		NOT = {
+	#			has_war_with = KAI
+	#		}
+	#	}
+	#	available = {
+	#		NOT = {
+	#			tag = ENG
+	#		}
+	#	}
+	#	cancel_trigger = {
+	#		always = no
+	#	}
+ 	#	icon = mission_icon     # For GFX_decision_mission_icon
+    #	is_good = yes
+	#	complete_effect = {
+	#
+	#	}
+	#	timeout_effect = {
+    #    	start_civil_war = {
+	#			ideology = fascism
+	#			size = 0.3
+	#			army_ratio = 0.7
+	#			navy_ratio = 0.9
+	#			air_ratio = 0.9
+	#			keep_all_characters = yes
+	#		}
+    #	}
+	#}
 }
 
 britain_colonial_subjugation = {

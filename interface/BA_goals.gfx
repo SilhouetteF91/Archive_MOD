@@ -156,6 +156,10 @@ spriteTypes = {
 		name = "GFX_focus_TRN_balkan_dip"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_balkan_dip.tga"
 	}
+	SpriteType = {
+		name = "GFX_focus_TRN_Integrity_of_Trinity"
+		texturefile = "gfx/interface/goals/TRN/A_무결성검사를꼭하세요.tga"
+	}
 
 	SpriteType = {
 		name = "GFX_focus_BLM_gang_thugs_war_focus"
@@ -571,6 +575,14 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_CAN_parliament"
 		texturefile = "gfx/interface/goals/ENG/CAN_parliament.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_CAN_third_world"
+		texturefile = "gfx/interface/goals/ENG/focus_IMP_third_world.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_CAN_englo_alliance"
+		texturefile = "gfx/interface/goals/ENG/focus_CAN_englo_alliance.tga"
 	}
 	SpriteType = {
 		name = "GFX_goal_generic_parliament"
