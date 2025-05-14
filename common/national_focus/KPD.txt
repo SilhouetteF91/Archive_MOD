@@ -590,6 +590,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = { #반복되는 저항
 		id = KPD_repetition_of_resistance
 		icon = GFX_focus_GER_end_european_communism
@@ -612,6 +613,186 @@ focus_tree = {
 			}
 		}
 	}
+	
+	
+	focus = {
+		id = KPD_ressurect_the_red_front_fighters_league
+		text = GER_ressurect_the_red_front_fighters_league
+		icon = GFX_focus_YUG_pan_slavic_congress
+		prerequisite = { focus = KPD_repetition_of_resistance focus = KPD_establishing_an_army }
+
+		x = -5
+		y = 1
+		relative_position_id = KPD_repetition_of_resistance
+		cost = 5
+		available = {
+			has_government = communism
+			has_capitulated = no
+			num_of_controlled_states > 0
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL_CHARACTER } 
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			add_war_support = 0.05
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			division_template = {
+				name = "Roter Frontkämpferbund Division"
+				priority = 1
+				division_names_group = GEK_MIL_03
+				template_counter = 69 #nice!
+				is_locked = no
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+				
+				}
+				override_model = GER_militia_alt_0_entity
+			}
+			every_core_state = {
+				limit = {
+					controller = {
+						has_government = communism
+						original_tag = ROOT
+					}
+				}
+				random_select_amount = 3
+
+				create_unit = {
+					division = "division_template =\"Roter Frontkämpferbund Division\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+					owner = PREV
+					count = 2
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_country_leader_trait = GER_proletarian_leader
+		}
+	}
+	focus = {
+		id = KPD_reorganize_nationale_volksarmee
+		icon = GFX_focus_generic_full_social_mobilization
+		prerequisite = { focus = KPD_ressurect_the_red_front_fighters_league }
+
+		x = -1
+		y = 1
+		relative_position_id = KPD_ressurect_the_red_front_fighters_league
+		cost = 5
+		available = {
+			has_civil_war = no
+		}
+
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			add_command_power = 15
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			BA_GER_modify_army_modifier = yes
+			add_to_variable = { GER_military_planning_speed = -0.1 tooltip = planning_speed_factor_tt }
+			add_to_variable = { GER_military_unit_leader_as_advisor_cp_cost_factor = -0.1 tooltip = unit_leader_as_advisor_cp_cost_factor_tt }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = { 
+				limit = { has_character = GEK_hans_marchwitza }
+				show_unit_leaders_tooltip = GEK_hans_marchwitza
+			}
+			if = { 
+				limit = { has_character = GEK_arno_von_lenski }
+				show_unit_leaders_tooltip = GEK_arno_von_lenski
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_character = GEK_maximilian_von_weichs
+				}
+				retire_character = GEK_maximilian_von_weichs
+			}
+			if = {
+				limit = {
+					has_character = GEK_ewald_von_kleist
+				}
+				retire_character = GEK_ewald_von_kleist
+			}
+		}
+	}
+	focus = {
+		id = KPD_political_commissars
+		text = GER_political_commissars
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus = KPD_ressurect_the_red_front_fighters_league }
+
+		x = 1
+		y = 1
+		relative_position_id = KPD_ressurect_the_red_front_fighters_league
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			add_command_power = 15
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			BA_GER_modify_army_modifier = yes
+			add_to_variable = { GER_military_army_morale_factor = 0.1 tooltip = army_morale_factor_tt }
+			add_to_variable = { GER_military_army_org_factor = -0.05 tooltip = army_org_factor_tt }
+			add_to_variable = { GER_military_command_power_gain_mult = 0.1 tooltip = command_power_gain_mult_tt }		
+		}
+	}
+	focus = {
+		id = KPD_rapid_army_expansion
+		text = GER_rapid_army_expansion
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		prerequisite = { focus = KPD_reorganize_nationale_volksarmee }
+		prerequisite = { focus = KPD_political_commissars }
+
+		x = 1
+		y = 1
+		relative_position_id = KPD_reorganize_nationale_volksarmee
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+
+
+			GER_add_or_modify_politburo = yes
+			add_to_variable = { GER_politburo_mobilization_laws_cost_factor = -0.15 tooltip = mobilization_laws_cost_factor_tt }
+			add_to_variable = { GER_politburo_conscription_factor = 0.05 tooltip = conscription_factor_tt }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			BA_GER_modify_army_modifier = yes
+			add_to_variable = { GER_military_mobilization_speed = 0.1 tooltip = mobilization_speed_tt }
+			add_to_variable = { GER_military_experience_gain_army_factor = -0.1 tooltip = experience_gain_army_factor_tt }
+			add_to_variable = { GER_military_minimum_training_level = -0.1 tooltip = minimum_training_level_tt }
+
+			
+		}
+	}
+
 	focus = { #트리니티의 끝
 		id = KPD_end_of_trinity
 		icon = GFX_focus_GER_strike_at_the_rising_sun
@@ -644,6 +825,9 @@ focus_tree = {
 			add_state_core = 67
 			add_state_core = 68
 			add_state_core = 763
+			hidden_effect = {
+				country_event = KPD_event.1
+			}
 		}
 	}
 	focus = { #반트리니티 봉기
@@ -692,7 +876,7 @@ focus_tree = {
 	}
 	focus = { #임시 평등 강령
 		id = KPD_temporary_equality_manifesto
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		cost = 2
 		prerequisite = {
 			focus = KPD_replication_of_mystic_weaver
@@ -827,7 +1011,7 @@ focus_tree = {
 	}
 	focus = { #스탈린주의자 숙청
 		id = KPD_expulsion_of_stalinists
-		icon = GFX_focus_GER_proletarian_solidarity
+		icon = GFX_focus_GER_legacy_of_the_spartacus_league
 		cost = 5
 		prerequisite = {
 			focus = KPD_dissolution_of_joint_supreme_command
@@ -844,18 +1028,34 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
-			if = {
-				limit =  { NOT = { has_completed_focus = GE2_legacy_of_the_spartacus_league } }
-				add_country_leader_role = {
-					character = KPD_heinrich_brandler
-					promote_leader = yes
-					country_leader = {
-						ideology = marxism
-						expire = 1965.1.1
-						traits = { GER_pragmatic_trade_unionist } 
-					}
-				}
+			set_cosmetic_tag = GER_peoples_republic
+
+			add_political_power = 50
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+				last_election = "1933.3.5"
+				election_frequency = 48
+				long_name = GER_communism_arbeit_party_long
+				name = GER_communism_arbeit_party
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			country_event = { id = GE2_event.1 hours = 8 }
+			
+
+			if = {
+				limit = { has_character = GEK_otto_ruhle }
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = GER_otto_ruhle
+			}
+			
 			if = { limit = { has_character = KPD_thalman } KPD_thalman = { retire = yes } }
 			if = { limit = { has_character = KPD_richard_sorge } KPD_richard_sorge = { retire = yes } }
 			if = {
@@ -870,7 +1070,7 @@ focus_tree = {
 	}
 	focus = { #반대 좌파 숙청
 		id = KPD_purge_of_anti_leftists
-		icon = GFX_focus_SOV_the_last_purge
+		icon = GFX_focus_GER_proletarian_dictatorship
 		cost = 5
 		prerequisite = {
 			focus = KPD_dissolution_of_joint_supreme_command
@@ -887,6 +1087,13 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			GER_add_or_modify_politburo = yes
+
 			if = { limit = { has_character = KPD_max_seydewitz } KPD_max_seydewitz = { retire = yes } }
 			if = { limit = { has_character = KPD_heinrich_brandler } KPD_heinrich_brandler = { retire = yes } }
 			if = {
@@ -897,6 +1104,254 @@ focus_tree = {
 				limit = { has_idea = KPD_coalition_split_accelerates }
 				remove_ideas = KPD_coalition_split_accelerates
 			}
+
+			add_to_variable = { GER_politburo_defensive_war_stability_factor = 0.1 tooltip = defensive_war_stability_factor_tt }
+			add_to_variable = { GER_politburo_offensive_war_stability_factor = 0.2 tooltip = offensive_war_stability_factor_tt }
+		}
+	}
+
+	focus = { #공산 정보부
+		id = KPD_formalize_the_intelligence_wing
+		icon = GFX_focus_generic_whispers
+		prerequisite = {
+			focus = KPD_dissolution_of_joint_supreme_command
+		}
+		relative_position_id = KPD_dissolution_of_joint_supreme_command
+		available = {
+			has_government = communism
+		}
+		x = -10
+		y = 1
+		cost = 5
+		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = GER_communist_intel_modifier
+			}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+					has_character = GEK_wilhelm_zaisser
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = GER_wilhelm_zaisser			
+			}
+		}
+	}
+		
+	focus = {
+		id = KPD_form_the_stasi
+		text = GER_form_the_stasi
+		icon = GFX_focus_GER_form_the_stasi
+		prerequisite = { focus = KPD_formalize_the_intelligence_wing }
+
+		x = 1
+		y = 1
+		relative_position_id = KPD_formalize_the_intelligence_wing
+		cost = 10
+		available = {
+			has_government = communism
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		completion_reward = {
+
+			IF = {
+				limit = { has_dlc = "La Resistance" }
+
+				IF = {
+					limit = { has_intelligence_agency = no }
+
+					create_intelligence_agency = {
+						name = "Stasi"
+						icon = GFX_intelligence_agency_logo_GER_stasi
+					}
+				}
+				ELSE = {
+					gain_random_agency_upgrade = yes
+				}
+
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				remove_dynamic_modifier = { #for tooltip reasons this appears twice
+					modifier = GER_communist_intel_modifier
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				add_dynamic_modifier = {
+					modifier = GER_stasi_modifier
+				}
+
+				IF = {
+					limit = {
+						NOT = {
+							has_country_flag = GER_has_done_stasi_focus_flag
+						}
+					}
+					add_to_variable = { GER_communist_intel_operative_slot = 1 tooltip = operative_slot_tt }
+					add_to_variable = { GER_communist_intel_stability_factor = -0.05 tooltip = stability_factor_tt }
+				}
+
+				set_country_flag = GER_has_done_stasi_focus_flag
+			}
+
+			ELSE = {
+
+				remove_dynamic_modifier = { #for tooltip reasons this appears twice
+					modifier = GER_communist_intel_modifier
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				add_dynamic_modifier = {
+					modifier = GER_stasi_modifier
+				}
+
+				add_to_variable = { GER_communist_intel_subversive_activities_upkeep = -0.3 tooltip = subversive_activites_upkeep_tt }
+				add_to_variable = { GER_communist_intel_stability_factor = -0.05 tooltip = stability_factor_tt }
+			}
+
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+					has_character = GEK_wilhelm_zaisser
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				GEK_wilhelm_zaisser = {
+					remove_trait = {
+						slot = political_advisor
+						trait = GER_intelligence_coordinator
+					}
+				}
+				GEK_wilhelm_zaisser = {
+					add_trait = { 
+						slot = political_advisor
+						trait = GER_secretary_of_state_security
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = KPD_effective_operations
+		text = GER_effective_operations
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = KPD_formalize_the_intelligence_wing }
+
+		x = -1
+		y = 1
+		relative_position_id = KPD_formalize_the_intelligence_wing
+		cost = 5
+		available = {
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			IF = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GER_stasi_modifier
+					}
+				}
+				custom_effect_tooltip = GER_stasi_modifier_intro_tt
+			}
+			ELSE = {
+				custom_effect_tooltip = GER_communist_intel_modifier_intro_tt
+			}
+
+			IF = {
+				limit = { has_dlc = "La Resistance" }
+
+
+				add_to_variable = { GER_communist_intel_subversive_activities_upkeep = -0.25 tooltip = subversive_activites_upkeep_tt }
+				add_to_variable = { GER_communist_intel_intel_network_gain = 0.2 tooltip = intel_network_gain_factor_tt }
+			}
+			ELSE = {
+				add_to_variable = { GER_communist_intel_decryption_factor = 0.2 tooltip = decryption_factor_tt }
+				add_to_variable = { GER_communist_intel_encryption_factor = 0.2 tooltip = encryption_factor_tt }
+
+			}
+		}
+	}
+	focus = {
+		id = KPD_assemble_red_orchestra
+		text = GER_assemble_red_orchestra
+		icon = GFX_focus_SWI_embrace_rote_drei
+		prerequisite = { focus = KPD_form_the_stasi }
+		prerequisite = { focus = KPD_effective_operations }
+
+		x = 1
+		y = 1
+		relative_position_id = KPD_effective_operations
+		cost = 5
+		available = {
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+
+			IF = {
+				limit = { has_dlc = "La Resistance"}
+
+				create_operative_leader = {
+					name = GER_erich_mielke
+					bypass_recruitment = no 
+					traits = { operative_commando operative_escape_artist operative_master_interrogator }
+					available_to_spy_master = yes  
+					GFX = GFX_portrait_GER_erich_mielke
+					gender = male
+				}
+
+				create_operative_leader = {
+					name = GER_marie_luise_hammerstein
+					bypass_recruitment = no 
+					traits = { operative_natural_orator }
+					available_to_spy_master = yes 
+					nationalities = { GER SOU } 
+					GFX = GFX_portrait_GER_marie_luise_hammerstein
+					gender = female
+				}
+
+				create_operative_leader = {
+					name = GER_rudolf_herrnstadt
+					bypass_recruitment = no 
+					traits = { operative_linguist }
+					available_to_spy_master = yes 
+					nationalities = { GER SOU } 
+					GFX = GFX_portrait_GER_rudolf_herrnstadt
+					gender = male
+				}
+
+				create_operative_leader = {
+					name = GER_ernst_wollweber
+					bypass_recruitment = no 
+					traits = { operative_tough }
+					available_to_spy_master = yes 
+					nationalities = { GER SOU } 
+					GFX = GFX_portrait_GER_ernst_wollweber
+					gender = male
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = GER_stasi_modifier_intro_tt
+
+				add_to_variable = { GER_communist_intel_operative_slot = 2 tooltip = operative_slot_tt }
+			}
+
+			ELSE = {
+				custom_effect_tooltip = GER_stasi_modifier_intro_tt
+				add_to_variable = { GER_communist_intel_decryption_factor = 0.2 tooltip = decryption_factor_tt }
+				add_to_variable = { GER_communist_intel_encryption_factor = 0.2 tooltip = encryption_factor_tt }
+			}
+
+			
 		}
 	}
 	focus = { #산업 국유화
@@ -964,6 +1419,81 @@ focus_tree = {
 			country_event = { id = KPD_event.15 days = 190 }
 			custom_effect_tooltip = KPD_establishment_of_factory_councils_3_tt
 			country_event = { id = KPD_event.16 days = 285 }
+		}
+	}
+	focus = {
+		id = KPD_nationalize_industries
+		text = GER_nationalize_industries
+		icon = GFX_focus_generic_communist_industry
+		prerequisite = { focus = KPD_nationalization_of_industries focus = KPD_establishment_of_factory_councils }
+
+		x = 1
+		y = 2
+		relative_position_id = KPD_nationalization_of_industries
+		cost = 10
+		available = {
+			OR = {
+				has_completed_focus = GEAF_prioritize_economic_growth
+				has_completed_focus = GEAF_the_four_year_plan
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		completion_reward = {
+
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 3
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					OR = {
+						has_completed_focus = GEAF_prioritize_economic_growth
+						has_completed_focus = GEAF_the_four_year_plan
+					}
+				}
+				GER_modify_industrial_modifier = yes
+				IF = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+		
+					add_to_variable = { GER_industrial_capacity_military_industrial_organization_funds_gain = 0.1 tooltip =  military_industrial_organization_funds_gain_tt }
+					add_to_variable  = { GER_industrial_capacity_military_industrial_organization_research_bonus = 0.1 tooltip = military_industrial_organization_research_bonus_tt }
+				}
+				ELSE = {
+					add_to_variable = { GER_industrial_capacity_tank_manufacturer_cost_factor = -0.2 tooltip = tank_manufacturer_cost_factor_tt }
+					add_to_variable = { GER_industrial_capacity_naval_manufacturer_cost_factor = -0.2 tooltip = naval_manufacturer_cost_factor_tt }
+					add_to_variable = { GER_industrial_capacity_aircraft_manufacturer_cost_factor = -0.2 tooltip = aircraft_manufacturer_cost_factor_tt }
+					add_to_variable = { GER_industrial_capacity_materiel_manufacturer_cost_factor = -0.2 tooltip = materiel_manufacturer_cost_factor_tt }
+				}
+				add_to_variable = { GER_industrial_industrial_concern_cost_factor = -0.2 tooltip = industrial_concern_cost_factor_tt }
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = { has_character = KPD_fritz_selbmann }
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = KPD_fritz_selbmann_idea
+			}
 		}
 	}
 }

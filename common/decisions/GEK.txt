@@ -2766,3 +2766,730 @@ GEK_operational_planning_category = {
 		}
 	}
 }
+
+GEAF_student_collaborator_category = {
+	GEAF_pandemonium_invitation = {
+		priority = 11
+
+		icon = GFX_decision_Gehenna_Emblem
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE1_start_focus
+			NOT = { has_decision = GEAF_perfect_team_invitation }
+			NOT = { has_decision = GEAF_club_invitation }
+		}
+		
+		cost = 25
+
+		days_remove = -1
+		
+		modifier = {
+			stability_factor = 0.05
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_pandemonium_invitation_1 = {
+		priority = 10
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE1_start_focus
+			NOT = { has_decision = GEAF_pandemonium_invitation_2 }
+		}
+
+		visible = {
+			has_decision = GEAF_pandemonium_invitation
+		}
+		
+		cost = 25
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_iroha
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_pandemonium_invitation_2 = {
+		priority = 10
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE1_start_focus
+			NOT = { has_decision = GEAF_pandemonium_invitation_1 }
+		}
+
+		visible = {
+			has_decision = GEAF_pandemonium_invitation
+		}
+		
+		cost = 25
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_ibuki
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_perfect_team_invitation = {
+		priority = 11
+
+		icon = GFX_decision_Gehenna_Emblem
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE1_start_focus
+			NOT = { has_decision = GEAF_pandemonium_invitation }
+			NOT = { has_decision = GEAF_club_invitation }
+		}
+		
+		cost = 25
+
+		days_remove = -1
+		
+		modifier = {
+			stability_factor = 0.05
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_perfect_team_invitation_1 = {
+		priority = 10
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE1_start_focus
+			NOT = { has_decision = GEAF_perfect_team_invitation_2 }
+			NOT = { has_decision = GEAF_perfect_team_invitation_3 }
+		}
+
+		visible = {
+			has_decision = GEAF_perfect_team_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_iori
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_perfect_team_invitation_2 = {
+		priority = 10
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE1_start_focus
+			NOT = { has_decision = GEAF_perfect_team_invitation_1 }
+			NOT = { has_decision = GEAF_perfect_team_invitation_3 }
+		}
+
+		visible = {
+			has_decision = GEAF_perfect_team_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_chinatsu
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_perfect_team_invitation_3 = {
+		priority = 10
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE1_start_focus
+			NOT = { has_decision = GEAF_perfect_team_invitation_1 }
+			NOT = { has_decision = GEAF_perfect_team_invitation_2 }
+		}
+
+		visible = {
+			has_decision = GEAF_perfect_team_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_ako
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_club_invitation = {
+		priority = 11
+
+		icon = GFX_decision_Gehenna_Emblem
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE1_start_focus
+			NOT = { has_decision = GEAF_pandemonium_invitation }
+			NOT = { has_decision = GEAF_perfect_team_invitation }
+		}
+		
+		cost = 25
+
+		days_remove = -1
+		
+		modifier = {
+			stability_factor = 0.10
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_club_invitation_1 = {
+		priority = 10
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE1_start_focus
+			NOT = { has_decision = GEAF_club_invitation_2 }
+			NOT = { has_decision = GEAF_club_invitation_3 }
+		}
+
+		visible = {
+			has_decision = GEAF_club_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_haruna
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_club_invitation_2 = {
+		priority = 10
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE1_start_focus
+			NOT = { has_decision = GEAF_club_invitation_1 }
+			NOT = { has_decision = GEAF_club_invitation_3 }
+		}
+
+		visible = {
+			has_decision = GEAF_club_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_megu
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_club_invitation_3 = {
+		priority = 10
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE1_start_focus
+			NOT = { has_decision = GEAF_club_invitation_1 }
+			NOT = { has_decision = GEAF_club_invitation_2 }
+		}
+
+		visible = {
+			has_decision = GEAF_club_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_sena
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_knights_templar_invitation = {
+		priority = 21
+
+		icon = GFX_decision_Trinity_Emblem
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE2_start_focus
+			NOT = { has_decision = GEAF_library_club_invitation }
+			NOT = { has_decision = GEAF_sisterhood_invitation }
+		}
+		
+		cost = 25
+
+		days_remove = -1
+		
+		modifier = {
+			stability_factor = 0.05
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_knights_templar_invitation_1 = {
+		priority = 20
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE2_start_focus
+			NOT = { has_decision = GEAF_knights_templar_invitation_2 }
+			NOT = { has_decision = GEAF_knights_templar_invitation_3 }
+		}
+
+		visible = {
+			has_decision = GEAF_knights_templar_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_mine
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_knights_templar_invitation_2 = {
+		priority = 20
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE2_start_focus
+			NOT = { has_decision = GEAF_knights_templar_invitation_1 }
+			NOT = { has_decision = GEAF_knights_templar_invitation_3 }
+		}
+
+		visible = {
+			has_decision = GEAF_knights_templar_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_serina
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_knights_templar_invitation_3 = {
+		priority = 20
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE2_start_focus
+			NOT = { has_decision = GEAF_knights_templar_invitation_1 }
+			NOT = { has_decision = GEAF_knights_templar_invitation_2 }
+		}
+
+		visible = {
+			has_decision = GEAF_knights_templar_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_hanae
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_sisterhood_invitation = {
+		priority = 21
+
+		icon = GFX_decision_Trinity_Emblem
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE2_start_focus
+			NOT = { has_decision = GEAF_knights_templar_invitation }
+			NOT = { has_decision = GEAF_library_club_invitation }
+		}
+		
+		cost = 25
+
+		days_remove = -1
+		
+		modifier = {
+			stability_factor = 0.05
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_sisterhood_invitation_1 = {
+		priority = 20
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE2_start_focus
+			NOT = { has_decision = GEAF_sisterhood_invitation_2 }
+			NOT = { has_decision = GEAF_sisterhood_invitation_3 }
+		}
+
+		visible = {
+			has_decision = GEAF_sisterhood_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_sakurako
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_sisterhood_invitation_2 = {
+		priority = 20
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE2_start_focus
+			NOT = { has_decision = GEAF_sisterhood_invitation_1 }
+			NOT = { has_decision = GEAF_sisterhood_invitation_3 }
+		}
+
+		visible = {
+			has_decision = GEAF_sisterhood_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_hinata
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_sisterhood_invitation_3 = {
+		priority = 20
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE2_start_focus
+			NOT = { has_decision = GEAF_sisterhood_invitation_1 }
+			NOT = { has_decision = GEAF_sisterhood_invitation_2 }
+		}
+
+		visible = {
+			has_decision = GEAF_sisterhood_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_mari
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_library_club_invitation = {
+		priority = 21
+
+		icon = GFX_decision_Trinity_Emblem
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE2_start_focus
+			NOT = { has_decision = GEAF_knights_templar_invitation }
+			NOT = { has_decision = GEAF_sisterhood_invitation }
+		}
+		
+		cost = 25
+
+		days_remove = -1
+		
+		modifier = {
+			stability_factor = 0.05
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_library_club_invitation_1 = {
+		priority = 20
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE2_start_focus
+			NOT = { has_decision = GEAF_library_club_invitation_1 }
+		}
+
+		visible = {
+			has_decision = GEAF_library_club_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_ui
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GEAF_library_club_invitation_2 = {
+		priority = 20
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			is_can_germay_country_tag = yes
+		}
+
+		available = {
+			has_completed_focus = GE2_start_focus
+			NOT = { has_decision = GEAF_library_club_invitation_2 }
+		}
+
+		visible = {
+			has_decision = GEAF_library_club_invitation
+		}
+		
+		cost = 15
+
+		days_remove = 360
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GEK_shimiko
+				days = 360
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}

@@ -597,6 +597,7 @@
  RED_native_leftists_desc: "총파업에 동참한 현지인들의 지도자 중에는 우리와 비슷한 사상을 공유하고 있는 이들이 여럿 존재합니다. 현지인들과 키보토스인들과의 공동전선 성립을 위해 접촉한 결과, 이들은 혁명 이후 설립된 노동자들의 정부를 지원할 것이라고 약속하였습니다."
  RED_sans_culotte: "무기고 장악"
  RED_crush_local_capitalist_government: "현지 자본주의 정권 분쇄"
+ RED_redwinter_military_science: "붉은겨울 군사과학"
  RED_total_war_for_crashing_counter_revolution: "반혁명 분쇄를 위한 총력전"
  RED_total_war_for_crashing_counter_revolution_tt: "\n이 §Y국민정신§!은 §Y내전§!이 끝나면 §R만료§!됩니다."
  RED_take_publish_club: "출판부 포섭"
@@ -1035,6 +1036,8 @@
  RED_ivan_kupla_tt: "[ROOT.GetNameDef]에서 체리노 반대파들의 §Y쿠데타§!를 준비합니다"
  
 #캐릭터
+ RED_collective_leadership: "과도기 집단지도체제"
+
  RED_cherino: "렌카와 체리노"
  RED_cherino_hot: "온천 체리노"
  RED_Tomoe: "사시로 토모에"
@@ -1569,7 +1572,7 @@
  RED_minori_event.15.d: "구교사는 체리노 정권의 압제를 상징하는 건축물입니다. 수많은 반체제 인사들이 구교사에 갇혀 고생하였지만, 이제는 아닙니다. 하나된 대오 아래, 연대의 정신으로 우리는 그들을 구출할 것입니다."
  RED_minori_event.15.a: "환영합니다, 동지들!"
  RED_minori_event.16.t: "과도정부의 지도자"
- RED_minori_event.16.d: "학생회장의 폭압적인 정치를 끝장낸 지금, 학원과 현지인 조직, 그리고 노동자-농민 계급의 안위를 위하여 헌법을 제정하고 공화국을 구성할 필요가 있습니다. 소수의 조합지도자, 정당의 중직, 좌익이론가 및 학생 등으로 구성된 임시기구인 혁명과도정부를 선언하고 제헌을 위한 준비를 해야 합니다.\n\n 우리는 혁명의 정비와 민중경제의 제고를 위해 과도정부의 지도자를 선출할 수 있는데, 사회민주노동자당의 수정주의적 마르크스주의 경제이론가인 [SWE_ernst_wigforss.getname]와 용역부장인 [RED_minori.getname]가 주요한 후보로 거론되었습니다."
+ RED_minori_event.16.d: "학생회장의 폭압적인 정치를 끝장낸 지금, 학원과 현지인 조직, 그리고 노동자-농민 계급의 안위를 위하여 헌법을 제정하고 공화국을 구성할 필요가 있습니다. 소수의 조합지도자, 정당의 중직, 좌익이론가 및 학생 등으로 구성된 임시기구인 혁명과도정부를 선언하고 제헌을 위한 준비를 해야 합니다.\n\n 우리는 혁명의 정비와 민중경제의 제고를 위해 과도정부의 지도자를 선출할 수 있는데, 사회민주노동자당의 수정주의적 마르크스주의 경제이론가인 [RED_ernst_wigforss.getname]와 용역부장인 [RED_minori.getname]가 주요한 후보로 거론되었습니다."
  RED_minori_event.16.a: "민생경제가 우선이다."
  RED_minori_event.16.b: "결단있는 지도자가 필요하다."
  RED_minori_event.16.c: "그냥 집단지도체제를 채택하자."

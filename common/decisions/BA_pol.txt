@@ -135,8 +135,8 @@ POL_intermarium_at_war = { #바다 사이의 개념
 	}
 	POL_together_trump = { #방위비 납부
 		icon = GFX_decision_generic_factory
-		days_re_enable = 30
-		days_remove = 30
+		days_re_enable = 90
+		days_remove = 60
 		modifier = {
 			civilian_factory_use = 1
 		}

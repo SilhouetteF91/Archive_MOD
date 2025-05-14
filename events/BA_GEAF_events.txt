@@ -11,11 +11,10 @@ country_event = { #Spartacus leader election
 
 	fire_only_once = yes 
 
-	option = { #Brandler
+	option = { # 알렉산더 슈밥 / 좌파 공산주의 계열
 		name = GE2_event.1.a
 		trigger = {
 			has_character = KPD_alexander_schwab
-			OR = { has_completed_focus = KPD_expulsion_of_stalinists has_completed_focus = KPD_purge_of_anti_leftists }
 		}
 
 		ai_chance = {
@@ -34,11 +33,10 @@ country_event = { #Spartacus leader election
 		add_stability = -0.10
 	}
 
-	option = { #Brandler
+	option = { # 하인리히 브랜들러 / 독일 공산당 반대파
 		name = wuw_GER_german_politics.02.a
 		trigger = {
 			has_character = KPD_heinrich_brandler
-			NOT = { has_completed_focus = KPD_expulsion_of_stalinists has_completed_focus = KPD_purge_of_anti_leftists }
 		}
 
 		ai_chance = {
@@ -56,7 +54,7 @@ country_event = { #Spartacus leader election
 		}
 	}
 
-	option = { #
+	option = { # 오토 그로테블 / 독일 사회민주당: 동독에서 독일 공산당과 합당 주도한 당수
 		name = GE2_event.1.c
 		trigger = {
 			has_character = GEK_otto_grotewohl
@@ -78,22 +76,13 @@ country_event = { #Spartacus leader election
 		}
 	}
 
-	option = { #
+	option = { # 지도력 유지
 		name = GE2_event.1.d
 		trigger = {
 			OR = {
-				has_country_leader = {
-					character = GEK_otto_grotewohl
-					ruling_only = yes
-				}
-				has_country_leader = {
-					character = KPD_heinrich_brandler
-					ruling_only = yes
-				}
-				has_country_leader = {
-					character = KPD_alexander_schwab
-					ruling_only = yes
-				}
+				has_character = KPD_alexander_schwab
+				has_character = KPD_heinrich_brandler
+				has_character = GEK_otto_grotewohl
 			}
 		}
 		ai_chance = {

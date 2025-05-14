@@ -1,6 +1,6 @@
 add_namespace = IMP_event
 add_namespace = impblack
-add_namespace = impindia
+add_namespace = impindia # 원래는 인도용 사건이였지만 이제부터 너는 외교용 사건이다..
 add_namespace = imp_deal
 add_namespace = IMP
 country_event = { #왕립해군과 육군의 귀환
@@ -705,6 +705,8 @@ country_event = { # 국왕의 연설
 		}
 		set_country_flag = CAN_address_war
 		hidden_effect = { country_event = { id = IMP.2 days = 01 } }
+		set_temp_variable = { CAN_anger_change = 1 }
+		CAN_change_par_anger = yes
 	}
 	option = {
 		name = IMP.1.b
@@ -717,6 +719,9 @@ country_event = { # 국왕의 연설
 		}
 		set_country_flag = CAN_address_gov
 		hidden_effect = { country_event = { id = IMP.2 days = 01 } }
+		set_temp_variable = { CAN_anger_change = 1 }
+		CAN_change_british_anger = yes
+		
 	}
 }
 country_event = { # 국왕의 연설 반응
@@ -778,9 +783,12 @@ country_event = { # 국왕의 연설 반응
 			set_temp_variable = {}
 			CAN_change_par_anger = yes
 		}
+		hidden_effect = {
+			country_event = { id = IMP.3 days = 04 }
+		}
 	}
 }
-country_event = { # 총리 지정
+country_event = { # 대중의 분노
 	id = IMP.3
 	title = IMP.3.t
 	desc = IMP.3.desc
@@ -789,23 +797,33 @@ country_event = { # 총리 지정
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	#option = {
-	#	name = IMP.3.a
-	#	ai_chance = {
-	#		base = 90
-	#	}
-	#	set_country_flag = winston_churchill_is_leader_flag
-	#	clr_country_flag = mackenzie_king_is_leader_falg
-	#	hidden_effect = { country_event = { id = IMP.5 days = 07 } }
-	#}
 	option = {
-		name = IMP.3.b
-		ai_chance = {
-			base = 10
+		name = IMP.3.a
+		if = {
+			limit = { has_country_flag = CAN_address_gov }
+			custom_effect_tooltip = CAN_anger_change_tt_1
+			set_temp_variable = { CAN_anger_change = 1 }
+			CAN_change_par_anger = yes
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = CAN_anger_change_tt_2
+			set_temp_variable = { CAN_anger_change = 1 }
+			CAN_change_british_anger = yes
 		}
-		set_country_flag = mackenzie_king_is_leader_falg
-		clr_country_flag = winston_churchill_is_leader_flag
-		hidden_effect = { country_event = { id = IMP.5 days = 07 } }
+		if = {
+			limit = { has_country_flag = CAN_address_war }
+			custom_effect_tooltip = CAN_anger_change_tt_3
+			set_temp_variable = { CAN_anger_change = 1 }
+			CAN_change_par_anger = yes
+			custom_effect_tooltip = CAN_anger_change_tt_4
+			CAN_change_people_anger = yes
+
+			
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = CAN_anger_change_tt_5
+			set_temp_variable = { CAN_anger_change = -1 }
+			CAN_change_british_anger = yes
+		}
+
 	}
 }
 country_event = { # 스탠리 볼드윈 사임 
@@ -839,15 +857,8 @@ country_event = { # 스탠리 볼드윈 사임
 }
 country_event = { # 총리 취임 이벤트
 	id = IMP.5
-	title = IMP.3.t
-	desc = {
-		text = IMP.5.Churchill
-		trigger = { has_country_flag = winston_churchill_is_leader_flag }
-	}
-	desc = {
-		text = IMP.5.mackenzie
-		trigger = { has_country_flag = mackenzie_king_is_leader_falg }
-	}
+	title = IMP.5.t
+	desc = IMP.5.mackenzie
 	picture = GFX_report_event_royal_parade
 
 	fire_only_once = yes
@@ -860,31 +871,7 @@ country_event = { # 총리 취임 이벤트
 	}
 
 	option = {
-		name = IMP.5.a
-		trigger = { has_country_flag = winston_churchill_is_leader_flag }
-		hidden_effect = { mark_focus_tree_layout_dirty = yes }
-		add_country_leader_role = {
-			character = IMP_winston_churchill
-			country_leader = {
-				ideology = conservatism
-				traits = { 
-					british_bulldog
-					hawk
-				}
-				expire = 1965.1.1.1
-				id = -1
-			}
-			promote_leader = yes
-		}
-		custom_effect_tooltip = IMP_by_uk_exile
-		add_stability = 0.05
-		custom_effect_tooltip = IMP_by_parliament
-		add_political_power = -25
-	}
-	option = {
 		name = IMP.5.b
-		trigger = { has_country_flag = mackenzie_king_is_leader_falg }
-		hidden_effect = { mark_focus_tree_layout_dirty = yes }
 		set_party_name = {
 			ideology = democratic
 			long_name = CAN_democratic_party_long
@@ -920,7 +907,7 @@ country_event = { # 총리 임명을 요구하는 캐나다 의회
 		ai_chance = {
 			base = 99
 		}
-		hidden_effect = { country_event = { id = IMP.3 days = 7} }
+		hidden_effect = { country_event = { id = IMP.5 days = 14 } }
 	}
 	option = {
 		name = IMP.6.b
@@ -928,7 +915,7 @@ country_event = { # 총리 임명을 요구하는 캐나다 의회
 			base = 1
 		}
 		trigger = { is_debug = yes }
-		hidden_effect = { country_event = { id = IMP.3 days = 7} }
+		hidden_effect = { country_event = { id = IMP.5 days = 14 } }
 	}
 }
 country_event = { # 자유당과 보수당
@@ -1033,6 +1020,79 @@ country_event = { # ㄷㅂㄱ
 		trigger = { is_debug = yes }
 		set_temp_variable = { CAN_anger_change = 1 }
 		CAN_change_british_anger = yes
+	}
+}
+
+country_event = {
+	id = impindia.1 
+	title = impindia.1.t
+	desc = impindia.1.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tfv_canada.1.a # US Accepts the faction proposal
+		
+		ai_chance = {
+			base = 100
+		}
+		
+		effect_tooltip = {
+			create_faction = "north_american_alliance"
+			add_to_faction = FROM
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = impindia.2 }
+			}
+		}
+	}
+	
+	option = {
+		name = tfv_canada.1.b # US Rejects the faction proposal
+	
+		ai_chance = {
+			base = 0
+		}
+		
+		hidden_effect = {
+			FROM = {
+				country_event = { id = impindia.3 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = impindia.2
+	title = impindia.2.t	#
+	desc = impindia.2.d	#
+	picture = GFX_report_event_canadian_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = impindia.2.a
+		
+		FROM = {
+			create_faction = "north_american_alliance"
+			add_to_faction = ROOT
+		}
+		
+		news_event = { id = news.246 hours = 6 }
+	}
+}
+
+country_event = {
+	id = impindia.3
+	title = impindia.3.t	#
+	desc = impindia.3.d	#
+	picture = GFX_report_event_king_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = impindia.3.a
 	}
 }
 

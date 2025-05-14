@@ -1894,7 +1894,7 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 			visible = {
-				has_completed_focus = GE2_reorganize_nationale_volksarmee
+				has_completed_focus = KPD_reorganize_nationale_volksarmee
 			}
 		}
 	}
@@ -1915,7 +1915,7 @@ characters={
 			planning_skill = 3
 			logistics_skill = 2
 			visible = {
-				has_completed_focus = GE2_reorganize_nationale_volksarmee
+				has_completed_focus = KPD_reorganize_nationale_volksarmee
 			}
 		}
 	}
@@ -3436,7 +3436,7 @@ characters={
 				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_completed_focus = GE2_formalize_the_intelligence_wing
+				has_completed_focus = KPD_formalize_the_intelligence_wing
 			}
 
 			traits = {
@@ -3466,7 +3466,7 @@ characters={
 			}
 			available = {
 				has_government = communism
-				has_completed_focus = GE2_legacy_of_the_spartacus_league
+				has_completed_focus = KPD_expulsion_of_stalinists
 			}
 
 			traits = {

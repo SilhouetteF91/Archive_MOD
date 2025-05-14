@@ -1120,7 +1120,6 @@ GEK_MIL_03 = {
 	can_use = { 
 		OR = {
 			has_government = communism
-			has_completed_focus = GE2_start_the_proletarian_revolution
 		}
 	}
 
