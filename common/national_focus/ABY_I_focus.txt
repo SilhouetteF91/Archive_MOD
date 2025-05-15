@@ -13816,6 +13816,7 @@ focus = { #키보토스인 우선
 				id = ABY_descision_focus_event.1
 			}
 			clr_country_flag = ABY_descision_focus_first_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_first_completed_flag
 			#중점 완료시 얻는 보상
 		}
@@ -13858,6 +13859,7 @@ focus = { #키보토스인 우선
 				}
 			}
 			clr_country_flag = ABY_descision_focus_abydos_1_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_1_completed_flag
 		}
 	}
@@ -13898,6 +13900,7 @@ focus = { #키보토스인 우선
 				id = ABY_descision_focus_event.15
 			}
 			clr_country_flag = ABY_descision_focus_abydos_2_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_2_completed_flag
 			#중점 완료시 얻는 보상
 		}
@@ -13942,6 +13945,7 @@ focus = { #키보토스인 우선
 				id = ABY_descision_focus_event.24
 			}
 			clr_country_flag = ABY_descision_focus_abydos_3_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_3_completed_flag
 			#중점 완료시 얻는 보상
 		}
@@ -13987,6 +13991,7 @@ focus = { #키보토스인 우선
 				}
 			}
 			clr_country_flag = ABY_descision_focus_abydos_4_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_4_completed_flag
 			#중점 완료시 얻는 보상
 		}
@@ -14027,6 +14032,7 @@ focus = { #키보토스인 우선
 				id = ABY_descision_focus_event.4
 			}
 			clr_country_flag = ABY_descision_focus_abydos_5_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_5_completed_flag
 			#중점 완료시 얻는 보상
 		}
@@ -14061,6 +14067,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_abydos_6_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_6_completed_flag
 			if = {
 				limit = {
@@ -14135,6 +14142,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_abydos_7_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_7_completed_flag
 			custom_effect_tooltip = ABY_militia_div_cap_1_tt
 			hidden_effect = {
@@ -14180,6 +14188,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_abydos_8_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_8_completed_flag
 			country_event = {
 				id = ABY_descision_focus_event.5
@@ -14217,6 +14226,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_abydos_9_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_9_completed_flag
 			if = {
 				limit = {
@@ -14291,6 +14301,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_abydos_10_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_10_completed_flag
 			custom_effect_tooltip = ABY_tt_syemmata_allow
 			add_breakthrough_progress = {
@@ -14342,6 +14353,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_abydos_11_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_11_completed_flag
             every_country = {
                 limit = {
@@ -14390,6 +14402,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_abydos_12_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_12_completed_flag
 			every_state = {
 				limit = {
@@ -14435,6 +14448,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_abydos_13_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_13_completed_flag
 			add_timed_idea = {
 				idea = ABY_idea_SHA_war_2
@@ -14487,6 +14501,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_abydos_14_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_14_completed_flag
 			add_ideas = {
 				ABY_idea_SHA_war
@@ -14538,6 +14553,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_abydos_15_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_15_completed_flag
 			add_political_power = 1500
 			add_stability = 0.5
@@ -14596,6 +14612,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_1_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_1_completed_flag
 			country_event = {
 				id = ABY_descision_focus_event.33
@@ -14635,6 +14652,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_2_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_2_completed_flag
 			custom_effect_tooltip = ABY_industrial_concern_allow_skoda
 			69 = {
@@ -14678,6 +14696,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_3_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_3_completed_flag
 			#중점 완료시 얻는 보상
 			if = {
@@ -14752,6 +14771,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_4_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_4_completed_flag
 			#중점 완료시 얻는 보상
 			69 = {
@@ -14792,6 +14812,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_5_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_5_completed_flag
 			#중점 완료시 얻는 보상
 			if = {
@@ -14866,6 +14887,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_6_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_6_completed_flag
 			#중점 완료시 얻는 보상
 			add_timed_idea = {
@@ -14907,6 +14929,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_7_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_7_completed_flag
 			69 = {
 				add_extra_state_shared_building_slots = 1
@@ -14952,6 +14975,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_8_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_8_completed_flag
 			#중점 완료시 얻는 보상
 			if = {
@@ -15035,6 +15059,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_9_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_9_completed_flag
 			#중점 완료시 얻는 보상
 			country_event = {
@@ -15072,6 +15097,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_10_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_10_completed_flag
 			country_event = {
 				id = ABY_descision_focus_event.35
@@ -15109,6 +15135,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_11_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_11_completed_flag
 			#중점 완료시 얻는 보상
 			country_event = {
@@ -15146,6 +15173,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_czecho_12_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_12_completed_flag
 			#중점 완료시 얻는 보상
 			country_event = {
@@ -15183,6 +15211,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_german_1_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
 			set_country_flag = ABY_descision_focus_german_1_completed_flag
 			#중점 완료시 얻는 보상
 			add_manpower = 3000
@@ -15228,6 +15257,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_german_2_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
 			set_country_flag = ABY_descision_focus_german_2_completed_flag
 			#중점 완료시 얻는 보상
 			country_event = {
@@ -15265,6 +15295,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_german_3_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
 			set_country_flag = ABY_descision_focus_german_3_completed_flag
 			#중점 완료시 얻는 보상
 			add_manpower = 3000
@@ -15310,6 +15341,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_german_4_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
 			set_country_flag = ABY_descision_focus_german_4_completed_flag
 			#중점 완료시 얻는 보상
 			country_event = {
@@ -15347,6 +15379,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_german_5_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
 			set_country_flag = ABY_descision_focus_german_5_completed_flag
 			#중점 완료시 얻는 보상
 			country_event = {
@@ -15384,6 +15417,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_german_6_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
 			set_country_flag = ABY_descision_focus_german_6_completed_flag
 			#중점 완료시 얻는 보상
 			custom_effect_tooltip = ABY_new_tt_18
@@ -15423,6 +15457,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_german_7_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
 			set_country_flag = ABY_descision_focus_german_7_completed_flag
 			#중점 완료시 얻는 보상
 			add_manpower = 3000
@@ -15472,6 +15507,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_german_8_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
 			set_country_flag = ABY_descision_focus_german_8_completed_flag
 			#중점 완료시 얻는 보상
 			custom_effect_tooltip = ABY_new_tt_19
@@ -15509,6 +15545,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_german_9_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
 			set_country_flag = ABY_descision_focus_german_9_completed_flag
 			#중점 완료시 얻는 보상
 			add_timed_idea = {
@@ -15547,6 +15584,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_german_10_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
 			set_country_flag = ABY_descision_focus_german_10_completed_flag
 			#중점 완료시 얻는 보상
 			1021 = {
@@ -15584,6 +15622,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_german_11_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
 			set_country_flag = ABY_descision_focus_german_11_completed_flag
 			#중점 완료시 얻는 보상
 			1021 = {
@@ -15630,6 +15669,7 @@ focus = { #키보토스인 우선
 		}
 		completion_reward = {
 			clr_country_flag = ABY_descision_focus_german_12_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
 			set_country_flag = ABY_descision_focus_german_12_completed_flag
 			#중점 완료시 얻는 보상
 			153 = {

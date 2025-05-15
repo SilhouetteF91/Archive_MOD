@@ -54,6 +54,125 @@ defined_text = { # Country
 	}
 }
 defined_text = { # Country
+	name = GetABY_scripted_army_name
+	text = {
+		trigger = {			
+			NOT = {
+				has_completed_focus = ABY_focus_army_1
+			}
+		}
+		localization_key = ABY_army_dynamic_modifier_1
+	}
+	text = {
+		trigger = {	
+			has_completed_focus = ABY_focus_army_1	
+			NOT = {
+				AND = {
+					has_completed_focus = ABY_focus_army_2
+					has_completed_focus = ABY_focus_army_3
+				}
+			}
+		}
+		localization_key = ABY_army_dynamic_modifier_2
+	}
+	text = {
+		trigger = {	
+			OR = {
+				has_completed_focus = ABY_focus_army_2
+				has_completed_focus = ABY_focus_army_3
+			}
+		}
+		localization_key = ABY_army_dynamic_modifier_3
+	}
+}
+defined_text = { # Country
+	name = GetABY_scripted_halo_name
+	text = {
+		trigger = {			
+			NOT = {
+				has_completed_focus = ABY_focus_halo_1
+			}
+		}
+		localization_key = ABY_halo_dynamic_modifier_1
+	}
+	text = {
+		trigger = {	
+			has_completed_focus = ABY_focus_halo_1	
+			NOT = {
+				AND = {
+					has_completed_focus = ABY_focus_halo_5
+					has_completed_focus = ABY_focus_halo_6
+				}
+			}
+		}
+		localization_key = ABY_halo_dynamic_modifier_2
+	}
+	text = {
+		trigger = {	
+			has_completed_focus = ABY_focus_halo_5
+		}
+		localization_key = ABY_halo_dynamic_modifier_3
+	}
+	text = {
+		trigger = {	
+			has_completed_focus = ABY_focus_halo_6
+		}
+		localization_key = ABY_halo_dynamic_modifier_4
+	}
+}
+defined_text = { # Country
+	name = GetABY_scripted_air_name
+	text = {
+		trigger = {		
+			NOT = {
+				AND = {
+					has_completed_focus = ABY_focus_air_5
+					has_completed_focus = ABY_focus_air_4
+				}
+			}
+		}
+		localization_key = ABY_air_dynamic_modifier_1
+	}
+	text = {
+		trigger = {	
+			has_completed_focus = ABY_focus_air_4
+		}
+		localization_key = ABY_air_dynamic_modifier_2
+	}
+	text = {
+		trigger = {	
+			has_completed_focus = ABY_focus_air_5
+		}
+		localization_key = ABY_air_dynamic_modifier_3
+	}
+}
+defined_text = { # Country
+	name = GetABY_scripted_navy_name
+	text = {
+		trigger = {		
+			NOT = {
+				AND = {
+					has_completed_focus = ABY_focus_navy_3
+					has_completed_focus = ABY_focus_navy_4
+				}
+			}
+		}
+		localization_key = ABY_navy_dynamic_modifier_1
+	}
+	text = {
+		trigger = {	
+			has_completed_focus = ABY_focus_navy_3
+		}
+		localization_key = ABY_navy_dynamic_modifier_2
+	}
+	text = {
+		trigger = {	
+			has_completed_focus = ABY_focus_navy_4
+		}
+		localization_key = ABY_navy_dynamic_modifier_3
+	}
+}
+defined_text = { # Country
 	name = GetABY_descision_focus_first_name
 	text = {
 		trigger = {			

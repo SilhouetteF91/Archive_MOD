@@ -18,6 +18,66 @@ ideas = {
 				terrain_trait_xp_gain_factor = 0.25
 			}
 		}
+		ABY_idea_czecho_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				democratic_drift = 0.1
+				stability_factor = 0.30
+				political_power_factor = 0.15
+			}
+		}
+		ABY_idea_czecho_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				conscription_factor = 0.15
+				war_support_factor = 0.1
+			}
+		}
+		ABY_idea_german_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				stability_weekly = 0.005
+				democratic_drift = 0.1
+				fascism_drift = -0.1
+			}
+		}
+		ABY_idea_german_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = -0.1
+				conscription = -0.005
+				neutrality_drift = -0.1
+			}
+		}
+		ABY_idea_abydos_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				war_support_factor = 0.1
+				army_core_attack_factor = 0.1
+				offensive_war_stability_factor = 0.2
+			}
+		}
 	}
 	country = {
 			ABY_start_ideas1 = { #대책위원회

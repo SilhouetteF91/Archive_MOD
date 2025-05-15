@@ -2,6 +2,9 @@ capital = 69
 
 oob = "ABY_1936"
 
+set_variable = {ABY_portrait_german_var = 1}
+set_variable = {ABY_portrait_czecho_var = 1}
+
 set_variable = { ABY_num_of_students_var = 0 }
 set_variable = { ABY_num_of_monthly_students_var = 0 }
 set_country_flag = ABY_corporate_headquarters_czech_flag
@@ -39,6 +42,13 @@ set_variable = {ABY_var_ARMY_ARMOR_ATTACK_FACTOR = 0 }
 set_variable = {ABY_var_ARMY_ARMOR_DEFENCE_FACTOR = 0 }
 set_variable = {ABY_var_modifier_army_sub_unit_category_halo_attack_factor = 0 }
 set_variable = {ABY_var_modifier_army_sub_unit_category_halo_defence_factor = 0 }
+set_variable = {ABY_var_modifier_army_sub_unit_category_halo_speed_factor = 0}
+set_variable = {ABY_var_modifier_army_sub_unit_category_halo_max_org_factor = 0}
+set_variable = {ABY_var_modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0}
+set_variable = {ABY_var_modifier_army_sub_unit_halo_infantry_attack_factor = 0}
+set_variable = {ABY_var_modifier_army_sub_unit_halo_infantry_defence_factor = 0}
+set_variable = {ABY_var_modifier_army_sub_unit_halo_special_forces_attack_factor = 0}
+set_variable = {ABY_var_modifier_army_sub_unit_halo_special_forces_defence_factor = 0}
 set_variable = {ABY_var_modifier_army_sub_unit_militia_attack_factor = 0}
 set_variable = {ABY_var_modifier_army_sub_unit_militia_defence_factor = 0}
 set_variable = {ABY_var_mountaineers_special_forces_contribution_factor = 0}

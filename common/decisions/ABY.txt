@@ -19862,6 +19862,39 @@ ABY_descision_category_debug = {
 			ABY_scripted_effect_divide_SOV = yes
 		}
 	}
+	ABY_descision_developing_active = {
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }                     
+
+		complete_effect = {
+			set_country_flag = ABY_flag_in_develop
+			add_ideas = {
+				ABY_idea_czecho_1
+				ABY_idea_german_1
+				ABY_idea_abydos_1
+			}
+    		load_focus_tree = {
+    		    tree = ABY_focus_tree
+    		}
+    		mark_focus_tree_layout_dirty = yes
+			set_country_flag = ABY_descision_focus_first_ongoing_flag
+			set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_variable = {ABY_focus_time_flag_var = 44}
+			set_country_flag = {
+				flag = ABY_focus_time_flag
+				value = 1
+				days = 5
+			}
+		}
+	}
 }
 ABY_descision_category_abydos_highschool = {
 	ABY_descision_debug_rebuild_map = {
@@ -22839,4 +22872,33 @@ ABY_descision_category_core_gyemong = {
 			}
 		}
 	}
+}
+ABY_descision_category_focus = {
+
+	ABY_descision_autofocus = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		is_good = no
+
+		fire_only_once = no
+ 
+		days_mission_timeout = 49
+		days_remove = 49
+		days_re_enable = 0
+
+		complete_effect = {				
+		}
+    }
 }

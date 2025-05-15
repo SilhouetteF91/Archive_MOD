@@ -1568,6 +1568,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ABY_focus_ongoing"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_ongoing.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
 		name = "GFX_unavailable"
 		texturefile = "gfx/interface/decisions/icon/X.tga"
 		legacy_lazy_load = no

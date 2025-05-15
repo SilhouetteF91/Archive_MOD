@@ -150,8 +150,8 @@
 		}
 	}
 	offset = {
-		x = 14
-		y = 7
+		x = -37
+		y = 0
 		trigger = {
 			OR = {
 				original_tag = ABY

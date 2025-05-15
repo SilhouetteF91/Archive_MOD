@@ -30,7 +30,7 @@ guiTypes = {
 			pdx_tooltip = "ABY_german_head_tt"
 			pdx_tooltip_delayed = "ABY_german_head_trait_tt"
 			scale = 0.3
-			frame = 1
+			frame = ABY_portrait_german_var
 		}
 
 		iconType = {
@@ -50,7 +50,7 @@ guiTypes = {
 			pdx_tooltip = "ABY_czech_head_tt"
 			pdx_tooltip_delayed = "ABY_czech_head_trait_tt"
 			scale = 0.3
-			frame = 1
+			frame = ABY_portrait_czecho_var
 		}
 
 		instantTextboxType = {
@@ -383,6 +383,286 @@ guiTypes = {
 			spriteType = "GFX_ABY_completed_line_40"
 			position = { x = -7 y = 35 }
 			scale = 0.8
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_first_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 229 y = 310 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_1_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 175 y = 351 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_2_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 229 y = 351 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_3_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 283 y = 351 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_4_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 175 y = 392 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_5_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 229 y = 392 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_6_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 283 y = 392 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_7_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 175 y = 433 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_8_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 229 y = 433 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_9_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 283 y = 433 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_10_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 229 y = 474 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_11_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 229 y = 556 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_12_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 202 y = 597 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_13_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 202 y = 638 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_14_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 256 y = 638 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_abydos_15_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 229 y = 679 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_german_1_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 12 y = 351 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_german_2_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 66 y = 351 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_german_3_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 12 y = 392 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_german_4_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 66 y = 392 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_german_5_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 66 y = 433 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_german_6_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 39 y = 474 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_german_7_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 120 y = 474 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_german_8_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 39 y = 515 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_german_9_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 120 y = 515 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_german_10_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 93 y = 597 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_german_11_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 66 y = 638 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_german_12_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 120 y = 638 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_czecho_1_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 365 y = 351 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_czecho_2_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 446 y = 351 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_czecho_3_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 365 y = 392 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_czecho_4_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 419 y = 392 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_czecho_5_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 365 y = 433 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_czecho_6_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 446 y = 433 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_czecho_7_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 419 y = 474 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_czecho_8_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 365 y = 515 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_czecho_9_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 365 y = 556 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_czecho_10_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 338 y = 597 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_czecho_11_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 392 y = 597 }
+			scale = 0.28
+		}
+		
+		iconType = {
+			name = "ABY_descision_focus_czecho_12_ongoing"
+			spriteType = "GFX_ABY_focus_ongoing"
+			position = { x = 365 y = 638 }
+			scale = 0.28
 		}
 		
 		buttontype = {
