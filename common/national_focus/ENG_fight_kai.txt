@@ -4479,33 +4479,7 @@ focus_tree = {
 				}
 				country_event = { id = IMP.6 hours = 02}
 			}
-		}
-	}
-	focus = {
-		id = CAN_check_the_economy # 경제 상황 살펴보기
-		icon = GFX_focus_BRA_rio_protocol
-		cost = 2
-		
-		relative_position_id = CAN_kings_speech
-		x = -3
-		y = 1
-		available = { 
-			is_subject = no 
-			NOT = {
-				has_country_leader = {
-					character = IMP_Edward_VIII
-					ruling_only = yes
-				}
-			}
-		}
-	
-		prerequisite = { focus = CAN_kings_speech }
-		ai_will_do = { factor = 100 }
-		available_if_capitulated = yes
-	
-			
-		completion_reward = {
-			country_event = { id = impblack.0 days = 1 }
+			country_event = { id = impblack.0 days = 8 }
 		}
 	}
 	focus = {
@@ -4514,7 +4488,7 @@ focus_tree = {
 		cost = 2
 
 		relative_position_id = CAN_kings_speech
-		x = 3
+		x = 4
 		y = 1
 		available = { 
 			is_subject = no 
@@ -4527,7 +4501,13 @@ focus_tree = {
 		}
 	
 		prerequisite = { focus = CAN_kings_speech }
-		ai_will_do = { factor = 50 }
+		ai_will_do = { 
+			factor = 50 
+			modifier = {
+				factor = 999
+				has_completed_focus = CAN_depression_recovery
+			}
+		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		available_if_capitulated = yes
 	
@@ -4546,7 +4526,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = CAN_government_unity
-		x = -3
+		x = -4
 		y = 1
 		available = { 
 			is_subject = no 
@@ -4564,116 +4544,306 @@ focus_tree = {
 		}
 	}
 	
-	focus = { # 영국 망명자 지도 - 매켄지 킹
-		id = CAN_control_uk_exile
-		icon = GFX_goal_generic_parliament
-		cost = 10
-
-		relative_position_id = CAN_government_unity
-		x = 0
-		y = 1
-		available = { 
-			is_subject = no 
-		}
-		allow_branch = {
-			has_global_flag = ENG_lose_global_flag 
-			NOT = { has_country_flag = winston_churchill_is_leader_flag }
-		}
-		mutually_exclusive = {
-			#focus = CAN_control_canada_parliament
-		}
-		prerequisite = { focus = CAN_government_unity }
-		ai_will_do = { factor = 50 }
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		available_if_capitulated = yes
-	
-			
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = { # 국왕 다루기 - 공용
-		id = CAN_dealing_with_the_king
-		icon = GFX_focus_SWE_the_lion_of_the_north
+	focus = { # 캐나다 중립
+		id = CAN_canada_neutrality
+		icon = GFX_focus_CAN_third_world
 		cost = 5
 
 		relative_position_id = CAN_government_unity
-		x = 4
+		x = -1
 		y = 1
 		available = { 
 			is_subject = no
-			OR = {
-				has_idea = BA_ENG_king_edward
-				has_idea = ENG_george_VI
-			}
 		}
 	
 		prerequisite = { focus = CAN_government_unity }
-		ai_will_do = { factor = 50 }
-		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = { 
+			factor = 50 
+			modifier = {
+				factor = 999
+				has_completed_focus = CAN_depression_recovery
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = yes
+
+		mutually_exclusive = {
+			focus = CAN_Imperial_conference_held
+			focus = CAN_concessions_to_workers
+			focus = CAN_collaboration_with_fascist_movement
+		}
 	
 			
 		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = Allies
+			add_ideas = ENG_neutrality_gov
+		}
+	}
+	
+	focus = { # 북아메리카 방위 동맹
+		id = CAN_north_american_defense_alliance
+		icon = GFX_focus_ARG_align_with_the_monroe_doctrine
+		cost = 8
+
+		relative_position_id = CAN_canada_neutrality
+		x = -3
+		y = 1
+		available = { 
+			is_subject = no
+			NOT = {
+				has_war_with = USA
+				is_justifying_wargoal_against = USA
+				has_wargoal_against = USA
+				has_war_together_with = ENG
+			}
+			USA = { 
+				has_government = ROOT 
+				NOT = { has_completed_focus = USA_new_team }
+			}
+		}
+	
+		prerequisite = { focus = CAN_canada_neutrality }
+		ai_will_do = { factor = 0 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+			
+		completion_reward = {
+			
+			USA = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = CAN_permanent_joint_defense_board
+				}
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = CAN_permanent_joint_defense_board
+			}
+			give_guarantee = USA
 
 		}
 	}
 	
-	focus = { # 국왕과 타협 ( 타협의 주 내용은 정치권에 과도하게 개입하는 국왕을 막을려고 할거임.. )
-		id = CAN_compromise_with_king
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		cost = 5
+	focus = { # 몬트리올 연구소 협력
+		id = CAN_montreal_lab_cooperation
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 8
 
-		relative_position_id = CAN_dealing_with_the_king
+		relative_position_id = CAN_canada_neutrality
 		x = -1
 		y = 1
 		available = { 
 			is_subject = no 
 		}
-		mutually_exclusive = { focus = CAN_kings_servants }
-		prerequisite = { focus = CAN_dealing_with_the_king }
-		ai_will_do = { factor = 50 }
+	
+		prerequisite = { 
+			focus = CAN_canada_neutrality 
+			focus = CAN_Imperial_conference_held
+		}
+		ai_will_do = { factor = 100 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		available_if_capitulated = yes
 	
 			
 		completion_reward = {
-			
+			ENG = {
+   				 modify_tech_sharing_bonus = {
+        			id = commonwealth_research
+        			bonus = 0.05  
+    			}
+			}
+			468 = { # 세인트로렌스
+				add_building_construction = {
+					type = land_facility
+					level = 1
+					instant_build = yes    
+					province = 4345 # 몬트리올
+				}
+			}
+
 		}
 	}
 	
-	focus = { # 국왕의 충복들 (국왕과 이권 갈라먹기!!)
-		id = CAN_kings_servants
-		icon = GFX_focus_generic_workers
-		cost = 5
+	focus = { # 비밀 공장
+		id = CAN_shadow_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 8
 
-		relative_position_id = CAN_dealing_with_the_king
+		relative_position_id = CAN_north_american_defense_alliance
 		x = 1
 		y = 1
 		available = { 
 			is_subject = no 
 		}
-		mutually_exclusive = { focus = CAN_compromise_with_king }
 	
-		prerequisite = { focus = CAN_dealing_with_the_king }
-		ai_will_do = { factor = 50 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		available_if_capitulated = yes
+		prerequisite = {
+			focus = CAN_north_american_defense_alliance
+			focus = CAN_montreal_lab_cooperation
+		}
+		ai_will_do = { factor = 100 }
+		search_filters = { }
 	
 			
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+	focus = { # 영연방 항공 훈련
+		id = CAN_commonwealth_air_training
+		icon = GFX_focus_generic_air_partners
+		cost = 8
+
+		relative_position_id = CAN_montreal_lab_cooperation
+		x = 1
+		y = 1
+		available = { 
+			is_subject = no 
+		}
+	
+		prerequisite = { 
+			focus = CAN_montreal_lab_cooperation
+			focus = CAN_north_american_defense_alliance
+		}
+		ai_will_do = { factor = 100 }
+		search_filters = { }
+	
 			
+		completion_reward = {
+			add_ideas = CAN_the_plan
+
+		}
+	}
+	
+	focus = { # 앵글로아메리카 동맹
+		id = CAN_north_american_alliance_BA
+		text = CAN_north_american_alliance
+		icon = GFX_focus_CAN_englo_alliance
+		cost = 8
+
+		relative_position_id = CAN_north_american_defense_alliance
+		x = 0
+		y = 2
+		available = { 
+			is_subject = no 
+			USA = { 
+				has_government = ROOT 
+				NOT = { has_completed_focus = USA_new_team}
+			}
+
+		}
+		prerequisite = { 
+			focus = CAN_north_american_defense_alliance
+		}
+		prerequisite = {
+			focus = CAN_commonwealth_air_training
+			focus = CAN_shadow_factory
+		}
+		ai_will_do = { factor = 0 }
+		search_filters = { }
+		
+		bypass = {
+			is_in_faction_with = USA
+		}
+	
+			
+		completion_reward = {
+			if = {
+				limit = {
+					USA = {
+						has_government = ROOT
+						NOT = { is_faction_leader = yes }
+					}
+				}
+				USA = {
+					country_event = { id =  impindia.1 }
+				}
+			}
+
+		}
+	}
+	
+	focus = { # 제국회의 개최
+		id = CAN_Imperial_conference_held
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 5
+
+		relative_position_id = CAN_government_unity
+		x = 1
+		y = 1
+		available = { 
+			is_subject = no 
+		}
+	
+		prerequisite = { focus = CAN_government_unity }
+		ai_will_do = { factor = 50 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = yes
+
+		mutually_exclusive = {
+			focus = CAN_canada_neutrality
+			focus = CAN_concessions_to_workers
+			focus = CAN_collaboration_with_fascist_movement
+		}
+	
+			
+		completion_reward = {
+
 		}
 	}
 	
 	focus = {
 		id = CAN_concessions_to_workers # 노동자에 양보
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_goal_tfv_burn_the_royal_portraits
 		cost = 5
 		
 		relative_position_id = CAN_government_unity
-		x = 7
+		x = 13
 		y = 1
 		available = {
 			is_subject = no 
@@ -4686,6 +4856,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = CAN_collaboration_with_fascist_movement
+			focus = CAN_Imperial_conference_held
+			focus = CAN_canada_neutrality
 		}
 	
 		prerequisite = { focus = CAN_government_unity }
@@ -4731,7 +4903,7 @@ focus_tree = {
 		cost = 5
 		
 		relative_position_id = CAN_government_unity
-		x = 9
+		x = 6
 		y = 1
 		available = { 
 			is_subject = no 
@@ -4744,6 +4916,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = CAN_concessions_to_workers
+			focus = CAN_Imperial_conference_held
+			focus = CAN_canada_neutrality
 		}
 	
 		prerequisite = { focus = CAN_government_unity }
@@ -4762,7 +4936,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAN_strike_suppression # 파시스트 - 1
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_generic_more_territorial_claims
 		cost = 5
 		
 		relative_position_id = CAN_collaboration_with_fascist_movement
@@ -4792,12 +4966,12 @@ focus_tree = {
 		icon = GFX_focus_generic_public_works
 		cost = 5
 		
-		relative_position_id = CAN_check_the_economy
-		x = -4
+		relative_position_id = CAN_kings_speech
+		x = -7
 		y = 1
 		available = { }
 	
-		prerequisite = { focus = CAN_check_the_economy }
+		prerequisite = { focus = CAN_kings_speech }
 		ai_will_do = { factor = 100 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = yes
@@ -5553,9 +5727,9 @@ focus_tree = {
 		icon = GFX_focus_eng_decolonization
 		cost = 5
 		
-		relative_position_id = CAN_government_unity
-		x = 6
-		y = 4
+		relative_position_id = CAN_kings_speech
+		x = -5
+		y = 7
 		available = { 
 			custom_trigger_tooltip = {
 				tooltip = BA_Auto_complete_tt
