@@ -7647,7 +7647,7 @@ focus_tree = {
 						desc = "GEH_iroha_natsume_prefect_team_leader_desc"
 						expire = "1980.1.1"
 						traits = {
-							
+							b_tjsehqnwkd_week GEH_puppet_of_prefect_team
 						}
 					}
 				}
@@ -7707,7 +7707,7 @@ focus_tree = {
 						desc = "GEH_kayoko_onikata_prefect_team_leader_desc"
 						expire = "1980.1.1"
 						traits = {
-							
+							b_tjsehqnwkd_week GEH_last_hope_of_prefect_team
 						}
 					}
 				}
@@ -7923,7 +7923,7 @@ focus_tree = {
 				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
 				BA_halo_infantry_cap_edit_effect = yes
 			}
-			
+
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.1
@@ -7963,11 +7963,8 @@ focus_tree = {
 
 		completion_reward = {
             GEH_popular_support_up_effect = yes
-			
-            custom_effect_tooltip = GEH_war_department_tt
-            add_to_variable = { GEH_RU_industrial_capacity_factory = -0.05 }
-            add_to_variable = { GEH_RU_army_attack_factor = 0.05 }
-            add_to_variable = { GEH_RU_army_defence_factor = 0.05 }
+			custom_effect_tooltip = enter_tt
+			add_country_leader_trait = GEH_successor_of_hina
 		}
 	}
 	
