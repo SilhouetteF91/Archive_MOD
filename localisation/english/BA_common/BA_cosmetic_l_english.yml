@@ -1,4 +1,4 @@
-﻿ l_english: 
+ l_english: 
 #전쟁해군
  SHL_com: "독일 적색 유격대"
  SHL_com_ADJ: "적색 유격대"
@@ -631,18 +631,18 @@
  ABY_czechoslovakia_neutrality_ADJ: "대모라비아"
  ABY_czechoslovakia_communism_ADJ: "체코슬로바키아"
 
- ABY_republic_fascism: "아비도스 연방국"
- ABY_republic_fascism_DEF: "아비도스 연방국"
+ ABY_republic_fascism: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
+ ABY_republic_fascism_DEF: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
  ABY_republic_democratic: "아비도스 연방공화국"
  ABY_republic_democratic_DEF: "아비도스 연방공화국"
  ABY_republic_neutrality: "네프티스 그룹"
  ABY_republic_neutrality_DEF: "네프티스 그룹"
- ABY_republic_communism: "아비도스 인민공화국"
- ABY_republic_communism_DEF: "아비도스 인민공화국"
- ABY_republic_fascism_ADJ: "아비도스"
+ ABY_republic_communism: "합스부르크 군주국"
+ ABY_republic_communism_DEF: "합스부르크 군주국"
+ ABY_republic_fascism_ADJ: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
  ABY_republic_democratic_ADJ: "아비도스"
  ABY_republic_neutrality_ADJ: "네프티스"
- ABY_republic_communism_ADJ: "아비도스"
+ ABY_republic_communism_ADJ: "군주국"
 
  ABY_SCHOOL_2_fascism: "키보토스 계몽연방"
  ABY_SCHOOL_2_fascism_DEF: "키보토스 계몽연방"
@@ -791,31 +791,18 @@
  ABY_south_kivotos_neutrality_ADJ: "남키보토스"
  ABY_south_kivotos_communism_ADJ: "남키보토스"
 
- ABY_ohung_fascism: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
- ABY_ohung_fascism_DEF: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
- ABY_ohung_democratic: "오스트리아-보헤미아-아비도스 합중국"
- ABY_ohung_democratic_DEF: "제국의회에 대표되는 왕국들과 영토들 및 신성 보헤미아의 성 바츨라프 왕관령과 아비도스 연합왕국 및 게헨나 왕국과 룩셈부르크와 키보토스의 학원들의 하나된 제관을 짊어진 시스트하야니아-트란스타야니아-오버트하야니아 삼중제국"
- ABY_ohung_neutrality: "오스트리아-보헤미아-아비도스 제국"
- ABY_ohung_neutrality_DEF: "제국의회에 대표되는 왕국들과 영토들 및 신성 보헤미아의 성 바츨라프 왕관령과 아비도스 연합왕국 및 게헨나 왕국과 룩셈부르크와 키보토스의 학원들의 하나된 제관을 짊어진 시스트하야니아-트란스타야니아-오버트하야니아 삼중제국"
- ABY_ohung_communism: "오스트리아-보헤미아-아비도스 연합왕국"
- ABY_ohung_communism_DEF: "제국의회에 대표되는 왕국들과 영토들 및 신성 보헤미아의 성 바츨라프 왕관령과 아비도스 연합왕국 및 게헨나 왕국과 룩셈부르크와 키보토스의 학원들의 하나된 제관을 짊어진 시스트하야니아-트란스타야니아-오버트하야니아 삼중제국"
- ABY_ohung_fascism_ADJ: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
- ABY_ohung_democratic_ADJ: "삼중제국"
- ABY_ohung_neutrality_ADJ: "삼중제국"
- ABY_ohung_communism_ADJ: "삼중제국"
-
- ABY_greater_abydos_fascism: "대아비도스 연방"
- ABY_greater_abydos_fascism_DEF: "대아비도스 연방"
+ ABY_greater_abydos_fascism: "대아비도스 합중국"
+ ABY_greater_abydos_fascism_DEF: "대아비도스 합중국"
  ABY_greater_abydos_democratic: "양세계 연방"
  ABY_greater_abydos_democratic_DEF: "두 세계의 연방"
  ABY_greater_abydos_neutrality: "네프티스 그룹 기업체"
  ABY_greater_abydos_neutrality_DEF: "네프티스 그룹 기업체"
- ABY_greater_abydos_communism: "유럽 합중국"
- ABY_greater_abydos_communism_DEF: "유럽 합중국"
+ ABY_greater_abydos_communism: "오스트리아-보헤미아-아비도스 제국"
+ ABY_greater_abydos_communism_DEF: "오스트리아-보헤미아-아비도스 제국"
  ABY_greater_abydos_fascism_ADJ: "아비도스"
  ABY_greater_abydos_democratic_ADJ: "양세계"
  ABY_greater_abydos_neutrality_ADJ: "네프티스"
- ABY_greater_abydos_communism_ADJ: "유럽"
+ ABY_greater_abydos_communism_ADJ: "제국의회에 대표되는 왕국들과 영토들 및 신성 보헤미아의 성 바츨라프 왕관령과 아비도스 연합왕국 및 게헨나 왕국과 룩셈부르크와 키보토스의 학원들의 하나된 제관을 짊어진 시스트하야니아-트란스타야니아-오버트하야니아 삼중제국"
 
  eastern_european_socialist_federation_fascism: "동유럽 연방국"
  eastern_european_socialist_federation_fascism_DEF: "동유럽 연방국"
@@ -1315,7 +1302,7 @@
  HEU_germanic_union_fascism_DEF: "게르만 연합공국"
  HEU_germanic_union_fascism_ADJ: "게르만"
 
- ## 선도부 ##
+  ## 선도부 ##
  # 아코 루트
  GEH_republic: "게헨나 연방공화국"
  GEH_republic_ADJ: "게헨나"
