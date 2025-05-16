@@ -2326,6 +2326,191 @@ ideas = {
 				modifier_army_sub_unit_halo_infantry_org_recovery_cap_factor = 0.10
 			}
 		}
+
+		GEH_ako_no_hina_idea_iroha_1 = {
+			name = GEH_ako_no_hina_idea
+			removal_cost = -1
+
+			picture = state_shintoism
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industry_repair_factor = 0.05
+			}
+		}
+
+		GEH_ako_no_hina_idea_iroha_2 = {
+			name = GEH_ako_no_hina_idea
+			removal_cost = -1
+
+			picture = state_shintoism
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industry_repair_factor = 0.1
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+
+
+		GEH_ako_no_hina_idea_kayoko_1 = {
+			name = GEH_ako_no_hina_idea
+			removal_cost = -1
+
+			picture = state_shintoism
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				civilian_intel_to_others = 10
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		GEH_ako_no_hina_idea_kayoko_2 = {
+			name = GEH_ako_no_hina_idea
+			removal_cost = -1
+
+			picture = state_shintoism
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				civilian_intel_to_others = 10
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+
+		GEH_human_right_law_iroha = {
+			removal_cost = -1
+
+			picture = state_shintoism
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				political_power_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				democratic_drift = 0.04
+			}
+		}
+
+		GEH_human_right_law_kayoko = {
+			removal_cost = -1
+
+			picture = state_shintoism
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				democratic_drift = 0.04
+			}
+		}
 	}
 	
 	industrial_concern = {

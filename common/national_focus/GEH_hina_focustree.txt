@@ -2171,6 +2171,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_FUCK
 			activate_mission = GEH_basking_in_the_brilliance_of_their_serenade_FUCK_mission
 			country_event = GEH_BTBOTS.100
+			set_cosmetic_tag = GEH_hina_empire
 
 			hidden_effect = {
 				news_event = { id = GEH_news.11 }
@@ -7125,6 +7126,7 @@ focus_tree = {
 			}            
 
 			add_ideas = GEH_royal_guards
+			set_cosmetic_tag = GEH_hina_empire
 
 			country_event = { id = GEH.event.1009 }
 		}
@@ -7647,7 +7649,7 @@ focus_tree = {
 						desc = "GEH_iroha_natsume_prefect_team_leader_desc"
 						expire = "1980.1.1"
 						traits = {
-							
+							b_tjsehqnwkd_week GEH_puppet_of_prefect_team
 						}
 					}
 				}
@@ -7655,6 +7657,7 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = GEH_news.8 }
 			}
+			country_event = { id = GEH.event.13 }
 			custom_effect_tooltip = enter_tt
 			custom_effect_tooltip = GEH_BTBOTS_END_NEXT_flag
 			set_global_flag = GEH_BTBOTS_END_NEXT_flag
@@ -7707,7 +7710,7 @@ focus_tree = {
 						desc = "GEH_kayoko_onikata_prefect_team_leader_desc"
 						expire = "1980.1.1"
 						traits = {
-							
+							b_tjsehqnwkd_week GEH_last_hope_of_prefect_team
 						}
 					}
 				}
@@ -7715,6 +7718,7 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = GEH_news.9 }
 			}
+			country_event = { id = GEH.event.14 }
 			custom_effect_tooltip = enter_tt
 			custom_effect_tooltip = GEH_BTBOTS_END_NEXT_flag
 			set_global_flag = GEH_BTBOTS_END_NEXT_flag
@@ -7877,7 +7881,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 
+            custom_effect_tooltip = GEH_approve_plan_tt
+            add_to_variable = { GEH_PL_consumer_goods_factor = -0.02 } # 소비재
 		}
 	}
 	
@@ -7912,7 +7922,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = kivotos_halo_add3_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
 
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
 		}
 	}
 
@@ -7948,6 +7967,11 @@ focus_tree = {
 
 		completion_reward = {
             GEH_popular_support_up_effect = yes
+			custom_effect_tooltip = enter_tt
+			add_country_leader_trait = GEH_successor_of_hina
+			hidden_effect = {
+				country_event = { id = GEH.event.1029 }
+			}
 		}
 	}
 	
@@ -7982,7 +8006,36 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = GEH_if_iroha_leader_tt
+			effect_tooltip = {
+				add_ideas = GEH_ako_no_hina_idea_iroha_1
+			}
+			custom_effect_tooltip = enter_tt
+			custom_effect_tooltip = GEH_if_kayoko_leader_tt
+			effect_tooltip = {
+				add_ideas = GEH_ako_no_hina_idea_kayoko_1
+			}
 
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes
+							character = GEH_dlfhgk
+						}
+					}
+					add_ideas = GEH_ako_no_hina_idea_iroha_1
+				}
+				if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes
+							character = HEU_zkdyzh
+						}
+					}
+					add_ideas = GEH_ako_no_hina_idea_kayoko_1
+				}
+			}
 		}
 	}
 	
@@ -8017,7 +8070,47 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = GEH_if_iroha_leader_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = GEH_ako_no_hina_idea_iroha_1
+					add_idea = GEH_ako_no_hina_idea_iroha_2
+				}
+			}
+			custom_effect_tooltip = GEH_if_kayoko_leader_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = GEH_ako_no_hina_idea_kayoko_1
+					add_idea = GEH_ako_no_hina_idea_kayoko_2
+				}
+			}
 
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes
+							character = GEH_dlfhgk
+						}
+					}
+					swap_ideas = {
+						remove_idea = GEH_ako_no_hina_idea_iroha_1
+						add_idea = GEH_ako_no_hina_idea_iroha_2
+					}
+				}
+				if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes
+							character = HEU_zkdyzh
+						}
+					}
+					swap_ideas = {
+						remove_idea = GEH_ako_no_hina_idea_kayoko_1
+						add_idea = GEH_ako_no_hina_idea_kayoko_2
+					}
+				}
+			}
 		}
 	}
 	
@@ -8087,7 +8180,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			mio:GEH_maintenance_department_organization = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.15
+				add_mio_research_bonus = 0.05
+			}
+			mio:GEH_tank_department_organization = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.15
+				add_mio_research_bonus = 0.05
+			}
 		}
 	}
 	
@@ -8122,7 +8224,36 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = GEH_if_iroha_leader_tt
+			effect_tooltip = {
+				add_ideas = GEH_human_right_law_iroha
+			}
+			custom_effect_tooltip = enter_tt
+			custom_effect_tooltip = GEH_if_kayoko_leader_tt
+			effect_tooltip = {
+				add_ideas = GEH_human_right_law_kayoko
+			}
 
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes
+							character = GEH_dlfhgk
+						}
+					}
+					add_ideas = GEH_human_right_law_iroha
+				}
+				if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes
+							character = HEU_zkdyzh
+						}
+					}
+					add_ideas = GEH_human_right_law_kayoko
+				}
+			}
 		}
 	}
 	

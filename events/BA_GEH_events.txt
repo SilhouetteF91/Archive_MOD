@@ -2234,7 +2234,7 @@ country_event = { # 선도부장 임명식 - 나츠메 이로하
 	
 	option = { 
 		name = GEH.event.13.a 
-		
+		country_event = { id = GEH.event.16 days = 14 }
 	}
 }
 
@@ -2248,6 +2248,20 @@ country_event = { # 선도부장 임명식 - 오니카타 카요코
 	
 	option = { 
 		name = GEH.event.14.a 
+		country_event = { id = GEH.event.16 days = 14 }
+	}
+}
+
+country_event = { # 선임행정관의 업무 문제
+	id = GEH.event.16
+	title = GEH.event.16.t
+	desc = GEH.event.16.desc
+	picture = GFX_report_event_generic_city
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.16.a 
 		
 	}
 }
@@ -2362,11 +2376,17 @@ country_event = { #[GEH.GetName]의 [HEU.GetName] 병합
 
 	option = { 
 		name = GEH.event.1000.a
+		ai_chance = {
+			base = 0
+		}
 		complete_national_focus = GEH_benriya_annex
 	}
 
 	option = { 
 		name = GEH.event.1000.b
+		ai_chance = {
+			base = 1
+		}
 		complete_national_focus = GEH_benriya_tolerate
 	}
 }
@@ -2834,6 +2854,55 @@ country_event = { #소라사키 히나의 끝 - 3
 				trait = militias_officer #헬멧단 간부
 			}
 		}
+	}
+}
+
+country_event = { #경찰국가 계획
+	id = GEH.event.1029
+	title = GEH.event.1029.t
+
+	desc = {
+		text = GEH.event.1029.iroha
+		trigger = { 
+			has_country_leader = {
+				ruling_only = yes
+				character = GEH_dlfhgk
+			}
+		}
+	}
+
+	desc = {
+		text = GEH.event.1029.kayoko
+		trigger = { 
+			has_country_leader = {
+				ruling_only = yes
+				character = HEU_zkdyzh
+			}
+		}
+	}
+
+	picture = GFX_report_event_generic_door
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1029.a
+		country_event = { id = GEH.event.1030 days = 14 }
+	}
+}
+
+country_event = { #정상국가
+	id = GEH.event.1030
+	title = GEH.event.1030.t
+	desc = GEH.event.1030.desc
+
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1030.a
+
 	}
 }
 
@@ -3559,6 +3628,70 @@ news_event = {
 	}
 	option = {
 		name = GEH_news.13.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 게헨나 종합학원의 통일
+news_event = {
+	id = GEH_news.14
+	title = GEH_news.14.t
+	desc = GEH_news.14.desc
+	picture = GFX_event_BA_news_16
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.14.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.14.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.14.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 대게헨나국의 통일
+news_event = {
+	id = GEH_news.15
+	title = GEH_news.15.t
+	desc = GEH_news.15.desc
+	picture = GFX_event_BA_news_16
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.15.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.15.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.15.c
 		trigger = {
 			Kivotos_tag = no
 		}

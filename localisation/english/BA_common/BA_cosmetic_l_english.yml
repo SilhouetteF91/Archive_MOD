@@ -1,4 +1,4 @@
-﻿ l_english: 
+ l_english: 
 #전쟁해군
  SHL_com: "독일 적색 유격대"
  SHL_com_ADJ: "적색 유격대"
@@ -1301,6 +1301,32 @@
  HEU_germanic_union_fascism: "게르만 연합공국"
  HEU_germanic_union_fascism_DEF: "게르만 연합공국"
  HEU_germanic_union_fascism_ADJ: "게르만"
+
+  ## 선도부 ##
+ # 아코 루트
+ GEH_republic: "게헨나 연방공화국"
+ GEH_republic_ADJ: "게헨나"
+ GEH_republic_DEF: "게헨나 연방공화국"
+ GEH_republic_communism: "게헨나 민주공화국"
+ GEH_republic_communism_ADJ: "게헨나"
+ GEH_republic_communism_DEF: "게헨나 민주공화국"
+ GEH_republic_fascism: "게헨나 사회공화국"
+ GEH_republic_fascism_ADJ: "게헨나"
+ GEH_republic_fascism_DEF: "게헨나 사회공화국"
+ # 히나 루트
+ GEH_hina_empire: "대게헨나국"
+ GEH_hina_empire_ADJ: "게헨나"
+ GEH_hina_empire_DEF: "대게헨나국"
+ GEH_hina_empire_communism: "대게헨나 소비에트 공화국"
+ GEH_hina_empire_communism_ADJ: "게헨나"
+ GEH_hina_empire_communism_DEF: "대게헨나 소비에트 사회주의 공화국"
+ # 그 외 루트
+ GEH_art_academy: "게헨나 종합학원"
+ GEH_art_academy_ADJ: "게헨나"
+ GEH_art_academy_DEF: "게헨나 종합학원"
+ GEH_art_academy_communism: "게헨나 종합학원 혁명위원회"
+ GEH_art_academy_communism_ADJ: "게헨나"
+ GEH_art_academy_communism_DEF: "게헨나 종합학원 혁명위원회"
  
  KAP_proclaimed: "학료도시 카필라"
  KAP_proclaimed_ADJ: "학료도시 카필라"

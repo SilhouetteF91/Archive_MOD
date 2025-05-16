@@ -1828,6 +1828,31 @@ leader_traits = {
 		justify_war_goal_time = -0.25
 	}
 
+	GEH_puppet_of_prefect_team = { # 무력한 꼭두각시
+		random = no
+		stability_factor = -0.05
+		research_speed_factor = 0.02
+		ai_desired_divisions_factor = 0.30
+		political_advisor_cost_factor = -0.1
+	}
+
+	GEH_last_hope_of_prefect_team = { # 선도부 최후의 희망
+		random = no
+		ai_desired_divisions_factor = 0.30
+		land_doctrine_cost_factor = -0.05
+		naval_doctrine_cost_factor = -0.05
+		air_doctrine_cost_factor = -0.05
+		army_core_defence_factor = 0.1
+		army_core_attack_factor = 0.1
+	}
+
+	GEH_successor_of_hina = { # 히나의 후계자
+		random = no
+		war_support_factor = 0.1
+		weekly_casualties_war_support = 0.003
+		offensive_war_stability_factor = 0.2
+	}
+
 	GEH_School_Lunch_Club_Juri = { # 급양부 - 주리
 		sprite = 13
 		random = no

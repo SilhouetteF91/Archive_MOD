@@ -337,6 +337,7 @@ gehenna_unification = {
 					NOT = {
 						OR = {
 							tag = GEM
+							tag = GEH
 							has_cosmetic_tag = HEU_GSC
 							has_cosmetic_tag = HEU_luxembourg
 							has_cosmetic_tag = HEU_west_germanic_union
@@ -348,9 +349,39 @@ gehenna_unification = {
 			}
 			if = {
 				limit = {
+					AND = {
+						tag = GEH
+						NOT = {
+							OR = { 
+								has_cosmetic_tag = GEH_hina_empire
+								has_cosmetic_tag = GEH_republic
+							}
+						}
+					}
+				}
+				set_cosmetic_tag = GEH_art_academy
+				news_event = { id = GEH_news.14 }
+			}
+			if = {
+				limit = {
+					AND = {
+						tag = GEH
+						has_cosmetic_tag = GEH_hina_empire
+					}
+				}
+				news_event = { id = GEH_news.15 }
+			}
+			if = {
+				limit = {
 					has_idea = BA_a_divided_academy
 				}
 				remove_ideas = BA_a_divided_academy
+			}
+			if = {
+				limit = {
+					NOT = { has_idea = BA_three_major_academies }
+				}
+				add_ideas = BA_three_major_academies #3대 학원 계승
 			}
 			set_country_flag = GEH_unified_gehenna_flag
 		}
