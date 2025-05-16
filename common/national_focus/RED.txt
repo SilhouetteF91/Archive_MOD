@@ -205,9 +205,14 @@ focus_tree = {
 		relative_position_id = RED_high_spirited
 		cost = 5
 		completion_reward = {
-			unlock_decision_tooltip = {
-				decision = northern_sovereignty_war_RED_military_government_all_0
-				show_effect_tooltip = yes
+			if = {
+				limit = { has_global_flag = RE4_finland_war_flag_RE4WIN }
+				unlock_decision_tooltip = {
+					decision = northern_sovereignty_war_RED_military_government_all_0
+					show_effect_tooltip = yes
+				}
+			} else = {
+				
 			}
 		}
 	}
@@ -339,19 +344,19 @@ focus_tree = {
 		completion_reward = {
 			RE1 = {
 				add_to_variable = {
-					global.red_northern_sovereignty_re1_var = 14
+					global.red_northern_sovereignty_re1_var = 20
 					tooltip = red_northern_sovereignty_tt
 				}
 			}
 			RE2 = {
 				add_to_variable = {
-					global.red_northern_sovereignty_re2_var = 14
+					global.red_northern_sovereignty_re2_var = 20
 					tooltip = red_northern_sovereignty_tt
 				}
 			}
 			RE3 = {
 				add_to_variable = {
-					global.red_northern_sovereignty_re3_var = 14
+					global.red_northern_sovereignty_re3_var = 20
 					tooltip = red_northern_sovereignty_tt
 				}
 			}

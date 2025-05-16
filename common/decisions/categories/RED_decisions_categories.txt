@@ -134,6 +134,7 @@ RED_northern_sovereignty_war = { #북방 주권 전쟁
 	}
 	visible = {
 		has_country_flag = RED_northern_sovereignty_war_unlock_flag
+		NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 	}
 	priority = 500
 

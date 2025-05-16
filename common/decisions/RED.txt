@@ -3093,6 +3093,9 @@ RED_northern_sovereignty_war = {
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
 		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
+		}
 		ai_will_do = {
 			factor = 200
 		}
@@ -3145,6 +3148,9 @@ RED_northern_sovereignty_war = {
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
 		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
+		}
 		ai_will_do = {
 			factor = 200
 		}
@@ -3196,6 +3202,9 @@ RED_northern_sovereignty_war = {
 				}
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		ai_will_do = {
 			factor = 200
@@ -3256,9 +3265,14 @@ RED_northern_sovereignty_war = {
 			has_completed_focus = RED_army_government_loyalty_confirmation
 		}
 		cancel_trigger = {
-			event_target:northern_sovereignty_war_RED_military_government_target = {
-				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			OR = {
+				has_global_flag = RE4_northern_sovereignty_war_started
+				event_target:northern_sovereignty_war_RED_military_government_target = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
 			}
+		}
+		cancel_trigger = {
 		}
 		ai_will_do = {
 			factor = 200
@@ -3322,8 +3336,11 @@ RED_northern_sovereignty_war = {
 			has_completed_focus = RED_army_government_loyalty_confirmation
 		}
 		cancel_trigger = {
-			event_target:northern_sovereignty_war_RED_military_government_target = {
-				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			OR = {
+				has_global_flag = RE4_northern_sovereignty_war_started
+				event_target:northern_sovereignty_war_RED_military_government_target = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
 			}
 		}
 		ai_will_do = {
@@ -3388,8 +3405,11 @@ RED_northern_sovereignty_war = {
 			has_completed_focus = RED_army_government_loyalty_confirmation
 		}
 		cancel_trigger = {
-			event_target:northern_sovereignty_war_RED_military_government_target = {
-				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			OR = {
+				has_global_flag = RE4_northern_sovereignty_war_started
+				event_target:northern_sovereignty_war_RED_military_government_target = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
 			}
 		}
 		ai_will_do = {
@@ -3476,6 +3496,9 @@ RED_northern_sovereignty_war = {
 				}
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		ai_will_do = {
 			factor = 200
@@ -3569,7 +3592,7 @@ RED_northern_sovereignty_war = {
 			}
 		}
 		available = {
-			has_completed_focus = RED_securing_bureaucracy_support
+			has_completed_focus = RED_infiltration_of_security_committee
 			any_country = {
 				OR = {
 					tag = RE1
@@ -3578,6 +3601,9 @@ RED_northern_sovereignty_war = {
 				}
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		ai_will_do = {
 			factor = 200
@@ -3677,6 +3703,9 @@ RED_northern_sovereignty_war = {
 				}
 			}
 		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
+		}
 		fire_only_once = no
 		cost = 100
 		days_remove = 75
@@ -3733,6 +3762,9 @@ RED_northern_sovereignty_war = {
 					is_subject = no
 				}
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		fire_only_once = no
 		cost = 25
@@ -3810,6 +3842,9 @@ RED_northern_sovereignty_war = {
 					is_subject = no
 				}
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		fire_only_once = no
 		custom_cost_trigger = {
@@ -3897,6 +3932,9 @@ RED_northern_sovereignty_war = {
 					is_subject = no
 				}
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		fire_only_once = no
 		custom_cost_trigger = {
