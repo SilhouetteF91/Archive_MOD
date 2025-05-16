@@ -1589,6 +1589,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ABY_divide_line"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/divide_Line.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
 		name = "GFX_ABY_base_line"
 		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161056284480.tga"
 		legacy_lazy_load = no

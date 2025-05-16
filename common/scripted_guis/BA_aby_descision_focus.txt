@@ -1839,6 +1839,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_first_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_first
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1846,6 +1850,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_1_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_1
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1853,6 +1861,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_2_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_2
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1860,6 +1872,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_3_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_3
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1867,6 +1883,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_4_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_4
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1874,6 +1894,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_5_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_5
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1881,6 +1905,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_6_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_6
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1888,6 +1916,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_7_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_7
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1895,6 +1927,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_8_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_8
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1902,6 +1938,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_9_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_9
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1909,6 +1949,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_10_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_10
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1916,6 +1960,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_11_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_11
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1923,6 +1971,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_12_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_12
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1930,6 +1982,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_13_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_13
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1937,6 +1993,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_14_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_14
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1944,6 +2004,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_abydos_15_ongoing_flag
 					set_country_flag = ABY_descision_focus_abydos_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_abydos_15
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1951,6 +2015,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_czecho_1_ongoing_flag
 					set_country_flag = ABY_descision_focus_czecho_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_czecho_1
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1958,6 +2026,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_czecho_2_ongoing_flag
 					set_country_flag = ABY_descision_focus_czecho_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_czecho_2
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1965,6 +2037,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_czecho_3_ongoing_flag
 					set_country_flag = ABY_descision_focus_czecho_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_czecho_3
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1972,6 +2048,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_czecho_4_ongoing_flag
 					set_country_flag = ABY_descision_focus_czecho_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_czecho_4
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1979,6 +2059,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_czecho_5_ongoing_flag
 					set_country_flag = ABY_descision_focus_czecho_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_czecho_5
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1986,6 +2070,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_czecho_6_ongoing_flag
 					set_country_flag = ABY_descision_focus_czecho_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_czecho_6
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -1993,6 +2081,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_czecho_7_ongoing_flag
 					set_country_flag = ABY_descision_focus_czecho_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_czecho_7
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2000,6 +2092,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_czecho_8_ongoing_flag
 					set_country_flag = ABY_descision_focus_czecho_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_czecho_8
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2007,6 +2103,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_czecho_9_ongoing_flag
 					set_country_flag = ABY_descision_focus_czecho_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_czecho_9
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2014,6 +2114,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_czecho_10_ongoing_flag
 					set_country_flag = ABY_descision_focus_czecho_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_czecho_10
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2021,6 +2125,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_czecho_11_ongoing_flag
 					set_country_flag = ABY_descision_focus_czecho_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_czecho_11
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2028,6 +2136,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_czecho_12_ongoing_flag
 					set_country_flag = ABY_descision_focus_czecho_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_czecho_12
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2035,6 +2147,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_german_1_ongoing_flag
 					set_country_flag = ABY_descision_focus_german_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_german_1
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2042,6 +2158,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_german_2_ongoing_flag
 					set_country_flag = ABY_descision_focus_german_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_german_2
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2049,6 +2169,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_german_3_ongoing_flag
 					set_country_flag = ABY_descision_focus_german_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_german_3
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2056,6 +2180,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_german_4_ongoing_flag
 					set_country_flag = ABY_descision_focus_german_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_german_4
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2063,6 +2191,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_german_5_ongoing_flag
 					set_country_flag = ABY_descision_focus_german_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_german_5
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2070,6 +2202,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_german_6_ongoing_flag
 					set_country_flag = ABY_descision_focus_german_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_german_6
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2077,6 +2213,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_german_7_ongoing_flag
 					set_country_flag = ABY_descision_focus_german_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_german_7
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2084,6 +2224,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_german_8_ongoing_flag
 					set_country_flag = ABY_descision_focus_german_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_german_8
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2091,6 +2235,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_german_9_ongoing_flag
 					set_country_flag = ABY_descision_focus_german_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_german_9
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2098,6 +2246,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_german_10_ongoing_flag
 					set_country_flag = ABY_descision_focus_german_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_german_10
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2105,6 +2257,10 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_german_11_ongoing_flag
 					set_country_flag = ABY_descision_focus_german_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_german_11
+						days = 49
+					}
 				}
 				if = {
 					limit = {
@@ -2112,11 +2268,135 @@ scripted_gui = {
 					}
 					set_country_flag = ABY_descision_focus_german_12_ongoing_flag
 					set_country_flag = ABY_descision_focus_german_line_doing_flag
+					add_timed_idea = {
+						idea = ABY_idea_german_12
+						days = 49
+					}
 				}
 			}
 		}
 
 		triggers = {
+			ABY_descision_focus_first_GFX_visible = {
+				has_country_flag = ABY_descision_focus_first_selected_flag
+			}
+			ABY_descision_focus_abydos_1_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_1_selected_flag
+			}
+			ABY_descision_focus_abydos_2_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_2_selected_flag
+			}
+			ABY_descision_focus_abydos_3_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_3_selected_flag
+			}
+			ABY_descision_focus_abydos_4_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_4_selected_flag
+			}
+			ABY_descision_focus_abydos_5_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_5_selected_flag
+			}
+			ABY_descision_focus_abydos_6_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_6_selected_flag
+			}
+			ABY_descision_focus_abydos_7_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_7_selected_flag
+			}
+			ABY_descision_focus_abydos_8_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_8_selected_flag
+			}
+			ABY_descision_focus_abydos_9_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_9_selected_flag
+			}
+			ABY_descision_focus_abydos_10_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_10_selected_flag
+			}
+			ABY_descision_focus_abydos_11_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_11_selected_flag
+			}
+			ABY_descision_focus_abydos_12_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_12_selected_flag
+			}
+			ABY_descision_focus_abydos_13_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_13_selected_flag
+			}
+			ABY_descision_focus_abydos_14_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_14_selected_flag
+			}
+			ABY_descision_focus_abydos_15_GFX_visible = {
+				has_country_flag = ABY_descision_focus_abydos_15_selected_flag
+			}
+			ABY_descision_focus_german_1_GFX_visible = {
+				has_country_flag = ABY_descision_focus_german_1_selected_flag
+			}
+			ABY_descision_focus_german_2_GFX_visible = {
+				has_country_flag = ABY_descision_focus_german_2_selected_flag
+			}
+			ABY_descision_focus_german_3_GFX_visible = {
+				has_country_flag = ABY_descision_focus_german_3_selected_flag
+			}
+			ABY_descision_focus_german_4_GFX_visible = {
+				has_country_flag = ABY_descision_focus_german_4_selected_flag
+			}
+			ABY_descision_focus_german_5_GFX_visible = {
+				has_country_flag = ABY_descision_focus_german_5_selected_flag
+			}
+			ABY_descision_focus_german_6_GFX_visible = {
+				has_country_flag = ABY_descision_focus_german_6_selected_flag
+			}
+			ABY_descision_focus_german_7_GFX_visible = {
+				has_country_flag = ABY_descision_focus_german_7_selected_flag
+			}
+			ABY_descision_focus_german_8_GFX_visible = {
+				has_country_flag = ABY_descision_focus_german_8_selected_flag
+			}
+			ABY_descision_focus_german_9_GFX_visible = {
+				has_country_flag = ABY_descision_focus_german_9_selected_flag
+			}
+			ABY_descision_focus_german_10_GFX_visible = {
+				has_country_flag = ABY_descision_focus_german_10_selected_flag
+			}
+			ABY_descision_focus_german_11_GFX_visible = {
+				has_country_flag = ABY_descision_focus_german_11_selected_flag
+			}
+			ABY_descision_focus_german_12_GFX_visible = {
+				has_country_flag = ABY_descision_focus_german_12_selected_flag
+			}
+			ABY_descision_focus_czecho_1_GFX_visible = {
+				has_country_flag = ABY_descision_focus_czecho_1_selected_flag
+			}
+			ABY_descision_focus_czecho_2_GFX_visible = {
+				has_country_flag = ABY_descision_focus_czecho_2_selected_flag
+			}
+			ABY_descision_focus_czecho_3_GFX_visible = {
+				has_country_flag = ABY_descision_focus_czecho_3_selected_flag
+			}
+			ABY_descision_focus_czecho_4_GFX_visible = {
+				has_country_flag = ABY_descision_focus_czecho_4_selected_flag
+			}
+			ABY_descision_focus_czecho_5_GFX_visible = {
+				has_country_flag = ABY_descision_focus_czecho_5_selected_flag
+			}
+			ABY_descision_focus_czecho_6_GFX_visible = {
+				has_country_flag = ABY_descision_focus_czecho_6_selected_flag
+			}
+			ABY_descision_focus_czecho_7_GFX_visible = {
+				has_country_flag = ABY_descision_focus_czecho_7_selected_flag
+			}
+			ABY_descision_focus_czecho_8_GFX_visible = {
+				has_country_flag = ABY_descision_focus_czecho_8_selected_flag
+			}
+			ABY_descision_focus_czecho_9_GFX_visible = {
+				has_country_flag = ABY_descision_focus_czecho_9_selected_flag
+			}
+			ABY_descision_focus_czecho_10_GFX_visible = {
+				has_country_flag = ABY_descision_focus_czecho_10_selected_flag
+			}
+			ABY_descision_focus_czecho_11_GFX_visible = {
+				has_country_flag = ABY_descision_focus_czecho_11_selected_flag
+			}
+			ABY_descision_focus_czecho_12_GFX_visible = {
+				has_country_flag = ABY_descision_focus_czecho_12_selected_flag
+			}
 			startbutton_unavailable_visible = {
 				OR = {
 					AND = {

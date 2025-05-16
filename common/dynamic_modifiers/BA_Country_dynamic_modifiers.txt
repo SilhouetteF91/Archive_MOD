@@ -1942,8 +1942,7 @@ MIL_AL_1S_Enhencement = {
 	production_factory_max_efficiency_factor = MIL_AL_1S_Enhencement_production_factory_max_efficiency_factor
 	planning_speed = MIL_AL_1S_Enhencement_planning_speed
 }
-
-ABY_army_dynamic_modifier = {
+ABY_army_dynamic_modifier_real = {
 	enable = {
 		always = yes
 	}
@@ -1954,30 +1953,43 @@ ABY_army_dynamic_modifier = {
 	custom_modifier_tooltip = ABY_scripted_air_name
 	custom_modifier_tooltip = ABY_scripted_navy_name
 
-	#army
+	army_core_attack_factor = ABY_var_army_core_attack_factor
+	army_core_defence_factor = ABY_var_army_core_defence_factor
 	army_attack_factor = ABY_var_army_attack_factor
-	army_speed_factor = ABY_var_army_speed_factor
 	army_defence_factor = ABY_var_army_defence_factor
-    army_org_factor  = ABY_var_army_army_org_factor
-    army_morale_factor = ABY_var_army_army_morale_factor
+}
+ABY_army_dynamic_modifier = {
+	enable = {
+		always = yes
+	}
+	
+	custom_modifier_tooltip = ABY_scripted_army_name
+	custom_modifier_tooltip = ABY_scripted_halo_name
+	custom_modifier_tooltip = ABY_scripted_air_name
+	custom_modifier_tooltip = ABY_scripted_navy_name
+
+	#army
 	max_dig_in = ABY_var_max_dig_in
 	dig_in_speed_factor = ABY_var_dig_in_speed_factor
-	max_dig_in_factor = ABY_var_max_dig_in_factor
-	production_speed_bunker_factor = ABY_var_production_speed_bunker_factor
-	production_speed_coastal_bunker_factor = ABY_var_production_speed_coastal_bunker_factor
 	max_planning_factor = ABY_var_max_planning_factor
-	planning_speed = ABY_var_planning_speed
-	motorized_attack_factor = ABY_var_MOTORIZED_ATTACK_FACTOR
-	motorized_defence_factor = ABY_var_MOTORIZED_DEFENCE_FACTOR
-	mechanized_attack_factor = ABY_var_MECHANIZED_ATTACK_FACTOR
-	mechanized_defence_factor = ABY_var_MECHANIZED_DEFENCE_FACTOR
+	command_power_gain = ABY_var_command_power_gain
+	command_power_gain_mult = ABY_var_command_power_gain_mult
+
+	minimum_training_level = ABY_var_minimum_training_level
+	supply_consumption_factor = ABY_var_supply_consumption_factor
+	conscription_factor = ABY_var_conscription_factor
+	army_org_regain = ABY_var_army_org_regain
+	out_of_supply_factor = ABY_var_out_of_supply_factor
+
 	army_artillery_attack_factor = ABY_var_army_artillery_attack_factor
 	army_artillery_defence_factor = ABY_var_army_artillery_defence_factor
-	army_armor_speed_factor = ABY_var_army_armor_speed_factor
-	ARMY_ARMOR_ATTACK_FACTOR = ABY_var_ARMY_ARMOR_ATTACK_FACTOR
-	ARMY_ARMOR_DEFENCE_FACTOR = ABY_var_ARMY_ARMOR_DEFENCE_FACTOR
+	supply_node_range = ABY_var_supply_node_range
+    army_org_factor = ABY_var_army_army_org_factor
+	breakthrough_factor = ABY_var_breakthrough_factor
+
 	modifier_army_sub_unit_militia_attack_factor = ABY_var_modifier_army_sub_unit_militia_attack_factor
 	modifier_army_sub_unit_militia_defence_factor = ABY_var_modifier_army_sub_unit_militia_defence_factor
+	land_reinforce_rate = ABY_var_land_reinforce_rate
 
 	#halo
 	modifier_army_sub_unit_category_halo_attack_factor = ABY_var_modifier_army_sub_unit_category_halo_attack_factor

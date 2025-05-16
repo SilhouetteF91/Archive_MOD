@@ -346,9 +346,6 @@ bookmarks = {
 				ABY_idea_two_00
 			}
 			focuses = {
-				ABY_focus_neptis_cooperation_country
-				ABY_focus_with_czech
-				ABY_focus_abydos_schoolcountry
 			}
 		}
 

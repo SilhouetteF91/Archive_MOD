@@ -77,6 +77,61 @@ guiTypes = {
 			format = center		
 		}
 
+		instantTextboxType = {
+			name = "german_focustree"
+			position = { x = -10 y = 725 }
+			font = "hoi_24header"
+			text = "ABY_german_focustree_tt"
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "abydos_focustree"
+			position = { x = 155 y = 725 }
+			font = "hoi_24header"
+			text = "ABY_abydos_focustree_tt"
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "czecho_focustree"
+			position = { x = 320 y = 725 }
+			font = "hoi_24header"
+			text = "ABY_czecho_focustree_tt"
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "german_focustree_now"
+			position = { x = -10 y = 750 }
+			font = "hoi_16mbs"
+			text = "[ABY_german_focustree_now_tt]"
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "abydos_focustree_now"
+			position = { x = 155 y = 750 }
+			font = "hoi_16mbs"
+			text = "[ABY_abydos_focustree_now_tt]"
+			format = center		
+		}
+
+		instantTextboxType = {
+			name = "czecho_focustree_now"
+			position = { x = 320 y = 750 }
+			font = "hoi_16mbs"
+			text = "[ABY_czecho_focustree_now_tt]"
+			format = center		
+		}
+
+		iconType = {
+			name = "divide_line"
+			spriteType = "GFX_ABY_divide_line"
+			position = { x = -7 y = 35 }
+			scale = 0.8
+		}
+
 		iconType = {
 			name = "base_line"
 			spriteType = "GFX_ABY_base_line"
@@ -2356,9 +2411,243 @@ guiTypes = {
 			fixedsize = yes		
 		}
 		iconType = {
-			name = "symbol"
+			name = "ABY_descision_focus_first_GFX"
 			position = { x = 42 y = 88 }
-			spriteType = "[GetabydosfocusGFX]"
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_1_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_2_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_3_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_4_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_5_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_6_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_7_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_8_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_9_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_10_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_11_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_12_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_13_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_14_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_abydos_15_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_german_1_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_german_2_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_german_3_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_german_4_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_german_5_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_german_6_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_german_7_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_german_8_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_german_9_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_german_10_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_german_11_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_german_12_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_czecho_1_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_czecho_2_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_czecho_3_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_czecho_4_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_czecho_5_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_czecho_6_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_czecho_7_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_czecho_8_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_czecho_9_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_czecho_10_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_czecho_11_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "ABY_descision_focus_czecho_12_GFX"
+			position = { x = 42 y = 88 }
+			spriteType = "GFX_goal_unknown"
 			alwaystransparent = yes
 		}
 		iconType = {

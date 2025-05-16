@@ -3463,8 +3463,7 @@ country_event = {
 	trigger = {
 		tag = ABY
 		ABY = {
-			has_completed_focus = ABY_focus_prepare_war
-			NOT = {has_completed_focus = ABY_focus_operation_falling_flower}
+			always = no
 		}
 		HYA = {
 			NOT = {
@@ -3779,7 +3778,6 @@ country_event = {
 					has_government = fascism
 				}
 			}
-			complete_national_focus = ABY_focus_with_german
 		}
 		if = {
 			limit = {
@@ -3794,7 +3792,6 @@ country_event = {
 					has_government = democratic
 				}
 			}
-			complete_national_focus = ABY_focus_with_czech
 			set_country_flag = ABY_flag_with_czech
 		}
 		if = {
@@ -3804,7 +3801,6 @@ country_event = {
 					has_country_flag = ABY_flag_neptis
 				}
 			}
-			complete_national_focus = ABY_focus_neptis_cooperation_country
 			set_country_flag = ABY_flag_neptis_cooperation_country
 		}
 		if = {
@@ -3814,7 +3810,6 @@ country_event = {
 					NOT = {has_country_flag = ABY_flag_neptis}
 				}
 			}
-			complete_national_focus = ABY_focus_abydos_schoolcountry
 			set_country_flag = ABY_flag_abydos_schoolcountry
 		}
 		hidden_effect = {
@@ -4652,7 +4647,7 @@ country_event = {
 		name = ABY_new_event.136.a
 		ai_chance = { factor = 100 }
 		set_country_flag = ABY_flag_wpehvk_tkrjs
-		complete_national_focus = ABY_focus_get_power_of_student_council
+		#complete_national_focus = ABY_focus_get_power_of_student_council
 	}
 }
 
@@ -4990,7 +4985,7 @@ country_event = {
 		ABY = {
 			controls_state = 55
 			controls_state = 64
-			has_completed_focus = ABY_focus_get_power_of_student_council
+			always = no
 		}
 	}
 
@@ -9665,7 +9660,7 @@ country_event = {
 	trigger = {
 		tag = ABY
 		ABY = {
-			has_completed_focus = ABY_focus_declare_empire
+			always = no
 			controls_state = 6
 		}
 	}
@@ -10934,7 +10929,7 @@ country_event = {
 		name = ABY_new_event.236.a
 		ai_chance = { factor = 100 }
 		set_country_flag = ABY_flag_wpehvk_tkrjs
-		complete_national_focus = ABY_focus_get_power_of_student_council
+		#complete_national_focus = ABY_focus_get_power_of_student_council
 	}
 }
 
@@ -11272,7 +11267,7 @@ country_event = {
 		ABY = {
 			controls_state = 55
 			controls_state = 64
-			has_completed_focus = ABY_focus_get_power_of_student_council
+			always = no
 		}
 	}
 
@@ -15620,7 +15615,7 @@ country_event = {
 	trigger = {
 		tag = ABY
 		ABY = {
-			has_completed_focus = ABY_focus_declare_empire
+			always = no
 			controls_state = 6
 		}
 	}
@@ -16907,8 +16902,8 @@ country_event = {
 			id = ABY_descision_focus_event.40
 		}
 		swap_ideas = {
-			remove_idea = ABY_idea_czecho_1
-			add_idea = ABY_idea_czecho_2
+			remove_idea = ABY_idea_czecho_1_person
+			add_idea = ABY_idea_czecho_2_person
 		}
 		add_to_variable = {
             var = ABY_portrait_czecho_var
@@ -16950,8 +16945,8 @@ country_event = {
 		name = ABY_descision_focus_event.41.a
 		ai_chance = { factor = 100 }
 		swap_ideas = {
-			remove_idea = ABY_idea_german_1
-			add_idea = ABY_idea_german_2
+			remove_idea = ABY_idea_german_1_person
+			add_idea = ABY_idea_german_2_person
 		}
 		add_to_variable = {
             var = ABY_portrait_german_var
@@ -16977,6 +16972,11 @@ country_event = {
 		name = ABY_descision_focus_event.42.a
 		ai_chance = { factor = 100 }
 	}
+
+	option = {
+		name = ABY_descision_focus_event.42.b
+		ai_chance = { factor = 100 }
+	}
 }
 
 country_event = {
@@ -16989,6 +16989,11 @@ country_event = {
 
 	option = {
 		name = ABY_descision_focus_event.43.a
+		ai_chance = { factor = 100 }
+	}
+
+	option = {
+		name = ABY_descision_focus_event.43.b
 		ai_chance = { factor = 100 }
 	}
 }
@@ -17005,6 +17010,11 @@ country_event = {
 		name = ABY_descision_focus_event.44.a
 		ai_chance = { factor = 100 }
 	}
+
+	option = {
+		name = ABY_descision_focus_event.44.b
+		ai_chance = { factor = 100 }
+	}
 }
 
 country_event = {
@@ -17017,6 +17027,11 @@ country_event = {
 
 	option = {
 		name = ABY_descision_focus_event.45.a
+		ai_chance = { factor = 100 }
+	}
+
+	option = {
+		name = ABY_descision_focus_event.45.b
 		ai_chance = { factor = 100 }
 	}
 }
@@ -17033,6 +17048,11 @@ country_event = {
 		name = ABY_descision_focus_event.46.a
 		ai_chance = { factor = 100 }
 	}
+
+	option = {
+		name = ABY_descision_focus_event.46.b
+		ai_chance = { factor = 100 }
+	}
 }
 
 country_event = {
@@ -17045,6 +17065,11 @@ country_event = {
 
 	option = {
 		name = ABY_descision_focus_event.47.a
+		ai_chance = { factor = 100 }
+	}
+
+	option = {
+		name = ABY_descision_focus_event.47.b
 		ai_chance = { factor = 100 }
 	}
 }
@@ -17061,6 +17086,11 @@ country_event = {
 		name = ABY_descision_focus_event.48.a
 		ai_chance = { factor = 100 }
 	}
+
+	option = {
+		name = ABY_descision_focus_event.48.b
+		ai_chance = { factor = 100 }
+	}
 }
 
 country_event = {
@@ -17075,6 +17105,11 @@ country_event = {
 		name = ABY_descision_focus_event.49.a
 		ai_chance = { factor = 100 }
 	}
+
+	option = {
+		name = ABY_descision_focus_event.49.b
+		ai_chance = { factor = 100 }
+	}
 }
 
 country_event = {
@@ -17087,6 +17122,161 @@ country_event = {
 
 	option = {
 		name = ABY_descision_focus_event.50.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.51
+	title = ABY_descision_focus_event.51.t
+	desc = ABY_descision_focus_event.51.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.51.a
+		ai_chance = { factor = 100 }
+	}
+
+	option = {
+		name = ABY_descision_focus_event.51.b
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.52
+	title = ABY_descision_focus_event.52.t
+	desc = ABY_descision_focus_event.52.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.52.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.53
+	title = ABY_descision_focus_event.53.t
+	desc = ABY_descision_focus_event.53.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.53.a
+		ai_chance = { factor = 100 }
+	}
+
+	option = {
+		name = ABY_descision_focus_event.53.b
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.54
+	title = ABY_descision_focus_event.54.t
+	desc = ABY_descision_focus_event.54.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.54.a
+		ai_chance = { factor = 100 }
+	}
+
+	option = {
+		name = ABY_descision_focus_event.54.b
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.55
+	title = ABY_descision_focus_event.55.t
+	desc = ABY_descision_focus_event.55.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.55.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.56
+	title = ABY_descision_focus_event.56.t
+	desc = ABY_descision_focus_event.56.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.56.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.57
+	title = ABY_descision_focus_event.57.t
+	desc = ABY_descision_focus_event.57.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.57.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.58
+	title = ABY_descision_focus_event.58.t
+	desc = ABY_descision_focus_event.58.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.58.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.59
+	title = ABY_descision_focus_event.59.t
+	desc = ABY_descision_focus_event.59.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.59.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ABY_descision_focus_event.60
+	title = ABY_descision_focus_event.60.t
+	desc = ABY_descision_focus_event.60.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ABY_descision_focus_event.60.a
 		ai_chance = { factor = 100 }
 	}
 }
