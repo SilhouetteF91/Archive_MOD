@@ -11,6 +11,8 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1700 }
 	shared_focus = CAN_kings_speech
 	shared_focus = CAN_Quebec_problem
+	
+	#alternate_icon_set = FOCUS_ICON_SET_BRILLIANT_KEY_FOCUS
 
 	focus = {
 		id = ENG_kings_speech # 국왕의 연설
@@ -4511,29 +4513,33 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		available_if_capitulated = yes
 	
-			
+		
+		select_effect = {
+			country_event = { id = IMP.7 days = 05 }
+		}
 		completion_reward = {
-			country_event = { id = IMP.7 }
+			country_event = { id = IMP.8 days = 01 }
 			swap_ideas = {
 				add_idea = ENG_distorted_gov_2
 				remove_idea = ENG_distorted_gov
 			}
 		}
 	}
+
 	focus = {
 		id = CAN_create_CBC # 캐나다 라디오방송위원회 
 		icon = GFX_focus_SWE_radiotjanst
 		cost = 5
 
 		relative_position_id = CAN_government_unity
-		x = -4
+		x = -3
 		y = 1
 		available = { 
 			is_subject = no 
 		}
 	
 		prerequisite = { focus = CAN_government_unity }
-		ai_will_do = { factor = 50 }
+		ai_will_do = { factor = 30 }
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		available_if_capitulated = yes
 	
@@ -4547,6 +4553,7 @@ focus_tree = {
 	focus = { # 캐나다 중립
 		id = CAN_canada_neutrality
 		icon = GFX_focus_CAN_third_world
+		alternate_icon = GFX_focus_CAN_third_world_Brilliant
 		cost = 5
 
 		relative_position_id = CAN_government_unity
@@ -4687,6 +4694,7 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
+					is_core_of = ROOT
 					free_building_slots = {
 						building = arms_factory
 						size > 0
@@ -4702,6 +4710,7 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
+					is_core_of = ROOT
 					free_building_slots = {
 						building = arms_factory
 						size > 0
@@ -4717,6 +4726,7 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
+					is_core_of = ROOT
 					free_building_slots = {
 						building = arms_factory
 						size > 0
@@ -4760,8 +4770,8 @@ focus_tree = {
 		}
 	}
 	
-	focus = { # 앵글로아메리카 동맹
-		id = CAN_north_american_alliance_BA
+	focus = { # 앵글로아메리카 동맹 -  id가 겹칠 경우 CAN 를 IMP으로 대체
+		id = IMP_north_american_alliance
 		text = CAN_north_american_alliance
 		icon = GFX_focus_CAN_englo_alliance
 		cost = 8
@@ -4771,6 +4781,7 @@ focus_tree = {
 		y = 2
 		available = { 
 			is_subject = no 
+			is_in_faction = no
 			USA = { 
 				has_government = ROOT 
 				NOT = { has_completed_focus = USA_new_team}
@@ -4808,6 +4819,75 @@ focus_tree = {
 		}
 	}
 	
+	focus = { # 스트레사 전선
+		id = CAN_stresa_front
+		icon = GFX_focus_CAN_stresa_front
+		cost = 8
+
+		relative_position_id = CAN_commonwealth_air_training
+		x = 1
+		y = 1
+		available = { 
+			is_subject = no
+			is_in_faction = no
+			OR = {
+				is_faction_leader = yes
+				has_rule = can_create_factions
+			}
+			OR = {
+				ITA = { is_in_faction = no }
+				FRA = { is_in_faction = no }
+			}
+		}
+		prerequisite = { 
+			focus = CAN_commonwealth_air_training
+		}
+		ai_will_do = { factor = 0 }
+		search_filters = { }
+		
+		bypass = {
+			is_in_faction_with = ITA
+			is_in_faction_with = FRA
+		}
+	
+			
+		completion_reward = {
+			if = {
+				limit = {
+					is_faction_leader = no
+					is_in_faction = yes
+				}
+				leave_faction = yes
+				create_faction = FRA_stresa_front
+			}
+			else_if = {
+				limit = { is_faction_leader = yes }
+				set_faction_name = FRA_stresa_front
+			}
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							original_tag = FRA
+							NOT = { has_global_flag = FRA_collapse }
+						}
+						AND = {
+							original_tag = ITA
+							NOT = { has_completed_focus = ITA_pact_of_steel }
+						}
+					}
+				}
+				country_event = { id = impindia.4 days = 03 }
+			}
+
+			hidden_effect = {
+				news_event = { id = BA_news.140 days = 01 }
+			}
+
+
+		}
+	}
+	
 	focus = { # 제국회의 개최
 		id = CAN_Imperial_conference_held
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
@@ -4833,6 +4913,45 @@ focus_tree = {
 	
 			
 		completion_reward = {
+
+		}
+	}
+	
+	focus = { # 
+		id = CAN_supply_the_impire
+		icon = GFX_goal_generic_construction2
+		cost = 5
+
+		relative_position_id = CAN_government_unity
+		x = 0
+		y = 2
+		available = { 
+			is_subject = no 
+		}
+	
+		prerequisite = { 
+			focus = CAN_Imperial_conference_held 
+			focus = CAN_canada_neutrality 
+		}
+		ai_will_do = { factor = 20 }
+		search_filters = { }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	
+			
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAN_supply_the_empire
+				bonus = 1.0
+				uses = 3
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
 
 		}
 	}
@@ -4984,9 +5103,40 @@ focus_tree = {
 					add_idea = ENG_great_depression_1
 				}	
 			}
-			hidden_effect = { ENG_fuking_great_depression_down = yes }
+			hidden_effect = { 
+				ENG_fuking_great_depression_down = yes 
+				country_event = { id = impblack.15 days = 05 }
+			}
 		}
 		
+	}
+	focus = {
+		id = CAN_upper_class_persuasion
+		icon = GFX_focus_RAJ_appoint_a_c_suite
+		cost = 5
+		
+		relative_position_id = CAN_depression_recovery
+		x = 0
+		y = 1
+		available = { }
+		allow_branch = { 
+			has_global_flag = ENG_lose_global_flag
+		}
+		prerequisite = { focus = CAN_depression_recovery }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = yes
+	
+			
+		completion_reward = {
+			add_ideas = CAN_dollar_a_year_men
+			add_tech_bonus = {
+				name = CAN_dollar_a_year_men
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
 	}
 	focus = {
 		id = CAN_Canada_new_deal
@@ -4999,7 +5149,6 @@ focus_tree = {
 		available = { }
 		allow_branch = { 
 			has_global_flag = ENG_lose_global_flag
-			NOT = { has_country_flag = winston_churchill_is_leader_flag  }
 		}
 		prerequisite = { focus = CAN_depression_recovery }
 		ai_will_do = { factor = 100 }
@@ -5192,7 +5341,6 @@ focus_tree = {
 		available = { }
 		allow_branch = { 
 			has_global_flag = ENG_lose_global_flag
-			NOT = { has_country_flag = winston_churchill_is_leader_flag }
 		}
 	
 		prerequisite = { focus = CAN_Canada_new_deal }

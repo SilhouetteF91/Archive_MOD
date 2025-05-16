@@ -581,8 +581,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/ENG/focus_IMP_third_world.tga"
 	}
 	SpriteType = {
+		name = "GFX_focus_CAN_third_world_Brilliant"
+		texturefile = "gfx/interface/goals/ENG/focus_IMP_third_world_Brilliant.tga"
+	}
+	SpriteType = {
 		name = "GFX_focus_CAN_englo_alliance"
 		texturefile = "gfx/interface/goals/ENG/focus_CAN_englo_alliance.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_CAN_stresa_front"
+		texturefile = "gfx/interface/goals/ENG/focus_CAN_stresa_front.tga"
 	}
 	SpriteType = {
 		name = "GFX_goal_generic_parliament"

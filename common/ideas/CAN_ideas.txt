@@ -371,13 +371,13 @@ ideas = {
 			}
 		}
 		ENG_neutrality_gov = { # 
-			picture = generic_disjointed_gov
+			picture = RAJ_just_good_business
 			allowed = {
 				tag = ENG
 			}
 			modifier = {
  				ai_get_ally_desire_factor = -90
-                guarantee_cost = 0.75
+                guarantee_cost = 3
 			}
 		}
 		ENG_reignite_the_flames = { #불씨 재점화

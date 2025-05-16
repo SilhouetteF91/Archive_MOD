@@ -1,6 +1,12 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_FOCUS_ICON_SET_BRILLIANT_KEY_FOCUS"
+		textureFile = "gfx/interface/focusview/filter/탁월수.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_decision_POL_solidarity"
 		texturefile = "gfx/interface/decisions/POL_solidarity.tga"
 		legacy_lazy_load = no
