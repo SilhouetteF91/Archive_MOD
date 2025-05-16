@@ -360,6 +360,16 @@ gehenna_unification = {
 					}
 				}
 				set_cosmetic_tag = GEH_art_academy
+				news_event = { id = GEH_news.14 }
+			}
+			if = {
+				limit = {
+					AND = {
+						tag = GEH
+						has_cosmetic_tag = GEH_hina_empire
+					}
+				}
+				news_event = { id = GEH_news.15 }
 			}
 			if = {
 				limit = {

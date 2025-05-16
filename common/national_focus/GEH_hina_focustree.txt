@@ -2171,6 +2171,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_FUCK
 			activate_mission = GEH_basking_in_the_brilliance_of_their_serenade_FUCK_mission
 			country_event = GEH_BTBOTS.100
+			set_cosmetic_tag = GEH_hina_empire
 
 			hidden_effect = {
 				news_event = { id = GEH_news.11 }
@@ -7125,6 +7126,7 @@ focus_tree = {
 			}            
 
 			add_ideas = GEH_royal_guards
+			set_cosmetic_tag = GEH_hina_empire
 
 			country_event = { id = GEH.event.1009 }
 		}
@@ -7655,6 +7657,7 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = GEH_news.8 }
 			}
+			country_event = { id = GEH.event.13 }
 			custom_effect_tooltip = enter_tt
 			custom_effect_tooltip = GEH_BTBOTS_END_NEXT_flag
 			set_global_flag = GEH_BTBOTS_END_NEXT_flag
@@ -7715,6 +7718,7 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = GEH_news.9 }
 			}
+			country_event = { id = GEH.event.14 }
 			custom_effect_tooltip = enter_tt
 			custom_effect_tooltip = GEH_BTBOTS_END_NEXT_flag
 			set_global_flag = GEH_BTBOTS_END_NEXT_flag
@@ -7965,6 +7969,9 @@ focus_tree = {
             GEH_popular_support_up_effect = yes
 			custom_effect_tooltip = enter_tt
 			add_country_leader_trait = GEH_successor_of_hina
+			hidden_effect = {
+				country_event = { id = GEH.event.1029 }
+			}
 		}
 	}
 	
