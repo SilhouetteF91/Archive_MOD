@@ -2898,15 +2898,11 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 		available = {
 			NOT = { has_country_flag = HEU_problem_solver_68_flag }
 			
-			GEH_hina = {
-				has_character_flag = HEU_hina_benriya_68
-			}
+			has_character = GEH_hina
 		}
 
 		visible = {
-			GEH_hina = {
-				has_character_flag = HEU_hina_benriya_68
-			}
+			has_character = GEH_hina
 		}
 
 		ai_will_do = { factor = 1 }
