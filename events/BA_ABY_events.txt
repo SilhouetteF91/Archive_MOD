@@ -5326,7 +5326,6 @@ country_event = {
 		}
 		name = ABY_new_event.156.b
 		ai_chance = { factor = 100 }
-		complete_national_focus = ABY_focus_czech_osterreich_debug
 		set_country_flag = ABY_flag_czech_osterreich
 		ABY = {
 			leave_faction = yes
@@ -11568,7 +11567,6 @@ country_event = {
 		}
 		name = ABY_new_event.256.b
 		ai_chance = { factor = 100 }
-		complete_national_focus = ABY_focus_czech_osterreich_debug
 		set_country_flag = ABY_flag_czech_osterreich
 		ABY = {
 			leave_faction = yes
@@ -16283,6 +16281,9 @@ country_event = {
 		name = ABY_descision_focus_event.21.a
 		ai_chance = { factor = 100 }
 		add_war_support = 0.15
+		add_ideas = {
+			ABY_idea_czech_father_legecy
+		}
 		set_country_flag = ABY_masaryk_dead
 	}
 }

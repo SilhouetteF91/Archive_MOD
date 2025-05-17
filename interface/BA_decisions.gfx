@@ -1457,9 +1457,9 @@ spriteTypes = {
 
 	progressbartype = {
 		name = "GFX_ABY_focus_progressbar"
-		textureFile1 = "gfx/interface/research_progressbar.dds"
-		textureFile2 = "gfx/interface/research_progressbar_bg.dds"
-		size = { x = 175 y = 24 }
+		textureFile1 = "gfx/interface/decisions/ABY_focus_gui/ABY_progressbar.dds"
+		textureFile2 = "gfx/interface/decisions/ABY_focus_gui/ABY_progressbar_bg.dds"
+		size = { x = 175 y = 25 }
 		effectFile = "gfx/FX/progress.lua"
 		steps = 49
 	}

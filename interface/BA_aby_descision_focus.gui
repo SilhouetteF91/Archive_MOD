@@ -30,7 +30,6 @@ guiTypes = {
 			pdx_tooltip = "ABY_german_head_tt"
 			pdx_tooltip_delayed = "ABY_german_head_trait_tt"
 			scale = 0.3
-			frame = ABY_portrait_german_var
 		}
 
 		iconType = {
@@ -50,7 +49,6 @@ guiTypes = {
 			pdx_tooltip = "ABY_czech_head_tt"
 			pdx_tooltip_delayed = "ABY_czech_head_trait_tt"
 			scale = 0.3
-			frame = ABY_portrait_czecho_var
 		}
 
 		instantTextboxType = {
@@ -2750,7 +2748,7 @@ guiTypes = {
 		iconType = {
 			name = "ABY_focus_progressbar"
 			spriteType = "GFX_ABY_focus_progressbar"
-			position = { x=200 y=59 }
+			position = { x=204 y=58 }
 			pdx_tooltip_delayed = ABY_days_3
 		}
 

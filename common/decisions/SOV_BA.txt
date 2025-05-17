@@ -143,7 +143,7 @@ political_actions = {
 	 	ai_will_do = { base = 10 }
 		available = {
             ABY = {
-                has_completed_focus = ABY_focus_czech_osterreich_debug
+                has_country_flag = GAEBALJUNG
             }
 			surrender_progress > 0.70
 			is_subject = no

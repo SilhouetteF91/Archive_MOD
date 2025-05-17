@@ -1390,7 +1390,7 @@ ABY_high_school_rebuild = {
 			FROM = {
 				is_controlled_by = ABY
 			}
-			has_completed_focus = ABY_focus_search_student
+			always = no
 		}
 
 		available = {
@@ -1477,7 +1477,7 @@ ABY_high_school_rebuild = {
 			}		
 			if = {
 				limit = {
-					has_completed_focus = ABY_focus_wjsekswl
+					has_country_flag = GAEBALJUNG
 				}
             	random_list = {
         	        50 = {
@@ -9510,7 +9510,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 		
 
         available = { 
-			has_completed_focus = ABY_focus_sound_of_win
+			always = no
         }
 
 		fire_only_once = yes
