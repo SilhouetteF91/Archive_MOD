@@ -86,6 +86,30 @@ music = {
 		}		
 	}
 }
+music = {
+	song = "maintheme_7"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+music = {
+	song = "maintheme_6"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+music = {
+	song = "maintheme_5"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
 
 music = {
     song = "BA_La_Mar"
