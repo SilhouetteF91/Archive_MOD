@@ -3,7 +3,7 @@
 music = {
 	name = "maintheme"
 	file = "martian.ogg"
-	volume = 0.65
+	volume = 1.2
 }
 music = {
 	name = "maintheme_7"
