@@ -1928,6 +1928,34 @@ spriteTypes = {
 		}
 	}
 	spriteType = {
+		name = RED_second_great_northern_war_background
+		textureFile = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_background.dds"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = GFX_red_second_great_northern_war_fin
+		textureFile1 = "gfx/interface/decisions/RED/RED_second_great_northern_war_progressbar.dds"
+		textureFile2 = "gfx/interface/decisions/RED/RED_second_great_northern_war_background.dds"
+		effectFile = "gfx/FX/BA_progress_r.lua"
+		steps = 100
+		size = { 
+			x = 200
+			y = 20
+		}
+	}
+	progressbartype = {
+		name = GFX_red_second_great_northern_war_red
+		textureFile1 = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_progressbar.dds"
+		textureFile2 = "gfx/interface/decisions/RED/RED_second_great_northern_war_background.dds"
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+		size = { 
+			x = 200
+			y = 20
+		}
+	}
+	spriteType = {
 		name = "GFX_red_northern_sovereignty_war_1side_icon_minori"
 		texturefile = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_1side_icon_minori.dds"
 		legacy_lazy_load = no

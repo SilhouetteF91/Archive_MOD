@@ -413,13 +413,13 @@
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
+			RE1 = { NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag } }
 		}
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_started_tt
 				has_global_flag = RE4_northern_sovereignty_war_started
 			}
-			RE1 = { NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag } }
 		}
 		x = -2
 		y = 1
@@ -482,13 +482,13 @@
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
+			RE3 = { NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag } }
 		}
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_started_tt
 				has_global_flag = RE4_northern_sovereignty_war_started
 			}
-			RE3 = { NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag } }
 		}
 		x = 0
 		y = 1
@@ -551,13 +551,13 @@
 				tooltip = RE4_northern_sovereignty_war_not_started_tt
 				NOT = { has_global_flag = RE4_northern_sovereignty_war_started }
 			}
+			RE2 = { NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag } }
 		}
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = RE4_northern_sovereignty_war_started_tt
 				has_global_flag = RE4_northern_sovereignty_war_started
 			}
-			RE2 = { NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag } }
 		}
 		x = 2
 		y = 1

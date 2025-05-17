@@ -3064,6 +3064,19 @@ RED_military_government_administration = {
 	}
 }
 
+RED_second_great_northern_war = {
+	RED_second_great_northern_war_debug = {
+		complete_effect = {
+			set_variable = {
+				global.red_re1_second_great_northern_war_fin_var = 25
+			}
+			set_variable = {
+				global.red_re1_second_great_northern_war_red_var = 34
+			}
+		}
+	}
+}
+
 RED_northern_sovereignty_war = {
 
 	### 방위위원회 편 ###

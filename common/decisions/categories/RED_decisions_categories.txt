@@ -143,6 +143,25 @@ RED_northern_sovereignty_war = { #북방 주권 전쟁
 	scripted_gui = RED_northern_sovereignty_gui
 }
 
+RED_second_great_northern_war = { #2차 대북방전쟁
+
+	icon = GFX_decision_category_SOV_civil_war
+	
+	allowed = {
+		OR = {
+			original_tag = RED
+			original_tag = FIN
+		}
+	}
+	visible = {
+	}
+	priority = 500
+
+	visible_when_empty = yes
+
+	scripted_gui = RED_second_great_northern_war_gui
+}
+
 RED_zenkyoutou_cat = { #전공투 
 
 	icon = GFX_decision_category_SOV_civil_puppet_interaction
