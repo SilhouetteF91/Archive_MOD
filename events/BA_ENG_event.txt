@@ -88,7 +88,7 @@ country_event = {
 }
 
 country_event = {
-	id = ENG_ba.7	# 해외 식민지 문제 - 아프리카 분리 독립
+	id = ENG_ba.7	# 해외 식민지 문제 - 아프리카 분리 독립 및 중동 독립
 	title = ENG_ba.7.t
 	desc = ENG_ba.7.desc
 	picture = GFX_report_event_ast_navy
@@ -243,18 +243,19 @@ country_event = {
 			drop_cosmetic_tag = yes
 			
 		}
-		JOR = {
-			drop_cosmetic_tag = yes
-		}
 		ENG = {
 			end_puppet = PAL
 			release = PAL
+			end_puppet = JOR
+		}
+		JOR = {
+			drop_cosmetic_tag = yes
 		}
 
-		release = UAE
+		UAE = { transfer_state = 658 }
 		release = QAT
-		release = JOR
-		release = PAL
+		QAT = { transfer_state = 765 }
+		BHR = { transfer_state = 1014 }
 		release = ZAM
 		release = MLW
 		release = ZIM
@@ -272,6 +273,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ENG_ba.25.a
+		
 		CAR = {
 			set_cosmetic_tag = CAR_ENG_free
 			transfer_state = 660
@@ -314,164 +316,38 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = ENG_ba.8	#번국 독립
+country_event = { # 인도에서 강화 된 독립 운동
+	id = ENG_ba.8
 	title = ENG_ba.8.t
 	desc = ENG_ba.8.desc
-	picture = GFX_report_event_ast_navy
-	fire_only_once = yes
+	picture = GFX_report_event_india_protests
+	
+	fire_only_once = no
 	is_triggered_only = yes
+
 	option = {
 		name = ENG_ba.8.a
-		hidden_effect = { 
-			BRM = {
-				transfer_state = 288
-				transfer_state = 640
+		if = {
+			limit = { RAJ = {has_dynamic_modifier ={ modifier = idea_RAJ_independence_movement }  } }
+			RAJ = {
+            	custom_effect_tooltip = idea_RAJ_independence_movement_tt
+				custom_effect_tooltip = tooltip_white_line
+            	add_to_variable = { RAJ_autonomy_gain_independence_movement = 0.05 tooltip = autonomy_gain_tt }
+				custom_effect_tooltip = tooltip_white_line
+            	add_to_variable = { RAJ_resistance_activity_independence_movement = 0.05 tooltip =  resistance_activity_tt }
+				custom_effect_tooltip = tooltip_white_line
+            	add_to_variable = { RAJ_resistance_target_independence_movement = 0.05 tooltip =  resistance_target_tt }
+				custom_effect_tooltip = tooltip_white_line
 			}
-			MAI = {
-				transfer_state = 994
-				every_owned_state = {
-					add_core_of = prev
-				}
+		}
+		else = {
+			RAJ = {
+            	add_autonomy_score = { 
+                	value = 150 
+	                localization = RAJ_cripps_mission_dlc
+            	}
 			}
-			HDR = {
-				transfer_state = 427
-				every_owned_state = {
-					add_core_of = prev
-				}
-			}
-			MDR = {
-				transfer_state = 995
-				every_owned_state = {
-					add_core_of = prev
-				}
-			}
-			RJP = {
-				transfer_state = 433
-				every_owned_state = {
-					add_core_of = prev
-				}
-			}
-			BR2 = {
-				transfer_state = 428
-				every_owned_state = {
-					add_core_of = prev
-				}
-			}
-			BAL = {
-				transfer_state = 444
-				every_owned_state = {
-					add_core_of = prev
-				}
-				add_state_core = 410
-			}
-			KAS = {
-				transfer_state = 787
-				transfer_state = 441
-				every_owned_state = {
-					add_core_of = prev
-				}
-			}
-			ENG = {
-				set_autonomy = {
-					target = MAI
-					autonomy_state = autonomy_dominion
-				}
-				set_autonomy = {
-					target = MDR
-					autonomy_state = autonomy_dominion
-				}
-				set_autonomy = {
-					target = HDR
-					autonomy_state = autonomy_dominion
-				}
-				set_autonomy = {
-					target = RJP
-					autonomy_state = autonomy_dominion
-				}
-				set_autonomy = {
-					target = BR2
-					autonomy_state = autonomy_dominion
-				}
-				set_autonomy = {
-					target = BAL
-					autonomy_state = autonomy_dominion
-				}
-				set_autonomy = {
-					target = KAS
-					autonomy_state = autonomy_dominion
-				}
-			}
-			RJP = {
-				add_ideas = RAJ_bun
-				set_politics = {
-					ruling_party = neutrality
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.5
-				}
-			}
-			HDR = {
-				add_ideas = RAJ_bun
-				set_politics = {
-					ruling_party = neutrality
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.5
-				}
-			}
-			MAI = {
-				add_ideas = RAJ_bun
-				set_politics = {
-					ruling_party = neutrality
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.5
-				}
-			}
-			MDR = {
-				add_ideas = RAJ_bun
-				set_politics = {
-					ruling_party = neutrality
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.5
-				}
-			}
-			BAL = {
-				add_ideas = RAJ_bun
-				set_politics = {
-					ruling_party = neutrality
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.5
-				}
-			}
-			BR2 = {
-				add_ideas = RAJ_bun
-				set_politics = {
-					ruling_party = neutrality
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.5
-				}
-			}
-			KAS = {
-				add_ideas = RAJ_bun
-				set_politics = {
-					ruling_party = neutrality
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.5
-				}
-			}
+
 		}
 	}
 }
@@ -733,6 +609,6 @@ country_event = {
 	option = {
 		name = ENG_ba.102.a
 		add_ideas = ENG_disassembled_parliment
-		activate_advisor = ENG_kingsley_wood
+		activate_advisor = IMP_kingsley_wood
 	}
 }

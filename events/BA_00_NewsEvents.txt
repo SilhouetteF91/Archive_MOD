@@ -416,7 +416,7 @@ news_event = { #영국 붕괴
 			}
 			KAI = { set_country_flag = ENG_lose_global_flag }
 			hidden_effect = {
-				country_event = { id = IMP_event.12 days = 7 }
+				#country_event = { id = IMP_event.12 days = 7 }
 			}
 		}
 	}
@@ -5303,6 +5303,59 @@ news_event = { # 키보토스 기계해방전선의 결성
 
     option = {
         name = BA_news.139.a
+    }
+	
+}
+
+news_event = { # 스트레사 전선
+    id = BA_news.140
+    title = BA_news.140.t
+    desc = BA_news.140.desc
+    picture = GFX_news_event_ENG_stresa_front
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.140.a
+		trigger = { 
+			Kivotos_tag = no
+		}
+    }
+
+    option = {
+        name = BA_news.140.b
+		trigger = { 
+			Kivotos_tag = yes 
+			NOT = { 
+				OR = {
+					tag = ENG
+					tag = FRA
+					tag = ITA
+				}
+			}
+		}
+    }
+
+    option = {
+        name = BA_news.140.c
+		trigger = { 
+			tag = ENG
+		}
+    }
+
+    option = {
+        name = BA_news.140.d
+		trigger = { 
+			tag = FRA
+		}
+    }
+
+    option = {
+        name = BA_news.140.e
+		trigger = { 
+			tag = ITA
+		}
     }
 	
 }

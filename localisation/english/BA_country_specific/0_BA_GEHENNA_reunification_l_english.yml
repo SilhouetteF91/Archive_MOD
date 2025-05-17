@@ -1,0 +1,56 @@
+﻿l_english:
+
+ # 게헨나 선도부 & 판데모니움 소사이어티 통일 중점
+ GEH_unified_gehenna:0 "통일 게헨나"
+ GEH_unified_gehenna_desc:0 "판데모니움 소사이어티와 선도부 사이의 갈등은 게헨나의 모두가 알고 있을 만큼 유명했습니다. 이 갈등은 둘 중 하나가 물리적으로 파괴되어야만 해소될 수 있는 형태의 것이었으며, 비극적이지만 [ROOT.GetLeader]의 승리 역시 전쟁을 통해 이루어질 수밖에 없었습니다. 하지만 이 비극 이후, 우리는 재통합된 게헨나, 다시는 분열되지 않을 게헨나를 얻어대는 데 성공했습니다."
+
+ GEH_club_processing:0 "동아리 강제 해산"
+ GEH_club_processing_desc:0 "게헨나는 자유의 학원 대신 '동아리의 학원'이라고 불러도 될 만큼 많은 동아리들을 가지고 있습니다. 당연하지만 게헨나 학생들의 모든 개별적인 동아리 활동을 금지할 만큼 우리가 무자비하다는 것은 아닙니다. 키보토스에서는 허용되었던, 총기와 폭력이 포함된 동아리들을 금지해 사회의 질서를 유지하겠다는 뜻입니다."
+
+ GEH_club_integration:0 "동아리 현상유지"
+ GEH_club_integration_desc:0 "게헨나는 자유의 학원 대신 '동아리의 학원'이라고 불러도 될 만큼 많은 동아리들을 가지고 있습니다. 질서와 풍기를 근거로 이러한 동아리들의 활동을 무법으로 규정하고 막으려는 움직임도 있지만, 우리는 이러한 무질서가 게헨나에 활력을 불러오고 다양한 아이디어들을 만들어 낸다고 생각합니다."
+
+ GEH_gastronomy_research_group_arrested:0 "미식연구회 억제"
+ GEH_total_destruction_operation:0 "총체적인 파괴"
+ GEH_club_control:0 "동아리 통제"
+ GEH_representation:0 "대의"
+ GEH_hot_spring_cooperation:0 "온천개발부와 협력"
+ GEH_large_scale_civil_engineering_work:0 "대규모 토목 공사"
+ GEH_large_hot_spring:0 "활발한 온천 사업"
+ GEH_emergency_medicine_department_support:0 "응급의학부 지원"
+
+ GEH_gehenna_academy:0 "통합된 게헨나의 미래"
+ GEH_gehenna_academy_desc:0 "[ROOT.GetLeader] 아래에서 [ROOT.GetName]는 계속해서 발전하고, 또 성장해 나갈 것입니다. 통합된 게헨나의 미래를 이끌어 갈 [ROOT.GetLeader] 정부의 인도 아래에서 우리는 다시는 분열되고 서로 다투지 않을 것입니다."
+
+ GEH_68_problem:0 "[HEU.GetName] 문제"
+
+ ## 선도부 승리 중점
+ GEH_the_end_of_pandemonium:0 "만마전의 끝"
+ GEH_the_end_of_pandemonium_desc:0 "만마전은 이제 없으며, [ROOT.GetLeader]의 힘이 게헨나 전체를 장악했습니다. 우리는 이제 혼돈이 아닌 질서를 게헨나에 가져올 것이며, 만마전이 한 때 게헨나 땅에 뿌려 놓았던 풍기문란의 잔재들을 모조리 쓸어내 지울 것입니다."
+
+ GEH_trial:0 "재판"
+ GEH_personnel_retraining:0 "임원 재교육"
+ GEH_forced_dissolution:0 "강제 해산"
+ GEH_movement_downgrade_pandemonium:0 "만마전 격하 운동"
+ GEH_legitimate_dominion:0 "정당한 지배권"
+
+ ## 만마전 승리 중점
+ GEH_the_end_of_perfect_team:0 "선도부의 끝"
+ GEH_the_end_of_perfect_team_desc:0 "'무적철갑 토라마루 모든 것을 쓸어버려라...' 자랑스러운 판데모니움 소사이어티 찬양가가 이제 선도부 본부에서도 흘러나옵니다. 게헨나의 패권 경쟁에서 승리한 것은 결국 만마전이었으며, 지긋지긋한 선도부의 존재 의미는 이제 사라졌습니다."
+
+ GEH_take_command:0 "실행부 편입"
+ GEH_take_command_desc:0 "게헨나 선도부는 행정조직인 기획부와 무력조직인 ."
+
+ GEH_top_and_bottom_clothes:0 "상명하복"
+ GEH_perfect_team_disbanded:0 "선도부 해산"
+ GEH_clearing_the_remnants:0 "잔재 제거"
+ GEH_civilian_control:0 "문민통제"
+#
+ GEH_club_processing_idea:0 "게헨나 통합주의"
+ GEH_club_integration_idea:0 "학생자치회"
+
+ GEH_gehenna_academy_idea:0 "자유와 혼돈의 학원"
+ GEH_gehenna_academy_idea_desc:0 "게헨나는 키보토스계 인구를 위한 매우 자유로운 생활을 보장합니다. 너무 자유롭다는 것이 문제가 될 때도 많지만요."
+
+ GEH_hegemony_idea:0 "패권 추구"
+ GEH_hegemony_4_idea:0 "패권"

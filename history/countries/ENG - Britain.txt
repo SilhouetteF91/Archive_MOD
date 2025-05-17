@@ -27,7 +27,7 @@ recruit_character = IMP_winston_churchill
 recruit_character = IMP_mackenzie_king
 recruit_character = IMP_james_ilsley
 recruit_character = ENG_british_army
-recruit_character = ENG_kingsley_wood
+recruit_character = IMP_kingsley_wood
 
 set_variable = { country_intro_page_count = 2 } #Intro screen
 #/BA_MOD_FIX

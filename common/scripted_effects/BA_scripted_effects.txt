@@ -1227,9 +1227,8 @@ GEH_army_refrom_effect = {
 
 ENG_lose_effect = {
 	ENG = {
-		news_event = {
-			id = BA_news.6
-		}
+		set_rule = { can_create_factions = no }
+		news_event = { id = BA_news.6 }
 		every_country = {
 			limit = {
 				OR = {
@@ -1276,8 +1275,12 @@ ENG_lose_effect = {
 		}
 	}
 	country_event = {
-		id = ENG_british_warning_event.7
+		id = ENG_ba.7
 		days = 15
+	}
+	country_event = {
+		id = ENG_ba.8
+		days = 28
 	}
 	add_state_core = 332
 	add_state_core = 331
