@@ -147,6 +147,11 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 	spriteType = {
+		name = "GFX_JAP_intro"
+		texturefile = "gfx/introscreen/JAP_intro.tga"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
 		name = "GFX_MEX_intro"
 		texturefile = "gfx/introscreen/MEX_intro.tga"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"

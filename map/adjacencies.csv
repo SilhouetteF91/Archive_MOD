@@ -229,4 +229,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 4579;4593;sea;8945;1;1;1;1;INDONESIA_STRAIT_FAKE_6;For Country Name
 12234;1355;sea;2317;1;1;1;1;INDONESIA_STRAIT_FAKE_7;For Country Name
 1339;10219;sea;5414;1;1;1;1;INDONESIA_STRAIT_FAKE_8;For Country Name
+
+1399;4728;sea;5488;1;1;1;1;RUSSIA_STRAIT_FAKE_1;For Country Name
 -1;-1;;-1;-1;-1;-1;-1;-1 

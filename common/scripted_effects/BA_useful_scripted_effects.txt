@@ -1236,3 +1236,11 @@ add_research_slot_until_four = {
 		}
 	}
 }
+
+open_intro_screen = {
+	if = {
+		limit = { is_ai = no }
+		set_variable = { KR_welcome_splash_variable = 1 }
+		set_variable_to_random = KR_welcome_splash_refresh
+	}
+}

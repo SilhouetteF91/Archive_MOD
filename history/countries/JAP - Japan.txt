@@ -25,6 +25,9 @@ add_ideas = {
 	BA_JAP_unstable_political_structure
 	#BA_MOD_FIX/
 }
+#BA_MOD_FIX/
+set_variable = { country_intro_page_count = 1 } #Intro screen
+#/BA_MOD_FIX
 
 IF = {
 	limit = { has_dlc = "Waking the Tiger" }

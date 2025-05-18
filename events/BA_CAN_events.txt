@@ -1,7 +1,7 @@
 add_namespace = IMP_event
 add_namespace = impblack
 add_namespace = impindia # 원래는 인도용 사건이였지만 이제부터 너는 외교용 사건이다..
-add_namespace = imp_deal
+add_namespace = impquebec
 add_namespace = IMP
 country_event = { #왕립해군과 육군의 귀환
 	id = IMP_event.1
@@ -1196,6 +1196,38 @@ country_event = { # 동의 안하면 관계도 깎임
 	option = {
 		name = impindia.6.a 
 		add_opinion_modifier = { target = FROM modifier = medium_decrease }
+	}
+}
+
+#### 퀘벡 문제!
+country_event = { # 
+	id = impquebec.1
+	title = impquebec.1.t	#
+	desc = impquebec.1.d	#
+	picture = GFX_report_event_generic_riot
+	
+	fire_only_once = yes
+	trigger = {
+		tag = ENG
+		is_subject = no
+		is_debug = yes
+		has_completed_focus = IMP_collapse_of_imperial_hegemony
+		date > 1937.6.1
+		OR = {
+			468 = { is_owned_and_controlled_by = ENG } # 세인트로렌스
+			862 = { is_owned_and_controlled_by = ENG } # 서퀘벡
+			863 = { is_owned_and_controlled_by = ENG } # 모리스
+		}
+		NOT = {
+			surrender_progress > 0
+			has_war = no
+		}
+	}
+	
+	option = {
+		name = impquebec.1.a
+		set_country_flag = CAN_quebec_was_in_flames
+		complete_national_focus = CAN_Quebec_problem
 	}
 }
 
