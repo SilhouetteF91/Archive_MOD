@@ -1898,6 +1898,14 @@ spriteTypes = {
 		name = "GFX_goal_GEH_remove_wehrmacht_plan_b"
 		textureFile = "gfx/interface/goals/GEH/GEH_remove_wehrmacht_plan_b.dds"
 	}	
+	spriteType = {
+		name = "GFX_goal_GEH_gehenna_reunification_hina"
+		textureFile = "gfx/interface/goals/GEH/GEH_gehenna_reunification_hina.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_gehenna_reunification_ako"
+		textureFile = "gfx/interface/goals/GEH/GEH_gehenna_reunification_ako.dds"
+	}
 	### 산해경 중점 ###
 	SpriteType = { 	
 		name = "GFX_goal_SHA_KISAKI"
