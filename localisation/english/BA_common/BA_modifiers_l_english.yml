@@ -9,3 +9,5 @@
  war_support_weekly_tt: " $MODIFIER_WAR_SUPPORT_WEEKLY$: $RIGHT|+=%1$"
  army_org_regain_tt: " $MODIFIER_ARMY_ORG_REGAIN$: $RIGHT|+=%1$"
  send_volunteer_size_tt: " $MODIFIER_SEND_VOLUNTEER_SIZE$: $RIGHT|+=1$\n"
+ army_sub_unit_halo_infantry_defence_factor_tt: " $modifier_army_sub_unit_halo_infantry_defence_factor$: $RIGHT|+=%1$\n"
+ army_sub_unit_halo_infantry_attack_factor_tt: " $army_sub_unit_halo_infantry_attack_factor$: $RIGHT|+=%1$\n"

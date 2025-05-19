@@ -8359,7 +8359,7 @@ focus_tree = {
 			}
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.6
+				popularity = 0.4
 			}
 
 			set_politics = {
@@ -8417,7 +8417,7 @@ focus_tree = {
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_weak_attack
 		icon = GFX_focus_RAJ_lions_of_the_great_war 
-		cost = 2
+		cost = 5
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c
 		x = -2
@@ -8445,13 +8445,37 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+			if = {
+				limit = {
+					all_character = {
+						NOT = { has_trait = GEH_blame_director }
+					}
+				}
+				effect_tooltip = {
+					swap_ruler_traits = {
+						remove = GEH_blame_director
+						add = GEH_blame_director_2
+					}
+				}
+			}
+			every_character = {
+				limit = { has_trait = GEH_blame_director }
+				swap_country_leader_traits = {
+					remove = GEH_blame_director
+					add = GEH_blame_director_2
+				}
+			}
 		}
 	}
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_kivotosism
 		icon = GFX_focus_ARG_fascist_researchers 
-		cost = 2
+		cost = 5
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c
 		x = 0
@@ -8479,13 +8503,26 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+			custom_effect_tooltip = GEH_RU
+			add_to_variable = {
+				GEH_RU_army_sub_unit_halo_infantry_defence_factor = 0.05
+				tooltip = army_sub_unit_halo_infantry_defence_factor_tt
+			}
+			add_to_variable = {
+				GEH_RU_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
 		}
 	}
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_our_identity
 		icon = GFX_focus_SWE_revoke_militia_law
-		cost = 2
+		cost = 5
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c
 		x = 2
@@ -8513,20 +8550,25 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+			add_country_leader_trait = GEH_purist
 		}
 	}
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance
 		icon = GFX_focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance 
-		cost = 2
+		cost = 5
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c
 		x = -1
 		y = 2
 
 		available = {
-
+			fascism > 0.80
 		}
 		
         prerequisite = {
@@ -8559,20 +8601,22 @@ focus_tree = {
 				long_name = GEH_free_fatherland_defense_alliance_long
 				name = GEH_free_fatherland_defense_alliance
 			}
+			custom_effect_tooltip = GEH_BTBOTS_END_NEXT_flag
+			set_global_flag = GEH_BTBOTS_END_NEXT_flag
 		}
 	}
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee
 		icon = GFX_focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee 
-		cost = 2
+		cost = 5
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c
 		x = 1
 		y = 2
 
 		available = {
-
+			fascism > 0.80
 		}
 		
         prerequisite = {
@@ -8604,6 +8648,328 @@ focus_tree = {
 				long_name = GEH_united_nation_reconstruction_committee_long
 				name = GEH_united_nation_reconstruction_committee
 			}
+			custom_effect_tooltip = GEH_BTBOTS_END_NEXT_flag
+			set_global_flag = GEH_BTBOTS_END_NEXT_flag
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_regensburg_riot_decree
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance
+		x = 1
+		y = 1
+
+		available = {
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			add_ideas = GEH_regensburg_riot_decree
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_territory_reconstruction_ministry_establishment
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_regensburg_riot_decree
+		x = -1
+		y = 1
+
+		available = {
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_regensburg_riot_decree
+        }
+
+		mutually_exclusive = {
+			focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_planning_ministry_role_expansion
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_planning_ministry_role_expansion
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_regensburg_riot_decree
+		x = 1
+		y = 1
+
+		available = {
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_regensburg_riot_decree
+        }
+
+		mutually_exclusive = {
+			focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_territory_reconstruction_ministry_establishment
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_gehenna_order_restoration
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_territory_reconstruction_ministry_establishment
+		x = 1
+		y = 1
+
+		available = {
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_planning_ministry_role_expansion
+			focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_territory_reconstruction_ministry_establishment
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_gehenna_order_restoration
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_territory_reconstruction_ministry_establishment
+		x = 1
+		y = 1
+
+		available = {
+			has_stability > 0.49
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_planning_ministry_role_expansion
+			focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_territory_reconstruction_ministry_establishment
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+            GEH_popular_support_up_effect = yes
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_pan_kivotos
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance
+		x = -1
+		y = 1
+
+		available = {
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance
+		}
+
+		mutually_exclusive = {
+			focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_gehenna_priority
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_gehenna_priority
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance
+		x = -3
+		y = 1
+
+		available = {
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance
+		}
+
+		mutually_exclusive = {
+			focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_pan_kivotos
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+            GEH_popular_support_up_effect = yes
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_german_forced_assimilation
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee
+		x = 1
+		y = 1
+
+		available = {
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee
+		}
+
+		mutually_exclusive = {
+			focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_german_gehennan
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_german_gehennan
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		cost = 5
+
+		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee
+		x = 3
+		y = 1
+
+		available = {
+		}
+		
+        prerequisite = {
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee
+		}
+
+		mutually_exclusive = {
+			focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_german_forced_assimilation
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+            GEH_popular_support_up_effect = yes
 		}
 	}
 # 히나 탈주: 이오리 중점 최종장 끝/
