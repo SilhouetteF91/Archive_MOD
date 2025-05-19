@@ -781,7 +781,7 @@ focus_tree = {
 	focus = {
 		# 중공업 확장
 		id = RED_upgrade_heavy_industry
-		icon = GFX_SOV_industrial_modernization_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_electrification
 		prerequisite = {
 			focus = RED_industrial_planning
 		}
@@ -899,7 +899,7 @@ focus_tree = {
 	focus = {
 		# 군수공업 확장
 		id = RED_upgrade_army_industry
-		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_military_industry
 		prerequisite = {
 			focus = RED_industrial_planning
 		}
@@ -12943,7 +12943,7 @@ focus_tree = {
 	focus = {
 		#당의 자원 봉사
 		id = RED_procom_focus_2
-		icon = GFX_focus_AUS_womens_education_initiative
+		icon = GFX_focus_PER_strengthen_the_tudeh
 		prerequisite = {
 			focus = RED_procom_focus_1
 		}
@@ -13241,9 +13241,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#혁명 주도
+		#혁명 교육
 		id = RED_revcom_focus_5
-		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		icon = GFX_focus_AUS_womens_education_initiative
 		prerequisite = {
 			focus = RED_revcom_focus_1
 		}
@@ -13721,7 +13721,7 @@ focus_tree = {
 	focus = {
 		#집산화 중점
 		id = RED_soctra_focus_12
-		icon = GFX_focus_GER_total_control_over_domestic_affairs
+		icon = GFX_focus_GER_prioritize_the_four_year_plan
 		prerequisite = {
 			focus = RED_soctra_focus_9
 			focus = RED_soctra_focus_10
@@ -16630,7 +16630,7 @@ focus_tree = {
 	focus = {
 		#전차 파괴자
 		id = RED_tank_destroyer
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_generic_anti_tank_guns
 		prerequisite = {
 			focus = RED_the_means_to_wage_war
 		}
@@ -16876,7 +16876,7 @@ focus_tree = {
 	}
 	focus = { #전투교리 대규모 개편
 		id = RED_rehabilitated_military
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_chi_army_reform
 		prerequisite = {
 			focus = RED_restore_cossack_units
 			focus = RED_cohesion_first
@@ -18688,7 +18688,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			surrender_progress > 0.2
+			surrender_progress > 0.45
 		}
 		prerequisite = {
 			focus = RED_revolution_war_focus_6
