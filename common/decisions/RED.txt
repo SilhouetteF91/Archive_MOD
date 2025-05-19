@@ -4493,6 +4493,8 @@ RED_minori_revolution_decision = {
 			}
 		}
 	}
+
+	##안쓸듯
 	RED_annex_NOR_decision = {
 		#노르웨이 통합
 		icon = GFX_decision_generic_nationalism

@@ -7,6 +7,35 @@ ideas = {
 		}
 	}
     country = {
+		RED_industrial_decentralization = { #산업분권화
+			picture = BEL_belgian_miracle
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_start_efficiency_factor = -0.03
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		RED_transitional_economy = { #과도기 경제
+			picture = BEL_belgian_miracle
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				line_change_production_efficiency_factor = -0.03
+				production_factory_efficiency_gain_factor = 0.03
+				production_factory_start_efficiency_factor = -0.03
+				production_factory_max_efficiency_factor = -0.03
+				production_speed_buildings_factor = -0.05
+				production_speed_industrial_complex_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
 		RED_revolutionary_committee = { #혁명위원회
 			picture = HUN_state_protection_authority_idea
 			modifier = {

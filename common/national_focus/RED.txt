@@ -12888,6 +12888,12 @@ focus_tree = {
 				id = RED_minori_event.16
 				days = 2
 			}
+			hidden_effect = {
+				country_event = {
+					id = RED_minori_event.22
+					days = 7
+				}	
+			}
 		}
 	}
 	focus = {
@@ -12926,11 +12932,12 @@ focus_tree = {
 						has_country_flag = RED_population_issue_solved_flag
 					}
 				}
-				RED_population_solve = yes
+				add_days_mission_timeout = {
+					mission = RED_population_issue_no_food
+					days = 120
+				}
 			}
-			else = {
-				add_political_power = 50
-			}
+			add_political_power = 30
 		}
 	}
 	focus = {
@@ -12997,10 +13004,6 @@ focus_tree = {
 		cost = 4
 		completion_reward = {
 			add_stability = 0.05
-			add_timed_idea = {
-				idea = RED_give_pudding_idea
-				days = 360
-			}
 			set_country_flag = RED_got_pudding_flag
 			custom_effect_tooltip = RED_long_live_the_workers_government_tt
 		}
@@ -13169,6 +13172,10 @@ focus_tree = {
 		relative_position_id = RED_revcom_focus_0
 		cost = 4
 		completion_reward = {
+			country_event = {
+				id = RED_minori_event.20
+				days = 2
+			}
 		}
 	}
 	focus = {
@@ -13183,6 +13190,10 @@ focus_tree = {
 		relative_position_id = RED_revcom_focus_0
 		cost = 4
 		completion_reward = {
+			country_event = {
+				id = RED_minori_event.23
+				days = 2
+			}
 		}
 	}
 	focus = {
@@ -13201,6 +13212,10 @@ focus_tree = {
 			focus = RED_intwal_focus_8
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = RED_factory_committees
+				add_idea = RED_industrial_decentralization
+			}
 		}
 	}
 	focus = {
@@ -13219,6 +13234,10 @@ focus_tree = {
 		relative_position_id = RED_revcom_focus_2
 		cost = 4
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = RED_factory_committees
+				add_idea = RED_transitional_economy
+			}
 		}
 	}
 	focus = {
@@ -13339,7 +13358,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#국제 노동자 동맹
+		#혁명방위위원회
 		id = RED_intwal_focus_0
 		icon = GFX_focus_AUS_austromarxism
 		prerequisite = {
@@ -13353,7 +13372,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#혁명수호청
+		#보안국
 		id = RED_intwal_focus_1
 		icon = GFX_focus_generic_whispers
 		prerequisite = {
@@ -13402,12 +13421,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#붉은 지식인
+		#대약진!
 		id = RED_intwal_focus_4
-		icon = GFX_focus_GER_strengthen_the_proletarian_international
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
 		prerequisite = {
 			focus = RED_intwal_focus_2
-			focus = RED_intwal_focus_3
 		}
 		x = -1
 		y = 1
@@ -13417,9 +13435,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#중도파 자처
+		#보안조치
 		id = RED_intwal_focus_5
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_focus_BRA_repeale_national_security_law
 		prerequisite = {
 			focus = RED_intwal_focus_4
 		}
@@ -13478,7 +13496,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#레닌의 이름으로
+		#년 테제
 		id = RED_intwal_focus_9
 		icon = GFX_focus_AUS_danubian_socialist_communes
 		prerequisite = {
