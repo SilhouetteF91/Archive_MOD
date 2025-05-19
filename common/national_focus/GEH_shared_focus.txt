@@ -148,6 +148,15 @@ shared_focus = {
 				has_idea = GEH_gourmet_research_society_4
 			}
 		}
+		#NOT = {
+		#	AND = {
+		#		original_tag = GEH
+		#		has_country_leader = {
+		#			character = GEH_hina
+		#			ruling_only = yes
+		#		}
+		#	}
+		#}
 	}
 	x = 1
 	y = 1
@@ -214,15 +223,15 @@ shared_focus = {
 		}
 		capital_scope = {
 			create_unit = {
-				division = "name = \"1. Assault\" division_template = \"Halo Infantry Division\" start_experience_factor = 1"
+				division = "name = \"1. Ordnungstruppe\" division_template = \"Halo Infantry Division\" start_experience_factor = 1"
 				owner = ROOT
 			}
 			create_unit = {
-				division = "name = \"2. Assault\" division_template = \"Halo Infantry Division\" start_experience_factor = 1"
+				division = "name = \"2. Ordnungstruppe\" division_template = \"Halo Infantry Division\" start_experience_factor = 1"
 				owner = ROOT
 			}
 			create_unit = {
-				division = "name = \"3. Assault\" division_template = \"Halo Infantry Division\" start_experience_factor = 1"
+				division = "name = \"3. Ordnungstruppe\" division_template = \"Halo Infantry Division\" start_experience_factor = 1"
 				owner = ROOT
 			}
 		}
@@ -280,7 +289,7 @@ shared_focus = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -295,7 +304,22 @@ shared_focus = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -344,45 +368,39 @@ shared_focus = {
 	y = 3
 	relative_position_id = GEH_unified_gehenna
 	completion_reward = {
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 0
-					include_locked = yes
-				}
+		54 = {
+			add_building_construction = {
+				type = BA_onsen
+				level = 1
+				province = 11544
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
 				instant_build = yes
 			}
 		}
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 0
-					include_locked = yes
-				}
+		50 = {
+			add_building_construction = {
+				type = BA_onsen
+				level = 1
+				province = 9517
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
 				instant_build = yes
 			}
 		}
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 0
-					include_locked = yes
-				}
+		52 = {
+			add_building_construction = {
+				type = BA_onsen
+				level = 1
+				province = 692
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
