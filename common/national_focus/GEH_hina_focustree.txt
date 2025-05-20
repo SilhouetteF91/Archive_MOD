@@ -8689,7 +8689,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_territory_reconstruction_ministry_establishment
-		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		icon = GFX_goal_GEH_sundoboo 
 		cost = 5
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_regensburg_riot_decree
@@ -8725,7 +8725,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_planning_ministry_role_expansion
-		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		icon = GFX_goal_PrefectTeam_muster_Ako 
 		cost = 5
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_regensburg_riot_decree
@@ -8761,40 +8761,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_gehenna_order_restoration
-		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
-		cost = 5
-
-		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_territory_reconstruction_ministry_establishment
-		x = 1
-		y = 1
-
-		available = {
-		}
-		
-        prerequisite = {
-            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_planning_ministry_role_expansion
-			focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_territory_reconstruction_ministry_establishment
-		}
-
-		ai_will_do = {
-			base = 100
-			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
-			}
-		}
-
-		completion_reward = {
-		}
-	}
-
-    focus = {
-		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_gehenna_order_restoration
-		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		icon = GFX_goal_GEH_prefect_team_charge 
 		cost = 5
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_territory_reconstruction_ministry_establishment
@@ -8829,7 +8796,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_pan_kivotos
-		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		icon = GFX_focus_GER_european_confederation 
 		cost = 5
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance
@@ -8865,7 +8832,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_gehenna_priority
-		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		icon = GFX_focus_RAJ_a_tiger_unchained 
 		cost = 5
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance
@@ -8902,7 +8869,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_german_forced_assimilation
-		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		icon = GFX_focus_GER_subdue_the_wehrmacht
 		cost = 5
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee
@@ -8938,7 +8905,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_german_gehennan
-		icon = GFX_focus_LAT_suspend_constitution_of_latvia 
+		icon = GFX_goal_GEH_Rebuilding_Gehenna 
 		cost = 5
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee
