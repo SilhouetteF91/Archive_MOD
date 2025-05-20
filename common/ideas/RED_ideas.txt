@@ -7,6 +7,76 @@ ideas = {
 		}
 	}
     country = {
+		RED_industrial_decentralization = { #산업분권화
+			picture = BEL_belgian_miracle
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_start_efficiency_factor = -0.03
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		RED_transitional_economy = { #과도기 경제
+			picture = BEL_belgian_miracle
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				line_change_production_efficiency_factor = -0.03
+				production_factory_efficiency_gain_factor = 0.03
+				production_factory_start_efficiency_factor = -0.03
+				production_factory_max_efficiency_factor = -0.03
+				production_speed_buildings_factor = -0.05
+				production_speed_industrial_complex_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		RED_revolutionary_committee = { #혁명위원회
+			picture = HUN_state_protection_authority_idea
+			modifier = {
+				political_power_factor = 0.05
+				communism_drift = 0.05
+				drift_defence_factor = 0.1
+			}
+		}
+		RED_provisional_committee_keinz = { #임시위원회 - 재정정책
+			name = RED_provisional_committee
+			picture = SOV_stakhanovite_movement
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		RED_provisional_committee_market_1 = { #임시위원회 - 자생경제
+			name = RED_provisional_committee
+			picture = SOV_stakhanovite_movement
+			modifier = {
+				consumer_goods_factor = -0.15
+				political_power_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
+		RED_provisional_committee_market = { #임시위원회 - 자생경제
+			name = RED_provisional_committee
+			picture = SOV_stakhanovite_movement
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
+		RED_provisional_committee = { #임시위원회
+			picture = SOV_stakhanovite_movement
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
 		RED_redwinter_military_science = { #붉은겨울 군사과학
 			picture = ARG_military_government
 			modifier = {
@@ -2691,15 +2761,6 @@ ideas = {
 			modifier = {
 				monthly_population = 0.1
 				local_building_slots_factor = 0.2
-			}
-		}
-		RED_additional_pudding = { #추가적인 푸딩 배급
-			picture = DEN_danish_produce
-			modifier = {
-				consumer_goods_factor = 0.3
-				stability_weekly = 0.005
-				war_support_weekly = 0.005
-				political_power_factor = 0.15
 			}
 		}
 		RED_HYUSIK_ideas = { #주 3일제

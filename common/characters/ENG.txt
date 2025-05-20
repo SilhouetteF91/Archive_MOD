@@ -60,6 +60,35 @@ characters={
 			}
 		}
 	}
+	IMP_kingsley_wood={
+		name=IMP_kingsley_wood
+		portraits={
+			civilian={
+				large=GFX_Portrait_ENG_Kinglsey_Wood
+				small=GFX_Portrait_ENG_Kinglsey_Wood_small
+			}
+			army={
+				large=GFX_Portrait_ENG_Kinglsey_Wood
+				small=GFX_Portrait_ENG_Kinglsey_Wood_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = IMP_kingsley_wood
+			available  = {
+				has_government  = democratic
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				ENG_Health_minister
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
 	## BA_MOD_FIX
 	ENG_winston_churchill={
 		name=ENG_winston_churchill
@@ -177,12 +206,7 @@ characters={
 				original_tag  = ENG
 			}
 			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = CAN_focus_5_1 
-				}
+				has_completed_focus = CAN_concessions_to_workers
 				if  = {
 					limit  = {
 						has_dlc = "Man the Guns"
@@ -1834,7 +1858,7 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					has_government  = fascism 
+					has_completed_focus = CAN_collaboration_with_fascist_movement
 				}
 				if  = {
 					limit  = {
@@ -2604,32 +2628,6 @@ characters={
 			}
 			expire = "1965.1.1"
 			id=-1
-		}
-	}
-	#추가
-	#######################################
-	ENG_kingsley_wood={
-		name=ENG_kingsley_wood
-		portraits={
-			civilian={
-				large="GFX_portrait_ENG_kingsley_wood"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_kingsley_wood
-			available  = {
-				has_government  = democratic
-			}
-			allowed  = {
-				original_tag  = ENG
-			}
-			traits  = {
-				ENG_Health_minister
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
 		}
 	}
 }

@@ -181,7 +181,7 @@ on_actions = {
 						transfer_troops = no
 					}
 					country_event = {
-						id = ENG_british_warning_event.7
+						id = ENG_ba.7
 						days = 15
 					}
 					add_ideas = ENG_exiled_royal_family

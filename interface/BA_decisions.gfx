@@ -1,6 +1,12 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_FOCUS_ICON_SET_BRILLIANT_KEY_FOCUS"
+		textureFile = "gfx/interface/focusview/filter/탁월수.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_decision_POL_solidarity"
 		texturefile = "gfx/interface/decisions/POL_solidarity.tga"
 		legacy_lazy_load = no
@@ -1457,9 +1463,9 @@ spriteTypes = {
 
 	progressbartype = {
 		name = "GFX_ABY_focus_progressbar"
-		textureFile1 = "gfx/interface/research_progressbar.dds"
-		textureFile2 = "gfx/interface/research_progressbar_bg.dds"
-		size = { x = 175 y = 24 }
+		textureFile1 = "gfx/interface/decisions/ABY_focus_gui/ABY_progressbar.dds"
+		textureFile2 = "gfx/interface/decisions/ABY_focus_gui/ABY_progressbar_bg.dds"
+		size = { x = 175 y = 25 }
 		effectFile = "gfx/FX/progress.lua"
 		steps = 49
 	}
@@ -1584,6 +1590,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_available"
 		texturefile = "gfx/interface/decisions/icon/V.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_divide_line"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/divide_Line.tga"
 		legacy_lazy_load = no
 		transparencecheck = yes
 	}
@@ -1907,6 +1920,34 @@ spriteTypes = {
 		name = GFX_red_northern_sovereignty
 		textureFile1 = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_progressbar.dds"
 		textureFile2 = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_background.dds"
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+		size = { 
+			x = 200
+			y = 20
+		}
+	}
+	spriteType = {
+		name = RED_second_great_northern_war_background
+		textureFile = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_background.dds"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = GFX_red_second_great_northern_war_fin
+		textureFile1 = "gfx/interface/decisions/RED/RED_second_great_northern_war_progressbar.dds"
+		textureFile2 = "gfx/interface/decisions/RED/RED_second_great_northern_war_background.dds"
+		effectFile = "gfx/FX/BA_progress_r.lua"
+		steps = 100
+		size = { 
+			x = 200
+			y = 20
+		}
+	}
+	progressbartype = {
+		name = GFX_red_second_great_northern_war_red
+		textureFile1 = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_progressbar.dds"
+		textureFile2 = "gfx/interface/decisions/RED/RED_second_great_northern_war_background.dds"
 		effectFile = "gfx/FX/progress.lua"
 		steps = 100
 		size = { 

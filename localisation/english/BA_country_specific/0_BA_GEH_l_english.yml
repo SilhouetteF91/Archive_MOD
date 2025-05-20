@@ -698,6 +698,25 @@
 
 #### 이오리
  GEH_basking_in_the_brilliance_of_their_serenade_rout_c: "혼란의 밤"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_weak_attack: "약자 공격"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_weak_attack_desc: "게헨나-키보토스 순수 문화를 더럽히는 독일계 시민들은 분명히 우리 게헨나의 암 덩어리들이 분명합니다. 키보토스 순수 문화를 수호하고, 게헨나의 위대한 정신을 더럽히지 않기 위해 우리는 독일계 시민들이 정부 고위직에서 일할 수 없도록 만들어야 합니다. ...물론 이를 통해 우리 정부에게 가해지는 정치적 압력을 해소할 수 있을 것입니다."
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_kivotosism: "국가 키보토스주의"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_kivotosism_desc: "우리의 계엄령은 히나 선도부장이 '독일인들의 소요에 의해' 막중한 업무에 시달리다 실종되었으며, 이는 키보토스 문화만이 존재하던 과거에는 벌어지지 않았을 일이 분명합니다!"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_our_identity: "우리의 정체성"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_our_identity_desc: "게헨나 학원은 언제나 순수 키보토스 문화를 유지해야 하며, 이는 우리 신정부의 지도 방침으로 자리 잡을 것입니다. 키보토스인과 지구인의 차이는 명백하며, 우리야말로 진정으로 진보된 '인류'임을 선포해야 합니다."
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance: "자유조국방위연합"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance_desc: "게헨나-키보토스 순수 문화를 수호하고 조국을 방위하기 위해서는 강력한 학생-시민-정부의 연대가 필요합니다. 우리의 지도부는 새로운 '자유조국방위연합'으로 재편될 것이며, 이는 정부의 지도력을 민중에게 투사하고, 강력하고 단결된 학원을 수립하기 위한 첫걸음이 될 것입니다."
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee: "연합국가재건위원회"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee_desc: "이제는 모두가 지쳤습니다. 게헨나 학원에는 치유가 필요합니다. 게헨나 학원은 너무나도 많은 사건과 사고에 시달렸으며, 수많은 동아리의 폭동과 독일계 반란 조직의 테러리즘에 의해 오염되었습니다. 이제 우리는 그 오염을 닦아내야 하기에, '연합국가재건위원회'를 수립하여 우리들의 국가를 재건할 것입니다."
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_regensburg_riot_decree: "레겐스부르크 폭동 법령"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_regensburg_riot_decree_desc: "우리는 반키보토스 불순분자, 게헨나 테러리스트, 공산주의자, 나치스트들이 국가에서 활개 치는 걸 더 이상 두고 볼 수 없습니다. 명백히 선도부를 향한 대규모의 폭동이었던 레겐스부르크 폭동과 같은 일이 두 번 다시 벌어질 수 없도록 하는 강력한 법안을 추진해야 합니다."
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_national_territory_reconstruction_ministry_establishment: "국토 재건부 설립"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_planning_ministry_role_expansion: "기획부의 역할 확대"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_gehenna_order_restoration: "게헨나의 질서 회복"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_gehenna_priority: "게헨나 우선"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_pan_kivotos: "범키보토스"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_german_forced_assimilation: "독일인 강제동화"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_c_german_gehennan: "독일계 게헨나인"
 
 #### 노말
  GEH_basking_in_the_brilliance_of_their_serenade_rout_n: "네 자리, 세 명"
@@ -914,6 +933,7 @@
 
 
  #국민정신
+ GEH_regensburg_riot_decree: "레겐스부르크 폭동 법령"
  GEH_west_army_focus_idea: "기획부와의 협력"
  GEH_politicized_military: "군 정치고문"
  GEH_HID_idea: "정보부"

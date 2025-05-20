@@ -1290,6 +1290,17 @@ spriteTypes = {
 		textureFile = "gfx/interface/advisors/JAP/idea_JAP_hayashi_senjuro.tga"
 		legacy_lazy_load = no
 	}
+# 영국
+	spriteType = {
+		name = "GFX_Portrait_ENG_Kinglsey_Wood"
+		textureFile = "gfx/leaders/ENG/Portrait_ENG_Kinglsey_Wood.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Portrait_ENG_Kinglsey_Wood_small"
+		textureFile = "gfx/interface/advisors/ENG/ENG_kinglsey_wood.tga"
+		legacy_lazy_load = no
+	}
 
 # 프로젝트 KV
 	spriteType = {

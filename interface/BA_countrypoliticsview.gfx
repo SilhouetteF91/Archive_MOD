@@ -114,6 +114,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/war_communism.dds"
 	}
 	spriteType = {
+		name = "GFX_ideology_scandinavian_social_democracy"
+		texturefile = "gfx/interface/ideologies/scandinavian_social_democracy.dds"
+	}
+	spriteType = {
 		name = "GFX_ideology_pater_nazism"
 		texturefile = "gfx/interface/ideologies/pater_nazism.tga"
 	}

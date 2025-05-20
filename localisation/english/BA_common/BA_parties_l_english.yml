@@ -271,6 +271,12 @@
  GEH_planning_department:0 "선도부 기획부"
  GEH_planning_department_long:0 "선도부 기획부"
 
+ GEH_united_nation_reconstruction_committee_long:0 "연합국가재건위원회 (Nationaler Rat für den Wiederaufbau)"
+ GEH_united_nation_reconstruction_committee:0 "NRW"
+
+ GEH_free_fatherland_defense_alliance_long:0 "자유조국방위연합 (Bund zur Verteidigung des Freien Vaterlandes)"
+ GEH_free_fatherland_defense_alliance:0 "BVFV"
+
  GEH_anti_iori_party:0 "크릭스레히츠게그너"
  GEH_anti_iori_party_long:0 "크릭스레히츠게그너 (Kriegsrechtsgegner, 계엄령 반대파)"
 
@@ -466,18 +472,6 @@
  Office:0 "사무국"
  RedWinterSecurityCommittee:0 "붉은겨울 사무국 보안위원회"
  SecurityCommittee:0 "보안위원회"
- RED_democratic_sdlp:0 "사회민주노동당"
- RED_democratic_sdlp_long:0 "붉은겨울 사회민주노동당"
- RED_democratic_FWF:0 "자유노동자연맹"
- RED_democratic_FWF_long:0 "붉은겨울 자유노동자연맹"
- RED_neutrality_conservatism:0 "보수당"
- RED_neutrality_conservatism_long:0 "붉은겨울 보수당"
- RED_fascism_PDP:0 "민중민주당"
- RED_fascism_PDP_long:0 "붉은겨울 민중민주당"
- RED_fascism_NSL:0 "국가생디칼리즘 노동전선"
- RED_fascism_NSL_long:0 "붉은겨울 국가생디칼리즘 노동전선"
- PublicWorksDepartment:0 "적색전선 (용역부)"
- LaborParty:0 "적색전선 (용역부)"
 
 
 

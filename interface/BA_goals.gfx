@@ -4,6 +4,30 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/HEU/신뢰와우애.tga"
 	}
 	SpriteType = {
+		name = "GFX_focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_c"
+		texturefile = "gfx/interface/goals/GEH/focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_c.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_a_kayoko"
+		texturefile = "gfx/interface/goals/GEH/focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_a_kayoko.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_a"
+		texturefile = "gfx/interface/goals/GEH/focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_a.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_a_iroha"
+		texturefile = "gfx/interface/goals/GEH/focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_a_iroha.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance"
+		texturefile = "gfx/interface/goals/GEH/focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_c_free_fatherland_defense_alliance.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee"
+		texturefile = "gfx/interface/goals/GEH/focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_c_united_nation_reconstruction_committee.tga"
+	}
+	SpriteType = {
 		name = "GFX_focus_GEH_ai_focus_1"
 		texturefile = "gfx/interface/goals/GEH/focus_GEH_ai_focus_1.tga"
 	}
@@ -581,8 +605,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/ENG/focus_IMP_third_world.tga"
 	}
 	SpriteType = {
+		name = "GFX_focus_CAN_third_world_Brilliant"
+		texturefile = "gfx/interface/goals/ENG/focus_IMP_third_world_Brilliant.tga"
+	}
+	SpriteType = {
 		name = "GFX_focus_CAN_englo_alliance"
 		texturefile = "gfx/interface/goals/ENG/focus_CAN_englo_alliance.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_CAN_stresa_front"
+		texturefile = "gfx/interface/goals/ENG/focus_CAN_stresa_front.tga"
 	}
 	SpriteType = {
 		name = "GFX_goal_generic_parliament"
@@ -1866,6 +1898,14 @@ spriteTypes = {
 		name = "GFX_goal_GEH_remove_wehrmacht_plan_b"
 		textureFile = "gfx/interface/goals/GEH/GEH_remove_wehrmacht_plan_b.dds"
 	}	
+	spriteType = {
+		name = "GFX_goal_GEH_gehenna_reunification_hina"
+		textureFile = "gfx/interface/goals/GEH/GEH_gehenna_reunification_hina.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_gehenna_reunification_ako"
+		textureFile = "gfx/interface/goals/GEH/GEH_gehenna_reunification_ako.dds"
+	}
 	### 산해경 중점 ###
 	SpriteType = { 	
 		name = "GFX_goal_SHA_KISAKI"

@@ -2924,3 +2924,15 @@ ABY_scripted_effect_remove_focus_flag = {
 	clr_country_flag = ABY_descision_focus_german_11_selected_flag
 	clr_country_flag = ABY_descision_focus_german_12_selected_flag
 }
+ABY_scripted_effect_getsokku_plus_effect = {
+	custom_effect_tooltip = ABY_tt_getsokku_plus
+	hidden_effect = {
+
+	}
+}
+ABY_scripted_effect_getsokku_minus_effect = {
+	custom_effect_tooltip = ABY_tt_getsokku_minus
+	hidden_effect = {
+		
+	}
+}

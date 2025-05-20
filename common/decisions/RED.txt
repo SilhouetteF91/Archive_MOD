@@ -3064,6 +3064,19 @@ RED_military_government_administration = {
 	}
 }
 
+RED_second_great_northern_war = {
+	RED_second_great_northern_war_debug = {
+		complete_effect = {
+			set_variable = {
+				global.red_re1_second_great_northern_war_fin_var = 25
+			}
+			set_variable = {
+				global.red_re1_second_great_northern_war_red_var = 34
+			}
+		}
+	}
+}
+
 RED_northern_sovereignty_war = {
 
 	### 방위위원회 편 ###
@@ -3092,6 +3105,9 @@ RED_northern_sovereignty_war = {
 				}
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		ai_will_do = {
 			factor = 200
@@ -3145,6 +3161,9 @@ RED_northern_sovereignty_war = {
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
 		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
+		}
 		ai_will_do = {
 			factor = 200
 		}
@@ -3196,6 +3215,9 @@ RED_northern_sovereignty_war = {
 				}
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		ai_will_do = {
 			factor = 200
@@ -3256,9 +3278,14 @@ RED_northern_sovereignty_war = {
 			has_completed_focus = RED_army_government_loyalty_confirmation
 		}
 		cancel_trigger = {
-			event_target:northern_sovereignty_war_RED_military_government_target = {
-				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			OR = {
+				has_global_flag = RE4_northern_sovereignty_war_started
+				event_target:northern_sovereignty_war_RED_military_government_target = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
 			}
+		}
+		cancel_trigger = {
 		}
 		ai_will_do = {
 			factor = 200
@@ -3322,8 +3349,11 @@ RED_northern_sovereignty_war = {
 			has_completed_focus = RED_army_government_loyalty_confirmation
 		}
 		cancel_trigger = {
-			event_target:northern_sovereignty_war_RED_military_government_target = {
-				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			OR = {
+				has_global_flag = RE4_northern_sovereignty_war_started
+				event_target:northern_sovereignty_war_RED_military_government_target = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
 			}
 		}
 		ai_will_do = {
@@ -3388,8 +3418,11 @@ RED_northern_sovereignty_war = {
 			has_completed_focus = RED_army_government_loyalty_confirmation
 		}
 		cancel_trigger = {
-			event_target:northern_sovereignty_war_RED_military_government_target = {
-				has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+			OR = {
+				has_global_flag = RE4_northern_sovereignty_war_started
+				event_target:northern_sovereignty_war_RED_military_government_target = {
+					has_country_flag = RED_northern_sovereignty_war_1side_team_flag
+				}
 			}
 		}
 		ai_will_do = {
@@ -3476,6 +3509,9 @@ RED_northern_sovereignty_war = {
 				}
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		ai_will_do = {
 			factor = 200
@@ -3569,7 +3605,7 @@ RED_northern_sovereignty_war = {
 			}
 		}
 		available = {
-			has_completed_focus = RED_securing_bureaucracy_support
+			has_completed_focus = RED_infiltration_of_security_committee
 			any_country = {
 				OR = {
 					tag = RE1
@@ -3578,6 +3614,9 @@ RED_northern_sovereignty_war = {
 				}
 				NOT = { has_country_flag = RED_northern_sovereignty_war_1side_team_flag }
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		ai_will_do = {
 			factor = 200
@@ -3677,6 +3716,9 @@ RED_northern_sovereignty_war = {
 				}
 			}
 		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
+		}
 		fire_only_once = no
 		cost = 100
 		days_remove = 75
@@ -3733,6 +3775,9 @@ RED_northern_sovereignty_war = {
 					is_subject = no
 				}
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		fire_only_once = no
 		cost = 25
@@ -3810,6 +3855,9 @@ RED_northern_sovereignty_war = {
 					is_subject = no
 				}
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		fire_only_once = no
 		custom_cost_trigger = {
@@ -3897,6 +3945,9 @@ RED_northern_sovereignty_war = {
 					is_subject = no
 				}
 			}
+		}
+		cancel_trigger = {
+			has_global_flag = RE4_northern_sovereignty_war_started
 		}
 		fire_only_once = no
 		custom_cost_trigger = {
@@ -4344,6 +4395,106 @@ RED_minori_revolution_decision = {
 			}
 		}
 	}
+	RED_public_industry_east = { #동부 도시재건사업
+		icon = GFX_decision_generic_construction
+		days_remove = 150
+		cost = 75
+		visible = {
+			has_completed_focus = RED_procom_focus_7
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 141
+				state = 913
+			}
+		}
+		remove_effect = {
+			913 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			141 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	RED_public_industry_west = { #서부 농촌재건사업
+		icon = GFX_decision_generic_construction
+		days_remove = 150
+		cost = 75
+		visible = {
+			has_completed_focus = RED_procom_focus_7
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 915
+				state = 919
+			}
+		}
+		remove_effect = {
+			915 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			919 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	RED_public_industry_north= { #북부 공공사업
+		icon = GFX_decision_generic_construction
+		days_remove = 150
+		cost = 75
+		visible = {
+			has_completed_focus = RED_procom_focus_7
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 916
+				state = 38
+				state = 917
+			}
+		}
+		remove_effect = {
+			916 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			38 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			917 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+		}
+	}
+
+	##안쓸듯
 	RED_annex_NOR_decision = {
 		#노르웨이 통합
 		icon = GFX_decision_generic_nationalism

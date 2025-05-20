@@ -84,8 +84,7 @@ ABY_political = {
 		original_tag = ABY
 	}
 	visible = {
-		has_completed_focus = ABY_focus_call_eocordnldnjsghl
-		NOT = {has_completed_focus = ABY_focus_descision}
+		always = no
 		original_tag = ABY
 	}
 	priority = 100
@@ -234,10 +233,7 @@ ABY_descision_category_between_two_world = {
 	}
 
 	visible = {
-		OR = {
-			has_completed_focus = ABY_focus_rebuild_czech
-			has_completed_focus = ABY_focus_abydos_federal_republic
-		}		
+		always = no		
 	}
 
 	custom_icon = {
@@ -371,7 +367,7 @@ ABY_descision_category_zapadoslavia = { # 자파도슬라비아
 	}
 
 	visible = {
-		has_completed_focus = ABY_focus_accept_hungary
+		always = no
 	}
 }
 ABY_descision_category_vicegrad = { # 비셰그라드
@@ -385,7 +381,7 @@ ABY_descision_category_vicegrad = { # 비셰그라드
 	}
 
 	visible = {
-		has_completed_focus = ABY_focus_vicegrad_negotiation
+		always = no
 	}
 }
 ABY_descision_category_school_dismiss = { # 학원 해체
@@ -509,8 +505,7 @@ ABY_descision_ennead = {
 	}
 	visible = {
 		has_country_flag = ABY_flag_ennead_council
-		NOT = {has_completed_focus = ABY_focus_rebuild_czech}
-		NOT = {has_completed_focus = ABY_focus_get_power_of_student_council}
+		always = no	
 	}
 }
 ABY_descision_category_NLW = {
@@ -519,7 +514,7 @@ ABY_descision_category_NLW = {
 		original_tag = ABY
 	}
 	visible = {
-		has_completed_focus = ABY_focus_native_liberation_war
+		always = no
 	}
 }
 ABY_descision_category_territory = {
@@ -677,7 +672,7 @@ ABY_descision_category_focus = {
     }
     visible = {
         original_tag = ABY                                                                                                             
-		has_country_flag = ABY_flag_in_develop
+		has_country_flag = ABY_flag_in_develop  
     }             
     priority = 120
 }

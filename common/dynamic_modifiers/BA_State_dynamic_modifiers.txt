@@ -324,6 +324,10 @@ FRA_algeria_resistance = {
 	ground_attack_factor = -0.75
 	local_org_regain = -0.5
 }
+RED_village_subsidy = { #농촌 보조금
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+	state_production_speed_buildings_factor = 0.1
+}
 RED_stalinist_partisan = { #스탈린주의 파르티잔
 	icon = GFX_modifiers_SOV_invaders_must_die
 	resistance_growth = 0.50

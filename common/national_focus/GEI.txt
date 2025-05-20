@@ -354,7 +354,7 @@ focus_tree = {
 				}
 			}
 			ENG = {
-				country_event = { id = ENG_british_warning_event.6 hours = 6 }
+				country_event = { id = ENG_ba.6 hours = 6 }
 			}
 		}
 	}

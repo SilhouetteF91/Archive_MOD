@@ -16,5 +16,14 @@ SEX = {
 }
 REC = { #체리노파 붉은겨울 //미노리 루트에서 등장
 	original_tag = RE5
-	has_cosmetic_tag = RE2_antirevolution
+    country_score = {
+        base = 1
+        modifier = {
+            add = 1
+            AND = {
+				has_cosmetic_tag = RE2_antirevolution
+                exists = yes
+            }
+        }
+	}
 }

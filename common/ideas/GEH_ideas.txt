@@ -86,6 +86,18 @@ ideas = {
  			}
  		}
         
+		GEH_regensburg_riot_decree  = { # 레겐스부르크 폭동 법령
+			picture = generic_democracy_banned
+			allowed = { always = no }
+			allowed_civil_war = { always = yes } 
+			
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = -0.05
+				fascism_drift = 0.02
+			}
+		}
+        
 		GEH_kriegsrecht  = { # 지금 당장. 계엄령
 			picture = ARG_military_government
 			allowed = { always = no }
@@ -95,7 +107,8 @@ ideas = {
 				political_power_cost = 0.25
 				production_speed_buildings_factor = -0.10
 				stability_factor = -0.25
-				fascism_drift = -0.05
+				fascism_drift = 0.05
+				stability_weekly_factor = -0.008
 			}
 		}
 

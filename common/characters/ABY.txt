@@ -573,8 +573,7 @@ characters={
 			}
 			visible = {
 				OR = {
-					has_completed_focus = ABY_focus_abydos_schoolcountry
-					has_completed_focus = ABY_focus_with_czech
+					always = no
 				}
 				
 			}
@@ -1659,7 +1658,7 @@ characters={
 				ABY_trait_brutal
 			}
 			visible = {
-				has_completed_focus = ABY_focus_with_german
+				always = no
 			}
 			cost = 150
 			ai_will_do = {

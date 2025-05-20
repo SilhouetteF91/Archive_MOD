@@ -11,29 +11,25 @@ defined_text = { # Country
 	name = GetABYDOSarmyname
 	text = {
 		trigger = {			
-			NOT = {
-				has_completed_focus = ABY_focus_descision
-			}
+			always = no
 		}
 		localization_key = ABY_army_dynamic_modifier_start
 	}
 	text = {
 		trigger = {	
-			has_completed_focus = ABY_focus_descision	
-			has_completed_focus = ABY_focus_with_czech
+			always = no
 		}
 		localization_key = ABY_army_dynamic_modifier_czech
 	}
 	text = {
 		trigger = {	
-			has_completed_focus = ABY_focus_descision	
-			has_completed_focus = ABY_focus_neptis_cooperation_country
+			always = no 
 		}
 		localization_key = ABY_army_dynamic_modifier_nephtys
 	}
 	text = {
 		trigger = {	
-			has_completed_focus = ABY_focus_descision	
+			always = no
 			has_government = communism
 		}
 		localization_key = ABY_army_dynamic_modifier_communism
@@ -47,8 +43,7 @@ defined_text = { # Country
 	#}
 	text = {
 		trigger = {	
-			has_completed_focus = ABY_focus_descision	
-			has_completed_focus = ABY_focus_abydos_schoolcountry
+			always = no
 		}
 		localization_key = ABY_army_dynamic_modifier_abydos
 	}

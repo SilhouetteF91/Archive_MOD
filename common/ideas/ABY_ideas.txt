@@ -18,7 +18,32 @@ ideas = {
 				terrain_trait_xp_gain_factor = 0.25
 			}
 		}
-		ABY_idea_czecho_1 = {
+		ABY_idea_daminjok = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				non_core_manpower = 0.05
+				political_power_gain = 0.5
+				conscription_factor = -0.15
+				army_org_factor = -0.1
+				planning_speed = -0.25
+			}
+		}
+		ABY_idea_over = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				stability_weekly = -0.005
+			}
+		}
+		ABY_idea_czecho_1_person = {
 			allowed_civil_war = {
                 always = yes
             }
@@ -30,7 +55,7 @@ ideas = {
 				political_power_factor = 0.15
 			}
 		}
-		ABY_idea_czecho_2 = {
+		ABY_idea_czecho_2_person = {
 			allowed_civil_war = {
                 always = yes
             }
@@ -41,7 +66,7 @@ ideas = {
 				war_support_factor = 0.1
 			}
 		}
-		ABY_idea_german_1 = {
+		ABY_idea_german_1_person = {
 			allowed_civil_war = {
                 always = yes
             }
@@ -53,7 +78,7 @@ ideas = {
 				fascism_drift = -0.1
 			}
 		}
-		ABY_idea_german_2 = {
+		ABY_idea_german_2_person = {
 			allowed_civil_war = {
                 always = yes
             }
@@ -66,7 +91,7 @@ ideas = {
 				neutrality_drift = -0.1
 			}
 		}
-		ABY_idea_abydos_1 = {
+		ABY_idea_abydos_1_person = {
 			allowed_civil_war = {
                 always = yes
             }
@@ -76,6 +101,407 @@ ideas = {
 				war_support_factor = 0.1
 				army_core_attack_factor = 0.1
 				offensive_war_stability_factor = 0.2
+			}
+		}
+		
+		ABY_idea_first = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_3 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_4 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_5 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_6 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_7 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_8 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_9 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_10 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_11 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_12 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_13 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_14 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_abydos_15 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_german_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_german_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_german_3 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_german_4 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_german_5 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_german_6 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_german_7 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_german_8 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_german_9 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_german_10 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_german_11 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_german_12 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_czecho_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_czecho_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_czecho_3 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_czecho_4 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_czecho_5 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_czecho_6 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_czecho_7 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_czecho_8 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_czecho_9 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_czecho_10 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_czecho_11 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		ABY_idea_czecho_12 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				political_power_cost = 1
 			}
 		}
 	}
@@ -1828,6 +2254,27 @@ ideas = {
 				democratic_drift = 0.05
 				stability_factor = 0.20
 				political_power_gain = 0.5
+			}
+		}
+		ABY_idea_czech_father_legecy = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			picture = ABY_tomas_masaryk
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.1
+				political_power_factor = 0.15
+				political_power_cost = 0.5
+				mobilization_laws_cost_factor = -0.5
+				trade_laws_cost_factor = -0.5
+				economy_cost_factor = -0.5
+				conscription_factor = 0.1
+				offensive_war_stability_factor = 0.2
+				defensive_war_stability_factor = 0.2
+				MOBILIZATION_SPEED = 0.25
+				planning_speed = 0.15
 			}
 		}
 		ABY_idea_civil_army = {

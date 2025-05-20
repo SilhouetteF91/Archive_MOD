@@ -1291,7 +1291,7 @@ ABY_high_school_rebuild = {
 					compare = greater_than_or_equals
 				}
 			}
-			has_completed_focus = ABY_focus_abydos_schoolcountry
+			always = no
         }
 
         remove_effect = {
@@ -1329,7 +1329,7 @@ ABY_high_school_rebuild = {
 				}
 			}
 			has_government = fascism
-			has_completed_focus = ABY_focus_get_power_of_student_council
+			always = no
         }
 
         remove_effect = {
@@ -1390,7 +1390,7 @@ ABY_high_school_rebuild = {
 			FROM = {
 				is_controlled_by = ABY
 			}
-			has_completed_focus = ABY_focus_search_student
+			always = no
 		}
 
 		available = {
@@ -1477,7 +1477,7 @@ ABY_high_school_rebuild = {
 			}		
 			if = {
 				limit = {
-					has_completed_focus = ABY_focus_wjsekswl
+					has_country_flag = GAEBALJUNG
 				}
             	random_list = {
         	        50 = {
@@ -9510,7 +9510,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 		
 
         available = { 
-			has_completed_focus = ABY_focus_sound_of_win
+			always = no
         }
 
 		fire_only_once = yes
@@ -16437,7 +16437,7 @@ ABY_descision_category_provisional_government = {
 				has_country_flag = ABY_flag_austria_provisional_government
 			}  
 			OR = {
-				has_completed_focus = ABY_focus_abydos_schoolcountry
+				always = no
 			}
 			tag = ABY
 			ABY = {
@@ -16492,7 +16492,7 @@ ABY_descision_category_provisional_government = {
 				has_country_flag = ABY_flag_austria_provisional_government
 			}  
 			OR = {
-				has_completed_focus = ABY_focus_with_czech
+				always = no
 			}
 			tag = ABY
 		}
@@ -16754,8 +16754,7 @@ ABY_descision_category_provisional_government = {
 		
 		visible = {
 			OR = {
-				has_completed_focus = ABY_focus_with_czech
-				has_completed_focus = ABY_focus_abydos_schoolcountry
+				always = no
 			}  
 		}
 		                 
@@ -16800,8 +16799,7 @@ ABY_descision_category_provisional_government = {
 		
 		visible = {
 			OR = {
-				has_completed_focus = ABY_focus_with_czech
-				has_completed_focus = ABY_focus_abydos_schoolcountry
+				always = no
 			}  
 			NOT = {has_country_flag = ABY_flag_annex_slovakia}
 		}
@@ -16834,17 +16832,17 @@ ABY_descision_category_provisional_government = {
 			71 = {add_core_of = ABY}
 			73 = {add_core_of = ABY}
 			664 = {add_core_of = ABY}
-			if = {
-				limit = {
-					ABY = {
-						has_completed_focus = ABY_focus_rebuild_czech
-					}
-
-				}
-				ABY = {
-					set_cosmetic_tag = ABY_czechoslovakia_republic
-				}
-			}
+			#if = {
+			#	limit = {
+			#		ABY = {
+			#			has_completed_focus = ABY_focus_rebuild_czech
+			#		}
+#
+			#	}
+			#	ABY = {
+			#		set_cosmetic_tag = ABY_czechoslovakia_republic
+			#	}
+			#}
 			SLO = {
 				every_unit_leader = {
 					set_nationality = ABY
@@ -16863,8 +16861,7 @@ ABY_descision_category_provisional_government = {
 		
 		visible = {
 			OR = {
-				has_completed_focus = ABY_focus_with_czech
-				has_completed_focus = ABY_focus_abydos_schoolcountry
+				always = no
 			}  
 			NOT = {has_country_flag = ABY_flag_believe}
 		}
@@ -16893,17 +16890,17 @@ ABY_descision_category_provisional_government = {
 			71 = { add_core_of = ABY }
 			73 = {add_core_of = ABY}
 			664 = {add_core_of = ABY}
-			if = {
-				limit = {
-					ABY = {
-						has_completed_focus = ABY_focus_rebuild_czech
-					}
-
-				}
-				ABY = {
-					set_cosmetic_tag = ABY_czechoslovakia_republic
-				}
-			}
+			#if = {
+			#	limit = {
+			#		ABY = {
+			#			has_completed_focus = ABY_focus_rebuild_czech
+			#		}
+#
+			#	}
+			#	ABY = {
+			#		set_cosmetic_tag = ABY_czechoslovakia_republic
+			#	}
+			#}
 			set_country_flag = ABY_flag_annex_slovakia
 		}
 	}
@@ -16968,7 +16965,7 @@ ABY_descision_category_new_country = {
 					fascism = 0
 					communism = 0
 				}
-				complete_national_focus = ABY_focus_abydos_federal_republic
+				#complete_national_focus = ABY_focus_abydos_federal_republic
 				hidden_effect = {
     		        load_focus_tree = {
     		            tree = ABY_focus_tree
@@ -16990,7 +16987,7 @@ ABY_descision_category_new_country = {
 					fascism < 0.35
 					neutrality < 0.35
 				}#아비도스 연방공화국
-				complete_national_focus = ABY_focus_abydos_federal_republic
+				#complete_national_focus = ABY_focus_abydos_federal_republic
 				hidden_effect = {
     		        load_focus_tree = {
     		            tree = ABY_focus_tree
@@ -17056,7 +17053,7 @@ ABY_descision_category_new_country = {
 					fascism < 0.35
 					neutrality > 0.35
 				}#아비도스 입헌공화국(연방공화국과 거의 동일)
-				complete_national_focus = ABY_focus_abydos_federal_republic
+				#complete_national_focus = ABY_focus_abydos_federal_republic
 				hidden_effect = {
     		        load_focus_tree = {
     		            tree = ABY_focus_tree
@@ -17660,7 +17657,7 @@ ABY_descision_category_debug = {
 		}             
 
 		complete_effect = {
-			complete_national_focus = ABY_focus_get_power_of_student_council
+			#complete_national_focus = ABY_focus_get_power_of_student_council
 			hidden_effect = {
                 load_focus_tree = {
                     tree = ABY_focus_tree
@@ -17686,7 +17683,7 @@ ABY_descision_category_debug = {
 		}             
 
 		complete_effect = {
-			complete_national_focus = ABY_focus_abydos_federal_republic
+			#complete_national_focus = ABY_focus_abydos_federal_republic
 			hidden_effect = {
                 load_focus_tree = {
                     tree = ABY_focus_tree
@@ -17738,7 +17735,6 @@ ABY_descision_category_debug = {
 		}            
 
 		complete_effect = {
-			complete_national_focus = ABY_focus_with_german
 			hidden_effect = {
                 load_focus_tree = {
                     tree = ABY_focus_tree
@@ -17864,7 +17860,7 @@ ABY_descision_category_debug = {
 				set_cosmetic_tag = ABY_laita_AUS
 			}
 			ABY = {
-				complete_national_focus = ABY_focus_way_of_empire
+				#complete_national_focus = ABY_focus_way_of_empire
 				every_state = {
 					limit = {
 						OR = {
@@ -18113,7 +18109,7 @@ ABY_descision_category_debug = {
 				set_country_flag = ABY_flag_holy_roman_nation
 			}
 			ABY = {
-				complete_national_focus = ABY_focus_way_of_empire
+				#complete_national_focus = ABY_focus_way_of_empire
 				every_state = {
 					limit = {
 						OR = {
@@ -18639,7 +18635,7 @@ ABY_descision_category_debug = {
 				set_country_flag = ABY_flag_holy_roman_nation
 			}
 			ABY = {
-				complete_national_focus = ABY_focus_way_of_empire
+				#complete_national_focus = ABY_focus_way_of_empire
 				every_state = {
 					limit = {
 						OR = {
@@ -19877,9 +19873,9 @@ ABY_descision_category_debug = {
 		complete_effect = {
 			set_country_flag = ABY_flag_in_develop
 			add_ideas = {
-				ABY_idea_czecho_1
-				ABY_idea_german_1
-				ABY_idea_abydos_1
+				ABY_idea_czecho_1_person
+				ABY_idea_german_1_person
+				ABY_idea_abydos_1_person
 			}
     		load_focus_tree = {
     		    tree = ABY_focus_tree
@@ -19891,6 +19887,10 @@ ABY_descision_category_debug = {
 			set_country_flag = {
 				flag = ABY_focus_time_flag
 				value = 1
+				days = 5
+			}
+			add_timed_idea = {
+				idea = ABY_idea_first
 				days = 5
 			}
 		}

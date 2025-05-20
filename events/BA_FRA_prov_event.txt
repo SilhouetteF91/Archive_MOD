@@ -1354,7 +1354,7 @@ country_event = {
 			}
 		}
 		name = FRA_prov_event.13.a
-		add_political_power = -200
+		add_political_power = -50
 		FRA = {
 			transfer_state = 777
 			transfer_state = 776

@@ -895,7 +895,7 @@ defined_text = {
                 value = 100
                 compare = greater_than_or_equals
             }
-			has_completed_focus = ABY_focus_vicegrad_negotiation
+			always = no
         }
         localization_key = ABY_hungary_desc_loc
     }
@@ -906,7 +906,7 @@ defined_text = {
                 value = 100
                 compare = less_than
             }
-			has_completed_focus = ABY_focus_vicegrad_negotiation
+			always = no
         }
         localization_key = ABY_hungary_loc
     }
@@ -3366,250 +3366,6 @@ defined_text = {
 }
 
 defined_text = {
-    name = GetabydosfocusGFX
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_first_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_1_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_2_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_3_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_4_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_5_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_6_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_7_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_8_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_9_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_10_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_11_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_12_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_13_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_14_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_abydos_15_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_czecho_1_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_czecho_2_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_czecho_3_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_czecho_4_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_czecho_5_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_czecho_6_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_czecho_7_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_czecho_8_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_czecho_9_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_czecho_10_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_czecho_11_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_czecho_12_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_german_1_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_german_2_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_german_3_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_german_4_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_german_5_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_german_6_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_german_7_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_german_8_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_german_9_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_german_10_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_german_11_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-    text = {
-        trigger = {
-            has_country_flag = ABY_descision_focus_german_12_selected_flag
-        }
-        localization_key = GFX_goal_unknown
-    }
-}
-
-defined_text = {
     name = Getabydosfocuspdxtooltip
     text = {
         trigger = {
@@ -4813,5 +4569,53 @@ defined_text = {
             }
         }
         localization_key = ABY_days_2
+    }
+}
+
+defined_text = {
+    name = ABY_german_focustree_now_tt
+    text = {
+        trigger = {
+            NOT = {has_country_flag = ABY_descision_focus_german_line_doing_flag}
+        }
+        localization_key = ABY_tt_not_ongoing
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_descision_focus_german_line_doing_flag
+        }
+        localization_key = ABY_tt_ongoing
+    }
+}
+
+defined_text = {
+    name = ABY_abydos_focustree_now_tt
+    text = {
+        trigger = {
+            NOT = {has_country_flag = ABY_descision_focus_abydos_line_doing_flag}
+        }
+        localization_key = ABY_tt_not_ongoing
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_descision_focus_abydos_line_doing_flag
+        }
+        localization_key = ABY_tt_ongoing
+    }
+}
+
+defined_text = {
+    name = ABY_czecho_focustree_now_tt
+    text = {
+        trigger = {
+            NOT = {has_country_flag = ABY_descision_focus_czecho_line_doing_flag}
+        }
+        localization_key = ABY_tt_not_ongoing
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_descision_focus_czecho_line_doing_flag
+        }
+        localization_key = ABY_tt_ongoing
     }
 }

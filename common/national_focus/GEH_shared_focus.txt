@@ -1,10 +1,37 @@
 shared_focus = {
 	id = GEH_unified_gehenna
-	icon = GFX_goal_GEH_Pax_Gehennia
-	cost = 10
+
+	icon = {
+		trigger = {
+			original_tag = GEM
+		}
+		value = GFX_goal_GEH_Pax_Gehennia
+	}
+	icon = {
+		trigger = {
+			AND = {
+				original_tag = GEH
+				NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+			}
+		}
+		value = GFX_goal_GEH_gehenna_reunification_hina
+	} 
+	icon = {
+		trigger = {
+			AND = {
+				original_tag = GEH
+				has_global_flag = GEH_BTBOTS_END_flag
+			}
+		}
+		value = GFX_goal_GEH_gehenna_reunification_ako
+	} 
+	
+	cost = 5
+
 	available = {
 		has_country_flag = GEH_unified_gehenna_flag
 	}
+
 	offset = {
 		x = -43
 		y = 0
@@ -71,7 +98,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_club_processing
-	icon = GFX_focus_generic_support_the_left_right
+	icon = GFX_focus_focus_fra_fascist_threat
 	cost = 5
 	prerequisite = {
 		focus = GEH_unified_gehenna
@@ -103,7 +130,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_club_integration
-	icon = GFX_goal_generic_neutrality_focus
+	icon = GFX_focus_RAJ_union_busting
 	cost = 5
 	prerequisite = {
 		focus = GEH_unified_gehenna
@@ -121,6 +148,15 @@ shared_focus = {
 				has_idea = GEH_gourmet_research_society_4
 			}
 		}
+		#NOT = {
+		#	AND = {
+		#		original_tag = GEH
+		#		has_country_leader = {
+		#			character = GEH_hina
+		#			ruling_only = yes
+		#		}
+		#	}
+		#}
 	}
 	x = 1
 	y = 1
@@ -155,7 +191,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_total_destruction_operation
-	icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+	icon = GFX_focus_RAJ_military_into_the_workforce
 	cost = 5
 	prerequisite = {
 		focus = GEH_club_processing
@@ -171,7 +207,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_club_control
-	icon = GFX_goal_generic_political_pressure
+	icon = GFX_focus_generic_total_war
 	cost = 5
 	prerequisite = {
 		focus = GEH_total_destruction_operation
@@ -187,15 +223,15 @@ shared_focus = {
 		}
 		capital_scope = {
 			create_unit = {
-				division = "name = \"1. Assault\" division_template = \"Halo Infantry Division\" start_experience_factor = 1"
+				division = "name = \"1. Ordnungstruppe\" division_template = \"Halo Infantry Division\" start_experience_factor = 1"
 				owner = ROOT
 			}
 			create_unit = {
-				division = "name = \"2. Assault\" division_template = \"Halo Infantry Division\" start_experience_factor = 1"
+				division = "name = \"2. Ordnungstruppe\" division_template = \"Halo Infantry Division\" start_experience_factor = 1"
 				owner = ROOT
 			}
 			create_unit = {
-				division = "name = \"3. Assault\" division_template = \"Halo Infantry Division\" start_experience_factor = 1"
+				division = "name = \"3. Ordnungstruppe\" division_template = \"Halo Infantry Division\" start_experience_factor = 1"
 				owner = ROOT
 			}
 		}
@@ -203,7 +239,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_representation
-	icon = GFX_goal_generic_defence
+	icon = GFX_focus_generic_advanced_military_studies
 	cost = 5
 	prerequisite = {
 		focus = GEH_total_destruction_operation
@@ -253,7 +289,7 @@ shared_focus = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -268,7 +304,22 @@ shared_focus = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -286,7 +337,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_large_scale_civil_engineering_work
-	icon = GFX_goal_generic_construction2
+	icon = GFX_focus_generic_mass_production
 	cost = 5
 	prerequisite = {
 		focus = GEH_hot_spring_cooperation
@@ -317,45 +368,39 @@ shared_focus = {
 	y = 3
 	relative_position_id = GEH_unified_gehenna
 	completion_reward = {
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 0
-					include_locked = yes
-				}
+		54 = {
+			add_building_construction = {
+				type = BA_onsen
+				level = 1
+				province = 11544
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
 				instant_build = yes
 			}
 		}
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 0
-					include_locked = yes
-				}
+		50 = {
+			add_building_construction = {
+				type = BA_onsen
+				level = 1
+				province = 9517
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
 				instant_build = yes
 			}
 		}
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 0
-					include_locked = yes
-				}
+		52 = {
+			add_building_construction = {
+				type = BA_onsen
+				level = 1
+				province = 692
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -386,10 +431,11 @@ shared_focus = {
 		}
 	}
 }
+
 shared_focus = {
 	id = GEH_gehenna_academy
-	icon = GFX_goal_generic_demand_territory
-	cost = 10
+	icon = GFX_focus_CHL_union_of_hispanic_republics
+	cost = 5
 	prerequisite = {
 		focus = GEH_emergency_medicine_department_support
 	}
@@ -408,27 +454,10 @@ shared_focus = {
 		add_ideas = GEH_gehenna_academy_idea
 	}
 }
-shared_focus = {
-	id = GEH_68_problem
-	icon = GFX_goal_generic_occupy_states_ongoing_war
-	cost = 10
-	allow_branch = {
-		NOT = {
-			tag = HEU
-		}
-	}
-	prerequisite = {
-		focus = GEH_gehenna_academy
-	}
-	x = 0
-	y = 5
-	relative_position_id = GEH_unified_gehenna
-	completion_reward = {
-	}
-}
+
 shared_focus = {
 	id = GEH_the_end_of_pandemonium
-	icon = GFX_focus_rom_parties_end
+	icon = GFX_goal_GEH_prefect_team_charge_gray
 	cost = 5
 	allow_branch = {
 		NOT = {
@@ -451,9 +480,10 @@ shared_focus = {
 		}
 	}
 }
+
 shared_focus = {
 	id = GEH_trial
-	icon = GFX_goal_generic_forceful_treaty
+	icon = GFX_focus_generic_court
 	cost = 5
 	prerequisite = {
 		focus = GEH_the_end_of_pandemonium
@@ -470,7 +500,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_personnel_retraining
-	icon = GFX_goal_GEH_nego_countiune
+	icon = GFX_focus_ARG_keep_it_in_the_party 
 	cost = 5
 	prerequisite = {
 		focus = GEH_trial
@@ -492,7 +522,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_forced_dissolution
-	icon = GFX_goal_generic_secret_weapon
+	icon = GFX_focus_RAJ_kingmaker
 	cost = 5
 	prerequisite = {
 		focus = GEH_the_end_of_pandemonium
@@ -538,7 +568,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_movement_downgrade_pandemonium
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_GEH_economic_reactivation
 	cost = 5
 	prerequisite = {
 		focus = GEH_forced_dissolution
@@ -581,8 +611,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_legitimate_dominion
-	icon = GFX_goal_generic_territory_or_war
-	cost = 10
+	icon = GFX_goal_GEH_nego_countiune
+	cost = 5
 	prerequisite = {
 		focus = GEH_personnel_retraining
 		focus = GEH_movement_downgrade_pandemonium
@@ -597,19 +627,26 @@ shared_focus = {
 			}
 			GEM = {
 				every_character = {
+					limit = {
+						NOT = {
+							OR = {
+								is_character = GEH_akzhxh # 마코토는 선도부 가입을 거부함
+							}
+						}
+					}
 					set_nationality = ROOT
 				}
 			}
 		}
-		if = {
-			limit = { tag = GEH NOT = { has_country_leader = { character = GEH_dldhfl ruling_only = no } } }
-			promote_character = GEH_akzhxh
-		}
+		#if = {
+		#	limit = { tag = GEH NOT = { has_country_leader = { character = GEH_dldhfl ruling_only = no } } }
+		#	promote_character = GEH_akzhxh
+		#}
 	}
 }
 shared_focus = {
 	id = GEH_the_end_of_perfect_team
-	icon = GFX_goal_generic_war_with_comintern
+	icon = GFX_focus_SWE_attack_landsorganisationen
 	cost = 5
 	allow_branch = {
 		NOT = {
@@ -658,7 +695,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_top_and_bottom_clothes
-	icon = GFX_goal_generic_dangerous_deal
+	icon = GFX_focus_generic_field_hostpital
 	cost = 5
 	prerequisite = {
 		focus = GEH_take_command
@@ -669,7 +706,7 @@ shared_focus = {
 	completion_reward = {
 		custom_effect_tooltip = GEH_civilian_control_completed_tt
 		GEH = {
-			show_ideas_tooltip = GEH_hina
+			#show_ideas_tooltip = GEH_hina
 			if = {
 				limit = { NOT = { ROOT = { tag = HEU } } }
 				show_ideas_tooltip = GEH_dldhfl_idea
@@ -681,7 +718,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_perfect_team_disbanded
-	icon = GFX_focus_generic_strike_at_democracy2
+	icon = GFX_goal_hmmngshinso_broken
 	cost = 5
 	prerequisite = {
 		focus = GEH_the_end_of_perfect_team
@@ -727,7 +764,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_clearing_the_remnants
-	icon = GFX_goal_generic_more_territorial_claims
+	icon = GFX_goal_HEU_don_arancino_2
 	cost = 5
 	prerequisite = {
 		focus = GEH_perfect_team_disbanded
@@ -770,8 +807,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = GEH_civilian_control
-	icon = GFX_goal_generic_territory_or_war
-	cost = 10
+	icon = GFX_focus_RAJ_a_tiger_unchained
+	cost = 5
 	prerequisite = {
 		focus = GEH_top_and_bottom_clothes
 		focus = GEH_clearing_the_remnants
@@ -786,6 +823,16 @@ shared_focus = {
 			}
 			GEH = {
 				every_character = {
+					limit = {
+						NOT = {
+							# 히나와 아코는 만마전 가입을 거부함
+							is_character = GEH_hina
+							is_character = GEH_swimsuit_hina
+							is_character = GEH_robot_hina
+							is_character = GEH_dkzh
+							is_character = GEH_prefect_team_spy
+						}
+					}
 					set_nationality = ROOT
 				}
 			}
@@ -800,7 +847,7 @@ shared_focus = {
 				long_name = GEH_neutrality_party_long
 				name = GEH_neutrality_party
 			}
-			promote_character = GEH_hina
+			#promote_character = GEH_hina
 		}
 	}
 }

@@ -11,6 +11,8 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1700 }
 	shared_focus = CAN_kings_speech
 	shared_focus = CAN_Quebec_problem
+	
+	#alternate_icon_set = FOCUS_ICON_SET_BRILLIANT_KEY_FOCUS
 
 	focus = {
 		id = ENG_kings_speech # 국왕의 연설
@@ -4511,29 +4513,33 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		available_if_capitulated = yes
 	
-			
+		
+		select_effect = {
+			country_event = { id = IMP.7 days = 05 }
+		}
 		completion_reward = {
-			country_event = { id = IMP.7 }
+			country_event = { id = IMP.8 days = 01 }
 			swap_ideas = {
 				add_idea = ENG_distorted_gov_2
 				remove_idea = ENG_distorted_gov
 			}
 		}
 	}
+
 	focus = {
 		id = CAN_create_CBC # 캐나다 라디오방송위원회 
 		icon = GFX_focus_SWE_radiotjanst
 		cost = 5
 
 		relative_position_id = CAN_government_unity
-		x = -4
+		x = -3
 		y = 1
 		available = { 
 			is_subject = no 
 		}
 	
 		prerequisite = { focus = CAN_government_unity }
-		ai_will_do = { factor = 50 }
+		ai_will_do = { factor = 30 }
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		available_if_capitulated = yes
 	
@@ -4547,6 +4553,7 @@ focus_tree = {
 	focus = { # 캐나다 중립
 		id = CAN_canada_neutrality
 		icon = GFX_focus_CAN_third_world
+		alternate_icon = GFX_focus_CAN_third_world_Brilliant
 		cost = 5
 
 		relative_position_id = CAN_government_unity
@@ -4575,7 +4582,7 @@ focus_tree = {
 	
 			
 		completion_reward = {
-			set_rule = { can_create_factions = yes }
+			#set_rule = { can_create_factions = yes }
 			create_faction = Allies
 			add_ideas = ENG_neutrality_gov
 		}
@@ -4634,7 +4641,6 @@ focus_tree = {
 		x = -1
 		y = 1
 		available = { 
-			is_subject = no 
 		}
 	
 		prerequisite = { 
@@ -4673,7 +4679,6 @@ focus_tree = {
 		x = 1
 		y = 1
 		available = { 
-			is_subject = no 
 		}
 	
 		prerequisite = {
@@ -4687,6 +4692,7 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
+					is_core_of = ROOT
 					free_building_slots = {
 						building = arms_factory
 						size > 0
@@ -4702,6 +4708,7 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
+					is_core_of = ROOT
 					free_building_slots = {
 						building = arms_factory
 						size > 0
@@ -4717,6 +4724,7 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
+					is_core_of = ROOT
 					free_building_slots = {
 						building = arms_factory
 						size > 0
@@ -4743,7 +4751,6 @@ focus_tree = {
 		x = 1
 		y = 1
 		available = { 
-			is_subject = no 
 		}
 	
 		prerequisite = { 
@@ -4760,8 +4767,8 @@ focus_tree = {
 		}
 	}
 	
-	focus = { # 앵글로아메리카 동맹
-		id = CAN_north_american_alliance_BA
+	focus = { # 앵글로아메리카 동맹 -  id가 겹칠 경우 CAN 를 IMP으로 대체
+		id = IMP_north_american_alliance
 		text = CAN_north_american_alliance
 		icon = GFX_focus_CAN_englo_alliance
 		cost = 8
@@ -4808,6 +4815,76 @@ focus_tree = {
 		}
 	}
 	
+	focus = { # 스트레사 전선
+		id = CAN_stresa_front
+		icon = GFX_focus_CAN_stresa_front
+		cost = 8
+
+		relative_position_id = CAN_commonwealth_air_training
+		x = 1
+		y = 1
+		available = { 
+			is_subject = no
+			OR = {
+				is_faction_leader = yes
+				is_in_faction = no
+			}
+			OR = {
+				ITA = { is_in_faction = no }
+				FRA = { is_in_faction = no }
+			}
+		}
+		prerequisite = { 
+			focus = CAN_commonwealth_air_training
+		}
+		ai_will_do = { factor = 0 }
+		search_filters = { }
+		
+		bypass = {
+			is_in_faction_with = ITA
+			is_in_faction_with = FRA
+		}
+	
+			
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						is_faction_leader = no
+						is_in_faction = yes
+					}
+				}
+				leave_faction = yes
+				create_faction = FRA_stresa_front
+			}
+			else_if = {
+				limit = { is_faction_leader = yes }
+				set_faction_name = FRA_stresa_front
+			}
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							original_tag = FRA
+							NOT = { has_global_flag = FRA_collapse }
+						}
+						AND = {
+							original_tag = ITA
+							NOT = { has_completed_focus = ITA_pact_of_steel }
+						}
+					}
+				}
+				country_event = { id = impindia.4 days = 03 }
+			}
+
+			hidden_effect = {
+				news_event = { id = BA_news.140 days = 01 }
+			}
+
+
+		}
+	}
+	
 	focus = { # 제국회의 개최
 		id = CAN_Imperial_conference_held
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
@@ -4837,6 +4914,95 @@ focus_tree = {
 		}
 	}
 	
+	focus = { # 방위법령
+		id = CAN_national_defense_act
+		icon = GFX_goal_generic_construct_military
+		cost = 8
+
+		relative_position_id = CAN_Imperial_conference_held
+		x = 3
+		y = 1
+		available = { 
+		}
+	
+		prerequisite = { 
+			focus = CAN_Imperial_conference_held
+		}
+		ai_will_do = { factor = 0 }
+		search_filters = { }
+	
+			
+		completion_reward = {
+			add_ideas = CAN_national_defense_act_ns
+
+		}
+	}
+	
+	focus = { # 방위법령
+		id = CAN_transfer_assets_of_exiles
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 8
+
+		relative_position_id = CAN_Imperial_conference_held
+		x = 1
+		y = 1
+		available = { 
+		}
+	
+		prerequisite = { 
+			focus = CAN_Imperial_conference_held
+		}
+		ai_will_do = { factor = 0 }
+		search_filters = { }
+	
+			
+		completion_reward = {
+			add_timed_idea = {
+				idea = ENG_british_comers_money
+				days = 180
+			}
+
+		}
+	}
+	
+	focus = { # 
+		id = CAN_supply_the_impire
+		icon = GFX_goal_generic_construction2
+		cost = 5
+
+		relative_position_id = CAN_government_unity
+		x = 0
+		y = 2
+		available = { 
+		}
+	
+		prerequisite = { 
+			focus = CAN_Imperial_conference_held 
+			focus = CAN_canada_neutrality 
+		}
+		ai_will_do = { factor = 20 }
+		search_filters = { }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	
+			
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAN_supply_the_empire
+				bonus = 1.0
+				uses = 3
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+
+		}
+	}
+	
 	focus = {
 		id = CAN_concessions_to_workers # 노동자에 양보
 		icon = GFX_goal_tfv_burn_the_royal_portraits
@@ -4846,12 +5012,9 @@ focus_tree = {
 		x = 13
 		y = 1
 		available = {
-			is_subject = no 
-			NOT = {
-				has_country_leader = {
-					character = IMP_Edward_VIII
-					ruling_only = yes
-				}
+			custom_trigger_tooltip = {
+				tooltip = THIS_IS_WIP_TT
+				always = no
 			}
 		}
 		mutually_exclusive = {
@@ -4906,12 +5069,9 @@ focus_tree = {
 		x = 6
 		y = 1
 		available = { 
-			is_subject = no 
-			NOT = {
-				has_country_leader = {
-					character = IMP_mackenzie_king
-					ruling_only = yes
-				}
+			custom_trigger_tooltip = {
+				tooltip = THIS_IS_WIP_TT
+				always = no
 			}
 		}
 		mutually_exclusive = {
@@ -4984,9 +5144,40 @@ focus_tree = {
 					add_idea = ENG_great_depression_1
 				}	
 			}
-			hidden_effect = { ENG_fuking_great_depression_down = yes }
+			hidden_effect = { 
+				ENG_fuking_great_depression_down = yes 
+				country_event = { id = impblack.15 days = 08 }
+			}
 		}
 		
+	}
+	focus = {
+		id = CAN_upper_class_persuasion
+		icon = GFX_focus_RAJ_appoint_a_c_suite
+		cost = 5
+		
+		relative_position_id = CAN_depression_recovery
+		x = 0
+		y = 1
+		available = { }
+		allow_branch = { 
+			has_global_flag = ENG_lose_global_flag
+		}
+		prerequisite = { focus = CAN_depression_recovery }
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = yes
+	
+			
+		completion_reward = {
+			add_ideas = CAN_dollar_a_year_men
+			add_tech_bonus = {
+				name = CAN_dollar_a_year_men
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
 	}
 	focus = {
 		id = CAN_Canada_new_deal
@@ -4999,7 +5190,6 @@ focus_tree = {
 		available = { }
 		allow_branch = { 
 			has_global_flag = ENG_lose_global_flag
-			NOT = { has_country_flag = winston_churchill_is_leader_flag  }
 		}
 		prerequisite = { focus = CAN_depression_recovery }
 		ai_will_do = { factor = 100 }
@@ -5147,9 +5337,42 @@ focus_tree = {
 				uses = 1
 				category = construction_tech
 			}
-			custom_effect_tooltip = IMP_by_people
 			ENG_fuking_great_depression_down = yes
+			custom_effect_tooltip = IMP_by_people
 			add_stability = 0.05
+		}
+	}
+	
+	focus = { # 캐나다 밀 위원회
+		id = IMP_canada_wheat_board
+		icon = GFX_focus_generic_farmland
+		cost = 8
+		
+		relative_position_id = CAN_public_works
+		x = 1
+		y = 1
+		available = { }
+	
+		prerequisite = { 
+			focus = CAN_public_works
+		}
+		ai_will_do = { factor = 100 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = yes
+	
+			
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ENG_great_depression
+					add_idea = ENG_great_depression_3
+				}
+			}
+			hidden_effect = {
+				ENG_fuking_great_depression_down = yes
+				ENG_fuking_great_depression_down = yes
+			}
+
 		}
 	}
 	
@@ -5187,12 +5410,11 @@ focus_tree = {
 		cost = 10
 		
 		relative_position_id = CAN_public_works
-		x = 1
+		x = -1
 		y = 1
 		available = { }
 		allow_branch = { 
 			has_global_flag = ENG_lose_global_flag
-			NOT = { has_country_flag = winston_churchill_is_leader_flag }
 		}
 	
 		prerequisite = { focus = CAN_Canada_new_deal }
@@ -5233,7 +5455,10 @@ focus_tree = {
 		x = -3
 		y = 1
 		available = {
-			has_war = yes
+			OR = {
+				has_war = yes
+				threat > 0.2
+			}
 		}
 		allow_branch = {  }
 		prerequisite = { focus = CAN_Canada_new_deal }
@@ -5255,7 +5480,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMP_wartime_prices_and_trade_board
-		x = -0
+		x = -1
 		y = 1
 		available = {
 			has_war = yes
@@ -5284,7 +5509,7 @@ focus_tree = {
 	focus = {
 		id = IMP_crown_corporations # 왕실어쩌구
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		cost = 10
+		cost = 8
 		
 		relative_position_id = CAN_depression_recovery
 		x = -4
@@ -5757,14 +5982,14 @@ focus_tree = {
 		
 		relative_position_id = IMP_collapse_of_imperial_hegemony
 		x = -1
-		y = 2
+		y = 1
 		prerequisite = { focus = IMP_collapse_of_imperial_hegemony }
 		available = { 
 			custom_trigger_tooltip = {
 				tooltip = BA_Auto_complete_tt
 				always = no
 			}
-			has_country_flag = CAN_Quebec_problem_flag
+			has_country_flag = CAN_quebec_was_in_flames
 		}
 		allow_branch = {
 			has_global_flag = ENG_lose_global_flag

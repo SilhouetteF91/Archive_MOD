@@ -133,7 +133,7 @@ ideas = {
 					limit = {
 						controls_province = 6384
 					}
-					country_event = { id = ENG_british_warning_event.26 hours = 8 }
+					country_event = { id = ENG_ba.26 hours = 8 }
 				}
 			}
 
