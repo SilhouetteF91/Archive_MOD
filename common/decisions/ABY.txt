@@ -9508,7 +9508,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 		}
 
 		
-
+     
         available = { 
 			always = no
         }

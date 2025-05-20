@@ -2646,14 +2646,104 @@ central_map_calculate_frame = {
 	}
 }
 ABY_scripted_effect_divide_SOV = {
+	every_country = {
+		limit = {
+			is_subject_of = SOV
+		}
+		every_state = {
+			limit = {
+				AND = {
+					is_controlled_by = PREV
+					OR = {
+						is_on_continent = europe
+						is_on_continent = africa
+						is_on_continent = middle_east
+						is_core_of = AFG
+						state = 236
+						state = 406
+						state = 407
+						state = 652
+						state = 651
+						state = 573
+						state = 398
+						state = 581
+						state = 825
+						state = 262
+						state = 351
+						state = 880
+						state = 400
+						state = 833
+						state = 399
+						state = 249
+						state = 251
+						state = 250
+						state = 401
+						state = 255
+						state = 239
+						state = 829
+						state = 256
+						state = 252
+						state = 1034
+						state = 397
+					}
+				}
+			}
+			transfer_state_to = ABY
+		}
+	}
+	every_state = {
+		limit = {
+			AND = {
+				is_controlled_by = SOV
+				OR = {
+					is_on_continent = europe
+					is_on_continent = africa
+					is_on_continent = middle_east
+					is_core_of = AFG
+					state = 236
+					state = 406
+					state = 407
+					state = 652
+					state = 651
+					state = 573
+					state = 398
+					state = 581
+					state = 825
+					state = 262
+					state = 351
+					state = 880
+					state = 400
+					state = 833
+					state = 399
+					state = 249
+					state = 251
+					state = 250
+					state = 401
+					state = 255
+					state = 239
+					state = 829
+					state = 256
+					state = 252
+					state = 1034
+					state = 397
+				}
+			}
+		}
+		transfer_state_to = ABY
+	}
 	every_state = {
 		limit = {
 			OR = {
-				is_core_of = TAJ
+				state = 742
 				state = 830
 				state = 585
 				state = 405
 				state = 732
+				state = 832
+				state = 831
+				state = 584
+				state = 823
+				state = 587
 			}
 		}
 		transfer_state_to = TAJ
@@ -2669,6 +2759,7 @@ ABY_scripted_effect_divide_SOV = {
 		transfer_state = 570
 		transfer_state = 571
 		transfer_state = 40
+		transfer_state = 588
         set_capital = { state = 570 }
 		set_politics = {
 			ruling_party = communism
@@ -2702,6 +2793,16 @@ ABY_scripted_effect_divide_SOV = {
 		transfer_state = 403
 		transfer_state = 572
 		transfer_state = 583
+		transfer_state = 402
+		transfer_state = 582
+		579 = {add_core_of = PREV}
+		653 = {add_core_of = PREV}
+		580 = {add_core_of = PREV}
+		403 = {add_core_of = PREV}
+		572 = {add_core_of = PREV}
+		583 = {add_core_of = PREV}
+		402 = {add_core_of = PREV}
+		582 = {add_core_of = PREV}
 		set_politics = {
 			ruling_party = communism
 		}
@@ -2721,6 +2822,9 @@ ABY_scripted_effect_divide_SOV = {
 		transfer_state = 824
 		transfer_state = 516
 		transfer_state = 878
+		824 = {add_core_of = PREV}
+		516 = {add_core_of = PREV}
+		878 = {add_core_of = PREV}
 		set_politics = {
 			ruling_party = communism
 		}
@@ -2737,8 +2841,11 @@ ABY_scripted_effect_divide_SOV = {
 		transfer_state = 586
 		transfer_state = 881
 		transfer_state = 404
-		transfer_state = 588
 		transfer_state = 589
+		586 = {add_core_of = PREV}
+		881 = {add_core_of = PREV}
+		404 = {add_core_of = PREV}
+		589 = {add_core_of = PREV}
 		set_politics = {
 			ruling_party = communism
 		}
@@ -2755,6 +2862,9 @@ ABY_scripted_effect_divide_SOV = {
 		transfer_state = 564
 		transfer_state = 565
 		transfer_state = 566
+		564 = {add_core_of = PREV}
+		565 = {add_core_of = PREV}
+		566 = {add_core_of = PREV}
 		set_politics = {
 			ruling_party = communism
 		}
@@ -2773,6 +2883,8 @@ ABY_scripted_effect_divide_SOV = {
 		set_cosmetic_tag = ABY_soviet_nation_6
 		transfer_state = 569
 		transfer_state = 568
+		569 = {add_core_of = PREV}
+		568 = {add_core_of = PREV}
         set_capital = { state = 568 }
 		set_politics = {
 			ruling_party = communism
@@ -2792,6 +2904,8 @@ ABY_scripted_effect_divide_SOV = {
 		set_cosmetic_tag = ABY_soviet_nation_7
 		transfer_state = 577
 		transfer_state = 578
+		577 = {add_core_of = PREV}
+		578 = {add_core_of = PREV}
         set_capital = { state = 578 }
 		set_politics = {
 			ruling_party = communism
@@ -2848,6 +2962,8 @@ ABY_scripted_effect_divide_SOV = {
 		set_cosmetic_tag = ABY_soviet_nation_9
 		transfer_state = 567
 		transfer_state = 575
+		567 = {add_core_of = PREV}
+		575 = {add_core_of = PREV}
         set_capital = { state = 567 }
 		set_politics = {
 			ruling_party = communism
