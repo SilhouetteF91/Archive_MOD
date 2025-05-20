@@ -2431,6 +2431,7 @@ ENG_postwar_devastation = { # 전후 황폐화
 	research_speed_factor = ENG_pwd_research_spd
 	global_building_slots = ENG_pwd_building_slots
 	civilian_factory_use = ENG_pwd_civ_use
+	industry_free_repair_factor = ENG_pwd_frf
 }
 ENG_great_depression_01 = { # 전후 대공황
     icon = can_send_in_the_zombies
@@ -2464,4 +2465,10 @@ ENG_low_admin_Strength = { # 행정력 약화
 	monthly_population = ENG_las_popgrowth
 	weekly_manpower = ENG_las_weeklymp
 	resistance_damage_to_garrison_on_our_occupied_states = ENG_las_garrisondamage
+}
+ENG_Reconstruction_committee_idea = { # 브리튼 재건 회의
+    icon = ARG_civilian_economy_boost
+	stability_factor = ENG_rc_stability
+	consumer_goods_factor = ENG_rc_cgc
+	production_speed_infrastructure_factor = ENG_rc_infastructure
 }

@@ -5843,7 +5843,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ENG_assemble_cabinet #의회 활동 재개
+		id = ENG_assemble_cabinet #내각 소집
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 1
 		
@@ -5880,7 +5880,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY}	
 			
 		completion_reward = {
-			
+			add_dynamic_modifier = { modifier = ENG_Reconstruction_committee_idea }
 		}
 	}
 	focus = {
@@ -5894,10 +5894,20 @@ focus_tree = {
 	
 		prerequisite = { focus = ENG_Reconstruction_committee }
 		ai_will_do = { factor = 100 }
-		search_filters = { FOCUS_FILTER_INDUSTRY}	
+		search_filters = { FOCUS_FILTER_INDUSTRY }	
 			
 		completion_reward = {
-			
+			add_to_variable = {
+    			var = ENG_hnh_weeklymp
+    			value = 250
+    			tooltip = ENG_rations
+			}
+			add_to_variable = {
+    			var = ENG_hnh_popgrowth
+    			value = 0.3
+    			tooltip = ENG_rations
+			}
+
 		}
 	}
 	focus = {
@@ -5914,6 +5924,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY}	
 			
 		completion_reward = {
+			add_to_variable = {
+    			var = industry_free_repair_factor
+    			value = 0.5
+    			tooltip = ENG_rations
+			}
+			subtract_from_variable = {
+    			var = ENG_pwd_civ_use
+    			value = 3
+    			tooltip = ENG_rations
+			}
 		}
 	}
 	focus = {
@@ -5930,6 +5950,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY}	
 			
 		completion_reward = {
+			add_to_variable = {
+    			var = ENG_hnh_popgrowth
+    			value = 0.7
+    			tooltip = ENG_rations
+			}
 		}
 	}
 	focus = {
@@ -5946,6 +5971,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY}	
 			
 		completion_reward = {
+			add_to_variable = {
+    			var = ENG_hnh_popgrowth
+    			value = 0.6
+    			tooltip = ENG_rations
+
+			}
 		}
 	}
 	focus = {
@@ -6045,6 +6076,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY}	
 			
 		completion_reward = {
+			add_to_variable = {
+    			var = ENG_hnh_popgrowth
+    			value = 0.6
+    			tooltip = ENG_rations
+
+			}
 		}
 	}
 	focus = {
@@ -6062,6 +6099,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY}	
 			
 		completion_reward = {
+			add_to_variable = {
+    			var = ENG_hnh_popgrowth
+    			value = 0.3
+    			tooltip = ENG_rations
+			}
 		}
 	}
 	focus = {

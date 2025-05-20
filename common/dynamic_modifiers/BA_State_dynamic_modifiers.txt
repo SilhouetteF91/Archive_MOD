@@ -758,3 +758,43 @@ SLO_east_autonomous_state = {
 	state_resources_factor = -0.25
 	state_production_speed_buildings_factor = -0.25
 }
+ENG_Africa_high_resistance = {
+	enable = { always = yes }
+
+	icon = GFX_decision_category_saf_anti_colonialist_crusade
+
+	resistance_target = 1
+	resistance_growth = -0.1
+	compliance_growth_on_our_occupied_states = -0.5
+	required_garrison_factor = 0.25
+}
+ENG_Africa_mid_resistance = {
+	enable = { always = yes }
+
+	icon = GFX_decision_category_saf_anti_colonialist_crusade
+
+	resistance_target = 0.5
+	resistance_growth = -0.1
+	compliance_growth_on_our_occupied_states = -0.25
+	required_garrison_factor = 0.1
+}
+ENG_Africa_low_resistance = {
+	enable = { always = yes }
+
+	icon = GFX_decision_category_saf_anti_colonialist_crusade
+
+	resistance_target = 0.25
+	resistance_growth = -0.1
+	compliance_growth_on_our_occupied_states = -0.1
+}
+ENG_Africa_autonomy = {
+	enable = { always = yes }
+
+	icon = GFX_decision_category_generic_democracy
+
+	resistance_target = -0.1
+	local_resources = -0.5
+	local_manpower = -0.5
+	compliance_growth_on_our_occupied_states = 0.05
+	required_garrison_factor = -0.5
+}

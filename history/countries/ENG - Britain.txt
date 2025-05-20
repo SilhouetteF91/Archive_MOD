@@ -1710,6 +1710,7 @@ set_variable = { ENG_pwd_stability = -0.3 }
 set_variable = { ENG_pwd_research_spd = -0.5 }
 set_variable = { ENG_pwd_building_slots = 2 }
 set_variable = { ENG_pwd_civ_use = 10 }
+set_variable = { ENG_pwd_frf = -1 }
 
 set_variable = { ENG_gd_ppcost = 0.3 }
 set_variable = { ENG_gd_cgf = 0.5 }
@@ -1735,3 +1736,6 @@ set_variable = { ENG_las_popgrowth = -0.7 }
 set_variable = { ENG_las_weeklymp = -100 }
 set_variable = { ENG_las_garrisondamage = 0.5 }
 
+set_variable = { ENG_rc_stability = 0.05 }
+set_variable = { ENG_rc_cgc = -0.05 }
+set_variable = { ENG_rc_infastructure = 0 }

@@ -134,3 +134,10 @@ ENG_homeland_defense_decision_cat = {
 		has_completed_focus = ENG_home_defence
 	}
 }
+
+ENG_post_war_devastation = {
+	icon =generic_political_actions
+	allowed = {
+		tag = ENG
+	}
+}
