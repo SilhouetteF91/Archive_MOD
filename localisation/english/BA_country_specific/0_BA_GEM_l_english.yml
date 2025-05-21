@@ -895,6 +895,7 @@
  GEM_expulsion_of_security_organization_tt:0 "\n§R만마전의 부패를 해결하지 않고 선도부를 추방하는 것은 동아리의 저항을 더욱 가속할 것입니다.§!\n"
 
  GEM_club_problem_decision:0 "게헨나 동아리"
+ GEM_club_problem_decision_desc:0 "§Y게헨나 학원§!의 §G동아리§!중 두 동아리는 대전이 이전부터 활동하던 §Y게헨나 학원§! 전체의 골칫거리들입니다. §3온천개발부§!는 온천개발이라는 명목으로 광범위한 파괴를 일으키고, §p미식연구회§!는 대전이 이후 규모가 급성장하며 독일 길거리 음식을 흠잡으며 게헨나 내 반독 강경파의 지지 속에 현지인을 향한 테러를 가장 앞장서서 벌이고 있습니다.\n\n동아리들의 테러 행각은 §Y게헨나 학원§!의 경영에 큰 차질을 빚고 있으나, 추후 우리는 이러한 동아리들과 §G협력§! 또는 §R탄압§!을 통해 다양한 분야의 이익을 취할 수 있을 것이며, §Y게헨나 학원§!의 안정화는 우리의 손으로 이루어지게 될 것입니다."
  GEH_gourmet_research_society_up:0 "미식연구회 활동 격화"
  GEH_hot_spring_department_up:0 "온천개발부 활동 격화"
  GEH_gourmet_research_society_down:0 "미식연구회 단속"

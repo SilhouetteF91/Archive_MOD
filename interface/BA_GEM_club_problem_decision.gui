@@ -1,0 +1,58 @@
+guiTypes = {
+	containerWindowType = {
+		name = "gem_club_problem_decision_gui_window"
+		position = { x = 0 y = 0}	
+		size = { width = 100% height= 390 }
+
+		containerWindowType = {
+			name = "gem_club_problem_decision_gourmet_research_society_ui_window"
+			position = { x = 5 y = 10 }	
+			size = { width = 480 height = 180 }
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_generic_bg_1"
+			}
+
+			instantTextBoxType = {
+				name ="gem_club_problem_decision_gourmet_research_society_text"
+				position = { x = 100 y = 20 }
+				font = "hoi_16mbs"
+				text = "gem_club_problem_decision_gourmet_research_society_text"
+				maxWidth = 300
+				orientation = LEFT
+			}
+
+			iconType = {
+				name = "gem_club_problem_decision_gourmet_research_society_icon"
+				spriteType = "GFX_decisions_idea_GEH_gourmet_research_society_process"
+				position = { x = 10 y = 20 }
+			}
+		}
+
+		containerWindowType = {
+			name = "gem_club_problem_decision_hot_spring_department_ui_window"
+			position = { x = 5 y = 200 }	
+			size = { width = 480 height = 180 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_generic_bg_1"
+			}
+
+			instantTextBoxType = {
+				name ="gem_club_problem_decision_hot_spring_department_text"
+				position = { x = 100 y = 20 }
+				font = "hoi_16mbs"
+				text = "gem_club_problem_decision_hot_spring_department_text"
+				maxWidth = 300
+				orientation = LEFT
+			}
+
+			iconType = {
+				name = "gem_club_problem_decision_hot_spring_department_icon"
+				spriteType = "GFX_decisions_idea_GEH_hot_spring_department_process"
+				position = { x = 10 y = 20 }
+			}
+		}
+	}
+}
