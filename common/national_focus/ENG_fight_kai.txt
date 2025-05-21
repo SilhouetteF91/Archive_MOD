@@ -4490,7 +4490,7 @@ focus_tree = {
 		cost = 2
 
 		relative_position_id = CAN_kings_speech
-		x = 4
+		x = 7
 		y = 1
 		available = { 
 			is_subject = no 
@@ -4585,6 +4585,9 @@ focus_tree = {
 			#set_rule = { can_create_factions = yes }
 			create_faction = Allies
 			add_ideas = ENG_neutrality_gov
+
+			set_temp_variable = { CAN_anger_change = 1 }
+			CAN_change_british_anger = yes
 		}
 	}
 	
@@ -4800,6 +4803,7 @@ focus_tree = {
 	
 			
 		completion_reward = {
+			activate_targeted_decision = { target = KAI decision = CAN_let_go_british }
 			if = {
 				limit = {
 					USA = {
@@ -4836,6 +4840,7 @@ focus_tree = {
 		}
 		prerequisite = { 
 			focus = CAN_commonwealth_air_training
+			focus = CAN_extraction_industry
 		}
 		ai_will_do = { factor = 0 }
 		search_filters = { }
@@ -4847,6 +4852,7 @@ focus_tree = {
 	
 			
 		completion_reward = {
+			activate_targeted_decision = { target = KAI decision = CAN_let_go_british }
 			if = {
 				limit = {
 					OR = {
@@ -4895,6 +4901,10 @@ focus_tree = {
 		y = 1
 		available = { 
 			is_subject = no 
+			custom_trigger_tooltip = {
+				tooltip = THIS_IS_WIP_TT
+				always = no
+			}
 		}
 	
 		prerequisite = { focus = CAN_government_unity }
@@ -4935,6 +4945,125 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = CAN_national_defense_act_ns
 
+			set_temp_variable = { CAN_anger_change = 1 }
+			CAN_change_par_anger = yes
+			CAN_change_people_anger = yes
+		}
+	}
+	
+	focus = { # 다가오는 전쟁 대비
+		id = CAN_prepare_for_the_coming_wars
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 8
+
+		relative_position_id = CAN_national_defense_act
+		x = -1
+		y = 1
+		available = { 
+		}
+	
+		prerequisite = { 
+			focus = CAN_national_defense_act
+			focus = CAN_transfer_assets_of_exiles
+		}
+		ai_will_do = { factor = 0 }
+		search_filters = { }
+	
+			
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				set_state_flag = CAN_prepare_for_the_coming_wars
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					NOT = { has_state_flag = CAN_prepare_for_the_coming_wars }
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				set_state_flag = CAN_prepare_for_the_coming_wars
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					NOT = { has_state_flag = CAN_prepare_for_the_coming_wars }
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				set_state_flag = CAN_prepare_for_the_coming_wars
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			#Clear stuff thanks
+			hidden_effect = {
+				every_core_state = {
+					limit = {
+						has_state_flag = CAN_prepare_for_the_coming_wars
+					}
+					clr_state_flag = CAN_prepare_for_the_coming_wars
+				}
+			}
+		}
+	}
+	
+	focus = { # 전시조치법
+		id = CAN_war_measures_act
+		icon = GFX_focus_RAJ_kingmaker
+		cost = 8
+
+		relative_position_id = CAN_national_defense_act
+		x = 0
+		y = 2
+		available = { 
+		}
+	
+		prerequisite = { focus = CAN_national_defense_act }
+	
+		prerequisite = { focus = CAN_prepare_for_the_coming_wars focus = CAN_extraction_industry }
+		ai_will_do = { factor = 0 }
+		search_filters = { }
+	
+			
+		completion_reward = {
+			activate_targeted_decision = { target = KAI decision = CAN_let_go_british }
+			#add_ideas = CAN_national_defense_act_ns
+
+			swap_ideas = {
+				remove_idea = CAN_national_defense_act_ns
+				add_idea = CAN_war_measures_act_ns
+			}
+
 		}
 	}
 	
@@ -4951,6 +5080,7 @@ focus_tree = {
 	
 		prerequisite = { 
 			focus = CAN_Imperial_conference_held
+			focus = CAN_canada_neutrality
 		}
 		ai_will_do = { factor = 0 }
 		search_filters = { }
@@ -4961,8 +5091,84 @@ focus_tree = {
 				idea = ENG_british_comers_money
 				days = 180
 			}
+			set_temp_variable = { CAN_anger_change = 1 }
+			CAN_change_british_anger = yes
+		}
+	}
+	
+	focus = { # 
+		id = CAN_extraction_industry
+		icon = GFX_focus_PER_feat_of_engineering
+		cost = 8
+
+		relative_position_id = CAN_transfer_assets_of_exiles
+		x = -1
+		y = 1
+		available = { 
+		}
+	
+		prerequisite = { focus = CAN_transfer_assets_of_exiles }
+		prerequisite = { focus = CAN_supply_the_impire }
+		ai_will_do = { factor = 0 }
+		search_filters = { }
+	
+			
+		completion_reward = {
+			add_ideas = CAN_extraction_industry_ns
+			
+			682 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = steel
+						amount = 8
+					}
+				}
+			}
+
+			custom_effect_tooltip = ITA_extraction_industry_oil_tt
+
+			if = {
+				limit = {
+					any_controlled_state = {
+						is_fully_controlled_by = ROOT
+						has_resources_amount = {
+							resource = oil
+							amount > 0
+						}
+					}
+				}
+				custom_effect_tooltip = generic_current_effects
+				every_controlled_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						has_resources_amount = {
+							resource = oil
+							amount > 0
+						}
+					}
+					add_resource = {
+						type = oil
+						amount = 2
+					}
+				}
+			}
 
 		}
+
 	}
 	
 	focus = { # 
@@ -5147,6 +5353,8 @@ focus_tree = {
 			hidden_effect = { 
 				ENG_fuking_great_depression_down = yes 
 				country_event = { id = impblack.15 days = 08 }
+				activate_mission = CAN_solving_the_great_depression
+				activate_mission = CAN_solving_the_british_disease
 			}
 		}
 		
@@ -5227,6 +5435,11 @@ focus_tree = {
 			custom_effect_tooltip = IMP_by_people
 			country_event = { id = impblack.1 days = 04 } 
 			hidden_effect = {  add_political_power = 100 }
+
+			add_days_mission_timeout = {
+				mission = CAN_solving_the_great_depression
+				days = 80
+			}
 		}
 	}
 	focus = { # 은행 개혁
@@ -5254,6 +5467,11 @@ focus_tree = {
 			swap_ideas = {
 				add_idea = CAN_banking_reform
 				remove_idea = CAN_banking_reform_in_progress_1
+			}
+
+			add_days_mission_timeout = {
+				mission = CAN_solving_the_great_depression
+				days = 105
 			}
 			ENG_fuking_great_depression_down = yes
 		}
@@ -5362,6 +5580,12 @@ focus_tree = {
 	
 			
 		completion_reward = {
+
+			add_days_mission_timeout = {
+				mission = CAN_solving_the_great_depression
+				days = 70
+			}
+
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = ENG_great_depression
@@ -5398,9 +5622,6 @@ focus_tree = {
 			custom_effect_tooltip = IMP_by_people
 			add_stability = 0.05
 			remove_ideas = CAN_british_disease
-			effect_tooltip = {
-				unlock_decision_tooltip = CAN_public_request_2
-			}
 		}
 	}
 

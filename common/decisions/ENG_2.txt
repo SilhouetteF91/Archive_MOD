@@ -1112,109 +1112,6 @@ CAN_current_situation_categories = {
 			clr_country_flag = CAN_political_activity_flag
 		}
 	}
-
-
-	CAN_public_request_1 = { # 공통 요구 - 대공황을 해결 해보세요.
-		allowed = { tag = ENG }
-		icon = GFX_decision_generic_construction
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = ENG_we_have_not_great_depression
-				NOT = {
-					has_idea = ENG_exile_shock
-					has_idea = ENG_great_depression
-					has_idea = ENG_great_depression_1
-					has_idea = ENG_great_depression_2
-					has_idea = ENG_great_depression_3
-					has_idea = ENG_great_depression_4
-					has_idea = ENG_great_depression_5
-					has_idea = ENG_great_depression_6
-					has_idea = ENG_great_depression_7
-					has_idea = ENG_great_depression_8
-					has_idea = ENG_great_depression_9
-				}
-			}
-		}
-		visible = {
-			tag = ENG
-		}
-		fire_only_once = yes
-		ai_will_do = {
-			base = 999
-		}
-		complete_effect = {
-			set_temp_variable = { CAN_anger_change = -1 }
-			CAN_change_british_anger = yes
-			CAN_change_people_anger = yes
-			CAN_change_par_anger = yes
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = IMP_by_people
-			add_stability = 0.15
-			custom_effect_tooltip = IMP_by_parliament
-			add_political_power = 120
-		}
-	}
-	CAN_public_request_2 = { # 공통 요구 - 영국병 치료
-		allowed = { tag = ENG }
-		icon = GFX_decision_generic_research
-		available = { 
-			has_completed_focus = CAN_vaccination
-		}
-		visible = {
-			tag = ENG
-		}
-		fire_only_once = yes
-		ai_will_do = {
-			base = 999
-		}
-		complete_effect = {
-			set_temp_variable = { CAN_anger_change = -1 }
-			CAN_change_british_anger = yes
-			CAN_change_people_anger = yes
-			CAN_change_par_anger = yes
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = IMP_by_people
-			add_stability = 0.05
-			add_manpower = 10000
-			custom_effect_tooltip = IMP_by_uk_exile
-			add_war_support = 0.05
-			custom_effect_tooltip = IMP_by_parliament 
-			add_political_power = 120
-		}
-	}
-	CAN_let_go_british = {
-		allowed = { tag = ENG}
-		available = {
-			date > 1940.1.1 
-			has_army_manpower = { size > 449999 }
-			has_war_support > 0.4
-			check_variable = { num_equipment_in_armies_k@infantry_equipment > 16 }
-			custom_trigger_tooltip = {
-				tooltip = TRN_gehenna_eq_trigger_tt
-				check_variable = { num_equipment_in_armies_k@infantry_equipment > 16 }
-			}
-		}
-		visible = {
-			NOT = {
-				has_idea = ENG_exile_shock
-				has_idea = ENG_great_depression_1
-				has_idea = ENG_great_depression_2
-				has_idea = ENG_great_depression_3
-				has_idea = ENG_great_depression_4
-				has_idea = ENG_great_depression_5
-				has_idea = ENG_great_depression_6
-				has_idea = ENG_great_depression_7
-				has_idea = ENG_great_depression_8
-				has_idea = ENG_great_depression_9
-			}
-		}
-		complete_effect = {
-			create_wargoal = {
-				type = annex_everything
-				target = KAI
-			}
-		}
-	}
 	CAN_public_request_3 = { # 공통 요구 - 본토 수복
 		allowed = { tag = ENG }
 		icon = GFX_decision_generic_nationalism
@@ -1268,6 +1165,102 @@ CAN_current_situation_categories = {
 			CAN_change_british_anger = yes
 			CAN_change_people_anger = yes
 			CAN_change_par_anger = yes
+
+			remove_ideas = ENG_only_named_empire
+		}
+	}
+
+	
+	CAN_let_go_british = {
+		allowed = { always = no }
+		available = {
+			date > 1940.1.1 
+			has_army_manpower = { size > 449999 }
+			has_war_support > 0.4
+			check_variable = { num_equipment_in_armies_k@infantry_equipment > 16 }
+			custom_trigger_tooltip = {
+				tooltip = TRN_gehenna_eq_trigger_tt
+				check_variable = { num_equipment_in_armies_k@infantry_equipment > 16 }
+			}
+		}
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = KAI
+			}
+		}
+	}
+
+	CAN_solving_the_great_depression = {
+		activation = { always = no }
+		allowed = { original_tag = ENG }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ENG_we_have_not_great_depression
+				NOT = {
+					has_idea = ENG_exile_shock
+					has_idea = ENG_great_depression
+					has_idea = ENG_great_depression_1
+					has_idea = ENG_great_depression_2
+					has_idea = ENG_great_depression_3
+					has_idea = ENG_great_depression_4
+					has_idea = ENG_great_depression_5
+					has_idea = ENG_great_depression_6
+					has_idea = ENG_great_depression_7
+					has_idea = ENG_great_depression_8
+					has_idea = ENG_great_depression_9
+				}
+			}
+		}
+
+		days_mission_timeout = 365
+		is_good = no
+
+		timeout_effect = {
+			set_temp_variable = { CAN_anger_change = 1 }
+			CAN_change_british_anger = yes
+			CAN_change_people_anger = yes
+			CAN_change_par_anger = yes
+		}
+
+		complete_effect = {
+			set_temp_variable = { CAN_anger_change = -1 }
+			CAN_change_british_anger = yes
+			CAN_change_people_anger = yes
+			CAN_change_par_anger = yes
+
+			hidden_effect = {
+				country_event = impblack.6
+			}
+		}
+	}
+
+	CAN_solving_the_british_disease = {
+		activation = { always = no }
+		allowed = { original_tag = ENG }
+		available = {
+			NOT = { has_idea = CAN_british_disease }
+		}
+
+		days_mission_timeout = 365
+		is_good = no
+
+		timeout_effect = {
+			set_temp_variable = { CAN_anger_change = 1 }
+			CAN_change_british_anger = yes
+			CAN_change_people_anger = yes
+			CAN_change_par_anger = yes
+		}
+
+		complete_effect = {
+			set_temp_variable = { CAN_anger_change = -1 }
+			CAN_change_british_anger = yes
+			CAN_change_people_anger = yes
+			CAN_change_par_anger = yes
+
+			hidden_effect = {
+				country_event = IMP.9
+			}
 		}
 	}
 }
@@ -1309,6 +1302,7 @@ debug_decisions = {
 			is_debug = yes
 		}
 		complete_effect = {
+			open_intro_screen = yes
 		}
     }
 }

@@ -969,6 +969,23 @@ country_event = { # 의회 교통정리
 		CAN_change_british_anger = yes
 	}
 }
+country_event = { # 영국병 해결
+	id = IMP.9
+	title = IMP.9.t
+	desc = IMP.9.desc
+	picture = GFX_report_event_king_speech
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = IMP.9.a
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 120
+
+	}
+}
 country_event = { # ㄷㅂㄱ
 	id = IMP.1000
 	title = IMP.1000.t
@@ -1315,6 +1332,19 @@ country_event = { # 검은 월요일 - 물가까지 정상화
 
 	option = {
 		name = impblack.5.a
+	}
+}
+country_event = { # 검은 월요일 - 해결
+	id = impblack.6
+	title = impblack.6.t
+	desc = impblack.6.desc
+	picture = GFX_event_CAN_bank_of_canada
+
+	is_triggered_only = yes
+
+	option = {
+		name = impblack.6.a
+		add_stability = 0.15
 	}
 }
 
