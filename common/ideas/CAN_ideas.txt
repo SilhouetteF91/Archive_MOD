@@ -157,8 +157,51 @@ ideas = {
 				mobilization_laws_cost_factor = -0.10
 				economy_cost_factor = -0.10
 
+				operative_slot = 1
+				root_out_resistance_effectiveness_factor = 0.25
+				drift_defence_factor = 0.25
+				intelligence_agency_defense = 0.5
+				agency_upgrade_time = -0.3
+
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
+			}
+		}
+
+		CAN_war_measures_act_ns = { # 전시조치법
+			picture = can_defence_of_canada_regulations_democratic
+
+			allowed = { always = no }
+			allowed_civil_war = { has_government = democratic }
+
+			modifier = {
+				foreign_subversive_activites = -0.50
+				trade_laws_cost_factor = -0.33
+				mobilization_laws_cost_factor = -0.33
+				economy_cost_factor = -0.33
+
+				operative_slot = 2
+				root_out_resistance_effectiveness_factor = 0.25
+				drift_defence_factor = 0.25
+				intelligence_agency_defense = 0.5
+				agency_upgrade_time = -0.3
+
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+
+				
+			}
+		}
+
+		CAN_extraction_industry_ns = { # 채광산업
+			picture = generic_exploit_mines
+
+			allowed = { always = no }
+			allowed_civil_war = { has_government = democratic }
+
+			modifier = {
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.15
 			}
 		}
 
@@ -724,7 +767,7 @@ ideas = {
 			}
 		}
 		CAN_banking_reform = { # 은행 개혁
-			picture = eng_a_change_in_course
+			picture = tur_balkan_central_bank_wealthy_greece
 
 			modifier = {
 				research_speed_factor = 0.05
