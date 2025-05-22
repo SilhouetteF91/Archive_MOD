@@ -1,0 +1,1017 @@
+focus_tree = {
+	id = KOR_focus_tree
+
+	continuous_focus_position = { x = 5200 y = 1300 } 
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KOR
+		}
+	}
+
+	default = no
+
+	
+	###############
+	### Politics ###
+	###############
+
+	focus = {
+		id = KOR_republic_of_korea_establish
+		icon = GFX_focus_SWE_organize_a_putsch
+		cost = 8
+
+		x = 2
+		y = 0
+
+		prerequisite = {
+
+		}
+
+		mutually_exclusive = {
+			focus = KOR_peoples_republic_of_korea_establish
+		}
+
+		available = {
+			NOT = { 
+				is_puppet_of = JAP
+			}
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_republic_of_korea_establish"
+
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = KOR_republic_of_korea_disposal_of_enemy_property
+		icon = GFX_focus_generic_resource_extraction
+		cost = 8
+
+		relative_position_id = KOR_republic_of_korea_establish
+
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = KOR_republic_of_korea_establish
+		}
+
+		available = {
+			NOT = { 
+				is_puppet_of = JAP
+			}
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_republic_of_korea_establish"
+
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KOR_republic_of_korea_disposal_of_vested_farmland
+		icon = GFX_focus_IRQ_decouple_from_the_pound
+		cost = 8
+
+		relative_position_id = KOR_republic_of_korea_establish
+
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = KOR_republic_of_korea_establish
+		}
+
+		available = {
+			NOT = { 
+				is_puppet_of = JAP
+			}
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_republic_of_korea_establish"
+
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KOR_republic_of_korea_national_security_law
+		icon = GFX_focus_IRQ_attempted_assasination_of_sidqi
+		cost = 8
+
+		relative_position_id = KOR_republic_of_korea_establish
+
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = KOR_republic_of_korea_disposal_of_enemy_property
+		}
+
+		prerequisite = {
+			focus = KOR_republic_of_korea_disposal_of_vested_farmland
+		}
+
+		available = {
+			NOT = { 
+				is_puppet_of = JAP
+			}
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_republic_of_korea_establish"
+
+			add_popularity = {
+				ideology = communism
+				popularity = -0.2
+			}
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1200
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 300
+			}
+			
+			add_ideas = ideological_fanaticism_focus
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	focus = {
+		id = KOR_republic_of_korea_korean_style_democracy
+		icon = GFX_focus_usa_voter_registration_act
+		cost = 8
+
+		relative_position_id = KOR_republic_of_korea_establish
+
+		x = -2
+		y = 2
+
+		prerequisite = {
+			focus = KOR_republic_of_korea_disposal_of_enemy_property
+		}
+
+		prerequisite = {
+			focus = KOR_republic_of_korea_disposal_of_vested_farmland
+		}
+
+		available = {
+			NOT = { 
+				is_puppet_of = JAP
+			}
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_republic_of_korea_establish"
+
+			add_stability = 0.05
+			add_war_support = 0.05
+			army_experience = 40
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}			
+			add_ideas = militarism_focus
+			army_experience = 20
+			set_rule = { can_send_volunteers = yes }
+		}
+	}
+
+	focus = {
+		id = KOR_peoples_republic_of_korea_establish
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		cost = 8
+
+		relative_position_id = KOR_republic_of_korea_establish
+
+		x = 6
+		y = 0
+
+		prerequisite = {
+
+		}
+
+		mutually_exclusive = {
+			focus = KOR_republic_of_korea_establish
+		}
+
+		available = {
+			NOT = { 
+				is_puppet_of = JAP
+			}
+			OR = {
+				has_government = communism
+				has_government = democratic
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_establish"
+
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = KOR_peoples_republic_of_korea_dictatorship
+		icon = GFX_goal_support_communism
+		cost = 8
+
+		relative_position_id = KOR_peoples_republic_of_korea_establish
+
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = KOR_peoples_republic_of_korea_establish
+		}
+
+		mutually_exclusive = {
+			focus = KOR_peoples_republic_of_korea_democracy
+		}
+
+		available = {
+			NOT = { 
+				is_puppet_of = JAP
+			}
+			has_government = communism
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_dictatorship"
+
+			add_ideas = indoctrination_focus
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = KOR_peoples_republic_of_korea_dictatorship_2
+		icon = GFX_focus_ARG_state_atheism
+		cost = 8
+
+		relative_position_id = KOR_peoples_republic_of_korea_establish
+
+		x = -1
+		y = 3
+
+		prerequisite = {
+			focus = KOR_peoples_republic_of_korea_dictatorship
+		}
+
+		available = {
+			NOT = { 
+				is_puppet_of = JAP
+			}
+			has_government = communism
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_dictatorship_2"
+
+			add_ideas = political_commissars_focus
+		}
+	}
+
+	focus = {
+		id = KOR_peoples_republic_of_korea_democracy
+		icon = GFX_focus_ARG_defense_and_democracy
+		cost = 8
+
+		relative_position_id = KOR_peoples_republic_of_korea_establish
+
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = KOR_peoples_republic_of_korea_establish
+		}
+
+		mutually_exclusive = {
+			focus = KOR_peoples_republic_of_korea_dictatorship
+		}
+
+		available = {
+			NOT = { 
+				is_puppet_of = JAP
+			}
+			has_government = democratic
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_democracy"
+
+			add_ideas = why_we_fight_focus
+			custom_effect_tooltip = why_we_fight_effect
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_idea = neutrality_idea } }
+					set_rule = { can_create_factions = yes }
+				}			
+			}
+		}
+	}
+
+	focus = {
+		id = KOR_peoples_republic_of_korea_forgiveness
+		icon = GFX_focus_generic_university_2
+		cost = 8
+
+		relative_position_id = KOR_peoples_republic_of_korea_establish
+
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = KOR_peoples_republic_of_korea_establish
+		}
+
+		available = {
+			NOT = { 
+				is_puppet_of = JAP
+			}
+			OR = {
+				has_government = communism
+				has_government = democratic
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_forgiveness"
+
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = KOR_peoples_republic_of_korea_female
+		icon = GFX_focus_generic_university_1
+		cost = 8
+
+		relative_position_id = KOR_peoples_republic_of_korea_establish
+
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = KOR_peoples_republic_of_korea_dictatorship
+			focus = KOR_peoples_republic_of_korea_democracy
+		}
+
+		available = {
+			NOT = { 
+				is_puppet_of = JAP
+			}
+			OR = {
+				has_government = communism
+				has_government = democratic
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_democracy"
+
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}		
+			add_political_power = 200
+			add_ideas = idea_political_correctness
+		}
+	}
+
+	focus = {
+		id = KOR_peoples_republic_of_korea_multiethnic
+		icon = GFX_focus_BRA_support_sugar_barons
+		cost = 8
+
+		relative_position_id = KOR_peoples_republic_of_korea_establish
+
+		x = 2
+		y = 2
+
+		prerequisite = {
+			focus = KOR_peoples_republic_of_korea_democracy
+		}
+
+		available = {
+			NOT = { 
+				is_puppet_of = JAP
+			}
+			has_government = democratic
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_democracy"
+
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_puppet_korea_gov
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		cost = 8
+
+		relative_position_id = KOR_peoples_republic_of_korea_establish
+
+		x = 6
+		y = 0
+
+		prerequisite = {
+
+		}
+
+
+		available = {
+			is_puppet_of = JAP
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_puppet_korea_gov"
+
+			add_political_power = 120
+		}
+	}
+	
+	focus = {
+		id = KOR_puppet_korea_gov_2
+		icon = GFX_focus_ITA_liberation_or_death
+		cost = 8
+
+		relative_position_id = KOR_puppet_korea_gov
+
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = KOR_puppet_korea_gov
+		}
+
+		available = {
+			is_puppet_of = JAP
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_puppet_korea_gov_2"
+
+			add_ideas = liberty_ethos_focus
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = KOR_puppet_korea_gov_3
+		icon = GFX_focus_research
+		cost = 8
+
+		relative_position_id = KOR_puppet_korea_gov
+
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = KOR_puppet_korea_gov
+		}
+
+		available = {
+			is_puppet_of = JAP
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_puppet_korea_gov_2"
+
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = KOR_puppet_korea_gov_fascism
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		cost = 8
+
+		relative_position_id = KOR_puppet_korea_gov
+
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = KOR_puppet_korea_gov_2
+		}
+
+		prerequisite = {
+			focus = KOR_puppet_korea_gov_3
+		}
+
+		available = {
+			is_puppet_of = JAP
+			OR = {
+				has_government = communism
+				has_government = fascism
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_puppet_korea_gov_2"
+
+			add_political_power = 150
+			add_command_power = 60
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = KOR_puppet_korea_gov_non_fascism
+		icon = GFX_focus_generic_railroad
+		cost = 8
+
+		relative_position_id = KOR_puppet_korea_gov
+
+		x = 2
+		y = 2
+
+		prerequisite = {
+			focus = KOR_puppet_korea_gov_2
+		}
+
+		prerequisite = {
+			focus = KOR_puppet_korea_gov_3
+		}
+
+		available = {
+			is_puppet_of = JAP
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_puppet_korea_gov_2"
+
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	###############
+	### Economy ###
+	###############
+
+	focus = {
+		id = KOR_economy_cheonggye
+		icon = GFX_focus_IRQ_construct_the_kut_barrage
+		cost = 8
+
+		relative_position_id = KOR_republic_of_korea_establish
+
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = KOR_republic_of_korea_establish
+			focus = KOR_peoples_republic_of_korea_establish
+			focus = KOR_puppet_korea_gov
+		}
+
+		available = {
+
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_dictatorship"
+
+			random_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				prioritize = { 525 } 
+				add_extra_state_shared_building_slots = 4
+
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_economy_urbanization
+		icon = GFX_focus_SWE_urbanization
+		cost = 8
+
+		relative_position_id = KOR_economy_cheonggye
+
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = KOR_economy_cheonggye
+		}
+
+		available = {
+
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_dictatorship"
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			if = {
+				limit = {
+					any_core_state = {
+						is_coastal = yes
+					}
+				}
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+
+			}
+			else = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_economy_mining_industry
+		icon = GFX_focus_generic_mining_industry
+		cost = 8
+
+		relative_position_id = KOR_economy_cheonggye
+
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = KOR_economy_cheonggye
+		}
+
+		available = {
+
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_dictatorship"
+
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_economy_pro_kivotos
+		icon = GFX_focus_AFG_telegraph
+		cost = 8
+
+		relative_position_id = KOR_economy_cheonggye
+
+		x = -2
+		y = 2
+
+		prerequisite = {
+			focus = KOR_economy_urbanization
+		}
+
+		prerequisite = {
+			focus = KOR_economy_mining_industry
+		}
+
+		available = {
+
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_forgiveness"
+
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = KOR_economy_pro_kivotos_language
+		icon = GFX_focus_DEN_civilian_preparations
+		cost = 8
+
+		relative_position_id = KOR_economy_cheonggye
+
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = KOR_economy_urbanization
+		}
+
+		prerequisite = {
+			focus = KOR_economy_mining_industry
+		}
+
+		available = {
+
+		}
+		
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_economy_pro_kivotos_language"
+
+			add_research_slot = 1
+		}
+	}
+}
