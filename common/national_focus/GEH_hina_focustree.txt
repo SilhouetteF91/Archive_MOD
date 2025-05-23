@@ -6913,7 +6913,7 @@ focus_tree = {
 	}
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1
-		icon = GFX_focus_GEI_mystery_weave
+		icon = GFX_focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_h_1
 		cost = 2
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h
@@ -7454,7 +7454,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2
-		icon = GFX_focus_GEH_last_focus_effect
+		icon = GFX_focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2
 		cost = 2
 
 		relative_position_id = GEH_basking_in_the_brilliance_of_their_serenade_rout_h
