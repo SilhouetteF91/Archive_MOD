@@ -1933,7 +1933,17 @@ focus_tree = {
             focus = GEH_hina_route_focus
         }
         completion_reward = {
-			add_ideas = GEH_sorasaki_hina_quotes_compilation_idea
+			
+			if = {
+				limit = {
+					NOT = { has_government = fascism }
+				}
+				add_ideas = GEH_sorasaki_hina_quotes_compilation_idea
+			}
+			else = {
+				add_ideas = GEH_sorasaki_hina_quotes_compilation_fascism_idea
+			}
+			
         }
         ai_will_do = {
             factor = 1
@@ -7124,6 +7134,16 @@ focus_tree = {
 				ruling_party = fascism
 				elections_allowed = no
 			}            
+
+			if = {
+				limit = {
+					has_idea = GEH_sorasaki_hina_quotes_compilation_idea
+				}
+				swap_ideas = {
+					remove_idea = GEH_sorasaki_hina_quotes_compilation_idea
+					add_idea = GEH_sorasaki_hina_quotes_compilation_fascism_idea
+				}
+			}
 
 			add_ideas = GEH_royal_guards
 			set_cosmetic_tag = GEH_hina_empire

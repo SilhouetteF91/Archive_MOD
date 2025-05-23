@@ -389,6 +389,15 @@ gehenna_unification = {
 			}
 			if = {
 				limit = {
+					has_idea = GEH_denazification
+				}
+				swap_ideas = {
+					remove_idea = GEH_denazification
+					add_idea = GEH_denazification_victory
+				}
+			}
+			if = {
+				limit = {
 					NOT = { has_idea = BA_three_major_academies }
 				}
 				add_ideas = BA_three_major_academies #3대 학원 계승

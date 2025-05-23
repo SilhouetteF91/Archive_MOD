@@ -566,6 +566,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.02
+				weekly_manpower = 400
 				custom_modifier_tooltip = GEH_denazification_tt
 			}
 
@@ -573,6 +574,40 @@ ideas = {
 				tag = NSD
 				attack_bonus_against = 0.1
 				defense_bonus_against = 0.1
+			}
+		}
+
+		GEH_denazification_victory = { # 탈나치주의 (약화)
+			picture = GEH_denazification
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription = 0.02
+				resistance_damage_to_garrison = -0.1
+			}
+
+			targeted_modifier = {
+				tag = NSD
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+        
+		GEH_sorasaki_hina_quotes_compilation_fascism_idea = { # 선도부의 정통성 (파시즘)
+			name = GEH_sorasaki_hina_quotes_compilation_idea
+			picture = GEH_sorasaki_hina_quotes_compilation
+			allowed = { always = no }
+			allowed_civil_war = { has_government = fascism } 
+			
+			modifier = {
+				stability_factor = 0.25
+				party_popularity_stability_factor = 0.25
+				fascism_drift = 0.05
 			}
 		}
 
