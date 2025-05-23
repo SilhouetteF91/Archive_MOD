@@ -1324,6 +1324,13 @@
  GEH_hina_empire_communism: "대게헨나 소비에트 공화국"
  GEH_hina_empire_communism_ADJ: "게헨나"
  GEH_hina_empire_communism_DEF: "대게헨나 소비에트 사회주의 공화국"
+ # 혁명 루트
+ GEH_revolutionary_government: "게헨나 학도혁명정부"
+ GEH_revolutionary_government_ADJ: "게헨나"
+ GEH_revolutionary_government_DEF: "게헨나 혁명정부"
+ GEH_revolutionary_government_communism: "게헨나 인민정부"
+ GEH_revolutionary_government_communism_ADJ: "게헨나"
+ GEH_revolutionary_government_communism_DEF: "게헨나 인민정부"
  # 그 외 루트
  GEH_art_academy: "게헨나 종합학원"
  GEH_art_academy_ADJ: "게헨나"

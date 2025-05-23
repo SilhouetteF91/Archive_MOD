@@ -3731,3 +3731,35 @@ news_event = {
 		}
 	}
 }
+
+# 게헨나 혁명정부의 통일
+news_event = {
+	id = GEH_news.17
+	title = GEH_news.17.t
+	desc = GEH_news.17.desc
+	picture = GFX_report_event_BA_GEH_news_17
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.17.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.17.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.17.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}

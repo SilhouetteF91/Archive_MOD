@@ -356,6 +356,7 @@ gehenna_unification = {
 						}
 						NOT = {
 							has_cosmetic_tag = GEH_hina_empire
+							has_cosmetic_tag = GEH_revolutionary_government
 						}
 					}
 				}
@@ -370,6 +371,15 @@ gehenna_unification = {
 					}
 				}
 				news_event = { id = GEH_news.15 }
+			}
+			if = {
+				limit = {
+					AND = {
+						tag = GEH
+						has_cosmetic_tag = GEH_revolutionary_government
+					}
+				}
+				news_event = { id = GEH_news.17 }
 			}
 			if = {
 				limit = {

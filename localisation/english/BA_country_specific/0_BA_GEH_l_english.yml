@@ -654,6 +654,19 @@
  GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2: "천상의 혁명"
  GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_desc: "소라사키 히나 선도부장님이 우리들의 부덕함에 통탄하며 스스로 권좌를 내려놓고 사라지셨습니다. 이는 우리의 게헨나 문화가, 독일인들이, 키보토스 전체가, 또는 유럽의 문화가 '히나 선도부장님의 영도'에 맞지 않았다는 걸 의미합니다. 우리는.... 잃어버린 우리의 구원자의 길을 따르기 위해. 국가와 사회, 문화, 행동 방식, 언어와 같은 모든 것들을 개조하고, 보다 온전하게 만들어야만 합니다!"
 
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_indiscriminate_prosecution: "무차별 기소"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_gehennas_liberalism: "게헨나의 자유주의"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_gehennas_order_politics: "게헨나의 질서정치"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_rebel_attack: "반역주의자 공격"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_cultural_revolution: "문화 혁명"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_you_are_a_communist: "반역자는 좌파다"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_you_are_a_nazist: "반역자는 우파다"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_revolution_accomplished: "혁명 완수"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_sorasakism: "'소라사키주의'"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_gehenna_commune: "게헨나 코뮌"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_religious_ecstasy: "종교적 황홀감"
+ GEH_basking_in_the_brilliance_of_their_serenade_rout_h_2_second_order_state: "제2 질서국가"
+
 #### 아코
  GEH_basking_in_the_brilliance_of_their_serenade_rout_a: "선도부의 선임행정관"
  GEH_basking_in_the_brilliance_of_their_serenade_rout_a_desc: "히나 부장의 권력을 분산하고 기술관료제를 도입해 히나의 부담을 줄여주려 했던 아코의 노력에도 불구하고, 히나는 사직서 한 장을 남겨두고 실종되었습니다. 아코의 마음을 채운 것은 배신감이 아닌, 결과를 바꾸지 못한 무능력한 스스로에 대한 저주였습니다."
@@ -1636,6 +1649,12 @@
  GEH_news.16.a: "새로운 게헨나 만세!"
  GEH_news.16.b: "게헨나는 이제 학원 국가가 아니군..."
  GEH_news.16.c: "도이칠란트의 정세가 바뀌고 있군!"
+ 
+ GEH_news.17.t: "게헨나 학도혁명정부의 통일"
+ GEH_news.17.desc: "소라사키 히나 선도부장의 갑작스러운 실종 이후, '그녀가 사라진 것은 타락한 게헨나와 우리 모두의 책임'이라 주장하는 급진파 학생들이 '학도혁명정부'를 세워 게헨나를 통일하였습니다. 혁명정부의 지도 위원회는 히나 선도부장의 '진정한 이상'을 따르겠다며, 그녀의 이상을 이뤄낼 '정화된 게헨나'를 건설할 것을 선포했습니다. 만마전과 선도부를 비롯한 구 기득권층은 '선도부장을 절망케 한 구악의 상징'으로 규정되어 대대적인 숙청을 당했으며, 게헨나의 질서는 혁명의 이름 아래 강압적으로 재편되고 있습니다.\n\n학도혁명정부는 '히나 선도부장의 정신에 위배되는 모든 것을 청산한다'는 구호 아래 사회 전반에 걸친 급진적인 개조를 강행하고 있습니다. 모든 학생의 사상과 생활양식은 '위대한 선도부장의 이상'이라는 모호한 기준에 따라 철저히 검열되고 있으며, 과거의 문화, 예술, 심지어 개인적인 관계까지 '부패한 것'으로 낙인찍혀 파괴되고 있습니다."
+ GEH_news.17.a: "히나 선도부장님을 위하여! 이 사회를 정화하자!"
+ GEH_news.17.b: "그녀가 정말 이런 식의 변화를 바란 걸까... 아니면 그저 명분일 뿐인가?"
+ GEH_news.17.c: "대체 누구를 위한 혁명이란 말인가."
 
  ### 인물 설명문 ###
  ## 소라사키 히나 ##

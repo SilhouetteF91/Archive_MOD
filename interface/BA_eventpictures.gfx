@@ -1030,6 +1030,11 @@ spriteTypes = {
 
 	## 게헨나 선도부 ##
 	spriteType = {
+		name = "GFX_report_event_BA_GEH_news_17"
+		texturefile = "gfx/event_pictures/GEH/BA_GEH_news_17.tga"
+	}
+	
+	spriteType = {
 		name = "GFX_report_event_ako_amau_crying_1"
 		texturefile = "gfx/event_pictures/GEH/ako_amau_crying_1.dds"
 	}
