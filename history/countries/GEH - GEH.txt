@@ -249,7 +249,8 @@ add_ideas = {
 	BA_isolation
 	volunteer_only
 	civilian_economy
-	GEH_individualism_low
+	#GEH_individualism_low
+	GEH_military_tradition_1
 	BA_a_divided_academy
     GEH_popular_support_1
 	GEH_luxembourg_rules

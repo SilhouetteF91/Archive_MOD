@@ -321,7 +321,7 @@ bookmarks = {
 			ideas = {
 				GEH_luxembourg_rules
                 GEH_popular_support_1
-                GEH_individualism_low
+                GEH_denazification
 			}
 			focuses = {
                 GEH_rework_focus_1

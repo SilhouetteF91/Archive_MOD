@@ -352,10 +352,10 @@ gehenna_unification = {
 					AND = {
 						tag = GEH
 						NOT = {
-							OR = { 
-								has_cosmetic_tag = GEH_hina_empire
-								has_cosmetic_tag = GEH_republic
-							}
+							has_completed_focus = GEH_ako_route_focus
+						}
+						NOT = {
+							has_cosmetic_tag = GEH_hina_empire
 						}
 					}
 				}
@@ -370,6 +370,16 @@ gehenna_unification = {
 					}
 				}
 				news_event = { id = GEH_news.15 }
+			}
+			if = {
+				limit = {
+					AND = {
+						tag = GEH
+						has_completed_focus = GEH_ako_route_focus
+					}
+				}
+				set_cosmetic_tag = GEH_republic
+				news_event = { id = GEH_news.16 }
 			}
 			if = {
 				limit = {

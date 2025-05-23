@@ -8,8 +8,10 @@
 		militia = { x = 0 y = 0 }
 		militia = { x = 0 y = 1 }
 	}
+
 	priority = 0
 }
+
 division_template = {
 	name = "Halo Infantry Division"
 	division_names_group = GEH_INF_01	
@@ -35,8 +37,9 @@ division_template = {
 	}
     priority = 1
 }
+
 division_template = {
-	name = "Infantry Division"
+	name = "Infanterie-Division"
 
 	division_names_group = GEH_INF_01
 
@@ -48,8 +51,57 @@ division_template = {
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
 	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
 }
+
+division_template = {
+	name = "Infanterie-Division (mot.)"
+
+	division_names_group = GEH_MOT_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		
+		motorized = { x = 2 y = 0 }
+	    motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+
+	support = {
+        mot_recon = { x = 0 y = 0 }
+	 	engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Gehenna Garde-Division"
+	division_names_group = GEH_INF_01
+	
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+
+	priority = 0
+}
+
 units = { 
+	# 키보토스계 병력
 	division= {	
 		division_name = {
 				is_name_ordered = yes
@@ -59,6 +111,7 @@ units = {
 		division_template = "Halo Infantry Division"
 		start_experience_factor = 0.75
 	}
+
 	division= {	
 		division_name = {
 				is_name_ordered = yes
@@ -68,6 +121,7 @@ units = {
 		division_template = "Halo Infantry Division"
 		start_experience_factor = 0.75
 	}
+
 	division= {	
 		division_name = {
 				is_name_ordered = yes
@@ -77,6 +131,7 @@ units = {
 		division_template = "Halo Infantry Division"
 		start_experience_factor = 0.75
 	}
+
 	division= {	
 		division_name = {
 				is_name_ordered = yes
@@ -86,6 +141,7 @@ units = {
 		division_template = "Halo Infantry Division"
 		start_experience_factor = 0.75
 	}
+
 	division= {	
 		division_name = {
 				is_name_ordered = yes
@@ -94,6 +150,37 @@ units = {
 		location = 692
 		division_template = "Halo Infantry Division"
 		start_experience_factor = 0.75
+	}
+	
+	# 키보토스계(수인) 병력
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9515
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.5
+	}
+	
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9515
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.5
+	}
+	
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9515
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.5
 	}
 }
 

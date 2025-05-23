@@ -284,3 +284,30 @@ GEH_OGAS_increase_effect = {
 		}
 	}
 }
+
+GEH_military_tradition_effect = {
+    if = {
+        limit = {
+            has_idea = GEH_military_tradition_1
+        }
+        swap_ideas = {
+            remove_idea = GEH_military_tradition_1
+            add_idea = GEH_military_tradition_2
+        }
+    }
+	else_if = {
+		limit = {
+			has_idea = GEH_military_tradition_2
+		}
+		swap_ideas = {
+			remove_idea = GEH_military_tradition_2
+			add_idea = GEH_military_tradition_3
+		}
+	}
+	else = {
+		add_breakthrough_progress = {
+			specialization = specialization_land
+			value = 0.5
+		}
+	}
+}

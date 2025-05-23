@@ -1957,7 +1957,7 @@ focus_tree = {
         }
         completion_reward = {
 			add_stability = -0.05
-            GEH_army_refrom_effect = yes
+            GEH_military_tradition_effect = yes
         }
         ai_will_do = {
             factor = 1
@@ -4218,7 +4218,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-            GEH_army_refrom_effect = yes
+            GEH_military_tradition_effect = yes
 			
 			custom_effect_tooltip = kivotos_halo_add3_tt
 			hidden_effect = {
@@ -4449,7 +4449,7 @@ focus_tree = {
 		}
 		available = { }
         complete_tooltip = {
-            GEH_army_refrom_effect = yes
+            GEH_military_tradition_effect = yes
             if = {
                 limit = {
                     has_completed_focus = GEH_look_to_the_west
@@ -4466,7 +4466,7 @@ focus_tree = {
             }
         }
 		completion_reward = {
-            GEH_army_refrom_effect = yes
+            GEH_military_tradition_effect = yes
             BA_mapower_idea_level_up = yes
             if = {
                 limit = {
@@ -4524,7 +4524,7 @@ focus_tree = {
 		}
 		available = { }
 		completion_reward = { 
-            GEH_army_refrom_effect = yes
+            GEH_military_tradition_effect = yes
             custom_effect_tooltip = GEH_Army_focus_7_tt
             add_to_variable = { GEH_RU_land_doctrine_cost_factor = -0.1 }
 			add_doctrine_cost_reduction = {
