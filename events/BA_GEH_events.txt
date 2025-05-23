@@ -11,6 +11,8 @@ add_namespace = GEH_hidden
 add_namespace = GEH_BTBOTS
 #플레이버 이벤트
 add_namespace = GEH.flavor_event
+#플레이버 이벤트 (아코)
+add_namespace = GEH.ako.flavor_event
 #기본 중점 이벤트
 add_namespace = GEH.event
 #전쟁 관련 이벤트
@@ -3692,6 +3694,38 @@ news_event = {
 	}
 	option = {
 		name = GEH_news.15.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 게헨나 연방공화국의 통일
+news_event = {
+	id = GEH_news.16
+	title = GEH_news.16.t
+	desc = GEH_news.16.desc
+	picture = GFX_event_BA_news_16
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.16.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.16.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.16.c
 		trigger = {
 			Kivotos_tag = no
 		}
