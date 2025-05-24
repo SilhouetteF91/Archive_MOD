@@ -676,3 +676,18 @@ ABY_descision_category_focus = {
     }             
     priority = 120
 }
+
+ABY_descision_category_masaryk = {
+    icon = GFX_decision_category_generic_political_actions
+    allowed = {     
+		original_tag = ABY
+    }
+    visible = {
+        original_tag = ABY                                                                                                             
+		has_country_flag = ABY_flag_in_develop  
+		NOT = {
+			has_idea = ABY_idea_czecho_1_person
+		}
+    }             
+    priority = 120
+}

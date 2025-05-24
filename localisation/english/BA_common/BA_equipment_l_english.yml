@@ -77,3 +77,15 @@
  KAI_infantry_equipment_2_short:0 "Sten MkII"
  KAI_infantry_equipment_3:0 "Sterling MkI"
  KAI_infantry_equipment_3_short:0 "Sterling MkI"
+
+ ### 아비도스 고등학교 ###
+ ABY_infantry_equipment_0:0 "상식적 수단"
+ ABY_infantry_equipment_0_short:0 "상식적 수단"
+ ABY_infantry_equipment_1:0 "Sincerity"
+ ABY_infantry_equipment_1_short:0 "Sincerity"
+ ABY_infantry_equipment_2:0 "WHITE FANG 465"
+ ABY_infantry_equipment_2_short:0 "WHITE FANG 465"
+ ABY_infantry_equipment_3:0 "Mini No.5"
+ ABY_infantry_equipment_3_short:0 "Mini No.5"
+ ABY_ABYDOS_modern_infantry_equipment:0 "호루스의 눈"
+ ABY_ABYDOS_modern_infantry_equipment_short:0 "호루스의 눈"

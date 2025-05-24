@@ -16692,6 +16692,10 @@ country_event = {
 		name = ABY_descision_focus_event.30.a
 		ai_chance = { factor = 100 }
 		set_country_flag = ABY_flag_recovered_land
+		set_capital = {
+			state = 1021
+			remember_old_capital = yes
+		}
 	}
 }
 
@@ -16971,12 +16975,18 @@ country_event = {
 
 	option = {
 		name = ABY_descision_focus_event.42.a
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 0 }
+		set_country_flag = ABY_flag_stop_national_front
+		set_country_flag = ABY_flag_month_1_over
+		custom_effect_tooltip = ABY_tt_month_1_1
 	}
 
 	option = {
 		name = ABY_descision_focus_event.42.b
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_allow_national_front
+		set_country_flag = ABY_flag_month_1_over
+		custom_effect_tooltip = ABY_tt_month_1_2
 	}
 }
 
@@ -16991,11 +17001,7 @@ country_event = {
 	option = {
 		name = ABY_descision_focus_event.43.a
 		ai_chance = { factor = 100 }
-	}
-
-	option = {
-		name = ABY_descision_focus_event.43.b
-		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_2_over
 	}
 }
 
@@ -17010,11 +17016,7 @@ country_event = {
 	option = {
 		name = ABY_descision_focus_event.44.a
 		ai_chance = { factor = 100 }
-	}
-
-	option = {
-		name = ABY_descision_focus_event.44.b
-		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_3_over
 	}
 }
 
@@ -17029,11 +17031,17 @@ country_event = {
 	option = {
 		name = ABY_descision_focus_event.45.a
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_4_over
+		set_country_flag = ABY_flag_not_national_front
+		custom_effect_tooltip = ABY_tt_month_4_1_1
 	}
 
 	option = {
 		name = ABY_descision_focus_event.45.b
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_4_over
+		set_country_flag = ABY_flag_ban_national_front
+		custom_effect_tooltip = ABY_tt_month_4_1_2
 	}
 }
 
@@ -17047,12 +17055,18 @@ country_event = {
 
 	option = {
 		name = ABY_descision_focus_event.46.a
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 0 }
+		set_country_flag = ABY_flag_month_4_over
+		set_country_flag = ABY_flag_independent_nation
+		custom_effect_tooltip = ABY_tt_month_4_2_1
 	}
 
 	option = {
 		name = ABY_descision_focus_event.46.b
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_4_over
+		set_country_flag = ABY_flag_federal_nation
+		custom_effect_tooltip = ABY_tt_month_4_2_2
 	}
 }
 
@@ -17067,11 +17081,7 @@ country_event = {
 	option = {
 		name = ABY_descision_focus_event.47.a
 		ai_chance = { factor = 100 }
-	}
-
-	option = {
-		name = ABY_descision_focus_event.47.b
-		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_5_over
 	}
 }
 
@@ -17086,11 +17096,7 @@ country_event = {
 	option = {
 		name = ABY_descision_focus_event.48.a
 		ai_chance = { factor = 100 }
-	}
-
-	option = {
-		name = ABY_descision_focus_event.48.b
-		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_6_over
 	}
 }
 
@@ -17105,11 +17111,17 @@ country_event = {
 	option = {
 		name = ABY_descision_focus_event.49.a
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_7_over
+		set_country_flag = ABY_flag_allow_left
+		custom_effect_tooltip = ABY_tt_month_7_1_1
 	}
 
 	option = {
 		name = ABY_descision_focus_event.49.b
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_7_over
+		set_country_flag = ABY_flag_stop_left
+		custom_effect_tooltip = ABY_tt_month_7_1_2
 	}
 }
 
@@ -17124,6 +17136,17 @@ country_event = {
 	option = {
 		name = ABY_descision_focus_event.50.a
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_7_over
+		set_country_flag = ABY_flag_allow_internal_troops
+		custom_effect_tooltip = ABY_tt_month_7_2_1
+	}
+
+	option = {
+		name = ABY_descision_focus_event.50.b
+		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_7_over
+		set_country_flag = ABY_flag_stop_internal_troops
+		custom_effect_tooltip = ABY_tt_month_7_2_2
 	}
 }
 
@@ -17138,11 +17161,20 @@ country_event = {
 	option = {
 		name = ABY_descision_focus_event.51.a
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_7_over
+		set_country_flag = ABY_flag_strong_democratic
+		custom_effect_tooltip = ABY_tt_month_7_3_1
+		add_political_power = -150
 	}
 
 	option = {
 		name = ABY_descision_focus_event.51.b
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 0 }
+		set_country_flag = ABY_flag_month_7_over
+		set_country_flag = ABY_flag_weak_democratic
+		custom_effect_tooltip = ABY_tt_month_7_3_2
+		add_political_power = 150
+		add_stability = 0.1
 	}
 }
 
@@ -17157,6 +17189,7 @@ country_event = {
 	option = {
 		name = ABY_descision_focus_event.52.a
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_month_8_over
 	}
 }
 
@@ -17171,11 +17204,7 @@ country_event = {
 	option = {
 		name = ABY_descision_focus_event.53.a
 		ai_chance = { factor = 100 }
-	}
-
-	option = {
-		name = ABY_descision_focus_event.53.b
-		ai_chance = { factor = 100 }
+		custom_effect_tooltip = ABY_tt_month_9
 	}
 }
 

@@ -19858,6 +19858,91 @@ ABY_descision_category_debug = {
 			ABY_scripted_effect_divide_SOV = yes
 		}
 	}
+	ABY_descision_debug_helicopter = {
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }                     
+
+		complete_effect = {
+			set_technology = {
+				pre_modern_infantry_equipment = 1
+			}
+			division_template = {
+				name = "Water Cloud Division"
+				priority = 1
+				division_names_group = ABY_ARM_01
+				is_locked = yes
+				force_allow_recruiting = yes
+
+				regiments = {
+					attack_heli = { x = 0 y = 0 }
+					attack_heli = { x = 0 y = 1 }
+					attack_heli = { x = 0 y = 2 }
+					
+					attack_heli = { x = 1 y = 0 }
+					attack_heli = { x = 1 y = 1 }
+					attack_heli = { x = 1 y = 2 }
+					
+					attack_heli = { x = 2 y = 0 }
+					attack_heli = { x = 2 y = 1 }
+					attack_heli = { x = 2 y = 2 }
+					
+					motorized = { x = 3 y = 0 }
+					motorized = { x = 3 y = 1 }
+					motorized = { x = 3 y = 2 }
+					motorized = { x = 3 y = 3 }
+				}
+				support = {
+					helicopter_recon = { x = 0 y = 0 }
+					helicopter_field_hospital = { x = 0 y = 1 }
+					helicopter_transport = { x = 0 y = 2 }
+					anti_air = { x = 0 y = 3 }
+					maintenance_company = { x = 0 y = 4 }
+				}
+			}
+			division_template = {
+				name = "ABYDOS Shock Division"
+				priority = 1
+				division_names_group = ABY_INF_05
+				is_locked = yes
+				force_allow_recruiting = yes
+
+				regiments = {
+					low_halo_infantry = { x = 0 y = 0 }
+					low_halo_infantry = { x = 0 y = 1 }
+					low_halo_infantry = { x = 0 y = 2 }
+					low_halo_infantry = { x = 0 y = 3 }
+					low_halo_infantry = { x = 0 y = 4 }
+					
+					low_halo_infantry = { x = 1 y = 0 }
+					low_halo_infantry = { x = 1 y = 1 }
+					low_halo_infantry = { x = 1 y = 2 }
+					low_halo_infantry = { x = 1 y = 3 }
+					low_halo_infantry = { x = 1 y = 4 }
+					
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+					artillery_brigade = { x = 2 y = 2 }
+					artillery_brigade = { x = 2 y = 3 }
+					artillery_brigade = { x = 2 y = 4 }
+				}
+				support = {
+					halo_recon = { x = 0 y = 0 }
+					logistics_company = { x = 0 y = 1 }
+					Sturmtruppe_Battalion = { x = 0 y = 2 }
+					artillery = { x = 0 y = 3 }
+					maintenance_company = { x = 0 y = 4 }
+				}
+			}
+		}
+	}
 	ABY_descision_developing_active = {
 		priority = 1
 		
@@ -22875,7 +22960,7 @@ ABY_descision_category_core_gyemong = {
 }
 ABY_descision_category_focus = {
 
-	ABY_descision_autofocus = {
+	ABY_descision_autofocus_german_1 = {
         priority = 0   
 
         allowed = {
@@ -22884,21 +22969,1189 @@ ABY_descision_category_focus = {
 
 		activation = {
 			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
         }
 
-		is_good = no
-
-		fire_only_once = no
+		fire_only_once = yes
  
-		days_mission_timeout = 49
-		days_remove = 49
-		days_re_enable = 0
+		days_mission_timeout = 50
 
-		complete_effect = {				
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_german_1		
 		}
     }
+
+	ABY_descision_autofocus_german_3 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 100
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_german_3		
+		}
+    }
+
+	ABY_descision_autofocus_german_2 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 470
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_german_2		
+		}
+    }
+
+	ABY_descision_autofocus_german_4 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 520
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_german_4		
+		}
+    }
+
+	ABY_descision_autofocus_german_5 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 570
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_german_5		
+		}
+    }
+
+	ABY_descision_autofocus_german_6 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 620
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_german_6		
+		}
+    }
+
+	ABY_descision_autofocus_german_8 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 670
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_german_8		
+		}
+    }
+
+	ABY_descision_autofocus_german_7 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 720
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_german_7		
+		}
+    }
+
+	ABY_descision_autofocus_german_9 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 770
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_german_9		
+		}
+    }
+
+	ABY_descision_autofocus_czecho_1 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 50
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_czecho_1		
+		}
+    }
+
+	ABY_descision_autofocus_czecho_2 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 100
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_czecho_2		
+		}
+    }
+
+	ABY_descision_autofocus_czecho_3 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 150
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_czecho_3		
+		}
+    }
+
+	ABY_descision_autofocus_czecho_4 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 200
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_czecho_4		
+		}
+    }
+
+	ABY_descision_autofocus_czecho_5 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 250
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_czecho_5		
+		}
+    }
+
+	ABY_descision_autofocus_czecho_6 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 300
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_czecho_6		
+		}
+    }
+
+	ABY_descision_autofocus_czecho_7 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 350
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_czecho_7		
+		}
+    }
+
+	ABY_descision_autofocus_czecho_8 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 400
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_czecho_8		
+		}
+    }
+
+	ABY_descision_autofocus_czecho_9 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 450
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_czecho_9		
+		}
+    }
+
+	ABY_descision_autofocus_czecho_10 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 500
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_czecho_10		
+		}
+    }
+
+	ABY_descision_autofocus_czecho_11 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 550
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_czecho_11		
+		}
+    }
+
+	ABY_descision_autofocus_czecho_12 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			has_country_flag = ABY_flag_recovered_land
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 50
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_czecho_12		
+		}
+    }
+
+	ABY_descision_autofocus_abydos_3 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 50
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_abydos_3		
+		}
+    }
+
+	ABY_descision_autofocus_abydos_6 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 100
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_abydos_6		
+		}
+    }
+
+	ABY_descision_autofocus_abydos_1 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 150
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_abydos_1		
+		}
+    }
+
+	ABY_descision_autofocus_abydos_2 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 200
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_abydos_2		
+		}
+    }
+
+	ABY_descision_autofocus_abydos_5 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 250
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_abydos_5		
+		}
+    }
+
+	ABY_descision_autofocus_abydos_9 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 300
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_abydos_9		
+		}
+    }
+
+	ABY_descision_autofocus_abydos_4 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 350
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_abydos_4		
+		}
+    }
+
+	ABY_descision_autofocus_abydos_7 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 400
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_abydos_7		
+		}
+    }
+
+	ABY_descision_autofocus_abydos_11 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 820
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_abydos_11		
+		}
+    }
+
+	ABY_descision_autofocus_abydos_14 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			HYA = {
+				exists = no
+			}
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 50
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_abydos_14		
+		}
+    }
+
+	ABY_descision_autofocus_abydos_15 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {
+			has_country_flag = ABY_flag_in_develop
+			has_country_flag = ABY_descision_focus_first_completed_flag
+			has_country_flag = ABY_descision_focus_czecho_12_completed_flag
+			is_ai = yes
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 50
+
+		complete_effect = {		
+			add_political_power = -49
+			complete_national_focus = ABY_focus_abydos_15		
+		}
+    }
+}
+ABY_descision_category_masaryk = {
+
+	ABY_descision_month_1 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {                                                                                                             
+			has_country_flag = ABY_flag_in_develop  
+			NOT = {
+				has_idea = ABY_idea_czecho_1_person
+			}
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 5
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_descision_focus_event.42
+			}		
+		}
+    }
+
+	ABY_descision_month_2 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {                                                                                                             
+			has_country_flag = ABY_flag_in_develop  
+			NOT = {
+				has_idea = ABY_idea_czecho_1_person
+			}
+			has_country_flag = ABY_flag_month_1_over
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 30
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_descision_focus_event.43
+			}		
+		}
+    }
+
+	ABY_descision_month_3 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {                                                                                                             
+			has_country_flag = ABY_flag_in_develop  
+			NOT = {
+				has_idea = ABY_idea_czecho_1_person
+			}
+			has_country_flag = ABY_flag_month_2_over
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 30
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_descision_focus_event.44
+			}		
+		}
+    }
+
+	ABY_descision_month_4_1 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {                                                                                                             
+			has_country_flag = ABY_flag_in_develop  
+			NOT = {
+				has_idea = ABY_idea_czecho_1_person
+			}
+			has_country_flag = ABY_flag_stop_national_front
+			has_country_flag = ABY_flag_month_3_over
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 30
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_descision_focus_event.45
+			}		
+		}
+    }
+
+	ABY_descision_month_4_2 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {                                                                                                             
+			has_country_flag = ABY_flag_in_develop  
+			NOT = {
+				has_idea = ABY_idea_czecho_1_person
+			}
+			has_country_flag = ABY_flag_allow_national_front
+			has_country_flag = ABY_flag_month_3_over
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 30
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_descision_focus_event.46
+			}		
+		}
+    }
+
+	ABY_descision_month_5 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {                                                                                                             
+			has_country_flag = ABY_flag_in_develop  
+			NOT = {
+				has_idea = ABY_idea_czecho_1_person
+			}
+			has_country_flag = ABY_flag_month_4_over
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 30
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_descision_focus_event.47
+			}		
+		}
+    }
+
+	ABY_descision_month_6 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {                                                                                                             
+			has_country_flag = ABY_flag_in_develop  
+			NOT = {
+				has_idea = ABY_idea_czecho_1_person
+			}
+			has_country_flag = ABY_flag_month_5_over
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 30
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_descision_focus_event.48
+			}		
+		}
+    }
+
+	ABY_descision_month_7_1 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {                                                                                                             
+			has_country_flag = ABY_flag_in_develop  
+			NOT = {
+				has_idea = ABY_idea_czecho_1_person
+			}
+			has_country_flag = ABY_flag_month_6_over
+			has_country_flag = ABY_flag_not_national_front
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 30
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_descision_focus_event.49
+			}		
+		}
+    }
+
+	ABY_descision_month_7_2 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {                                                                                                             
+			has_country_flag = ABY_flag_in_develop  
+			NOT = {
+				has_idea = ABY_idea_czecho_1_person
+			}
+			has_country_flag = ABY_flag_month_6_over
+			has_country_flag = ABY_flag_ban_national_front
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 30
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_descision_focus_event.50
+			}		
+		}
+    }
+
+	ABY_descision_month_7_3 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {                                                                                                             
+			has_country_flag = ABY_flag_in_develop  
+			NOT = {
+				has_idea = ABY_idea_czecho_1_person
+			}
+			has_country_flag = ABY_flag_month_6_over
+			OR = {
+				has_country_flag = ABY_flag_independent_nation
+				has_country_flag = ABY_flag_federal_nation
+			}
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 30
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_descision_focus_event.51
+			}		
+		}
+    }
+
+	ABY_descision_month_8 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {                                                                                                             
+			has_country_flag = ABY_flag_in_develop  
+			NOT = {
+				has_idea = ABY_idea_czecho_1_person
+			}
+			has_country_flag = ABY_flag_month_7_over
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 30
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_descision_focus_event.52
+			}		
+		}
+    }
+
+	ABY_descision_month_9 = {
+        priority = 0   
+
+        allowed = {
+            tag = ABY
+        }
+
+		activation = {                                                                                                             
+			has_country_flag = ABY_flag_in_develop  
+			NOT = {
+				has_idea = ABY_idea_czecho_1_person
+			}
+			has_country_flag = ABY_flag_month_8_over
+		}
+
+        available = {
+        }
+
+		fire_only_once = yes
+ 
+		days_mission_timeout = 30
+
+		complete_effect = {		
+			country_event = {
+				id = ABY_descision_focus_event.53
+			}		
+		}
+    }
+
 }

@@ -668,5 +668,14 @@ technologies = {
 		research_cost = 1
 		start_year = 1936
 	}
+
+	pre_modern_infantry_equipment = {
+		allow = {
+            always = no
+        }
+		enable_equipments = {
+			ABYDOS_modern_infantry_equipment
+		}
+	}
 	
 }
