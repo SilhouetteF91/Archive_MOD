@@ -798,6 +798,10 @@ spriteTypes = {
 		name = "GFX_helicopter_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/kivotos_helicopter_equipment.dds"
 	}
+	spriteType = {
+		name = "GFX_pre_modern_infantry_equipment_medium"
+		texturefile = "gfx/interface/technologies/pre_modern_infantry_equipment.dds"
+	}
 
 	#
 	#	Infantry equipments by Kivotos Nation
@@ -820,12 +824,13 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/ABY_infantry_equipment_3.dds"
 	}
 	spriteType = {
-		name = "GFX_pre_modern_infantry_equipment_medium"
-		texturefile = "gfx/interface/technologies/ABY_pre_modern_infantry_equipment.dds"
-	}
-	spriteType = {
 		name = "GFX_ABY_pre_modern_infantry_equipment_medium"
 		texturefile = "gfx/interface/technologies/ABY_pre_modern_infantry_equipment.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ABY_helicopter_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ABY_kivotos_helicopter_equipment.dds"
 	}
 	#ARI
 	spriteType = {

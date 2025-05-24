@@ -3041,14 +3041,103 @@ ABY_scripted_effect_remove_focus_flag = {
 	clr_country_flag = ABY_descision_focus_german_12_selected_flag
 }
 ABY_scripted_effect_getsokku_plus_effect = {
-	custom_effect_tooltip = ABY_tt_getsokku_plus
 	hidden_effect = {
-
+		if = {
+			limit = {
+				check_variable = {
+            	    var = ABY_var_getsokku
+            	    value = 100
+            	    compare = greater_than_or_equals
+            	}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_dynamic_modifier = ABY_two_dynamic_modifier
+					has_dynamic_modifier = ABY_two_dynamic_modifier_complete
+				}
+				check_variable = {
+            	    var = ABY_var_getsokku
+            	    value = 100
+            	    compare = less_than
+            	}
+			}
+			add_to_variable = { ABY_var_getsokku = 1 }
+			add_to_variable = { ABY_var_stability_factor = 0.005 }
+			add_to_variable = { ABY_var_war_support_factor = 0.005 }
+			add_to_variable = { ABY_var_surrender_limit = 0.005 }
+			add_to_variable = { ABY_var_drift_defence_factor = 0.01 }
+			add_to_variable = { ABY_var_political_power_factor = 0.005 }
+			add_to_variable = { ABY_var_compliance_gain = 0.001 }
+			add_to_variable = { ABY_var_resistance_target_on_our_occupied_states = 0.005 }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = ABY_two_dynamic_modifier_over
+			}
+			remove_dynamic_modifier = ABY_two_dynamic_modifier_over
+			add_dynamic_modifier = ABY_two_dynamic_modifier
+			add_to_variable = { ABY_var_getsokku = 1 }
+			add_to_variable = { ABY_var_stability_factor = 0.005 }
+			add_to_variable = { ABY_var_war_support_factor = 0.005 }
+			add_to_variable = { ABY_var_surrender_limit = 0.005 }
+			add_to_variable = { ABY_var_drift_defence_factor = 0.01 }
+			add_to_variable = { ABY_var_political_power_factor = 0.005 }
+			add_to_variable = { ABY_var_compliance_gain = 0.001 }
+			add_to_variable = { ABY_var_resistance_target_on_our_occupied_states = 0.005 }
+		}
 	}
 }
 ABY_scripted_effect_getsokku_minus_effect = {
-	custom_effect_tooltip = ABY_tt_getsokku_minus
 	hidden_effect = {
-		
+		if = {
+			limit = {
+				has_dynamic_modifier = ABY_two_dynamic_modifier_over
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_dynamic_modifier = ABY_two_dynamic_modifier
+				}
+			}
+			add_to_variable = { ABY_var_getsokku = -1 }
+			add_to_variable = { ABY_var_stability_factor = -0.005 }
+			add_to_variable = { ABY_var_war_support_factor = -0.005 }
+			add_to_variable = { ABY_var_surrender_limit = -0.005 }
+			add_to_variable = { ABY_var_drift_defence_factor = -0.01 }
+			add_to_variable = { ABY_var_political_power_factor = -0.005 }
+			add_to_variable = { ABY_var_compliance_gain = -0.001 }
+			add_to_variable = { ABY_var_resistance_target_on_our_occupied_states = -0.005 }
+			if = {
+				limit = {
+					check_variable = {
+        	    	    var = ABY_var_getsokku
+        	    	    value = 0
+        	    	    compare = equals
+        	    	}
+				}
+				remove_dynamic_modifier = ABY_two_dynamic_modifier
+				add_dynamic_modifier = ABY_two_dynamic_modifier_over
+			}
+			if = {
+				limit = {
+					check_variable = {
+        	    	    var = ABY_var_getsokku
+        	    	    value = 0
+        	    	    compare = less_than
+        	    	}
+				}
+				add_to_variable = { ABY_var_getsokku = 1 }
+				add_to_variable = { ABY_var_stability_factor = 0.005 }
+				add_to_variable = { ABY_var_war_support_factor = 0.005 }
+				add_to_variable = { ABY_var_surrender_limit = 0.005 }
+				add_to_variable = { ABY_var_drift_defence_factor = 0.01 }
+				add_to_variable = { ABY_var_political_power_factor = 0.005 }
+				add_to_variable = { ABY_var_compliance_gain = 0.001 }
+				add_to_variable = { ABY_var_resistance_target_on_our_occupied_states = 0.005 }
+			}
+		}
 	}
 }

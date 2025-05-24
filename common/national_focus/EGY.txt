@@ -4013,12 +4013,38 @@ focus_tree = {
 						id = EGY
 						value = -1000
 					}
+					EGY = {
+						add_ai_strategy = {
+							type = alliance
+							id = PREV
+							value = -1000
+						}
+					}
 				}
-				EGY = {
+				every_country = {
+					limit = {
+						NOT = {
+							OR = {
+								capital_scope = {
+									is_on_continent = africa
+								}
+								capital_scope = {
+									is_on_continent = middle_east
+								}
+							}
+						}
+					}
 					add_ai_strategy = {
-						type = alliance
-						id = PREV
+						type = protect
+						id = EGY
 						value = -1000
+					}
+					EGY = {
+						add_ai_strategy = {
+							type = protect
+							id = PREV
+							value = -1000
+						}
 					}
 				}
 			}

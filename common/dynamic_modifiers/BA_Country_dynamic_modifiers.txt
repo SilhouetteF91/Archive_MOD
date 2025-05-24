@@ -2046,6 +2046,8 @@ ABY_two_dynamic_modifier = {
 	industrial_capacity_factory = ABY_var_industrial_capacity_factory
 	production_speed_buildings_factor = ABY_var_production_speed_buildings_factor
 
+	custom_modifier_tooltip = ABY_tt_two_world_conflict
+
 }
 ABY_two_dynamic_modifier_over = {
 	enable = {
@@ -2070,7 +2072,8 @@ ABY_two_dynamic_modifier_over = {
 	resistance_target_on_our_occupied_states = ABY_var_resistance_target_on_our_occupied_states
 	industrial_capacity_factory = ABY_var_industrial_capacity_factory
 	production_speed_buildings_factor = ABY_var_production_speed_buildings_factor
-
+	
+	custom_modifier_tooltip = ABY_tt_two_world_conflict
 	custom_modifier_tooltip = ABY_tt_over
 }
 ABY_two_dynamic_modifier_complete = {

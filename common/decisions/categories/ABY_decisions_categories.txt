@@ -691,3 +691,18 @@ ABY_descision_category_masaryk = {
     }             
     priority = 120
 }
+
+ABY_descision_category_two_world = {
+    icon = GFX_decision_category_generic_political_actions
+    scripted_gui = aby_two_world_ui 
+	visible_when_empty = yes  
+    allowed = {     
+		original_tag = ABY
+    }
+    visible = {
+        original_tag = ABY                                                                                                             
+		has_country_flag = ABY_flag_in_develop  
+		has_dynamic_modifier = ABY_two_dynamic_modifier
+    }             
+    priority = 120
+}
