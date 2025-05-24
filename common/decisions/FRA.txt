@@ -1,151 +1,14 @@
 FRA_industrialize = {
-	FRA_emergency_mobilization = {
-		icon = generic_operation
-		allowed = {
-			original_tag = FRA
-		}
-		visible = {
-			check_variable = {
-				FRA_dec = 1
-			}
-		}
-		complete_effect = {
-			remove_ideas = FRA_exile
-			add_to_variable = {
-				FRA_dec = 1
-			}
-			country_event = {
-				id = FRA_prov_event.48
-			}
-		}
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-	}
 	FRA_press_propaganda_neu = {
-		ai_will_do = {
-			base = 0
-			modifier = {
-				has_political_power > 100
-				add = 100
-			}
-			modifier = {
-				neutrality < 0.45
-				add = 100
-			}
-		}
 		icon = GFX_decision_eng_trade_unions_support
 		allowed = {
 			original_tag = FRA
 		}
 		visible = {
-			check_variable = {
-				FRA_dec > 0
-			}
-			has_government = neutrality
+			has_completed_focus = FRA_focus_2
 		}
 		modifier = {
-			neutrality_drift = 0.8
-		}
-		complete_effect = {
-			add_to_variable = {
-				FRA_propaganda = 5
-			}
-		}
-		days_remove = 50
-		cost = var:FRA_propaganda
-	}
-	FRA_press_propaganda_dem = {
-		ai_will_do = {
-			base = 0
-			modifier = {
-				has_political_power > 100
-				add = 100
-			}
-			modifier = {
-				democratic < 0.45
-				add = 100
-			}
-		}
-		icon = GFX_decision_eng_trade_unions_support
-		allowed = {
-			original_tag = FRA
-		}
-		visible = {
-			check_variable = {
-				FRA_dec > 0
-			}
-			has_government = democratic
-		}
-		modifier = {
-			democratic_drift = 0.8
-		}
-		complete_effect = {
-			add_to_variable = {
-				FRA_propaganda = 5
-			}
-		}
-		days_remove = 50
-		cost = var:FRA_propaganda
-	}
-	FRA_press_propaganda_com = {
-		ai_will_do = {
-			base = 0
-			modifier = {
-				has_political_power > 100
-				add = 100
-			}
-			modifier = {
-				communism < 0.45
-				add = 100
-			}
-		}
-		icon = GFX_decision_eng_trade_unions_support
-		allowed = {
-			original_tag = FRA
-		}
-		visible = {
-			check_variable = {
-				FRA_dec > 0
-			}
-			has_government = communism
-		}
-		modifier = {
-			communism_drift = 0.8
-		}
-		complete_effect = {
-			add_to_variable = {
-				FRA_propaganda = 5
-			}
-		}
-		days_remove = 50
-		cost = var:FRA_propaganda
-	}
-	FRA_press_propaganda_fas = {
-		ai_will_do = {
-			base = 0
-			modifier = {
-				has_political_power > 100
-				add = 100
-			}
-			modifier = {
-				fascism < 0.45
-				add = 100
-			}
-		}
-		icon = GFX_decision_eng_trade_unions_support
-		allowed = {
-			original_tag = FRA
-		}
-		visible = {
-			check_variable = {
-				FRA_dec > 0
-			}
-			has_government = fascism
-		}
-		modifier = {
-			fascism_drift = 0.8
+			master_ideology_drift = 0.5
 		}
 		complete_effect = {
 			add_to_variable = {
@@ -189,24 +52,19 @@ FRA_urbanization = {
 		ai_will_do = {
 			factor = 200
 		}
+		fire_only_once = yes
 		icon = GFX_decision_generic_factory
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
 		visible = {
-			check_variable = {
-				FRA_alz = 1
-			}
+			has_completed_focus = FRA_focus_3
 		}
-		days_remove = 50
+		days_remove = 80
 		modifier = {
 			monthly_population = -0.5
 			conscription_factor = -0.01
 			civilian_factory_use = 1
-			fascism_drift = 0.01
 		}
 		remove_effect = {
 			every_state = {
@@ -223,11 +81,12 @@ FRA_urbanization = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-			add_to_variable = {
-				FRA_alz = 1
-			}
+			set_country_flag = FRA_alz_alze_flag
+			unlock_decision_tooltip = FRA_alz_alze
+			unlock_decision_tooltip = FRA_alz_kon
+			unlock_decision_tooltip = FRA_alz_core
 		}
-		cost = 30
+		cost = 50
 	}
 	FRA_alz_alze = {
 		ai_will_do = {
@@ -238,37 +97,20 @@ FRA_urbanization = {
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
 		visible = {
-			check_variable = {
-				FRA_alz = 2
-			}
+			has_country_flag = FRA_alz_alze_flag
 		}
-		days_remove = 100
+		days_remove = 120
 		modifier = {
 			monthly_population = -0.5
-			conscription_factor = -0.01
 			civilian_factory_use = 1
 			fascism_drift = 0.01
 		}
 		remove_effect = {
 			459 = {
-				add_building_construction = {
-					type = air_base
-					level = 1
-				}
-				add_building_construction = {
-					type = dockyard
-					level = 1
-				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-				}
-				add_building_construction = {
-					type = arms_factory
 					level = 1
 				}
 			}
@@ -283,38 +125,21 @@ FRA_urbanization = {
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
 		visible = {
-			check_variable = {
-				FRA_alz = 2
-			}
+			has_country_flag = FRA_alz_alze_flag
 		}
 		fire_only_once = yes
-		days_remove = 100
+		days_remove = 120
 		modifier = {
 			monthly_population = -0.5
 			conscription_factor = -0.01
 			civilian_factory_use = 1
-			fascism_drift = 0.01
 		}
 		remove_effect = {
 			460 = {
-				add_building_construction = {
-					type = air_base
-					level = 1
-				}
-				add_building_construction = {
-					type = dockyard
-					level = 1
-				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-				}
-				add_building_construction = {
-					type = arms_factory
 					level = 1
 				}
 			}
@@ -329,21 +154,16 @@ FRA_urbanization = {
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
 		visible = {
-			check_variable = {
-				FRA_alz = 2
-			}
+			has_country_flag = FRA_alz_alze_flag
 		}
 		days_remove = 120
 		modifier = {
 			monthly_population = -0.5
 			conscription_factor = -0.01
 			civilian_factory_use = 3
-			fascism_drift = 0.01
 		}
+		fire_only_once = yes
 		remove_effect = {
 			every_state = {
 				limit = {
@@ -360,14 +180,12 @@ FRA_urbanization = {
 				460 = {
 					BA_increase_state_category_by_one_level = yes
 				}
-				add_compliance = 50
 			}
-			clear_variable = FRA_alz
 			set_country_flag = FRA_alz_core
 		}
 		cost = 150
 	}
-	FRA_mor_infra = {
+	FRA_mor_infra = { #모로코
 		ai_will_do = {
 			factor = 200
 		}
@@ -375,21 +193,16 @@ FRA_urbanization = {
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
 		visible = {
-			check_variable = {
-				FRA_mor = 1
-			}
+			has_completed_focus = FRA_focus_4
 		}
-		days_remove = 50
+		days_remove = 80
 		modifier = {
 			monthly_population = -0.5
 			conscription_factor = -0.01
 			civilian_factory_use = 1
-			fascism_drift = 0.01
 		}
+		fire_only_once = yes
 		remove_effect = {
 			every_state = {
 				limit = {
@@ -404,11 +217,11 @@ FRA_urbanization = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-			add_to_variable = {
-				FRA_mor = 1
-			}
+			set_country_flag = FRA_mor_infra_flag
+			unlock_decision_tooltip = FRA_mor_kasa
+			unlock_decision_tooltip = FRA_mor_core
 		}
-		cost = 30
+		cost = 50
 	}
 	FRA_mor_kasa = {
 		ai_will_do = {
@@ -419,37 +232,20 @@ FRA_urbanization = {
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
 		visible = {
-			check_variable = {
-				FRA_mor = 2
-			}
+			has_country_flag = FRA_mor_infra_flag
 		}
-		days_remove = 100
+		days_remove = 120
 		modifier = {
 			monthly_population = -0.5
 			conscription_factor = -0.01
 			civilian_factory_use = 1
-			fascism_drift = 0.01
 		}
 		remove_effect = {
 			461 = {
-				add_building_construction = {
-					type = air_base
-					level = 1
-				}
-				add_building_construction = {
-					type = dockyard
-					level = 1
-				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-				}
-				add_building_construction = {
-					type = arms_factory
 					level = 1
 				}
 			}
@@ -464,20 +260,15 @@ FRA_urbanization = {
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
 		visible = {
-			check_variable = {
-				FRA_mor = 2
-			}
+			has_country_flag = FRA_mor_infra_flag
 		}
 		days_remove = 120
+		fire_only_once = yes
 		modifier = {
 			monthly_population = -0.5
 			conscription_factor = -0.01
 			civilian_factory_use = 3
-			fascism_drift = 0.01
 		}
 		remove_effect = {
 			every_state = {
@@ -490,7 +281,6 @@ FRA_urbanization = {
 				461 = {
 					BA_increase_state_category_by_one_level = yes
 				}
-				add_compliance = 50
 			}
 			clear_variable = FRA_mor
 			set_country_flag = FRA_mor_core
@@ -505,21 +295,16 @@ FRA_urbanization = {
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
 		visible = {
-			check_variable = {
-				FRA_waf = 1
-			}
+			has_completed_focus = FRA_focus_5
 		}
 		days_remove = 100
 		modifier = {
 			monthly_population = -0.5
 			conscription_factor = -0.01
 			civilian_factory_use = 2
-			fascism_drift = 0.01
 		}
+		fire_only_once = yes
 		remove_effect = {
 			every_state = {
 				limit = {
@@ -536,9 +321,9 @@ FRA_urbanization = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-			add_to_variable = {
-				FRA_waf = 1
-			}
+			set_country_flag = FRA_waf_flag
+			unlock_decision_tooltip = FRA_waf_ind
+			unlock_decision_tooltip = FRA_waf_core
 		}
 		cost = 100
 	}
@@ -551,31 +336,23 @@ FRA_urbanization = {
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
 		visible = {
-			check_variable = {
-				FRA_waf = 2
-			}
+			has_country_flag = FRA_waf_flag
 		}
-		days_remove = 100
+		days_remove = 120
 		modifier = {
 			monthly_population = -0.5
 			conscription_factor = -0.01
 			civilian_factory_use = 5
-			fascism_drift = 0.01
 		}
 		remove_effect = {
 			every_state = {
 				limit = {
 					OR = {
 						state = 779
-						state = 780
-						state = 272
-						state = 557
 					}
 				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -592,20 +369,15 @@ FRA_urbanization = {
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
+		fire_only_once = yes
 		visible = {
-			check_variable = {
-				FRA_waf = 2
-			}
+			has_country_flag = FRA_waf_flag
 		}
 		days_remove = 120
 		modifier = {
 			monthly_population = -0.5
 			conscription_factor = -0.01
 			civilian_factory_use = 3
-			fascism_drift = 0.01
 		}
 		remove_effect = {
 			every_state = {
@@ -617,9 +389,7 @@ FRA_urbanization = {
 						state = 557
 					}
 				}
-				add_compliance = 50
 			}
-			clear_variable = FRA_waf
 			set_country_flag = FRA_waf_core
 		}
 		cost = 150
@@ -632,20 +402,15 @@ FRA_urbanization = {
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
+		fire_only_once = yes
 		visible = {
-			check_variable = {
-				FRA_tun = 1
-			}
+			has_completed_focus = FRA_focus_3.1
 		}
-		days_remove = 50
+		days_remove = 80
 		modifier = {
 			monthly_population = -0.5
 			conscription_factor = -0.01
 			civilian_factory_use = 1
-			fascism_drift = 0.01
 		}
 		remove_effect = {
 			every_state = {
@@ -661,11 +426,11 @@ FRA_urbanization = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-			add_to_variable = {
-				FRA_tun = 1
-			}
+			set_country_flag = FRA_tun_flag
+			unlock_decision_tooltip = FRA_tun_kasa
+			unlock_decision_tooltip = FRA_tun_core
 		}
-		cost = 30
+		cost = 50
 	}
 	FRA_tun_kasa = {
 		ai_will_do = {
@@ -676,37 +441,20 @@ FRA_urbanization = {
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
 		visible = {
-			check_variable = {
-				FRA_tun = 2
-			}
+			has_country_flag = FRA_tun_flag
 		}
-		days_remove = 100
+		days_remove = 120
 		modifier = {
 			monthly_population = -0.5
 			conscription_factor = -0.01
 			civilian_factory_use = 1
-			fascism_drift = 0.01
 		}
 		remove_effect = {
 			458 = {
-				add_building_construction = {
-					type = air_base
-					level = 1
-				}
-				add_building_construction = {
-					type = dockyard
-					level = 1
-				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-				}
-				add_building_construction = {
-					type = arms_factory
 					level = 1
 				}
 			}
@@ -721,48 +469,33 @@ FRA_urbanization = {
 		allowed = {
 			original_tag = FRA
 		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
+		fire_only_once = yes
 		visible = {
-			check_variable = {
-				FRA_tun = 2
-			}
+			has_country_flag = FRA_tun_flag
 		}
 		days_remove = 120
 		modifier = {
 			monthly_population = -0.5
 			conscription_factor = -0.01
 			civilian_factory_use = 3
-			fascism_drift = 0.01
 		}
 		remove_effect = {
-			every_state = {
-				limit = {
-					OR = {
-						state = 458
-						state = 665
-					}
-				}
-				458 = {
-					BA_increase_state_category_by_one_level = yes
-				}
-				add_compliance = 50
+			458 = {
+				BA_increase_state_category_by_one_level = yes
 			}
-			clear_variable = FRA_tun
 			set_country_flag = FRA_tun_core
 		}
 		cost = 150
 	}
 	FRA_africa_agri = {
-		#대규모 개간
+		#대규모 토지 개간
 		cost = 50
-		days_remove = 100
+		days_remove = 180
 		modifier = {
 			production_speed_infrastructure_factor = 0.1
 		}
 		visible = {
-			has_completed_focus = FRA_focus_6
+			has_completed_focus = FRA_industry_focus_0
 		}
 		icon = GFX_decision_POL_looming_peasants_strike
 		fire_only_once = yes
@@ -773,20 +506,17 @@ FRA_urbanization = {
 			1 = {
 				add_extra_state_shared_building_slots = 1
 			}
-			513 = {
-				BA_increase_state_category_by_one_level = yes
-			}
-			462 = {
-				BA_increase_state_category_by_one_level = yes
-			}
 			780 = {
 				BA_increase_state_category_by_one_level = yes
 			}
-			665 = {
+			779 = {
 				BA_increase_state_category_by_one_level = yes
 			}
-			780 = {
+			272 = {
 				BA_increase_state_category_by_one_level = yes
+			}
+			898 = {
+				add_extra_state_shared_building_slots = 1
 			}
 			set_country_flag = FRA_agri_yes
 		}

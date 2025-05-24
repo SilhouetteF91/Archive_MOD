@@ -331,12 +331,6 @@ BA_no_use_PoliticalEvent_trigger = { #PoliticalEvents.txt가 이 조건을 만�
 		}
 	}
 }
-FRA_emergency_mobil_trigger = {
-	OR = {
-		has_idea = FRA_emergency_mobil
-		has_idea = FRA_emergency_mobil_fas
-	}
-}
 ENG_Canada_route = {
 	ENG = {
 		has_country_flag = ENG_canada_route_flag
