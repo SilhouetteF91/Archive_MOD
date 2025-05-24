@@ -10,6 +10,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_trinity_building.tga"
 	}
 	spriteType = {
+		name = "GFX_news_event_trinity_street_ruin"
+		texturefile = "gfx/event_pictures/news_event_trinity_street_ruin.tga"
+	}
+	spriteType = {
 		name = "GFX_news_event_Shanhaijing_shanhaijingpact"
 		texturefile = "gfx/event_pictures/news_event_Shanhaijing_shanhaijingpact.tga"
 	}
@@ -327,18 +331,22 @@ spriteTypes = {
 		name = "GFX_report_event_generic_weebs"
 		texturefile = "gfx/event_pictures/report_event_generic_weebs.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_generic_swimmingpool"
+		texturefile = "gfx/event_pictures/report_event_generic_swimmingpool.tga"
+	}
 	
 	
 	##
 
 	spriteType = {
 		name = "GFX_report_event_gem_makoto_ibuki"
-		texturefile = "gfx/event_pictures/report_event_gem_makoto_ibuki.png"
+		texturefile = "gfx/event_pictures/report_event_gem_makoto_ibuki.tga"
 	}
 
 	spriteType = {
 		name = "GFX_report_event_akeshiro_rumi_memorial"
-		texturefile = "gfx/event_pictures/report_event_akeshiro_rumi_memorial.png"
+		texturefile = "gfx/event_pictures/report_event_akeshiro_rumi_memorial.tga"
 	}
 
 	spriteType = {

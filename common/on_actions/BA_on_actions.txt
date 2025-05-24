@@ -1070,21 +1070,6 @@ on_actions = {
 				}
 				news_event = { id = BA_news.4 }
 			}
-			if = {
-				limit = {
-					FROM = {
-						original_tag = TRM
-						has_country_leader = {
-							character = TRN_alzk
-							ruling_only = yes
-						}
-					}
-					ROOT = {
-						original_tag = GEM
-					}
-				}
-				TRM = {  country_event = TRMDIP.17 }
-			}
 		}
 		effect = {
 			if = { # 트리니티가 미카 경로를 들어서고 특별군사작전 중점을 완료하지 않은채 게헨나에 선전포고 한다면

@@ -4,7 +4,7 @@ news_event = { #에덴 함락(게헨나)
 	id = fallnews.1
 	title = fallnews.1.t
 	desc = fallnews.1.d
-	picture = GFX_news_event_soldiers_marching
+	picture = GFX_news_event_trinity_street_ruin
 	major = yes
 	mean_time_to_happen = {
 		days = 2
@@ -25,31 +25,46 @@ news_event = { #에덴 함락(게헨나)
 	immediate = {
 		set_global_flag = BA_fall_64_geh
 	}
-	option = {
+	option = { # 키보토스 반응
 		name = fallnews.1.a
 		trigger = {
+			Kivotos_tag = yes
 			NOT = {
-				TAG = GEH #공격자
-				TAG = GEM #공격자
-				TAG = TRM #방어자
+				OR = {
+					tag = GEM
+					tag = GEH
+					tag = HEU
+					tag = TRM
+				}
 			}
 		}
 	}
 	option = { #공격자
 		name = news.100.b
-		trigger = { TAG = GEH }
-		trigger = { TAG = GEM }
+		trigger = {
+			OR = {
+				tag = GEM
+				tag = GEH
+				tag = HEU
+			}
+		}
 	}
 	option = { #방어자
 		name = news.100.c
 		trigger = { TAG = TRM }
+	}
+	option = { #방어자
+		name = fallnews.1.b
+		trigger = {
+			Kivotos_tag = no
+		}
 	}
 }
 news_event = { #에덴 함락(소련)
 	id = fallnews.2
 	title = fallnews.1.t
 	desc = fallnews.2.d
-	picture = GFX_news_event_hungarian_soldiers
+	picture = GFX_news_event_trinity_street_ruin
 	major = yes
 	mean_time_to_happen = {
 		days = 2
@@ -64,22 +79,39 @@ news_event = { #에덴 함락(소련)
 	immediate = {
 		set_global_flag = BA_fall_64_sov
 	}
-	option = {
+	option = { # 키보토스 반응
 		name = fallnews.1.a
 		trigger = {
-			NOT = {
-				TAG = SOV #공격자
-				TAG = TRM #방어자
-			}
+			Kivotos_tag = yes
+			NOT = { tag = TRM }
 		}
 	}
 	option = { #공격자
-		name = fallnews.2.b
-		trigger = { TAG = SOV }
+		name = news.100.b
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV
+				ROOT = { has_government = SOV }
+			}
+		}
 	}
 	option = { #방어자
 		name = news.100.c
 		trigger = { TAG = TRM }
+	}
+	option = { #방어자
+		name = fallnews.1.b
+		trigger = {
+			Kivotos_tag = no
+			NOT = {
+				OR = {
+					tag = SOV
+					is_in_faction_with = SOV
+					ROOT = { has_government = SOV }
+				}
+			}
+		}
 	}
 }
 news_event = { #파리 해방

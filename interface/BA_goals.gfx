@@ -185,12 +185,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_alliance_with_devil.tga"
 	}
 	SpriteType = {
+		name = "GFX_focus_TRN_student_solidarity"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_student_solidarity.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_student_solidarity_no_icon"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_student_solidarity_no_icon.tga"
+	}
+	SpriteType = {
 		name = "GFX_focus_TRN_balkan_dip"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_balkan_dip.tga"
 	}
 	SpriteType = {
 		name = "GFX_focus_TRN_Integrity_of_Trinity"
-		texturefile = "gfx/interface/goals/TRN/A_무결성검사를꼭하세요.tga"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_Integrity_of_Trinity.tga"
 	}
 
 	SpriteType = {

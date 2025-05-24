@@ -1554,6 +1554,70 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_TRN_student_solidarity_shine"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_student_solidarity.tga"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_student_solidarity.tga"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
+			animationrotation = -90.0		
+			animationlooping = no			
+			animationtime = 0.75				
+			animationdelay = 0			
+			animationblendmode = "add"       
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+	
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_student_solidarity.tga"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
+			animationrotation = 90.0		
+			animationlooping = no			
+			animationtime = 0.75				
+			animationdelay = 0			
+			animationblendmode = "add"       
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_TRN_student_solidarity_no_icon_shine"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_student_solidarity_no_icon.tga"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_student_solidarity_no_icon.tga"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
+			animationrotation = -90.0		
+			animationlooping = no			
+			animationtime = 0.75				
+			animationdelay = 0			
+			animationblendmode = "add"       
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+	
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_student_solidarity_no_icon.tga"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
+			animationrotation = 90.0		
+			animationlooping = no			
+			animationtime = 0.75				
+			animationdelay = 0			
+			animationblendmode = "add"       
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
 		name = "GFX_focus_TRN_balkan_dip_shine"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_balkan_dip.tga"			
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -1587,10 +1651,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_TRN_Integrity_of_Trinity_shine"
-		texturefile = "gfx/interface/goals/TRN/A_무결성검사를꼭하세요.tga"			
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_Integrity_of_Trinity.tga"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/TRN/A_무결성검사를꼭하세요.tga"			
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_Integrity_of_Trinity.tga"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -1603,7 +1667,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/TRN/A_무결성검사를꼭하세요.tga"			
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_Integrity_of_Trinity.tga"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			

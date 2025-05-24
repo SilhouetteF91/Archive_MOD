@@ -4235,12 +4235,12 @@ TRN_internal_factions_categories = {
 TRN_after_war_decisions = {
 
 	TRM_Gehenna_Military_Civil_Administration = { # 군정 실시
+		allowed = { always = no }
 		icon = GFX_decision_SWE_set_army_budget
 
 		visible = {
 		}
 		available = {
-			has_completed_focus = TRM_anti_gehenna_focus_3
         	TRM = {
 	            count_triggers = {
                 	amount = 2
@@ -4300,6 +4300,7 @@ TRN_after_war_decisions = {
 		
 		remove_effect = {
 			set_country_flag = TRM_complete_GMCA
+			country_event = { id = TRN_after_war_event.20 } 
 			every_owned_state = {
 				limit = { 
 					BA_is_GER_core = yes
@@ -4312,9 +4313,6 @@ TRN_after_war_decisions = {
 					}
 				}
 				add_dynamic_modifier = { modifier = TRM_Military_occupation }
-			}
-			hidden_effect = { 
-				country_event = { id = TRN_after_war_event.20 } 
 			}
 		}
 	}
@@ -4357,14 +4355,15 @@ TRN_after_war_decisions = {
 	}
 	
 	TRM_raid_gehenna_resistance = {
+		allowed = { always = no }
 
 		icon = GFX_decision_generic_arrest
 
 		available = {
-			has_completed_focus = TRM_anti_gehenna_focus_2
+			#has_completed_focus = TRM_anti_gehenna_focus_2
 		}
 		visible = {
-			has_completed_focus = TRM_anti_gehenna_focus_2
+			#has_completed_focus = TRM_anti_gehenna_focus_2
 		}
 
 		fire_only_once = no
@@ -4401,15 +4400,32 @@ TRN_after_war_decisions = {
 	}
 	
 	TRM_tighten_control = {
+		allowed = { always = no }
 
 		icon = infiltrate_state
 
 		available = {
-			has_completed_focus = TRM_germany_union
+			#has_completed_focus = TRM_germany_union
 			NOT = { has_idea = TRM_anti_gehenna_idea }
+			any_state = {
+				OR = {
+					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
+					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
+					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
+					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
+				}
+			}
 		}
 		visible = {
-			has_completed_focus = TRM_germany_union
+			any_state = {
+				OR = {
+					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
+					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
+					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
+					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
+				}
+			}
+			#has_completed_focus = TRM_germany_union
 		}
 
 		custom_cost_trigger = {
@@ -4444,27 +4460,21 @@ TRN_after_war_decisions = {
 					NOT = { has_state_flag = TRM_DO_NOT_THIS_STATE_arms_factory }
 				}
 				set_state_flag = TRM_DO_NOT_THIS_STATE_arms_factory
-				remove_building = {
-					type = arms_factory
-					level = 1
+				random_list = {
+					1 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					1 = {
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
 				}
 				
-			}
-			random_owned_state = {
-				limit = {
-					OR = {
-						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
-						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
-						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
-						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
-					}
-					NOT = { has_state_flag = TRM_DO_NOT_THIS_STATE_industrial_complex }
-				}
-				set_state_flag = TRM_DO_NOT_THIS_STATE_industrial_complex
-				remove_building = {
-					type = industrial_complex
-					level = 1
-				}
 			}
 			every_owned_state = { 
 				limit = { 
@@ -4481,23 +4491,20 @@ TRN_after_war_decisions = {
 	}
 	
 	TRM_unification_propaganda = {
+		allowed = { always = no }
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
 		available = {
-			has_completed_focus = TRM_germany_union
+			#has_completed_focus = TRM_germany_union
+			
 			any_owned_state = {
-				OR = {
-					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
-					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
-					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
-					has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
-				}
 				NOT = { has_dynamic_modifier = { modifier = unity_propaganda } }
+				is_core_of = GEM
 			}
 			NOT = { has_idea = TRM_anti_gehenna_idea }
 		}
-		visible = { has_completed_focus = TRM_germany_union }
+		#visible = { has_completed_focus = TRM_germany_union }
 
 		cost = 75
 		fire_only_once = no
@@ -4511,14 +4518,7 @@ TRN_after_war_decisions = {
 		}
 		complete_effect = {
 			every_owned_state = {
-				limit = {
-					OR = {
-						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
-						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
-						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
-						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
-					}
-				}
+				limit = { is_core_of = GEM }
 				add_dynamic_modifier = {
 					modifier = unity_propaganda
 					days = 90
@@ -4530,14 +4530,15 @@ TRN_after_war_decisions = {
 	}
 	
 	TRM_Decline_of_the_anti_gehenna_sentiment = {
+		allowed = { always = no }
 
 		icon = GFX_decision_oppression
 
 		available = {
-			has_completed_focus = TRM_germany_union
+			#has_completed_focus = TRM_germany_union
 			has_idea = TRM_anti_gehenna_idea
 		}
-		visible = { has_completed_focus = TRM_germany_union }
+		#visible = { has_completed_focus = TRM_germany_union }
 
 		cost = 150
 		fire_only_once = yes
@@ -4556,67 +4557,6 @@ TRN_after_war_decisions = {
 		remove_effect = {
 			remove_ideas = TRM_anti_gehenna_idea
 		}
-	}
-
-	TRM_wargoal_FRM = {
-		icon = GFX_decision_eng_blackshirt_march
-		allowed = { }
-    	available = {
-            1023 = {
-                NOT = {
-                    is_owned_by = ROOT
-                }
-            }
-            28 = {
-                NOT = {
-                    is_owned_by = ROOT
-                }
-            }
-        } 
-		ai_will_do = { 
-            base = 0
-			modifier = {
-				add = 1000
-				FRM = { exists = yes }
-				AND = {
-					1023 = { is_owned_by = FRM }
-					28 = { is_owned_by = FRM }
-				}
-			}
-        }
-        visible = { 
-            1023 = {
-                NOT = {
-                    is_owned_by = ROOT
-                }
-            }
-            28 = {
-                NOT = {
-                    is_owned_by = ROOT
-                }
-            }
-        }
-		
-		fire_only_once = yes
-		
-        days_remove = 25
-        complete_effect = {
-            ROOT = {
-                declare_war_on = {
-                    target = 28.owner
-                    type = annex_everything
-                }
-            }
-            ROOT = {
-                declare_war_on = {
-                    target = 1023.owner
-                    type = annex_everything
-                }
-            }
-		}
-        modifier = {
-            breakthrough_factor = 0.15
-        }
 	}
 
     TRM_Recapture_of_Gehenna = {
@@ -4832,7 +4772,7 @@ TRN_after_war_decisions = {
 							id = TRN_after_war_event.27
 						}
 					}
-					10 = {
+					5 = {
 						custom_effect_tooltip = NO_EFFECT
 					}
 				}
@@ -4842,11 +4782,12 @@ TRN_after_war_decisions = {
 
 	TRM_United_Law = { # \"연합법\"
 		icon = GFX_decision_SWE_paid_holidays_policy
+		allowed = { always = no }
 
 		visible = {
 		}
 		available = {
-			has_completed_focus = TRM_germany_union
+			#has_completed_focus = TRM_germany_union
 			has_stability > 0.6
 			NOT = { has_idea = TRM_anti_gehenna_idea }
 			GEM = {
@@ -4872,6 +4813,20 @@ TRN_after_war_decisions = {
         modifier = { }
         complete_effect = {
 			remove_mission = TRM_loop_Gehenna_Resistance
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
+						has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
+					}
+				}
+				remove_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
+				remove_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
+				remove_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
+				remove_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
+			}
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -7062,13 +7017,13 @@ TRN_Mika_honor_decision_cat = {
 			has_idea = TRN_trinity_volunteer_corps_ns
 		}
 		
-		ai_hint_pp_cost = 50
+		ai_hint_pp_cost = 51
 		custom_cost_text = TRN_destroy_TVC_cost
 		custom_cost_trigger = {
 			NOT = { has_political_power < 50 }
 			OR = {
 				is_ai = yes
-				NOT = { has_equipment = { infantry_equipment < 1000 } }
+				NOT = { has_equipment = { infantry_equipment < 500 } }
 			}
 		}
 		days_remove = 30
@@ -7082,7 +7037,7 @@ TRN_Mika_honor_decision_cat = {
 					limit = { is_ai = no }
 					add_equipment_to_stockpile = {
 						type = infantry_equipment
-						amount = -1000
+						amount = -500
 					}
 				}
 			}
@@ -7539,6 +7494,39 @@ TRN_economic_decisions_category = {
 				value = 0.5
 			}
 
+		}
+	}
+	TRN_dessert_shop_expansion = {
+		icon = GFX_decision_TRN_sugarush
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = { is_owned_and_controlled_by = ROOT }
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			#civilian_factory_use = 1
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+
+		remove_effect = {
+			FROM = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 }

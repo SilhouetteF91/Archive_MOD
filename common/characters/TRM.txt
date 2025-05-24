@@ -807,6 +807,10 @@ characters={
 				large= GFX_TRN_Ajitani_Hifumi_Portrait
 				small= GFX_TRN_Ajitani_Hifumi_Swim_idea
 			}
+			civilian={
+				large= GFX_TRN_Ajitani_Hifumi_Portrait
+				small= GFX_TRN_Ajitani_Hifumi_idea
+			}
 		}
 		gender = female
 		corps_commander={
@@ -835,7 +839,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 75
 			slot = theorist
 			desc = TRN_Hifumi_advisor_desc
 			idea_token = glgnal_tndudqhr_theorist
@@ -850,6 +854,26 @@ characters={
 			}
 			traits = {
 				blitzkrieg_theorist
+			}
+		}
+		advisor={
+			cost = 150
+			slot = political_advisor
+			desc = TRN_Hifumi_advisor_desc
+			idea_token = TRN_Hifumi_political_advisor
+			allowed = {
+				original_tag = TRM
+			}
+			available = {
+				if = { limit = { has_character_flag = TRM_forced_dismissal_flag }
+					NOT = { has_character_flag = TRM_forced_dismissal_flag }
+				}
+			}
+			visible = {
+				has_completed_focus = TRN_student_solidarity
+			}
+			traits = {
+				popular_figurehead3
 			}
 		}
 	}

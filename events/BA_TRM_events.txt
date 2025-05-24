@@ -10,6 +10,7 @@ add_namespace = trnfla # 플레이버 이벤트
 add_namespace = trinity 
 add_namespace = trnhonor # 명예
 add_namespace = trinitynews # 뉴스 이벤트
+add_namespace = trinitypartyconvention # 전당대회용
 ##
 # TRMDIP 1 ~ 49 리워크 이전 외교 이벤트
 # TRMDIP 50~ 리워크 이후 외교 이벤트
@@ -331,8 +332,11 @@ country_event = { #게헨나 항복 이벤트
 	immediate = { set_global_flag = TRINITY_WON_THE_GEHENNA }
 	trigger = {
 		original_tag = TRM
+		OR = {
+			has_completed_focus = TRM_invasion_of_devils
+			has_completed_focus = TRM_war_with_gehenna
+		}
 		has_government = fascism
-        has_completed_focus = TRM_war_with_gehenna
 		NOT = { has_global_flag = TRINITY_WON_THE_GEHENNA }
         TRM = {
             count_triggers = {
@@ -379,7 +383,14 @@ country_event = { #게헨나 항복 이벤트
 	}
 	option = {
 		name = TRM_event.15.a
-		complete_national_focus = TRM_after_war
+		if = {
+			limit = { has_focus_tree = TRM_focus_tree }
+			complete_national_focus = TRM_after_war
+		}
+		hidden_effect = {
+			country_event = { id = trinity.41 days = 03 }
+		}
+		set_country_flag = TRM_after_war_flag_decision_active
 		unlock_decision_category_tooltip = TRN_after_war_decisions
 		swap_ideas = {
 			remove_idea = TRM_mika_trinity
@@ -4588,15 +4599,6 @@ country_event = {
 	
 	option = { #
 		name = TRN_after_war_event.20.a
-		every_owned_state = {
-			limit = {
-				OR = {
-					is_core_of = GEM
-					is_core_of = GEH
-				}
-			}
-			add_resistance = 45
-		}
 		set_variable = { TRM_GehennaResistance_speed = 50 }
 		activate_mission = TRM_loop_Gehenna_Resistance
 		hidden_effect = {
@@ -4606,7 +4608,7 @@ country_event = {
 	}
 }
 
-# 군정장관 임명명
+# 군정장관 임명
 country_event = { 
 	id = TRN_after_war_event.21
 	title = TRN_after_war_event.21.t
@@ -9121,7 +9123,10 @@ country_event = { # 연합전선의 부상
 	option = {
 		name = trinity.24.a
 		add_stability = 0.05
-		add_war_support = 0.05	
+		add_war_support = 0.05
+		hidden_effect = {
+			country_event = { id = trinity.25 days = 05 }
+		}
     }
 }
 
@@ -9137,19 +9142,130 @@ country_event = { # 파테르 국민연합의 본질
 	option = {
 		name = trinity.25.a
 		ai_chance = { base = 5 }
-		TRM_bop_medium_increase_effect = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.15
+		}
 		hidden_effect = {
-			country_event = { id = trinity.26 days = 03 }
+			country_event = { id = trinitypartyconvention.1 days = 03 }
 		}
     }
 
 	option = {
 		name = trinity.25.b
-		TRM_bop_medium_decrease_effect = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
+		hidden_effect = {
+			country_event = { id = trinitypartyconvention.1 days = 03 }
+		}
+    }
+}
+
+country_event = { # 전당 대회 - 1
+	id = trinitypartyconvention.1
+	title = trinitypartyconvention.1.t
+	desc = trinitypartyconvention.1.desc
+	picture = GFX_event_kozeki_ui
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinitypartyconvention.1.a 
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
+		hidden_effect = {
+			country_event = { id = trinitypartyconvention.2 days = 03 }
+		}
+		
+	}
+	option = {
+		name = trinitypartyconvention.1.b
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.05
+		}
+		hidden_effect = {
+			country_event = { id = trinitypartyconvention.2 days = 03 }
+		}
+		
+	}
+}
+
+country_event = { # 전당 대회 - 2
+	id = trinitypartyconvention.2
+	title = trinitypartyconvention.2.t
+	desc = trinitypartyconvention.2.desc
+	picture = GFX_event_kozeki_ui
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinitypartyconvention.2.a 
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
+		hidden_effect = {
+			country_event = { id = trinitypartyconvention.3 days = 03 }
+		}
+		
+	}
+	option = {
+		name = trinitypartyconvention.2.b
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.05
+		}
+		hidden_effect = {
+			country_event = { id = trinitypartyconvention.3 days = 03 }
+		}
+		
+	}
+}
+
+country_event = { # 전당 대회 - 2
+	id = trinitypartyconvention.3
+	title = trinitypartyconvention.3.t
+	desc = trinitypartyconvention.3.desc
+	picture = GFX_event_kozeki_ui
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinitypartyconvention.3.a 
+		set_temp_variable = { TRN_Honor_change = 5 }
+		TRN_add_Honor = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
+		add_political_power = -50
+		add_stability = 0.03
 		hidden_effect = {
 			country_event = { id = trinity.26 days = 03 }
 		}
-    }
+		
+	}
+	option = {
+		name = trinitypartyconvention.3.b
+		set_temp_variable = { TRN_Honor_change = -7 }
+		TRN_add_Honor = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.05
+		}
+		hidden_effect = {
+			country_event = { id = trinity.26 days = 03 }
+		}
+		
+	}
 }
 
 country_event = { # 대회의 끝
@@ -9186,7 +9302,10 @@ country_event = { # 미소노 미카의 인상
 			base = 10
 		}
 		add_country_leader_trait = TRN_trinity_messiah
-		TRM_bop_very_low_decrease_effect = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
     }
 
 	option = {
@@ -9195,7 +9314,11 @@ country_event = { # 미소노 미카의 인상
 			base = 0
 		}
 		add_country_leader_trait = TRN_der_fuhrer
-		TRM_bop_very_low_increase_effect = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.05
+		}
+		
 		
     }
 }
@@ -9214,7 +9337,10 @@ country_event = { # 트리니티 교육과정
 		ai_chance = { 
 			base = 0
 		}
-		TRM_bop_very_low_increase_effect = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.05
+		}
 		add_ideas = TRN_new_culture_militarism_ns
     }
 
@@ -9223,7 +9349,10 @@ country_event = { # 트리니티 교육과정
 		ai_chance = { 
 			base = 10 
 		}
-		TRM_bop_very_low_decrease_effect = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
 		add_ideas = TRN_new_culture_culture_technology_ns
 		
     }
@@ -9243,7 +9372,10 @@ country_event = { # 종교 갈등
 		ai_chance = { 
 			base = 10
 		}
-		TRM_bop_low_decrease_effect = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.05
+		}
 		add_stability = -0.1
 		add_political_power = 120
 		# 미니게임 하나 오픈
@@ -9254,7 +9386,10 @@ country_event = { # 종교 갈등
 		ai_chance = { 
 			base = 5 
 		}
-		TRM_bop_very_low_decrease_effect = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
 		add_stability = -0.05
 		# 미니게임 하나 오픈
     }
@@ -9274,11 +9409,14 @@ country_event = { # 여성 인권에 대한 논의
 		ai_chance = { 
 			base = 10
 		}
-		TRM_bop_very_low_decrease_effect = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
 		add_stability = -0.05
 		add_timed_idea = {
 			idea = TRN_womens_rights_movement_ns
-			days = 70
+			days = 360
 		}
     }
 
@@ -9287,7 +9425,14 @@ country_event = { # 여성 인권에 대한 논의
 		ai_chance = { 
 			base = 2
 		}
-		TRM_bop_very_low_increase_effect = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.05
+		}
+		add_timed_idea = {
+			idea = TRN_womens_rights_movement_war_support_ns
+			days = 360
+		}
 		add_stability = 0.02
     }
 }
@@ -9307,7 +9452,10 @@ country_event = { # 독일 문화의 운명
 		ai_chance = { 
 			base = 10
 		}
-		TRM_bop_very_low_decrease_effect = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = 0.05
+		}
     }
 
 	option = {
@@ -9316,7 +9464,10 @@ country_event = { # 독일 문화의 운명
 		ai_chance = { 
 			base = 2
 		}
-		TRM_bop_very_low_increase_effect = yes
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
     }
 	
 }
@@ -9466,6 +9617,10 @@ country_event = { # 소규모 동아리들의 운명
 	is_triggered_only = yes
     fire_only_once = no
 
+	immediate = {
+		hidden_effect = { country_event = { id = trnfla.20 days = 25} }
+	}
+
 	option = { 
 		name = trinity.37.a
 		add_political_power = 75
@@ -9600,7 +9755,127 @@ unit_leader_event = { # 한스 프리체
     }
 }
 
-news_event = {
+country_event = { # 트리니티 재개발
+	id = trinity.40
+	title = trinity.40.t
+	desc = trinity.40.desc
+	picture = GFX_event_Trinity_Campus
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = { 
+		name = trinity.40.a
+    }
+}
+
+country_event = { # 게헨나 학원에서 발생한 저항의 움직임
+	id = trinity.41
+	title = trinity.41.t
+	desc = trinity.41.desc
+	picture = GFX_event_Trinity_Campus
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = { 
+		name = trinity.41.a
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+				}
+			}
+			add_resistance = 45
+		}
+		set_variable = { TRM_GehennaResistance_speed = 50 }
+		activate_mission = TRM_loop_Gehenna_Resistance
+    }
+}
+country_event = { #게헨나 항복 이벤트
+	id = trinity.42
+	title = trinity.42.t
+	desc = trinity.42.desc
+	picture = GFX_event_TRM_event_15
+
+	is_triggered_only = no
+	fire_only_once = yes
+	immediate = { set_global_flag = TRINITY_WON_THE_GEHENNA }
+	trigger = {
+		original_tag = TRM
+		has_completed_focus = TRN_spiritual_warfare
+		has_government = fascism
+		NOT = { has_global_flag = TRINITY_WON_THE_GEHENNA }
+        TRM = {
+            count_triggers = {
+                amount = 3
+                controls_state = 59
+                controls_state = 56
+                controls_state = 57
+                controls_state = 55
+                controls_state = 51
+                controls_state = 1022
+                controls_state = 1025
+                controls_state = 42
+                controls_state = 50
+                controls_state = 54
+                controls_state = 53
+                controls_state = 52
+                controls_state = 8
+            }
+        }
+		GEM = {
+			OR = {
+				exists = no
+				has_capitulated = yes
+				is_subject = yes
+			}
+		}
+		GEH = {
+			OR = {
+				exists = no
+				has_capitulated = yes
+				is_subject = yes
+			}
+		}
+		HEU = {
+			OR = {
+				exists = no
+				has_capitulated = yes
+				is_subject = yes
+			}
+		}
+	}
+	mean_time_to_happen = { 
+		days = 5
+	}
+	option = {
+		name = TRM_event.15.a
+		hidden_effect = {
+			country_event = { id = trinity.41 days = 03 }
+		}
+		set_country_flag = TRM_after_war_flag_decision_active
+		unlock_decision_category_tooltip = TRN_after_war_decisions
+        hidden_effect = { news_event = { id = BA_news.5 } }
+	}
+}
+
+country_event = {
+	id = trnhonor.0
+	title = trnhonor.0.t
+	desc = trnhonor.0.desc
+	picture = GFX_event_Trinity_Campus
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = trnhonor.0.a
+
+	}
+}
+
+news_event = { # 세이아 피습 사건
 	id = trinitynews.1
 	title = trinitynews.1.t
 	desc = trinitynews.1.desc
@@ -9667,7 +9942,7 @@ news_event = {
 		}
 	}
 }
-news_event = {
+news_event = { # 미소노 미카의 정권 찬탈
 	id = trinitynews.2
 	title = trinitynews.2.t
 	desc = trinitynews.2.desc
@@ -9720,7 +9995,7 @@ news_event = {
 		}
 	}
 }
-news_event = {
+news_event = { # 아이돌 마리
 	id = trinitynews.3
 	title = trinitynews.3.t
 	desc = trinitynews.3.desc
@@ -9746,7 +10021,7 @@ news_event = {
 		}
 	}
 }
-news_event = {
+news_event = { # 트리니티 - 에덴 협정
 	id = trinitynews.4
 	title = trinitynews.4.t
 	desc = trinitynews.4.desc
@@ -9791,7 +10066,7 @@ news_event = {
 		}
 	}
 }
-news_event = {
+news_event = { # 트리니티 - 게헨나 전쟁
 	id = trinitynews.5
 	title = trinitynews.5.t
 	desc = trinitynews.5.desc
@@ -9801,6 +10076,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+		set_global_flag = BA_Trinity_Gehenna_War
 	}
 
 	option = {
@@ -10148,20 +10424,29 @@ country_event = { # 나치즘
 
 	}
 }
-country_event = { # 충성경쟁
+country_event = { # 총학생회장의 행방
 	id = trnfla.14
 	title = trnfla.14.t
 	desc = trnfla.14.desc
-	picture = GFX_report_event_canada_ronnie
+	picture = GFX_COU_event_start_report
 	
-	is_triggered_only = yes
+	is_triggered_only = no
     fire_only_once = no
+
+	trigger = {
+		original_tag = TRM
+		has_global_flag = COU_event_1_flag
+		NOT = { has_country_flag = TRN_trnfal_14_triggered }
+	}
+	mean_time_to_happen = { days = 2 }
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TRN_trnfal_14_triggered
+		}
+	}
 
 	option = {
 		name = trnfla.14.a
-		hidden_effect = {
-			country_event = { id = trnfla.16 days = 45 } # 충성경쟁 - 부작용 
-		}
 	}
 }
 country_event = { # 동행인
@@ -10189,7 +10474,51 @@ country_event = { # 부작용
 
 	option = {
 		name = trnfla.16.a
+		add_political_power = -50
+		add_stability = 0.03
+		
+		set_temp_variable = { TRN_Honor_change = 5 }
+		TRN_add_Honor = yes
+	}
 
+	option = {
+		name = trnfla.16.b
+		add_political_power = -50
+		add_stability = 0.03
+
+		set_temp_variable = { TRN_Honor_change = -5 }
+		TRN_add_Honor = yes
+	}
+
+	option = { # 명예가 높으면 이게 나옴
+		name = trnfla.16.c
+		trigger = {
+			OR = {
+				TRN_high_honor = yes
+				TRN_very_high_honor = yes
+			}
+		}
+		custom_effect_tooltip = TRN_your_honor_is_high
+		set_temp_variable = { TRN_Honor_change = 10 }
+		TRN_add_Honor = yes
+		add_political_power = -75
+		add_stability = 0.05
+	}
+
+	option = { # 명예가 낮으면 이게 나옴
+		name = trnfla.16.d
+		trigger = {
+			OR = {
+				TRN_low_honor = yes
+				TRN_very_low_honor = yes
+			}
+		}
+		custom_effect_tooltip = TRN_your_honor_is_low
+		add_stability = -0.03
+		effect_tooltip = { add_manpower = -120 }
+		set_temp_variable = { TRN_Honor_change = -10 }
+		TRN_add_Honor = yes
+		
 	}
 }
 unit_leader_event = { # 침울한 하늘 아래에서
@@ -10219,7 +10548,7 @@ unit_leader_event = { # 우이 당황
 		name = trnfla.18.a 
 	}
 }
-unit_leader_event = { # 얄마르 샤흐트 - 작성 예정
+unit_leader_event = { # 얄마르 샤흐트
 	id = trnfla.19
 	title = trnfla.19.t
 	desc = trnfla.19.desc
@@ -10232,3 +10561,18 @@ unit_leader_event = { # 얄마르 샤흐트 - 작성 예정
 		name = trnfla.19.a 
 	}
 }
+country_event = { # 다도부가 예산 깎이니 빡쳐서 학교 수영장에 홍차 던지는 사건
+	id = trnfla.20
+	title = trnfla.20.t
+	desc = trnfla.20.desc
+	picture = GFX_report_event_generic_swimmingpool
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnfla.20.a 
+	}
+}
+
+
