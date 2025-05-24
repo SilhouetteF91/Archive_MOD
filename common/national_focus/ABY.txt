@@ -13,6 +13,1909 @@ focus_tree = {
 	}
 	default = no
 	shared_focus = BA_new_world_technology
+	
+	focus = {
+		id = ABY_focus_first  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 0
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			country_event = {
+				id = ABY_descision_focus_event.1
+			}
+			clr_country_flag = ABY_descision_focus_first_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_first_completed_flag
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_1  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 1
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			#중점 완료시 얻는 보상
+			custom_effect_tooltip = ABY_industrial_concern_allow
+			if = { limit = { has_idea = BA_railway_gauge_issue }
+				modify_timed_idea = {
+					idea = BA_railway_gauge_issue
+					days = -240
+				}
+			}
+			clr_country_flag = ABY_descision_focus_abydos_1_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_1_completed_flag
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_2  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 2
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_katakata
+				add_idea = ABY_idea_katakata3
+			}
+			country_event = {
+				id = ABY_descision_focus_event.15
+			}
+			clr_country_flag = ABY_descision_focus_abydos_2_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_2_completed_flag
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_3  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 3
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			remove_ideas = {
+				ABY_idea_KAI_cornjs
+			}
+			add_timed_idea = {
+				idea = ABY_idea_cornjs_give
+				days = 360
+			}
+			country_event = {
+				id = ABY_descision_focus_event.24
+			}
+			clr_country_flag = ABY_descision_focus_abydos_3_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_3_completed_flag
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_4  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 4
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			custom_effect_tooltip = ABY_militia_div_cap_1_tt
+			hidden_effect = {
+				add_to_variable = { ABY_halo_milita_cap = 1 }
+				set_division_template_cap = {  division_template = "ABYDOS National Brigade" division_cap = ABY_halo_milita_cap }
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"ABYDOS National Brigade\" division_template = \"ABYDOS National Brigade\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
+			clr_country_flag = ABY_descision_focus_abydos_4_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_4_completed_flag
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_5  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 5
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			remove_ideas = {
+				ABY_idea_katakata3
+			}
+			country_event = {
+				id = ABY_descision_focus_event.4
+			}
+			clr_country_flag = ABY_descision_focus_abydos_5_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_5_completed_flag
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_6  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 6
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_abydos_6_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_6_completed_flag
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command
+				}
+				country_event = {
+					id = ABY_descision_focus_event.25
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_2
+				}
+				country_event = {
+					id = ABY_descision_focus_event.26
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_3
+				}
+				country_event = {
+					id = ABY_descision_focus_event.27
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_4
+				}
+				country_event = {
+					id = ABY_descision_focus_event.28
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_5
+				}
+				country_event = {
+					id = ABY_descision_focus_event.29
+				}
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_7  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 7
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_abydos_7_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_7_completed_flag
+			custom_effect_tooltip = ABY_militia_div_cap_1_tt
+			hidden_effect = {
+				add_to_variable = { ABY_halo_milita_cap = 1 }
+				set_division_template_cap = {  division_template = "ABYDOS National Brigade" division_cap = ABY_halo_milita_cap }
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"ABYDOS National Brigade\" division_template = \"ABYDOS National Brigade\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_8  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 8
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_abydos_8_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_8_completed_flag
+			country_event = {
+				id = ABY_descision_focus_event.5
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_9  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 9
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_abydos_9_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_9_completed_flag
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command
+				}
+				country_event = {
+					id = ABY_descision_focus_event.25
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_2
+				}
+				country_event = {
+					id = ABY_descision_focus_event.26
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_3
+				}
+				country_event = {
+					id = ABY_descision_focus_event.27
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_4
+				}
+				country_event = {
+					id = ABY_descision_focus_event.28
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_5
+				}
+				country_event = {
+					id = ABY_descision_focus_event.29
+				}
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_10  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 10
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_abydos_10_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_10_completed_flag
+			custom_effect_tooltip = ABY_tt_syemmata_allow
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1
+			}
+			set_technology = {
+				railway_gun = 1 
+				popup = no 
+			}
+			69 = {
+				add_building_construction = {
+					type = land_facility
+					level = 1
+					instant_build = yes    
+					province = 3418 # North of Rome
+				}
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_11  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 11
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_abydos_11_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_11_completed_flag
+            every_country = {
+                limit = {
+					original_tag = HYA
+                }
+                ABY = {
+                    declare_war_on = {
+				        target = PREV
+				        type = liberate_wargoal
+                    }
+                }
+            }
+			country_event = {
+				id = ABY_descision_focus_event.31
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_12  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 12
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_abydos_12_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_12_completed_flag
+			every_state = {
+				limit = {
+					is_controlled_by = SHA
+					OR = {
+						state = 9
+						state = 72
+						state = 74
+					}
+				}
+				set_demilitarized_zone = yes
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_13  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 13
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_abydos_13_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_13_completed_flag
+			add_timed_idea = {
+				idea = ABY_idea_SHA_war_2
+				days = 30
+			}
+            every_country = {
+                limit = {
+					original_tag = SHA
+                }
+                ABY = {
+                    declare_war_on = {
+				        target = PREV
+				        type = liberate_wargoal
+                    }
+                }
+            }
+			country_event = {
+				id = ABY_descision_focus_event.32
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_14  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 14
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_abydos_14_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_14_completed_flag
+			add_ideas = {
+				ABY_idea_SHA_war
+			}
+            every_country = {
+                limit = {
+					original_tag = SHA
+                }
+                ABY = {
+                    declare_war_on = {
+				        target = PREV
+				        type = liberate_wargoal
+                    }
+                }
+            }
+			country_event = {
+				id = ABY_descision_focus_event.32
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_abydos_15  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 15
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_abydos_15_ongoing_flag
+			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
+			set_country_flag = ABY_descision_focus_abydos_15_completed_flag
+			add_political_power = 1500
+			add_stability = 0.5
+			custom_effect_tooltip = ABY_tt_EV_arrest
+			hidden_effect = {
+				retire_character = ABY_czech_EV
+				retire_character = ABY_czech_EV_2
+			}
+			promote_character = ABYDO_Ayane
+			
+			every_state = {
+				limit = {
+					is_controlled_by = ABY
+					OR = {
+						is_core_of = SHA
+						is_core_of = HYA
+					}
+				}
+				add_core_of = ABY
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+			}
+			set_country_flag = ABY_flag_union_descision
+			set_country_flag = ABY_tt_union_descision
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_czecho_1  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 16
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_czecho_1_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
+			set_country_flag = ABY_descision_focus_czecho_1_completed_flag
+			country_event = {
+				id = ABY_descision_focus_event.33
+			}
+			custom_effect_tooltip = ABY_new_tt_4
+			set_country_flag = ABY_flag_recuit_czech
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_czecho_2  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 17
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_czecho_2_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
+			set_country_flag = ABY_descision_focus_czecho_2_completed_flag
+			custom_effect_tooltip = ABY_industrial_concern_allow_skoda
+			69 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_czecho_3  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 18
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_czecho_3_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
+			set_country_flag = ABY_descision_focus_czecho_3_completed_flag
+			#중점 완료시 얻는 보상
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command
+				}
+				country_event = {
+					id = ABY_descision_focus_event.25
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_2
+				}
+				country_event = {
+					id = ABY_descision_focus_event.26
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_3
+				}
+				country_event = {
+					id = ABY_descision_focus_event.27
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_4
+				}
+				country_event = {
+					id = ABY_descision_focus_event.28
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_5
+				}
+				country_event = {
+					id = ABY_descision_focus_event.29
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_czecho_4  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 19
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_czecho_4_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
+			set_country_flag = ABY_descision_focus_czecho_4_completed_flag
+			#중점 완료시 얻는 보상
+			69 = {
+				create_unit = {
+					division = "name = \"Czechoslovakia Border Guards\" division_template = \"Czechoslovakia Border Guards\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_czecho_5  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 20
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_czecho_5_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
+			set_country_flag = ABY_descision_focus_czecho_5_completed_flag
+			#중점 완료시 얻는 보상
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command
+				}
+				country_event = {
+					id = ABY_descision_focus_event.25
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_2
+				}
+				country_event = {
+					id = ABY_descision_focus_event.26
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_3
+				}
+				country_event = {
+					id = ABY_descision_focus_event.27
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_4
+				}
+				country_event = {
+					id = ABY_descision_focus_event.28
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_5
+				}
+				country_event = {
+					id = ABY_descision_focus_event.29
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_czecho_6  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 21
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_czecho_6_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
+			set_country_flag = ABY_descision_focus_czecho_6_completed_flag
+			#중점 완료시 얻는 보상
+			add_timed_idea = {
+				idea = ABY_idea_jew_comming
+				days = 720
+			}
+			country_event = {
+				id = ABY_new_event.63
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_czecho_7  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 22
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_czecho_7_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
+			set_country_flag = ABY_descision_focus_czecho_7_completed_flag
+			69 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = BA_factoriesof_new_world_tt
+			set_country_flag = BA_can_remove_isolation_flag
+			custom_effect_tooltip = ABY_industrial_concern_allow_2
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_czecho_8  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 23
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_czecho_8_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
+			set_country_flag = ABY_descision_focus_czecho_8_completed_flag
+			#중점 완료시 얻는 보상
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command
+				}
+				country_event = {
+					id = ABY_descision_focus_event.25
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_2
+				}
+				country_event = {
+					id = ABY_descision_focus_event.26
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_3
+				}
+				country_event = {
+					id = ABY_descision_focus_event.27
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_4
+				}
+				country_event = {
+					id = ABY_descision_focus_event.28
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ABY_idea_no_command_5
+				}
+				country_event = {
+					id = ABY_descision_focus_event.29
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = SHA
+						is_core_of = HYA
+					}
+				}
+				add_claim_by = ABY
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_czecho_9  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 24
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_czecho_9_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
+			set_country_flag = ABY_descision_focus_czecho_9_completed_flag
+			#중점 완료시 얻는 보상
+			country_event = {
+				id = ABY_descision_focus_event.34
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_czecho_10  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 25
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_czecho_10_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
+			set_country_flag = ABY_descision_focus_czecho_10_completed_flag
+			country_event = {
+				id = ABY_descision_focus_event.35
+			}
+			#중점 완료시 얻는 보상
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_czecho_11  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 26
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_czecho_11_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
+			set_country_flag = ABY_descision_focus_czecho_11_completed_flag
+			#중점 완료시 얻는 보상
+			country_event = {
+				id = ABY_descision_focus_event.36
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_czecho_12  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 27
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_czecho_12_ongoing_flag
+			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
+			set_country_flag = ABY_descision_focus_czecho_12_completed_flag
+			#중점 완료시 얻는 보상
+			country_event = {
+				id = ABY_descision_focus_event.37
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_german_1  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 28
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_german_1_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
+			set_country_flag = ABY_descision_focus_german_1_completed_flag
+			#중점 완료시 얻는 보상
+			add_manpower = 3000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+			69 = {
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_german_2  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 29
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_german_2_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
+			set_country_flag = ABY_descision_focus_german_2_completed_flag
+			#중점 완료시 얻는 보상
+			country_event = {
+				id = ABY_descision_focus_event.22
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_german_3  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 30
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_german_3_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
+			set_country_flag = ABY_descision_focus_german_3_completed_flag
+			#중점 완료시 얻는 보상
+			add_manpower = 3000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+			69 = {
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_german_4  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 31
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_german_4_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
+			set_country_flag = ABY_descision_focus_german_4_completed_flag
+			#중점 완료시 얻는 보상
+			country_event = {
+				id = ABY_descision_focus_event.23
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_german_5  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 32
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_german_5_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
+			set_country_flag = ABY_descision_focus_german_5_completed_flag
+			#중점 완료시 얻는 보상
+			country_event = {
+				id = ABY_descision_focus_event.38
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_german_6  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 33
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_german_6_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
+			set_country_flag = ABY_descision_focus_german_6_completed_flag
+			#중점 완료시 얻는 보상
+			custom_effect_tooltip = ABY_new_tt_18
+			set_country_flag = ABY_flag_german_resistance_1
+			74 = {
+				set_demilitarized_zone = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_german_7  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 34
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_german_7_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
+			set_country_flag = ABY_descision_focus_german_7_completed_flag
+			#중점 완료시 얻는 보상
+			add_manpower = 3000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+			69 = {
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+				}
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_german_8  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 35
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_german_8_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
+			set_country_flag = ABY_descision_focus_german_8_completed_flag
+			#중점 완료시 얻는 보상
+			custom_effect_tooltip = ABY_new_tt_19
+			clr_country_flag = ABY_flag_german_resistance_1
+			set_country_flag = ABY_flag_german_resistance_2
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_german_9  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 36
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_german_9_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
+			set_country_flag = ABY_descision_focus_german_9_completed_flag
+			#중점 완료시 얻는 보상
+			add_timed_idea = {
+				idea = ABY_idea_thaya_plan
+				days = 360
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_german_10  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 37
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_german_10_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
+			set_country_flag = ABY_descision_focus_german_10_completed_flag
+			#중점 완료시 얻는 보상
+			1021 = {
+				set_demilitarized_zone = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_german_11  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 38
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_german_11_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
+			set_country_flag = ABY_descision_focus_german_11_completed_flag
+			#중점 완료시 얻는 보상
+			1021 = {
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ABY_focus_german_12  #중점명
+		#icon = GFX_ABY_focus_2 
+ 		cost = 0.00          #중점 일수(주)
+		search_filters = {
+			#중점의 타입
+		}
+		prerequisite = {
+			   #이전 중점
+		}
+		mutually_exclusive = {
+			   #반대되는 중점
+		}
+		x = 100      #좌표
+		y = 39
+		# relative_position_id = ABY_focus_
+		bypass = {
+			#중점 통과 조건
+		}
+		available = {
+			always = no
+			#중점 선행조건
+		}
+
+		select_effect = {
+			#중점 시작시 얻는 보상
+		}
+		completion_reward = {
+			clr_country_flag = ABY_descision_focus_german_12_ongoing_flag
+			clr_country_flag = ABY_descision_focus_german_line_doing_flag
+			set_country_flag = ABY_descision_focus_german_12_completed_flag
+			#중점 완료시 얻는 보상
+			153 = {
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"German milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
+					owner = ABY
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		}
+	}
 	focus = {
 		id = ABY_focus_army_1    #중점명
 		icon = GFX_focus_unknown
