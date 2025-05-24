@@ -796,7 +796,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_helicopter_equipment_2_medium"
-		texturefile = "gfx/interface/technologies/KSP_ah_64d.dds"
+		texturefile = "gfx/interface/technologies/kivotos_helicopter_equipment.dds"
 	}
 
 	#
