@@ -21,7 +21,7 @@ focus_tree = {
 	focus = {
 		id = KOR_republic_of_korea_establish
 		icon = GFX_focus_SWE_organize_a_putsch
-		cost = 8
+		cost = 10
 
 		x = 2
 		y = 0
@@ -44,7 +44,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = {  }
+		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_republic_of_korea_establish"
@@ -60,7 +60,7 @@ focus_tree = {
 	focus = {
 		id = KOR_republic_of_korea_disposal_of_enemy_property
 		icon = GFX_focus_generic_resource_extraction
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_republic_of_korea_establish
 
@@ -81,7 +81,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = {  }
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_republic_of_korea_establish"
@@ -122,7 +122,7 @@ focus_tree = {
 	focus = {
 		id = KOR_republic_of_korea_disposal_of_vested_farmland
 		icon = GFX_focus_IRQ_decouple_from_the_pound
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_republic_of_korea_establish
 
@@ -143,7 +143,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = {  }
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_republic_of_korea_establish"
@@ -208,7 +208,7 @@ focus_tree = {
 	focus = {
 		id = KOR_republic_of_korea_national_security_law
 		icon = GFX_focus_IRQ_attempted_assasination_of_sidqi
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_republic_of_korea_establish
 
@@ -233,7 +233,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = {  }
+		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_republic_of_korea_establish"
@@ -262,7 +262,7 @@ focus_tree = {
 	focus = {
 		id = KOR_republic_of_korea_korean_style_democracy
 		icon = GFX_focus_usa_voter_registration_act
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_republic_of_korea_establish
 
@@ -287,7 +287,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = {  }
+		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_republic_of_korea_establish"
@@ -316,8 +316,8 @@ focus_tree = {
 
 	focus = {
 		id = KOR_peoples_republic_of_korea_establish
-		icon = GFX_focus_SWE_refuge_for_revolutionaries
-		cost = 8
+		icon = GFX_focus_PER_strengthen_the_tudeh
+		cost = 10
 
 		relative_position_id = KOR_republic_of_korea_establish
 
@@ -358,7 +358,7 @@ focus_tree = {
 	focus = {
 		id = KOR_peoples_republic_of_korea_dictatorship
 		icon = GFX_goal_support_communism
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_peoples_republic_of_korea_establish
 
@@ -393,7 +393,7 @@ focus_tree = {
 	focus = {
 		id = KOR_peoples_republic_of_korea_dictatorship_2
 		icon = GFX_focus_ARG_state_atheism
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_peoples_republic_of_korea_establish
 
@@ -422,8 +422,8 @@ focus_tree = {
 
 	focus = {
 		id = KOR_peoples_republic_of_korea_democracy
-		icon = GFX_focus_ARG_defense_and_democracy
-		cost = 8
+		icon = GFX_focus_GER_end_european_communism
+		cost = 10
 
 		relative_position_id = KOR_peoples_republic_of_korea_establish
 
@@ -464,7 +464,7 @@ focus_tree = {
 	focus = {
 		id = KOR_peoples_republic_of_korea_forgiveness
 		icon = GFX_focus_generic_university_2
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_peoples_republic_of_korea_establish
 
@@ -496,8 +496,8 @@ focus_tree = {
 
 	focus = {
 		id = KOR_peoples_republic_of_korea_female
-		icon = GFX_focus_generic_university_1
-		cost = 8
+		icon = GFX_focus_generic_universal_suffrage
+		cost = 10
 
 		relative_position_id = KOR_peoples_republic_of_korea_establish
 
@@ -536,7 +536,7 @@ focus_tree = {
 	focus = {
 		id = KOR_peoples_republic_of_korea_multiethnic
 		icon = GFX_focus_BRA_support_sugar_barons
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_peoples_republic_of_korea_establish
 
@@ -554,7 +554,7 @@ focus_tree = {
 			has_government = democratic
 		}
 
-		search_filters = {  }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_democracy"
@@ -571,7 +571,7 @@ focus_tree = {
 	focus = {
 		id = KOR_puppet_korea_gov
 		icon = GFX_focus_chi_collaboration_with_the_japanese
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_peoples_republic_of_korea_establish
 
@@ -599,7 +599,7 @@ focus_tree = {
 	focus = {
 		id = KOR_puppet_korea_gov_2
 		icon = GFX_focus_ITA_liberation_or_death
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_puppet_korea_gov
 
@@ -627,7 +627,7 @@ focus_tree = {
 	focus = {
 		id = KOR_puppet_korea_gov_3
 		icon = GFX_focus_research
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_puppet_korea_gov
 
@@ -642,7 +642,7 @@ focus_tree = {
 			is_puppet_of = JAP
 		}
 
-		search_filters = {  }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_puppet_korea_gov_2"
@@ -659,7 +659,7 @@ focus_tree = {
 	focus = {
 		id = KOR_puppet_korea_gov_fascism
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_puppet_korea_gov
 
@@ -703,7 +703,7 @@ focus_tree = {
 	focus = {
 		id = KOR_puppet_korea_gov_non_fascism
 		icon = GFX_focus_generic_railroad
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_puppet_korea_gov
 
@@ -795,7 +795,7 @@ focus_tree = {
 	focus = {
 		id = KOR_economy_cheonggye
 		icon = GFX_focus_IRQ_construct_the_kut_barrage
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_republic_of_korea_establish
 
@@ -812,7 +812,7 @@ focus_tree = {
 
 		}
 
-		search_filters = {  }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_dictatorship"
@@ -831,7 +831,7 @@ focus_tree = {
 	focus = {
 		id = KOR_economy_urbanization
 		icon = GFX_focus_SWE_urbanization
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_economy_cheonggye
 
@@ -846,7 +846,7 @@ focus_tree = {
 
 		}
 
-		search_filters = {  }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_dictatorship"
@@ -896,7 +896,7 @@ focus_tree = {
 	focus = {
 		id = KOR_economy_mining_industry
 		icon = GFX_focus_generic_mining_industry
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_economy_cheonggye
 
@@ -911,7 +911,7 @@ focus_tree = {
 
 		}
 
-		search_filters = {  }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_dictatorship"
@@ -952,7 +952,7 @@ focus_tree = {
 	focus = {
 		id = KOR_economy_pro_kivotos
 		icon = GFX_focus_AFG_telegraph
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_economy_cheonggye
 
@@ -985,7 +985,7 @@ focus_tree = {
 	focus = {
 		id = KOR_economy_pro_kivotos_language
 		icon = GFX_focus_DEN_civilian_preparations
-		cost = 8
+		cost = 10
 
 		relative_position_id = KOR_economy_cheonggye
 
@@ -1012,6 +1012,397 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_economy_pro_kivotos_language"
 
 			add_research_slot = 1
+		}
+	}
+	
+	###############
+	### Army ###
+	###############
+
+	focus = {
+		id = KOR_army_focus_start
+		icon = GFX_focus_GER_support_the_proletarian_uprising
+		cost = 10
+
+		x = 4
+		y = 4
+
+		prerequisite = {
+
+		}
+
+		available = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_army_focus_start"
+
+			random_core_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			BA_mapower_idea_level_up = yes
+		}
+	}
+
+	focus = {
+		id = KOR_army_focus_pro_japanese
+		icon = GFX_focus_AUS_disregard_the_treaties
+		cost = 10
+
+		x = -2
+		y = 1
+
+		relative_position_id = KOR_army_focus_start
+
+		prerequisite = {
+			focus = KOR_army_focus_start
+		}
+
+		mutually_exclusive = {
+			focus = KOR_army_focus_anti_japanese
+		}
+
+		available = {
+
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_army_focus_start"
+
+			add_equipment_subsidy = {
+				cic = 2000
+				equipment_type = train_equipment
+				seller_tags = { JAP } 
+			}
+
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 15
+				producer = JAP
+			}
+
+		}
+	}
+
+	focus = {
+		id = KOR_army_focus_superiority_of_will
+		icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
+		cost = 10
+
+		x = -1
+		y = 1
+
+		relative_position_id = KOR_army_focus_pro_japanese
+
+		prerequisite = {
+			focus = KOR_army_focus_pro_japanese
+		}
+
+		available = {
+
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_army_focus_superiority_of_will"
+
+			add_ideas = JAP_superior_will
+		}
+	}
+
+	focus = {
+		id = KOR_army_focus_japanese_doctrine
+		icon = GFX_focus_PER_desert_training
+		cost = 10
+
+		x = 1
+		y = 1
+
+		relative_position_id = KOR_army_focus_pro_japanese
+
+		prerequisite = {
+			focus = KOR_army_focus_pro_japanese
+		}
+
+		available = {
+
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_army_focus_japanese_doctrine"
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
+
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+
+		}
+	}
+
+	focus = { #ARMY
+		id = KOR_reverse_engineer_tanks
+		icon = GFX_focus_generic_tank_production
+		x = -2
+		y = 2
+
+		relative_position_id = KOR_army_focus_pro_japanese
+
+		prerequisite = {
+			focus = KOR_army_focus_superiority_of_will
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_reverse_engineer_tanks
+				bonus = 0.5
+				uses = 4
+				category = armor
+			}
+		}
+	}
+
+	focus = { #ARMY
+		id = KOR_japanese_retraining
+		icon = GFX_focus_secret_rearmament
+		x = 0
+		y = 2
+
+		relative_position_id = KOR_army_focus_pro_japanese
+
+		prerequisite = {
+			focus = KOR_army_focus_superiority_of_will
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				
+			}
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = PER_foreign_retraining_idea
+				days = 730
+			}
+		}
+	}
+
+	focus = {
+		id = KOR_army_focus_anti_japanese
+		icon = GFX_focus_SWE_let_fly_all_guns
+		cost = 10
+
+		x = 2
+		y = 1
+
+		relative_position_id = KOR_army_focus_start
+
+		prerequisite = {
+			focus = KOR_army_focus_start
+		}
+
+		mutually_exclusive = {
+			focus = KOR_army_focus_pro_japanese
+		}
+
+		available = {
+			NOT = { is_puppet_of = JAP }
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_army_focus_start"
+
+			add_equipment_subsidy = {
+				cic = 2000
+				equipment_type = train_equipment
+				seller_tags = { USA } 
+			}
+
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 15
+				producer = USA
+			}
+
+		}
+	}
+
+	focus = { #ARMY
+		id = KOR_western_retraining
+		icon = GFX_focus_secret_rearmament
+		x = 1
+		y = 1
+
+		relative_position_id = KOR_army_focus_anti_japanese
+
+		prerequisite = {
+			focus = KOR_army_focus_anti_japanese
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = PER_foreign_retraining_idea
+				days = 730
+			}
+		}
+	}
+
+	focus = { #ARMY
+		id = KOR_independence_generals
+		icon = GFX_focus_generic_university_1
+		x = -1
+		y = 1
+
+		relative_position_id = KOR_army_focus_anti_japanese
+
+		prerequisite = {
+			focus = KOR_army_focus_anti_japanese
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL_CHARACTER
+		}
+
+		completion_reward = {
+			KOR_kim_ku = {
+				add_corps_commander_role = {
+					traits = { old_guard career_officer }
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+					skill = 1
+					legacy_id=-1
+				}			
+			} 
+			KOR_ji_cheong_cheon = {
+				add_corps_commander_role = {
+					traits = { infantry_officer }
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+					skill = 1
+					legacy_id=-1
+				}			
+			}
+		}
+	}
+
+	focus = { #ARMY
+		id = KOR_technology_focus
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		x = 0
+		y = 2
+
+		relative_position_id = KOR_army_focus_anti_japanese
+
+		prerequisite = {
+			focus = KOR_army_focus_anti_japanese
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = JAP_supremacy_of_technology
+		}
+	}
+
+	focus = { #ARMY
+		id = KOR_international_dispatch
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -2
+		y = 2
+
+		relative_position_id = KOR_army_focus_anti_japanese
+
+		prerequisite = {
+			focus = KOR_independence_generals
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = volunteer_corps_focus
 		}
 	}
 }

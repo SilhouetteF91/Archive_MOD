@@ -69,3 +69,37 @@ KOR_economy_pro_kivotos_desc: "$KOR_republic_of_korea_establish_desc$"
 
 KOR_economy_pro_kivotos_language: "키보토스 문화 연구"
 KOR_economy_pro_kivotos_language_desc: "$KOR_republic_of_korea_establish_desc$"
+
+#군사
+KOR_army_focus_start: "[ROOT.GetAdjective]군 창설"
+KOR_army_focus_start_desc: "$KOR_republic_of_korea_establish_desc$"
+
+KOR_army_focus_pro_japanese: "구 일본군 중심 군제"
+KOR_army_focus_pro_japanese_desc: "$KOR_republic_of_korea_establish_desc$"
+
+KOR_army_focus_superiority_of_will: "의지의 우월성"
+KOR_army_focus_superiority_of_will_desc: "$KOR_republic_of_korea_establish_desc$"
+
+KOR_army_focus_japanese_doctrine: "일본식 군사훈련"
+KOR_army_focus_japanese_doctrine_desc: "$KOR_republic_of_korea_establish_desc$"
+
+KOR_reverse_engineer_tanks: "일본 전차 기술 도입"
+KOR_reverse_engineer_tanks_desc: "$KOR_republic_of_korea_establish_desc$"
+
+KOR_japanese_retraining: "일본인 장교 고문단"
+KOR_japanese_retraining_desc: "$KOR_republic_of_korea_establish_desc$"
+
+KOR_army_focus_anti_japanese: "[ROOT.GetAdjective] 중심 군제"
+KOR_army_focus_anti_japanese_desc: "$KOR_republic_of_korea_establish_desc$"
+
+KOR_independence_generals: "민족주의자 장군 모집"
+KOR_independence_generals_desc: "$KOR_republic_of_korea_establish_desc$"
+
+KOR_international_dispatch: "국제 반식민주의"
+KOR_international_dispatch_desc: "$KOR_republic_of_korea_establish_desc$"
+
+KOR_western_retraining: "키보토스인 장교 고문단"
+KOR_western_retraining_desc: "$KOR_republic_of_korea_establish_desc$"
+
+KOR_technology_focus: "기술의 우월성"
+KOR_technology_focus_desc: "$KOR_republic_of_korea_establish_desc$"
