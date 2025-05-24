@@ -739,6 +739,9 @@ country_event = {  # 트리니티 - 게헨나 전쟁 (에덴 결전)
 	
 	option = { #
 		name = TRM_event.34.a
+		hidden_effect = {
+			news_event = { id = BA_news.4 hours = 03 }
+		}
         add_threat = 5
 		every_country = {
 			limit = {

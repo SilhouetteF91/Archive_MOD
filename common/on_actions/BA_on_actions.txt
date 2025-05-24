@@ -1055,21 +1055,6 @@ on_actions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					FROM = {
-						original_tag = GEM
-					}
-					ROOT = {
-						original_tag = TRM
-						OR = {
-							has_completed_focus = TRM_war_with_gehenna
-							has_completed_focus = TRN_crusade_against_the_trinity
-						}
-					}
-				}
-				news_event = { id = BA_news.4 }
-			}
 		}
 		effect = {
 			if = { # 트리니티가 미카 경로를 들어서고 특별군사작전 중점을 완료하지 않은채 게헨나에 선전포고 한다면
@@ -1091,6 +1076,26 @@ on_actions = {
 						idea = TRN_NOT_READY_WAR
 						days = 180
 					}
+				}
+			}
+		}
+		effect = {
+			IF = {
+				limit = {
+					ROOT = {
+						original_tag = TRM
+						has_completed_focus = TRN_crusade_against_the_trinity
+					}
+					FROM = {
+						OR = {
+							original_tag = GEM
+							original_tag = GEH
+						}
+					}
+				}
+				IF = {
+					limit = { NOT = { has_global_flag = BA_Trinity_Gehenna_War }}
+					country_event = { id = BA_news.4 }
 				}
 			}
 		}
