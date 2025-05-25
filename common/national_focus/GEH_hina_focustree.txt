@@ -8386,6 +8386,7 @@ focus_tree = {
 		
         prerequisite = {
             focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_a_iroha
+            focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_a_kayoko
         }
 		
 
