@@ -8515,19 +8515,9 @@ focus_tree = {
 		}
 		available = {
 			SPR_scw_in_progress = yes
-			has_idea = BA_interference_committee
 		}
 		relative_position_id = MIL_refugee_problem
 		completion_reward = {
-			every_country = {
-				limit = {
-					has_idea = BA_interference_committee
-				}
-				country_event = {
-					id = BA_kiovotos_spain_event.5
-					days = 3
-				}
-			}
 		}	
 	}
 	focus = { # 총체적 개입
@@ -8549,7 +8539,6 @@ focus_tree = {
 				has_idea = MIL_help_SPA
 				has_idea = MIL_help_SPR
 			}
-			has_idea = BA_interference_committee
 		}
 		relative_position_id = MIL_refugee_problem
 		completion_reward = {

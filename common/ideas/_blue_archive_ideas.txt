@@ -114,46 +114,6 @@ ideas = {
 				research_speed_factor = 0.1
 			}
 		}
-        BA_interference_committee_1 = { #간섭위원회
-			name = BA_interference_committee
-            picture = generic_secret_police
-            modifier = {
-                send_volunteer_divisions_required = -0.5
-                send_volunteers_tension = -0.5
-                send_volunteer_size = -1
-            }
-            available = {
-                SPR_scw_in_progress = yes
-				is_in_array = {
-					array = global.kivotos_alliance
-					value = ROOT
-				}
-				NOT = {
-					has_global_flag = end_of_the_kivotos_alliance
-				}
-            }
-        }
-        BA_interference_committee = {
-            picture = generic_secret_police
-            modifier = {
-                send_volunteer_divisions_required = -1
-                send_volunteers_tension = -1
-                consumer_goods_factor = 0.03
-            }
-            available = {
-                SPR_scw_in_progress = yes
-				is_in_array = {
-					array = global.kivotos_alliance
-					value = ROOT
-				}
-				NOT = {
-					has_global_flag = end_of_the_kivotos_alliance
-				}
-            }
-            rule = {
-                can_send_volunteers = yes
-            }
-        }
 	
 		JBP_state_shintoism = {
 			name = state_shintoism

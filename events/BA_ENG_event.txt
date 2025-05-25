@@ -207,10 +207,6 @@ country_event = {
 				country_event = { id = ENG_ba.27 days = 15 }
 			}
 		}
-		country_event = {
-			id = ENG_ba.25
-			days = 3
-		}
 	}
 }
 
@@ -264,7 +260,7 @@ country_event = {
 }
 
 country_event = {
-	# 아프리카 분리독립 - 서아프리카
+	# 안 씀 (원래 서아프리카 총독령 -> 알아서 재활용 하셈)
 	id = ENG_ba.25
 	title = ENG_ba.25.t
 	desc = ENG_ba.25.d
@@ -274,45 +270,6 @@ country_event = {
 	option = {
 		name = ENG_ba.25.a
 		
-		CAR = {
-			set_cosmetic_tag = CAR_ENG_free
-			transfer_state = 660
-			transfer_state = 774
-			transfer_state = 772
-			transfer_state = 901
-			transfer_state = 902
-			transfer_state = 776
-			transfer_state = 274
-			transfer_state = 558
-			transfer_state = 900
-			transfer_state = 773
-			transfer_state = 539
-			transfer_state = 777
-			add_state_core = 772
-			add_state_core = 774
-			add_state_core = 901
-			add_state_core = 902
-			add_state_core = 776
-			add_state_core = 274
-			add_state_core = 558
-			add_state_core = 900
-			add_state_core = 773
-			add_state_core = 777
-			add_state_core = 539
-			transfer_state = 539
-			transfer_state = 700
-			add_state_core = 700
-			hidden_effect = {
-				load_oob = CAR
-			}
-			add_ideas = ENG_french_governor
-		}
-		ENG = {
-			set_autonomy = {
-				target = CAR
-				autonomy_state = autonomy_dominion
-			}
-		}
 	}
 }
 

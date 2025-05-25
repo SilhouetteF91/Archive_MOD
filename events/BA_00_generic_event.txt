@@ -1422,40 +1422,6 @@ country_event = { #난민 문제
 				id =  BA_news.109
 				days = 10
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_global_flag = end_of_the_kivotos_alliance
-					}
-				}
-				if = {
-					limit = {
-						COU = {
-							exists = yes
-						}
-					}
-					COU = {
-						country_event = {
-							id = BA_kiovotos_spain_event.3
-							days = 25
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						SHE = {
-							exists = yes
-						}
-					}
-					SHE = {
-						country_event = {
-							id = BA_kiovotos_spain_event.3
-							days = 25
-						}
-						
-					}
-				}
-			}
 		}
 	}
 	option = { #국민파 지원
@@ -1483,23 +1449,10 @@ country_event = { #난민 문제
 				id =  BA_news.109
 				days = 10
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_global_flag = end_of_the_kivotos_alliance
-					}
-				}
-				var:global.kivotos_alliance_leader = {
-					country_event = {
-						id = BA_kiovotos_spain_event.3
-						days = 25
-					}	
-				}
-			}
 		}
 	}
 }
-country_event = { #간섭위원회 - 총학생회
+country_event = { #안 씀 (원래 간섭위원회 이벤트였는데 알아서 바꿔 쓰셈)
 	id = BA_kiovotos_spain_event.3
 	title = BA_kiovotos_spain_event.3.t
 	desc = BA_kiovotos_spain_event.3.d
@@ -1517,21 +1470,14 @@ country_event = { #간섭위원회 - 총학생회
 					value = THIS
 				}
 			}
-			country_event = {
-				id = BA_kiovotos_spain_event.4
-				days = 3
-			}
 		}
 	}
 	option = { #ㄴㄴ
 		name = BA_kiovotos_spain_event.3.b
 		custom_effect_tooltip = BA_kiovotos_spain_event.3_tt
-		add_to_variable = {
-			global.kivotos_cooperation_organization_withdrawal_cost = -50
-		}
 	}
 }
-country_event = { #간섭위원회 설치
+country_event = { #안 씀
 	id = BA_kiovotos_spain_event.4
 	title = BA_kiovotos_spain_event.4.t
 	desc = BA_kiovotos_spain_event.4.d
@@ -1542,7 +1488,6 @@ country_event = { #간섭위원회 설치
 			base = 100
 		}
 		name = BA_kiovotos_spain_event.4.a
-		add_ideas = BA_interference_committee
 		if = {
 			limit = {
 				OR = {
@@ -1580,7 +1525,7 @@ country_event = { #간섭위원회 설치
 		}
 	}
 }
-country_event = { #불간섭 타협
+country_event = { #안 씀 (불간섭 타협)
 	id = BA_kiovotos_spain_event.5
 	title = BA_kiovotos_spain_event.5.t
 	desc = BA_kiovotos_spain_event.5.d
@@ -1588,10 +1533,6 @@ country_event = { #불간섭 타협
 	is_triggered_only = yes
 	option = { #ㄱㄱ
 		name = BA_kiovotos_spain_event.5.a
-		swap_ideas = {
-			remove_idea = BA_interference_committee
-			add_idea = BA_interference_committee_1
-		}
 	}
 	option = { #ㅗ
 		name = BA_kiovotos_spain_event.5.b

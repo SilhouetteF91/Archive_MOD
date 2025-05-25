@@ -313,8 +313,7 @@ BA_no_use_PoliticalEvent_trigger = { #PoliticalEvents.txt가 이 조건을 만�
 		AND = {
 			tag = FRA
 			OR = {
-				has_dynamic_modifier = { modifier = FRA_rising_support_for_repeated_fascism }
-				has_dynamic_modifier = { modifier = FRA_rising_support_for_repeated_communism }
+				has_completed_focus = FRA_focus_war_5
 			}
 		}
 	}

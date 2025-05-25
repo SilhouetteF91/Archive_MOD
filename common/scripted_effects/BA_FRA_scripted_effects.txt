@@ -6,9 +6,6 @@ FRA_debug_effect = {
 	complete_national_focus = FRA_start_4
 	country_event = FRA_prov_event.120
 }
-FRA_debug_effect2 = {
-	activate_mission = FRA_rising_support_for_repeated_fascism_mission
-}
 FRA_debug_effect3 = {
 	every_possible_country = {
 		limit = { has_character = FRA_charles_de_gaulle }

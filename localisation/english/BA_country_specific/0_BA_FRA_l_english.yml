@@ -708,6 +708,8 @@
  FRA_industrialize_desc:0 "\n\n\n\n£GFX_decisions_fra_army\n\n\n\n\n\n"
  FRA_press_propaganda_neu:0 "언론 선전"
  FRA_press_propaganda_neu_desc:0 "우리는 어용 언론을 이용해서 사람들을 안심시키고 현 정부에 찬동하는 메시지를 지속적으로 내보낼 것입니다."
+ FRA_suppression_demo:0 "집회 억압"
+ FRA_suppression_demo_desc:0 "우리는 일시적으로 현 정부에 반대되는 목소리를 묵살할 것입니다."
 
  FRA_urbanization:0 "긴급한 산업화"
  FRA_urbanization_desc:0 "빠른 시일 내로 산업화를 이뤄내기 위해, 우리는 식민지인들의 희생을 빌리기로 하였습니다. 식민지인들은 그들을 문명사회로 인도한 조국 프랑스에 대한 충성심으로써 우리의 부탁을 흔쾌히 들어줄 것입니다."
@@ -1494,19 +1496,7 @@
  FRA_noting_focus_2: "김용하 강림"
  FRA_noting_focus_2_desc: "김용하 강림"
 
- FRA_rising_support_for_repeated_fascism: "반프랑스 저항"
- FRA_rising_support_for_repeated_communism: "반프랑스 저항"
-
- FRA_rising_support_for_repeated_fascism_mission: "반프랑스 저항"
- FRA_rising_support_for_repeated_fascism_mission_tt: "매일 파시즘 인기도: §G+0.01§!"
- FRA_rising_support_for_repeated_communism_mission_tt: "매일 공산주의 인기도: §G+0.01§!"
-
- FRA_rising_support_for_repeated_fascism_tt: "§R만약 §Y안정도§!가 §Y20%§! 보다 낮거나 §Y파시즘 정당 지지도§!가 §Y45%§! 보다 높을 시, 프랑스 식민제국은 붕괴할 것입니다!§!"
-
  FRA_rising_support_for_repeated_communism_tt: "§R만약 §Y안정도§!가 §Y20%§! 보다 낮거나 §Y공산주의 정당 지지도§!가 §Y45%§! 보다 높을 시, 프랑스 식민제국은 붕괴할 것입니다!§!"
-
- FRA_rising_support_for_repeated_fascism_swap_tooltip: "매일 파시즘 인기도: §R-[?var:FRA_rising_support_for_repeated_drift]§!\n\n매일 공산주의 인기도: §G+[?var:FRA_rising_support_for_repeated_drift]§!"
-
 
  FRA_free_france_event.1.t: "행정 능력 마비"
  FRA_free_france_event.1.d: "프랑스 아프리카 망명 정부가 아프리카인 집단 봉기로 붕괴한 이후, 우리는 혼란 속에 탈출한 장교들로 군대를 꾸렸습니다. 그러나 우리 정부는 사막의 깊은 곳 까지 통제할 능력이 없고, 사막의 아프리카인들이 독립 선언을 하는 걸 지켜볼 수 밖에 없습니다."

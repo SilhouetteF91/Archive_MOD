@@ -168,24 +168,14 @@ country_event = {
 }
 
 country_event = {
-	#붕괴
+	#붕괴 << ㅈ가업하기 
 	id = FRA_prov_event.3
 	title = FRA_prov_event.3.t
 	desc = FRA_prov_event.3.d
 	fire_only_once = yes
-
+	is_triggered_only = yes
 	trigger = {
 		tag = FRA
-		OR = {
-			AND = {
-				has_dynamic_modifier = { modifier = FRA_rising_support_for_repeated_fascism } 
-				OR = {fascism > 0.45 has_stability < 0.2}
-			}
-			AND = {
-				has_dynamic_modifier = { modifier = FRA_rising_support_for_repeated_communism } 
-				OR = {communism > 0.45 has_stability < 0.2}
-			}
-		}
 		controls_state = 459
 	}
 
