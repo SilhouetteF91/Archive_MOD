@@ -2247,7 +2247,7 @@ focus_tree = {
 
 	focus = { #주권법
 		id = COU_autonomous_legislation
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		icon = GFX_COU_choice_MOMOKA
 		prerequisite = { focus = COU_normalization_of_administration }
 		mutually_exclusive = {
 			focus = COU_student_council_amendment
@@ -2264,7 +2264,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = 6
+			x = 7
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -2274,7 +2274,7 @@ focus_tree = {
 				has_completed_focus = COU_autonomous_legislation
 			}
 		}
-		x = -6
+		x = -7
 		y = 1
 		relative_position_id = COU_normalization_of_administration
 		cost = 5
@@ -2304,10 +2304,51 @@ focus_tree = {
 				ideology = communism
 				popularity = 0.10
 			}
+			add_ideas = COU_no_communism_movement
 			add_ideas = COU_autonomous_legislation_idea
 			custom_effect_tooltip = SOV_cooperation_against_stalin_other_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = willem_drees
+		}
+	}
+	
+	focus = { #방위실 무력화 
+		id = COU_neutralize_kaya_clique
+		icon = GFX_COU_no_kaya
+		prerequisite = { focus = COU_autonomous_legislation }
+		x = -2
+		y = 1
+		relative_position_id = COU_autonomous_legislation
+		cost = 8
+		available = {
+		}
+		bypass = {
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		completion_reward = {
+		    remove_ideas = COU_no_communism_movement
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.10
+			}
+			remove_country_leader_role = {
+				character = COU_KAYA
+				ideology = cou_kaya_dictatorship
+			}
+			remove_advisor_role = {
+				character = COU_KAYA
+				slot = political_advisor
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = COU_next_2_fascism_party_long
+				name = COU_next_2_fascism_party
+			}
+			country_event = COU_event_notkaya.1
 		}
 	}
 
@@ -2328,23 +2369,11 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
-		completion_reward = {
+		completion_reward = { 
+		    add_stability = 0.1
 			add_popularity = {
-				ideology = fascism
-				popularity = -0.10
-			}
-			remove_country_leader_role = {
-				character = COU_KAYA
-				ideology = cou_kaya_dictatorship
-			}
-			remove_advisor_role = {
-				character = COU_KAYA
-				slot = political_advisor
-			}
-			set_party_name = {
-				ideology = fascism
-				long_name = COU_next_2_fascism_party_long
-				name = COU_next_2_fascism_party
+				ideology = communism
+				popularity = 0.10
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = COU_central_labor_union_political_advisor
@@ -2354,9 +2383,8 @@ focus_tree = {
 
 	focus = { #학생회 물류 통제
 		id = COU_logistics_control_of_student_council
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_COU_enhance_momoka_sets
 		prerequisite = { focus = COU_inclusion_of_union_in_administrative_committee }
-		mutually_exclusive = { focus = COU_resignation_of_acting_authority }
 		x = 1
 		y = 2
 		relative_position_id = COU_autonomous_legislation
@@ -2380,9 +2408,8 @@ focus_tree = {
 
 	focus = { #권한대행 사퇴
 		id = COU_resignation_of_acting_authority
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_focus_generic_university_2
 		prerequisite = { focus = COU_inclusion_of_union_in_administrative_committee }
-		mutually_exclusive = { focus = COU_logistics_control_of_student_council }
 		x = -1
 		y = 2
 		relative_position_id = COU_autonomous_legislation
@@ -2669,7 +2696,7 @@ focus_tree = {
 
 	focus = { #명예 학생회장
 		id = COU_honorary_student_council_president
-		icon = GFX_COU_choice_MOMOKA
+		icon = GFX_COU_choice_KAYA
 		prerequisite = { focus = COU_resignation_of_acting_authority }
 		mutually_exclusive = { focus = COU_leftward_shift }
 		x = -2

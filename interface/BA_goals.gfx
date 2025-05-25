@@ -2198,6 +2198,14 @@ spriteTypes = {
 		name = "GFX_COU_kaya_gscp"
 		textureFile = "gfx/interface/goals/COU/COU_KAYA_GSCP.tga"
 	}
+	spriteType = {
+		name = "GFX_COU_no_kaya"
+		textureFile = "gfx/interface/goals/COU/카야암타.png"
+	}
+	spriteType = {
+		name = "GFX_COU_enhance_momoka_sets"
+		textureFile = "gfx/interface/goals/COU/모모카권위.png"
+	}
 	
 	spriteType = {
 		name = "GFX_COU_unarrest_mussert"

@@ -1227,6 +1227,30 @@ ideas = {
 
         }
 		
+		##방위실 저항 
+		COU_no_communism_movement = { 
+            picture = generic_shield_against_communism 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.2
+				stability_weekly = -0.001
+				political_power_factor = -0.2
+				drift_defence_factor = -0.2
+				army_org_factor = -0.5
+				army_speed_factor = -0.5
+            }
+
+        }
+		
 		##불완전한 권력 
 		COU_notgood_kaya_power = { 
 		    name = COU_notgood_kaya_power
