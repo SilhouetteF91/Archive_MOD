@@ -19873,6 +19873,7 @@ ABY_descision_category_debug = {
 		complete_effect = {
 			set_technology = {
 				pre_modern_infantry_equipment = 1
+				juggernaut_equipment_tech = 1
 			}
 			division_template = {
 				name = "Water Cloud Division"
@@ -19907,36 +19908,66 @@ ABY_descision_category_debug = {
 					maintenance_company = { x = 0 y = 4 }
 				}
 			}
+			#division_template = {
+			#	name = "ABYDOS Shock Division"
+			#	priority = 1
+			#	division_names_group = ABY_INF_05
+			#	is_locked = yes
+			#	force_allow_recruiting = yes
+			#	regiments = {
+			#		low_halo_infantry = { x = 0 y = 0 }
+			#		low_halo_infantry = { x = 0 y = 1 }
+			#		low_halo_infantry = { x = 0 y = 2 }
+			#		low_halo_infantry = { x = 0 y = 3 }
+			#		low_halo_infantry = { x = 0 y = 4 }
+			#		
+			#		low_halo_infantry = { x = 1 y = 0 }
+			#		low_halo_infantry = { x = 1 y = 1 }
+			#		low_halo_infantry = { x = 1 y = 2 }
+			#		low_halo_infantry = { x = 1 y = 3 }
+			#		low_halo_infantry = { x = 1 y = 4 }
+			#		
+			#		artillery_brigade = { x = 2 y = 0 }
+			#		artillery_brigade = { x = 2 y = 1 }
+			#		artillery_brigade = { x = 2 y = 2 }
+			#		artillery_brigade = { x = 2 y = 3 }
+			#		artillery_brigade = { x = 2 y = 4 }
+			#	}
+			#	support = {
+			#		halo_recon = { x = 0 y = 0 }
+			#		logistics_company = { x = 0 y = 1 }
+			#		Sturmtruppe_Battalion = { x = 0 y = 2 }
+			#		artillery = { x = 0 y = 3 }
+			#		maintenance_company = { x = 0 y = 4 }
+			#	}
+			#}
 			division_template = {
-				name = "ABYDOS Shock Division"
+				name = "ABYDOS Juggernaut Division"
 				priority = 1
 				division_names_group = ABY_INF_05
 				is_locked = yes
 				force_allow_recruiting = yes
 
 				regiments = {
-					low_halo_infantry = { x = 0 y = 0 }
-					low_halo_infantry = { x = 0 y = 1 }
-					low_halo_infantry = { x = 0 y = 2 }
-					low_halo_infantry = { x = 0 y = 3 }
-					low_halo_infantry = { x = 0 y = 4 }
+					juggernaut = { x = 0 y = 0 }
+					juggernaut = { x = 0 y = 1 }
+					juggernaut = { x = 0 y = 2 }
+					juggernaut = { x = 0 y = 3 }
 					
-					low_halo_infantry = { x = 1 y = 0 }
-					low_halo_infantry = { x = 1 y = 1 }
-					low_halo_infantry = { x = 1 y = 2 }
-					low_halo_infantry = { x = 1 y = 3 }
-					low_halo_infantry = { x = 1 y = 4 }
+					juggernaut = { x = 1 y = 0 }
+					juggernaut = { x = 1 y = 1 }
+					juggernaut = { x = 1 y = 2 }
+					juggernaut = { x = 1 y = 3 }
 					
 					artillery_brigade = { x = 2 y = 0 }
 					artillery_brigade = { x = 2 y = 1 }
 					artillery_brigade = { x = 2 y = 2 }
 					artillery_brigade = { x = 2 y = 3 }
-					artillery_brigade = { x = 2 y = 4 }
 				}
 				support = {
 					halo_recon = { x = 0 y = 0 }
 					logistics_company = { x = 0 y = 1 }
-					Sturmtruppe_Battalion = { x = 0 y = 2 }
+					juggernaut_support = { x = 0 y = 2 }
 					artillery = { x = 0 y = 3 }
 					maintenance_company = { x = 0 y = 4 }
 				}
@@ -24282,7 +24313,7 @@ ABY_descision_category_two_world = {
 
 		visible = {
 			tag = ABY
-			has_dynamic_modifier = ABY_two_dynamic_modifier_complete
+			has_dynamic_modifier = {modifier = ABY_two_dynamic_modifier_complete}
 		}
 
         available = {

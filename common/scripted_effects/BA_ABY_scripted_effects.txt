@@ -3054,8 +3054,8 @@ ABY_scripted_effect_getsokku_plus_effect = {
 		if = {
 			limit = {
 				OR = {
-					has_dynamic_modifier = ABY_two_dynamic_modifier
-					has_dynamic_modifier = ABY_two_dynamic_modifier_complete
+					has_dynamic_modifier = {modifier = ABY_two_dynamic_modifier}
+					has_dynamic_modifier = {modifier = ABY_two_dynamic_modifier_complete}
 				}
 				check_variable = {
             	    var = ABY_var_getsokku
@@ -3074,10 +3074,10 @@ ABY_scripted_effect_getsokku_plus_effect = {
 		}
 		if = {
 			limit = {
-				has_dynamic_modifier = ABY_two_dynamic_modifier_over
+				has_dynamic_modifier = {modifier = ABY_two_dynamic_modifier_over}
 			}
-			remove_dynamic_modifier = ABY_two_dynamic_modifier_over
-			add_dynamic_modifier = ABY_two_dynamic_modifier
+			remove_dynamic_modifier = {modifier = ABY_two_dynamic_modifier_over}
+			add_dynamic_modifier = {modifier = ABY_two_dynamic_modifier}
 			add_to_variable = { ABY_var_getsokku = 1 }
 			add_to_variable = { ABY_var_stability_factor = 0.005 }
 			add_to_variable = { ABY_var_war_support_factor = 0.005 }
@@ -3093,13 +3093,13 @@ ABY_scripted_effect_getsokku_minus_effect = {
 	hidden_effect = {
 		if = {
 			limit = {
-				has_dynamic_modifier = ABY_two_dynamic_modifier_over
+				has_dynamic_modifier = {modifier = ABY_two_dynamic_modifier_over}
 			}
 		}
 		if = {
 			limit = {
 				OR = {
-					has_dynamic_modifier = ABY_two_dynamic_modifier
+					has_dynamic_modifier = {modifier = ABY_two_dynamic_modifier_over}
 				}
 			}
 			add_to_variable = { ABY_var_getsokku = -1 }
@@ -3118,8 +3118,8 @@ ABY_scripted_effect_getsokku_minus_effect = {
         	    	    compare = equals
         	    	}
 				}
-				remove_dynamic_modifier = ABY_two_dynamic_modifier
-				add_dynamic_modifier = ABY_two_dynamic_modifier_over
+				remove_dynamic_modifier = {modifier = ABY_two_dynamic_modifier}
+				add_dynamic_modifier = {modifier = ABY_two_dynamic_modifier_over}
 			}
 			if = {
 				limit = {

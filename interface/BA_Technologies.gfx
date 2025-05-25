@@ -802,6 +802,10 @@ spriteTypes = {
 		name = "GFX_pre_modern_infantry_equipment_medium"
 		texturefile = "gfx/interface/technologies/pre_modern_infantry_equipment.dds"
 	}
+	spriteType = {
+		name = "GFX_juggernaut_equipment_medium"
+		texturefile = "gfx/interface/technologies/juggernaut_equipment.dds"
+	}
 
 	#
 	#	Infantry equipments by Kivotos Nation
@@ -826,6 +830,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ABY_pre_modern_infantry_equipment_medium"
 		texturefile = "gfx/interface/technologies/ABY_pre_modern_infantry_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_ABY_juggernaut_equipment_medium"
+		texturefile = "gfx/interface/technologies/ABY_juggernaut_equipment.dds"
 	}
 
 	spriteType = {

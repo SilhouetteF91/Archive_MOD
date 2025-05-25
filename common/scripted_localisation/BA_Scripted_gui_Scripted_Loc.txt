@@ -4624,13 +4624,13 @@ defined_text = {
     name = ABY_status_local
     text = {
         trigger = {
-            NOT = {has_dynamic_modifier = ABY_two_dynamic_modifier_complete}
+            NOT = {has_dynamic_modifier = {modifier = ABY_two_dynamic_modifier_complete}}
         }
         localization_key = ABY_status_bad
     }
     text = {
         trigger = {
-            has_dynamic_modifier = ABY_two_dynamic_modifier_complete
+		    has_dynamic_modifier = {modifier = ABY_two_dynamic_modifier_complete}
         }
         localization_key = ABY_status_good
     }

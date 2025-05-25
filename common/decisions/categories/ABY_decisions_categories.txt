@@ -702,7 +702,7 @@ ABY_descision_category_two_world = {
     visible = {
         original_tag = ABY                                                                                                             
 		has_country_flag = ABY_flag_in_develop  
-		has_dynamic_modifier = ABY_two_dynamic_modifier
+		has_dynamic_modifier = {modifier = ABY_two_dynamic_modifier}
     }             
     priority = 120
 }

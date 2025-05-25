@@ -375,6 +375,91 @@ sub_units = {
 		}
 	}
 
+	juggernaut = {
+		abbreviation = "JUG"
+		sprite = juggernaut
+		map_icon_category = infantry
+		special_forces = yes
+		
+		priority = 750
+		ai_priority = 1200
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			category_special_forces
+		}
+		
+		combat_width = 3
+		#reliability = -1
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 80
+		default_morale = 0.6
+		manpower = 1000
+		weight = 1
+		hardness = -0.2
+
+		#Misc Abilities
+		training_time = 300
+		suppression = 2
+		
+		supply_consumption = 0.15
+		soft_attack = 0.10
+		breakthrough = 0.30
+		need = {
+			juggernaut_equipment = 100
+			kivotos_infantry_equipment = 50
+			infantry_equipment = 50
+		}
+
+		forest = {
+		    attack = 0.1
+		}
+		jungle = {
+		    attack = -0.3
+			movement = -0.2
+		}
+		marsh = {
+		    attack = -0.3
+			movement = -0.2
+		}
+		urban = {
+			attack = 0.3
+			defence = 0.1
+		}
+		river = { 
+			attack = -0.2
+			movement = -0.5
+		}
+		amphibious = {
+			attack = -0.1
+		}
+		hills = {
+			attack = 0.1
+			defence = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.05
+			defence = 0.05
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.4
+		}
+	}
+
 	halo_recon = { #halo
 		abbreviation = "HAC"
 		sprite = Halo_infantry
@@ -461,5 +546,71 @@ sub_units = {
 			movement = 0.1
 		}
 		same_support_type = recon # blocks adding other recon types to template
+	}
+
+	juggernaut_support = {
+		abbreviation = "JUS"
+		sprite = juggernaut
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_army
+			category_support_battalions
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 80
+		default_morale = 0.6
+		manpower = 1000
+		training_time = 300
+		suppression = 2
+
+		#Misc Abilities
+		weight = 1
+		supply_consumption = 0.15
+		can_be_parachuted = no
+		
+		supply_consumption = 0.15
+		soft_attack = 0.10
+		breakthrough = 0.30
+		need = {
+			juggernaut_equipment = 125
+			infantry_equipment = 50
+			kivotos_infantry_equipment = 20
+			support_equipment = 10
+		}
+
+		urban = {
+			attack = 0.1
+			defence = 0.1
+		}
+		hills = {
+			attack = 0.05
+			defence = 0.05
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.05
+			defence = 0.05
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.2
+		}
 	}
 }
