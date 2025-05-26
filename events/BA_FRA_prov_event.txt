@@ -168,7 +168,7 @@ country_event = {
 }
 
 country_event = {
-	#붕괴 << ㅈ가업하기 
+	#붕괴 << 작업하기 
 	id = FRA_prov_event.3
 	title = FRA_prov_event.3.t
 	desc = FRA_prov_event.3.d
@@ -204,7 +204,6 @@ country_event = {
 				release = MOR
 				release = ALG
 				release = WES
-				release = CAR
 				release = TUN
 				
 			#	release = CHA
@@ -364,7 +363,7 @@ country_event = {
 					retire_country_leader = yes
 					set_cosmetic_tag = FRA_free_france
 					load_focus_tree = {
-						tree = free_french_focus
+						tree = generic_focus
 						keep_completed = no
 					}
 					set_capital = {
@@ -927,38 +926,13 @@ country_event = { #서아프리카 해방
 		}
 	}
 	option = {
+		trigger = {
+			NOT = {
+				has_war_with = MRT
+				has_war_with = MLI
+			}
+		}
 		name = FRA_free_france_event.3.b
-		trigger = {
-			NOT = {
-				has_war_with = MRT
-				has_war_with = MLI
-			}
-		}
-		ai_chance = {
-			factor = 0
-		}
-		add_war_support = -0.05
-		declare_war_on = {
-			target = SEN
-			type = annex_everything
-		}
-		declare_war_on = {
-			target = VOL
-			type = annex_everything
-		}
-		declare_war_on = {
-			target = GNA
-			type = annex_everything
-		}
-	}
-	option = {
-		trigger = {
-			NOT = {
-				has_war_with = MRT
-				has_war_with = MLI
-			}
-		}
-		name = FRA_free_france_event.3.c
 	}
 }
 
@@ -973,24 +947,10 @@ country_event = {
 	is_triggered_only = yes
 	hidden = no
 	option = {
+		FRA_local_resistance_bad = yes
 		add_popularity = {
 			ideology = var:current_party_ideology_group
-			popularity = -0.03
-		}
-		if = {
-			limit = {
-				has_country_flag = FRA_fascist_on
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.03
-			}
-		}
-		else = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.03
-			}
+			popularity = -0.01
 		}
 		every_state = {
 			limit = {
@@ -1004,35 +964,6 @@ country_event = {
 			add_resistance = 10
 		}
 		name = FRA_prov_event.4.a
-		hidden_effect = {
-			if = {
-				limit = {
-					has_completed_focus = FRA_focus_12
-				}
-			}
-			else = {
-				random_list = {
-					10 = {
-						country_event = {
-							id = FRA_prov_event.4
-							days = 50
-						}
-					}
-					10 = {
-						country_event = {
-							id = FRA_prov_event.4
-							days = 90
-						}
-					}
-					10 = {
-						country_event = {
-							id = FRA_prov_event.4
-							days = 130
-						}
-					}
-				}
-			}
-		}
 	}
 }
 

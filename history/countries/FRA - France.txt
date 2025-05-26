@@ -230,8 +230,16 @@ set_politics = {
 add_ideas = {
 	PASTA_signatories_of_the_stresa_idea
 	FRA_legacy_of_war
-	FRA_exile
+	FRA_resistance_of_locals_1
+	FRA_sovereignty
 }
+set_variable = {
+	FRA_resistance_of_locals_var = 1
+}
+set_variable = {
+	FRA_sovereignty_var = 6
+}
+activate_mission = FRA_african_rage_mission
 set_autonomy = {
 	target = VIN
 	autonomy_state = autonomy_colony

@@ -18,6 +18,76 @@ ideas = {
 		}
 	}
 	country = {
+		#식민지인들의 저항
+		FRA_resistance_of_locals_8 = { #식민지인들의 저항
+			name = FRA_resistance_of_locals
+			picture = chi_war_of_resistance3
+			modifier = {
+				political_power_cost = 1.2
+				stability_factor = -0.08
+			}
+		}
+		FRA_resistance_of_locals_7 = { #식민지인들의 저항
+			name = FRA_resistance_of_locals
+			picture = chi_war_of_resistance3
+			modifier = {
+				political_power_cost = 1.05
+				stability_factor = -0.07
+			}
+		}
+		FRA_resistance_of_locals_6 = { #식민지인들의 저항
+			name = FRA_resistance_of_locals
+			picture = chi_war_of_resistance3
+			modifier = {
+				political_power_cost = 0.9
+				stability_factor = -0.06
+			}
+		}
+		FRA_resistance_of_locals_5 = { #식민지인들의 저항
+			name = FRA_resistance_of_locals
+			picture = chi_war_of_resistance2
+			modifier = {
+				political_power_cost = 0.75
+				stability_factor = -0.05
+			}
+		}
+		FRA_resistance_of_locals_4 = { #식민지인들의 저항
+			name = FRA_resistance_of_locals
+			picture = chi_war_of_resistance2
+			modifier = {
+				political_power_cost = 0.6
+				stability_factor = -0.04
+			}
+		}
+		FRA_resistance_of_locals_3 = { #식민지인들의 저항
+			name = FRA_resistance_of_locals
+			picture = chi_war_of_resistance
+			modifier = {
+				political_power_cost = 0.45
+				stability_factor = -0.03
+			}
+		}
+		FRA_resistance_of_locals_2 = { #식민지인들의 저항
+			name = FRA_resistance_of_locals
+			picture = chi_war_of_resistance
+			modifier = {
+				political_power_cost = 0.3
+				stability_factor = -0.02
+			}
+		}
+		FRA_resistance_of_locals_1 = { #식민지인들의 저항
+			name = FRA_resistance_of_locals
+			picture = chi_war_of_resistance
+			modifier = {
+				political_power_cost = 0.15
+				stability_factor = -0.01
+			}
+		}
+
+		FRA_sovereignty = { #프랑스의 자주권
+			picture = FRA_political_violence
+		}
+
 		FRA_civilian_industry_1 = { #민간 산업
 			name = FRA_civilian_industry
 			picture = SOV_second_five_year_plan
