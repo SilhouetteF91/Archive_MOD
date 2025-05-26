@@ -1325,6 +1325,17 @@ ideas = {
 				monthly_population = 0.2
 			}
 		}
+		TRN_new_culture_militarism_aliance_of_faith_uprade_ns = {
+			picture = RAJ_private_military_complex
+			name = TRN_new_culture_militarism_ns
+			modifier = {
+				stability_factor = -0.06 # -6% -> -3% -> -6%
+				experience_gain_army_factor = 0.2
+				experience_loss_factor = -0.2
+
+				monthly_population = 0.4
+			}
+		}
 		TRN_new_culture_militarism_german_thinkers_ns = {
 			picture = RAJ_private_military_complex
 			name = TRN_new_culture_militarism_ns
@@ -1337,6 +1348,19 @@ ideas = {
 				conscription_factor = 0.06
 			}
 		}
+		TRN_new_culture_militarism_german_thinkers_upgrade_ns = {
+			picture = RAJ_private_military_complex
+			name = TRN_new_culture_militarism_ns
+			modifier = {
+				stability_factor = -0.09
+				experience_gain_army_factor = 0.2
+				experience_loss_factor = -0.2
+				
+				weekly_casualties_war_support = 0.006
+				conscription_factor = 0.12
+			}
+		}
+
 		TRN_new_culture_culture_technology_ns = {
 			picture = PER_tehran_power_grid_idea
 			modifier = {
@@ -1354,6 +1378,16 @@ ideas = {
 				monthly_population = 0.2
 			}
 		}
+		TRN_new_culture_culture_technology_aliance_of_faith_upgrade_ns = {
+			picture = PER_tehran_power_grid_idea
+			name = TRN_new_culture_culture_technology_ns
+			modifier = {
+				stability_factor = 0.12 # 3% -> 6%
+				research_speed_factor = 0.06
+
+				monthly_population = 0.4
+			}
+		}
 		TRN_new_culture_culture_technology_german_thinkers_ns = {
 			picture = PER_tehran_power_grid_idea
 			name = TRN_new_culture_culture_technology_ns
@@ -1363,6 +1397,17 @@ ideas = {
 				
 				weekly_casualties_war_support = 0.003
 				conscription_factor = 0.06
+			}
+		}
+		TRN_new_culture_culture_technology_german_thinkers_upgrade_ns = {
+			picture = PER_tehran_power_grid_idea
+			name = TRN_new_culture_culture_technology_ns
+			modifier = {
+				stability_factor = 0.06
+				research_speed_factor = 0.06
+				
+				weekly_casualties_war_support = 0.006
+				conscription_factor = 0.12
 			}
 		}
 		TRN_womens_rights_movement_ns = {
@@ -1388,11 +1433,23 @@ ideas = {
                 production_speed_industrial_complex_factor = 0.05
 			}
 		}
-		TRM_trinity_cause_ns = {
+		TRN_trinity_cause_ns = {
 			modifier = {
 				conscription = 0.01
 				army_morale_factor = 0.1
-				modifier_army_sub_unit_category_halo_attack_factor = 0.05
+				modifier_army_sub_unit_halo_infantry_attack_factor = 0.05
+			}
+		}
+		TRN_trinity_cause_2_ns = {
+			name = TRN_trinity_cause_ns
+			#picture = TRN_trinity_cause_ns
+			
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = 0.1
+				modifier_army_sub_unit_halo_infantry_attack_factor = 0.05
+				modifier_army_sub_unit_halo_infantry_defence_factor = 0.05
+				party_popularity_stability_factor = 0.2
 			}
 		}
 		TRM_trinity_farm_ns = {
@@ -1409,6 +1466,15 @@ ideas = {
 				political_power_factor = 0.05
 				local_building_slots = 1
 				consumer_goods_factor = 0.1
+			}
+		}
+		TRN_gehenna_clup_resistance_ns = {
+			picture = GEH_hot_spring_department_4
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.2
+				weekly_manpower = -350
+				compliance_growth = -0.05
 			}
 		}
 	}

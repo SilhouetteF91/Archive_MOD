@@ -1625,6 +1625,10 @@ TRINITY_REICH = {
 	color = rgb { 60 60 60 }
 	color_ui = rgb { 60 60 60 }
 }
+TRN_the_fourth_reich = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
 TRM_pater = {
 	color = rgb { 154 69 116 }
 	color_ui = rgb { 154 69 116 }

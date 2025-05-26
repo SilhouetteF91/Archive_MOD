@@ -380,3 +380,9 @@ music = {
         factor = 0
     }
 }
+music = {
+    song = "BA_rafael_krux_epic_orchestra"
+    chance = {
+        factor = 0
+    }
+}

@@ -546,6 +546,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_TRN_gehenna_resistance"
+		texturefile = "gfx/interface/decisions/TRN_gehenna_resistance.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_TRN_After_war_decision"
 		texturefile = "gfx/interface/decisions/TRN_After_war_decision.tga"
 		legacy_lazy_load = no

@@ -4833,7 +4833,7 @@
 		id = JAP_remove_of_Ministry_of_Development
 		icon = GFX_focus_LAT_suspend_constitution_of_latvia
 		prerequisite = { focus = JAP_remove_of_peace_preservation_act }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = JAP_remove_of_peace_preservation_act
 
@@ -4871,7 +4871,7 @@
 		icon = GFX_focus_DEN_no_regulations
 		prerequisite = { focus = JAP_remove_of_peace_preservation_act }
 		prerequisite = { focus = JAP_Civil_War_Damage_Recovery }
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = JAP_remove_of_peace_preservation_act
 

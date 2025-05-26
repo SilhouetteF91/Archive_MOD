@@ -60,6 +60,17 @@
 		}
 	}
 	offset = {
+		x = 17
+		y = 4
+		trigger = {
+			OR = {
+				original_tag = TRM
+				tag = TRM
+			}
+			has_focus_tree = Trinity_focus
+		}
+	}
+	offset = {
 		x = -36
 		y = 0
 		trigger = {

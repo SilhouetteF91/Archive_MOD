@@ -209,6 +209,11 @@ music = {
 	file = "super_event/COU_KAYA_LETSGo.ogg"
 	volume =  1.2
 }
+music = {
+	name = "BA_rafael_krux_epic_orchestra"
+	file = "super_event/rafael_krux_epic_orchestra.ogg"
+	volume =  0.7
+}
 
 
 

@@ -2447,17 +2447,20 @@ leader_traits = {
 		}
 	}
 	TRM_supreme_commander = {
+		sprite = 13
 		random = no
 		max_command_power = 20
 		mobilization_laws_cost_factor = -0.25
 	}
 	TRN_trinity_messiah = {
+		sprite = 13
 		random = no 
 		power_balance_weekly = -0.01
 		stability_factor = 0.05
 		compliance_gain = 0.01
 	}
 	TRN_der_fuhrer = {
+		sprite = 13
 		random = no 
 		power_balance_weekly = 0.01
 		army_morale_factor = 0.06
@@ -2495,6 +2498,18 @@ leader_traits = {
 		fascism_drift = 0.06
 		compliance_growth = -0.05
 		non_core_manpower = 0.05
+	}
+	TRN_horseman_of_apocalypse = {
+		sprite = 13
+		random = no
+		air_strategic_bomber_bombing_factor = 0.1
+		air_bombing_targetting = 0.1
+		rocket_attack_factor = 0.1
+	}
+	TRN_shepherd_of_trinity = {
+		sprite = 13
+		random = no
+		stability_factor = 0.1
 	}
 	TRN_economist_ui = { # 경제학자
 		sprite = 10

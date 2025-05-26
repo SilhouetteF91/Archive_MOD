@@ -64,6 +64,10 @@
  TRM_hifumi_DEF: "페로로 교단"
  TRM_hifumi_ADJ: "페로로"
 
+ TRN_the_fourth_reich: "트리니티 제4제국"
+ TRN_the_fourth_reich_DEF: "트리니티 제4제국"
+ TRN_the_fourth_reich_ADJ: "트리니티 제4제국"
+
 #모모카
  COU_go_to_left_democracy_fascism: "키보토스국" #모모카 우파
  COU_go_to_left_democracy_fascism_DEF: "키보토스국"

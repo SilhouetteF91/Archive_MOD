@@ -4399,6 +4399,43 @@ TRN_after_war_decisions = {
 		}
 	}
 	
+	TRM_eradicate_club_resistance = {
+		allowed = { always = no }
+
+		icon = GFX_decision_generic_arrest
+
+		available = {
+
+		}
+		visible = {
+
+		}
+
+		fire_only_once = no
+		days_remove = 90
+		cost = 25
+		ai_will_do = {
+			base = 999
+		}
+		modifier = {
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					has_resistance = yes
+					OR = {
+						is_core_of = GEM
+						is_core_of = GEH
+					}
+				}
+				add_compliance = -5
+			}
+		}
+		remove_effect = {
+			remove_ideas = TRN_gehenna_clup_resistance_ns
+		}
+	}
+	
 	TRM_tighten_control = {
 		allowed = { always = no }
 
@@ -4540,7 +4577,7 @@ TRN_after_war_decisions = {
 		}
 		#visible = { has_completed_focus = TRM_germany_union }
 
-		cost = 150
+		cost = 50
 		fire_only_once = yes
 		days_remove = 180
 		ai_will_do = {
@@ -4548,7 +4585,7 @@ TRN_after_war_decisions = {
 			modifier = {
 				factor = 1000
 				has_stability > 71
-				has_political_power > 149
+				has_political_power > 49
 			}
 		}
 		modifier = {
@@ -4717,7 +4754,14 @@ TRN_after_war_decisions = {
 				min = 25
 			}
 			custom_effect_tooltip = TRM_GehennaResistance_Random_Event_tt
-			
+			if = {
+				limit = { 
+					has_focus_tree = Trinity_focus
+					NOT = { has_country_flag = TRN_actived_club_ns } 
+				}
+				add_ideas = TRN_gehenna_clup_resistance_ns
+				set_country_flag = TRN_actived_club_ns
+			}
 			hidden_effect = {
 				random_list = {
 					1 = { # 다치는 이벤트
@@ -7008,6 +7052,25 @@ debug_decisions = {
     }
 }
 TRN_Mika_honor_decision_cat = {
+	TRN_debug_get_honor = {
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		allowed = { original_tag = TRM }
+		available = {
+			is_debug = yes
+			is_ai = no
+		}
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+
+		complete_effect = {
+			set_temp_variable = { TRN_Honor_change = -8 }
+			TRN_add_Honor = yes
+		}
+	}
+
 	TRN_destroy_TVC = {
 		icon = GFX_decision_generic_reorganize_irregulars
 
@@ -7052,25 +7115,55 @@ TRN_Mika_honor_decision_cat = {
 			remove_ideas = TRN_trinity_volunteer_corps_ns
 		}
 	}
-	TRN_debug_get_honor = {
-		icon = GFX_decision_generic_reorganize_irregulars
 
-		allowed = { original_tag = TRM }
-		available = {
-			is_debug = yes
-			is_ai = no
+	TRN_honor_populist_policies = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = { always = no } #activated by effect
+
+		cost = 10
+		days_remove = 90
+		modifier = {
+			consumer_goods_factor = 0.1
 		}
-		visible = {
-			is_debug = yes
-			is_ai = no
-		}
+
+		ai_will_do = { base = 0 }
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = -8 }
+			set_temp_variable = { TRN_Honor_change = 4 }
 			TRN_add_Honor = yes
+
+			add_stability = 0.02
+			add_war_support = -0.02
+
+       		add_power_balance_value = {
+       		    id = TRM_power_balance
+       		    value = -0.02
+       		    tooltip_side = TRM_tirinty_socialism
+       		}
 		}
 	}
 
+	TRN_honor_clean_up_corruption = {
+		icon = GFX_decision_generic_arrest
+
+		allowed = { always = no } #activated by effect
+
+		cost = 10
+		days_remove = 90
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		ai_will_do = { base = 0 }
+
+		complete_effect = {
+			set_temp_variable = { TRN_Honor_change = 4 }
+			TRN_add_Honor = yes
+
+			add_political_power = 25
+		}
+	}
 }
 TRN_economic_decisions_category = {
 	TRN_Industrial_Regions= {
@@ -7681,6 +7774,7 @@ TRN_trinity_world_cat = {
 			}
 		}
 
+		war_with_on_remove = ROM
 		remove_effect = {
 			declare_war_on = {
 				target = FROM
