@@ -26,6 +26,8 @@ sub_units = {
 			category_light_infantry
 			category_all_infantry
 			category_army
+			category_mythic
+			category_mythic_special
 		}
 		
 		combat_width = 1.5
@@ -73,6 +75,7 @@ sub_units = {
 			category_light_infantry
 			category_all_infantry
 			category_army
+			category_mythic
 		}
 		
 		combat_width = 1.5
@@ -120,6 +123,7 @@ sub_units = {
 			category_light_infantry
 			category_all_infantry
 			category_army
+			category_mythic
 		}
 		
 		combat_width = 1.5
@@ -171,6 +175,8 @@ sub_units = {
 			category_all_infantry
 			category_army
 			category_special_forces
+			category_mythic
+			category_mythic_special
 		}
 		
 		combat_width = 1.8
@@ -247,6 +253,7 @@ sub_units = {
 			category_light_infantry
 			category_all_infantry
 			category_army
+			category_mythic
 		}
 		
 		combat_width = 1.8
@@ -398,13 +405,15 @@ sub_units = {
 			category_army
 			category_special_forces
 			category_juggernaut
+			category_mythic
+			category_mythic_special
 		}
 		
 		combat_width = 2.5
 		#reliability = -1
 		
 		#Size Definitions
-		max_strength = 30
+		max_strength = 25
 		max_organisation = 80
 		default_morale = 0.6
 		manpower = 750
@@ -483,6 +492,7 @@ sub_units = {
 			category_army
 			category_support_battalions
 			category_recon
+			category_mythic
 		}
 
 	

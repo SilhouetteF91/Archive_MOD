@@ -3,4 +3,6 @@ sub_unit_categories = {
 	category_helicopter
 	category_halo_special_forces
 	category_juggernaut
+	category_mythic
+	category_mythic_special
 }

@@ -1,0 +1,32 @@
+spriteTypes = {
+	spriteType = { 
+		name = "GFX_unit_category_halo"
+		textureFile = "gfx/interface/counters/divisions_large/unit_halo_infantry_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = { 
+		name = "GFX_unit_category_helicopter"
+		textureFile = "gfx/interface/counters/divisions_large/unit_attack_heli_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = { 
+		name = "GFX_unit_category_halo_special_forces"
+		textureFile = "gfx/interface/counters/divisions_large/unit_halo_special_forces_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = { 
+		name = "GFX_unit_category_juggernaut"
+		textureFile = "gfx/interface/counters/divisions_large/unit_juggernaut_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = { 
+		name = "GFX_unit_category_mythic"
+		textureFile = "gfx/interface/counters/divisions_large/unit_halo_infantry_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = { 
+		name = "GFX_unit_category_mythic_special"
+		textureFile = "gfx/interface/counters/divisions_large/unit_halo_special_forces_icon.dds"
+		noOfFrames = 2
+	}
+}
