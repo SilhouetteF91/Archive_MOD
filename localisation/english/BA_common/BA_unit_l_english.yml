@@ -11,6 +11,7 @@
  low_halo_infantry_desc: "인공적으로 만들어진 헤일로 보병."
  juggernaut: "저거너트 대대"
  juggernaut_desc: "신비가 주입된 외골격 슈트를 착용한 보병."
+ category_juggernaut: "모든 저거너트"
  umamusume: "우마무스메 보병"
  umamusume_desc: "시속 70km로 달리는 우마무스메 보병."
  tokiwadai_infantry: "초능력자 부대"
@@ -24,8 +25,6 @@
  #지원중대#
  halo_recon: "헤일로 수색중대"
  halo_recon_desc: "헤일로로 보호받는 정찰중대."
- juggernaut_support: "저거너트 돌격대"
- juggernaut_support_desc: "사단 직할 지원 저거너트 대대."
  kivotos_dron: "키보토스 드론"
  kivotos_dron_desc: "키보토스에서 운용하는 드론."
  #기갑사단#

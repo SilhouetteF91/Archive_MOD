@@ -19,6 +19,14 @@ sub_units = {
 			hard_attack = 0.225			
 		}
 		
+		battalion_mult = {
+			category = category_juggernaut			
+			soft_attack = 0.10
+			hard_attack = 0.225
+		}
+		
+		initiative = 0.05
+		
 		group = support
 		
 		categories = {
@@ -29,7 +37,7 @@ sub_units = {
 		}
 
 	
-		combat_width = 3
+		combat_width = 0
 	
 		#Size Definitions
 		max_strength = 2

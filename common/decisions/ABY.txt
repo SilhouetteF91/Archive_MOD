@@ -19874,45 +19874,82 @@ ABY_descision_category_debug = {
 			set_technology = {
 				pre_modern_infantry_equipment = 1
 				juggernaut_equipment_tech = 1
+				kivotos_dron_tech = 1
 			}
-			#division_template = {
-			#	name = "ABYDOS Shock Division"
-			#	priority = 1
-			#	division_names_group = ABY_INF_05
-			#	is_locked = yes
-			#	force_allow_recruiting = yes
-			#	regiments = {
-			#		low_halo_infantry = { x = 0 y = 0 }
-			#		low_halo_infantry = { x = 0 y = 1 }
-			#		low_halo_infantry = { x = 0 y = 2 }
-			#		low_halo_infantry = { x = 0 y = 3 }
-			#		low_halo_infantry = { x = 0 y = 4 }
-			#		
-			#		low_halo_infantry = { x = 1 y = 0 }
-			#		low_halo_infantry = { x = 1 y = 1 }
-			#		low_halo_infantry = { x = 1 y = 2 }
-			#		low_halo_infantry = { x = 1 y = 3 }
-			#		low_halo_infantry = { x = 1 y = 4 }
-			#		
-			#		artillery_brigade = { x = 2 y = 0 }
-			#		artillery_brigade = { x = 2 y = 1 }
-			#		artillery_brigade = { x = 2 y = 2 }
-			#		artillery_brigade = { x = 2 y = 3 }
-			#		artillery_brigade = { x = 2 y = 4 }
-			#	}
-			#	support = {
-			#		halo_recon = { x = 0 y = 0 }
-			#		logistics_company = { x = 0 y = 1 }
-			#		Sturmtruppe_Battalion = { x = 0 y = 2 }
-			#		artillery = { x = 0 y = 3 }
-			#		maintenance_company = { x = 0 y = 4 }
-			#	}
-			#}
+			complete_special_project = {
+				project = sp:BA_sp_air_helicopter
+			}
 			division_template = {
-				name = "ABYDOS Juggernaut Division"
+				name = "Water Cloud Division"
+				priority = 1
+				division_names_group = ABY_ARM_01
+				is_locked = yes
+				force_allow_recruiting = yes
+
+				regiments = {
+					attack_heli = { x = 0 y = 0 }
+					attack_heli = { x = 0 y = 1 }
+					attack_heli = { x = 0 y = 2 }
+					
+					attack_heli = { x = 1 y = 0 }
+					attack_heli = { x = 1 y = 1 }
+					attack_heli = { x = 1 y = 2 }
+					
+					attack_heli = { x = 2 y = 0 }
+					attack_heli = { x = 2 y = 1 }
+					attack_heli = { x = 2 y = 2 }
+					
+					motorized = { x = 3 y = 0 }
+					motorized = { x = 3 y = 1 }
+					motorized = { x = 3 y = 2 }
+					motorized = { x = 3 y = 3 }
+				}
+				support = {
+					helicopter_recon = { x = 0 y = 0 }
+					helicopter_field_hospital = { x = 0 y = 1 }
+					helicopter_transport = { x = 0 y = 2 }
+					anti_air = { x = 0 y = 3 }
+					maintenance_company = { x = 0 y = 4 }
+				}
+			}
+			division_template = {
+				name = "ABYDOS Shock Division"
 				priority = 1
 				division_names_group = ABY_INF_05
 				is_locked = yes
+				force_allow_recruiting = yes
+				regiments = {
+					low_halo_infantry = { x = 0 y = 0 }
+					low_halo_infantry = { x = 0 y = 1 }
+					low_halo_infantry = { x = 0 y = 2 }
+					low_halo_infantry = { x = 0 y = 3 }
+					
+					low_halo_infantry = { x = 1 y = 0 }
+					low_halo_infantry = { x = 1 y = 1 }
+					low_halo_infantry = { x = 1 y = 2 }
+					
+					low_halo_infantry = { x = 2 y = 0 }
+					low_halo_infantry = { x = 2 y = 1 }
+					low_halo_infantry = { x = 2 y = 2 }
+					low_halo_infantry = { x = 2 y = 3 }
+					
+					low_halo_infantry = { x = 3 y = 0 }
+					low_halo_infantry = { x = 3 y = 1 }
+					low_halo_infantry = { x = 3 y = 2 }
+				}
+				support = {
+					halo_recon = { x = 0 y = 0 }
+					logistics_company = { x = 0 y = 1 }
+					engineer = { x = 0 y = 2 }
+					artillery = { x = 0 y = 3 }
+					maintenance_company = { x = 0 y = 4 }
+				}
+			}
+			division_template = {
+				name = "ABYDOS Juggernaut Division"
+				priority = 1
+				division_names_group = ABY_INF_01
+				is_locked = no
 				force_allow_recruiting = yes
 
 				regiments = {
@@ -19924,17 +19961,20 @@ ABY_descision_category_debug = {
 					juggernaut = { x = 1 y = 0 }
 					juggernaut = { x = 1 y = 1 }
 					juggernaut = { x = 1 y = 2 }
-					juggernaut = { x = 1 y = 3 }
 					
-					artillery_brigade = { x = 2 y = 0 }
-					artillery_brigade = { x = 2 y = 1 }
-					artillery_brigade = { x = 2 y = 2 }
-					artillery_brigade = { x = 2 y = 3 }
+					juggernaut = { x = 2 y = 0 }
+					juggernaut = { x = 2 y = 1 }
+					juggernaut = { x = 2 y = 2 }
+					juggernaut = { x = 2 y = 3 }
+					
+					juggernaut = { x = 3 y = 0 }
+					juggernaut = { x = 3 y = 1 }
+					juggernaut = { x = 3 y = 2 }
 				}
 				support = {
-					halo_recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 0 }
 					logistics_company = { x = 0 y = 1 }
-					juggernaut_support = { x = 0 y = 2 }
+					kivotos_dron = { x = 0 y = 2 }
 					artillery = { x = 0 y = 3 }
 					maintenance_company = { x = 0 y = 4 }
 				}

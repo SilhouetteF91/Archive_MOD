@@ -3,7 +3,6 @@ technologies = {
 	juggernaut_equipment_tech = {
 		enable_subunits = {
 			juggernaut
-			juggernaut_support
 		}
 		allow = {
             always = no

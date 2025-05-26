@@ -51,25 +51,6 @@ spriteTypes = {
    	}
 
 	spriteType = { 
-    	name = "GFX_unit_juggernaut_support_icon_medium"				
-    	textureFile = "gfx/interface/counters/divisions_large/unit_juggernaut_support_icon.dds"
-     	noOfFrames = 2	
-   	}
-
-   	spriteType = { 
-    	name = "GFX_unit_juggernaut_support_medium_white"						
-    	textureFile = "gfx/interface/counters/divisions_small/onmap_unit_juggernaut_icon.dds" 
-    	noOfFrames = 2
-   	}
-
-   	spriteType = {
-    	name = "GFX_unit_juggernaut_support_icon_small"
-    	texturefile = "gfx/texticons/unit_support_juggernaut_support_small.dds"
-    	legacy_lazy_load = no
-     	noOfFrames = 2		
-   	}	
-
-	spriteType = { 
     	name = "GFX_unit_halo_militia_icon_medium"				
     	textureFile = "gfx/interface/counters/divisions_large/unit_halo_militia_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
     	noOfFrames = 2

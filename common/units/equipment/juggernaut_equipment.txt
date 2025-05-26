@@ -11,24 +11,22 @@ equipments = {
 		interface_category = interface_category_land
 
         active = no
-
-		maximum_speed = 2.5
 		
 		#Defensive Abilities
-		defense = 76
-		breakthrough = 15
+		defense = 30
+		breakthrough = 6
 		armor_value = 10
 
 		#Offensive Abilities
-		soft_attack = 29
-		hard_attack = 13
-		ap_attack = 22
+		soft_attack = 15
+		hard_attack = 8
+		ap_attack = 7.5
 		air_attack = 0
 
 		lend_lease_cost = 2
 		
 		reliability = 0.7
-		build_cost_ic = 5.67
+		build_cost_ic = 3.78
 		resources = {
 			steel = 6
 			aluminium = 2
