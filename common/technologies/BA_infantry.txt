@@ -552,6 +552,9 @@ technologies = {
 		enable_subunits = {
 			low_halo_infantry
 		}
+		allow = {
+			NOT = {has_country_flag = not_use_inhumane_tech_flag}
+        }
 		
 		enable_equipments = {
 			kivotos_infantry_equipment_0

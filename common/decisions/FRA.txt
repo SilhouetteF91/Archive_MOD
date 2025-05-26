@@ -1,49 +1,18 @@
 FRA_industrialize = {
-	FRA_press_propaganda_neu = {
-		icon = GFX_decision_eng_trade_unions_support
-		allowed = {
-			original_tag = FRA
+	FRA_african_rage_mission = {
+		icon = GFX_decision_bul_against_bs
+		days_mission_timeout = 120
+		is_good = no
+		activation = {
+			always = no
 		}
-		visible = {
-			has_completed_focus = FRA_focus_2
+		available = {
+			always = no
 		}
-		modifier = {
-			master_ideology_drift = 0.5
+		timeout_effect = {
+			country_event = FRA_prov_event.4
+			activate_mission = FRA_african_rage_mission
 		}
-		complete_effect = {
-			add_to_variable = {
-				FRA_propaganda = 5
-			}
-		}
-		days_remove = 50
-		cost = var:FRA_propaganda
-	}
-	FRA_suppression_demo = {
-		ai_will_do = {
-			modifier = {
-				has_stability < 0.3
-				add = 100
-			}
-		}
-		icon = GFX_decision_generic_arrest
-		allowed = {
-			original_tag = FRA
-		}
-		visible = {
-			check_variable = {
-				FRA_dec > 0
-			}
-		}
-		modifier = {
-			stability_weekly = 0.03
-		}
-		complete_effect = {
-			add_to_variable = {
-				FRA_suppresion = 5
-			}
-		}
-		days_remove = 35
-		cost = var:FRA_suppresion
 	}
 }
 
