@@ -116,6 +116,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = enter_tt
+			remove_ideas = KOR_two_languages_idea
 		}
 	}
 
@@ -252,6 +254,7 @@ focus_tree = {
 				amount = 300
 			}
 			
+			custom_effect_tooltip = enter_tt
 			add_ideas = ideological_fanaticism_focus
 			set_rule = {
 				can_create_factions = yes
@@ -304,6 +307,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 
+			custom_effect_tooltip = enter_tt
 			if = {
 				limit = { has_idea = neutrality_idea }
 				remove_ideas = neutrality_idea
@@ -387,6 +391,8 @@ focus_tree = {
 
 			add_ideas = indoctrination_focus
 			add_political_power = 150
+			custom_effect_tooltip = enter_tt
+			remove_ideas = KOR_two_languages_idea
 		}
 	}
 
@@ -552,6 +558,7 @@ focus_tree = {
 				is_puppet_of = JAP
 			}
 			has_government = democratic
+			has_idea = KOR_two_languages_idea
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -559,11 +566,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_peoples_republic_of_korea_democracy"
 
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
+			swap_ideas = {
+				remove_idea = KOR_two_languages_idea
+				add_idea = KOR_two_languages_weak_idea
 			}
 		}
 	}
@@ -825,6 +830,8 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 4
 
 			}
+			custom_effect_tooltip = enter_tt
+			remove_ideas = KOR_cheonggye_idea
 		}
 	}
 	

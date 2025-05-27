@@ -1,0 +1,53 @@
+ideas = {	
+	country = {
+
+		KOR_cheonggye_idea = { # 해수구제사업의 실패
+			picture = tur_sectarian_woes
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.25
+			}
+		}
+
+		KOR_two_languages_idea = { # 이중 언어 체제
+			picture = GEH_denazification
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				is_puppet_of = JAP
+			}
+
+			modifier = {
+				political_power_factor = -0.10
+				research_speed_factor = -0.05
+			}
+		}
+
+		KOR_two_languages_weak_idea = { # 이중 언어 체제
+			picture = GEH_denazification
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				research_speed_factor = 0.05
+			}
+		}
+
+	}
+}

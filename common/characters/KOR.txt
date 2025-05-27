@@ -1,5 +1,6 @@
 characters = {
 
+	# 지도자들
 	KOR_lyuh_woon_hyung = {
 		name = KOR_lyuh_woon_hyung
 		portraits = {
@@ -51,4 +52,86 @@ characters = {
 			traits={ ideological_crusader }
         }
 	}
+
+	# 장군 & 제독
+
+	KOR_kim_won_bong = {
+		name = KOR_kim_won_bong
+		portraits = {
+			army = {
+				large = "GFX_Portrait_Asia_Generic_land_5"
+			}
+		}
+		
+		corps_commander={
+			traits={ trait_reckless career_officer commando }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				NOT = { is_puppet_of = JAP }
+			}
+		}
+	}
+
+	KOR_kim_hong_il = {
+		name = KOR_kim_hong_il
+		portraits = {
+			army = {
+				large = "GFX_Portrait_Asia_Generic_land_6"
+			}
+		}
+		
+		corps_commander={
+			traits={ trait_reckless infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				NOT = { is_puppet_of = JAP }
+			}
+		}
+	}
+
+	KOR_hong_sa_ik = {
+		name = KOR_hong_sa_ik
+		portraits = {
+			army = {
+				large = "GFX_Portrait_Asia_Generic_land_4"
+			}
+		}
+		
+		field_marshal={
+			traits={ infantry_officer brilliant_strategist }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	KOR_sohn_won_yil = {
+		name = KOR_sohn_won_yil
+		portraits = {
+			navy = {
+				large = "GFX_Portrait_Asia_Generic_navy_2"
+			}
+		}
+		
+		navy_leader={
+			traits={ gentlemanly }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+
 }
