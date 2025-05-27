@@ -381,7 +381,7 @@ music = {
     }
 }
 music = {
-    song = "BA_rafael_krux_epic_orchestra"
+    song = "BA_from_the_new"
     chance = {
         factor = 0
     }

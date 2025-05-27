@@ -10209,9 +10209,6 @@ news_event = { # 트리니티 - 게헨나 전쟁
 	
 	immediate = {
 		set_global_flag = BA_Trinity_Gehenna_War
-		hidden_effect = {
-			scoped_play_song = "BA_rafael_krux_epic_orchestra"
-		}
 	}
 
 	option = {

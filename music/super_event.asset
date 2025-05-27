@@ -210,9 +210,9 @@ music = {
 	volume =  1.2
 }
 music = {
-	name = "BA_rafael_krux_epic_orchestra"
-	file = "super_event/rafael_krux_epic_orchestra.ogg"
-	volume =  0.7
+	name = "BA_from_the_new"
+	file = "super_event/from_the_new.ogg"
+	volume =  1
 }
 
 
