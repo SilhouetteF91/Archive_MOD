@@ -15,17 +15,19 @@ sub_units = {
 		
 		battalion_mult = {
 			category = category_artillery			
-			soft_attack = 0.10
-			hard_attack = 0.225			
+			soft_attack = 0.15			
 		}
 		
-		battalion_mult = {
-			category = category_juggernaut			
-			soft_attack = 0.10
-			hard_attack = 0.225
-		}
+		#battalion_mult = {
+		#	category = category_line_artillery			
+		#	hard_attack = 0.2			
+		#}
 		
-		initiative = 0.05
+		#battalion_mult = {
+		#	category = category_juggernaut			
+		#	soft_attack = 0.25
+		#	hard_attack = 0.5
+		#}
 		
 		group = support
 		
@@ -41,23 +43,22 @@ sub_units = {
 	
 		#Size Definitions
 		max_strength = 2
-		max_organisation = 20
-		default_morale = 0.95
-		manpower = 50
+		max_organisation = 30
+		default_morale = 0.3
+		manpower = 100
 		training_time = 120
 
 		#Misc Abilities
 		weight = 0.1
-		supply_consumption = 0.02
-		recon = 1
+		supply_consumption = 0.05
+		recon = 12
 		can_be_parachuted = yes
 
 		# Support nerfs to combat abilities
-		#defense = -0.4
-		#breakthrough = -0.4
-		#soft_attack = -0.4
-		#hard_attack = -0.4
-		#armor_value = -0.4
+		defense = -0.5
+		breakthrough = -0.5
+		soft_attack = -0.5
+		hard_attack = -0.5
 
 		essential = {
 			kivotos_dron_equipment
@@ -65,8 +66,8 @@ sub_units = {
 		}
 
 		need = {
-			kivotos_dron_equipment = 60
-			support_equipment = 5
+			kivotos_dron_equipment = 25
+			support_equipment = 25
 		}
 
 		forest = {

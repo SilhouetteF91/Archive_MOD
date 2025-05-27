@@ -19872,9 +19872,7 @@ ABY_descision_category_debug = {
 
 		complete_effect = {
 			set_technology = {
-				pre_modern_infantry_equipment = 1
 				juggernaut_equipment_tech = 1
-				kivotos_dron_tech = 1
 			}
 			complete_special_project = {
 				project = sp:BA_sp_air_helicopter
@@ -19912,38 +19910,85 @@ ABY_descision_category_debug = {
 					maintenance_company = { x = 0 y = 4 }
 				}
 			}
+			#division_template = {
+			#	name = "ABYDOS Shock Division"
+			#	priority = 1
+			#	division_names_group = ABY_INF_05
+			#	is_locked = yes
+			#	force_allow_recruiting = yes
+			#	regiments = {
+			#		low_halo_infantry = { x = 0 y = 0 }
+			#		low_halo_infantry = { x = 0 y = 1 }
+			#		low_halo_infantry = { x = 0 y = 2 }
+			#		low_halo_infantry = { x = 0 y = 3 }
+			#		
+			#		low_halo_infantry = { x = 1 y = 0 }
+			#		low_halo_infantry = { x = 1 y = 1 }
+			#		low_halo_infantry = { x = 1 y = 2 }
+			#		
+			#		low_halo_infantry = { x = 2 y = 0 }
+			#		low_halo_infantry = { x = 2 y = 1 }
+			#		low_halo_infantry = { x = 2 y = 2 }
+			#		low_halo_infantry = { x = 2 y = 3 }
+			#		
+			#		low_halo_infantry = { x = 3 y = 0 }
+			#		low_halo_infantry = { x = 3 y = 1 }
+			#		low_halo_infantry = { x = 3 y = 2 }
+			#	}
+			#	support = {
+			#		halo_recon = { x = 0 y = 0 }
+			#		logistics_company = { x = 0 y = 1 }
+			#		engineer = { x = 0 y = 2 }
+			#		artillery = { x = 0 y = 3 }
+			#		maintenance_company = { x = 0 y = 4 }
+			#	}
+			#}
 			division_template = {
-				name = "ABYDOS Shock Division"
+				name = "Juggernaut TEST Division"
 				priority = 1
-				division_names_group = ABY_INF_05
-				is_locked = yes
+				division_names_group = ABY_INF_01
+				is_locked = no
 				force_allow_recruiting = yes
+
 				regiments = {
-					low_halo_infantry = { x = 0 y = 0 }
-					low_halo_infantry = { x = 0 y = 1 }
-					low_halo_infantry = { x = 0 y = 2 }
-					low_halo_infantry = { x = 0 y = 3 }
+					juggernaut = { x = 0 y = 0 }
+					juggernaut = { x = 0 y = 1 }
+					juggernaut = { x = 0 y = 2 }
+					juggernaut = { x = 0 y = 3 }
 					
-					low_halo_infantry = { x = 1 y = 0 }
-					low_halo_infantry = { x = 1 y = 1 }
-					low_halo_infantry = { x = 1 y = 2 }
-					
-					low_halo_infantry = { x = 2 y = 0 }
-					low_halo_infantry = { x = 2 y = 1 }
-					low_halo_infantry = { x = 2 y = 2 }
-					low_halo_infantry = { x = 2 y = 3 }
-					
-					low_halo_infantry = { x = 3 y = 0 }
-					low_halo_infantry = { x = 3 y = 1 }
-					low_halo_infantry = { x = 3 y = 2 }
+					juggernaut = { x = 1 y = 0 }
+					juggernaut = { x = 1 y = 1 }
+					juggernaut = { x = 1 y = 2 }
+					juggernaut = { x = 1 y = 3 }
+					juggernaut = { x = 1 y = 4 }
 				}
 				support = {
-					halo_recon = { x = 0 y = 0 }
-					logistics_company = { x = 0 y = 1 }
-					engineer = { x = 0 y = 2 }
+					engineer = { x = 0 y = 0 }
+					anti_air = { x = 0 y = 1 }
+					halo_recon = { x = 0 y = 2 }
 					artillery = { x = 0 y = 3 }
-					maintenance_company = { x = 0 y = 4 }
 				}
+			}
+		}
+	}
+	ABY_descision_debug_add_tech = {
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }                     
+
+		complete_effect = {
+			set_technology = {
+				pre_modern_infantry_equipment = 1
+				data_link_tech = 1
+				drone_collaboration_tech = 1
+				kivotos_dron_tech = 1
 			}
 			division_template = {
 				name = "ABYDOS Juggernaut Division"
@@ -19961,21 +20006,22 @@ ABY_descision_category_debug = {
 					juggernaut = { x = 1 y = 0 }
 					juggernaut = { x = 1 y = 1 }
 					juggernaut = { x = 1 y = 2 }
+					juggernaut = { x = 1 y = 3 }
 					
-					juggernaut = { x = 2 y = 0 }
-					juggernaut = { x = 2 y = 1 }
-					juggernaut = { x = 2 y = 2 }
-					juggernaut = { x = 2 y = 3 }
+					mot_artillery_brigade = { x = 2 y = 0 }
+					mot_artillery_brigade = { x = 2 y = 1 }
+					mot_artillery_brigade = { x = 2 y = 2 }
+					mot_artillery_brigade = { x = 2 y = 3 }
 					
-					juggernaut = { x = 3 y = 0 }
-					juggernaut = { x = 3 y = 1 }
-					juggernaut = { x = 3 y = 2 }
+					mot_anti_tank_brigade = { x = 3 y = 0 }
+					mot_anti_tank_brigade = { x = 3 y = 1 }
+					mot_anti_tank_brigade = { x = 3 y = 2 }
 				}
 				support = {
 					engineer = { x = 0 y = 0 }
 					logistics_company = { x = 0 y = 1 }
 					kivotos_dron = { x = 0 y = 2 }
-					artillery = { x = 0 y = 3 }
+					field_hospital = { x = 0 y = 3 }
 					maintenance_company = { x = 0 y = 4 }
 				}
 			}

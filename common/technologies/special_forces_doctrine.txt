@@ -1639,8 +1639,11 @@ technologies = {
 			BA_halo_special_forces_cap_edit_effect = yes
 		}
 		
-		category_halo_special_forces = {
-			initiative = 0.01
+		halo_recon = {
+			battalion_mult = {
+				category = category_halo_special_forces			
+				initiative = 0.01			
+			}
 		}
 		unit_halo_recon_design_cost_factor = -1
 		

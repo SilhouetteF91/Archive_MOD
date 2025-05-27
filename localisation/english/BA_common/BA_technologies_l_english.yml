@@ -36,6 +36,13 @@
  attack_heli:0 "기동헬기부대"
  reconnaissance_heli:0 "헬기 정찰 중대"
 
+ pre_modern_infantry_equipment:0 "준현대적 보병장비"
+ pre_modern_infantry_equipment_short:0 "준현대적 보병장비"
+ juggernaut_equipment_tech:0 "저거너트 장비"
+ juggernaut_equipment_tech_short:0 "저거너트 장비"
+ data_link_tech:0 "데이터 링크 기술"
+ data_link_tech_short:0 "데이터 링크 기술"
+
  mystery_correspondence:0 "신비 대응 기술"
  mystery_correspondence_desc:0 "적의 신비 기술에 대응할 기술을 연구합니다."
  mystery_analysis:0 "신비 심층 탐구"

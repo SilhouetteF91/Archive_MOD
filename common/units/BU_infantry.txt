@@ -424,9 +424,7 @@ sub_units = {
 		training_time = 200
 		suppression = 2
 		
-		supply_consumption = 0.15
-		soft_attack = 0.10
-		breakthrough = 0.30
+		supply_consumption = 0.18
 		need = {
 			juggernaut_equipment = 75
 			kivotos_infantry_equipment = 75
