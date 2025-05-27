@@ -17,10 +17,10 @@ scripted_gui = {
 		
 		properties = {
 			gem_club_problem_decision_gourmet_research_society_icon = {
-				frame = 2
+				frame = modifier@GEH_resistance_strength_gourmet_research_society
 			}
 			gem_club_problem_decision_hot_spring_department_icon = {
-				frame = 2
+				frame = modifier@GEH_resistance_strength_hot_spring_department
 			}
 		}
 	}

@@ -11,3 +11,5 @@
  send_volunteer_size_tt: " $MODIFIER_SEND_VOLUNTEER_SIZE$: $RIGHT|+=1$\n"
  army_sub_unit_halo_infantry_defence_factor_tt: " $modifier_army_sub_unit_halo_infantry_defence_factor$: $RIGHT|+=%1$\n"
  army_sub_unit_halo_infantry_attack_factor_tt: " $army_sub_unit_halo_infantry_attack_factor$: $RIGHT|+=%1$\n"
+ GEH_resistance_strength_hot_spring_department: "온천개발부 저항"
+ GEH_resistance_strength_gourmet_research_society: "미식연구회 저항"

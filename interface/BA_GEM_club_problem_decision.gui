@@ -25,7 +25,7 @@ guiTypes = {
 			iconType = {
 				name = "gem_club_problem_decision_gourmet_research_society_icon"
 				spriteType = "GFX_decisions_idea_GEH_gourmet_research_society_process"
-				position = { x = 10 y = 20 }
+				position = { x = 22 y = 20 }
 			}
 		}
 
@@ -51,7 +51,7 @@ guiTypes = {
 			iconType = {
 				name = "gem_club_problem_decision_hot_spring_department_icon"
 				spriteType = "GFX_decisions_idea_GEH_hot_spring_department_process"
-				position = { x = 10 y = 20 }
+				position = { x = 22 y = 20 }
 			}
 		}
 	}
