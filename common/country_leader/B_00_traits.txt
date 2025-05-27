@@ -1695,7 +1695,7 @@ leader_traits = {
 	}
 	GEH_empress_of_gehenna_trait = { # 게헨나의 여제
 		random = no
-		political_power_factor = -0.25
+		political_power_factor = -0.15
 		stability_factor = 0.10
 		war_support_factor = 0.10
 		army_core_attack_factor = 0.05
