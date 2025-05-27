@@ -2396,6 +2396,12 @@ focus_tree = {
 
 			set_cosmetic_tag = GEM_empire
 			news_event = { id = BA_news.60 hours = 8 }
+			set_portraits = {
+				character = GEH_dlqnzl
+				civilian = { 
+					large = GFX_portrait_GEM_tanga_ibuki_dress
+				}
+			}
 		}
 	}
 	focus = {
@@ -4928,6 +4934,16 @@ focus_tree = {
 		y = 0 
 		allow_branch = {
 			is_debug = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = GEM_Neutralize_Makoto }
+				NOT = { has_completed_focus = GEM_maintaining_dictatorship }
+			}
 		}
 
 		completion_reward = {
