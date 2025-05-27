@@ -3,7 +3,6 @@ FRA_debug_effect = {
 	complete_national_focus = FRA_start_1
 	complete_national_focus = FRA_start_2
 	complete_national_focus = FRA_start_3
-	complete_national_focus = FRA_start_4
 	country_event = FRA_prov_event.120
 }
 FRA_debug_effect3 = {
@@ -11,6 +10,201 @@ FRA_debug_effect3 = {
 		limit = { has_character = FRA_charles_de_gaulle }
 		FRA_charles_de_gaulle = {
 			set_nationality = ROOT
+		}
+	}
+}FRA_local_resistance_bad = {
+	add_to_variable = {
+		FRA_resistance_of_locals_var = 1
+	}
+	if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_8
+		}
+		country_event = {
+			id = FRA_prov_event.3
+			days = 2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_7
+		}
+		random_list = {
+			3 = {
+				country_event = {
+					id = FRA_prov_event.3
+					days = 2
+				}
+			}
+			7 = {
+				custom_effect_tooltip = FRA_local_resistance_bad_tt
+				hidden_effect = {
+					swap_ideas = {
+						remove_idea = FRA_resistance_of_locals_7
+						add_idea = FRA_resistance_of_locals_8
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_6
+		}
+		random_list = {
+			1 = {
+				country_event = {
+					id = FRA_prov_event.3
+					days = 2
+				}
+			}
+			9 = {
+				custom_effect_tooltip = FRA_local_resistance_bad_tt
+				hidden_effect = {
+					swap_ideas = {
+						remove_idea = FRA_resistance_of_locals_6
+						add_idea = FRA_resistance_of_locals_7
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_5
+		}
+		custom_effect_tooltip = FRA_local_resistance_bad_tt
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = FRA_resistance_of_locals_5
+				add_idea = FRA_resistance_of_locals_6
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_4
+		}
+		custom_effect_tooltip = FRA_local_resistance_bad_tt
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = FRA_resistance_of_locals_4
+				add_idea = FRA_resistance_of_locals_5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_3
+		}
+		custom_effect_tooltip = FRA_local_resistance_bad_tt
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = FRA_resistance_of_locals_3
+				add_idea = FRA_resistance_of_locals_4
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_2
+		}
+		custom_effect_tooltip = FRA_local_resistance_bad_tt
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = FRA_resistance_of_locals_2
+				add_idea = FRA_resistance_of_locals_3
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_1
+		}
+		custom_effect_tooltip = FRA_local_resistance_bad_tt
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = FRA_resistance_of_locals_1
+				add_idea = FRA_resistance_of_locals_2
+			}
+		}
+	}
+}
+
+FRA_local_resistance_good = {
+	add_to_variable = {
+		FRA_resistance_of_locals_var = -1
+	}
+	if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_8
+		}
+		swap_ideas = {
+			remove_idea = FRA_resistance_of_locals_8
+			add_idea = FRA_resistance_of_locals_7
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_7
+		}
+		swap_ideas = {
+			remove_idea = FRA_resistance_of_locals_7
+			add_idea = FRA_resistance_of_locals_6
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_6
+		}
+		swap_ideas = {
+			remove_idea = FRA_resistance_of_locals_6
+			add_idea = FRA_resistance_of_locals_5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_5
+		}
+		swap_ideas = {
+			remove_idea = FRA_resistance_of_locals_5
+			add_idea = FRA_resistance_of_locals_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_4
+		}
+		swap_ideas = {
+			remove_idea = FRA_resistance_of_locals_4
+			add_idea = FRA_resistance_of_locals_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_3
+		}
+		swap_ideas = {
+			remove_idea = FRA_resistance_of_locals_3
+			add_idea = FRA_resistance_of_locals_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_2
+		}
+		swap_ideas = {
+			remove_idea = FRA_resistance_of_locals_2
+			add_idea = FRA_resistance_of_locals_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_resistance_of_locals_1
+		}
+		add_political_power = 10
+		add_to_variable = {
+			FRA_resistance_of_locals_var = 1
 		}
 	}
 }

@@ -28,8 +28,8 @@
  FRA_prov_event.3.d:0 "'비상사태'와 '동원'은 '독재'와 '노예제'의 또 다른 표현에 불과했습니다. 우리가 기억했던 자랑스러운 조국의 '자유, 평등, 우애'는 결코 압제자의 구호가 될 수 없었습니다. \n\n프랑스는 식민지인들에 의해 멸망한 최초의 식민제국으로 기억될 것입니다. 알제리, 튀니지, 모로코를 비롯한 수많은 아프리카계 부족에 의한 독립군과 그에 동조하는 군인들에 의해 벌어진 대규모 혁명에 의해, 프랑스 비상정부는 오늘 붕괴되었습니다."
  FRA_prov_event.3.a:0 "정부는 모든 사람들이 보편적으로 원하는 것을 실천해야 한다. - 장 자크 루소"
  FRA_prov_event.3.a_tt:0 "§R비상정부의 폭력적인 통치는 부메랑처럼 다시 그들에게 되돌아 왔습니다. 그들은 응당한 대가를 치를 것입니다.§!"
- FRA_prov_event.4.t:0 "저항 강화"
- FRA_prov_event.4.d:0 "땅이 존재하더라도, 사람이 없으면 나라라는 것은 존재할수 없습니다. 현재 우리 비상정부의 가혹한 처사에 불만을 품은 아프리카인들의 저항이 가시화되고 있습니다. 당장은 무시할 수도 있지만, 계속 무시한다면 우리에게 대가가 돌아올 것입니다."
+ FRA_prov_event.4.t:0 "확산되는 저항"
+ FRA_prov_event.4.d:0 "현재 우리 비상정부의 가혹한 처사에 불만을 품은 식민지인들의 저항이 가시화되고 있습니다. 당장은 무시할 수도 있지만, 계속 무시한다면 우리에게 대가가 돌아올 것입니다."
  FRA_prov_event.4.a:0 "제길!"
  FRA_prov_event.5.t:0 "격변"
  FRA_prov_event.5.d:0 "페탱은 스페인에서의 소식을 들었지만, 그리 크게 놀라워 하지도 않았다. 스페인의 정치 상황을 생각해보면, 그 곳은 언제든 터져도 이상하지 않을 화약고나 마찬가지 였으니까. 프랑스인의 원수는 이내 수화기를 내려놓으며 조용히 생각했다. 건너편 유럽에서 벌어지고 있는 전쟁을 쓸모없는 모랫더미 속에 처박힌 프랑스가 신경쓸 일이 아닐지도 몰랐다. 하지만 페탱은 머릿속으로 생각을 정리했다.\n\n모든 프랑스인들은 공화파를 지지하고 있었다. 그의 추종자들, 그리고 함께 망명해온 정치인들 대부분들도 공화파 스페인을 지지하고 있었다. 하지만 원수는 프랑코를 지지하고 있었다. 프랑스는 사막에서 고통받고 있으며, 이 땅에서 벗어나기 위해선 모든 프랑스인들이 하나로 힘을 모아 이를 극복해야 했다. 어쩌면 내전에서 승리한 프랑코에게 지원을 받을 수도 있을 터였다.\n\n원수는 짧게 고뇌하다가, 스스로의 모습을 다시한번 되새겨보았다. 남의 국가에서 벌어지고 있는 재앙에 어떻게 콩고물을 주워먹을까 고심하고 있는 모습이라! 원수는 헛웃음을 지었다. 다른 사람이었다면 몰라도, 그는 평범한 사람이 아닌 프랑스의 원수다. 다른나라의 피를 빨아먹어서라도, 조국을 이 구렁텅이에서 꺼내야 할 의무가 있었다." 
@@ -704,12 +704,10 @@
  FRA_great_inter_bel:0 "왈롱 통합"
  FRA_great_FRA:0 "대프랑스의 길"
 
- FRA_industrialize:0 "질서 유지"
- FRA_industrialize_desc:0 "\n\n\n\n£GFX_decisions_fra_army\n\n\n\n\n\n"
- FRA_press_propaganda_neu:0 "언론 선전"
- FRA_press_propaganda_neu_desc:0 "우리는 어용 언론을 이용해서 사람들을 안심시키고 현 정부에 찬동하는 메시지를 지속적으로 내보낼 것입니다."
- FRA_suppression_demo:0 "집회 억압"
- FRA_suppression_demo_desc:0 "우리는 일시적으로 현 정부에 반대되는 목소리를 묵살할 것입니다."
+ FRA_industrialize:0 "망명의 길"
+ FRA_industrialize_desc:0 "\n\n\n\n£GFX_decisions_fra_army\n\n\n\n\n\n\n\n'본토에서의 실패' 이후 프랑스는 망명의 길에 올랐습니다. 조국은 수많은 역경을 겪어왔고, 앞으로도 겪어나갈 것이지만, 그럼에도 견뎌낼 것입니다!\n\n   £GFX_pol_violence 식민지인들의 저항: §R[?FRA_resistance_of_locals_var]§!\n   §g식민지인들의 저항이 6일 때부터 프랑스는 붕괴할 위기를 안고 나아가야 합니다!§!\n\n   £GFX_occupation_costs 프랑스의 자주권: §Y[?FRA_sovereignty_var]§!\n   §g프랑스의 자주권이 2 이하가 된다면 군부가 행동할지도 모릅니다!§!"
+
+ FRA_african_rage_mission: "확산되는 저항"
 
  FRA_urbanization:0 "긴급한 산업화"
  FRA_urbanization_desc:0 "빠른 시일 내로 산업화를 이뤄내기 위해, 우리는 식민지인들의 희생을 빌리기로 하였습니다. 식민지인들은 그들을 문명사회로 인도한 조국 프랑스에 대한 충성심으로써 우리의 부탁을 흔쾌히 들어줄 것입니다."
@@ -776,6 +774,15 @@
  FRA_compagnie_algerienne: "알제리 신용 및 금융 회사"
  financial_concern: "종합 금융 회사"
  FRA_civilian_industry: "민간 산업"
+
+   #저항
+ FRA_resistance_of_locals: "식민지인들의 저항\n§W단계:§! §Y[?FRA_resistance_of_locals_var]§!"
+ FRA_sovereignty: "프랑스의 자주권\n§W단계:§! §Y[?FRA_sovereignty_var]§!"
+
+ FRA_local_resistance_bad_tt: "§R식민지인들의 저항이 1 증가합니다!§!"
+ FRA_local_resistance_good_tt: "§G식민지인들의 저항이 1 감소합니다!§!"
+ FRA_sovereignty_good_tt: "§G프랑스의 자주권이 1 증가합니다!§!"
+ FRA_sovereignty_bad_tt: "§R프랑스의 자주권이 1 감소합니다!§!"
 
  FRA_rebuilding_army: "병종 재건"
  FRA_focus_on_field_gun: "야포 주력"

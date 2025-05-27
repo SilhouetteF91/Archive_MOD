@@ -103,3 +103,19 @@ KOR_western_retraining_desc: "$KOR_republic_of_korea_establish_desc$"
 
 KOR_technology_focus: "기술의 우월성"
 KOR_technology_focus_desc: "$KOR_republic_of_korea_establish_desc$"
+
+#인물
+KOR_kim_won_bong: "김원봉"
+KOR_kim_hong_il: "김홍일"
+KOR_hong_sa_ik: "홍사익"
+KOR_sohn_won_yil: "손원일"
+
+#국민정신
+KOR_cheonggye_idea: "해수구제사업의 실패"
+KOR_cheonggye_idea_desc: "대전이로 인한 초자연적인 현상은 [ROOT.GetName]의 서울에도 큰 영향을 주었습니다. 청계천에 출몰하기 시작한 식인 대게와 식인 피라냐들은 1935년 이후 수도 개발을 사실상 중단시켰으며, 1935년 당시 조선 총독이었던 우가키 가즈시게는 대전이로 인해 흉폭화된 야생동물들을 퇴치하는 것에 실패하며 무의미한 사망자만을 늘렸습니다.\n\n조선총독부는 대전이의 영향으로 인한 서울 황폐화에 대처하지 못하였으며, 이로 인한 경제적 손해와 늦어진 산업 개발 문제를 수습하는 것은 새로운 정부와 [ROOT.GetLeader]의 몫으로 남게 되었습니다."
+
+KOR_two_languages_idea: "이중 언어 체제"
+KOR_two_languages_idea_desc: "대한제국이 멸망한 1910년을 기점으로 한반도의 관료들은 일본인들로 교체되었으며, 많은 수의 일본인들이 한반도로 이주하게 되었습니다. 급속도로 이루어진 인구 이동으로 인하여 우리 사회는 이중 언어 체제를 이루게 되었습니다. 공문서들은 일본어로 작성되고 쓰이며, 지역 경찰서장과 관료들은 여전히 일본인들로 이루어져 있습니다.\n\n[ROOT.GetAdjective] 국민들은 화합을 위하여 두 개의 언어를 배워야 할까요? 아니면 일본인들을 추방하는 것으로 복잡한 이중 언어 체제를 무너뜨릴까요?"
+
+KOR_two_languages_weak_idea: "이중 언어 체제"
+KOR_two_languages_weak_idea_desc: "대한제국이 멸망한 1910년을 기점으로 한반도의 관료들은 일본인들로 교체되었으며, 많은 수의 일본인들이 한반도로 이주하게 되었습니다. 급속도로 이루어진 인구 이동으로 인하여 우리 사회는 이중 언어 체제를 이루게 되었습니다.\n\n이상주의자인 여운형은 일본인들이 한국 사회에 그대로 남으면서 조화와 평화를 이룰 수 있다고 믿습니다. 이 이상주의적 실험이 성공할 것인지, 아니면 한 세대 이상 이어질 분란을 만들 것인지는 몇십 년 뒤에 알 수 있을 것입니다."

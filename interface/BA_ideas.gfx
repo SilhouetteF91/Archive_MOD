@@ -308,8 +308,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/gei/GEI_dimension_tunnel.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_TRM_trinity_cause_ns"
-		texturefile = "gfx/interface/ideas/TRN/idea_TRM_trinity_cause_ns.tga"
+		name = "GFX_idea_TRN_trinity_cause_2_ns"
+		texturefile = "gfx/interface/ideas/TRN/idea_TRN_Integrity_of_Trinity_ns.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_TRN_trinity_cause_ns"
+		texturefile = "gfx/interface/ideas/TRN/idea_TRN_trinity_cause_ns.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_TRN_rebuild_ns"

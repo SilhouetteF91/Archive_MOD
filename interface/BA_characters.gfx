@@ -63,6 +63,13 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 #게헨나
+
+	# 초상화
+	spriteType = {
+		name = "GFX_portrait_GEM_tanga_ibuki_dress"
+		textureFile = "gfx/leaders/GEH/portrait_GEM_tanga_ibuki_dress.tga "
+	}
+	#### 조언가
 	spriteType = {
 		name = "GFX_idea_GEH_ibuki"
 		textureFile = "gfx/interface/advisors/GEH/dlqnzl.dds"

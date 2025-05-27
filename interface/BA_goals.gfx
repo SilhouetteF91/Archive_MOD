@@ -1922,6 +1922,19 @@ spriteTypes = {
 		name = "GFX_goal_GEH_gehenna_reunification_ako"
 		textureFile = "gfx/interface/goals/GEH/GEH_gehenna_reunification_ako.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_focus_GEH_unified_gehenna_makoto"
+		textureFile = "gfx/interface/goals/GEH/focus_GEH_unified_gehenna_makoto.tga"
+	}
+	spriteType = {
+		name = "GFX_focus_GEH_unified_gehenna_ibuki"
+		textureFile = "gfx/interface/goals/GEH/focus_GEH_unified_gehenna_ibuki.tga"
+	}
+	spriteType = {
+		name = "GFX_focus_GEH_unified_gehenna_iroha"
+		textureFile = "gfx/interface/goals/GEH/focus_GEH_unified_gehenna_iroha.tga"
+	}
 	### 산해경 중점 ###
 	SpriteType = { 	
 		name = "GFX_goal_SHA_KISAKI"

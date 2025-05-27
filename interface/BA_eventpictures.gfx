@@ -340,6 +340,16 @@ spriteTypes = {
 	##
 
 	spriteType = {
+		name = "GFX_report_event_gem_megu"
+		texturefile = "gfx/event_pictures/report_event_gem_megu.tga"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_gem_kasumi"
+		texturefile = "gfx/event_pictures/report_event_gem_kasumi.tga"
+	}
+
+	spriteType = {
 		name = "GFX_report_event_gem_makoto_ibuki"
 		texturefile = "gfx/event_pictures/report_event_gem_makoto_ibuki.tga"
 	}
@@ -942,6 +952,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/CAN_bank_of_canada.tga"
 	}
 	## 흥신소 ##
+	
+    spriteType = {
+		name = "GFX_report_event_aru_memorial"
+		texturefile = "gfx/event_pictures/HEU/report_event_aru_memorial.tga"
+	}
 	
     spriteType = {
 		name = "GFX_report_event_aru_rikuhachima"

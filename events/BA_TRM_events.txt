@@ -3830,7 +3830,116 @@ country_event = { # 유전지대를 요구한 [TRM.GetAdjective] - 루마니아�
 	
 	option = { # 
 		name = TRMDIP.54.a
+		
 	}
+}
+
+country_event = { # 룩셈과 일시적 동맹?
+	id = TRMDIP.60
+	title = TRMDIP.60.t
+	desc = TRMDIP.60.d
+	picture = GFX_event_Mika_memories
+
+	fire_only_once = no
+	is_triggered_only = yes 
+	
+	option = { # 
+		name = TRMDIP.60.a
+		ai_chance = {
+			base = 10
+		}
+		set_global_flag = HEU_TRM_alliance
+		unlock_decision_tooltip = HEU_alliance_with_trinity
+		effect_tooltip = {
+			HEU = {
+				give_guarantee = TRM
+				diplomatic_relation = { 
+					country = TRM
+					relation = military_access 
+				}
+				diplomatic_relation = { 
+					country = TRM
+					relation = docking_rights 
+				}
+			}
+			TRM = {
+				give_guarantee = HEU
+				diplomatic_relation = { 
+					country = HEU
+					relation = military_access 
+				}
+				diplomatic_relation = { 
+					country = HEU
+					relation = docking_rights 
+				}
+			}
+		}
+		hidden_effect = {
+			FROM = { country_event = { } }
+		}
+	}
+	
+	option = { # 
+		name = TRMDIP.60.b
+		ai_chance = {
+			base = 90
+		}
+
+		unlock_decision_tooltip = HEU_ask_international_for_help
+		set_global_flag = HEU_TRM_alliance_fail
+		
+	}
+}
+
+country_event = { # 룩셈과 일시적 동맹? - 룩셈측의 수락
+	id = TRMDIP.61
+	title = TRMDIP.61.t
+	desc = TRMDIP.61.d
+	picture = GFX_report_event_aru_memorial
+
+	fire_only_once = no
+	is_triggered_only = yes 
+	
+	option = { # 
+		name = TRMDIP.61.a
+		TRM = {
+			give_guarantee = HEU
+			diplomatic_relation = { 
+				country = HEU
+				relation = military_access 
+			}
+			diplomatic_relation = { 
+				country = HEU
+				relation = docking_rights 
+			}
+		}
+		HEU = {
+			give_guarantee = TRM
+			diplomatic_relation = { 
+				country = TRM
+				relation = military_access 
+			}
+			diplomatic_relation = { 
+				country = TRM
+				relation = docking_rights 
+			}
+		}
+	}	
+}
+
+country_event = { # 룩셈과 일시적 동맹? - 룩셈측의 거부
+	id = TRMDIP.62
+	title = TRMDIP.62.t
+	desc = TRMDIP.62.d
+	picture = GFX_report_event_aru_memorial
+
+	fire_only_once = no
+	is_triggered_only = yes 
+	
+	option = { # 
+		name = TRMDIP.62.a
+
+	}	
 }
 ##############################
 #####IRON SWORD OPERATION#####
@@ -4602,7 +4711,7 @@ country_event = {
 	
 	option = { #
 		name = TRN_after_war_event.20.a
-		set_variable = { TRM_GehennaResistance_speed = 50 }
+		set_variable = { TRM_GehennaResistance_speed = 60 }
 		activate_mission = TRM_loop_Gehenna_Resistance
 		hidden_effect = {
 			country_event = { id = TRN_after_war_event.21 hours = 02 }
@@ -4948,6 +5057,22 @@ unit_leader_event = {
 				days = 14
 			}
 		}
+	}
+}
+
+# 군정장관 다침 ㅜㅜ
+country_event = { 
+	id = TRN_after_war_event.31
+	title = TRN_after_war_event.31.t
+	desc = TRN_after_war_event.31.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = TRN_after_war_event.31.a
+
 	}
 }
 
@@ -9010,6 +9135,10 @@ unit_leader_event = { # 기사단국 선포
 
 	option = {
 		name = trinity.20.a
+		# 나중에 중점으로 옮겨야 함
+		activate_targeted_decision = { decision = TRN_honor_populist_policies target = TRM }
+		activate_targeted_decision = { decision = TRN_honor_clean_up_corruption target = TRM }
+		# 나중에 중점으로 옮겨야 함
     }
 }
 country_event = { # 트리니티 의용군단
@@ -9792,14 +9921,14 @@ country_event = { # 게헨나 학원에서 발생한 저항의 움직임
 			}
 			add_resistance = 45
 		}
-		set_variable = { TRM_GehennaResistance_speed = 50 }
+		set_variable = { TRM_GehennaResistance_speed = 60 }
 		activate_mission = TRM_loop_Gehenna_Resistance
     }
 }
 country_event = { #게헨나 항복 이벤트
 	id = trinity.42
-	title = trinity.42.t
-	desc = trinity.42.desc
+	title = TRM_event.15.t
+	desc = TRM_event.15.desc
 	picture = GFX_event_TRM_event_15
 
 	is_triggered_only = no
@@ -9807,7 +9936,7 @@ country_event = { #게헨나 항복 이벤트
 	immediate = { set_global_flag = TRINITY_WON_THE_GEHENNA }
 	trigger = {
 		original_tag = TRM
-		has_completed_focus = TRN_spiritual_warfare
+		has_global_flag = BA_Trinity_Gehenna_War
 		has_government = fascism
 		NOT = { has_global_flag = TRINITY_WON_THE_GEHENNA }
         TRM = {
@@ -9860,7 +9989,7 @@ country_event = { #게헨나 항복 이벤트
 		}
 		set_country_flag = TRM_after_war_flag_decision_active
 		unlock_decision_category_tooltip = TRN_after_war_decisions
-        hidden_effect = { news_event = { id = BA_news.5 } }
+        #hidden_effect = { news_event = { id = BA_news.5 } }
 	}
 }
 
@@ -10087,6 +10216,17 @@ news_event = { # 트리니티 - 게헨나 전쟁
 		trigger = {
 			TAG = TRM
 		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				#scoped_play_song = "BA_fall_schwarz"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 5
+					days = 15
+				}
+			}
+		}
 	}
 	option = {
 		name = trinitynews.5.b
@@ -10096,6 +10236,17 @@ news_event = { # 트리니티 - 게헨나 전쟁
 			NOT = { original_tag = GEH }
 			NOT = { original_tag = GEM }
 			NOT = { original_tag = HEU }
+		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_fall_schwarz"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 5
+					days = 15
+				}
+			}
 		}
 	}
 	option = {
@@ -10107,11 +10258,33 @@ news_event = { # 트리니티 - 게헨나 전쟁
 				original_tag = HEU
 			}
 		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_fall_schwarz"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 5
+					days = 15
+				}
+			}
+		}
 	}
 	option = {
 		name = trinitynews.5.d
 		trigger = {
 			NOT = { Kivotos_tag = yes }
+		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_fall_schwarz"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 5
+					days = 15
+				}
+			}
 		}
 	}
 }
