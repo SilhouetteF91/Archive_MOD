@@ -536,7 +536,7 @@ focus_tree = {
 			custom_effect_tooltip = ABY_tt_syemmata_allow
 			add_breakthrough_progress = {
 				specialization = specialization_land
-				value = 1
+				value = 3
 			}
 			set_technology = {
 				railway_gun = 1 

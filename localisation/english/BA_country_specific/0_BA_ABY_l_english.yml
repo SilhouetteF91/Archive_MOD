@@ -3601,7 +3601,7 @@
  ABY_descision_focus_czecho_11_name: "민주주의와 타협"
  ABY_descision_focus_czecho_12_name: "베네시 내각 출범"
 
- ABY_descision_focus_first_desc: ""
+ ABY_descision_focus_first_desc: "대전이 당시보다 상황이 나아졌다는 건 확실합니다, 그렇지 않나요? 우리가 어디에서, 누구와, 무엇을 해야 할 지는 명확해졌습니다. 체코인, 독일인들과의 연립정부 협상이 타결되고 행정명령을 발동해 학생회로서의 기능을 조금이나마 재건한 지금, 국가의 방향성을 정해야 합니다. 우리 국민들에게 새해 선물로 비상사태 해제를 선물할 수 없다는 건 안타까운 일입니다. 내년을 빌어 봅시다."
  ABY_descision_focus_abydos_1_desc: ""
  ABY_descision_focus_abydos_2_desc: ""
  ABY_descision_focus_abydos_3_desc: ""
@@ -3652,7 +3652,7 @@
  ABY_descision_focus_abydos_7_effect: "§YABYDOS National Brigade§! 편제 한도가 §G+1§!만큼 변동.\n(§Y북주데텐란트§!): §Y북주데텐란트§!에서 §Y아비도스§! 부대 생성"
  ABY_descision_focus_abydos_8_effect: "'§Y학생회장들의 계곡§!' 사건 발생"
  ABY_descision_focus_abydos_9_effect: "'§Y교수, 교사, 선생§!' 사건 발생"
- ABY_descision_focus_abydos_10_effect: "특별 프로젝트: §Y셰마타급 열차포§! 연구 허용\n돌파구 진행도 획득:\n§Y육상전§!: §G100.00%§!\n기술 추가: §Y열차포§!.\n§Y북주데텐란트§! 해당 주의 지역에 §G1§!개의 §Y육상전 연구소§! 추가."
+ ABY_descision_focus_abydos_10_effect: "특별 프로젝트: §Y셰마타급 열차포§! 연구 허용\n돌파구 진행도 획득:\n§Y육상전§!: §G300.00%§!\n기술 추가: §Y열차포§!.\n§Y북주데텐란트§! 해당 주의 지역에 §G1§!개의 §Y육상전 연구소§! 추가."
  ABY_descision_focus_abydos_11_effect: "'§Y군인과 소녀§!' 사건 발생"
  ABY_descision_focus_abydos_12_effect: "§Y[9.GetName]§!, §Y[75.GetName]§!, §Y[72.GetName]§! 주 중 §Y[SHA.GetNameWithFlag]§! 측이 지배하는 주:\n비무장 지대가 됩니다."
  ABY_descision_focus_abydos_13_effect: "'§Y산불 작전§!' 국민정신을 §Y30§! 일 동안 획득.\n(사단 속도: §G+50.00%§!, 사단 조직력: §R-25.0%§!)효과 부여\n'§Y군인과 소녀-2§!' 사건 발생"

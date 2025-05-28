@@ -681,7 +681,21 @@ technologies = {
 		}
 	}
 
-	data_link_tech = {
+	drone_special_forces_tech = {
+		allow = {
+            always = no
+        }
+		
+		kivotos_dron = {
+			battalion_mult = {
+				category = category_special_forces
+				soft_attack = 0.1
+				hard_attack = 0.2
+			}
+		}
+	}
+
+	data_link_tech_1 = {
 		allow = {
             always = no
         }
@@ -689,8 +703,22 @@ technologies = {
 		kivotos_dron = {
 			battalion_mult = {
 				category = category_juggernaut
-				soft_attack = 0.25
-				hard_attack = 0.5
+				soft_attack = 0.2
+				hard_attack = 0.4
+			}
+		}
+	}
+
+	data_link_tech_2 = {
+		allow = {
+            always = no
+        }
+		
+		kivotos_dron = {
+			battalion_mult = {
+				category = category_juggernaut
+				soft_attack = 0.2
+				hard_attack = 0.4
 			}
 		}
 	}

@@ -19986,9 +19986,20 @@ ABY_descision_category_debug = {
 		complete_effect = {
 			set_technology = {
 				pre_modern_infantry_equipment = 1
-				data_link_tech = 1
+				data_link_tech_1 = 1
+				data_link_tech_2 = 1
+				drone_special_forces_tech = 1
 				drone_collaboration_tech = 1
 				kivotos_dron_tech = 1
+			}
+			complete_special_project = {
+				project = sp:sp_land_military_engineering_vehicles
+			}
+			complete_special_project = {
+				project = sp:sp_land_self_propelled_super_heavy_howitzer
+			}
+			complete_special_project = {
+				project = sp:sp_land_super_heavy_howitzer
 			}
 			division_template = {
 				name = "ABYDOS Juggernaut Division"
@@ -20001,28 +20012,17 @@ ABY_descision_category_debug = {
 					juggernaut = { x = 0 y = 0 }
 					juggernaut = { x = 0 y = 1 }
 					juggernaut = { x = 0 y = 2 }
-					juggernaut = { x = 0 y = 3 }
 					
 					juggernaut = { x = 1 y = 0 }
 					juggernaut = { x = 1 y = 1 }
 					juggernaut = { x = 1 y = 2 }
-					juggernaut = { x = 1 y = 3 }
-					
-					mot_artillery_brigade = { x = 2 y = 0 }
-					mot_artillery_brigade = { x = 2 y = 1 }
-					mot_artillery_brigade = { x = 2 y = 2 }
-					mot_artillery_brigade = { x = 2 y = 3 }
-					
-					mot_anti_tank_brigade = { x = 3 y = 0 }
-					mot_anti_tank_brigade = { x = 3 y = 1 }
-					mot_anti_tank_brigade = { x = 3 y = 2 }
 				}
 				support = {
-					engineer = { x = 0 y = 0 }
+					anti_air = { x = 0 y = 0 }
 					logistics_company = { x = 0 y = 1 }
 					kivotos_dron = { x = 0 y = 2 }
-					field_hospital = { x = 0 y = 3 }
-					maintenance_company = { x = 0 y = 4 }
+					self_propelled_super_heavy_artillery = { x = 0 y = 3 }
+					artillery = { x = 0 y = 4 }
 				}
 			}
 		}

@@ -1446,7 +1446,7 @@ technologies = {
 		}
 		halo_special_forces = {
 			supply_consumption = -0.02
-			soft_attack = 0.05
+			soft_attack = 0.1
 		}
 		
 		allow = { 
@@ -1639,11 +1639,8 @@ technologies = {
 			BA_halo_special_forces_cap_edit_effect = yes
 		}
 		
-		halo_recon = {
-			battalion_mult = {
-				category = category_halo_special_forces			
-				initiative = 0.01			
-			}
+		category_halo_special_forces = {		
+			initiative = 0.01
 		}
 		unit_halo_recon_design_cost_factor = -1
 		
@@ -1734,7 +1731,7 @@ technologies = {
 		
 		force_use_small_tech_layout = yes
 		naval_invasion_planning_bonus_speed = 0.25
-		naval_invasion_capacity = 5
+		naval_invasion_capacity = 10
 		path = {
 			leads_to_tech = artillery_support_cavalry
 			research_cost_coeff = 1
@@ -1781,7 +1778,7 @@ technologies = {
 		force_use_small_tech_layout = yes
 		halo_special_forces = {
 			defense = 0.1
-			max_organisation = 5
+			max_organisation = 10
 		}
 		special_forces_cap = 0.06
 		on_research_complete = {
@@ -1837,7 +1834,7 @@ technologies = {
 		
 		force_use_small_tech_layout = yes
 		halo_special_forces = {
-			soft_attack = 0.05
+			soft_attack = 0.1
 		}
 		on_research_complete = {
 			custom_effect_tooltip = kivotos_halo_special_forces_add6_tt
@@ -1888,9 +1885,9 @@ technologies = {
 		
 		force_use_small_tech_layout = yes
 		halo_special_forces = {
-			soft_attack = 0.15
-			breakthrough = 0.15
-			max_organisation = 5
+			soft_attack = 0.2
+			breakthrough = 0.2
+			max_organisation = 10
 		}
 		#on_research_complete = {
 		#	custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
