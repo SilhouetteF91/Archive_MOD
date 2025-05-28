@@ -19984,6 +19984,27 @@ ABY_descision_category_debug = {
         }                     
 
 		complete_effect = {
+			create_equipment_variant = {
+				name = "Juggernaut Mothership"
+				type = land_cruiser_chassis_1
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					lc_main_armament_slot = lc_high_impact_obliterator_cannon
+					lc_secondary_armament_slot = lc_heavy_high_velocity_cannons
+					lc_special_features_slot_1 = lc_command_center
+					lc_special_features_slot_2 = lc_wet_ammunition_storage
+					lc_special_features_slot_3 = lc_helipad
+					lc_additional_armament_slot_1 = lc_light_anti_air_battery
+					lc_additional_armament_slot_2 = lc_light_anti_air_battery
+					lc_additional_armament_slot_3 = lc_high_velocity_cannon_turret
+					lc_additional_armament_slot_4 = lc_high_velocity_cannon_turret
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 20
+					tank_nsb_armor_upgrade = 0
+				}
+			}
 			army_experience = 500
 			set_technology = {
 				pre_modern_infantry_equipment = 1
@@ -20004,26 +20025,6 @@ ABY_descision_category_debug = {
 			#}
 			complete_special_project = {
 				project = sp:sp_land_land_cruiser
-			}
-			create_equipment_variant = {
-				name = "Juggernaut Mothership"
-				type = land_cruiser_chassis
-				parent_version = 0
-				modules = {
-					lc_main_armament_slot = lc_high_impact_obliterator_cannon
-					lc_secondary_armament_slot = lc_hull_mounted_railway_gun
-					lc_special_features_slot_1 = lc_command_center
-					lc_special_features_slot_2 = lc_wet_ammunition_storage
-					lc_special_features_slot_3 = lc_bunker_emplacement
-					lc_additional_armament_slot_1 = lc_light_anti_air_battery
-					lc_additional_armament_slot_2 = lc_light_anti_air_battery
-					lc_additional_armament_slot_3 = lc_light_anti_air_battery
-					lc_additional_armament_slot_4 = lc_light_anti_air_battery
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 20
-					tank_nsb_armor_upgrade = 5
-				}
 			}
 			division_template = {
 				name = "ABYDOS Juggernaut Division"
@@ -20046,7 +20047,7 @@ ABY_descision_category_debug = {
 					logistics_company = { x = 0 y = 1 }
 					kivotos_dron = { x = 0 y = 2 }
 					land_cruiser = { x = 0 y = 3 }
-					artillery = { x = 0 y = 4 }
+					engineer = { x = 0 y = 4 }
 				}
 			}
 		}

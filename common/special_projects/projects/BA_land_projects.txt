@@ -18,6 +18,10 @@ BA_sp_land_syemmata_railway_gun = {
 		has_dlc = "No Step Back"
 	}
 
+	special_project_parent = {
+		sp_land_super_heavy_railway_gun
+	}
+
 	available = {
 		FROM = {
 			original_tag = ABY
@@ -31,7 +35,7 @@ BA_sp_land_syemmata_railway_gun = {
 	complexity = sp_complexity.small
 
 	breakthrough_cost = {
-		specialization_land = 3
+		specialization_land = 2
 	}
 
 	resource_cost = {

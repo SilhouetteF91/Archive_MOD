@@ -703,8 +703,8 @@ technologies = {
 		kivotos_dron = {
 			battalion_mult = {
 				category = category_juggernaut
-				soft_attack = 0.2
-				hard_attack = 0.4
+				soft_attack = 0.15
+				hard_attack = 0.3
 			}
 		}
 	}
@@ -717,9 +717,10 @@ technologies = {
 		land_cruiser = {
 			battalion_mult = {
 				category = category_juggernaut
-				soft_attack = 0.2
-				hard_attack = 0.4
-				defense = 0.5
+				soft_attack = 0.25
+				hard_attack = 0.5
+				defense = 1
+				breakthrough = 1
 			}
 		}
 	}
