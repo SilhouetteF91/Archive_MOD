@@ -19984,22 +19984,46 @@ ABY_descision_category_debug = {
         }                     
 
 		complete_effect = {
+			army_experience = 500
 			set_technology = {
 				pre_modern_infantry_equipment = 1
-				data_link_tech_1 = 1
-				data_link_tech_2 = 1
+				data_link_tech = 1
+				land_cruiser_juggernaut = 1
 				drone_special_forces_tech = 1
 				drone_collaboration_tech = 1
 				kivotos_dron_tech = 1
 			}
+			#complete_special_project = {
+			#	project = sp:sp_land_military_engineering_vehicles
+			#}
+			#complete_special_project = {
+			#	project = sp:sp_land_self_propelled_super_heavy_howitzer
+			#}
+			#complete_special_project = {
+			#	project = sp:sp_land_super_heavy_howitzer
+			#}
 			complete_special_project = {
-				project = sp:sp_land_military_engineering_vehicles
+				project = sp:sp_land_land_cruiser
 			}
-			complete_special_project = {
-				project = sp:sp_land_self_propelled_super_heavy_howitzer
-			}
-			complete_special_project = {
-				project = sp:sp_land_super_heavy_howitzer
+			create_equipment_variant = {
+				name = "Juggernaut Mothership"
+				type = land_cruiser_chassis
+				parent_version = 0
+				modules = {
+					lc_main_armament_slot = lc_high_impact_obliterator_cannon
+					lc_secondary_armament_slot = lc_hull_mounted_railway_gun
+					lc_special_features_slot_1 = lc_command_center
+					lc_special_features_slot_2 = lc_wet_ammunition_storage
+					lc_special_features_slot_3 = lc_bunker_emplacement
+					lc_additional_armament_slot_1 = lc_light_anti_air_battery
+					lc_additional_armament_slot_2 = lc_light_anti_air_battery
+					lc_additional_armament_slot_3 = lc_light_anti_air_battery
+					lc_additional_armament_slot_4 = lc_light_anti_air_battery
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 20
+					tank_nsb_armor_upgrade = 5
+				}
 			}
 			division_template = {
 				name = "ABYDOS Juggernaut Division"
@@ -20018,10 +20042,10 @@ ABY_descision_category_debug = {
 					juggernaut = { x = 1 y = 2 }
 				}
 				support = {
-					anti_air = { x = 0 y = 0 }
+					maintenance_company = { x = 0 y = 0 }
 					logistics_company = { x = 0 y = 1 }
 					kivotos_dron = { x = 0 y = 2 }
-					self_propelled_super_heavy_artillery = { x = 0 y = 3 }
+					land_cruiser = { x = 0 y = 3 }
 					artillery = { x = 0 y = 4 }
 				}
 			}
