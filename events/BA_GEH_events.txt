@@ -17,6 +17,8 @@ add_namespace = GEH.ako.flavor_event
 add_namespace = GEH.event
 #전쟁 관련 이벤트
 add_namespace = GEH.war_event
+#히나 마법소녀 이벤트
+add_namespace = GEH.hina.magic_event
 #선도부 뉴스 이벤트
 add_namespace = GEH_news
 
@@ -2908,6 +2910,145 @@ country_event = { #정상국가
 	}
 }
 
+country_event = { #실행부 예산안 문제
+	id = GEH.event.1031
+	title = GEH.event.1031.t
+	desc = GEH.event.1031.desc
+
+	picture = GFX_report_event_generic_army
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1031.a
+
+	}
+}
+
+country_event = { #소라사키 히나의 삶
+	id = GEH.event.1032
+	title = GEH.event.1032.t
+	desc = GEH.event.1032.desc
+
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1032.a
+
+	}
+}
+
+country_event = { #태어난 것은 어째서, 살아온 것은 왜 - 1
+	id = GEH.event.1033
+	title = GEH.event.1033.t
+	desc = GEH.event.1033.desc
+
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1033.a
+		country_event = { id = GEH.event.1034 }
+	}
+}
+
+country_event = { #태어난 것은 어째서, 살아온 것은 왜 - 2
+	id = GEH.event.1034
+	title = GEH.event.1034.t
+	desc = GEH.event.1034.desc
+
+	picture = GFX_report_event_ako_amau_generic_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1034.a
+		country_event = { id = GEH.event.1035 }
+	}
+}
+
+country_event = { #태어난 것은 어째서, 살아온 것은 왜 - 3
+	id = GEH.event.1035
+	title = GEH.event.1035.t
+	
+	desc = {
+		text = GEH.event.1035.desc.iroha
+		trigger = { 
+			has_country_leader = {
+				ruling_only = yes
+				character = GEH_dlfhgk
+			}
+		}
+	}
+
+	desc = {
+		text = GEH.event.1035.desc.kayoko
+		trigger = { 
+			has_country_leader = {
+				ruling_only = yes
+				character = HEU_zkdyzh
+			}
+		}
+	}
+
+	picture = GFX_report_event_generic_flowers
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1035.a
+		set_global_flag = GEH_hina_return_flag
+
+		GEH_hina = {
+			add_trait = {
+				trait = militias_officer #헬멧단 간부
+			}
+		}
+		country_event = { id = GEH.event.1036 }
+	}
+}
+
+country_event = { #태어난 것은 어째서, 살아온 것은 왜 - 4
+	id = GEH.event.1036
+	title = GEH.event.1036.t
+	desc = GEH.event.1036.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1036.a
+		hidden_effect = {
+			country_event = { id = GEH.event.1037 days = 60 } #
+		}
+	}
+}
+
+country_event = { #아마우 히나의 결혼식
+	id = GEH.event.1037
+	title = GEH.event.1037.t
+	desc = GEH.event.1037.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1037.a
+		GEH_hina = {
+			set_character_name = GEH_hina_amau
+			set_character_flag = GEH_hina_bride
+		}
+
+		GEH_dkzh = {
+			set_character_flag = GEH_hina_bride
+		}
+	}
+}
 
 country_event = { #선도부 해외 방문 계획
 	id = GEH.event.2000
