@@ -8202,6 +8202,7 @@ focus_tree = {
 				uses = 2
 				category = construction_tech
 			}
+			country_event = { id = GEH.event.1031 }
 		}
 	}
 	
@@ -8733,6 +8734,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			country_event = { id = GEH.event.1033 }
             GEH_popular_support_up_effect = yes
 		}
 	}
