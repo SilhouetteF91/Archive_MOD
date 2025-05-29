@@ -4405,7 +4405,7 @@ TRN_after_war_decisions = {
 		icon = GFX_decision_generic_arrest
 
 		available = {
-			has_completed_focus = TRN_gehenna_clup_resistance_ns
+			has_idea = TRN_gehenna_clup_resistance_ns
 		}
 		visible = {
 

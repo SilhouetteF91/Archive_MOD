@@ -215,3 +215,15 @@ GEH_MOT_01 = {
 
 	fallback_name = "%d. Infanterie-Division (mot)"
 }
+
+GEH_PEN_01 = {
+	name = "Penal Units"
+
+	for_countries = { GEH }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry"  }
+
+	fallback_name = "%d. Wehrmacht-Division"
+}
