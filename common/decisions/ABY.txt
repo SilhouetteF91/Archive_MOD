@@ -19985,20 +19985,20 @@ ABY_descision_category_debug = {
 
 		complete_effect = {
 			create_equipment_variant = {
-				name = "Juggernaut Mothership"
+				name = "J-330 Flyswatter"
 				type = land_cruiser_chassis_1
 				parent_version = 0
 				allow_without_tech = yes
 				modules = {
-					lc_main_armament_slot = lc_high_impact_obliterator_cannon
-					lc_secondary_armament_slot = lc_heavy_high_velocity_cannons
-					lc_special_features_slot_1 = lc_command_center
+					lc_main_armament_slot = lc_heavy_anti_air_platform
+					lc_secondary_armament_slot = lc_heavy_anti_air_battery
+					lc_special_features_slot_1 = lc_radar
 					lc_special_features_slot_2 = lc_wet_ammunition_storage
 					lc_special_features_slot_3 = lc_helipad
 					lc_additional_armament_slot_1 = lc_light_anti_air_battery
 					lc_additional_armament_slot_2 = lc_light_anti_air_battery
-					lc_additional_armament_slot_3 = lc_high_velocity_cannon_turret
-					lc_additional_armament_slot_4 = lc_high_velocity_cannon_turret
+					lc_additional_armament_slot_3 = lc_light_anti_air_battery
+					lc_additional_armament_slot_4 = lc_light_anti_air_battery
 				}
 				upgrades = {
 					tank_nsb_engine_upgrade = 20
@@ -20023,9 +20023,9 @@ ABY_descision_category_debug = {
 			#complete_special_project = {
 			#	project = sp:sp_land_super_heavy_howitzer
 			#}
-			complete_special_project = {
-				project = sp:sp_land_land_cruiser
-			}
+			#complete_special_project = {
+			#	project = sp:sp_land_land_cruiser
+			#}
 			division_template = {
 				name = "ABYDOS Juggernaut Division"
 				priority = 1
