@@ -53,7 +53,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_focus_HYA_focus_victory"
-		texturefile = "gfx/interface/goals/HYA/focus_HYA_focus_victory.png"
+		texturefile = "gfx/interface/goals/HYA/focus_HYA_focus_victory.tga"
 	}
 	SpriteType = {
 		name = "GFX_focus_GE2_start_focus"
@@ -199,6 +199,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_TRN_Integrity_of_Trinity"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_Integrity_of_Trinity.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_leading_theory"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_leading_theory.tga"
 	}
 
 	SpriteType = {

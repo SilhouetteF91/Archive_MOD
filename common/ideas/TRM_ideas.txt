@@ -1477,5 +1477,17 @@ ideas = {
 				compliance_growth = -0.05
 			}
 		}
+		TRN_trinity_socialism_ns = {
+			picture = TRN_trinity_cause_ns
+			modifier = {
+				compliance_growth = 0.04
+				stability_factor = 0.12
+				research_speed_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				political_power_gain = -0.1
+				industrial_capacity_factory = 0.07
+				global_building_slots_factor = 0.1
+			}
+		}
 	}
 }

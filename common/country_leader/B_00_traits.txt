@@ -2506,7 +2506,7 @@ leader_traits = {
 		air_bombing_targetting = 0.1
 		rocket_attack_factor = 0.1
 	}
-	TRN_shepherd_of_trinity = {
+	TRN_shepherd_of_trinity = { # 양떼와 목자
 		sprite = 13
 		random = no
 		stability_factor = 0.1
