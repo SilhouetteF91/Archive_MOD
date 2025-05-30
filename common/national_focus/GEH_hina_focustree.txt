@@ -6697,7 +6697,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+
 		}
 	}
 	
@@ -7106,7 +7106,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_country_leader_trait = GEH_puppet_leader_hina
 		}
 	}
 	
@@ -7144,7 +7144,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_country_leader_trait = GEH_ako_partner_leader_hina
 		}
 	}
 	

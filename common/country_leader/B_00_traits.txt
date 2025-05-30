@@ -1860,6 +1860,36 @@ leader_traits = {
 		offensive_war_stability_factor = 0.2
 	}
 
+	GEH_puppet_leader_hina = { # 꼭두각시 선도부장
+		random = no
+		research_speed_factor = 0.05
+		production_lack_of_resource_penalty_factor = -0.1
+		hidden_modifier = {
+        	ai_desired_divisions_factor = 0.30
+		}
+	}
+
+	GEH_ako_partner_leader_hina = { # 아코의 파트너
+		random = no
+		custom_modifier_tooltip = ITA_political_reformer_tt
+		hidden_modifier = {
+			political_advisor_cost_factor = -0.25
+			air_advisor_cost_factor = -0.25
+			army_advisor_cost_factor = -0.25
+			navy_advisor_cost_factor = -0.25
+		}
+		custom_modifier_tooltip = il_duce_laws_cost_tt
+		hidden_modifier = {
+			mobilization_laws_cost_factor = -0.15
+			trade_laws_cost_factor = -0.15
+			economy_cost_factor = -0.15
+		}
+		offensive_war_stability_factor = 0.2
+		hidden_modifier = {
+        	ai_desired_divisions_factor = 0.30
+		}
+	}
+
 	GEH_School_Lunch_Club_Juri = { # 급양부 - 주리
 		sprite = 13
 		random = no
