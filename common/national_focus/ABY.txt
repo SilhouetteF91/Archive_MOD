@@ -3,7 +3,7 @@ focus_tree = {
 	initial_show_position = {
 		focus = ABY_focus_army_1
 	}
-	continuous_focus_position = { x = 200 y = 800 }
+	continuous_focus_position = { x = 100 y = 850 }
 	country = {
 		factor = 0
 		modifier = {
@@ -48,6 +48,21 @@ focus_tree = {
 			clr_country_flag = ABY_descision_focus_first_ongoing_flag
 			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_first_completed_flag
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -129,6 +144,11 @@ focus_tree = {
 			country_event = {
 				id = ABY_descision_focus_event.15
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 			clr_country_flag = ABY_descision_focus_abydos_2_ongoing_flag
 			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_2_completed_flag
@@ -261,6 +281,11 @@ focus_tree = {
 			country_event = {
 				id = ABY_descision_focus_event.4
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 			clr_country_flag = ABY_descision_focus_abydos_5_ongoing_flag
 			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_5_completed_flag
@@ -339,6 +364,11 @@ focus_tree = {
 					id = ABY_descision_focus_event.29
 				}
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -385,6 +415,11 @@ focus_tree = {
 					owner = ABY
 				}
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -498,6 +533,11 @@ focus_tree = {
 					id = ABY_descision_focus_event.29
 				}
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -599,6 +639,21 @@ focus_tree = {
 			country_event = {
 				id = ABY_descision_focus_event.31
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -698,6 +753,21 @@ focus_tree = {
 			country_event = {
 				id = ABY_descision_focus_event.32
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -750,6 +820,21 @@ focus_tree = {
 			country_event = {
 				id = ABY_descision_focus_event.32
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -849,6 +934,11 @@ focus_tree = {
 			}
 			custom_effect_tooltip = ABY_new_tt_4
 			set_country_flag = ABY_flag_recuit_czech
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -969,6 +1059,11 @@ focus_tree = {
 					id = ABY_descision_focus_event.29
 				}
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 		}
 	}
 	
@@ -1085,6 +1180,11 @@ focus_tree = {
 					id = ABY_descision_focus_event.29
 				}
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 		}
 	}
 	
@@ -1127,6 +1227,11 @@ focus_tree = {
 			country_event = {
 				id = ABY_new_event.63
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 		}
 	}
 	
@@ -1257,6 +1362,11 @@ focus_tree = {
 				}
 				add_claim_by = ABY
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 		}
 	}
 	
@@ -1493,6 +1603,11 @@ focus_tree = {
 			country_event = {
 				id = ABY_descision_focus_event.22
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 		}
 	}
 	
@@ -1577,6 +1692,11 @@ focus_tree = {
 			country_event = {
 				id = ABY_descision_focus_event.23
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 		}
 	}
 	
@@ -1615,6 +1735,11 @@ focus_tree = {
 			country_event = {
 				id = ABY_descision_focus_event.38
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 		}
 	}
 	
@@ -1655,6 +1780,11 @@ focus_tree = {
 			74 = {
 				set_demilitarized_zone = yes
 			}
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 		}
 	}
 	
@@ -1743,6 +1873,11 @@ focus_tree = {
 			custom_effect_tooltip = ABY_new_tt_19
 			clr_country_flag = ABY_flag_german_resistance_1
 			set_country_flag = ABY_flag_german_resistance_2
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
+			ABY_scripted_effect_getsokku_plus_effect = yes
 		}
 	}
 	
@@ -4498,9 +4633,7 @@ focus_tree = {
 			#중점의 타입
 		}
 		prerequisite = {
-			focus = ABY_focus_industry_13    #이전 중점
-		}
-		prerequisite = {
+			focus = ABY_focus_industry_13
 			focus = ABY_focus_industry_14    #이전 중점
 		}
 		x = 1      #좌표
@@ -4529,9 +4662,7 @@ focus_tree = {
 			#중점의 타입
 		}
 		prerequisite = {
-			focus = ABY_focus_industry_15    #이전 중점
-		}
-		prerequisite = {
+			focus = ABY_focus_industry_15
 			focus = ABY_focus_industry_14    #이전 중점
 		}
 		x = -1      #좌표

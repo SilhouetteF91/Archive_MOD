@@ -3118,8 +3118,9 @@ ABY_scripted_effect_getsokku_minus_effect = {
         	    	    compare = equals
         	    	}
 				}
-				remove_dynamic_modifier = {modifier = ABY_two_dynamic_modifier}
-				add_dynamic_modifier = {modifier = ABY_two_dynamic_modifier_over}
+				country_event = {
+					id = ABY_descision_focus_event.62
+				}
 			}
 			if = {
 				limit = {

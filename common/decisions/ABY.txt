@@ -20002,7 +20002,7 @@ ABY_descision_category_debug = {
 				}
 				upgrades = {
 					tank_nsb_engine_upgrade = 20
-					tank_nsb_armor_upgrade = 0
+					tank_nsb_armor_upgrade = 20
 				}
 			}
 			army_experience = 500
@@ -20013,6 +20013,9 @@ ABY_descision_category_debug = {
 				drone_special_forces_tech = 1
 				drone_collaboration_tech = 1
 				kivotos_dron_tech = 1
+			}
+			add_ideas = {
+				ABY_idea_land_cruiser_support
 			}
 			#complete_special_project = {
 			#	project = sp:sp_land_military_engineering_vehicles
@@ -20027,7 +20030,7 @@ ABY_descision_category_debug = {
 			#	project = sp:sp_land_land_cruiser
 			#}
 			division_template = {
-				name = "ABYDOS Juggernaut Division"
+				name = "Juggernaut Land Task Force"
 				priority = 1
 				division_names_group = ABY_INF_01
 				is_locked = no
