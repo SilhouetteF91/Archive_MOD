@@ -1043,6 +1043,77 @@ KPD = {
 		}
 	}
 }
+GEK = {
+	army = {
+		male = {
+			"GFX_Portrait_Germany_Generic_land_1"
+			"GFX_Portrait_Germany_Generic_land_2"
+			"GFX_Portrait_Germany_Generic_land_3"
+			"GFX_Portrait_Germany_Generic_land_4"
+			"GFX_Portrait_Germany_Generic_land_5"
+			"GFX_Portrait_Germany_Generic_land_6"
+			"GFX_Portrait_Germany_Generic_land_7"
+			"GFX_Portrait_Germany_Generic_land_8"
+			"GFX_Portrait_Germany_Generic_land_9"
+		}
+	}
+	
+	navy = {
+		male = {
+			"GFX_Portrait_Germany_Generic_navy_1"
+			"GFX_Portrait_Germany_Generic_navy_2"
+			"GFX_Portrait_Germany_Generic_navy_3"
+		}
+	}
+
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Europe_Generic_1"
+				"GFX_Portrait_Europe_Generic_4"
+				"GFX_Portrait_Europe_Generic_5"
+				"GFX_Portrait_Europe_Generic_6"
+				"GFX_Portrait_Europe_Generic_7"
+				"GFX_Portrait_Europe_Generic_8"
+				"GFX_Portrait_Germany_Generic_1"
+			}
+		}
+		democratic = {
+			male = {
+				"GFX_Portrait_Europe_Generic_2" 
+				"GFX_Portrait_Europe_Generic_4"
+				"GFX_Portrait_Europe_Generic_5"
+				"GFX_Portrait_Europe_Generic_6"
+				"GFX_Portrait_Europe_Generic_7"
+				"GFX_Portrait_Europe_Generic_8"
+				"GFX_Portrait_Germany_Generic_3"
+			}
+		}
+		fascism = {
+			male = {
+				"GFX_Portrait_Europe_Generic_3"
+				"GFX_Portrait_Europe_Generic_4"
+				"GFX_Portrait_Europe_Generic_5"
+				"GFX_Portrait_Europe_Generic_6"
+				"GFX_Portrait_Europe_Generic_7"
+				"GFX_Portrait_Europe_Generic_8"
+				"GFX_Portrait_Germany_Generic_2"
+			}
+		}
+		neutrality = {
+			male = {
+				"GFX_Portrait_Europe_Generic_3"
+				"GFX_Portrait_Europe_Generic_4"
+				"GFX_Portrait_Europe_Generic_5"
+				"GFX_Portrait_Europe_Generic_6"
+				"GFX_Portrait_Germany_Generic_land_1"
+				"GFX_Portrait_Germany_Generic_land_2"
+				"GFX_Portrait_Germany_Generic_land_3"
+				"GFX_Portrait_Germany_Generic_land_4"
+			}
+		}
+	}
+}
 ABY = {
 	army = {
 		male = {
