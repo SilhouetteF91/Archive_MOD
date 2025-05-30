@@ -437,6 +437,22 @@
  
  intermarium_geo: "자캅카스 민주 연방 공화국"
 
+ TAG_odyssey_fascism: "오디세이아 해양학교" #모모카 중도
+ TAG_odyssey_fascism_DEF: "오디세이아 해양학교"
+ TAG_odyssey_democratic: "오디세이아 해양학교"
+ TAG_odyssey_democratic_DEF: "오디세이아 해양학교"
+ TAG_odyssey_neutrality: "오디세이아 해양학교"
+ TAG_odyssey_neutrality_DEF: "오디세이아 해양학교"
+ TAG_odyssey_communism: "오디세이아 해양학교"
+ TAG_odyssey_communism_DEF: "오디세이아 해양학교"
+ TAG_odyssey_fascism_ADJ: "오디세이아"
+ TAG_odyssey_democratic_ADJ: "오디세이아"
+ TAG_odyssey_neutrality_ADJ: "오디세이아"
+ TAG_odyssey_communism_ADJ: "오디세이아"
+ TAG_odyssey: "오디세이아 해양학교"
+ TAG_odyssey_DEF: "오디세이아 해양학교"
+ TAG_odyssey_ADJ: "오디세이아"
+
  GEK_BAY: "독일 해방임시위원회"
  GEK_BAY_DEF: "독일 해방임시위원회"
  GEK_BAY_ADJ: "독일"
