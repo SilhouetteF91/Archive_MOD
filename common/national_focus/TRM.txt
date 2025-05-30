@@ -7697,7 +7697,7 @@ focus_tree = {
 
 	focus = { # 정권의 성문화
 		id = TRN_codification_of_regime
-		icon = GFX_focus_POL_complete_april_constitution
+		icon = GFX_focus_SWE_counter_revolution
 		prerequisite = { 
 			focus = TRN_Integrity_of_Trinity 
 		}
@@ -7757,24 +7757,21 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_country_leader_trait = TRM_Misono_the_tyrant
-			#add_country_leader_trait = TRN_horseman_of_apocalypse
 
-			remove_power_balance = {
-				id = TRM_power_balance
-			}
+			remove_power_balance = { id = TRM_power_balance }
 		}
 	}
 
-	focus = { # 키보토스의 구세주
-		id = TRN_savior_of_kivotos
-		icon = GFX_focus_TRN_savior_of_kivotos
+	focus = { # 트리니티 계획
+		id = TRN_project_trinity
+		icon = GFX_focus_wonderweapons
 		prerequisite = { 
-			focus = TRN_supreme_leader
+			focus = TRN_supreme_leader 
 			focus = TRN_codification_of_regime
 		}
-		x = 0
-		y = 2
-		relative_position_id = TRN_Integrity_of_Trinity
+		x = 1
+		y = 1
+		relative_position_id = TRN_supreme_leader
 		cost = 5
 
 		available = {
@@ -7784,6 +7781,209 @@ focus_tree = {
 		ai_will_do = {
 
 		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # 트리니티 선도론
+		id = TRN_leading_theory
+		icon = GFX_focus_TRN_leading_theory
+		prerequisite = { 
+			focus = TRN_supreme_leader 
+			focus = TRN_codification_of_regime
+		}
+		x = -1
+		y = 1
+		relative_position_id = TRN_codification_of_regime
+		cost = 5
+
+		available = {
+
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+	focus = { # 트리니티 사회주의의 교리문답서
+		id = TRN_trinity_socailism_catechism
+		icon = GFX_focus_GER_proletarian_dictatorship
+		prerequisite = { 
+			focus = TRN_codification_of_regime
+		}
+		x = 0
+		y = 2
+		relative_position_id = TRN_codification_of_regime
+		cost = 5
+
+		available = {
+			power_balance_value = {
+				id = TRM_power_balance
+				value < -0.69
+			}
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			add_stability = 0.1
+			remove_power_balance = { id = TRM_power_balance }
+			add_ideas = TRN_trinity_socialism_ns
+		}
+	}
+
+	focus = { # 선지자들의 유산
+		id = TRN_legacy_of_the_prophets
+		icon = GFX_focus_BEL_la_dame_blanche
+		prerequisite = { 
+			focus = TRN_codification_of_regime
+		}
+		x = 1
+		y = 1
+		relative_position_id = TRN_codification_of_regime
+		cost = 5
+
+		available = {
+
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # 양떼와 목자
+		id = TRN_sheep_and_shepherd
+		icon = GFX_focus_generic_sheep
+		prerequisite = { 
+			focus = TRN_legacy_of_the_prophets
+		}
+		x = 1
+		y = 1
+		relative_position_id = TRN_legacy_of_the_prophets
+		cost = 5
+
+		available = {
+
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			add_country_leader_trait = TRN_shepherd_of_trinity
+		}
+	}
+
+	focus = { # 파테르 분파 제거
+		id = TRN_party_purge
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { 
+			focus = TRN_supreme_leader 
+		}
+		x = -1
+		y = 1
+		relative_position_id = TRN_supreme_leader
+		cost = 5
+
+		available = {
+
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # 묵시룩의 기수
+		id = TRN_horseman_of_the_apocalypse
+		icon = GFX_focus_LIT_claim_livonia
+		prerequisite = { 
+			focus = TRN_party_purge
+		}
+		x = -1
+		y = 1
+		relative_position_id = TRN_party_purge
+		cost = 5
+
+		available = {
+
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			add_country_leader_trait = TRN_horseman_of_apocalypse
+
+		}
+	}
+
+	focus = { # 대천사와 전사들
+		id = TRN_michael_and_warriors
+		icon = GFX_focus_GER_our_place_in_the_sun
+		prerequisite = { 
+			focus = TRN_supreme_leader
+			focus = TRN_codification_of_regime
+		}
+		x = 0
+		y = 2
+		relative_position_id = TRN_supreme_leader
+		cost = 5
+
+		available = {
+
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			if = {
+				limit = { has_character = TRN_alzk }
+				TRN_alzk = {
+					remove_trait = { trait = front_line_general }
+				}
+			}
+
+		}
+	}
+
+	focus = { # 키보토스의 구세주
+		id = TRN_savior_of_kivotos
+		icon = GFX_focus_TRN_savior_of_kivotos
+		prerequisite = { focus = TRN_project_trinity }
+		prerequisite = { focus = TRN_leading_theory }
+		x = 1
+		y = 1
+		relative_position_id = TRN_project_trinity
+		cost = 5
+
+		available = {
+
+		}
+
+		ai_will_do = {
+
+		}
+
+		will_lead_to_war_with = MIL
+		will_lead_to_war_with = COU
+		will_lead_to_war_with = KSP
+		will_lead_to_war_with = SHE
+
 		completion_reward = {
 
 		}
@@ -8303,6 +8503,8 @@ focus_tree = {
 		will_lead_to_war_with = GEH
 		will_lead_to_war_with = GEM
 		completion_reward = {
+			set_temp_variable = { TRN_Honor_change = -15 }
+			TRN_add_Honor = yes
 			hidden_effect = {
 				if = {
 					limit = { has_government = fascism }
@@ -8390,7 +8592,6 @@ focus_tree = {
 		available = {
 			has_global_flag = TRINITY_WON_THE_GEHENNA
 			has_government = fascism
-			has_war = no
 		}
 		prerequisite = { focus = TRN_spiritual_warfare }
 

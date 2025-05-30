@@ -2704,6 +2704,10 @@ USABA_germany = {
 	color = rgb { 61 114 161 }
 	color_ui = rgb { 61 114 161 }
 }
+TAG_odyssey = {
+	color = HSV { 0.51 0.43 1 }
+	color_ui = rgb { 146 241 255 }
+}
 GEK_military_government = {
 	color = HSV { 0.1 0.15 0.4 }
 	color_ui = rgb { 138 155 116 }

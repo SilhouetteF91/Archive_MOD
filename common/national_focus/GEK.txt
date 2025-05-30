@@ -1814,10 +1814,32 @@ focus_tree = {
 			focus = post_war_focus_2
 			focus = post_war_focus_4
 		}
+
+		available = {
+			OR = {
+				has_completed_focus = GEK_RM_nazi_focus_3
+				is_power_balance_in_range = {
+					id = BAY_power_balance
+					range > BAY_nazi_side_low
+				}
+			}
+		}
 		x = 20
 		y = 0
 		cost = 5
 		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.20
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = GER_fascism_party_long
+				name = GER_fascism_party
+			}
 		}
 	}
 	focus = { #독일 방위 전략 수립
@@ -3029,6 +3051,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
+			set_cosmetic_tag = TAG_odyssey
 		}
 	}
 

@@ -127,7 +127,6 @@ country_event = { #국방군에서의 교신
 		}
 		add_stability = -0.05
 		add_war_support = 0.05
-		set_country_flag = GEK_communication_with_the_mainland_flag
 	}
 	
 	option = { 
@@ -818,9 +817,18 @@ country_event = { #북부 독일 수립
 		}
 		
 		custom_effect_tooltip = GEK_event_18_tt
-		every_state = {
-			limit = { has_dynamic_modifier = { modifier = GEH_ucantusefactory_2 } }
-			remove_dynamic_modifier = { modifier = GEH_ucantusefactory_2 }
+		
+		59 = {
+			if = {
+				limit = { has_dynamic_modifier = { modifier = GEH_ucantusefactory_2 } }
+				remove_dynamic_modifier = { modifier = GEH_ucantusefactory_2 }
+			}
+		}
+		56 = {
+			if = {
+				limit = { has_dynamic_modifier = { modifier = GEH_ucantusefactory_2 } }
+				remove_dynamic_modifier = { modifier = GEH_ucantusefactory_2 }
+			}
 		}
 		activate_mission = GEK_imminent_war
 	}
