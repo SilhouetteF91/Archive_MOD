@@ -6217,7 +6217,7 @@ focus_tree = {
 # /아코 중점 최종장 시작
     focus = {
 		id = GEH_last_focus_effect_a_rout
-		icon = GFX_focus_PER_national_museum
+		icon = GFX_focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_a
 		cost = 2
 
 		relative_position_id = GEH_last_focus_3
@@ -6294,7 +6294,7 @@ focus_tree = {
 		cost = 3
 
 		relative_position_id = GEH_last_focus_effect_a_rout
-		x = -1
+		x = -2
 		y = 1
 
 		available = {
@@ -6329,12 +6329,644 @@ focus_tree = {
 	}
 
     focus = {
+		id = GEH_amau_seminar
+		icon = GFX_focus_ARG_crackdown_on_corruption
+		cost = 5
+
+		relative_position_id = GEH_amau_administrative_officer
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_amau_administrative_officer
+        }
+
+		mutually_exclusive = {
+			focus = GEH_ako_sorasaki_seminar
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+    focus = {
+		id = GEH_amau_check_military
+		icon = GFX_focus_generic_court
+		cost = 5
+
+		relative_position_id = GEH_amau_administrative_officer
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_amau_administrative_officer
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_amau_free_internet_policy
+		icon = GFX_focus_generic_energy
+		cost = 5
+
+		relative_position_id = GEH_amau_administrative_officer
+		x = -1
+		y = 3
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_amau_check_military
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+    focus = {
+		id = GEH_amau_to_the_sky
+		icon = GFX_focus_generic_air_research_boost
+		cost = 5
+
+		relative_position_id = GEH_amau_administrative_officer
+		x = -2
+		y = 2
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_amau_check_military
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_amau_rotue_ending
+		icon = GFX_focus_GER_realpolitik
+		cost = 5
+
+		relative_position_id = GEH_amau_administrative_officer
+		x = -2
+		y = 4
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_amau_to_the_sky
+        }
+
+        prerequisite = {
+            focus = GEH_amau_free_internet_policy
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_ako_sorasaki_seminar
+		icon = GFX_focus_generic_price_controls
+		cost = 5
+
+		relative_position_id = GEH_ako_sorasaki_administrative_officer
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_ako_sorasaki_administrative_officer
+        }
+
+		mutually_exclusive = {
+			focus = GEH_amau_seminar
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_4th_ako_reduction_in_defense_budget
+		icon = GFX_focus_RAJ_a_private_military
+		cost = 5
+
+		relative_position_id = GEH_amau_seminar
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_ako_sorasaki_seminar
+            focus = GEH_amau_seminar
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+			add_manpower = -140000
+			random_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					arms_factory > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = -1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					arms_factory > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = -1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+    focus = {
+		id = GEH_4th_ako_centre_of_culture
+		icon = GFX_focus_PER_national_museum
+		cost = 5
+
+		relative_position_id = GEH_amau_seminar
+		x = 3
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_ako_sorasaki_seminar
+            focus = GEH_amau_seminar
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+
+            custom_effect_tooltip = GEH_approve_plan_tt
+            add_to_variable = { GEH_PL_consumer_goods_factor = -0.02 } # 소비재
+		}
+	}
+
+    focus = {
+		id = GEH_4th_ako_intelligence_reform
+		icon = GFX_focus_generic_national_security
+		cost = 5
+
+		relative_position_id = GEH_amau_seminar
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_ako_sorasaki_seminar
+            focus = GEH_amau_seminar
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+    focus = {
+		id = GEH_4th_ako_second_weimar_republic
+		icon = GFX_focus_GER_prussian_legacy
+		cost = 5
+
+		relative_position_id = GEH_amau_seminar
+		x = 0
+		y = 2
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_4th_ako_reduction_in_defense_budget
+        }
+
+        prerequisite = {
+            focus = GEH_4th_ako_centre_of_culture
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_4th_ako_second_weimar_republic
+		icon = GFX_focus_GER_prussian_legacy
+		cost = 4
+
+		relative_position_id = GEH_amau_seminar
+		x = 0
+		y = 2
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_4th_ako_reduction_in_defense_budget
+        }
+
+        prerequisite = {
+            focus = GEH_4th_ako_centre_of_culture
+        }
+
+		mutually_exclusive = {
+			focus = GEH_4th_ako_from_gehenna_to_trinity
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_4th_ako_coalition_with_SPD
+		icon = GFX_focus_PER_strengthen_the_tudeh
+		cost = 4
+
+		relative_position_id = GEH_4th_ako_second_weimar_republic
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_4th_ako_second_weimar_republic
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_4th_ako_oath_of_bureaucratic
+		icon = GFX_focus_generic_university_2
+		cost = 4
+
+		relative_position_id = GEH_4th_ako_second_weimar_republic
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_4th_ako_second_weimar_republic
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_4th_ako_from_gehenna_to_trinity
+		icon = GFX_focus_TRN_cause_of_trinity
+		cost = 4
+
+		relative_position_id = GEH_amau_seminar
+		x = 2
+		y = 2
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_4th_ako_reduction_in_defense_budget
+        }
+
+        prerequisite = {
+            focus = GEH_4th_ako_centre_of_culture
+        }
+
+		mutually_exclusive = {
+			focus = GEH_4th_ako_second_weimar_republic
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_4th_ako_eden_union
+		icon = GFX_focus_TRN_national_guard
+		cost = 4
+
+		relative_position_id = GEH_4th_ako_from_gehenna_to_trinity
+		x = 0
+		y = 2
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_4th_ako_from_gehenna_to_trinity
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_4th_ako_federation_for_kivotos
+		icon = GFX_focus_TRN_kivotos_dip
+		cost = 4
+
+		relative_position_id = GEH_4th_ako_from_gehenna_to_trinity
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_4th_ako_from_gehenna_to_trinity
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	
+
+    focus = {
 		id = GEH_ako_sorasaki_administrative_officer
 		icon = GFX_goal_PrefectTeam_muster_Ako
 		cost = 3
 
 		relative_position_id = GEH_last_focus_effect_a_rout
-		x = 1
+		x = 2
 		y = 1
 
 		available = {
@@ -6371,6 +7003,186 @@ focus_tree = {
 			}
 		}
 	}
+	
+    focus = {
+		id = GEH_ako_sorasaki_civilian_control
+		icon = GFX_focus_AUS_lawmaking_leniency
+		cost = 5
+
+		relative_position_id = GEH_ako_sorasaki_administrative_officer
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_ako_sorasaki_administrative_officer
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+    focus = {
+		id = GEH_ako_sorasaki_promotion_of_science
+		icon = GFX_focus_PER_construct_air_defenses
+		cost = 5
+
+		relative_position_id = GEH_ako_sorasaki_administrative_officer
+		x = 2
+		y = 2
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_ako_sorasaki_civilian_control
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+    focus = {
+		id = GEH_ako_sorasaki_ako_s_puppet
+		icon = GFX_focus_ARG_keep_it_in_the_party
+		cost = 5
+
+		relative_position_id = GEH_ako_sorasaki_administrative_officer
+		x = 1
+		y = 3
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_ako_sorasaki_promotion_of_science
+        }
+
+		mutually_exclusive = {
+			focus = GEH_ako_sorasaki_ako_s_partner
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+    focus = {
+		id = GEH_ako_sorasaki_ako_s_partner
+		icon = GFX_focus_RAJ_the_sun_sets
+		cost = 5
+
+		relative_position_id = GEH_ako_sorasaki_administrative_officer
+		x = 3
+		y = 3
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_ako_sorasaki_promotion_of_science
+        }
+
+		mutually_exclusive = {
+			focus = GEH_ako_sorasaki_ako_s_puppet
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+    focus = {
+		id = GEH_ako_sorasaki_route_ending
+		icon = GFX_goal_GEH_gehenna_reunification_hina
+		cost = 5
+
+		relative_position_id = GEH_ako_sorasaki_administrative_officer
+		x = 2
+		y = 4
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_ako_sorasaki_ako_s_puppet
+            focus = GEH_ako_sorasaki_ako_s_partner
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
 # 아코 중점 최종장 끝/
 
 # /이오리 중점 최종장 시작
@@ -6391,7 +7203,7 @@ focus_tree = {
 		}
 		
 		offset = {
-			x = 15
+			x = 17
 			trigger = {
 				is_debug = yes
 			}
@@ -6643,7 +7455,7 @@ focus_tree = {
 		}
 		
 		offset = {
-			x = 20
+			x = 22
 			trigger = {
 				is_debug = yes
 			}
