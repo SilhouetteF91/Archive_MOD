@@ -680,3 +680,10 @@
  GEK_import_tariffs: "수입 관세"
  GEK_implement_rations: "배급제 시행"
  GEK_implement_wage_controls: "임금 통제 시행"
+
+ GEK_get_character_zentrum_not_tt: "이미 다른 국가가 §Y중앙당§!을 초청했습니다."
+ GEK_get_character_SPD_not_tt: "이미 다른 국가가 §Y사회민주당§!을 초청했습니다."
+ GE1_get_character_freikorps_not_tt: "이미 다른 국가가 서부 독일 지방의 §Y왕당파§!을 초청했습니다."
+ GE2_get_character_freikorps_not_tt: "이미 다른 국가가 동부 독일 지방의 §Y왕당파§!을 초청했습니다."
+ GE1_get_character_KPD_not_tt: "이미 다른 국가가 동부 독일 지방의 §Y공산당§!을 초청했습니다."
+ GE2_get_character_KPD_not_tt: "이미 다른 국가가 서부 독일 지방의 §Y공산당§!을 초청했습니다."

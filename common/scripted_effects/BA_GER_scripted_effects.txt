@@ -1,3 +1,441 @@
+GEK_get_character_zentrum = { # 서독 중앙당 데려오기
+	if = {
+		limit = { NOT = { has_global_flag = GEK_get_character_zentrum_flag } }
+		set_global_flag = GEK_get_character_zentrum_flag
+		every_possible_country = {
+			limit = {
+				has_character = GEK_konrad_adenauer
+			}
+			GEK_konrad_adenauer = {
+				set_nationality = ROOT
+			}
+			if = {
+				limit = { NOT = { PREV = { has_country_flag = GEK_use_democratic_flag } } }
+				PREV = { set_country_flag = GEK_use_democratic_flag
+
+				set_party_name = {
+					ideology = democratic
+					long_name = GER_democratic_party
+					name = GER_democratic_party
+				} }
+				promote_character = GEK_konrad_adenauer
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_konrad_adenauer
+		}
+		every_possible_country = {
+			limit = {
+				has_character = GEK_andreas_hermes
+			}
+			GEK_andreas_hermes = {
+				set_nationality = ROOT
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_andreas_hermes
+		}
+		every_possible_country = {
+			limit = {
+				has_character = GEK_hans_luther
+			}
+			GEK_hans_luther = {
+				set_nationality = ROOT
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_hans_luther
+		}
+	}
+	else = {
+		custom_effect_tooltip = GEK_get_character_zentrum_not_tt
+		add_political_power = 25
+	}
+	add_popularity = {
+		ideology = democratic
+		popularity = 0.10
+	}
+}
+GEK_get_character_SPD = { # 동독 사회민주당 데려오기
+	if = {
+		limit = { NOT = { has_global_flag = GEK_get_character_SPD_flag } }
+		set_global_flag = GEK_get_character_SPD_flag
+		every_possible_country = {
+			limit = {
+				has_character = GEK_hans_vogel
+			}
+			GEK_hans_vogel = {
+				set_nationality = ROOT
+			}
+			if = {
+				limit = { NOT = { PREV = { has_country_flag = GEK_use_democratic_flag } } }
+				PREV = { set_country_flag = GEK_use_democratic_flag
+
+				set_party_name = {
+					ideology = democratic
+					long_name = KPD_democratic_party
+					name = KPD_democratic_party
+				} }
+				promote_character = GEK_hans_vogel
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = GEK_kurt_schumacher
+			}
+			GEK_kurt_schumacher = {
+				set_nationality = ROOT
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = kurt_schumacher
+		}
+		every_possible_country = {
+			limit = {
+				has_character = GEK_julius_leber
+			}
+			GEK_julius_leber = {
+				set_nationality = ROOT
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_julius_leber
+		}
+		every_possible_country = {
+			limit = {
+				has_character = GEK_otto_grotewohl
+			}
+			GEK_otto_grotewohl = {
+				set_nationality = ROOT
+			}
+		}
+	}
+	else = {
+		custom_effect_tooltip = GEK_get_character_SPD_not_tt
+		add_political_power = 25
+	}
+	add_popularity = {
+		ideology = democratic
+		popularity = 0.10
+	}
+}
+GE1_get_character_freikorps = { # 서독 자유군단 데려오기
+
+		custom_effect_tooltip = GER_freikrops_militia_recruitment_tt
+
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Freikorps"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+
+			division_template = {
+				name = "Freikorps"	
+				division_names_group = GER_MIL_01
+				template_counter = 84 # The pickelhaube 
+				# TODO_Danne: Add a custom 3d model for them
+				is_locked = yes
+				force_allow_recruiting = yes
+				division_cap = 24 
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }  
+				}
+			}
+
+			random_state = { 
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+					is_core_of = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'München'\" division_template = \"Freikorps\" start_experience_factor = 0.4 start_equipment_factor = 0.6"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'Nürnberg'\" division_template = \"Freikorps\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'Berlin'\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'Bremerhaven'\" division_template = \"Freikorps\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'Hamburg'\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+					owner = ROOT
+				}
+			}
+		}
+		
+	if = {
+		limit = { NOT = { has_global_flag = GE1_get_character_freikorps_flag } }
+		set_global_flag = GE1_get_character_freikorps_flag
+		every_possible_country = {
+			limit = {
+				has_character = GEK_hermann_erhardt
+			}
+			GEK_hermann_erhardt = {
+				set_nationality = ROOT
+			}
+			if = {
+				limit = { NOT = { PREV = { has_country_flag = GEK_use_neutrality_flag } } }
+				PREV = { set_country_flag = GEK_use_neutrality_flag
+
+				set_party_name = {
+					ideology = neutrality 
+					long_name = GER_neutrality_party_kaiserreich_long 
+					name = GER_neutrality_party_kaiserreich 
+				} }
+				promote_character = GEK_hermann_erhardt
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_hermann_erhardt
+		}
+		every_possible_country = {
+			limit = {
+				has_character = GEK_adolf_friedrich_von_mecklenburg
+			}
+			GEK_adolf_friedrich_von_mecklenburg = {
+				set_nationality = ROOT
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_adolf_friedrich_von_mecklenburg
+		}
+		every_possible_country = {
+			limit = {
+				has_character = GEK_wilhelm_von_gayl
+			}
+			GEK_wilhelm_von_gayl = {
+				set_nationality = ROOT
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_wilhelm_von_gayl
+		}
+		every_possible_country = {
+			limit = {
+				has_character = GEK_franz_ritter_von_epp
+			}
+			GEK_franz_ritter_von_epp = {
+				set_nationality = ROOT
+			}
+		}
+	}
+	else = {
+		custom_effect_tooltip = GE1_get_character_freikorps_not_tt
+		add_political_power = 25
+	}
+	add_popularity = {
+		ideology = neutrality
+		popularity = 0.10
+	}
+}
+GE2_get_character_freikorps = { # 동독 자유군단 데려오기
+
+		custom_effect_tooltip = GER_freikrops_militia_recruitment_tt
+
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Freikorps"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+
+			division_template = {
+				name = "Freikorps"	
+				division_names_group = GER_MIL_01
+				template_counter = 84 # The pickelhaube 
+				# TODO_Danne: Add a custom 3d model for them
+				is_locked = yes
+				force_allow_recruiting = yes
+				division_cap = 24 
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }  
+				}
+			}
+
+			random_state = { 
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+					is_core_of = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'München'\" division_template = \"Freikorps\" start_experience_factor = 0.4 start_equipment_factor = 0.6"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'Nürnberg'\" division_template = \"Freikorps\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'Berlin'\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'Bremerhaven'\" division_template = \"Freikorps\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Freikorps 'Hamburg'\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+					owner = ROOT
+				}
+			}
+		}
+
+	if = {
+		limit = { NOT = { has_global_flag = GE2_get_character_freikorps_flag } }
+		set_global_flag = GE2_get_character_freikorps_flag
+		every_possible_country = {
+			limit = {
+				has_character = GEK_carl_friedrich_goerdeler
+			}
+			GEK_carl_friedrich_goerdeler = {
+				set_nationality = ROOT
+			}
+			if = {
+				limit = { NOT = { PREV = { has_country_flag = GEK_use_neutrality_flag } } }
+				PREV = { set_country_flag = GEK_use_neutrality_flag
+
+				set_party_name = {
+					ideology = neutrality 
+					long_name = GER_neutrality_party_kaiserreich_long 
+					name = GER_neutrality_party_kaiserreich 
+				} }
+				promote_character = GEK_carl_friedrich_goerdeler
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_carl_friedrich_goerdeler
+		}
+		every_possible_country = {
+			limit = {
+				has_character = GEK_paul_von_lettow_vorbeck
+			}
+			GEK_paul_von_lettow_vorbeck = {
+				set_nationality = ROOT
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_paul_von_lettow_vorbeck
+		}
+		every_possible_country = {
+			limit = {
+				has_character = GEK_alfred_hugenberg
+			}
+			GEK_alfred_hugenberg = {
+				set_nationality = ROOT
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_alfred_hugenberg
+		}
+	}
+	else = {
+		custom_effect_tooltip = GE2_get_character_freikorps_not_tt
+		add_political_power = 25
+	}
+	add_popularity = {
+		ideology = neutrality
+		popularity = 0.10
+	}
+}
+GE1_get_character_KPD = { # 서독 공산당 데려오기
+	if = {
+		limit = { NOT = { has_global_flag = GE1_get_character_KPD_flag } }
+		set_global_flag = GE1_get_character_KPD_flag
+		every_possible_country = {
+			limit = {
+				has_character = GEK_wilhelm_pieck
+			}
+			GEK_wilhelm_pieck = {
+				set_nationality = ROOT
+			}
+			if = {
+				limit = { NOT = { PREV = { has_country_flag = GEK_use_communism_flag } } }
+				PREV = { set_country_flag = GEK_use_communism_flag
+
+				set_party_name = {
+					ideology = communism
+					long_name = KPD_party_long
+					name = KPD_party_long
+				} }
+				promote_character = GEK_wilhelm_pieck
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = GEK_bernhard_bastlein
+			}
+			GEK_bernhard_bastlein = {
+				set_nationality = ROOT
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_bernhard_bastlein
+		}
+	}
+	else = {
+		custom_effect_tooltip = GE1_get_character_KPD_not_tt
+		add_political_power = 25
+	}
+	add_popularity = {
+		ideology = communism
+		popularity = 0.10
+	}
+}
+GE2_get_character_KPD = { # 동독 공산당 데려오기
+	if = {
+		limit = { NOT = { has_global_flag = GE1_get_character_KPD_flag } }
+		set_global_flag = GE1_get_character_KPD_flag
+		every_possible_country = {
+			limit = {
+				has_character = KPD_wilhelm_munzenberg
+			}
+			KPD_wilhelm_munzenberg = {
+				set_nationality = ROOT
+			}
+			if = {
+				limit = { NOT = { PREV = { has_country_flag = GEK_use_communism_flag } } }
+				PREV = { set_country_flag = GEK_use_communism_flag
+
+				set_party_name = {
+					ideology = communism
+					long_name = KPD_party_long
+					name = KPD_party_long
+				} }
+				promote_character = KPD_wilhelm_munzenberg
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = GEK_hermann_duncker
+			}
+			GEK_hermann_duncker = {
+				set_nationality = ROOT
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_hermann_duncker
+		}
+	}
+	else = {
+		custom_effect_tooltip = GE2_get_character_KPD_not_tt
+		add_political_power = 25
+	}
+	add_popularity = {
+		ideology = communism
+		popularity = 0.10
+	}
+}
 GEK_stop_rearmament = {
 	if = { 
 		limit = {

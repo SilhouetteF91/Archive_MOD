@@ -555,6 +555,7 @@ focus_tree = {
 		y = 1
 		cost = 1
 		completion_reward = {
+			GE1_get_character_KPD = yes
 			add_popularity = {
 				ideology = communism
 				popularity = 0.05
@@ -818,6 +819,7 @@ focus_tree = {
 		y = 1
 		cost = 1
 		completion_reward = {
+			GEK_get_character_SPD = yes
 			country_event = {
 				id = GEK_rm_event.4
 				days = 3
@@ -829,8 +831,6 @@ focus_tree = {
 					days = 5
 				}
 			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = GER_julius_leber
 		}
 	}
 	focus = { #주정부 제휴
@@ -1016,6 +1016,7 @@ focus_tree = {
 		y = 1
 		cost = 1
 		completion_reward = {
+			GEK_get_character_zentrum = yes
 			country_event = {
 				id = GEK_rm_event.6
 				days = 3
@@ -1280,6 +1281,7 @@ focus_tree = {
 		y = 1
 		cost = 1
 		completion_reward = {
+			GE1_get_character_freikorps = yes
 			country_event = {
 				id = GEK_rm_event.10
 				days = 3
@@ -2478,39 +2480,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
-			set_party_name = {
-				ideology = democratic
-				long_name = GER_democratic_party
-				name = GER_democratic_party
-			}
-			GE1 = {
-				set_country_flag = GER_absorbed_into_a_specific_country
-				every_character = {
-					set_nationality = ROOT
-				}
-				effect_tooltip = {
-					if = {
-						limit = { has_character = GEK_konrad_adenauer }
-						add_country_leader_role = {
-							character = GEK_konrad_adenauer
-							promote_leader = yes
-							country_leader = {
-								ideology = conservatism
-							}
-						}
-					}
-				}
-			}
-			if = {
-				limit = { has_character = GEK_konrad_adenauer }
-				add_country_leader_role = {
-					character = GEK_konrad_adenauer
-					promote_leader = yes
-					country_leader = {
-						ideology = conservatism
-					}
-				}
-			}
+			GEK_get_character_zentrum = yes
 		}
 	}
 	focus = {
