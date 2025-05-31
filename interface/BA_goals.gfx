@@ -2954,6 +2954,21 @@ spriteTypes = {
 		textureFile = "gfx/interface/goals/HYA/HYA_Kosaka_Wakamo_suspend.tga"
 	}
 
+	spriteType = {
+		name = "GFX_goal_HYA_Hyakkaryouran_head_return"
+		textureFile = "gfx/interface/goals/HYA/HYA_Hyakkaryouran_head_return.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Kokuriko"
+		textureFile = "gfx/interface/goals/HYA/HYA_Kokuriko.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Arata"
+		textureFile = "gfx/interface/goals/HYA/HYA_Arata.tga"
+	}
+
 	#색채
 	spriteType = {
 		name = "GFX_goal_GEI_invasion"

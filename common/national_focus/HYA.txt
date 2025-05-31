@@ -2625,7 +2625,7 @@ focus_tree = {
 	focus = { #황혼
 		relative_position_id = HYA_focus_70
 		id = HYA_focus_77
-		icon = GFX_focus_generic_annex_country
+		icon = GFX_goal_HYA_Kokuriko
 		prerequisite = { focus = HYA_focus_71 }
 		prerequisite = { focus = HYA_focus_76 }
 		mutually_exclusive = { focus = HYA_focus_80 }
@@ -2777,7 +2777,7 @@ focus_tree = {
 	focus = { #혁명이다!
 		relative_position_id = HYA_focus_70
 		id = HYA_focus_80
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_HYA_Arata
 		prerequisite = { focus = HYA_focus_72 }
 		prerequisite = { focus = HYA_focus_76 }
 		mutually_exclusive = { focus = HYA_focus_77 }
@@ -4709,7 +4709,7 @@ focus_tree = {
 
 	focus = { # 백화요란의 귀환
 		id = HYA_focus_119
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_goal_HYA_Hyakkaryouran_head_return
 		prerequisite = { focus = HYA_focus_victory }
 		x = 0
 		y = 1
