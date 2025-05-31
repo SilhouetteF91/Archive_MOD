@@ -4515,6 +4515,237 @@ ideas = {
 				trade_opinion_factor = 5
 			}
 		}
+		ABY_idea_army_new_milita = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				modifier_army_sub_unit_militia_attack_factor = 0.1
+				modifier_army_sub_unit_militia_defence_factor = 0.1
+				land_reinforce_rate = 0.03
+			}
+		}
+		ABY_idea_army_new_empty = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+			}
+		}
+		ABY_idea_army_new_attack = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				army_attack_factor = 0.1
+			}
+		}
+		ABY_idea_army_new_defence = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				army_defence_factor = 0.1
+			}
+		}
+		ABY_idea_army_new_4 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				max_dig_in = 5
+				dig_in_speed_factor = 0.15
+			}
+		}
+		ABY_idea_army_new_5 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				command_power_gain_mult = 0.15
+				command_power_gain = 0.25
+			}
+		}
+		ABY_idea_army_new_6 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				conscription_factor = 0.1
+			}
+		}
+		ABY_idea_army_new_7 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				army_artillery_defence_factor = 0.15
+				army_artillery_attack_factor = 0.15
+			}
+		}
+		ABY_idea_army_new_8 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				max_planning_factor = 0.1
+			}
+		}
+		ABY_idea_army_new_9 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				supply_consumption_factor = -0.1
+				out_of_supply_factor = -0.05
+			}
+		}
+		ABY_idea_army_new_10 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				army_org_regain = 0.1
+			}
+		}
+		ABY_idea_army_new_11 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				supply_node_range = 0.10
+			}
+		}
+		ABY_idea_army_new_12 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				breakthrough_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		ABY_idea_army_new_13 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				max_dig_in = 5
+				dig_in_speed_factor = 0.1
+				command_power_gain_mult = 0.1
+				command_power_gain = 0.25
+			}
+		}
+		ABY_idea_army_new_14 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				minimum_training_level = -0.1
+				supply_consumption_factor = -0.05
+				conscription_factor = 0.1
+				army_org_regain = 0.05
+				out_of_supply_factor = -0.05
+			}
+		}
+		ABY_idea_army_new_15 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				army_artillery_defence_factor = 0.1
+				army_artillery_attack_factor = 0.1
+				supply_node_range = 0.05
+				breakthrough_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		ABY_idea_halo_new_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				modifier_army_sub_unit_category_halo_attack_factor = 0.25
+			}
+		}
+		ABY_idea_halo_new_3 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				modifier_army_sub_unit_category_halo_speed_factor = 0.25
+				modifier_army_sub_unit_category_halo_max_org_factor = 0.25
+			}
+		}
+		ABY_idea_halo_new_4 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				modifier_army_sub_unit_category_halo_defence_factor = 0.25
+				modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.25
+			}
+		}
+		ABY_idea_halo_new_6 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				modifier_army_sub_unit_halo_infantry_attack_factor = 0.05
+				modifier_army_sub_unit_halo_infantry_defence_factor = 0.05
+			}
+		}
+		ABY_idea_halo_new_10 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				modifier_army_sub_unit_halo_infantry_attack_factor = 0.1
+				modifier_army_sub_unit_halo_infantry_defence_factor = 0.1
+			}
+		}
 		ABY_idea_army_1 = {
 			allowed_civil_war = {
                 always = yes

@@ -1,6 +1,7 @@
 add_namespace = ABY_event
 add_namespace = ABY_descision_focus_event
 add_namespace = ABY_hidden_event
+add_namespace = ABY_serv_focus_event
 
 country_event = {
 	id = ABY_event.1
@@ -18274,6 +18275,96 @@ country_event = {
 	option = {
 		name = ABY_descision_focus_event.100.a
 		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ABY_serv_focus_event.1
+	title = ABY_serv_focus_event.1.t
+	desc = ABY_serv_focus_event.1.d
+
+	trigger = {
+		tag = ABY
+		has_country_flag = ABY_flag_in_develop
+		has_country_flag = ABY_flag_research_TRM
+		has_completed_focus = ABY_focus_halo_2
+		controls_state = 55
+	}
+	fire_only_once = yes
+
+	option = {
+		name = ABY_serv_focus_event.1.a
+		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_research_GEH
+	}
+}
+
+country_event = {
+	id = ABY_serv_focus_event.2
+	title = ABY_serv_focus_event.2.t
+	desc = ABY_serv_focus_event.2.d
+
+	trigger = {
+		tag = ABY
+		has_country_flag = ABY_flag_in_develop
+		has_country_flag = ABY_flag_research_GEH
+		has_completed_focus = ABY_focus_halo_2
+		controls_state = 16
+	}
+	fire_only_once = yes
+
+	option = {
+		name = ABY_serv_focus_event.2.a
+		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_research_MIL
+	}
+}
+
+country_event = {
+	id = ABY_serv_focus_event.3
+	title = ABY_serv_focus_event.3.t
+	desc = ABY_serv_focus_event.3.d
+
+	trigger = {
+		tag = ABY
+		has_country_flag = ABY_flag_in_develop
+		has_country_flag = ABY_flag_research_MIL
+		has_completed_focus = ABY_focus_halo_2
+	}
+	fire_only_once = yes
+
+	option = {
+		name = ABY_serv_focus_event.3.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {has_completed_focus = ABY_focus_halo_6}
+		}
+		complete_national_focus = ABY_focus_halo_5
+	}
+
+	option = {
+		name = ABY_serv_focus_event.3.b
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ABY_serv_focus_event.4
+	title = ABY_serv_focus_event.4.t
+	desc = ABY_serv_focus_event.4.d
+
+	trigger = {
+		tag = ABY
+		has_country_flag = ABY_flag_in_develop
+		has_completed_focus = ABY_focus_halo_2
+		controls_state = 64
+	}
+	fire_only_once = yes
+
+	option = {
+		name = ABY_serv_focus_event.4.a
+		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_research_TRM
 	}
 }
 
