@@ -8133,6 +8133,13 @@ shared_focus = { #서독 통일
 		GE1 = {
 			set_country_flag = GER_absorbed_into_a_specific_country
 			every_character = {
+				limit ={
+					has_character = GEK_theodor_heuss
+					has_character = GEK_dietrich_bonhoeffer
+					has_character = GEK_hans_kahle
+					has_character = GEK_jurgen_von_blumenthal
+					has_character = GEK_vincenz_muller
+				}
 				set_nationality = ROOT
 			}
 		}
@@ -8164,215 +8171,6 @@ shared_focus = { #서독 통일
 					modifier = GEK_protestant_patriotism_for_TRM
 				}
 			}
-		}
-	}
-}
-
-shared_focus = { #국가인민군
-	id = GE1_reorganize_nationale_volksarmee  
-	icon = GFX_goal_generic_axis_build_infantry
-	prerequisite = {
-		focus = GE1_start_focus
-	}
-	mutually_exclusive = {
-		focus = GE1_monarchist_sentiment
-	}
-	relative_position_id = GE1_start_focus
-	available = {
-		has_government = communism
-	}
-	x = -12
-	y = 1
-	cost = 5
-	completion_reward = {
-		add_command_power = 15
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		BA_GER_modify_army_modifier = yes
-		add_to_variable = { GER_military_planning_speed = -0.1 tooltip = planning_speed_factor_tt }
-		add_to_variable = { GER_military_unit_leader_as_advisor_cp_cost_factor = -0.1 tooltip = unit_leader_as_advisor_cp_cost_factor_tt }
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		effect_tooltip = { #GER_vincenz_muller exists in the character file. This is for TT purposes only
-			if = { 
-				limit = { has_character = GEK_vincenz_muller }
-				add_field_marshal_role  = {
-					character = GEK_vincenz_muller
-					traits = { infantry_officer trait_reckless politically_connected offensive_doctrine }
-					skill = 2
-					attack_skill = 2
-					defense_skill = 2
-					planning_skill = 1
-					logistics_skill = 2
-				}
-			}
-		}
-		if = { 
-			limit = { has_character = GEK_hans_kahle }
-			show_unit_leaders_tooltip = GEK_hans_kahle
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-		if = {
-			limit = {
-				has_character = GEK_maximilian_von_weichs
-			}
-			retire_character = GEK_maximilian_von_weichs
-		}
-		if = {
-			limit = {
-				has_character = GEK_ewald_von_kleist
-			}
-			retire_character = GEK_ewald_von_kleist
-		}
-	}
-}
-
-shared_focus = { #군주주의 정서
-	id = GE1_monarchist_sentiment 
-	icon = GFX_focus_generic_monarchist_sentiment
-	prerequisite = {
-		focus = GE1_start_focus
-	}
-	mutually_exclusive = {
-		focus = GE1_reorganize_nationale_volksarmee
-	}
-	relative_position_id = GE1_start_focus
-	available = {
-		has_government = neutrality
-	}
-	x = -9
-	y = 1
-	cost = 5
-	completion_reward = {
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.03
-		}	
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}	
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		add_political_power = 50
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		set_party_name = {
-			ideology = neutrality 
-			long_name = GER_neutrality_party_kaiserreich_long 
-			name = GER_neutrality_party_kaiserreich 
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		if = {
-			limit = {
-				OR = {
-					has_character = GEK_andreas_hermes
-					has_character = GEK_wilhelm_von_gayl
-				}
-			}
-			custom_effect_tooltip = available_political_advisor
-		}
-		if = {
-			limit = { has_character = GEK_andreas_hermes }
-			show_ideas_tooltip = GER_andreas_hermes
-		}
-		if = {
-			limit = { has_character = GEK_wilhelm_von_gayl }
-			show_ideas_tooltip = GER_wilhelm_von_gayl
-		}
-	}
-}
-
-shared_focus = { #자유군단
-	id = GE1_re_form_the_freikorps  
-	text = GER_re_form_the_freikorps
-	icon = GFX_goal_generic_axis_build_infantry
-	prerequisite = {
-		focus = GE1_monarchist_sentiment
-	}
-	relative_position_id = GE1_monarchist_sentiment
-	available = {
-		has_government = neutrality
-	}
-	x = 0
-	y = 2
-	cost = 5
-	completion_reward = {
-
-		custom_effect_tooltip = GER_freikrops_militia_recruitment_tt
-
-		hidden_effect = {
-			delete_unit_template_and_units = {
-				division_template = "Freikorps"
-				disband = yes #if yes, will refund equipment/manpower.
-			}
-
-			division_template = {
-				name = "Freikorps"	
-				division_names_group = GER_MIL_01
-				template_counter = 84 # The pickelhaube 
-				# TODO_Danne: Add a custom 3d model for them
-				is_locked = yes
-				force_allow_recruiting = yes
-				division_cap = 24 
-				regiments = {
-					militia = { x = 0 y = 0 }
-					militia = { x = 0 y = 1 }
-					militia = { x = 0 y = 2 }
-					militia = { x = 1 y = 0 }
-					militia = { x = 1 y = 1 }
-					militia = { x = 1 y = 2 }
-				}
-				support = {
-					artillery = { x = 0 y = 0 }  
-				}
-			}
-
-			random_state = { 
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_owned_by = ROOT
-					is_core_of = ROOT
-				}
-				create_unit = {
-					division = "name = \"Freikorps 'München'\" division_template = \"Freikorps\" start_experience_factor = 0.4 start_equipment_factor = 0.6"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Freikorps 'Nürnberg'\" division_template = \"Freikorps\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Freikorps 'Berlin'\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Freikorps 'Bremerhaven'\" division_template = \"Freikorps\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Freikorps 'Hamburg'\" division_template = \"Freikorps\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
-					owner = ROOT
-				}
-			}
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		custom_effect_tooltip = GER_re_form_the_freikorps_generals_tt
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-		if = {
-			limit = { has_character = GEK_hermann_erhardt }
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = GER_hermann_erhardt
 		}
 	}
 }
@@ -8412,6 +8210,13 @@ shared_focus = { #동독 통일
 		GE2 = {
 			set_country_flag = GER_absorbed_into_a_specific_country
 			every_character = {
+				limit ={
+					has_character = GEK_ludwig_erhard
+					has_character = GEK_hanns_kerrl
+					has_character = GEK_arno_von_lenski
+					has_character = GEK_hans_marchwitza
+					has_character = KPD_fritz_selbmann
+				}
 				set_nationality = ROOT
 			}
 		}
@@ -8439,71 +8244,6 @@ shared_focus = { #동독 통일
 					modifier = GEK_protestant_patriotism_for_TRM
 				}
 			}
-		}
-	}
-}
-
-shared_focus = { #제국
-	id = GE2_return_of_the_kaiserreich
-	icon = GFX_focus_ger_return_of_the_kaiser
-	prerequisite = {
-		focus = GE2_start_focus
-	}
-	relative_position_id = GE2_start_focus
-	available = {
-		has_government = neutrality
-	}
-	x = 8
-	y = 1
-	cost = 5
-	completion_reward = {
-		if = {
-			limit = { has_character = GEK_carl_friedrich_goerdeler }
-			promote_character = GEK_carl_friedrich_goerdeler
-		}
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.03
-		}	
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}	
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		add_political_power = 50
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		set_party_name = {
-			ideology = neutrality 
-			long_name = GER_neutrality_party_kaiserreich_long 
-			name = GER_neutrality_party_kaiserreich 
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		if = {
-			limit = {
-				OR = {
-					has_character = GEK_paul_von_lettow_vorbeck
-					has_character = GEK_alfred_hugenberg
-				}
-			}
-			custom_effect_tooltip = available_political_advisor
-		}
-		if = {
-			limit = { has_character = GEK_paul_von_lettow_vorbeck }
-			show_ideas_tooltip = GER_paul_von_lettow_vorbeck
-		}
-		if = {
-			limit = { has_character = GEK_alfred_hugenberg }
-			show_ideas_tooltip = GER_alfred_hugenberg
-		}
-		if = { 
-			limit = { has_character = GEK_paul_von_lettow_vorbeck }
-			show_unit_leaders_tooltip = GEK_paul_von_lettow_vorbeck
 		}
 	}
 }
