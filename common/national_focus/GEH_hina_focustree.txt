@@ -6217,7 +6217,7 @@ focus_tree = {
 # /아코 중점 최종장 시작
     focus = {
 		id = GEH_last_focus_effect_a_rout
-		icon = GFX_focus_GEH_basking_in_the_brilliance_of_their_serenade_rout_a
+		icon = GFX_goal_GEH_last_focus_effect_a_rout
 		cost = 2
 
 		relative_position_id = GEH_last_focus_3
@@ -6290,7 +6290,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_amau_administrative_officer
-		icon = GFX_focus_generic_low_cost_housing
+		icon = GFX_goal_GEH_amau_administrative_officer
 		cost = 3
 
 		relative_position_id = GEH_last_focus_effect_a_rout
@@ -6330,7 +6330,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_amau_seminar
-		icon = GFX_focus_ARG_crackdown_on_corruption
+		icon = GFX_goal_GEH_amau_seminar
 		cost = 5
 
 		relative_position_id = GEH_amau_administrative_officer
@@ -6436,7 +6436,7 @@ focus_tree = {
 	
     focus = {
 		id = GEH_amau_to_the_sky
-		icon = GFX_focus_generic_air_research_boost
+		icon = GFX_goal_GEH_amau_to_the_sky
 		cost = 5
 
 		relative_position_id = GEH_amau_administrative_officer
@@ -6508,7 +6508,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_ako_sorasaki_seminar
-		icon = GFX_focus_generic_price_controls
+		icon = GFX_goal_GEH_ako_sorasaki_seminar
 		cost = 5
 
 		relative_position_id = GEH_ako_sorasaki_administrative_officer
@@ -6703,45 +6703,7 @@ focus_tree = {
 	
     focus = {
 		id = GEH_4th_ako_second_weimar_republic
-		icon = GFX_focus_GER_prussian_legacy
-		cost = 5
-
-		relative_position_id = GEH_amau_seminar
-		x = 0
-		y = 2
-
-		available = {
-
-		}
-
-        prerequisite = {
-            focus = GEH_4th_ako_reduction_in_defense_budget
-        }
-
-        prerequisite = {
-            focus = GEH_4th_ako_centre_of_culture
-        }
-
-		ai_will_do = {
-			base = 100
-			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
-			}
-		}
-		
-		completion_reward = {
-
-		}
-	}
-
-    focus = {
-		id = GEH_4th_ako_second_weimar_republic
-		icon = GFX_focus_GER_prussian_legacy
+		icon = GFX_goal_GEH_4th_ako_second_weimar_republic #GFX_focus_GER_prussian_legacy
 		cost = 4
 
 		relative_position_id = GEH_amau_seminar
@@ -6962,7 +6924,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_ako_sorasaki_administrative_officer
-		icon = GFX_goal_PrefectTeam_muster_Ako
+		icon = GFX_goal_GEH_ako_sorasaki_administrative_officer
 		cost = 3
 
 		relative_position_id = GEH_last_focus_effect_a_rout
@@ -7074,7 +7036,7 @@ focus_tree = {
 	
     focus = {
 		id = GEH_ako_sorasaki_ako_s_puppet
-		icon = GFX_focus_ARG_keep_it_in_the_party
+		icon = GFX_goal_GEH_ako_sorasaki_ako_s_puppet
 		cost = 5
 
 		relative_position_id = GEH_ako_sorasaki_administrative_officer

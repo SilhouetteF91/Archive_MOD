@@ -1926,6 +1926,42 @@ spriteTypes = {
 		name = "GFX_goal_GEH_gehenna_reunification_ako"
 		textureFile = "gfx/interface/goals/GEH/GEH_gehenna_reunification_ako.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_GEH_4th_ako_second_weimar_republic"
+		textureFile = "gfx/interface/goals/GEH/GEH_4th_ako_second_weimar_republic.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_ako_sorasaki_administrative_officer"
+		textureFile = "gfx/interface/goals/GEH/GEH_ako_sorasaki_administrative_officer.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_ako_sorasaki_ako_s_puppet"
+		textureFile = "gfx/interface/goals/GEH/GEH_ako_sorasaki_ako_s_puppet.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_ako_sorasaki_seminar"
+		textureFile = "gfx/interface/goals/GEH/GEH_ako_sorasaki_seminar.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_amau_administrative_officer"
+		textureFile = "gfx/interface/goals/GEH/GEH_amau_administrative_officer.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_amau_administrative_officer2"
+		textureFile = "gfx/interface/goals/GEH/GEH_amau_administrative_officer2.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_amau_seminar"
+		textureFile = "gfx/interface/goals/GEH/GEH_amau_seminar.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_amau_to_the_sky"
+		textureFile = "gfx/interface/goals/GEH/GEH_amau_to_the_sky.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_last_focus_effect_a_rout"
+		textureFile = "gfx/interface/goals/GEH/GEH_last_focus_effect_a_rout.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_focus_GEH_unified_gehenna_makoto"
