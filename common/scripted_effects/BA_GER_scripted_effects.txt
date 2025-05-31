@@ -48,6 +48,10 @@ GEK_get_character_zentrum = { # 서독 중앙당 데려오기
 		custom_effect_tooltip = GEK_get_character_zentrum_not_tt
 		add_political_power = 25
 	}
+	add_popularity = {
+		ideology = democratic
+		popularity = 0.10
+	}
 }
 GEK_get_character_SPD = { # 동독 사회민주당 데려오기
 	if = {
@@ -104,6 +108,10 @@ GEK_get_character_SPD = { # 동독 사회민주당 데려오기
 	else = {
 		custom_effect_tooltip = GEK_get_character_SPD_not_tt
 		add_political_power = 25
+	}
+	add_popularity = {
+		ideology = democratic
+		popularity = 0.10
 	}
 }
 GE1_get_character_freikorps = { # 서독 자유군단 데려오기
@@ -223,6 +231,10 @@ GE1_get_character_freikorps = { # 서독 자유군단 데려오기
 		custom_effect_tooltip = GE1_get_character_freikorps_not_tt
 		add_political_power = 25
 	}
+	add_popularity = {
+		ideology = neutrality
+		popularity = 0.10
+	}
 }
 GE2_get_character_freikorps = { # 동독 자유군단 데려오기
 
@@ -333,6 +345,10 @@ GE2_get_character_freikorps = { # 동독 자유군단 데려오기
 		custom_effect_tooltip = GE2_get_character_freikorps_not_tt
 		add_political_power = 25
 	}
+	add_popularity = {
+		ideology = neutrality
+		popularity = 0.10
+	}
 }
 GE1_get_character_KPD = { # 서독 공산당 데려오기
 	if = {
@@ -372,6 +388,10 @@ GE1_get_character_KPD = { # 서독 공산당 데려오기
 		custom_effect_tooltip = GE1_get_character_KPD_not_tt
 		add_political_power = 25
 	}
+	add_popularity = {
+		ideology = communism
+		popularity = 0.10
+	}
 }
 GE2_get_character_KPD = { # 동독 공산당 데려오기
 	if = {
@@ -410,6 +430,10 @@ GE2_get_character_KPD = { # 동독 공산당 데려오기
 	else = {
 		custom_effect_tooltip = GE2_get_character_KPD_not_tt
 		add_political_power = 25
+	}
+	add_popularity = {
+		ideology = communism
+		popularity = 0.10
 	}
 }
 GEK_stop_rearmament = {
