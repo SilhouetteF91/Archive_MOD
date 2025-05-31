@@ -867,13 +867,13 @@ focus_tree = {
 			add_stability = 0.15
 		}
 	}
-	focus = { #
+	focus = { # 학원 내 산해경인 추방
 		relative_position_id = HYA_focus_victory
 		id = HYA_focus_expulsion_of_sanhaegyeong_in_country
 		icon = GFX_focus_generic_air_defense
 		prerequisite = { focus = HYA_focus_victory }
 		#mutually_exclusive = { focus = HYA_focus_ }
-		x = 0
+		x = 2
 		y = 1
 		cost = 5
 		available = {
@@ -4705,5 +4705,99 @@ focus_tree = {
 				}
 			}
 		}
+	}
+
+	focus = { # 백화요란의 귀환
+		id = HYA_focus_119
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HYA_focus_victory }
+		x = 0
+		y = 1
+		relative_position_id = HYA_focus_victory
+		cost = 5
+		completion_reward={
+			promote_character = HYA_Nanakado_Ayame
+	    }
+		allow_branch = {
+			NOT = { has_global_flag = CFLAG_BAKSANWAR_END }
+		}
+		available = {
+			has_global_flag = GFLAG_BAKSANWAR_END
+			is_power_balance_in_range = {
+				id = HYA_centralization_bop
+				range < HYA_centralization_bop_fully_authority
+			}
+		}   
+		bypass = {
+		}
+	}
+
+	focus = { # 아야메 회유
+		id = HYA_focus_120
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HYA_focus_63 focus = HYA_focus_62 }
+		x = 1
+		y = 1
+		relative_position_id = HYA_focus_63
+		cost = 5
+		allow_branch = {
+			NOT = { has_global_flag = CFLAG_BAKSANWAR_END }
+		}
+		available = {
+			has_global_flag = GFLAG_BAKSANWAR_END
+		}   
+		bypass = {
+		}
+	}
+
+	focus = {
+		id = HYA_focus_121
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HYA_focus_123 }
+		x = -1
+		y = 2
+		relative_position_id = HYA_focus_119
+		cost = 5
+	}
+
+	focus = {
+		id = HYA_focus_122
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HYA_focus_123 }
+		x = 1
+		y = 2
+		relative_position_id = HYA_focus_119
+		cost = 5
+	}
+
+	focus = {
+		id = HYA_focus_123
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HYA_focus_119 }
+		x = 0
+		y = 1
+		relative_position_id = HYA_focus_119
+		cost = 5
+	}
+
+	focus = {
+		id = HYA_focus_124
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HYA_focus_121 }
+		prerequisite = { focus = HYA_focus_122 }
+		x = 1
+		y = 1
+		relative_position_id = HYA_focus_121
+		cost = 5
+	}
+
+	focus = {
+		id = HYA_focus_125
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HYA_focus_120 }
+		x = 0
+		y = 1
+		relative_position_id = HYA_focus_120
+		cost = 5
 	}
 }

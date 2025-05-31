@@ -134,6 +134,8 @@ recruit_character = HYA_WAKAMO
 recruit_character = HYA_Coquelico
 recruit_character = HYA_Shuro
 
+recruit_character = HYA_Nanakado_Ayame
+
 # HYA_WAKAMO ={
 #	set_character_flag = MIL_imprisoned_flag #수감중
 # }

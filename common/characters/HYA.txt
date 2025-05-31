@@ -768,4 +768,21 @@ characters={
 		}
 	}
 	
+	HYA_Nanakado_Ayame = { #나나카도 아야메
+		name = HYA_Nanakado_Ayame
+		gender = female
+		portraits={
+			civilian={
+				large="gfx/leaders/HYA/HYA_Nanakado_Ayame.tga"
+			}
+		}
+		country_leader={
+			ideology=moderatism
+			traits={
+				HYA_hyakkaryouran_resolution_council_head
+			}
+			desc = HYA_Ayame_desc
+			expire="1965.1.1.1"
+		}
+	}
 }

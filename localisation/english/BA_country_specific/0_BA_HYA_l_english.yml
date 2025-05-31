@@ -189,6 +189,13 @@
  HYA_focus_116:0 "남키보토스 통일 추진"
  HYA_focus_117:0 "남부 평정"
  HYA_focus_118:0 "게헨나 남부 침략"
+ HYA_focus_119:0 "백화요란 부장의 귀환"
+ HYA_focus_120:0 "아야메 회유"
+ HYA_focus_121:0 "모두를 지켜보는 눈"
+ HYA_focus_122:0 "백화요란에 증오를"
+ HYA_focus_123:0 "백화요란의 위원장 도전"
+ HYA_focus_124:0 "황혼의 아야메"
+ HYA_focus_125:0 "나구사와 함께"
 
  HYA_focus_scattered_cherry_blossoms: "흐트러진 벚꽃"
  HYA_focus_hyakkiyagyo_national_reform_theory: "백귀야행 국가개조론"
@@ -265,6 +272,7 @@
  HYA_fort_idea:0 "백귀야행 요새 위원회"
  HYA_event_idea_16: "항전"
  HYA_event_idea_16_desc: "좋은 의미인지는 모르겠으나 저들은 우리의 영유권 분쟁 지역 양도를 포함한 조건부 항복 제안을 거절하였으며 우리 국가를 향한 최종전쟁을 선포했습니다. 이로써 그들은 우리 내부의 싸우기 싫어하는 자들에게 강제로 싸워야 할 이유를 만들어 주었습니다."
+ HYA_hyakkaryouran_resolution_council_head:0 "백화요란 분쟁조정위원회의 부장"
  #디시전
  HYA_revenge_drama: "복수전"
  HYA_revenge_drama_dd: "영토 재수복 선언"
@@ -346,6 +354,8 @@
  HYA_Coquelico:0 "코쿠리코"
  HYA_Shuro:0 "야부키 슈로"
  HYA_NYANG:0 "냥테 마사무네"
+ HYA_Nanakado_Ayame:0 "나나카도 아야메"
+ HYA_Ayame_desc:0 "자책하지마. 그래서 너를 돕기 위해 내가 곁에 있는 거잖아.\n자, 내 손 잡아. 네가 넘어지더라도 언제든 손을 내밀어 줄 수 있도록 곁에 있어 줄게."
 
 #다이나믹 모디파이어
  HYA_hyakkayouran_conflict_resolution_council:0 "백화요란 분쟁조정위원회"
