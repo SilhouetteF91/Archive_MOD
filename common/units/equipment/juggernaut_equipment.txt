@@ -15,7 +15,7 @@ equipments = {
 		#Defensive Abilities
 		defense = 5
 		breakthrough = 6
-		armor_value = 5
+		armor_value = 50
 
 		#Offensive Abilities
 		soft_attack = 2
@@ -25,8 +25,8 @@ equipments = {
 
 		lend_lease_cost = 2
 		
-		reliability = 0.7
-		build_cost_ic = 3.78
+		reliability = 0.5
+		build_cost_ic = 5.64
 		resources = {
 			steel = 6
 			aluminium = 2

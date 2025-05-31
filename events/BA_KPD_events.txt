@@ -1093,7 +1093,7 @@ country_event = { #ㄴㄴ
 						has_trait = BA_elected_officer
 					}
 					set_variable = { KPD_event_target_loc = THIS }
-					unit_leader_event = { id = KPD_unit_leader_event.3 days = 25 random_days = 5 }
+					unit_leader_event = KPD_unit_leader_event.3
 				}
 			}
 			10 = {
@@ -1110,7 +1110,7 @@ country_event = { #ㄴㄴ
 					 	has_trait = BA_vanguard_officer
 				 	}
 					set_variable = { KPD_event_target_loc = THIS }
-				   	unit_leader_event = { id = KPD_unit_leader_event.4 days = 25 random_days = 5 }
+				   	unit_leader_event = KPD_unit_leader_event.4
 				}
 			}
 			10 = {
@@ -1136,7 +1136,7 @@ country_event = { #ㄴㄴ
 						has_trait = BA_soldiers_council
 					}
 					set_variable = { KPD_event_target_loc = THIS }
-					unit_leader_event = { id = KPD_unit_leader_event.5 days = 25 random_days = 5 }
+					unit_leader_event = KPD_unit_leader_event.5
 				}
 			}
 			10 = {
@@ -1153,7 +1153,7 @@ country_event = { #ㄴㄴ
 						has_trait = BA_soldiers_council_officer
 					}
 					set_variable = { KPD_event_target_loc = THIS }
-					unit_leader_event = { id = KPD_unit_leader_event.6 days = 25 random_days = 5 }
+					unit_leader_event = KPD_unit_leader_event.6
 				}
 			}
 			0 = {
@@ -1185,7 +1185,7 @@ country_event = { #ㄴㄴ
 					}
 					add = 10
 				}
-				country_event = { id = KPD_unit_leader_event.7 }
+				country_event = KPD_unit_leader_event.7
 			}
 		}
 	}
@@ -1225,7 +1225,7 @@ unit_leader_event = {
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id = KPD_unit_leader_event.1 days = 5 }
+			country_event = { id = KPD_unit_leader_event.1 days = 25 }
 		}
 	}
 
@@ -1246,7 +1246,7 @@ unit_leader_event = {
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id = KPD_unit_leader_event.1 days = 5 }
+			country_event = { id = KPD_unit_leader_event.1 days = 25 }
 		}
 	}
 
@@ -1267,7 +1267,7 @@ unit_leader_event = {
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id = KPD_unit_leader_event.1 days = 5 }
+			country_event = { id = KPD_unit_leader_event.1 days = 25 }
 		}
 	}
 
@@ -1288,7 +1288,7 @@ unit_leader_event = {
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id = KPD_unit_leader_event.1 days = 5 }
+			country_event = { id = KPD_unit_leader_event.1 days = 25 }
 		}
 	}
 

@@ -998,6 +998,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
+			GE2_get_character_KPD = yes
 			add_political_power = 120
 			remove_ideas = TCA_anti_trinity_war_idea
 			hidden_effect = {

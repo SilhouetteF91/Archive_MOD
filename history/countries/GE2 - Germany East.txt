@@ -80,21 +80,30 @@ add_breakthrough_progress = {
 }
 
 #행정부
-recruit_character = GEK_hans_vogel # 민주주의 지도자
-recruit_character = GEK_otto_grotewohl # 공산주의 지도자
-recruit_character = GEK_carl_friedrich_goerdeler # 독일 제국 지도자
-
 recruit_character = GEK_ludwig_erhard #루트비히 에르하르트, 경제 성장 우선 중점
-recruit_character = GEK_paul_von_lettow_vorbeck # 독일 제국 육군
-recruit_character = GEK_hans_luther # 민간 은행가
 recruit_character = GEK_hanns_kerrl # 국가종무장관
-recruit_character = GEK_alfred_hugenberg # 독일 제국 정치고문
-recruit_character = GEK_wilhelm_zaisser # 공산주의 정보부
-recruit_character = GEK_hermann_duncker # 공산주의
-recruit_character = GEK_august_thalheimer # 공산주의
-recruit_character = GEK_hans_marchwitza # 국가인민군
-recruit_character = GEK_arno_von_lenski # 국가인민군
-recruit_character = KPD_fritz_selbmann # 현실 동독 경제관료
+
+# 육군 / 참모부
+recruit_character = GEK_arno_von_lenski # 육군 : 나치 독일 국방군 중장, 동독 국가인민군(NVA) 소장
+
+# 공산주의 공용
+recruit_character = GEK_hans_marchwitza # 국가인민군 : 독일의 노동자 작가, 동독의 문화계 인사
+recruit_character = KPD_fritz_selbmann # 동독 경제관료 : 독일의 공산주의 정치인, 동독의 경제 관료
+
+## 공산당
+recruit_character = KPD_wilhelm_munzenberg # 공산주의 지도자 : 독일 공산당의 선전 전문가, '뮌첸베르크 콘체른'을 이끈 미디어의 귀재
+recruit_character = GEK_hermann_duncker # 공산주의 : 독일의 사회주의 이론가이자 교육자, 마르크스-레닌주의 교육의 선구자
+
+## 왕당파
+recruit_character = GEK_carl_friedrich_goerdeler # 독일 제국 지도자 : 보수주의 정치인이자, 반(反)나치 저항운동의 중심 인물
+recruit_character = GEK_paul_von_lettow_vorbeck # 자유군단
+recruit_character = GEK_alfred_hugenberg # 독일 제국 정치고문 : 독일국민당(DNVP) 당수, 극우 언론 재벌
+
+### 사회민주당
+recruit_character = GEK_hans_vogel # 민주주의 지도자
+recruit_character = GEK_kurt_schumacher #쿠르트 슈마허, 민주주의 고문
+recruit_character = GEK_julius_leber #율리우스 레버
+recruit_character = GEK_otto_grotewohl # 사회민주당 -> 사회주의통일당 
 
 add_ideas = {
 	limited_exports

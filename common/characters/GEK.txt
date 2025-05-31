@@ -220,12 +220,7 @@ characters={
 			slot = political_advisor
 			idea_token = KPD_wilhelm_munzenberg_idea
 			available = {
-				NOT = {
-					has_country_leader = {
-						character = KPD_heinrich_brandler
-						ruling_only = yes
-					}
-				}
+				has_government = communism
 			}
 			traits = { KPD_communist_propaganda }
 		}
@@ -402,8 +397,6 @@ characters={
 			planning_skill = 2
 			logistics_skill = 2
 			#legacy_id= -1
-			
-			 
 		}
 	}
 	KPD_wilhelm_leuschner = { #빌헬름 로이슈너
@@ -428,8 +421,6 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 			#legacy_id= -1
-			
-			 
 		}
 	}
 	KPD_wilhelm_reich = { #빌헬름 라이히
@@ -464,8 +455,6 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 			#legacy_id= -1
-			
-			 
 		}
 	}
 	KPD_heinz_hoffmann = { #하인츠 호프만
@@ -506,8 +495,6 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 			#legacy_id= -1
-			
-			 
 		}
 	}
 	KPD_erich_honecker = { #에리히 호네커
@@ -527,8 +514,6 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 			#legacy_id= -1
-			
-			 
 		}
 	}
 	KPD_elected_officer = { #병사 평의회 1
@@ -712,7 +697,7 @@ characters={
 		}
 	}
 
-	GEK_konrad_adenauer = { # 서독 사용 : 민주 정당 지도자
+	GEK_konrad_adenauer = { # 중앙당 : 민주 정당 지도자
 		name = GER_konrad_adenauer
 		portraits = {
 			civilian = {
@@ -726,9 +711,38 @@ characters={
 			expire = "1965.1.1.1"
 			id = -1
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_konrad_adenauer
+			allowed = {
+				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
+			}
+			available = {
+				NOT = { has_government = fascism }
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state  = autonomy_supervised_state
+					}
+				}
+			}
+			traits = {
+				democratic_reformer 
+			}
+			do_effect = {
+				NOT = {
+					has_government = democratic 
+				}
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
 	}
 
-	GEK_hans_vogel = { # 동독 사용 : 민주 정당 지도자
+	GEK_hans_vogel = { # 중앙당 : 민주 정당 지지율
 		name = GER_hans_vogel
 		portraits = {
 			civilian = {
@@ -759,7 +773,7 @@ characters={
 		#}
 	}
 	
-	GEK_carl_friedrich_goerdeler = { # 동독 사용 : 독일 제국 지도자
+	GEK_carl_friedrich_goerdeler = { # 서독 사용 : 독일 제국
 		name = GER_carl_friedrich_goerdeler
 		portraits = {
 			civilian = {
@@ -779,7 +793,7 @@ characters={
 			visible = {
 			}
 			available = {
-				NOT = { has_government = neutrality }
+				NOT = { has_government = communism }
 				NOT = { 
 					has_country_leader = {
 						character = GEK_carl_friedrich_goerdeler
@@ -788,7 +802,7 @@ characters={
 				}
 			}
 			traits = {
-				economist 
+				economist
 			}
 			ai_will_do = {
 				factor = 0.000
@@ -818,10 +832,6 @@ characters={
 			planning_skill = 2
 			logistics_skill = 2
 			#legacy_id = -1
-
-			visible = {
-				has_completed_focus = GE1_re_form_the_freikorps
-			}
 		}
 		advisor = {
 			slot = political_advisor
@@ -832,7 +842,7 @@ characters={
 			visible = {
 			}
 			available = {
-				has_completed_focus = GE1_re_form_the_freikorps
+				NOT = { has_government = communism }
 				NOT = { 
 					has_country_leader = {
 						character = GEK_hermann_erhardt
@@ -1017,7 +1027,7 @@ characters={
 		}
 	}
 
-	GEK_vincenz_muller = { # 서독 사용 : 국가인민군
+	GEK_vincenz_muller = { # 서독 사용 : 육군
 		name = GER_vincenz_muller
 		portraits = {
 			army = {
@@ -1032,9 +1042,6 @@ characters={
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 2
-			visible = {
-				has_completed_focus = GE1_reorganize_nationale_volksarmee
-			}
 		}
 	}
 
@@ -1692,9 +1699,8 @@ characters={
 			planning_skill = 1
 			logistics_skill = 2
 			#legacy_id = -1
-
 			visible = {
-				has_completed_focus = GE1_re_form_the_freikorps
+				NOT = { has_government = communism }
 			}
 		}
 	}
@@ -1792,7 +1798,7 @@ characters={
 		}
 	}
 
-	GEK_paul_von_lettow_vorbeck = { # 동독 사용 : 육군 : 독일 제국
+	GEK_paul_von_lettow_vorbeck = { # 서독 사용 : 육군 : 독일 제국
 		name = GER_paul_von_lettow_vorbeck
 
 		portraits = {
@@ -1811,7 +1817,7 @@ characters={
 			#legacy_id = -1
 			traits = { trickster war_hero media_personality jungle_rat militias_officer }
 			visible = {
-				has_completed_focus = GE2_return_of_the_kaiserreich 
+				NOT = { has_government = communism } 
 			}
 		}
 
@@ -1825,7 +1831,6 @@ characters={
 			}
 			available = {
 				has_government = neutrality
-				has_completed_focus = GE2_return_of_the_kaiserreich 
 			}
 			traits = {
 				army_concealment_2
@@ -1874,7 +1879,7 @@ characters={
 			planning_skill = 2
 			logistics_skill = 2
 			visible = {
-				has_completed_focus = GE1_reorganize_nationale_volksarmee
+				has_government = communism
 			}
 		}
 	}
@@ -1894,9 +1899,6 @@ characters={
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			visible = {
-				has_completed_focus = KPD_reorganize_nationale_volksarmee
-			}
 		}
 	}
 
@@ -1915,9 +1917,6 @@ characters={
 			defense_skill = 1
 			planning_skill = 3
 			logistics_skill = 2
-			visible = {
-				has_completed_focus = KPD_reorganize_nationale_volksarmee
-			}
 		}
 	}
 
@@ -2826,9 +2825,6 @@ characters={
 				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
-				OR = {
-					has_completed_focus = GEK_RM_rel_focus_0
-				}
 			}
 			available = {
 				has_completed_focus = GEK_RM_rel_focus_0
@@ -2972,7 +2968,7 @@ characters={
 			visible = {
 			}
 			available = {
-				has_completed_focus = GE2_return_of_the_kaiserreich 
+				NOT = { has_government = communism }
 			}
 			traits = {
 				monarchist_media_mogul 
@@ -3010,7 +3006,7 @@ characters={
 		}
 	}
 	
-	GEK_kurt_schumacher = { # 서독 사용 ! 민주주의 정치고문
+	GEK_kurt_schumacher = { # 동독 사용 ! 민주주의 정치고문
 		name = GER_kurt_schumacher
 		portraits = {
 			army = {
@@ -3022,9 +3018,6 @@ characters={
 			idea_token = kurt_schumacher
 			allowed = {
 				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			visible = {
-				has_completed_focus = GEK_government_officials_invitation
 			}
 			available = {
 				NOT = { has_government = fascism }
@@ -3063,12 +3056,6 @@ characters={
 			idea_token = GER_theodor_heuss
 			allowed = {
 				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			visible = {
-				OR = {
-					has_completed_focus = GEK_government_officials_invitation
-					has_completed_focus = GEK_RM_spd_focus_0
-				}
 			}
 			available = {
 				if  = {
@@ -3127,9 +3114,6 @@ characters={
 			allowed = {
 				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
-			visible = {
-				NOT = { has_government = fascism }
-			}
 			available = {
 				NOT = { has_government = fascism }
 			}
@@ -3154,11 +3138,6 @@ characters={
 			idea_token = GER_ludwig_erhard
 			allowed = {
 				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
-			}
-			visible = {
-				NOT = {
-					has_completed_focus = GEAF_the_four_year_plan
-				}
 			}
 			available = {
 				has_completed_focus = GEAF_prioritize_economic_growth
@@ -3222,7 +3201,7 @@ characters={
 			visible = {
 			}
 			available = {
-				has_completed_focus = GE1_monarchist_sentiment
+				NOT = { has_government = communism }
 			}
 			traits = {
 				GER_monarchist_jurist
@@ -3248,7 +3227,7 @@ characters={
 			visible = {
 			}
 			available = {
-				has_completed_focus = GE1_monarchist_sentiment
+				NOT = { has_government = communism }
 			}
 			traits = {
 				GER_minister_of_agriculture
@@ -3272,7 +3251,6 @@ characters={
 				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			visible = {
-				has_completed_focus = GEK_RM_focus_0
 			}
 			available = {
 				has_completed_focus = GEK_RM_rel_focus_1
@@ -3496,7 +3474,7 @@ characters={
 				OR = { original_tag = GEA original_tag = GEF original_tag = GEK original_tag = GEM original_tag = NSD original_tag = KPD original_tag = ARI }
 			}
 			available = {
-				has_government = communism
+				NOT = { has_government = fascism }
 			}
 
 			traits = {
@@ -3556,7 +3534,7 @@ characters={
 			visible = {
 			}
 			available = {
-				has_government = communism
+				NOT = { has_government = fascism }
 			}
 
 			traits = {
