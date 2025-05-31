@@ -717,6 +717,7 @@ characters={
 		portraits = {
 			civilian = {
 				large = GFX_portrait_GER_konrad_adenauer
+				small = GFX_portrait_GER_konrad_adenauer_small
 			}
 		}
 		country_leader = {
