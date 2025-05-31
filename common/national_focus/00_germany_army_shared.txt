@@ -8134,11 +8134,11 @@ shared_focus = { #서독 통일
 			set_country_flag = GER_absorbed_into_a_specific_country
 			every_character = {
 				limit ={
-					has_character = GEK_theodor_heuss
-					has_character = GEK_dietrich_bonhoeffer
-					has_character = GEK_hans_kahle
-					has_character = GEK_jurgen_von_blumenthal
-					has_character = GEK_vincenz_muller
+					is_character = GEK_theodor_heuss
+					is_character = GEK_dietrich_bonhoeffer
+					is_character = GEK_hans_kahle
+					is_character = GEK_jurgen_von_blumenthal
+					is_character = GEK_vincenz_muller
 				}
 				set_nationality = ROOT
 			}
@@ -8211,11 +8211,11 @@ shared_focus = { #동독 통일
 			set_country_flag = GER_absorbed_into_a_specific_country
 			every_character = {
 				limit ={
-					has_character = GEK_ludwig_erhard
-					has_character = GEK_hanns_kerrl
-					has_character = GEK_arno_von_lenski
-					has_character = GEK_hans_marchwitza
-					has_character = KPD_fritz_selbmann
+					is_character = GEK_ludwig_erhard
+					is_character = GEK_hanns_kerrl
+					is_character = GEK_arno_von_lenski
+					is_character = GEK_hans_marchwitza
+					is_character = KPD_fritz_selbmann
 				}
 				set_nationality = ROOT
 			}
