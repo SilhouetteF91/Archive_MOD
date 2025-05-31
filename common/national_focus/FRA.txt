@@ -31,11 +31,6 @@ focus_tree = {
 		scroll_wheel_factor = 1
 	}
 	shortcut = {
-		name = FRA_focus_shortcut_intervention
-		target = FRA_focus_spain_4
-		scroll_wheel_factor = 1
-	}
-	shortcut = {
 		name = FRA_focus_shortcut_diplomacy
 		target = FRA_focus_london_5
 		scroll_wheel_factor = 1
@@ -50,26 +45,7 @@ focus_tree = {
 		#망명은 끝이다!
 		id = FRA_focus.1
 		cost = 4
-        icon = {
-		    trigger = {
-                NOT = {
-                    has_game_rule = {
-                        rule = FRA_Anime_Portrait_Rule
-                        option = FRA_Anime_Portrait_Rule_on
-                    }
-                }
-		    }
-		    value = GFX_goal_FRA_nomoremangmyung
-        }
-        icon = {
-		    trigger = {
-                has_game_rule = {
-                    rule = FRA_Anime_Portrait_Rule
-                    option = FRA_Anime_Portrait_Rule_on
-                }
-		    }
-		    value = GFX_goal_FRA_nomoremangmyung_anime
-        }
+		icon = GFX_goal_FRA_focus_resistance
 		x = 10
 		y = 0
 		allow_branch = {
@@ -783,13 +759,8 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_focus.1
 		}
-		available = {
-			OR = {
-				has_completed_focus = FRA_focus_6
-			}
-		}
 		completion_reward = {
-			add_political_power = 50
+			add_war_support = 0.05
 		}
 	}
 	focus = {
@@ -1210,7 +1181,7 @@ focus_tree = {
 		icon = GFX_goal_FRA_modernizing_our_equipment
 		#보병 장비 연구
 		id = FRA_focus_arm_4
-		cost = 3
+		cost = 4
 		x = -1
 		y = 1
 		relative_position_id = FRA_focus_arm_2
@@ -1230,7 +1201,7 @@ focus_tree = {
 	focus = {
 		#주둔지 관리
 		id = FRA_focus_arm_6
-		cost = 3
+		cost = 4
 		x = 1
 		y = 1
 		relative_position_id = FRA_focus_arm_2
@@ -1260,7 +1231,7 @@ focus_tree = {
 		#포대 운용 교리
 		icon = GFX_goal_FRA_focus_arm5
 		id = FRA_focus_new_arm_5
-		cost = 3
+		cost = 4
 		x = 0
 		y = 1
 		relative_position_id = FRA_focus_arm_3
@@ -1278,7 +1249,7 @@ focus_tree = {
 		#포병 장비 연구
 		icon = GFX_goal_generic_army_artillery
 		id = FRA_focus_arm_5
-		cost = 3
+		cost = 4
 		x = 2
 		y = 1
 		relative_position_id = FRA_focus_arm_3
@@ -1300,7 +1271,7 @@ focus_tree = {
 		#대전차포
 		icon = GFX_focus_generic_anti_tank_guns
 		id = FRA_focus_new_arm_6
-		cost = 3
+		cost = 4
 		x = 1
 		y = 2
 		relative_position_id = FRA_focus_arm_3
@@ -1321,7 +1292,7 @@ focus_tree = {
 		#공병 훈련
 		icon = GFX_goal_generic_construction2
 		id = FRA_focus_arm_13
-		cost = 3
+		cost = 4
 		x = 1
 		y = 1
 		relative_position_id = FRA_focus_arm_3.5
@@ -1342,7 +1313,7 @@ focus_tree = {
 		#차량화 전술
 		id = FRA_focus_arm_11
 		icon = GFX_goal_generic_army_motorized
-		cost = 3
+		cost = 4
 		x = 0
 		y = 2
 		relative_position_id = FRA_focus_arm_3.5
@@ -1367,7 +1338,7 @@ focus_tree = {
 		#전차전
 		id = FRA_focus_new_arm_7
 		icon = GFX_focus_generic_tank_assault
-		cost = 3
+		cost = 4
 		x = -1
 		y = 3
 		relative_position_id = FRA_focus_arm_3.5
@@ -1390,15 +1361,16 @@ focus_tree = {
 		#'제병합동'
 		id = FRA_focus_new_arm_10
 		icon = GFX_focus_generic_tank_air_support
-		cost = 3
+		cost = 4
 		x = 0
 		y = 4
 		relative_position_id = FRA_focus_arm_3.5
 		prerequisite = {
 			focus = FRA_focus_new_arm_7
 		}
-		available = {
-			has_completed_focus = FRA_focus_arm_7
+		prerequisite = {
+			focus = FRA_focus_arm_8.5
+			focus = FRA_focus_arm_9.5
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -1416,14 +1388,33 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_focus_arm_2
 		bypass = {
-			has_idea = extensive_conscription
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
 		}
 		prerequisite = {
 			focus = FRA_focus_arm_2
 			focus = FRA_focus_arm_3
 		}
 		completion_reward = {
-			add_ideas = extensive_conscription
+			if = {
+				limit = {
+					has_idea = volunteer_only
+				}
+				add_ideas = limited_conscription
+			}
+			else_if = {
+				limit = {
+					has_idea = limited_conscription
+				}
+				add_ideas = extensive_conscription
+			}
+			else = {
+
+			}
 		}
 	}
 	focus = {
@@ -1885,10 +1876,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#스페인 내전 시작
+		#스페인에서의 격변
 		id = FRA_focus_spain_civilwar
 		cost = 2
-		x = 18
+		x = 35
 		y = 8
 		allow_branch = {
 			has_country_flag = FRA_exile_is_over
@@ -1905,8 +1896,9 @@ focus_tree = {
 		#아프리카 내 패권 강화
 		id = FRA_focus_spain_1
 		cost = 2
-		x = 17
-		y = 9
+		x = -1
+		y = 1
+		relative_position_id = FRA_focus_spain_civilwar
 		icon = GFX_goal_FRA_spain_attack
 		ai_will_do = {
 			factor = 100
@@ -1929,8 +1921,9 @@ focus_tree = {
 		icon = GFX_goal_FRA_nationalism_spain
 		id = FRA_focus_spain_2
 		cost = 2
-		x = 18
-		y = 10
+		x = 0
+		y = 2
+		relative_position_id = FRA_focus_spain_civilwar
 		ai_will_do = {
 			factor = 100
 		}
@@ -1987,8 +1980,9 @@ focus_tree = {
 		icon = GFX_goal_FRA_republic_spain_ally
 		id = FRA_focus_spain_3
 		cost = 2
-		x = 16
-		y = 10
+		x = -2
+		y = 2
+		relative_position_id = FRA_focus_spain_civilwar
 		ai_will_do = {
 			factor = 0
 		}
@@ -2056,8 +2050,9 @@ focus_tree = {
 		icon = GFX_focus_POL_sanation_right
 		id = FRA_focus_spain_4
 		cost = 1
-		x = 17
-		y = 11
+		x = -1
+		y = 3
+		relative_position_id = FRA_focus_spain_civilwar
 		prerequisite = {
 			focus = FRA_focus_spain_3
 			focus = FRA_focus_spain_2
@@ -2068,343 +2063,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 50
-		}
-	}
-	focus = {
-		#개입주의
-		ai_will_do = {
-			base = 10
-		}
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		id = FRA_focus_german_0.5
-		cost = 1
-		x = 14
-		y = 8
-		allow_branch = {
-			has_country_flag = FRA_exile_is_over
-		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
-		}
-		prerequisite = {
-		}
-		completion_reward = {
-			add_ideas = FRA_interventionism
-		}
-	}
-	focus = {
-		#독일과의 협력
-		ai_will_do = {
-			base = 10
-		}
-		icon = GFX_focus_chi_mission_to_germany
-		id = FRA_focus_german_0
-		cost = 1
-		x = 11
-		y = 9
-		prerequisite = {
-			focus = FRA_focus_german_0.5
-		}
-		available = {
-			has_idea = GEK_send_volunteers_idea
-			has_idea = PASTA_signatories_of_the_stresa_idea
-		}
-		completion_reward = {
-			add_political_power = 50
-			add_ai_strategy = {
-				type = send_volunteers_desire
-				id = GEK
-				value = 200
-			}
-			add_ai_strategy = {
-				type = send_volunteers_desire
-				id = GEA
-				value = 200
-			}
-			add_timed_idea = {
-				idea = FRA_german_scientist
-				days = 720
-			}
-			GEK = {
-				country_event = {
-					id = FRA_prov_event.47
-					days = 3
-				}
-			}
-		}
-	}
-	focus = {
-		#에티오피아와 맞바꾼 평화
-		ai_will_do = {
-			base = 10
-		}
-		icon = GFX_focus_befriend_italy
-		id = FRA_focus_german_1
-		cost = 2
-		x = 15
-		y = 9
-		prerequisite = {
-			focus = FRA_focus_german_0.5
-			focus = FRA_focus_spain_civilwar
-		}
-		available = {
-			NOT = {
-				is_embargoing = ITA
-			}
-			has_idea = PASTA_signatories_of_the_stresa_idea
-		}
-		mutually_exclusive = {
-			focus = FRA_focus_german_2
-		}
-		bypass = {
-			NOT = {
-				ETH = {
-					exists = yes
-					has_war_with = ITA
-					has_capitulated = no
-				}
-			}
-		}
-		completion_reward = {
-			ITA = {
-				diplomatic_relation = {
-					country = FRA
-					relation = non_aggression_pact
-				}
-				add_opinion_modifier = {
-					target = FRA
-					modifier = backed_our_cause
-					days = 900
-				}
-			}
-			ETH = {
-				add_opinion_modifier = {
-					target = FRA
-					modifier = betrayed_our_cause
-				}
-			}
-		}
-	}
-	focus = {
-		#에티오피아 지원
-		ai_will_do = {
-			base = 10
-		}
-		icon = GFX_focus_ETH_the_patriots
-		id = FRA_focus_german_2
-		cost = 2
-		x = 13
-		y = 9
-		prerequisite = {
-			focus = FRA_focus_german_0.5
-		}
-		mutually_exclusive = {
-			focus = FRA_focus_german_1
-		}
-		available = {
-			ETH = {
-				exists = yes
-				has_war_with = ITA
-				has_capitulated = no
-			}
-			has_war = no
-			is_embargoing = ITA
-		}
-		completion_reward = {
-			add_ai_strategy = {
-				type = send_volunteers_desire
-				id = ETH
-				value = 200
-			}
-			add_timed_idea = {
-				idea = FRA_support_ETH
-				days = 300
-			}
-			ITA = {
-				add_opinion_modifier = {
-					target = FRA
-					modifier = betrayed_our_cause
-				}
-			}
-		}
-	}
-	focus = {
-		#도움의 대가
-		icon = {
-			trigger = {
-				NOT = { has_completed_focus = FRA_focus_spain_3}
-			}
-			value = GFX_focus_intervention_spain_nationalists
-		}
-		icon = {
-			trigger = {
-				has_completed_focus = FRA_focus_spain_3
-			}
-			value = GFX_focus_intervention_spain_republic
-		}
-		id = FRA_focus_german_3
-		cost = 2
-		x = 14
-		y = 11
-		prerequisite = {
-			focus = FRA_focus_spain_2
-			focus = FRA_focus_spain_3
-		}
-		prerequisite = {
-			focus = FRA_focus_resistance_11
-		}
-		available = {
-			SPR = {
-				has_civil_war = no
-			}
-			OR = {
-				AND = {
-					SPR = {
-						OR ={
-							has_government = fascism
-							has_government = neutrality
-						}
-					}
-					has_completed_focus = FRA_focus_spain_2
-				}
-				AND = {
-					SPR = {
-						has_government = democratic
-					}
-					has_completed_focus = FRA_focus_spain_3
-				}
-			}
-		}
-		completion_reward = {
-			SPR = {
-				transfer_state = 699
-				transfer_state = 783
-				add_timed_idea = {
-					idea = FRA_eat_spain
-					days = 360
-				}
-			}
-		}
-	}
-	focus = {
-		#정보기관
-		icon = GFX_focus_generic_secret_service_agency
-		id = FRA_focus_resistance_11
-		cost = 2
-		x = 14
-		y = 10
-		prerequisite = {
-			focus = FRA_focus_german_2
-			focus = FRA_focus_german_1
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					has_intelligence_agency = no
-				}
-				create_intelligence_agency = yes
-			}
-			else = {
-				upgrade_intelligence_agency =upgrade_army_department 
-			}
-		}
-	}
-	focus = {
-		#트리니티 침략 저지
-		ai_will_do = {
-			base = 10
-		}
-		icon = GFX_focus_attack_TRN
-		id = FRA_focus_german_4
-		cost = 2
-		x = 11
-		y = 11
-		prerequisite = {
-			focus = FRA_focus_german_0
-		}
-		available = {
-			has_war = no
-			OR = {
-				GEA = {
-					has_war_with = GEH
-				}
-				GEK = {
-					has_war_with = TRM
-				}
-			}
-		}
-		completion_reward = {
-			random_other_country = {
-				limit = {
-					has_war_with = TRM
-					OR = {
-						tag = GEA
-						tag = GEK
-					}
-				}
-				add_ai_strategy = {
-					type = send_volunteers_desire
-					id = prev
-					value = 200
-				}
-			}
-			add_timed_idea = {
-				idea = FRA_stop_TRM
-				days = 300
-			}
-		}
-	}
-	focus = {
-		#독일의 이계 세력 공격
-		ai_will_do = {
-			base = 10
-		}
-		icon = GFX_focus_attack_GEH
-		id = FRA_focus_german_5
-		cost = 2
-		x = 12
-		y = 10
-		prerequisite = {
-			focus = FRA_focus_german_0
-		}
-		available = {
-			has_war = no
-			OR = {
-				GEA = {
-					OR = {
-						has_war_with = GEH
-						has_war_with = GEM
-					}
-				}
-				GEK = {
-					OR = {
-						has_war_with = GEH
-						has_war_with = GEM
-					}
-				}
-			}
-		}
-		completion_reward = {
-			hidden_effect = {
-				random_other_country = {
-					limit = {
-						has_war_with = TRM
-						OR = {
-							tag = GEA
-							tag = GEK
-						}
-					}
-					add_ai_strategy = {
-						type = send_volunteers_desire
-						id = prev
-						value = 200
-					}
-				}
-			}
-			add_timed_idea = {
-				idea = FRA_attack_GEH
-				days = 300
-			}
 		}
 	}
 	focus = {
@@ -4791,7 +4449,7 @@ focus_tree = {
 		#타오르는 십자가
 		icon = GFX_focus_generic_strike_at_democracy1
 		id = FRA_focus_fas_4
-		cost = 3
+		cost = 4
 		x = -2
 		y = 4
 		relative_position_id = FRA_focus_fas_0
@@ -4831,7 +4489,7 @@ focus_tree = {
 		#국민 통합과 행동
 		icon = GFX_focus_generic_support_the_left_right
 		id = FRA_focus_fas_5
-		cost = 3
+		cost = 4
 		x = 0
 		y = 4
 		relative_position_id = FRA_focus_fas_0
@@ -4866,7 +4524,7 @@ focus_tree = {
 		#프랑키스트 운동
 		icon = GFX_goal_generic_political_pressure
 		id = FRA_focus_fas_6
-		cost = 3
+		cost = 4
 		x = 2
 		y = 4
 		relative_position_id = FRA_focus_fas_0
@@ -5078,7 +4736,7 @@ focus_tree = {
 		#망명 기술자 지원
 		id = FRA_focus_8
 		icon = GFX_goal_FRA_extra_research
-		cost =4.4
+		cost = 5
 		x = -2
 		y = 1
 		relative_position_id = FRA_focus_resistance_1
@@ -5087,9 +4745,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = FRA_focus_resistance_1
-		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
 		}
 		completion_reward = {
 			country_event = {
@@ -5102,15 +4757,12 @@ focus_tree = {
 		#지하 경제 
 		id = FRA_focus_6.8
 		icon = GFX_focus_DEN_heavy_regulations
-		cost = 4.4
+		cost = 5
 		x = -0
 		y = 1
 		relative_position_id = FRA_focus_resistance_1
 		prerequisite = {
 			focus = FRA_focus_resistance_1
-		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
 		}
 		completion_reward = {
 			MIL = {
@@ -5125,16 +4777,13 @@ focus_tree = {
 	focus = {
 		#자본가 영입
 		id = FRA_focus_6.5
-		cost = 4.4
+		cost = 5
 		icon = GFX_goal_FRA_Restore_the_Suspended_Constitution
 		x = 2
 		y = 1
 		relative_position_id = FRA_focus_resistance_1
 		prerequisite = {
 			focus = FRA_focus_resistance_1
-		}
-		available = {
-			FRA_emergency_mobil_trigger = yes
 		}
 		ai_will_do = {
 			factor = 100
@@ -5183,7 +4832,7 @@ focus_tree = {
 	focus = {
 		#적극적인 접근
 		id = FRA_focus_resistance_2
-		icon = GFX_goal_FRA_focus_resistance
+		icon = GFX_focus_focus_fra_national_resistance_council
 		cost = 5
 		x = 2
 		y = 1
@@ -5278,7 +4927,7 @@ focus_tree = {
 	}
 	focus = {
 		#재침투
-		icon = GFX_focus_GER_panzerschiff
+		icon = GFX_focus_generic_naval_invasion
 		id = FRA_focus_resistance_13
 		cost = 2
 		x = 1
@@ -5433,8 +5082,8 @@ focus_tree = {
 		icon = GFX_goal_fra_cozy
 		id = FRA_focus_resistance_5
 		cost = 6
-		x = 10
-		y = 13
+		x = 14
+		y = 8
 		allow_branch = {
             OR = {
 			    has_country_flag = FRA_exile_is_over
@@ -5446,21 +5095,9 @@ focus_tree = {
 			focus = FRA_focus_resistance_12
 		}
 		prerequisite = {
-			focus = FRA_focus_london_5
-			focus = FRA_focus_spain_4
-		}
-		prerequisite = {
-			focus = FRA_focus_12
-		}
-		prerequisite = {
 			focus = FRA_focus_new_arm_11
 		}
-		mutually_exclusive = {
-			focus = FRA_focus_com_10
-		}
 		completion_reward = {
-			add_stability = 0.3
-			add_war_support = 0.3
 			declare_war_on = {
 				target = MIL
 				type = annex_everything
@@ -5602,6 +5239,45 @@ focus_tree = {
 			}
 		}
 	}
+
+
+	#인물 중점
+	focus = { #베르됭의 사자
+		id = FRA_petain_focus_0
+		cost = 1
+		x = 20
+		y = 1
+		relative_position_id = FRA_focus.1 icon = {
+		    trigger = {
+                NOT = {
+                    has_game_rule = {
+                        rule = FRA_Anime_Portrait_Rule
+                        option = FRA_Anime_Portrait_Rule_on
+                    }
+                }
+		    }
+		    value = GFX_goal_FRA_nomoremangmyung
+        }
+        icon = {
+		    trigger = {
+                has_game_rule = {
+                    rule = FRA_Anime_Portrait_Rule
+                    option = FRA_Anime_Portrait_Rule_on
+                }
+		    }
+		    value = GFX_goal_FRA_nomoremangmyung_anime
+        }
+		prerequisite = {
+			focus = FRA_focus.1
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+		}
+	}
+
+
 	focus = {
 		#본토 수복 전쟁
 		icon = GFX_goal_FRA_peupeongjo5

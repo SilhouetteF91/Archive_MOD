@@ -2332,9 +2332,6 @@ news_event = { #프랑스 쿠데타!
 		trigger = {
 			tag = FRA
 		}
-		FRA = {
-			add_country_leader_trait = FRA_leader
-		}
 		name = BA_news.66.a
 	}
 	option = {

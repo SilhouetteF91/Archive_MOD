@@ -83,7 +83,17 @@ ideas = {
 				stability_factor = -0.01
 			}
 		}
-
+		FRA_indochina_resources = { #인도차이나로부터의 자원
+			picture = ARG_resource_extration_focus
+			modifier = {
+				country_resource_rubber = 40
+				country_resource_tungsten = 20
+				industrial_factory_donations = 1
+			}
+			available = {
+				has_country_flag = FRA_has_indochina_issue
+			}
+		}
 		FRA_sovereignty = { #프랑스의 자주권
 			picture = FRA_political_violence
 		}
@@ -410,12 +420,6 @@ ideas = {
 				consumer_goods_expected_value = 0.3
 			}
 		}
-		FRA_german_scientist = { #독일 과학자들
-			picture = jap_duplicate_research
-			modifier = {
-				research_speed_factor = 0.05
-			}
-		}
 		VIN_fucked_up = { #불구가 된 식민지
 			picture = great_depression
 			modifier = {
@@ -513,8 +517,8 @@ ideas = {
 				industrial_capacity_factory = -0.1
 				local_building_slots_factor = -0.1
 				local_resources_factor = -0.1
-				cic_to_overlord_factor = 0.5
-				mic_to_overlord_factor = 0.5
+				cic_to_overlord_factor = -0.5
+				mic_to_overlord_factor = -0.5
 			}
 			allowed_civil_war = {
 				has_government = neutrality
@@ -530,8 +534,8 @@ ideas = {
 				war_support_factor = -0.2
 				local_building_slots_factor = -0.25
 				local_resources_factor = -0.25
-				cic_to_overlord_factor = 0.3
-				mic_to_overlord_factor = 0.3
+				cic_to_overlord_factor = -0.3
+				mic_to_overlord_factor = -0.3
 				cannot_call_allies_or_join_wars = 1
 			}
 			allowed_civil_war = {
@@ -547,8 +551,8 @@ ideas = {
 				war_support_factor = -0.2
 				local_building_slots_factor = -0.25
 				local_resources_factor = -0.25
-				cic_to_overlord_factor = 0.3
-				mic_to_overlord_factor = 0.3
+				cic_to_overlord_factor = -0.1
+				mic_to_overlord_factor = -0.1
 			}
 			allowed_civil_war = {
 				has_government = neutrality
@@ -1917,23 +1921,6 @@ ideas = {
 				naval_invasion_penalty = -0.5
 			}
 		}
-		FRA_interventionism = { #개입주의
-			picture = FRA_scw_intervention_nationalists_focus
-			modifier = {
-				send_volunteer_divisions_required = -0.9
-				send_volunteer_size = 9
-				send_volunteers_tension = -1
-				political_power_gain = 0.1
-			}
-			rule = {
-				can_send_volunteers = yes
-			}
-			available = {
-				NOT = {
-					has_war_with = MIL
-				}
-			}
-		}
 		FRA_spciv = {
 			#공화파와 함께
 			picture = SPA_maquis
@@ -1986,103 +1973,6 @@ ideas = {
 			targeted_modifier = {
 				tag = D01
 				attack_bonus_against = 0.05
-			}
-		}
-		FRA_support_ETH = { #에티오피아 지원
-			picture = ETH_the_common_soldier
-			targeted_modifier = {
-				tag = ITA
-				defense_bonus_against = 0.05
-			}
-			available = {
-				ETH = {
-					has_capitulated = no
-				}
-			}
-		}
-		FRA_eat_spain = { #도움의 대가
-			picture = received_attache
-			targeted_modifier = {
-				tag = FRA
-				cic_to_target_factor = 0.08
-
-			}
-		}
-		FRA_stop_TRM = { #트리니티 저지
-			picture = MEX_politicised_army
-			targeted_modifier = {
-				tag = TRM
-				defense_bonus_against = 0.05
-			}
-			available = {
-				TRM = {
-					has_war = yes
-				}
-			}
-		}
-		FRA_attack_GEH = { #게헨나 공격
-			picture = FRA_scw_intervention_nationalists_focus
-			targeted_modifier = {
-				tag = GEM
-				attack_bonus_against = 0.05
-			}
-			targeted_modifier = {
-				tag = GEH
-				attack_bonus_against = 0.05
-			}
-			available = {
-				OR = {
-					GEA = {
-						has_war = yes
-					}
-					GEK = {
-						has_war = yes
-					}
-				}
-			}
-		}
-		FRA_invest_for_fra = { #프랑스 투자
-			picture = generic_goods_red_bonus
-			modifier = {
-				political_power_gain = 0.5
-				civilian_factory_use = 3
-			}
-		}
-		FRA_invest_from_usa = { #미국의 투자
-			picture = chi_hyper_inflation2
-			modifier = {
-				production_speed_industrial_complex_factor = 0.15
-				production_speed_arms_factory_factor = 0.15
-				research_speed_factor = 0.05
-			}
-			research_bonus = {
-				industry = 0.05
-			}
-		}
-		FRA_invest_from_eng = { #영국의 투자
-			picture = generic_navy_bonus
-			modifier = {
-				production_speed_dockyard_factor = 0.15
-				industrial_capacity_dockyard = 0.15
-				research_speed_factor = 0.05
-			}
-			research_bonus = {
-				ship_modules_tech = 0.05
-			}
-		}
-		FRA_invest_from_ita = { #이탈리아의 투자
-			picture = chi_army_corruption3
-			modifier = {
-				land_doctrine_cost_factor = -0.1
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-			}
-			research_bonus = {
-				infantry_weapons = 0.05
 			}
 		}
 		FRA_MIL_propagation = {
@@ -2171,26 +2061,6 @@ ideas = {
 				monthly_population = -0.6
 				conscription_factor = -0.7
 				war_support_weekly = -0.005
-			}
-		}
-		FRA_university = {
-			#망명 기술자 지원
-			picture = jap_supremacy_of_technology
-			allowed = {
-				original_tag = FRA
-			}
-			available = {
-				always = yes
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			modifier = {
-				research_speed_factor = 0.05
-				consumer_goods_factor = 0.15
-			}
-			on_remove = {
-				add_research_slot = 1
 			}
 		}
 		FRA_colony_economy = {

@@ -160,10 +160,6 @@ country_event = {
 	hidden = yes
 	option = {
 		country_event = FRA_prov_event.1
-		country_event = {
-			id = FRA_prov_event.4
-			days = 10
-		}
 	}
 }
 
@@ -939,7 +935,7 @@ country_event = { #서아프리카 해방
 
 
 country_event = {
-	#지지율 떨어짐 / 저항
+	#확산되는 저항
 	id = FRA_prov_event.4
 	title = FRA_prov_event.4.t
 	desc = FRA_prov_event.4.d
@@ -1029,46 +1025,25 @@ country_event = {
 	hidden = no
 	option = {
 		name = FRA_prov_event.7.a
-		add_timed_idea = {
-			idea = FRA_university
-			days = 250
-		}
-		add_political_power = 30
 		add_tech_bonus = {
 			category = concentrated_industry_category
-			bonus = 0.2
-			uses = 2
+			bonus = 0.1
+			uses = 1
 		}
 		add_tech_bonus = {
 			category = dispersed_industry_category
-			bonus = 0.2
-			uses = 2
+			bonus = 0.1
+			uses = 1
 		}
-	}
-	option = {
-		name = FRA_prov_event.7.b
-		add_timed_idea = {
-			idea = FRA_university
-			days = 250
-		}
-		add_political_power = 30
-		add_tech_bonus = {
-			category = construction_tech
-			bonus = 0.2
-			uses = 2
-		}
-	}
-	option = {
-		name = FRA_prov_event.7.c
-		add_timed_idea = {
-			idea = FRA_university
-			days = 250
-		}
-		add_political_power = 30
 		add_tech_bonus = {
 			category = electronics
-			bonus = 0.2
-			uses = 2
+			bonus = 0.1
+			uses = 1
+		}
+		add_tech_bonus = {
+			category = construction_tech
+			bonus = 0.1
+			uses = 1
 		}
 	}
 }
@@ -2614,7 +2589,7 @@ news_event = {
 }
 
 country_event = {
-	#독일을 스트레사 전선에 초대
+	#안 씀
 	id = FRA_prov_event.47
 	title = FRA_prov_event.47.t
 	desc = FRA_prov_event.47.d
@@ -4278,7 +4253,7 @@ country_event = {
 }
 
 country_event = {
-	#플래그지우는용
+	#안 씀
 	id = FRA_prov_event.100
 	title = FRA_prov_event.100.t
 	desc = FRA_prov_event.100.d
@@ -4973,7 +4948,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = FRA_prov_event.117.a
-		add_political_power = -5
 		VIN = {
 			swap_ideas = {
 				remove_idea = FRA_government_general
@@ -4981,6 +4955,8 @@ country_event = {
 			}
 		}
 		set_country_flag = FRA_has_indochina_issue
+		add_ideas = FRA_indochina_resources
+		custom_effect_tooltip = CHL_skip_one_line_tt
 		unlock_decision_category_tooltip = FRA_indochina_issue
 	}
 }
@@ -5028,6 +5004,7 @@ country_event = {
 	desc = FRA_prov_event.120.d
 	fire_only_once = yes
 	is_triggered_only = yes
+	picture = GFX_report_event_por_president_military_inspection
 	immediate = {
 		hidden_effect = {
 			set_party_name = {
@@ -5068,6 +5045,11 @@ country_event = {
 		}
 	}
 	option = {
+		hidden_effect = {
+			FRA_military_conference = {
+				unit_leader_event = FRA_pet.1
+			}
+		}
 		name = FRA_prov_event.120.a
 		set_politics = {
 			ruling_party = neutrality
@@ -6177,7 +6159,7 @@ country_event = {
 
 add_namespace = FRA_pet
 unit_leader_event = {
-	#페텡주의 확립을 주장하는 페텡
+	#베르됭의 사자
 	id = FRA_pet.1
 	title = FRA_pet.1.t
 	desc = FRA_pet.1.d
@@ -6187,7 +6169,7 @@ unit_leader_event = {
 	hidden = no
 	option = {
 		name = FRA_pet.1.a
-		add_political_power = 20
+		add_country_leader_trait = FRA_leader
 	}
 }
 

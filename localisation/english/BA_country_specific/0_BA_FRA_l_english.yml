@@ -13,9 +13,9 @@
  FRA_propaganda_FRA_7:0 "§4해방에 총력을 다하자!§!"
 
 #프랑스 이벤트
- FRA_pet.1.t:0 "독재의 사상기반을 만들 것을 촉구하는 페텡"
- FRA_pet.1.d:0 "페텡은 프랑스에서 자신의 독재적 입지를 굳히기 위하여 대중들에게 지지받을 수 있는 사상기반을 개발하도록 촉구하였습니다."
- FRA_pet.1.a:0 "명령에 따르라!"
+ FRA_pet.1.t:0 "베르됭의 사자"
+ FRA_pet.1.d:0 "북아프리카는 그에게 익숙했다. 10년 전, 전간기 최대의 전쟁에서 복무했던 기억을 떠올리게 하는 창문 너머의 풍경이 그가 피우던 파이프 담배를 끄고 자리에서 일어나도록 만들었다. 필리프 페텡은 지금의 일이 유쾌하지 않았다. 엘리트 프랑스 장교로서는 조국의 패망이 굴욕적이고도 허탈했고, 이 귀찮고 또 중대한 일을 자신이 맡은 것은 그에게 큰 부담이었다. 그렇지만서도 그는 지금이 바로 자신이 조국에 복무할 수 있는 마지막 순간임을 직관적으로 인식하고 있었으며, 영웅이 되는 길은 어디로 향해야 하는지도 알고 있었다.\n\n 집무실 앞의 비서관이 입을 열었다.\n\n\"각하, 금월 업무 보고입니다.\""
+ FRA_pet.1.a:0 "\"조국이 나를 원한다!\""
  FRA_pet.2.t:0 "국민적 원수관"
  FRA_pet.2.d:0 "페텡주의를 확립하는 데에 있어서, 페텡이 직접적으로 개입하여 '원수관'을 형성하도록 지시하였습니다. 우리는 원수관에 대한 두 가지의 관점 중 하나를 선택하여 이를 페텡주의에 적용할 수 있을 것입니다."
  FRA_pet.2.a:0 "가부장적 관점을 형성하자."
@@ -39,10 +39,8 @@
  FRA_prov_event.6.a:0 "국영기업이 더 좋아보인다."
  FRA_prov_event.6.b:0 "우린 빨갱이가 아니야!"
  FRA_prov_event.7.t:0 "망명 기술자 지원"
- FRA_prov_event.7.d:0 "우리는 경쟁력을 기르기 위해 광범위한 대학교 부설을 추진할 것입니다."
- FRA_prov_event.7.a:0 "제조업 관련 학과를 지원하자."
- FRA_prov_event.7.b:0 "건설업 관련 학과를 지원하자."
- FRA_prov_event.7.c:0 "전자공학 관련 학과를 지원하자."
+ FRA_prov_event.7.d:0 "많은 프랑스인들이 북아프리카로 망명을 하는 가운데, 우리는 그들 중 기술자들을 지원해줄 수 있습니다."
+ FRA_prov_event.7.a:0 "좋군."
  FRA_prov_event.8.t:0 "연락"
  FRA_prov_event.8.d:0 "연합왕국도 마침내 우리와 마찬가지로 자신들의 영토인 브리튼을 두고 떠났습니다. 이로써 우리는 그들에 대항할 정도의 수준이 되었고, 그러한 행위를 위해서 연락을 시도할 것입니다."
  FRA_prov_event.8.a:0 ""...(따르릉)""
@@ -401,7 +399,7 @@
  FRA_prov_event.119.d:0 "최근 들어 레지스탕스가 조직적인 움직임을 강화하였으며, 그 규모와 빈도 또한 늘어났습니다. 우리는 외세의 개입을 의심하지 않을 수 없습니다."
  FRA_prov_event.119.a:0 "그들을 막아야 한다."
  FRA_prov_event.120.t:0 "쿠데타"
- FRA_prov_event.120.d:0 "본토에서의 처절한 패배 이래로 내각은 가장 큰 패배감에 젖어 있습니다. 필리프 페텡과 그를 따르는 군부는 전시상황 당시 내각의 무능과 망명 이후에 또한 진전이 없는 현 내각의 분열을 이유로 들어 프랑스 전역을 재탈환하기 전까지의 '일시적'인 군정을 선언했습니다. 페텡은 1달 정도의 준비 기간을 거쳐 내각의 체계적인 군사정부로의 개편을 예고한 상황입니다."
+ FRA_prov_event.120.d:0 "본토에서의 처절한 패배 이래로 내각은 가장 큰 패배감에 젖어 있습니다. 군부는 전시상황 당시 내각의 무능과 망명 이후에 또한 진전이 없는 현 내각의 분열을 이유로 들어 프랑스 전역을 재탈환하기 전까지의 '일시적'인 군정을 선언했습니다. 임시군사위원회의 의장으로 필리프 페텡이 추대되었으며, 그는 1달의 준비 기간을 거쳐 내각의 체계적인 군사정부로의 개편을 예고한 상황입니다."
  FRA_prov_event.120.a:0 "필리프 페텡이 프랑스를 지도한다!"
  FRA_prov_event.120_tt:0 "\n§g비동맹주의 지지율이 40% 이하로 내려간다면, 페텡은 거대한 도전을 받게 될 것입니다.§!"
  FRA_prov_event.121.t:0 "테러리즘"
@@ -653,10 +651,6 @@
 
  FRA_indochina_issue:0 "프랑스령 인도차이나"
  FRA_indochina_issue_desc:0 "프랑스령 인도차이나는 망명정부와는 너무 떨어져 있어, 본국이 총독부의 내외적 문제에 개입하기 어렵습니다. 그럼에도 우리는 인도차이나를 통해 적절한 이익을 취할 수 있을 것입니다."
- FRA_more_resource_indochina:0 "자원 채굴 확대"
- FRA_more_industry_indochina:0 "식민지에 산업 진출"
- FRA_more_arms_factory_indochina:0 "군수품 징발"
- FRA_vin_action:0 "식민지에 다른 사업을 진행하고 있지 않습니다"
  FRA_VIN_anti_resist_action:0 "한 번에 한 조치만 취할 수 있습니다."
  FRA_indochina_going_bad:0 "심화되어가는 식민지인 저항"
  FRA_finished_vin_cirisis:0 "인도차이나가 안정되었습니다."
@@ -775,6 +769,9 @@
  financial_concern: "종합 금융 회사"
  FRA_civilian_industry: "민간 산업"
 
+
+ FRA_indochina_resources: "인도차이나로부터의 자원"
+
    #저항
  FRA_resistance_of_locals: "식민지인들의 저항\n§W단계:§! §Y[?FRA_resistance_of_locals_var]§!"
  FRA_sovereignty: "프랑스의 자주권\n§W단계:§! §Y[?FRA_sovereignty_var]§!"
@@ -813,7 +810,6 @@
 
  FRA_village_sab_idea:0 "농촌 저항"
  FRA_naval_block:0 "해상 봉쇄"
- FRA_german_scientist:0 "독일 과학자들"
 
  VIN_fucked_up:0 "불구가 된 식민지"
  FRA_involve_indochina_tt:0 "§Y[FRA.getname]§!(이)가 인도차이나에 개입했습니다."
@@ -899,26 +895,11 @@
  FRA_halo_research:0 "헤일로 보병 분석"
  FRA_vil_res:0 "농촌 저항"
  FRA_MIL_bourgeois:0 "자본가 탈출"
- FRA_spciv:0 "공화파와 함께"
- FRA_spciv_d02:0 "국민파와 함께"
- FRA_interventionism:0 "개입주의"
- FRA_spciv_desc:0 "유의미한 본토가 전부 박탈당한 상황에서 이베리아 지역에서의 영향력 유지는 프랑스가 고려할 수 있는 최후의 수단입니다."
- FRA_spciv_d02_desc:0 "유의미한 본토가 전부 박탈당한 상황에서 이베리아 지역에서의 영향력 유지는 프랑스가 고려할 수 있는 최후의 수단입니다."
- FRA_support_ETH:0 "에티오피아 지원"
- FRA_stop_TRM:0 "[TRM.getname] 저지"
- FRA_eat_spain:0 "도움의 대가"
- FRA_attack_GEH:0 "게헨나 공격"
- FRA_invest_for_fra:0 "프랑스 투자"
- FRA_invest_from_usa:0 "미국의 투자"
- FRA_invest_from_eng:0 "영국의 투자"
- FRA_invest_from_ita:0 "이탈리아의 투자"
  FRA_MIL_propagation:0 "광범위한 선전"
  FRA_emergency_mobil:0 "긴급한 동원"
  FRA_emergency_mobil_desc:0 "강제적이고 폭력적인 동원 정책은 단기적으로 강력한 불만을 불러일으키고 장기적으로 거대한 피로를 유발합니다."
  FRA_agricultural_company:0 "대기업 주도 농업"
  FRA_agricultural_corporation:0 "국가 주도 농업"
- FRA_university:0 "망명 기술자 지원"
- FRA_university_desc:0 "§4이 국민정신이 만료되면, 추가 연구 슬롯을 하나 얻습니다.§!"
  FRA_colony_economy:0 "영국에 지불"
  FRA_ENG_colony_economy:0 "프랑스로부터의 보상"
  FRA_economy_help:0 "영-불 경제협력"
@@ -960,7 +941,6 @@
  #프랑스 인물 
  FRA_francois_de_la_rocque:0 "프랑수아 드 라 로크"
  FRA_military_conference:0 "필리프 페텡"
- FRA_military_conference_desc:0 "앙리 필리프 베노니 오메르 조제프 페탱\n\n원수 각하께선 혼란한 망명정부를 이끌고 계십니다. 망명정부에서 무의미한 정치싸움은 더 이상 용납되지 않고 있습니다."
  FRA_Africa_resistance:0 "아프리카 해방전선"
  FRA_henri:0 "앙리 모르닥"
  FRA_borough:0 "자치행정기구"
@@ -1124,20 +1104,6 @@
  FRA_focus_spain_4:0 "잠잠해지다"
  FRA_focus_spain_4_desc:0 "스페인 내전의 막이 내렸습니다. 총소리가 끊이지 않던 이베리아 반도에 고요함만이 남습니다." 
 
- FRA_focus_german_0.5:0 "개입주의"
- FRA_focus_german_0.5_desc:0 "본토가 전부 함락당한 상황에서, 크고 작은 국제적 개입은 프랑스의 세계적 영향력을 유지하기 위해 필수적입니다."
- FRA_focus_german_0:0 "독일과의 협력"
- FRA_focus_german_0_desc:0 "독일 또한 우리와 마찬가지로 이계의 세력에게 패퇴하였습니다. 우리는 그들과 충분히 협력할 수 있습니다."
- FRA_focus_german_1:0 "에티오피아와 맞바꾼 평화"
- FRA_focus_german_1_desc:0 "무솔리니의 집권 이후 국내적으로 강조되던 이탈리아 패권주의가 지난 1935년의 에티오피아 침공으로 실현되었습니다. 우리는 이탈리아의 이 같은 행위를 규탄해 마땅하지만, 실리적으로는 에티오피아를 포기하는 대신 그들의 지원을 도모할 수 있을 것입니다."
- FRA_focus_german_2:0 "에티오피아 지원"
- FRA_focus_german_2_desc:0 "무솔리니의 집권 이후 국내적으로 강조되던 이탈리아 패권주의가 지난 1935년의 에티오피아 침공으로 실현되었습니다. 우리는 이탈리아의 이 같은 행위를 규탄해 마땅합니다."
- FRA_focus_german_3:0 "도움의 대가"
- FRA_focus_german_3_desc:0 "스페인 내전을 지원한 대가로, 우리는 아프리카의 스페인령 영토를 스페인에게 반환하는 대신 경제적 투자를 받을 것입니다."
- FRA_focus_german_4:0 "트리니티 침략 저지"
- FRA_focus_german_4_desc:0 "나치가 이계의 모습으로 부활하여 독일을 위협하고 있습니다. 우리는 그들을 저지해야 합니다."
- FRA_focus_german_5:0 "독일의 이계 세력 공격"
- FRA_focus_german_5_desc:0 "우리는 서독에 존재하는 이계 세력과 전쟁하는 독일을 지원할 것입니다."
 
  FRA_emergency_flag:0 "§R위기에 직면했습니다.§!"
 
@@ -1303,6 +1269,13 @@
  FRA_focus_resistance_5_desc:0 "모든 준비는 끝났습니다. 프랑스의 대육군, 해군, 그리고 항공대가 그들의 가족을 위해서 침략자들을 노려보고 있습니다. 우리의 승리를 장담하기는 어려우나, 우리는 가야만 합니다. 아늑한 곳으로!"
  FRA_ita_is_helping_tt:0 "\n§Y[ITA.getname]§!이(가) 우리의 부탁을 수락함에 따라, §Y밀레니엄 - [ITA.getname]§! 국경에서 §Y[ITA.getname]§!의 지원을 받은 §Y레지스탕스 부대§!가 봉기할 것입니다."
  FRA_spr_is_helping_tt:0 "\n§Y[SPR.getname]§!이(가) 우리의 부탁을 수락함에 따라, §Y밀레니엄 - [SPR.getname]§! 국경에서 §Y[SPR.getname]§!의 지원을 받은 §Y레지스탕스 부대§!가 봉기할 것입니다."
+
+
+ #인물 중점
+ FRA_petain_focus_0: "베르됭의 사자"
+ FRA_petain_focus_1: "베르됭의 사자"
+
+
  FRA_focus_resistance_7:0 "광범위한 선전"
  FRA_focus_resistance_7_desc:0 "이젠 프랑스 본토에 남아있는 모든 시민이 알 필요가 있습니다. 길거리에 전단을 붙이고, 라디오 방송을 통해 우리의 위대한 의지를 알릴 것입니다."
  FRA_focus_resistance_6:0 "레지스탕스 강화"
@@ -1315,8 +1288,6 @@
  FRA_focus_resistance_10_tt:0 "전쟁을 개시할 때, 우리들의 지원을 받은 §Y레지스탕스§!가 봉기하여 §Y주요 항구 시설§!을 점거하고 적의 후방에서 §Y산업 시설 사보타주§!를 진행할 것입니다."
  FRA_focus_resistance_8:0 "총파업"
  FRA_focus_resistance_8_desc:0 "본토의 동지 중엔 공장 노동자들과 비밀리에 접촉 가능한 이들이 소수 존재합니다. 이들을 중심으로 대규모 총파업을 실시한다면 적들의 산업을 일시적으로 마비시켜 주력군의 진격에 도움을 줄 것입니다."
- FRA_focus_resistance_11:0 "정보기관 창설"
- FRA_focus_resistance_11_desc:0 "효율적이고 체계적인 전투를 위해 정보기관을 창설합니다."
  FRA_focus_resistance_12:0 "무역 차단"
  FRA_focus_resistance_12_desc:0 "비록 우리가 본토에서 굴욕적으로 쫓겨났을지 몰라도, 잔존함대만으로도 지중해의 제해권을 잡는 것은 그리 어려운 일이 아닙니다. 밀레니엄으로 향하는 모든 군용선, 무역선을 습격하고, 적들의 자원 공급을 억제해야합니다."
  FRA_focus_resistance_13:0 "재침투"
