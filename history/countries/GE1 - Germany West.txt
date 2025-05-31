@@ -80,23 +80,30 @@ add_breakthrough_progress = {
 }
 
 #행정부
-recruit_character = GEK_wilhelm_pieck # 공산주의 지도자
-recruit_character = GEK_konrad_adenauer # 민주주의 지도자
-recruit_character = GEK_hermann_erhardt # 독일 제국 지도자
-
-recruit_character = GEK_kurt_schumacher #쿠르트 슈마허, 민주주의 고문
 recruit_character = GEK_theodor_heuss #테오도어 호이스, 자유주의 언론인
-recruit_character = GEK_julius_leber #줄리어스 레버
-recruit_character = GEK_dietrich_bonhoeffer # 독일 기독교 종교인
-recruit_character = GEK_franz_ritter_von_epp # 독일 제국 지휘관
-recruit_character = GEK_adolf_friedrich_von_mecklenburg # 독일 제국 정치고문
-recruit_character = GEK_wilhelm_von_gayl # 독일 제국 정치고문
-recruit_character = GEK_andreas_hermes # 독일 제국 정치고문
-recruit_character = GEK_vincenz_muller # 국가인민군
-recruit_character = GEK_hans_kahle # 국가인민군
-recruit_character = GEK_otto_ruhle # 공산주의
-recruit_character = GEK_bernhard_bastlein # 공산주의
-recruit_character = GEK_jurgen_von_blumenthal # 육군
+recruit_character = GEK_dietrich_bonhoeffer # 독일 반나치 기독교 종교인
+
+# 공산주의 공용
+recruit_character = GEK_hans_kahle # 국가인민군 : 독일의 언론인이자 군인, 스페인 내전과 동독 인민경찰 간부
+
+# 육군 / 참모부
+recruit_character = GEK_jurgen_von_blumenthal # 육군 : 나치 독일 육군 소령, 히틀러 암살 미수 사건(7월 20일 음모) 참여자
+recruit_character = GEK_vincenz_muller # 육군 : 나치 독일 국방군 중장, 동독 국가인민군(NVA)의 창설 멤버
+
+## 공산당
+recruit_character = GEK_wilhelm_pieck # 공산주의 지도자 : 독일 공산당(KPD)의 지도자, 독일민주공화국(동독)의 초대이자 유일한 대통령
+recruit_character = GEK_bernhard_bastlein # 공산주의 : 독일의 공산주의 정치인이자 반(反)나치 저항운동가
+
+### 왕당파
+recruit_character = GEK_hermann_erhardt # 독일 제국 지도자 : 해군 장교이자, 극우 민족주의 자유군단(Freikorps) '해병 여단 에르하르트'의 사령관
+recruit_character = GEK_adolf_friedrich_von_mecklenburg # 독일 제국 정치고문 : 독일의 귀족, 탐험가, 식민지 총독
+recruit_character = GEK_wilhelm_von_gayl # 독일 제국 정치고문 : 보수주의 정치가, 독일국민당(DNVP) 소속의 내무장관
+recruit_character = GEK_franz_ritter_von_epp # 자유군단 : 자유군단 지도자이자, 나치당의 초기 핵심 인물
+
+### 중앙당
+recruit_character = GEK_konrad_adenauer # 민주주의 지도자
+recruit_character = GEK_andreas_hermes # 중앙당(Zentrum) 소속 정치인, 농업 전문가, 반나치 저항운동가
+recruit_character = GEK_hans_luther # 중앙당은 아니었지만, 중앙당 등 보수 정당과 연정을 구성한 무소속 보수 정치인. 총리 및 제국은행 총재 역임.
 
 add_ideas = {
 	limited_exports

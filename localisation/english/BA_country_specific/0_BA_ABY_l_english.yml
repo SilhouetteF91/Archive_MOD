@@ -1042,7 +1042,8 @@
  ABY_election:0 "§Y총선거§!에서 §Y선출§!됨"
  
  ABY_new_tt:0 "§Y5개보병§! 과 §Y공병중대§!로 구성된 사단 §Y5개§!를 얻습니다."
- ABY_new_tt_2:0 "§Y체코슬로바키아§!의 §Y전차§!와 §Y비행기§! 설계를 획득합니다."
+ ABY_new_tt_2:0 "§Y체코슬로바키아§!의 §Y전차§! 설계를 획득합니다."
+ ABY_new_tt_2_1:0 "§Y체코슬로바키아§!의 §Y비행기§! 설계를 획득합니다."
  ABY_new_tt_3:0 "§Y체코슬로바키아§!의 모든 §Y군사기술§!을 획득합니다."
  ABY_new_tt_4:0 "§Y체코슬로바키아§!의 §Y장관§!과 §Y장군§!을 사용할 수 있습니다."
  ABY_new_tt_5:0 "§Y좌익장관§!을 사용할 수 있습니다."
@@ -1415,8 +1416,9 @@
  ABY_tt_month_7_2_2:0 "이 선택지는 §0계몽연방§! 루트로 이끕니다."
  ABY_tt_month_7_3_1:0 "이 선택지는 전후 §1민주주의§!의 §Y정당 지지도§!를 대폭 상승시킵니다."
  ABY_tt_month_7_3_2:0 "이 선택지는 전후 §1민주주의§!의 §Y정당 지지도§!를 대폭 하락시킵니다."
- ABY_tt_month_9:0 "전후 연방정부의 수도를 §Y다뉴비아(린츠)§Y 주로 이전합니다."
+ ABY_tt_month_9:0 "전후 연방정부의 수도를 §Y다뉴비아(린츠)§! 주로 이전합니다."
 
+ ABY_tt_get_jug: "'§YJuggernaut Land Task Force§!' 편제 획득"
  ABY_every_month_tt:0 "매월:"
  ABY_70_days_tt:0 "70일 후:"
  ABY_30_days_tt:0 "30일 후:"
@@ -3238,6 +3240,23 @@
  ABY_descision_focus_event.100.d:0 ""
  ABY_descision_focus_event.100.a:0 ""
  
+ ABY_serv_focus_event.1.t:0 "조사 보고서-게헨나"
+ ABY_serv_focus_event.1.d:0 "개요: 게헨나 중앙구 근방 대형 민간 시설에서 트리니티 생체실험과 유사한 흔적이 발견됨. 판데모니움 소사이어티 혹은 선도부의 개입 정황은 보이지 않아 민간 동아리의 행위로 사료되며, 성공한 샘플은 없으나 상당한 자료를 획득함.\n\n1. 전체적으로 고성당 지하 의료시설과 유사한 모습을 보이나, 위생 등 기본적인 연구 환경이 갖추어져 있지 않음.\n\n2. 몸무게와 BMI별 치사량이 상세히 기록되어 있음. 일정 수준 이상이 될 시 즉시 사망하며, 자세한 수치는 따로 첨부.\n\n3. 연구자 개인 노트 등에서 판데모니움 소사이어티, 선도부 등의 지시를 받은 정황은 보이지 않으며 선도부는 오히려 이들을 추적한 것으로 보임.\n\n4. 치사량 이전까지의 신비 투입 시 신체능력이 지속적으로 증가하며, 임계점에서 키보토스인과 유사한 신체능력을 가지나, 몇 초 내로 근육 조직이 완전히 붕괴되어 사망하게 됨.\n\n5. 수치를 역산하여 동물 실험을 진행하였으나 노획된 연구 자료만큼의 성과를 보이지 않음. 인간 외에는 유의미한 효과가 없을 것으로 사료됨.\n\n종합: 신비 주입 시 안정제 등의 보조제가 필요한 것으로 보임. 동물실험은 유의미한 성과를 보일 수 없어 부득이하게 현 연구 자료를 기반으로 인체 실험을 진행할 것을 제안함.\n\n중앙구 파견 제 26 연구팀."
+ ABY_serv_focus_event.1.a:0 "허ㄱ(지워짐)\n불허."
+ 
+ ABY_serv_focus_event.2.t:0 "조사 보고서-밀레니엄"
+ ABY_serv_focus_event.2.d:0 "개요: 밀레니엄 세미나 소속 연구시설 지하에서 대규모 신비 주입 연구 흔적이 발견됨. 대부분 자료가 온전한 상태로 보존됨.\n\n1. 연구 자료 규모상 최소 수만명이 투입되었을 것으로 사료됨. 따라서 게헨나 지역에서 발견된 것보다 세세한 수치의 자료 발견. 첨부.\n\n2. 세미나 연구 시설에 위치해 있으나, 연구 노트와 개인 노트 등에서 세미나의 결재나 그들에 관한 언급이 없어 세미나가 관련되었는지는 확인 불가.\n\n3. 약 1주일간 혈액 투석과 강한 독성 약품 섭취 및 주입으로 신비 주입 시 발생하는 자기파괴성 면역 억제 성공.\n\n4. 같은 방식으로 신체 붕괴를 늦추는 데 성공하였으나, 수명이 5년 내외로 제한될 것이라는 연구 결과가 나옴. \n비고: 극비사안으로 분류되어 있음.\n\n5. 실험체들은 처분된 것으로 추청되며, 다음 연구로 수명 감축을 막기 위한 연구가 계획된 흔적 확인 가능. 연구 계획: 키보토스인 신비 추가적 주입, ... , 태아 신비 주입, ... 후략. 첨부자료 확인 바람.\n비고: 극비사안으로 분류되어 있음.\n\n종합: 자료에 기반한 추가 계산 결과, 아무리 붕괴를 늦춰도 10년 이상으로 늦추긴 불가능한 것으로 확인됨.\n\n추가 보고서: 인체 실험 엄금에 따른 기계화 슈트 실험이 해당 연구 자료 확보에 따라 진척을 보이고 있음. 다만 실전 연구를 위해서는 군부와의 협력이 필요하며, 해당 자료의 공개가 불가피해 보여 허가가 필요.\n\n밀레니엄 파견 제 3연구팀."
+ ABY_serv_focus_event.2.a:0 "보류."
+ 
+ ABY_serv_focus_event.3.t:0 "장관 회의 보고서 395호 86장 요약본"
+ ABY_serv_focus_event.3.d:0 "밀레니엄 조사 보고서 자료 공개 여부 논쟁 발발.\n\n자료의 일부를 민간에 공개하는 것에 합의.\n\n세부 자료는 군에 공개하되 장성급 이하로는 유출되지 않도록 규정.\n\n중략.\n396호 3장 요약본\n\n"저거너트" 계획의 세부 보고서 확인.\n과도한 필요 예산으로 인한 의견 대립.\n\n기록 삭제.\n\n최종 결론 도출."
+ ABY_serv_focus_event.3.a:0 "저거너트 계획 승인됨."
+ ABY_serv_focus_event.3.b:0 "저거너트 계획 거부됨."
+ 
+ ABY_serv_focus_event.4.t:0 "조사 보고서-트리니티"
+ ABY_serv_focus_event.4.d:0 "개요: 트리니티 고성당 지하에서 발견된 수백 구의 시신과 의료기기에 관한 조사 보고서\n비고: 고성당 진입 전 여러 기록이 불타고 파쇄되어 확인 가능한 자료가 부족.\n\n1. 시신 주변에서 신비 혈청, 신비 직조기 등이 다량 발견됨.\n\n2. 사인은 공통적으로 총체적 장기부전, 혹은 심정지 등 체성근육 과부하 및 자기파괴성 면역 활성화로 인한 것으로 추청.\n\n3. 모든 시신에서 신비 수치가 정상 범주를 넘어선 수치로 관찰됨.\n\n4. 내용은 확인할 수 없으나 티파티의 명령서 등이 발견, 트리니티 정부 주도로 이루어진 것으로 추정됨.\n\n5. 사망 시기는 전체적으로 트리니티 정부의 "노숙자 및 사회부적응자 지원" 시기와 비슷함.\n\n종합: 아비도스 중앙 신비 연구소에서 진행한 동물 신비 주입 실험의 인간 생체실험으로 사료됨. 다만 자료 대다수가 파기되어 인간에게 적절한 조치 없이 신비 주입 시 동물들과 같은 반응을 보이며 사망한다는 것 외에는 유의미한 결과 도출 불가 보다 광범위한 연구자료 지원이 필요.\n\n고성당 파견 제 37신비 연구팀."
+ ABY_serv_focus_event.4.a:0 "허가."
+ 
  ABY_hidden_event.1.t: "중점 시간 히든 이벤트"
  ABY_hidden_event.1.desc: "이것이 보인다면 버그에 해당하므로 디스코드에 제보를 부탁합니다."
  ABY_hidden_event.1.a: "감사합니다."
@@ -4491,7 +4510,7 @@ ABY_army_dynamic_modifier_2:0 "연방임시군"
 ABY_army_dynamic_modifier_3:0 "연방정규군\n    최대 참호: [?ABY_var_max_dig_in|=+%2]\n    참호 부설 속도: [?ABY_var_dig_in_speed_factor|=+%2]\n    최대 계획 획득치: [?ABY_var_max_planning_factor|=+%2]\n    매일 지휘력 획득: [?ABY_var_command_power_gain|=+%2]\n    매일 지휘력 획득 증가치: [?ABY_var_command_power_gain_mult|=+%2]\n    최소 훈련 수준: [?ABY_var_minimum_training_level|=+%2]\n    보급 소비량: [?ABY_var_supply_consumption_factor|=+%2]\n    징병 가능 인구 획득치: [?ABY_var_conscription_factor|=+%2]\n    육군 조직력 회복: [?ABY_var_army_org_regain|=+%2]\n    비전투 시 보급품 부족 불이익: [?ABY_var_out_of_supply_factor|=+%2]\n    포병 공격: [?ABY_var_army_artillery_attack_factor|=+%2]\n    포병 방어: [?ABY_var_army_artillery_defence_factor|=+%2]\n    보급 범위: [?ABY_var_supply_node_range|=+%2]\n    사단 조직력: [?ABY_var_army_army_org_factor|=+%2]\n    돌파: [?ABY_var_breakthrough_factor|=+%2]"
 ABY_halo_dynamic_modifier_1:0 "낮은 헤일로 부대 결속력\n    모든 헤일로 편제 공격: [?ABY_var_modifier_army_sub_unit_category_halo_attack_factor|=+%2]\n    모든 헤일로 편제 사단 방어: [?ABY_var_modifier_army_sub_unit_category_halo_defence_factor|=+%2]\n    모든 헤일로 편제 사단 속도: [?ABY_var_modifier_army_sub_unit_category_halo_speed_factor|=+%2]\n    모든 헤일로 편제 사단 조직력: [?ABY_var_modifier_army_sub_unit_category_halo_max_org_factor|=+%2]\n    모든 헤일로 편제 사단 조직력 회복 상한: [?ABY_var_modifier_army_sub_unit_category_halo_org_recovery_cap_factor|=+%2]"
 ABY_halo_dynamic_modifier_2:0 "헤일로 임시군\n    모든 헤일로 편제 공격: [?ABY_var_modifier_army_sub_unit_category_halo_attack_factor|=+%2]\n    모든 헤일로 편제 사단 방어: [?ABY_var_modifier_army_sub_unit_category_halo_defence_factor|=+%2]\n    모든 헤일로 편제 사단 속도: [?ABY_var_modifier_army_sub_unit_category_halo_speed_factor|=+%2]\n    모든 헤일로 편제 사단 조직력: [?ABY_var_modifier_army_sub_unit_category_halo_max_org_factor|=+%2]\n    모든 헤일로 편제 사단 조직력 회복 상한: [?ABY_var_modifier_army_sub_unit_category_halo_org_recovery_cap_factor|=+%2]"
-ABY_halo_dynamic_modifier_3:0 "헤일로 특무군\n    헤일로 특수부대 공격: [?ABY_var_modifier_army_sub_unit_halo_special_forces_attack_factor|=+%2]\n    헤일로 특수부대 방어: [?ABY_var_modifier_army_sub_unit_halo_special_forces_defence_factor|=+%2]\n    모든 헤일로 편제 공격: [?ABY_var_modifier_army_sub_unit_category_halo_attack_factor|=+%2]\n    모든 헤일로 편제 사단 방어: [?ABY_var_modifier_army_sub_unit_category_halo_defence_factor|=+%2]\n    모든 헤일로 편제 사단 속도: [?ABY_var_modifier_army_sub_unit_category_halo_speed_factor|=+%2]\n    모든 헤일로 편제 사단 조직력: [?ABY_var_modifier_army_sub_unit_category_halo_max_org_factor|=+%2]\n    모든 헤일로 편제 사단 조직력 회복 상한: [?ABY_var_modifier_army_sub_unit_category_halo_org_recovery_cap_factor|=+%2]"
+ABY_halo_dynamic_modifier_3:0 "헤일로 특무군\n    모든 헤일로 편제 공격: [?ABY_var_modifier_army_sub_unit_category_halo_attack_factor|=+%2]\n    모든 헤일로 편제 사단 방어: [?ABY_var_modifier_army_sub_unit_category_halo_defence_factor|=+%2]\n    모든 헤일로 편제 사단 속도: [?ABY_var_modifier_army_sub_unit_category_halo_speed_factor|=+%2]\n    모든 헤일로 편제 사단 조직력: [?ABY_var_modifier_army_sub_unit_category_halo_max_org_factor|=+%2]\n    모든 헤일로 편제 사단 조직력 회복 상한: [?ABY_var_modifier_army_sub_unit_category_halo_org_recovery_cap_factor|=+%2]"
 ABY_halo_dynamic_modifier_4:0 "헤일로 정규군\n    헤일로 보병 공격: [?ABY_var_modifier_army_sub_unit_halo_infantry_attack_factor|=+%2]\n    헤일로 보병 방어: [?ABY_var_modifier_army_sub_unit_halo_infantry_defence_factor|=+%2]\n    모든 헤일로 편제 공격: [?ABY_var_modifier_army_sub_unit_category_halo_attack_factor|=+%2]\n    모든 헤일로 편제 사단 방어: [?ABY_var_modifier_army_sub_unit_category_halo_defence_factor|=+%2]\n    모든 헤일로 편제 사단 속도: [?ABY_var_modifier_army_sub_unit_category_halo_speed_factor|=+%2]\n    모든 헤일로 편제 사단 조직력: [?ABY_var_modifier_army_sub_unit_category_halo_max_org_factor|=+%2]\n    모든 헤일로 편제 사단 조직력 회복 상한: [?ABY_var_modifier_army_sub_unit_category_halo_org_recovery_cap_factor|=+%2]"
 ABY_air_dynamic_modifier_1:0 "공군 육전대\n    지상 지원: [?ABY_var_air_cas_present_factor|=+%2]\n    공군 작전 범위: [?ABY_var_air_range_factor|=+%2]\n    기동성: [?ABY_var_air_agility_factor|=+%2]\n    공군 작전 효율: [?ABY_var_air_mission_efficiency|=+%2]\n    악천후 불이익: [?ABY_var_air_weather_penalty|=+%2]\n    항공기 사고 확률: [?ABY_var_air_accidents_factor|=+%2]\n    비행단 임무 경험치 획득량: [?ABY_var_air_mission_xp_gain_factor|=+%2]\n    야간전 불이익: [?ABY_var_air_night_penalty|=+%2]"
 ABY_air_dynamic_modifier_2:0 "연방항공정규군\n    지상 지원: [?ABY_var_air_cas_present_factor|=+%2]\n    공군 작전 범위: [?ABY_var_air_range_factor|=+%2]\n    기동성: [?ABY_var_air_agility_factor|=+%2]\n    공군 작전 효율: [?ABY_var_air_mission_efficiency|=+%2]\n    악천후 불이익: [?ABY_var_air_weather_penalty|=+%2]\n    항공기 사고 확률: [?ABY_var_air_accidents_factor|=+%2]\n    비행단 임무 경험치 획득량: [?ABY_var_air_mission_xp_gain_factor|=+%2]\n    야간전 불이익: [?ABY_var_air_night_penalty|=+%2]"
