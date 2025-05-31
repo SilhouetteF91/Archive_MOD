@@ -729,7 +729,7 @@ characters={
 				}
 			}
 			traits = {
-				democratic_reformer 
+				GER_traditionalist
 			}
 			do_effect = {
 				NOT = {
