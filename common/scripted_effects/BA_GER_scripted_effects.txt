@@ -10,15 +10,15 @@ GEK_get_character_zentrum = { # 서독 중앙당 데려오기
 				set_nationality = ROOT
 			}
 			if = {
-				limit = { NOT = { has_country_flag = GEK_use_democratic_flag } }
-				set_country_flag = GEK_use_democratic_flag
-				promote_character = GEK_konrad_adenauer
+				limit = { NOT = { PREV = { has_country_flag = GEK_use_democratic_flag } } }
+				PREV = { set_country_flag = GEK_use_democratic_flag
 
 				set_party_name = {
 					ideology = democratic
 					long_name = GER_democratic_party
 					name = GER_democratic_party
-				}
+				} }
+				promote_character = GEK_konrad_adenauer
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_konrad_adenauer
@@ -61,15 +61,15 @@ GEK_get_character_SPD = { # 동독 사회민주당 데려오기
 				set_nationality = ROOT
 			}
 			if = {
-				limit = { NOT = { has_country_flag = GEK_use_democratic_flag } }
-				set_country_flag = GEK_use_democratic_flag
-				promote_character = GEK_hans_vogel
+				limit = { NOT = { PREV = { has_country_flag = GEK_use_democratic_flag } } }
+				PREV = { set_country_flag = GEK_use_democratic_flag
 
 				set_party_name = {
 					ideology = democratic
 					long_name = KPD_democratic_party
 					name = KPD_democratic_party
-				}
+				} }
+				promote_character = GEK_hans_vogel
 			}
 		}
 		every_possible_country = {
@@ -177,15 +177,15 @@ GE1_get_character_freikorps = { # 서독 자유군단 데려오기
 				set_nationality = ROOT
 			}
 			if = {
-				limit = { NOT = { has_country_flag = GEK_use_neutrality_flag } }
-				set_country_flag = GEK_use_neutrality_flag
-				promote_character = GEK_hermann_erhardt
+				limit = { NOT = { PREV = { has_country_flag = GEK_use_neutrality_flag } } }
+				PREV = { set_country_flag = GEK_use_neutrality_flag
 
 				set_party_name = {
 					ideology = neutrality 
 					long_name = GER_neutrality_party_kaiserreich_long 
 					name = GER_neutrality_party_kaiserreich 
-				}
+				} }
+				promote_character = GEK_hermann_erhardt
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_hermann_erhardt
@@ -295,15 +295,15 @@ GE2_get_character_freikorps = { # 동독 자유군단 데려오기
 				set_nationality = ROOT
 			}
 			if = {
-				limit = { NOT = { has_country_flag = GEK_use_neutrality_flag } }
-				set_country_flag = GEK_use_neutrality_flag
-				promote_character = GEK_carl_friedrich_goerdeler
+				limit = { NOT = { PREV = { has_country_flag = GEK_use_neutrality_flag } } }
+				PREV = { set_country_flag = GEK_use_neutrality_flag
 
 				set_party_name = {
 					ideology = neutrality 
 					long_name = GER_neutrality_party_kaiserreich_long 
 					name = GER_neutrality_party_kaiserreich 
-				}
+				} }
+				promote_character = GEK_carl_friedrich_goerdeler
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_carl_friedrich_goerdeler
@@ -346,15 +346,15 @@ GE1_get_character_KPD = { # 서독 공산당 데려오기
 				set_nationality = ROOT
 			}
 			if = {
-				limit = { NOT = { has_country_flag = GEK_use_communism_flag } }
-				set_country_flag = GEK_use_communism_flag
-				promote_character = GEK_wilhelm_pieck
+				limit = { NOT = { PREV = { has_country_flag = GEK_use_communism_flag } } }
+				PREV = { set_country_flag = GEK_use_communism_flag
 
 				set_party_name = {
 					ideology = communism
 					long_name = KPD_party_long
 					name = KPD_party_long
-				}
+				} }
+				promote_character = GEK_wilhelm_pieck
 			}
 		}
 		every_possible_country = {
@@ -385,15 +385,15 @@ GE2_get_character_KPD = { # 동독 공산당 데려오기
 				set_nationality = ROOT
 			}
 			if = {
-				limit = { NOT = { has_country_flag = GEK_use_communism_flag } }
-				set_country_flag = GEK_use_communism_flag
-				promote_character = KPD_wilhelm_munzenberg
+				limit = { NOT = { PREV = { has_country_flag = GEK_use_communism_flag } } }
+				PREV = { set_country_flag = GEK_use_communism_flag
 
 				set_party_name = {
 					ideology = communism
 					long_name = KPD_party_long
 					name = KPD_party_long
-				}
+				} }
+				promote_character = KPD_wilhelm_munzenberg
 			}
 		}
 		every_possible_country = {

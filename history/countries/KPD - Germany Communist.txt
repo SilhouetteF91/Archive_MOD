@@ -1,5 +1,7 @@
 capital = 64
 
+set_country_flag = GEK_use_communism_flag
+
 oob = KPD_1936
 
 #COMMUNIST INTEL MODIFIER
