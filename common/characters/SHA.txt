@@ -93,6 +93,11 @@ characters={
 			planning_skill=3
 			logistics_skill=3
 		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1965.1.1.1"
+			traits = { sotamarsalkka }
+		}
 	}
 	SHA_KAI={
 		name = SHA_KAI
@@ -489,7 +494,9 @@ characters={
 					}
 				}
 			}
-			visible = { has_completed_focus = SHA_conservative_revolution }
+			visible = { 
+				has_completed_focus = SHA_conservative_revolution 
+			}
     		traits = { SHA_ardent_conservative }
 			cost = 75
 			ai_will_do = { base = 4000 }
@@ -505,7 +512,6 @@ characters={
 		country_leader = {
 			ideology = fascism_ideology
 			expire = "1965.1.1.1"
-			id = -1
 			traits = {  }
 		}
 	}

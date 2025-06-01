@@ -7810,42 +7810,14 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 트리니티 사회주의의 교리문답서
-		id = TRN_trinity_socailism_catechism
-		icon = GFX_focus_GER_proletarian_dictatorship
-		prerequisite = { 
-			focus = TRN_codification_of_regime
-		}
-		x = 0
-		y = 2
-		relative_position_id = TRN_codification_of_regime
-		cost = 5
-
-		available = {
-			power_balance_value = {
-				id = TRM_power_balance
-				value < -0.69
-			}
-		}
-
-		ai_will_do = {
-
-		}
-		completion_reward = {
-			add_stability = 0.1
-			remove_power_balance = { id = TRM_power_balance }
-			add_ideas = TRN_trinity_socialism_ns
-		}
-	}
-
 	focus = { # 선지자들의 유산
 		id = TRN_legacy_of_the_prophets
 		icon = GFX_focus_BEL_la_dame_blanche
 		prerequisite = { 
 			focus = TRN_codification_of_regime
 		}
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = TRN_codification_of_regime
 		cost = 5
 
@@ -7865,11 +7837,11 @@ focus_tree = {
 		id = TRN_sheep_and_shepherd
 		icon = GFX_focus_generic_sheep
 		prerequisite = { 
-			focus = TRN_legacy_of_the_prophets
+			focus = TRN_codification_of_regime
 		}
 		x = 1
 		y = 1
-		relative_position_id = TRN_legacy_of_the_prophets
+		relative_position_id = TRN_codification_of_regime
 		cost = 5
 
 		available = {
@@ -7884,38 +7856,15 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 파테르 분파 제거
-		id = TRN_party_purge
-		icon = GFX_focus_generic_conspiracy
+	focus = { # 묵시룩의 기수
+		id = TRN_horseman_of_the_apocalypse
+		icon = GFX_focus_TRN_horseman_of_the_apocalypse
 		prerequisite = { 
-			focus = TRN_supreme_leader 
+			focus = TRN_supreme_leader
 		}
 		x = -1
 		y = 1
 		relative_position_id = TRN_supreme_leader
-		cost = 5
-
-		available = {
-
-		}
-
-		ai_will_do = {
-
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = { # 묵시룩의 기수
-		id = TRN_horseman_of_the_apocalypse
-		icon = GFX_focus_LIT_claim_livonia
-		prerequisite = { 
-			focus = TRN_party_purge
-		}
-		x = -1
-		y = 1
-		relative_position_id = TRN_party_purge
 		cost = 5
 
 		available = {
@@ -8173,7 +8122,7 @@ focus_tree = {
 
 	focus = { # 아츠코 개종시키기
 		id = TRN_religious_conversion
-		icon = GFX_ARI_princess_of_arius
+		icon = GFX_focus_princess_atsuko_2
 		x = -1
 		y = 1
 		relative_position_id = TRN_catch_tail

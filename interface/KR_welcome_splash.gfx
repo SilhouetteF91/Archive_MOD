@@ -114,7 +114,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_SHA_other_intro"
-		texturefile = "gfx/introscreen/SHA_other_intro.tga"
+		texturefile = "gfx/introscreen/SHA_intro.tga"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 	spriteType = {

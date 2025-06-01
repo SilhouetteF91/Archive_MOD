@@ -14,25 +14,31 @@ country_event = {
 
 	option = {
 		name = shafas.1.a
-		custom_effect_tooltip = SHA_Kaguya_is_Doorkeeper_tt
-		hidden_effect = {
-			SHA_KAGUYA = {
-				remove_country_leader_role = { ideology = fascism_ideology }
-
-				add_country_leader_role = {
-					country_leader = {
-						ideology = despotism
-						expire = "1965.1.1.1"
-						id = -1
-						traits = {
-							SHA_T2a 
-							SHA_ardent_conservative 
-						}
-					}
+		#add_country_leader_role = {
+		#	character = SHA_KAGUYA
+		#	country_leader = {
+		#		ideology = despotism
+		#		expire = "1965.1.1.1"
+		#		traits = {
+		#			SHA_T2a 
+		#			SHA_ardent_conservative 
+		#		}
+		#	}
+		#	promote_character = yes
+		#}
+		add_country_leader_role = {
+			character = SHA_KAGUYA
+			country_leader = {
+				ideology = despotism
+				expire = "1965.1.1.1"
+				traits = {
+					SHA_T2a 
+					SHA_ardent_conservative 
 				}
 			}
-			SHA_KISAKI = { remove_country_leader_role = { ideology = despotism } }
+			promote_leader = yes
 		}
+		SHA_KISAKI = { remove_country_leader_role = { ideology = despotism } }
 		hidden_effect = { country_event = { id = shafas.2 days = 02 } }
 		custom_effect_tooltip = tooltip_white_line
 		set_party_name = {
@@ -306,14 +312,14 @@ country_event = {
 	option = {
 		name = shafas.11.a
 		set_politics = { ruling_party = fascism }
-		set_party_name = {
-			ideology = fascism
-			long_name = SHA_Shintani_KAI_party_long
-			name = SHA_Shintani_KAI_party
-		}
 		BA_ban_democratic_effect = yes
 		BA_ban_communism_effect = yes
 		BA_ban_neutrality_effect = yes
+		set_party_name = {
+			ideology = fascism
+			long_name = SHA_Shintani_KAI_party
+			name = SHA_Shintani_KAI_party
+		}
 		if = {
 			limit = {
 				has_character = SHA_KAI
@@ -392,6 +398,170 @@ country_event = {
 	option = {
 		name = shafas.14.b
 
+	}
+}
+
+#  
+country_event = {
+	id = shafas.20
+	title = shafas.20.t
+	desc = shafas.20.d
+	picture = GFX_report_event_communist_leader
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.20.a
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = { id = shafas.21 days =04 }
+		}
+	}
+}
+country_event = {
+	id = shafas.21
+	title = shafas.21.t
+	desc = {
+        text = shafas.21.d
+        trigger = { has_completed_focus = SHA_Kaguya_ousted }
+	}
+	desc = {
+        text = shafas.21.d_2
+        trigger = { has_completed_focus = SHA_conservative_revolution }
+	}
+	picture = GFX_report_event_communist_leader
+
+    is_triggered_only = yes
+
+	option = { # 카구야 축출 중점 완료시
+		name = shafas.21.b
+		trigger = { has_completed_focus = SHA_Kaguya_ousted }
+
+		hidden_effect = {
+			country_event = { id = shafas.22 days = 01 }
+		}
+		remove_ideas = {
+			SHA_supreme_economic_council
+			SHA_supreme_economic_council_2
+			SHA_supreme_economic_council_3
+		}
+		remove_ideas = {
+			SHA_ASFTU
+			SHA_ASFTU_2
+			SHA_ASFTU_3
+		}
+		remove_dynamic_modifier = { modifier = SHA_Shanhaijinfascism }
+		if = {
+			limit = { has_character = SHA_KAI }
+			retire_character = SHA_KAI
+		}
+		
+		#add_country_leader_role = {
+        #    character = SHA_secret_agent
+		#	promote_character = yes
+		#	country_leader = {
+		#		ideology = fascism_ideology
+		#		expire = "1965.1.1.1"
+		#		traits = {  }
+		#	}
+		#}
+		if = {
+			limit = { has_character = SHA_secret_agent }
+			promote_character = SHA_secret_agent
+		}
+	}
+
+	option = { # 보수 혁명 중점 완료시
+		name = shafas.21.b
+		trigger = { has_completed_focus = SHA_conservative_revolution }
+		#custom_effect_tooltip = remove_political_advisor
+		#show_ideas_tooltip = SHA_KAGUYA_political_advisor
+		if = {
+			limit = { has_character = SHA_KAGUYA }
+			retire_character = SHA_KAGUYA
+		}
+		effect_tooltip = {
+			remove_ideas = SHA_supreme_economic_council
+			remove_ideas = SHA_ASFTU
+			remove_ideas = SHA_walking_the_dragon_1
+			remove_ideas = SHA_corporate_state_idea_1
+		}
+		remove_ideas = SHA_Peking_Opera_conservative
+		hidden_effect = {
+			remove_ideas = {
+				SHA_supreme_economic_council
+				SHA_supreme_economic_council_2
+				SHA_supreme_economic_council_3
+			}
+			remove_ideas = {
+				SHA_ASFTU
+				SHA_ASFTU_2
+				SHA_ASFTU_3
+			}
+			remove_ideas = {
+				SHA_walking_the_dragon_1
+				SHA_walking_the_dragon_2
+				SHA_walking_the_dragon_3
+				SHA_walking_the_dragon_4
+			}
+			remove_ideas = {
+				SHA_corporate_state_idea_1
+				SHA_corporate_state_idea_2
+			}
+
+		}
+
+	}
+}
+country_event = {
+	id = shafas.22
+	title = shafas.22.t
+	desc = shafas.22.d
+	picture = GFX_report_event_communist_leader
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.22.a
+		clr_country_flag = BA_ban_fascism_parties_flag
+		clr_country_flag = BA_ban_neutrality_parties_flag
+		clr_country_flag = BA_ban_democratic_parties_flag
+		clr_country_flag = BA_ban_communism_parties_flag
+
+		clr_country_flag = banned_democratic_flag
+		clr_country_flag = banned_communism_flag
+		clr_country_flag = banned_fascism_flag
+		clr_country_flag = banned_neutrality_flag
+		set_party_name = {
+			ideology = democratic
+			long_name = SHA_democratic_party_long
+			name = SHA_democratic_party
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.25
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = BA_neutrality_party_name_rerolling_5
+			name = BA_neutrality_party_name_rerolling_5
+		}
+		if = {
+			limit = { has_character = SHA_MINA }
+			promote_character = SHA_MINA
+		}
+		#add_country_leader_role = {
+        #    character = SHA_MINA
+		#	promote_character = yes
+		#	country_leader = {
+		#		ideology = despotism
+		#		expire = "1965.1.1.1"
+		#		traits = { sotamarsalkka }
+		#	}
+		#}
 	}
 }
 
@@ -781,5 +951,30 @@ country_event = {
 				small= GFX_idea_SHA_Akeshiro_Rumi_Child
 			}
 		}
+	}
+}
+
+# 앗! 아케시로 루미! 코코나보다 어리다!
+country_event = {
+	id = shafla.12345
+	title = shafla.3.t
+	desc = shafla.3.desc
+	picture = GFX_report_event_akeshiro_rumi_child
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafla.3.a
+		clr_global_flag = GFLAG_BAKSANWAR_END
+	}
+	option = {
+		name = shafla.3.a
+		set_global_flag = GFLAG_BAKSANWAR_END
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = shafla.3.a
+		complete_national_focus = SHA_gathering_of_radicals
+		complete_national_focus = SHA_Austrian_appeasement_policy
 	}
 }

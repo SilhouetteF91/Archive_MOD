@@ -111,7 +111,7 @@
 		}
 	}
 	offset = {
-		x = -20
+		x = -22
 		y = 12
 		trigger = {
 			OR = {
@@ -119,6 +119,10 @@
 				tag = SHA
 			}
 		}
+	}
+	offset = {
+		x = 0
+		y = 0
 	}
 	offset = {
 		x = 16

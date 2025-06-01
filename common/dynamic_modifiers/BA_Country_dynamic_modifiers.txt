@@ -2335,6 +2335,7 @@ SHA_Shanhaijin_Army = {
 	
     army_org_regain = SHA_militray_army_org_regain
     planning_speed = SHA_militray_planning_speed
+	max_planning = SHA_military_max_planning
     initiative_factor = SHA_militray_initiative_factor
 
 	org_loss_when_moving = SHA_military_org_loss_when_moving

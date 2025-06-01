@@ -204,6 +204,10 @@ spriteTypes = {
 		name = "GFX_focus_TRN_leading_theory"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_leading_theory.tga"
 	}
+	SpriteType = {
+		name = "GFX_focus_TRN_horseman_of_the_apocalypse"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_horseman_of_the_apocalypse.tga"
+	}
 
 	SpriteType = {
 		name = "GFX_focus_BLM_gang_thugs_war_focus"
@@ -2144,6 +2148,22 @@ spriteTypes = {
 		name = "GFX_focus_SHA_Shanhaijing_pact"
 		texturefile = "gfx/interface/goals/SHA/focus_SHA_Shanhaijing_pact.tga"  
 	}
+	SpriteType = {
+		name = "GFX_focus_SHA_Shanhaijing_fascism"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_Shanhaijing_fascism.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_SHA_fall_of_dragon"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_fall_of_dragon.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_SHA_defeat_kisaki_focus_1"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_defeat_kisaki_focus_1.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_SHA_defeat_mina_focus_1"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_defeat_mina_focus_1.tga"  
+	}
 
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
@@ -2792,6 +2812,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ARI_princess_of_arius"
 		texturefile = "gfx/interface/goals/ARI/focus_princess_atsuko.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_princess_atsuko_2"
+		texturefile = "gfx/interface/goals/ARI/focus_princess_atsuko_2.tga"
 	}
 	SpriteType = {
 		name = "GFX_ARI_anarchy_arius"

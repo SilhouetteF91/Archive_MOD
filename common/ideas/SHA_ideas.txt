@@ -131,7 +131,8 @@ ideas = {
 			rule = { can_send_volunteers = no }
 
 			on_add = { 
-				country_lock_all_division_template = yes 
+				country_lock_all_division_template = yes
+				set_country_flag = SHA_add_HYA_SHA_huzika
 			}
 			on_remove = {
 				country_lock_all_division_template = no
@@ -1426,6 +1427,38 @@ ideas = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
 				drift_defence_factor = 0.1
+			}
+		}
+
+
+		# 시민군국주의 - 전대 문주의 유산
+		SHA_civic_militarism_0_ns = {
+			picture = ARG_military_government
+			name = SHA_civic_militarism_0_ns
+			modifier = {
+				additional_brigade_column_size = 1
+			}
+		}
+		# 시민군국주의 - 육군 선전국
+		SHA_civic_militarism_1_ns = {
+			picture = ARG_military_government
+			name = SHA_civic_militarism_0_ns
+			modifier = {
+				additional_brigade_column_size = 1
+
+				weekly_casualties_war_support = 0.0025
+			}
+		}
+		# 시민군국주의 - 육군 선전국 + 시민군국주의
+		SHA_civic_militarism_2_ns = {
+			picture = ARG_military_government
+			name = SHA_civic_militarism_0_ns
+			modifier = {
+				additional_brigade_column_size = 1
+
+				weekly_casualties_war_support = 0.0025
+				
+				conscription = 0.01
 			}
 		}
 
