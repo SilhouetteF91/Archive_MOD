@@ -1659,6 +1659,11 @@ focus_tree = {
 	
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SHA_otto_bauer
+			custom_effect_tooltip = generic_skip_one_line_tt
+			country_event = {
+				id = shacom.1
+				days = 2
+			}
 		}
 	}
 	focus = { #'붉은 빈'
@@ -1675,18 +1680,23 @@ focus_tree = {
 		relative_position_id = SHA_communist_branch
 
 		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
+			country_event = {
+				id = shacom.2
+				days = 2
+			}
+			4 = {
+				add_dynamic_modifier = {
+					modifier = SHA_red_wien
+				}
 			}
 		}
 	}
-	focus = { #광장 사회주의
+	focus = { #좌익 민병대
 		id = SHA_communism_focus_2
 		icon = GFX_focus_YUG_pan_slavic_congress
 		x = 1
 		y = 1
-		cost = 4
+		cost = 5
 
 		prerequisite = { focus = SHA_communism_focus_1 }
 
@@ -1695,7 +1705,7 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_1
 
 		completion_reward = {
-
+			
 		}
 	}
 	focus = { #평의회 운동 재개
@@ -1753,7 +1763,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 
-		prerequisite = { focus = SHA_communism_focus_3 focus = SHA_communism_focus_1 }
+		prerequisite = { focus = SHA_communism_focus_3 }
 
 		bypass = { }
 		relative_position_id = SHA_communism_focus_3
@@ -1805,6 +1815,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = SHA_communism_focus_1 }
+		prerequisite = { focus = SHA_communism_focus_4 focus = SHA_communism_focus_5 }
 		mutually_exclusive = {
 			focus = SHA_communism_focus_6
 		}

@@ -1,7 +1,59 @@
 add_namespace = shafas
 add_namespace = shadem
 add_namespace = shafla
+add_namespace = shacom
 add_namespace = shanews
+
+country_event = { #오스트로 맑시즘
+	id = shacom.1
+	title = shacom.1.t
+	desc = shacom.1.d
+	picture = GFX_report_event_ARG_coup_detat
+
+    is_triggered_only = yes
+
+	option = {
+		name = shacom.1.a
+	}
+}
+country_event = { #붉은 빈
+	id = shacom.2
+	title = shacom.2.t
+	desc = shacom.2.d
+	picture = GFX_report_event_ARG_coup_detat
+
+    is_triggered_only = yes
+
+	option = {
+		name = shacom.2.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = shacom.3
+				days = 25
+			}
+		}
+	}
+}
+country_event = { #중앙 광장에서의 충돌
+	id = shacom.3
+	title = shacom.3.t
+	desc = shacom.3.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = {
+		name = shacom.3.a
+		4 = {
+			add_manpower = -32
+		}
+		add_stability = -0.05
+	}
+}
 
 # 경극부 쿠데타
 country_event = {

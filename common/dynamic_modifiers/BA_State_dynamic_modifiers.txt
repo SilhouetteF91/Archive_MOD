@@ -504,6 +504,13 @@ SHA_attack_plan = {
 	army_attack_factor = 0.1
 }
 
+SHA_red_wien = { #붉은 빈
+	enable = { always = yes }
+	icon = GFX_modifiers_GER_socialist_movement
+	state_production_speed_buildings_factor = 0.1
+	local_building_slots = 1
+}
+
 TRM_Military_occupation = {
 	icon = "GFX_decision_SWE_set_army_budget"
 
