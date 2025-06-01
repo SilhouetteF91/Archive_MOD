@@ -20092,6 +20092,634 @@ ABY_descision_category_debug = {
 			}
 		}
 	}
+	ABY_descision_debug_world_puppet = {
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }     
+
+		
+
+		complete_effect = {
+			custom_effect_tooltip = ABY_tt_north_america
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = USA
+					copy_tag = USA
+					add_political_power = 100
+					set_cosmetic_tag = ABY_SCHOOL_2_USA
+					every_state = {
+						limit = {
+							is_on_continent = north_america
+						}
+						add_core_of = PREV
+						transfer_state_to = PREV
+					}
+					create_country_leader = {
+						name = "ABY_Federation_north_america"
+						desc = "" 
+						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
+						expire = "1965.1.1"
+						ideology = Cohabitism
+						traits = { ABY_trait_council }
+					}
+					ABY = { puppet = PREV }
+					ABY = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_supervised_state
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ABY_tt_south_america
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = BRA
+					copy_tag = BRA
+					add_political_power = 100
+					set_cosmetic_tag = ABY_SCHOOL_2_BRA
+					every_state = {
+						limit = {
+							is_on_continent = south_america
+						}
+						add_core_of = PREV
+						transfer_state_to = PREV
+					}
+					create_country_leader = {
+						name = "ABY_Federation_south_america"
+						desc = "" 
+						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
+						expire = "1965.1.1"
+						ideology = Cohabitism
+						traits = { ABY_trait_council }
+					}
+					ABY = { puppet = PREV }
+					ABY = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_supervised_state
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ABY_tt_austrailia
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = AST
+					copy_tag = AST
+					add_political_power = 100
+					set_cosmetic_tag = ABY_SCHOOL_2_AST
+					every_state = {
+						limit = {
+							OR = {
+								is_on_continent = australia
+								is_core_of = INS
+								is_core_of = PHI
+								state = 333
+								state = 721
+							}
+							
+						}
+						add_core_of = PREV
+						transfer_state_to = PREV
+					}
+					create_country_leader = {
+						name = "ABY_Federation_austrailia"
+						desc = "" 
+						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
+						expire = "1965.1.1"
+						ideology = Cohabitism
+						traits = { ABY_trait_council }
+					}
+					ABY = { puppet = PREV }
+					ABY = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_supervised_state
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ABY_tt_near_asia
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = KUR
+					copy_tag = KUR
+					add_political_power = 100
+					set_cosmetic_tag = ABY_SCHOOL_2_TUR
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = PER
+								is_core_of = IRQ
+								is_core_of = SYR
+								is_core_of = KUR
+								state = 553
+								state = 229
+								state = 230
+								state = 231
+								state = 826
+								state = 354
+								state = 344
+								state = 339
+								state = 340
+								state = 347
+								state = 355
+								state = 356
+								state = 342
+								state = 345
+								state = 49
+								state = 346
+								state = 343
+								state = 348
+								state = 349
+								state = 798
+								state = 656
+							}
+						}
+						add_core_of = PREV
+						transfer_state_to = PREV
+					}
+					create_country_leader = {
+						name = "ABY_Federation_near_asia"
+						desc = "" 
+						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
+						expire = "1965.1.1"
+						ideology = Cohabitism
+						traits = { ABY_trait_council }
+					}
+					ABY = { puppet = PREV }
+					ABY = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_supervised_state
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ABY_tt_arabia
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = SAU
+					copy_tag = SAU
+					add_political_power = 100
+					set_cosmetic_tag = ABY_SCHOOL_2_SAU
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = SAU
+								state = 659
+								state = 293
+								state = 294
+								state = 658
+								state = 765
+								state = 455
+								state = 454
+								state = 453
+							}
+						}
+						add_core_of = PREV
+						transfer_state_to = PREV
+					}
+					create_country_leader = {
+						name = "ABY_Federation_arabia"
+						desc = "" 
+						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
+						expire = "1965.1.1"
+						ideology = Cohabitism
+						traits = { ABY_trait_council }
+					}
+					ABY = { puppet = PREV }
+					ABY = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_supervised_state
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ABY_tt_north_africa
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = LBA
+					copy_tag = LBA
+					add_political_power = 100
+					set_cosmetic_tag = ABY_SCHOOL_2_LBA
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = LBA
+								is_core_of = EGY
+								is_core_of = SUD
+								state = 273
+								state = 298
+								state = 514
+								state = 782
+								state = 786
+								state = 775
+								state = 515
+								state = 665
+								state = 458
+								state = 661
+								state = 448
+								state = 449
+								state = 662
+								state = 450
+								state = 451
+								state = 663
+								state = 513
+								state = 459
+								state = 460
+								state = 462
+								state = 461
+								state = 290
+								state = 783
+								state = 699
+								state = 557
+								state = 272
+								state = 701
+								state = 778
+								state = 779
+								state = 296
+								state = 780
+								state = 700
+								state = 779
+								state = 899
+								state = 556
+								state = 898
+								state = 781
+								state = 274
+								state = 777
+								state = 776
+								state = 558
+								state = 901
+								state = 902
+								state = 774
+								state = 773
+								state = 900
+								state = 660
+							}
+						}
+						add_core_of = PREV
+						transfer_state_to = PREV
+					}
+					create_country_leader = {
+						name = "ABY_Federation_north_africa"
+						desc = "" 
+						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
+						expire = "1965.1.1"
+						ideology = Cohabitism
+						traits = { ABY_trait_council }
+					}
+					ABY = { puppet = PREV }
+					ABY = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_supervised_state
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ABY_tt_east_africa
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = ETH
+					copy_tag = ETH
+					add_political_power = 100
+					set_cosmetic_tag = ABY_SCHOOL_2_ETH
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = ETH
+								state = 550
+								state = 268
+								state = 269
+								state = 559
+								state = 844
+								state = 903
+								state = 904
+								state = 547
+								state = 548
+								state = 768
+								state = 769
+								state = 905
+								state = 546
+								state = 897
+								state = 543
+							}
+						}
+						add_core_of = PREV
+						transfer_state_to = PREV
+					}
+					create_country_leader = {
+						name = "ABY_Federation_east_africa"
+						desc = "" 
+						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
+						expire = "1965.1.1"
+						ideology = Cohabitism
+						traits = { ABY_trait_council }
+					}
+					ABY = { puppet = PREV }
+					ABY = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_supervised_state
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ABY_tt_south_africa
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = SAF
+					copy_tag = SAF
+					add_political_power = 100
+					set_cosmetic_tag = ABY_SCHOOL_2_SAF
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = SAF
+								is_core_of = COG
+								is_core_of = ANG
+								state = 297
+								state = 539
+								state = 772
+								state = 771
+								state = 770
+								state = 896
+								state = 545
+								state = 542
+								state = 544
+							}
+						}
+						add_core_of = PREV
+						transfer_state_to = PREV
+					}
+					create_country_leader = {
+						name = "ABY_Federation_south_africa"
+						desc = "" 
+						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
+						expire = "1965.1.1"
+						ideology = Cohabitism
+						traits = { ABY_trait_council }
+					}
+					ABY = { puppet = PREV }
+					ABY = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_supervised_state
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ABY_tt_south_asia
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = PAK
+					copy_tag = PAK
+					add_political_power = 100
+					set_cosmetic_tag = ABY_SCHOOL_2_RAJ
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = RAJ
+								is_core_of = PAK
+								is_core_of = AFG
+								is_core_of = TIB
+								is_core_of = SIA
+								is_core_of = VIN
+								state = 422
+								state = 323
+								state = 324
+								state = 604
+								state = 288
+								state = 640
+								state = 336
+								state = 747
+								state = 325
+							}
+						}
+						add_core_of = PREV
+						transfer_state_to = PREV
+					}
+					create_country_leader = {
+						name = "ABY_Federation_south_asia"
+						desc = "" 
+						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
+						expire = "1965.1.1"
+						ideology = Cohabitism
+						traits = { ABY_trait_council }
+					}
+					ABY = { puppet = PREV }
+					ABY = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_supervised_state
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ABY_tt_east_asia
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = FER
+					copy_tag = FER
+					add_political_power = 100
+					set_cosmetic_tag = ABY_SCHOOL_2_FER
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = JAP
+								is_core_of = KOR
+								is_core_of = MAN
+								is_core_of = GXC
+								state = 655
+								state = 408
+								state = 409
+								state = 560
+								state = 657
+								state = 819
+								state = 524
+								state = 611
+								state = 612
+								state = 746
+								state = 622
+								state = 615
+								state = 608
+								state = 609
+								state = 326
+								state = 728
+								state = 729
+								state = 614
+								state = 597
+								state = 743
+								state = 283
+								state = 753
+								state = 752
+								state = 607
+								state = 603
+								state = 748
+								state = 605
+								state = 744
+								state = 602
+								state = 750
+								state = 620
+								state = 600
+								state = 595
+								state = 596
+								state = 613
+								state = 749
+								state = 606
+								state = 598
+								state = 751
+							}
+						}
+						add_core_of = PREV
+						transfer_state_to = PREV
+					}
+					create_country_leader = {
+						name = "ABY_Federation_east_asia"
+						desc = "" 
+						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
+						expire = "1965.1.1"
+						ideology = Cohabitism
+						traits = { ABY_trait_council }
+					}
+					ABY = { puppet = PREV }
+					ABY = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_supervised_state
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ABY_tt_step
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = KAZ
+					copy_tag = KAZ
+					add_political_power = 100
+					set_cosmetic_tag = ABY_SCHOOL_2_KAZ
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = KAZ
+								is_core_of = UZB
+								is_core_of = ALT
+								is_core_of = SIK
+								state = 652
+								state = 832
+								state = 584
+								state = 405
+								state = 732
+								state = 742
+								state = 329
+								state = 754
+								state = 755
+								state = 756
+								state = 616
+								state = 621
+								state = 817
+								state = 330
+								state = 820
+								state = 818
+							}
+						}
+						add_core_of = PREV
+						transfer_state_to = PREV
+					}
+					create_country_leader = {
+						name = "ABY_Federation_step"
+						desc = "" 
+						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
+						expire = "1965.1.1"
+						ideology = Cohabitism
+						traits = { ABY_trait_council }
+					}
+					ABY = { puppet = PREV }
+					ABY = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_supervised_state
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ABY_tt_siberia
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = YAK
+					copy_tag = YAK
+					add_political_power = 100
+					set_cosmetic_tag = ABY_SCHOOL_2_YAK
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = YAK
+								state = 822
+								state = 875
+								state = 637
+								state = 874
+								state = 561
+								state = 562
+								state = 563
+								state = 564
+								state = 565
+								state = 566
+								state = 567
+								state = 568
+								state = 569
+								state = 570
+								state = 571
+								state = 572
+								state = 573
+								state = 575
+								state = 576
+								state = 577
+								state = 578
+								state = 579
+								state = 580
+								state = 581
+								state = 651
+								state = 398
+								state = 653
+								state = 403
+								state = 824
+								state = 516
+								state = 878
+								state = 582
+							}
+						}
+						add_core_of = PREV
+						transfer_state_to = PREV
+					}
+					create_country_leader = {
+						name = "ABY_Federation_siberia"
+						desc = "" 
+						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
+						expire = "1965.1.1"
+						ideology = Cohabitism
+						traits = { ABY_trait_council }
+					}
+					ABY = { puppet = PREV }
+					ABY = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_supervised_state
+						}
+					}
+				}
+			}
+        }
+	}
 }
 ABY_descision_category_abydos_highschool = {
 	ABY_descision_debug_rebuild_map = {
