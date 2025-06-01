@@ -1483,6 +1483,14 @@ spriteTypes = {
 		}
 	}
 
+	### 민주 아코 선도부 평의회 ###
+
+	spriteType = {
+        name = "GFX_GEH_ako_amau_leader_icon"
+        texturefile = "gfx/interface/decisions/GEH_prefect_team_decisions/GEH_ako_amau_leader_icon.dds"
+        legacy_lazy_load = no
+    }
+
 	progressbartype = {
 		name = "GFX_ABY_focus_progressbar"
 		textureFile1 = "gfx/interface/decisions/ABY_focus_gui/ABY_progressbar.dds"
