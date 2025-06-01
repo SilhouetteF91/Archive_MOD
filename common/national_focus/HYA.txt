@@ -4778,6 +4778,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = HYA_focus_119
 		cost = 5
+		completion_reward={
+			add_war_support = 0.10
+			add_country_leader_trait = HYA_hyakkaryouran_resolution_council_chairman
+	    }
 	}
 
 	focus = {
@@ -4789,6 +4793,24 @@ focus_tree = {
 		y = 1
 		relative_position_id = HYA_focus_121
 		cost = 5
+		completion_reward={
+			if = {
+				limit = { 
+					NOT = { has_government = fascism }
+				}
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+					election_frequency = 48
+				}
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = HYA_fascism_win_party
+				name = HYA_fascism_win_party_long
+			}
+			promote_character = HYA_Nanakado_Ayame_1
+	    }
 	}
 
 	focus = {
