@@ -8198,7 +8198,7 @@ shared_focus = { #동독 통일
 			controls_state = 763
 		}
 	}
-	x = 7
+	x = 8
 	y = 0
 	cost = 2
 	completion_reward = {
@@ -8261,7 +8261,7 @@ shared_focus = { #서부 전쟁
 	relative_position_id = GE2_start_focus
 	available = {
 	}
-	x = 4
+	x = 5
 	y = 1
 	cost = 5
 	completion_reward = {
@@ -8298,7 +8298,7 @@ shared_focus = { #서부 통합
 	relative_position_id = GE2_ambition_for_the_west
 	available = {
 	}
-	x = 0
+	x = -1
 	y = 1
 	cost = 5
 	completion_reward = {
@@ -8337,7 +8337,7 @@ shared_focus = { #다른 독일과 경쟁
 			has_completed_focus = GE1_start_focus
 		}
 	}
-	x = 2
+	x = 1
 	y = 1
 	cost = 5
 	completion_reward = {
@@ -8353,7 +8353,7 @@ shared_focus = { #폴란드 국경
 	relative_position_id = GE2_start_focus
 	available = {
 	}
-	x = 2
+	x = 1
 	y = 2
 	cost = 5
 	completion_reward = {
@@ -8545,7 +8545,7 @@ shared_focus = { #서부 공세
 			controls_state = 1025
 			controls_state = 978
 	}
-	x = 2
+	x = 1
 	y = 2
 	cost = 5
 	completion_reward = {
@@ -8585,6 +8585,9 @@ shared_focus = { #서부 공세
 	prerequisite = {
 		focus = GE2_western_offensive
 	}
+	mutually_exclusive = {
+		focus = GE1_german_unification
+	}
 	relative_position_id = GE2_western_offensive
 	available = {
 		count_triggers = {
@@ -8607,7 +8610,7 @@ shared_focus = { #서부 공세
 		}
 	}
 	x = 0
-	y = 2
+	y = 3
 	cost = 5
 	completion_reward = {
 		add_political_power = 120
@@ -8651,17 +8654,18 @@ shared_focus = { #서부 공세
 	}
 }
 
-shared_focus = { #서부 공세
+shared_focus = { # 독일 통일
 	id = GEAF_german_unification
 	icon = GFX_focus_GER_realpolitik
 	prerequisite = {
 		focus = GE2_german_unification
+		focus = GE1_german_unification
 	}
 	relative_position_id = GE2_german_unification
 	available = {
 	}
-	x = -10
-	y = 1
+	x = -9
+	y = 2
 	cost = 5
 	completion_reward = {
 	}
@@ -8694,7 +8698,7 @@ shared_focus = { #산업 애국주의
 		focus = GEK_RM_eco_focus_0
 	}
 	relative_position_id = GEK_RM_eco_focus_0
-	x = -1
+	x = 1
 	y = 1
 	cost = 2
 	completion_reward = {
@@ -8728,7 +8732,7 @@ shared_focus = { #산업 재건
 		focus = GEK_RM_eco_focus_0
 	}
 	relative_position_id = GEK_RM_eco_focus_0
-	x = 1
+	x = -1
 	y = 1
 	cost = 2
 	completion_reward = {
@@ -8751,32 +8755,6 @@ shared_focus = { #산업 재건
 		}
 	}
 }
-shared_focus = { #전시 산업 재건
-	id = GEK_RM_eco_focus_6
-	icon = GFX_focus_generic_stockpile_fuel
-	prerequisite = {
-		focus = GEK_RM_eco_focus_2
-	}
-	relative_position_id = GEK_RM_eco_focus_0
-	x = -2
-	y = 2
-	mutually_exclusive = {
-		focus = GEK_RM_eco_focus_4
-	}
-	cost = 5
-	completion_reward = {
-		random_owned_controlled_state = {
-			limit = {
-				BA_is_GER_core = yes
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-			}
-		}
-	}
-}
 shared_focus = { #루르 산업 연결
 	id = GEK_RM_eco_focus_3
 	icon = GFX_focus_generic_industry_1
@@ -8784,8 +8762,8 @@ shared_focus = { #루르 산업 연결
 		focus = GEK_RM_eco_focus_2
 	}
 	relative_position_id = GEK_RM_eco_focus_0
-	x = 1
-	y = 3
+	x = -3
+	y = 2
 	cost = 5
 	completion_reward = {
 		custom_effect_tooltip = GEH_llinked_ruhr_industrial_tt
@@ -8827,11 +8805,11 @@ shared_focus = { #소비재 생산 단지
 	id = GEK_RM_eco_focus_4
 	icon = GFX_goal_GER_Siemens
 	prerequisite = {
-		focus = GEK_RM_eco_focus_2
+		focus = GEK_RM_eco_focus_3
 	}
-	relative_position_id = GEK_RM_eco_focus_0
-	x = 0
-	y = 2
+	relative_position_id = GEK_RM_eco_focus_3
+	x = 1
+	y = 1
 	cost = 5
 	mutually_exclusive = {
 		focus = GEK_RM_eco_focus_6
@@ -8855,7 +8833,7 @@ shared_focus = { #정유 산업 재건
 		focus = GEK_RM_eco_focus_2
 	}
 	relative_position_id = GEK_RM_eco_focus_0
-	x = 2
+	x = -1
 	y = 2
 	cost = 5
 	completion_reward = {
@@ -8898,7 +8876,172 @@ shared_focus = { #정유 산업 재건
 		}
 	}
 }
-
+shared_focus = { #전시 산업 재건
+	id = GEK_RM_eco_focus_6
+	icon = GFX_focus_generic_stockpile_fuel
+	prerequisite = {
+		focus = GEK_RM_eco_focus_3
+	}
+	relative_position_id = GEK_RM_eco_focus_3
+	x = -1
+	y = 1
+	mutually_exclusive = {
+		focus = GEK_RM_eco_focus_4
+	}
+	cost = 5
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				BA_is_GER_core = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+			}
+		}
+	}
+}
+shared_focus = { #동독일 수복
+	id = GEK_RM_eco_focus_7
+	icon = GFX_goal_generic_occupy_states_ongoing_war
+	prerequisite = {
+		focus = GEK_RM_eco_focus_1
+	}
+	prerequisite = {
+		focus = GEK_RM_eco_focus_2
+	}
+	available = {
+		is_subject = no
+		has_army_manpower = { size > 649999 } #60? div	
+		any_country = {
+			OR = {
+				owns_state = 5
+				owns_state = 60
+				owns_state = 61
+				owns_state = 62
+				owns_state = 63
+				owns_state = 64
+				owns_state = 65
+				owns_state = 66
+				owns_state = 67
+				owns_state = 68
+				owns_state = 763
+			}
+		}		
+	}
+	bypass = {
+			controls_state = 5
+			controls_state = 60
+			controls_state = 61
+			controls_state = 62
+			controls_state = 63
+			controls_state = 64
+			controls_state = 65
+			controls_state = 66
+			controls_state = 67
+			controls_state = 68
+			controls_state = 763
+	}
+	relative_position_id = GEK_RM_eco_focus_0
+	x = 0
+	y = 3
+	cost = 2
+	completion_reward = {
+		every_other_country = {
+			limit = { 
+				OR = {
+					owns_state = 5
+					owns_state = 60
+					owns_state = 61
+					owns_state = 62
+					owns_state = 63
+					owns_state = 64
+					owns_state = 65
+					owns_state = 66
+					owns_state = 67
+					owns_state = 68
+					owns_state = 763
+				}
+			}
+			ROOT = {
+				create_wargoal = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+shared_focus = { #라인 강의 기적
+	id = GE1_german_unification
+	icon = GFX_goal_generic_occupy_states_ongoing_war
+	prerequisite = {
+		focus = GEK_RM_eco_focus_7
+	}
+	mutually_exclusive = {
+		focus = GE2_german_unification
+	}
+	available = {
+		count_triggers = {
+			amount = 8
+			controls_state = 5
+			controls_state = 60
+			controls_state = 61
+			controls_state = 62
+			controls_state = 63
+			controls_state = 64
+			controls_state = 65
+			controls_state = 66
+			controls_state = 67
+			controls_state = 68
+			controls_state = 763
+		}
+	}
+	relative_position_id = GEK_RM_eco_focus_7
+	x = 0
+	y = 3
+	cost = 2
+	completion_reward = {
+		add_political_power = 120
+		add_stability = 0.10
+		add_war_support = 0.10
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.15
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		add_timed_idea = {
+			idea = GER_recover_from_the_civil_war_ns
+			days = 365
+		}
+		hidden_effect = {
+			country_event = {
+				id = GEK_rm_event.21
+				days = 10
+			}
+		}
+		if = {
+			limit = {
+				any_owned_state = {
+					has_dynamic_modifier = {
+						modifier = GEK_protestant_patriotism_for_TRM
+					}
+				}
+			}
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GEK_protestant_patriotism_for_TRM
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = GEK_protestant_patriotism_for_TRM
+				}
+			}
+		}
+	}
+}
 
 
 shared_focus = { #종교 정책
