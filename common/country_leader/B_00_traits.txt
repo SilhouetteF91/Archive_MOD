@@ -3558,6 +3558,21 @@ leader_traits = {
 		army_attack_factor = 0.10
 		army_defence_factor = 0.10
 	}
+	HYA_hyakkaryouran_resolution_council_head_1 = { #백화요란 분쟁조정위원회의 부장
+		random = no
+		political_power_factor = 0.15
+		stability_factor = 0.20
+		SURRENDER_LIMIT = 0.10
+		fascism_drift = 0.10
+		army_attack_factor = 0.10
+		army_defence_factor = 0.10
+	}
+	HYA_hyakkaryouran_resolution_council_chairman = { #퇴부와 백련의 계승자
+		random = no
+		stability_factor = 0.05
+		offensive_war_stability_factor = 0.10
+		defensive_war_stability_factor = 0.10
+	}
 	SRT_T1a = { #RABBIT 소대의 소대장
 		random = no
 		sprite = 13
