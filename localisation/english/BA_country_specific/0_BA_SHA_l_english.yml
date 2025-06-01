@@ -1,6 +1,9 @@
 ﻿l_english:
 
  #아이디어
+
+  #공산
+ SHA_austro_marxism: "오스트로 맑시즘"
  SHA_laws: "제정된 법률"
 
  SHA_isolation_economic: "쇄국 정책"
@@ -346,8 +349,15 @@
  SHA_a_responsible_government: "책임지는 대통령"
  SHA_guided_democracy: "전 문주, 현 대통령"
 
- SHA_communist_branch: "붉은 산해경을 향해"
-
+ SHA_communist_branch: "오스트로 맑시즘 수용" 
+ SHA_communism_focus_1: "'붉은 빈'"
+ SHA_communism_focus_2: "광장 사회주의"
+ SHA_communism_focus_3: "평의회 운동 재개"
+ SHA_communism_focus_4: "대중주의적 조합주의"
+ SHA_communism_focus_5: "현무상회 좌경화"
+ SHA_communism_focus_6: "'대중파업론'"
+ SHA_communism_focus_7: "34년에 대한 복수"
+ SHA_communism_focus_8: "사회주의 산해경"
 
 
  # 승전 공용

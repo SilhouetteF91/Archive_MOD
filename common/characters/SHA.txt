@@ -516,6 +516,7 @@ characters={
 		}
 	}
 
+	#오스트리아인 긴빠이
 	SHA_elizabet_von_gutmann = {
 		advisor = {
 			slot = political_advisor
@@ -546,6 +547,64 @@ characters={
 		portraits = {
 			civilian = {
 				small = "GFX_portrait_AUS_elisabeth_von_gutmann_small"
+			}
+		}
+	}
+	SHA_bruno_kreisky = {
+		advisor = {
+			slot = political_advisor
+			idea_token = SHA_bruno_kreisky
+			allowed = { 
+				original_tag = SHA
+			}
+			traits = { 
+				AUS_meticulous_lawyer
+			}
+			available = {
+				has_completed_focus = SHA_release_austrian_politician
+			}
+
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 10
+					has_government = democratic
+				}
+			}
+		}
+		name = AUS_bruno_kreisky
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_bruno_kreisky_small"
+			}
+		}
+	}
+	SHA_otto_bauer = {
+		advisor = {
+			slot = political_advisor
+			idea_token = SHA_otto_bauer
+			allowed = { 
+				original_tag = SHA
+			}
+			available = {
+				has_completed_focus = SHA_communist_branch
+			}
+			traits = { 
+				AUS_the_father_of_austromarxism 
+			}
+
+			ai_will_do = {
+				base = 2
+				modifier = {
+					factor = 5
+					has_completed_focus = SHA_communist_branch
+				}
+			}
+		}
+		name = AUS_otto_bauer
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_otto_bauer_small"
 			}
 		}
 	}

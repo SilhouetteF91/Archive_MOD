@@ -35,6 +35,34 @@ ideas = {
 		}
 	}
 	country = {
+		#공산
+		SHA_austro_marxism_1 = { #오스트로 맑시즘
+			name = SHA_austro_marxism
+			picture = AUS_austromarxism
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				communism_drift = 0.05
+				industrial_capacity_dockyard = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+		SHA_austro_marxism = { #오스트로 맑시즘
+			picture = AUS_austromarxism
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				communism_drift = 0.03
+				democratic_drift = 0.02
+				industrial_capacity_dockyard = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
 		###항전###
 		BA_USA_jayou_idea = {
 			picture = generic_usa_conflict
