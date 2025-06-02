@@ -20107,6 +20107,7 @@ ABY_descision_category_debug = {
 		
 
 		complete_effect = {
+			set_cosmetic_tag = ABY_uhh
 			custom_effect_tooltip = ABY_tt_north_america
 			hidden_effect = {
 				create_dynamic_country = {
@@ -20283,6 +20284,11 @@ ABY_descision_category_debug = {
 								state = 455
 								state = 454
 								state = 453
+								state = 992
+								state = 1013
+								state = 1014
+								state = 1016
+								state = 1015
 							}
 						}
 						add_core_of = PREV
@@ -20365,6 +20371,15 @@ ABY_descision_category_debug = {
 								state = 773
 								state = 900
 								state = 660
+								state = 838
+								state = 839
+								state = 840
+								state = 841
+								state = 842
+								state = 843
+								state = 908
+								state = 268
+								state = 550
 							}
 						}
 						add_core_of = PREV
@@ -20397,7 +20412,9 @@ ABY_descision_category_debug = {
 					every_state = {
 						limit = {
 							OR = {
-								is_core_of = ETH
+								state = 835
+								state = 836
+								state = 837
 								state = 550
 								state = 268
 								state = 269
@@ -20457,6 +20474,7 @@ ABY_descision_category_debug = {
 								state = 545
 								state = 542
 								state = 544
+								state = 981
 							}
 						}
 						add_core_of = PREV
@@ -20615,7 +20633,6 @@ ABY_descision_category_debug = {
 								is_core_of = UZB
 								is_core_of = ALT
 								is_core_of = SIK
-								state = 652
 								state = 832
 								state = 584
 								state = 405
@@ -20631,6 +20648,13 @@ ABY_descision_category_debug = {
 								state = 330
 								state = 820
 								state = 818
+								state = 819
+								state = 612
+								state = 611
+								state = 615
+								state = 622
+								state = 746
+								state = 283
 							}
 						}
 						add_core_of = PREV

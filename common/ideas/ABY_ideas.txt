@@ -4746,6 +4746,225 @@ ideas = {
 				modifier_army_sub_unit_halo_infantry_defence_factor = 0.1
 			}
 		}
+		ABY_idea_air_new_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				air_cas_present_factor = 0.25
+				air_range_factor = 0.25
+				air_agility_factor = 0.25
+				air_mission_efficiency = 0.25
+				air_weather_penalty = -0.25
+				air_accidents_factor = -0.25
+				air_mission_xp_gain_factor = 0.25
+				air_night_penalty = -0.25
+				army_attack_factor = -0.1
+			}
+		}
+		ABY_idea_air_new_4 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				air_cas_present_factor = 0.1
+				air_mission_efficiency = 0.1
+				air_mission_xp_gain_factor = 0.1
+			}
+		}
+		ABY_idea_air_new_5 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				air_agility_factor = 0.1
+				air_mission_efficiency = 0.1
+				air_mission_xp_gain_factor = 0.1
+			}
+		}
+		ABY_idea_air_new_6 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				air_cas_present_factor = 0.05
+			}
+		}
+		ABY_idea_air_new_7 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				air_range_factor = 0.05
+			}
+		}
+		ABY_idea_air_new_8 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				air_agility_factor = 0.05
+			}
+		}
+		ABY_idea_air_new_9 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				air_accidents_factor = -0.1
+			}
+		}
+		ABY_idea_air_new_10 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				air_weather_penalty = -0.1
+				air_night_penalty = -0.1
+				air_cas_present_factor = 0.05
+			}
+		}
+		ABY_idea_air_new_11 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				air_accidents_factor = -0.25
+			}
+		}
+		ABY_idea_air_new_12 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				air_range_factor = 0.15
+			}
+		}
+		ABY_idea_air_new_13 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				air_weather_penalty = -0.1
+				air_night_penalty = -0.1
+				air_agility_factor = 0.05
+			}
+		}
+		ABY_idea_navy_new_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				navy_org_factor = 0.25
+				navy_max_range_factor = 0.25
+				navy_submarine_attack_factor = 0.25
+				navy_submarine_defence_factor = 0.25
+				navy_screen_attack_factor = 0.25
+				navy_screen_defence_factor = 0.25
+				navy_capital_ship_attack_factor = 0.25
+				navy_capital_ship_defence_factor = 0.25
+			}
+		}
+		ABY_idea_navy_new_3 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				navy_org_factor = 0.05
+				navy_max_range_factor = 0.15
+			}
+		}
+		ABY_idea_navy_new_4 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				navy_org_factor = 0.15
+				navy_max_range_factor = 0.05
+			}
+		}
+		ABY_idea_navy_new_5 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				navy_org_factor = 0.05
+				navy_max_range_factor = 0.1
+			}
+		}
+		ABY_idea_navy_new_6 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				navy_capital_ship_attack_factor = 0.1
+				navy_capital_ship_defence_factor = 0.1
+			}
+		}
+		ABY_idea_navy_new_11 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				navy_submarine_attack_factor = 0.1
+				navy_submarine_defence_factor = 0.1
+			}
+		}
+		ABY_idea_navy_new_12 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				navy_screen_attack_factor = 0.1
+				navy_screen_defence_factor = 0.1
+			}
+		}
+		ABY_idea_navy_new_13 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				navy_org_factor = 0.1
+			}
+		}
 		ABY_idea_army_1 = {
 			allowed_civil_war = {
                 always = yes

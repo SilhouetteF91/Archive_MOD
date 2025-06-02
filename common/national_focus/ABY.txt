@@ -2847,6 +2847,12 @@ focus_tree = {
 				set_variable = { BA_halo_infantry_cap_edit_var = 12 }
 				BA_halo_infantry_cap_edit_effect = yes
 			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_halo_new_6
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2992,6 +2998,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_halo_new_10
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3145,6 +3157,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_air_new_1
+				}
+			}
 			custom_effect_tooltip = ABY_new_tt_2_1
 			hidden_effect = {
 				set_technology = {
@@ -3279,6 +3297,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_air_new_4
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3313,6 +3337,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_air_new_5
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3341,6 +3371,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_air_new_6
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3369,6 +3405,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_air_new_7
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3397,6 +3439,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_air_new_8
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3425,6 +3473,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_air_new_9
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3453,6 +3507,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_air_new_10
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3484,6 +3544,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_air_new_11
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3515,6 +3581,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_air_new_12
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3543,6 +3615,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_air_new_13
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3572,6 +3650,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_navy_new_1
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3631,6 +3715,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_navy_new_3
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3662,6 +3752,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_navy_new_4
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3690,6 +3786,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_navy_new_5
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3718,6 +3820,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_navy_new_6
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3861,6 +3969,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_navy_new_11
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3889,6 +4003,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_navy_new_12
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3917,6 +4037,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_navy_new_13
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -4424,6 +4550,9 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			set_technology = {
+				kivotos_dron_tech = 1
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -4452,6 +4581,9 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			complete_special_project = {
+				project = sp:sp_air_helicopter
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -4486,6 +4618,9 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			set_technology = {
+				drone_special_forces_tech = 1
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -4520,6 +4655,18 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 2
+			}
+			75 = {
+				add_building_construction = {
+					type = air_facility
+					level = 1
+					instant_build = yes    
+					province = 3569 # North of Rome
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -4576,6 +4723,45 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			division_template = {
+				name = "Water Cloud Division"
+				priority = 1
+				division_names_group = ABY_ARM_01
+				is_locked = yes
+				force_allow_recruiting = yes
+
+				regiments = {
+					attack_heli = { x = 0 y = 0 }
+					attack_heli = { x = 0 y = 1 }
+					attack_heli = { x = 0 y = 2 }
+					
+					attack_heli = { x = 1 y = 0 }
+					attack_heli = { x = 1 y = 1 }
+					attack_heli = { x = 1 y = 2 }
+					
+					attack_heli = { x = 2 y = 0 }
+					attack_heli = { x = 2 y = 1 }
+					attack_heli = { x = 2 y = 2 }
+					
+					motorized = { x = 3 y = 0 }
+					motorized = { x = 3 y = 1 }
+					motorized = { x = 3 y = 2 }
+					motorized = { x = 3 y = 3 }
+				}
+				support = {
+					helicopter_recon = { x = 0 y = 0 }
+					helicopter_field_hospital = { x = 0 y = 1 }
+					helicopter_transport = { x = 0 y = 2 }
+					anti_air = { x = 0 y = 3 }
+					maintenance_company = { x = 0 y = 4 }
+				}
+			}
+			75 = {
+				create_unit = {
+					division = "name = \"Water Cloud Division\" division_template = \"Water Cloud Division\" start_experience_factor = 0.3 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -4605,6 +4791,23 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_research_slot = 1
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 1
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 1
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 1
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
