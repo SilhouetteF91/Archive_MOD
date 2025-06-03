@@ -1705,13 +1705,20 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_1
 
 		completion_reward = {
-			
+			remove_ideas = SHA_Austrian_fascist_militia
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_stability = -0.15
+			add_war_support = -0.15
+			add_manpower = -500
 		}
 	}
 	focus = { #평의회 운동 재개
 		id = SHA_communism_focus_3
 		icon = GFX_focus_GER_proletarian_solidarity
-		x = -4
+		x = -3
 		y = 1
 		cost = 5
 
@@ -1726,12 +1733,16 @@ focus_tree = {
 				remove_idea = SHA_austro_marxism
 				add_idea = SHA_austro_marxism_1
 			}
+			country_event = {
+				id = shacom.4
+				days = 2
+			}
 		}
 	}
 	focus = { #대중주의적 조합주의
 		id = SHA_communism_focus_4
 		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
-		x = 0
+		x = -1
 		y = 1
 		cost = 5
 
@@ -1744,6 +1755,10 @@ focus_tree = {
 			focus = SHA_communism_focus_5
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHA_Black_Tortoise_Promenade
+				add_idea = SHA_Black_Tortoise_Promenade_BfG
+			}
 			set_party_name = {
 				ideology = democratic
 				long_name = AUS_democratic_party_long
@@ -1754,12 +1769,17 @@ focus_tree = {
 				long_name = SHA_communism_party_BfG_long
 				name = SHA_communism_party_BfG
 			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			country_event = {
+				id = shacom.5
+				days = 2
+			}
 		}
 	}
 	focus = { #현무상회 좌경화
 		id = SHA_communism_focus_5
 		icon = GFX_focus_GER_strengthen_the_proletarian_international
-		x = 2
+		x = 1
 		y = 1
 		cost = 5
 
@@ -1772,6 +1792,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHA_Black_Tortoise_Promenade
+				add_idea = SHA_Black_Tortoise_Promenade_left
+			}
 			set_party_name = {
 				ideology = democratic
 				long_name = AUS_democratic_party_long

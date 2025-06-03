@@ -588,6 +588,9 @@ characters={
 			}
 			available = {
 				has_completed_focus = SHA_communist_branch
+				SHA_otto_bauer = {
+					is_country_leader = no
+				}
 			}
 			traits = { 
 				AUS_the_father_of_austromarxism 

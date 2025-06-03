@@ -54,6 +54,58 @@ country_event = { #중앙 광장에서의 충돌
 		add_stability = -0.05
 	}
 }
+country_event = { #평의회 운동
+	id = shacom.4
+	title = shacom.4.t
+	desc = shacom.4.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = {
+		name = shacom.4.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_political_power = 20
+	}
+}
+country_event = { #자유조합연대의 새 지도자
+	id = shacom.5
+	title = shacom.5.t
+	desc = shacom.5.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #카야마 레이죠
+		name = shacom.5.a
+		add_country_leader_role = {
+			character = SHA_REIJO
+			promote_leader = yes
+			country_leader = {
+				ideology = war_communism
+				traits = {
+					SHA_red_bonapart_in_sha
+				}
+			}
+		}
+	}
+	option = { #오토 바우어
+		name = shacom.5.b
+		add_country_leader_role = {
+			character = SHA_otto_bauer
+			promote_leader = yes
+			country_leader = {
+				ideology = marxism
+				traits = {
+					AUS_the_father_of_austromarxism
+				}
+			}
+		}
+	}
+}
 
 # 경극부 쿠데타
 country_event = {

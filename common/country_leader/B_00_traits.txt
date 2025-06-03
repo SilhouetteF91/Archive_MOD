@@ -3317,6 +3317,11 @@ leader_traits = {
 		random = no
 		fascism_drift = 0.05
 	}
+	SHA_red_bonapart_in_sha = { #산해경의 붉은 보나파르트
+		random = no
+		war_support_factor = 0.05
+		modifier_army_sub_unit_infantry_attack_factor = 0.05
+	}
 	# 열렬한 보수주의자
 	SHA_ardent_conservative = {
 		random = no
