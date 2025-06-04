@@ -1352,3 +1352,7 @@ MRD = {
 	color = rgb { 211 0 0 }
 	color_ui = rgb { 211 0 0 }
 }
+TWN = {
+	color = rgb { 57  147  23 }
+	color_ui = rgb { 57  147  23 }
+}

@@ -1,0 +1,48 @@
+characters = {
+
+	# 지도자들
+
+	TWN_mahung_mona = {
+		gender = female
+		name = TWN_mahung_mona
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Asia_Generic_female_1"
+			}
+		}
+        country_leader = {
+            ideology = despotism
+			traits={  }
+        }
+	}
+	# 타이완 독립운동가 Mona Rudao의 딸
+
+	TWN_lin_hsien_tang = {
+		name = TWN_lin_hsien_tang
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Asia_Generic_warlord2"
+			}
+		}
+        country_leader = {
+            ideology = conservatism
+			traits={  }
+        }
+	}
+	# https://en.wikipedia.org/wiki/Lin_Hsien-tang
+
+	TWN_chen_yi = {
+		name = TWN_chen_yi
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Asia_Generic_3"
+			}
+		}
+        country_leader = {
+            ideology = fascism_ideology
+			traits={  }
+        }
+	}
+	#https://en.wikipedia.org/wiki/Chen_Yi_(Kuomintang)
+
+}

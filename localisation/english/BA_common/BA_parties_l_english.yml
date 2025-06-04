@@ -484,6 +484,16 @@
  RedWinterSecurityCommittee:0 "붉은겨울 사무국 보안위원회"
  SecurityCommittee:0 "보안위원회"
 
+ TWN_neutrality_party:0 "모나 왕조"
+ TWN_neutrality_party_long:0 "모나 왕조"
+ TWN_fascism_party:0 "타이완자치연합"
+ TWN_fascism_party_long:0 "타이완자치연합"
+ TWN_democratic_party:0 "타이완문화협회"
+ TWN_democratic_party_long:0 "타이완문화협회"
+ TWN_communism_party:0 "타이완 인민당"
+ TWN_communism_party_long:0 "타이완 인민당"
+ #https://en.wikipedia.org/wiki/Taiwanese_People%27s_Party 대만인민당
+ #https://en.wikipedia.org/wiki/Taiwanese_Cultural_Association 타이완문화협회
 
 
 #공용 재구성
