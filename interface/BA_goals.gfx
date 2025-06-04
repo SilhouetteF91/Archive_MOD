@@ -204,6 +204,10 @@ spriteTypes = {
 		name = "GFX_focus_TRN_leading_theory"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_leading_theory.tga"
 	}
+	SpriteType = {
+		name = "GFX_focus_TRN_horseman_of_the_apocalypse"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_horseman_of_the_apocalypse.tga"
+	}
 
 	SpriteType = {
 		name = "GFX_focus_BLM_gang_thugs_war_focus"
@@ -2144,6 +2148,22 @@ spriteTypes = {
 		name = "GFX_focus_SHA_Shanhaijing_pact"
 		texturefile = "gfx/interface/goals/SHA/focus_SHA_Shanhaijing_pact.tga"  
 	}
+	SpriteType = {
+		name = "GFX_focus_SHA_Shanhaijing_fascism"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_Shanhaijing_fascism.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_SHA_fall_of_dragon"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_fall_of_dragon.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_SHA_defeat_kisaki_focus_1"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_defeat_kisaki_focus_1.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_SHA_defeat_mina_focus_1"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_defeat_mina_focus_1.tga"  
+	}
 
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
@@ -2443,6 +2463,10 @@ spriteTypes = {
 	
 	
 	####카이저라이히 돚거
+	SpriteType = { 
+		name = "GFX_goal_socialist_lone_warrior"
+		texturefile = "gfx/interface/goals/thxKRteam/socialist_lone_warrior.tga"  
+	}
 	SpriteType = { 
 		name = "GFX_goal_state_economy"
 		texturefile = "gfx/interface/goals/thxKRteam/state_economy.tga"  
@@ -2794,6 +2818,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/ARI/focus_princess_atsuko.tga"
 	}
 	SpriteType = {
+		name = "GFX_focus_princess_atsuko_2"
+		texturefile = "gfx/interface/goals/ARI/focus_princess_atsuko_2.tga"
+	}
+	SpriteType = {
 		name = "GFX_ARI_anarchy_arius"
 		texturefile = "gfx/interface/goals/ARI/anarchy_arius.dds"
 	}
@@ -2952,6 +2980,21 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_HYA_Kosaka_Wakamo_suspend"
 		textureFile = "gfx/interface/goals/HYA/HYA_Kosaka_Wakamo_suspend.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Hyakkaryouran_head_return"
+		textureFile = "gfx/interface/goals/HYA/HYA_Hyakkaryouran_head_return.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Kokuriko"
+		textureFile = "gfx/interface/goals/HYA/HYA_Kokuriko.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Arata"
+		textureFile = "gfx/interface/goals/HYA/HYA_Arata.tga"
 	}
 
 	#색채
