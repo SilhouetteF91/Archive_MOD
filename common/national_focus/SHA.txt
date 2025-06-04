@@ -1388,7 +1388,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -7
+			x = -8
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -1833,6 +1833,7 @@ focus_tree = {
 			set_politics = {
 				ruling_party = communism
 			}
+			set_cosmetic_tag = SHA_soviet
 		}
 	}
 	focus = { #34년에 대한 복수
@@ -1851,6 +1852,7 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_1
 
 		completion_reward = {
+			set_cosmetic_tag = SHA_soviet
 			set_politics = {
 				ruling_party = communism
 			}
@@ -1883,6 +1885,131 @@ focus_tree = {
 			has_government = communism
 		}
 		relative_position_id = SHA_communism_focus_2
+
+		completion_reward = {
+
+		}
+	}
+	focus = { #국제주의 대오
+		id = SHA_communism_focus_9
+		icon = GFX_focus_generic_join_comintern
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_communism_focus_8 }
+		bypass = { }
+		relative_position_id = SHA_communism_focus_8
+		mutually_exclusive = {
+			focus = SHA_communism_focus_12
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = { #산해경-소련 산업 연계
+		id = SHA_communism_focus_10
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_communism_focus_9 }
+		bypass = { }
+		relative_position_id = SHA_communism_focus_9
+
+		completion_reward = {
+
+		}
+	}
+	focus = { #소련 군사고문단
+		id = SHA_communism_focus_11
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = SHA_communism_focus_9 }
+		bypass = { }
+		relative_position_id = SHA_communism_focus_9
+
+		completion_reward = {
+
+		}
+	}
+	focus = { #주변의 위협
+		id = SHA_communism_focus_12
+		icon = GFX_focus_SWE_the_threat_of_the_iron_curtain
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_communism_focus_8 }
+		bypass = { }
+		relative_position_id = SHA_communism_focus_8
+		mutually_exclusive = {
+			focus = SHA_communism_focus_9
+		}
+
+		completion_reward = {
+
+		}
+	}
+	focus = { #사회 개조
+		id = SHA_communism_focus_13
+		icon = GFX_focus_ARG_women_in_industry
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_communism_focus_12 focus = SHA_communism_focus_9 }
+		bypass = { }
+		relative_position_id = SHA_communism_focus_12
+
+		completion_reward = {
+
+		}
+	}
+	focus = { #생산수단 사회화
+		id = SHA_communism_focus_14
+		icon = GFX_focus_generic_communist_industry
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_communism_focus_13 }
+		bypass = { }
+		relative_position_id = SHA_communism_focus_13
+
+		completion_reward = {
+
+		}
+	}
+	focus = { #경제 계획
+		id = SHA_communism_focus_15
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		x = 3
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_communism_focus_13 }
+		bypass = { }
+		relative_position_id = SHA_communism_focus_13
+
+		completion_reward = {
+
+		}
+	}
+	focus = { #혁명적 고립주의
+		id = SHA_communism_focus_16
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_communism_focus_12 }
+		bypass = { }
+		relative_position_id = SHA_communism_focus_12
 
 		completion_reward = {
 

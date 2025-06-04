@@ -1901,6 +1901,10 @@ HEU_ARU3 = {
 	color = rgb { 227 74 69 }
 	color_ui = rgb { 227 74 69 }
 }
+SHA_soviet = {
+	color = rgb { 230 0 0 }
+	color_ui = rgb { 230 0 0 }
+}
 SHA_color = {
 	color = rgb { 3 192 60 }
 	color_ui = rgb { 3 192 60 }
