@@ -1934,6 +1934,32 @@
  GEH_gehenna_legitimacy_up: "정통성 상승"
  GEH_gehenna_legitimacy_up_desc: "선도부의 치안 경험 상승은, 우리가 게헨나인들에게 더 깊은 신뢰를 받도록 만들었습니다."
 
+ #### 민주주의 아코
+
+ GEH_ako_democratic_system_category: "[ROOT.GetAdjective] 기획부 평의회"
+ GEH_ako_democratic_system_category_desc: "\n[ROOT.GetName] 정부가 기존의 학원국가 체제에서 빠르게 기술관료들에 의한 일반 국가로 변화하고 있습니다. 가장 큰 변화는 정부 내에 §Y제한적인 민주제§!가 도입되었다는 점입니다. §G평의회§!는 기획부원들의 투표로 선출되는 우리의 간선제 의회로, §Y소라사키 히나§! 부장님이 여전히 전권을 가지는 만큼 어디까지나 §Y자문기관§!의 역할을 맡습니다.\n\n우리는 평의회 투표권을 일반 대중들에게 확대하는 것이 불가능합니다. 키보토스계는 대전이 이후 도이칠란트의 소수민족이며, 직접선거의 도입은 민주 투표로 나치를 선출한 도이치인들에게 게헨나를 가져다 바치는 일이 될 것입니다. 그렇기에 평의회는 소규모의 §Y외부 참관인§!을 받는 것 이외에는 기술관료들이 의석을 독점하는 §C통제 민주주의§! 체제로 운영됩니다.\n\n우리의 통제 민주주의 체제 아래에서, 평의회는 §G현지인들의 개§!, §Y중립적 중재자§!, §O게헨나의 지도자§! 중 한 가지의 대중적 평가를 듣게 될 것입니다. 평의회의 시선은 §Y제4차 총회§! 이후 최종적인 중점 트리에 영향을 미치며, 만약 히나 부장이 어떠한 이유로든 내각을 떠난다면, 현지인들에 대한 증오가 평의회를 장악하며 §R균형은 붕괴될 것§!입니다."
+
+ GEH_ako_democratic_system_meeting_with_SPD: "사회민주당과의 접촉 강화"
+ GEH_ako_democratic_system_meeting_with_SPD_desc: "도이칠란트 사회민주당은 [ROOT.GetName] 내에서 정치 권력을 가지고 있지 않지만, 지역 단위에서는 여전히 노동자들과 접촉하며 그들의 요구사항을 우리 정부에 전달하는 역할을 맡습니다. 사회민주당은 현지 정당들 중 유일하게 우리 정부의 통치권을 인정하는 정당이기에 노동자들과의 우호 관계를 위하여 그들과의 접촉을 늘릴 가치는 충분합니다."
+
+ GEH_ako_democratic_system_meeting_with_capitalists: "키보토스계 사교 파티 참가"
+ GEH_ako_democratic_system_meeting_with_capitalists_desc: "키보토스계 수인, 로봇 자본가들과 소시민들은 대전이 이후 소수민족으로 몰리면서 더욱 단결하였으며, 도이치인들과 분리된 자신들만의 정체성을 유지하려 노력하고 있습니다. [ROOT.GetLeader]의 키보토스계 사교 파티 참가는 대전이 이후 분열된 우리의 단결을 가져다 줄 것입니다."
+
+ GEH_ako_democratic_system_constitution: "게헨나 헌법 제정"
+ GEH_ako_democratic_system_constitution_desc: "우리가 게헨나의 통일된 지도자가 됨에 따라, 우리는 한층 나아가 연방공화국의 헌법을 제정할 수 있게 되었습니다."
+
+ GEH_ako_democratic_system_constitution_human_right: "헌법 정신: 인권"
+ GEH_ako_democratic_system_constitution_human_right_desc: "우리의 헌법의 중대한 가치로 '모든 인간의 인권'을 강조합니다. 성별, 인종, 성적 지향, 장애, 민족 그리고 종교로 인한 부당한 차별을 받지 않아야 한다는 점이 헌법 정신으로 강조될 것입니다." #친현지인
+
+ GEH_ako_democratic_system_constitution_esperanto: "헌법 정신: 에스페란토"
+ GEH_ako_democratic_system_constitution_esperanto_desc: "우리의 헌법의 중대한 가치로 '모든 인류 국가와의 소통'을 강조합니다. 에스페란토(지구 국제어)를 헌법에 게헨나의 표준어 중 하나로 등재하고 모든 법률을 에스페란토어로도 등재하도록 하는 것은, 우리가 인류 문명과 그들의 역사를 존중한다는 증표가 됩니다." #친현지인
+
+ GEH_ako_democratic_system_constitution_state_capitalism: "헌법 정신: 국가자본주의"
+ GEH_ako_democratic_system_constitution_state_capitalism_desc: "우리의 헌법의 중대한 가치로 '국가자본주의'를 강조합니다. 모든 경제는 [ROOT.GetLeader]와 충성스러운 기술관료들에 의해 정부 주도로 통제되어야 합니다. 국가가 시장을 통제하는 특수한 자본주의 체제가 헌법 정신으로 강조될 것입니다." #친키보토스
+
+ GEH_ako_democratic_system_constitution_state_internationalism: "헌법 정신: 학원간 연대"
+ GEH_ako_democratic_system_constitution_state_internationalism_desc: "우리의 헌법의 중대한 가치로 '학원간 연대'를 강조합니다. 게헨나만이 아니라 트리니티, 밀레니엄, 산해경, 붉은겨울 등 모든 키보토스 국가들과의 연대를 통해 지구에서 생존해야 한다는 점이 헌법 정신으로 강조될 것입니다." #친키보토스
+
  ## 툴팁
  GEH_benriya_dominate_tt: "우리가 §Y흥신소 68§!을 병합한 §Y최초의 국가§!일 경우, 이벤트로 중점이 개방됩니다."
  GEH_robot_hina_route_tt: "실종된 소라사키 히나를 대체하기 위하여, 우리는 §Y인공지능§!을 이용한 오토마타 히나를 제작하여, 그녀가 실종되었었다는 사실 자체를 친위대 소수 외에 그 누구도 알지 못하게 할 것입니다."
@@ -1951,6 +1977,15 @@
  GEH_denazification_tt: "만마전이 §Y$GEM_accept_local_ideology$§! 중점을 완료할 경우 만마전의 §Y$GEM_geh_leadership$§! 국민정신이 삭제됩니다."
  GEH_if_iroha_leader_tt: "만약 선도부장이 §Y이로하§!일 경우:\n"
  GEH_if_kayoko_leader_tt: "만약 선도부장이 §Y카요코§!일 경우:\n"
+
+ GEH_ako_amau_leader_text_tt: "§g게헨나 평의회와 아마우 아코 선임행정관에 대한 대중들의 인식은 [GEH_ako_democratic_loc] ([?GEH_ako_democratic_var]) 입니다.§!"
+ GEH_ako_amau_leader_text_tt_delayed: "§Y참고:§!§g대중들의 인식은 4차 총회가 완성된 순간 더 이상 변화하지 않습니다.§!"
+
+ GEH_ako_democratic_system_constitution_tt: "연방공화국 헌법을 제정하기 위한 새로운 결정들이 등장합니다. 여러 결정들 중 새 헌법의 가장 중요한 가치 §Y3개§!를 선택할 수 있습니다."
+
+ GEH_ako_democratic_loc_pro_kivotos: "게헨나의 지도자"
+ GEH_ako_democratic_loc_pro_german: "현지인들의 개"
+ GEH_ako_democratic_loc_neutral: "중립적 중재자"
 
  # 커스텀 패스
 
