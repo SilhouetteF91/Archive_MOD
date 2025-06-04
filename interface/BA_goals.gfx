@@ -2164,6 +2164,10 @@ spriteTypes = {
 		name = "GFX_focus_SHA_defeat_mina_focus_1"
 		texturefile = "gfx/interface/goals/SHA/focus_SHA_defeat_mina_focus_1.tga"  
 	}
+	SpriteType = {
+		name = "GFX_focus_SHA_defeat_kisaki_focus_3"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_defeat_kisaki_focus_3.tga"  
+	}
 
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"

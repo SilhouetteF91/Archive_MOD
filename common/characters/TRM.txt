@@ -597,8 +597,8 @@ characters={
 				if = {
 					limit = {
 						owner = { 
-							has_government = fascism 
-							NOT = { has_completed_focus = TRN_ministry_of_industrial_development }
+							has_government = fascism
+							has_focus_tree = TRM_focus_tree
 						}
 					}
 					owner = {

@@ -1514,6 +1514,14 @@ ideas = {
 				conscription = 0.01
 			}
 		}
+		# 찻잎 수출
+		SHA_tea_leaf_export_ns = {
+			picture = BRA_departamento_nacional_do_cafe
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.01
+			}
+		}
 
 
 

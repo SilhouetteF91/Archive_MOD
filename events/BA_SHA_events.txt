@@ -2,6 +2,7 @@ add_namespace = shafas
 add_namespace = shadem
 add_namespace = shafla
 add_namespace = shacom
+add_namespace = shadip
 add_namespace = shanews
 
 country_event = { #오스트로 맑시즘
@@ -186,6 +187,9 @@ country_event = {
 			ideology = fascism
 			long_name = SHA_Radical_party_long
 			name = SHA_Radical_party
+		}
+		hidden_effect = {
+			country_event = { id = shafas.17 days = 03 }
 		}
 	}
 }
@@ -505,6 +509,35 @@ country_event = {
 	}
 }
 
+# 급진파 민병대
+country_event = {
+	id = shafas.17
+	title = shafas.17.t
+	desc = shafas.17.d
+	picture = GFX_report_event_generic_communist_militia
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.17.a
+		add_stability = 0.03
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.03
+		}
+
+	}
+
+	option = {
+		name = shafas.17.b
+		add_stability = -0.03
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+}
+
 #  
 country_event = {
 	id = shafas.20
@@ -527,32 +560,40 @@ country_event = {
 	title = shafas.21.t
 	desc = {
         text = shafas.21.d
-        trigger = { has_completed_focus = SHA_Kaguya_ousted }
+        trigger = { has_government = fascism }
 	}
 	desc = {
         text = shafas.21.d_2
-        trigger = { has_completed_focus = SHA_conservative_revolution }
+        trigger = { 
+			SHA_KAGUYA = { is_hired_as_advisor = yes }
+		}
 	}
 	picture = GFX_report_event_communist_leader
 
     is_triggered_only = yes
 
 	option = { # 카구야 축출 중점 완료시
-		name = shafas.21.b
-		trigger = { has_completed_focus = SHA_Kaguya_ousted }
+		name = shafas.21.a
+		trigger = { has_government = fascism }
 
 		hidden_effect = {
 			country_event = { id = shafas.22 days = 01 }
 		}
-		remove_ideas = {
-			SHA_supreme_economic_council
-			SHA_supreme_economic_council_2
-			SHA_supreme_economic_council_3
+		effect_tooltip = {
+			remove_ideas = SHA_supreme_economic_council
+			remove_ideas = SHA_ASFTU
 		}
-		remove_ideas = {
-			SHA_ASFTU
-			SHA_ASFTU_2
-			SHA_ASFTU_3
+		hidden_effect = {
+			remove_ideas = {
+				SHA_supreme_economic_council
+				SHA_supreme_economic_council_2
+				SHA_supreme_economic_council_3
+			}
+			remove_ideas = {
+				SHA_ASFTU
+				SHA_ASFTU_2
+				SHA_ASFTU_3
+			}
 		}
 		remove_dynamic_modifier = { modifier = SHA_Shanhaijinfascism }
 		if = {
@@ -577,7 +618,9 @@ country_event = {
 
 	option = { # 보수 혁명 중점 완료시
 		name = shafas.21.b
-		trigger = { has_completed_focus = SHA_conservative_revolution }
+		trigger = {
+			SHA_KAGUYA = { is_hired_as_advisor = yes }
+		}
 		#custom_effect_tooltip = remove_political_advisor
 		#show_ideas_tooltip = SHA_KAGUYA_political_advisor
 		if = {
@@ -999,6 +1042,96 @@ news_event = {
 			NOT = { Kivotos_tag = yes }
 		}
 		effect_tooltip = { add_threat = 3 }
+	}
+}
+
+# 찻잎 수출
+country_event = {
+	id = shadip.1
+	title = shadip.1.t
+	desc = shadip.1.desc
+	picture = GFX_report_event_kisaki
+
+    is_triggered_only = yes
+
+	option = { # 수락
+		name = shadip.1.a
+		ai_chance = {
+			factor = 100
+		}
+		add_timed_idea = {
+			idea = SHA_tea_leaf_export_ns
+			days = 180
+		}
+		effect_tooltip = {
+			SHA = {
+				random_owned_state = {
+					limit = { is_core_of = SHA }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			SHA = { country_event = { id = shadip.2 hours = 02 } }
+		}
+	}
+	option = {
+		name = shadip.1.b
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			SHA = {
+				country_event = { id = shadip.3 hours = 02 }
+			}
+		}
+		
+	}
+}
+
+# 찻잎 수출 - 수락
+country_event = {
+	id = shadip.2
+	title = shadip.2.t
+	desc = shadip.2.desc
+	picture = GFX_report_event_kisaki
+
+    is_triggered_only = yes
+
+	option = { # 
+		name = shadip.2.a 
+		random_owned_state = {
+			limit = { is_core_of = SHA }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+# 찻잎 수출 - 거부
+country_event = {
+	id = shadip.3
+	title = shadip.3.t
+	desc = shadip.3.desc
+	picture = GFX_report_event_kisaki
+
+    is_triggered_only = yes
+
+	option = { # 
+		name = shadip.3.a 
+		add_opinion_modifier = {
+			modifier = NOR_rejected_our_offer
+			target = TRM
+		}
 	}
 }
 

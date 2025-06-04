@@ -68,7 +68,6 @@ SHA_historical = {
 		SHA_Leave_SHA
 		SHA_the_third_kivotos
 
-		SHA_Diplomacy_with_ITA
 	}
 
 	weight = {

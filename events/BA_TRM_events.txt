@@ -8674,7 +8674,7 @@ country_event = { # 바시스 스콜라 시위
 		ai_chance = {
 			base = 100
 		}
-		set_temp_variable = { TRN_Honor_change = 3 }
+		set_temp_variable = { TRN_Honor_change = 1 }
 		TRN_add_Honor = yes
 		add_popularity = {
 			ideology = fascism
@@ -9138,6 +9138,8 @@ unit_leader_event = { # 기사단국 선포
 		# 나중에 중점으로 옮겨야 함
 		activate_targeted_decision = { decision = TRN_honor_populist_policies target = TRM }
 		activate_targeted_decision = { decision = TRN_honor_clean_up_corruption target = TRM }
+		activate_targeted_decision = { decision = TRN_honor_social_change target = TRM }
+		activate_targeted_decision = { decision = TRN_honor_spread_of_militarism target = TRM }
 		# 나중에 중점으로 옮겨야 함
     }
 }
@@ -9383,11 +9385,14 @@ country_event = { # 전당 대회 - 2
 		hidden_effect = {
 			country_event = { id = trinity.26 days = 03 }
 		}
+
+		activate_targeted_decision = { decision = TRN_honor_protection_of_the_Jewish_community target = TRM }
+		# 유대인 공동체 보호
 		
 	}
 	option = {
 		name = trinitypartyconvention.3.b
-		set_temp_variable = { TRN_Honor_change = -7 }
+		set_temp_variable = { TRN_Honor_change = -5 }
 		TRN_add_Honor = yes
 		add_power_balance_value = {
 			id = TRM_power_balance

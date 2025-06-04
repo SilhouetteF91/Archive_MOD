@@ -527,9 +527,7 @@ characters={
 			available = {
 				has_completed_focus = SHA_courting_the_princess_of_industry
 			}
-			visible = {
-				has_completed_focus = SHA_courting_the_princess_of_industry
-			}
+			visible = { }
 			traits = { 
 				AUS_resourceful_princess
 			}
