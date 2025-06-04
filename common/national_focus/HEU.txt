@@ -8559,8 +8559,15 @@ focus_tree = {
 			create_navy_leader = {
 				skill = 3
 				female = yes
-				traits = { }
+				portrait_path = GFX_Portrait_BlueArchive_KSP_Generic_2
+				traits = { spotter bold }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 4
+				maneuvering_skill = 3
+				coordination_skill = 2
 			}
+			
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 2
