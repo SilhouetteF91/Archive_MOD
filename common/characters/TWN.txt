@@ -7,7 +7,7 @@ characters = {
 		name = TWN_mahung_mona
 		portraits = {
 			civilian = {
-				large = "GFX_Portrait_Asia_Generic_female_1"
+				large = "gfx/leaders/asia/Portrait_Asia_Generic_female_1.dds"
 			}
 		}
         country_leader = {
