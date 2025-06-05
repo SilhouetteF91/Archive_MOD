@@ -2972,6 +2972,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			owns_state = 61
 			NOT = { country_exists = KPD }
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 		}
 		available = { owns_state = 61 }
 
@@ -2988,6 +2989,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			owns_state = 66
 			NOT = { country_exists = NSD }
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 		}
 		available = { owns_state = 66 }
 		
@@ -4367,7 +4369,7 @@ TRN_after_war_decisions = {
 		}
 
 		fire_only_once = no
-		days_remove = 90
+		days_remove = 70
 		cost = 25
 		ai_will_do = {
 			base = 10
@@ -4391,7 +4393,7 @@ TRN_after_war_decisions = {
 						is_core_of = GEH
 					}
 				}
-				add_resistance = -5
+				add_resistance = -10
 			}
 		}
 		remove_effect = {
@@ -4420,19 +4422,39 @@ TRN_after_war_decisions = {
 		modifier = {
 		}
 		complete_effect = {
-			every_owned_state = {
-				limit = {
-					has_resistance = yes
-					OR = {
-						is_core_of = GEM
-						is_core_of = GEH
-					}
-				}
-				add_compliance = -5
-			}
+
 		}
 		remove_effect = {
 			remove_ideas = TRN_gehenna_clup_resistance_ns
+		}
+	}
+	
+	TRN_destroy_partisans = {
+		allowed = { always = no }
+
+		icon = GFX_decision_generic_arrest
+
+		available = {
+			NOT = { has_idea = TRM_anti_gehenna_idea }
+		}
+		visible = {
+
+		}
+
+		fire_only_once = yes
+		cost = 35
+		ai_will_do = {
+			base = 999
+		}
+		modifier = {
+		}
+		complete_effect = {
+			add_timed_idea = {
+				idea = TRM_anti_partisan_guard_ns
+				days = 730
+			}
+		}
+		remove_effect = {
 		}
 	}
 	
@@ -4589,10 +4611,11 @@ TRN_after_war_decisions = {
 			}
 		}
 		modifier = {
-			stability_weekly = -0.01
+			stability_weekly = -0.005
 		}
 		remove_effect = {
 			remove_ideas = TRM_anti_gehenna_idea
+			activate_targeted_decision = { decision = TRN_destroy_partisans target = TRM }
 		}
 	}
 
@@ -4760,6 +4783,7 @@ TRN_after_war_decisions = {
 					NOT = { has_country_flag = TRN_actived_club_ns } 
 				}
 				add_ideas = TRN_gehenna_clup_resistance_ns
+				country_event = { id = trinity.43 days = 01 }
 				set_country_flag = TRN_actived_club_ns
 			}
 			hidden_effect = {
@@ -4857,6 +4881,12 @@ TRN_after_war_decisions = {
         modifier = { }
         complete_effect = {
 			remove_mission = TRM_loop_Gehenna_Resistance
+			every_owned_state = {
+				limit = {
+					has_dynamic_modifier = { modifier = TRM_Military_occupation }
+				}
+				remove_dynamic_modifier = { modifier = TRM_Military_occupation }
+			}
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -7212,7 +7242,7 @@ TRN_Mika_honor_decision_cat = {
 		ai_will_do = { base = 0 }
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = -2 }
+			set_temp_variable = { TRN_Honor_change = -4 }
 			TRN_add_Honor = yes
 
 			add_war_support = 0.02
@@ -7224,7 +7254,31 @@ TRN_Mika_honor_decision_cat = {
        		add_power_balance_value = {
        		    id = TRM_power_balance
        		    value = 0.02
-       		    tooltip_side = TRM_tirinty_socialism
+       		    tooltip_side = TRM_tirinty_nazism
+       		}
+		}
+	}
+
+	TRN_honor_technocrat = {
+		icon = GFX_decision_generic_research
+
+		allowed = { always = no } #activated by effect
+
+		cost = 10
+		days_remove = 90
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		ai_will_do = { base = 0 }
+
+		complete_effect = {
+			add_political_power = 75
+
+       		add_power_balance_value = {
+       		    id = TRM_power_balance
+       		    value = 0.02
+       		    tooltip_side = TRM_tirinty_nazism
        		}
 		}
 	}
@@ -7709,6 +7763,7 @@ TRN_economic_decisions_category = {
 		}
 
 		remove_effect = {
+			hidden_effect = { country_event = trnfla.21}
 			FROM = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {

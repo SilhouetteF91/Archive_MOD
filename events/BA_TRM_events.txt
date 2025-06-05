@@ -9135,12 +9135,6 @@ unit_leader_event = { # 기사단국 선포
 
 	option = {
 		name = trinity.20.a
-		# 나중에 중점으로 옮겨야 함
-		activate_targeted_decision = { decision = TRN_honor_populist_policies target = TRM }
-		activate_targeted_decision = { decision = TRN_honor_clean_up_corruption target = TRM }
-		activate_targeted_decision = { decision = TRN_honor_social_change target = TRM }
-		activate_targeted_decision = { decision = TRN_honor_spread_of_militarism target = TRM }
-		# 나중에 중점으로 옮겨야 함
     }
 }
 country_event = { # 트리니티 의용군단
@@ -9998,6 +9992,42 @@ country_event = { #게헨나 항복 이벤트
 	}
 }
 
+country_event = { # 게헨나 동아리 문제
+	id = trinity.43
+	title = trinity.43.t
+	desc = trinity.43.desc
+	picture = GFX_event_Trinity_Campus
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = trinity.43.a
+		effect_tooltip = { add_ideas = TRN_gehenna_clup_resistance_ns }
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			damage_building = {
+				type = industrial_complex
+				damage = 0.7
+			}
+		}
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			damage_building = {
+				type = industrial_complex
+				damage = 0.7
+			}
+		}
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			damage_building = {
+				type = industrial_complex
+				damage = 0.7
+			}
+		}
+	}
+}
+
 country_event = {
 	id = trnhonor.0
 	title = trnhonor.0.t
@@ -10753,6 +10783,21 @@ country_event = { # 다도부가 예산 깎이니 빡쳐서 학교 수영장에 
 
 	option = {
 		name = trnfla.20.a 
+		
+	}
+}
+country_event = { # 방디부가 디저트 먹는거
+	id = trnfla.21
+	title = trnfla.21.t
+	desc = trnfla.21.desc
+	picture = GFX_report_event_ive_alive_2
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnfla.21.a 
+		
 	}
 }
 

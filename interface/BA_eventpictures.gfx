@@ -674,6 +674,18 @@ spriteTypes = {
        texturefile = "gfx/event_pictures/TRM/Trinity_Hospital.tga"
     }
     spriteType = {
+     	name = "GFX_report_event_ive_alive"
+     	texturefile = "gfx/event_pictures/report_event_ive_alive.tga"
+    }
+    spriteType = {
+     	name = "GFX_report_event_ive_alive_2"
+     	texturefile = "gfx/event_pictures/report_event_ive_alive_2.tga"
+    }
+    spriteType = {
+     	name = "GFX_report_event_ive_alive_3"
+     	texturefile = "gfx/event_pictures/report_event_ive_alive_3.tga"
+    }
+    spriteType = {
       name = "GFX_event_BA_Poland_Flag"
        texturefile = "gfx/event_pictures/Poland_Flag.tga"
     } 

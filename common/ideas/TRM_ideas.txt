@@ -1489,5 +1489,16 @@ ideas = {
 				global_building_slots_factor = 0.1
 			}
 		}
+		TRM_anti_partisan_guard_ns = {
+			picture = MEX_politicised_army
+			modifier = {
+				command_power_gain = 0.4
+				conscription_factor = -0.05
+				resistance_garrison_penetration_chance = -0.5
+				resistance_decay = 0.25
+				resistance_target = -0.1
+				root_out_resistance_effectiveness_factor = 0.33
+			}
+		}
 	}
 }

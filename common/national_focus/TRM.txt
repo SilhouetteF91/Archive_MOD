@@ -7124,7 +7124,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_cosmetic_tag = TRINITY_REICH
-			set_country_flag = TRN_mika_honor_activate
 			if = {
 				limit = { has_idea = TRN_broken_balance_ns }
 				remove_ideas = TRN_broken_balance_ns
@@ -7161,7 +7160,13 @@ focus_tree = {
 				country_event = { id = trinity.36 days = 200 } # 안보 상황
 				country_event = { id = trinity.37 days = 140 } # 소규모 동아리들의 운명
 			}
+			set_country_flag = TRN_mika_honor_activate
 			unlock_decision_category_tooltip = TRN_Mika_honor_decision_cat
+			activate_targeted_decision = { decision = TRN_honor_populist_policies target = TRM }
+			activate_targeted_decision = { decision = TRN_honor_clean_up_corruption target = TRM }
+			activate_targeted_decision = { decision = TRN_honor_social_change target = TRM }
+			activate_targeted_decision = { decision = TRN_honor_spread_of_militarism target = TRM }
+			activate_targeted_decision = { decision = TRN_honor_technocrat target = TRM }
 		}
 	}
 
@@ -8234,33 +8239,10 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 남부 외교 - 산해경 지지하기
-		id = TRN_support_SHA
-		icon = GFX_focus_chi_mission_to_the_SHA
-		x = -1
-		y = 1
-		relative_position_id = TRN_southern_kivotos_dip
-		cost = 5
-
-		available = {
-			has_government = fascism
-			SHA = { has_government = TRM }
-		}
-		prerequisite = { focus = TRN_southern_kivotos_dip }
-		mutually_exclusive = { focus = TRN_support_HYA }
-
-		ai_will_do = {
-
-		}
-		completion_reward = {
-
-		}
-	}
-
 	focus = { # 남부 외교 - 백귀야행 지지
 		id = TRN_support_HYA
 		icon = GFX_focus_chi_mission_to_the_HYA
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = TRN_southern_kivotos_dip
 		cost = 5
@@ -8268,12 +8250,9 @@ focus_tree = {
 		available = {
 			HYA = {
 				NOT = { has_government = communism }
-				NOT = { has_government = fascism }
 			}
-
 		}
 		prerequisite = { focus = TRN_southern_kivotos_dip }
-		mutually_exclusive = { focus = TRN_support_SHA }
 
 		ai_will_do = {
 
@@ -8286,9 +8265,9 @@ focus_tree = {
 	focus = { # 헝가리 확보
 		id = TRN_secure_hungary
 		icon = GFX_focus_generic_attack_hungary
-		x = -1
+		x = -2
 		y = 1
-		relative_position_id = TRN_support_SHA
+		relative_position_id = TRN_support_HYA
 		cost = 4
 
 		available = {
@@ -8300,7 +8279,6 @@ focus_tree = {
 		}
 		prerequisite = { 
 			focus = TRN_support_HYA 
-			focus = TRN_support_SHA
 		}
 		#mutually_exclusive = { focus = TRN_support_SHA }
 
@@ -8320,7 +8298,7 @@ focus_tree = {
 	focus = { # 루마니아 유전 지대 확보
 		id = TRN_securing_romanian_oil
 		icon = GFX_focus_generic_attack_romania
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = TRN_support_HYA
 		cost = 4
@@ -8337,7 +8315,6 @@ focus_tree = {
 		}
 		prerequisite = { 
 			focus = TRN_support_HYA 
-			focus = TRN_support_SHA
 		}
 
 		ai_will_do = {

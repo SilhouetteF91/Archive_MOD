@@ -1132,6 +1132,7 @@ on_actions = {
 				if = { ## 
 					limit = {
 						TRM = { 
+							has_focus_tree = TRM_focus_tree
 							has_country_leader = {
 								character = TRN_alzk
 								ruling_only = yes
