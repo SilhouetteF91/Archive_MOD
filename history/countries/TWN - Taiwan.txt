@@ -7,6 +7,10 @@ set_technology = {
 	infantry_weapons = 1
 }
 
+add_ideas = {
+	TWN_right_of_resistance_idea
+}
+
 set_convoys = 10
 
 set_politics = {
