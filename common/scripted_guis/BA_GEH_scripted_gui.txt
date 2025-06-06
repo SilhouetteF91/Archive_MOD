@@ -24,5 +24,9 @@ scripted_gui = {
 			}
 		}
 	}
+	GEH_ako_democratic_system_gui = {
+		context_type = decision_category
+		window_name = "GEH_ako_democratic_gui_window"
+	}
 
 }
