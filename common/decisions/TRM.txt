@@ -2962,42 +2962,6 @@ TRN_country_collapse_decisions = {
 			}
 		}
 	}
-
-	
-	TRM_add_core_of_state_61 = { #
-		icon = GFX_decision_generic_police_action
-		allowed = { original_tag = TRM }
-		priority = 999
-
-		visible = {
-			owns_state = 61
-			NOT = { country_exists = KPD }
-			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
-		}
-		available = { owns_state = 61 }
-
-		ai_will_do = { factor = 999 }
-		fire_only_once = yes
-
-		complete_effect = { add_state_core = 61 }
-	}
-	TRM_add_core_of_state_65 = { #
-		icon = GFX_decision_generic_police_action
-		allowed = { original_tag = TRM }
-		priority = 999
-
-		visible = {
-			owns_state = 66
-			NOT = { country_exists = NSD }
-			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
-		}
-		available = { owns_state = 66 }
-		
-		ai_will_do = { factor = 999 }
-		fire_only_once = yes
-
-		complete_effect = { add_state_core = 66 }
-	}
 }
 TRN_internal_factions_categories = {
 	#디버그
@@ -4293,7 +4257,7 @@ TRN_after_war_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			base = 1000
+			factor = 1000
 		}
         modifier = { civilian_factory_use = 3 }
         complete_effect = {
@@ -4319,7 +4283,7 @@ TRN_after_war_decisions = {
 		}
 	}
 
-	TRM_GMCA_transfer = {
+	TRM_GMCA_transfer = { # 군정에게 이양
 		
 		icon = GFX_decision_SWE_set_army_budget
 		
@@ -4356,7 +4320,7 @@ TRN_after_war_decisions = {
 		}
 	}
 	
-	TRM_raid_gehenna_resistance = {
+	TRM_raid_gehenna_resistance = { # 게헨나 저항군 체포
 		allowed = { always = no }
 
 		icon = GFX_decision_generic_arrest
@@ -4369,7 +4333,7 @@ TRN_after_war_decisions = {
 		}
 
 		fire_only_once = no
-		days_remove = 70
+		days_remove = 100
 		cost = 25
 		ai_will_do = {
 			base = 10
@@ -4401,7 +4365,7 @@ TRN_after_war_decisions = {
 		}
 	}
 	
-	TRM_eradicate_club_resistance = {
+	TRM_eradicate_club_resistance = { #게헨나 동아리 금지
 		allowed = { always = no }
 
 		icon = GFX_decision_generic_arrest
@@ -4429,7 +4393,7 @@ TRN_after_war_decisions = {
 		}
 	}
 	
-	TRN_destroy_partisans = {
+	TRN_destroy_partisans = { # 유격전
 		allowed = { always = no }
 
 		icon = GFX_decision_generic_arrest
@@ -4442,7 +4406,7 @@ TRN_after_war_decisions = {
 		}
 
 		fire_only_once = yes
-		cost = 35
+		cost = 21
 		ai_will_do = {
 			base = 999
 		}
@@ -4458,7 +4422,7 @@ TRN_after_war_decisions = {
 		}
 	}
 	
-	TRM_tighten_control = {
+	TRM_tighten_control = { # 통제 강화
 		allowed = { always = no }
 
 		icon = infiltrate_state
@@ -4549,7 +4513,7 @@ TRN_after_war_decisions = {
 		}
 	}
 	
-	TRM_unification_propaganda = {
+	TRM_unification_propaganda = { # 통합 선전
 		allowed = { always = no }
 
 		icon = GFX_decision_eng_propaganda_campaigns
@@ -4570,7 +4534,20 @@ TRN_after_war_decisions = {
 		days_remove = TRM_unification_propaganda_remove
 		days_re_enable = TRM_unification_propaganda_re_enable
 		ai_will_do = {
-			factor = 2
+			factor = 1
+			modifier = {
+				factor = 200
+				NOT = {
+					any_state = {
+						OR = {
+							has_dynamic_modifier = { modifier = TRM_anti_geh_emotion }
+							has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_2 }
+							has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_3 }
+							has_dynamic_modifier = { modifier = TRM_anti_geh_emotion_4 }
+						}
+					}
+				}
+			}
 		}
 		modifier = {
 			political_power_gain = -0.1
@@ -4580,7 +4557,7 @@ TRN_after_war_decisions = {
 				limit = { is_core_of = GEM }
 				add_dynamic_modifier = {
 					modifier = unity_propaganda
-					days = 90
+					days = 120
 				}
 			}
 			custom_effect_tooltip = TRM_unification_propaganda_tt 
@@ -4588,7 +4565,7 @@ TRN_after_war_decisions = {
 		}
 	}
 	
-	TRM_Decline_of_the_anti_gehenna_sentiment = {
+	TRM_Decline_of_the_anti_gehenna_sentiment = { # 반 게헨나 정서 파괴
 		allowed = { always = no }
 
 		icon = GFX_decision_oppression
@@ -4603,11 +4580,10 @@ TRN_after_war_decisions = {
 		fire_only_once = yes
 		days_remove = 180
 		ai_will_do = {
-			factor = 1
+			base = 40
 			modifier = {
-				factor = 1000
-				has_stability > 71
-				has_political_power > 49
+				factor = 100
+				has_idea = TRM_anti_gehenna_idea
 			}
 		}
 		modifier = {
@@ -4860,11 +4836,8 @@ TRN_after_war_decisions = {
 			NOT = { has_idea = TRM_anti_gehenna_idea }
 			GEM = {
 				all_core_state = {
-					OR = {
-						compliance > 75
-						resistance < 5
-						is_core_of = TRM
-					}
+					compliance > 75
+					resistance < 6
 				}
 			}
 		}
@@ -7407,10 +7380,7 @@ TRN_economic_decisions_category = {
 			factor = 20
 			modifier = {
 				factor = 0
-				OR = {
-					has_political_power < 250
-					check_variable = { TRN_completed_industrial_decisions < 5 }
-				}
+				has_political_power < 300
 			}
 		}
 		remove_effect = {
@@ -7453,10 +7423,7 @@ TRN_economic_decisions_category = {
 			factor = 20
 			modifier = {
 				factor = 0
-				OR = {
-					has_political_power < 250
-					check_variable = { TRN_completed_industrial_decisions < 5 }
-				}
+				has_political_power < 300
 			}
 		}
 
@@ -7503,8 +7470,8 @@ TRN_economic_decisions_category = {
 		ai_will_do = {
 			base = 40
 			modifier = {
-				factor = 10
-				check_variable = { TRN_completed_industrial_decisions < 6 }
+				factor = 0
+				has_political_power < 300
 			}
 		}
 
@@ -7558,12 +7525,8 @@ TRN_economic_decisions_category = {
 		ai_will_do = {
 			base = 40
 			modifier = {
-				factor = 10
-				check_variable = { TRN_completed_industrial_decisions < 6 }
-			}
-			modifier = {
 				factor = 0
-				check_variable = { TRN_completed_industrial_decisions > 5 }
+				has_political_power < 300
 			}
 		}
 
@@ -7605,12 +7568,8 @@ TRN_economic_decisions_category = {
 		ai_will_do = {
 			base = 40
 			modifier = {
-				factor = 10
-				check_variable = { TRN_completed_industrial_decisions < 6 }
-			}
-			modifier = {
 				factor = 0
-				check_variable = { TRN_completed_industrial_decisions > 5 }
+				has_political_power < 300
 			}
 		}
 
@@ -7656,12 +7615,8 @@ TRN_economic_decisions_category = {
 		ai_will_do = {
 			base = 40
 			modifier = {
-				factor = 10
-				check_variable = { TRN_completed_industrial_decisions < 6 }
-			}
-			modifier = {
 				factor = 0
-				check_variable = { TRN_completed_industrial_decisions > 5 }
+				has_political_power < 300
 			}
 		}
 

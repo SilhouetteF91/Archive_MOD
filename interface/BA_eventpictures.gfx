@@ -292,6 +292,10 @@ spriteTypes = {
   
     ##공용 
 	spriteType = {
+		name = "GFX_report_event_trinity_student"
+		texturefile = "gfx/event_pictures/report_event_trinity_student.tga"
+	}
+	spriteType = {
 		name = "GFX_report_event_generic_city"
 		texturefile = "gfx/event_pictures/report_event_generic_city.png"
 	}

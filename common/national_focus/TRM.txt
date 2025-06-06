@@ -1631,6 +1631,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_state_core = 66 
+			add_state_core = 61
 			every_state = {
 				limit = { 
 					BA_is_GER_core = yes 
@@ -3222,6 +3224,8 @@ focus_tree = {
 			add_manpower = 50000
 			add_stability = -0.05
 			country_event = { id = TRM_event.365 hours = 8 }
+			add_state_core = 66 
+			add_state_core = 61
 		}
 	}
 
@@ -6677,11 +6681,11 @@ focus_tree = {
 				set_variable = { TRN_completed_industrial_decisions = 0 }
 			}
 			add_to_variable = {
-				global.NSD_country_collapse_decisions_value = -7
+				global.NSD_country_collapse_decisions_value = -5
 				tooltip = NSD_country_collapse_value_tt
 			}
 			add_to_variable = {
-				global.KPD_country_collapse_decisions_value = -7
+				global.KPD_country_collapse_decisions_value = -10
 				tooltip = KPD_country_collapse_value_tt
 			}
 			hidden_effect = {
@@ -6849,6 +6853,9 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			add_state_core = 66 
+			add_state_core = 61
+
 			activate_targeted_decision = { target = 65 decision = TRN_Infrastructure_Development } # 작센
 			activate_targeted_decision = { target = 60 decision = TRN_Infrastructure_Development } # 튀링겐
 			activate_targeted_decision = { target = 64 decision = TRN_Infrastructure_Development } # 브란덴부르크
@@ -6938,6 +6945,9 @@ focus_tree = {
 				bonus = 0.5
 				uses = 2
 				category = electronics
+			}
+			hidden_effect = {
+				country_event = trnfla.22
 			}
 
 		}
@@ -7156,9 +7166,9 @@ focus_tree = {
 				BA_ban_neutrality_effect = yes
 
 				country_event = { id = trinity.35 days = 30 } # 보안국 재편
+				country_event = { id = trinity.37 days = 150 } # 소규모 동아리들의 운명
+				country_event = { id = trinity.36 days = 210 } # 안보 상황
 				country_event = { id = trnfla.12 days = 365 } # 세이아 음모론
-				country_event = { id = trinity.36 days = 200 } # 안보 상황
-				country_event = { id = trinity.37 days = 140 } # 소규모 동아리들의 운명
 			}
 			set_country_flag = TRN_mika_honor_activate
 			unlock_decision_category_tooltip = TRN_Mika_honor_decision_cat
@@ -7515,7 +7525,7 @@ focus_tree = {
 			}
 			country_event = trinity.34 
 			hidden_effect = {
-				country_event = { id = trinity.38 days = 35 }
+				country_event = { id = trinity.38 days = 25 }
 			}
 		}
 	}
@@ -8242,7 +8252,7 @@ focus_tree = {
 	focus = { # 남부 외교 - 백귀야행 지지
 		id = TRN_support_HYA
 		icon = GFX_focus_chi_mission_to_the_HYA
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = TRN_southern_kivotos_dip
 		cost = 5
@@ -8262,12 +8272,33 @@ focus_tree = {
 		}
 	}
 
+	focus = { # 슬로바키아의 운명
+		id = TRN_fate_of_slovakia
+		icon = GFX_focus_generic_attack_slovakia
+		x = 1
+		y = 1
+		relative_position_id = TRN_southern_kivotos_dip
+		cost = 5
+
+		available = {
+
+		}
+		prerequisite = { focus = TRN_southern_kivotos_dip }
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
 	focus = { # 헝가리 확보
 		id = TRN_secure_hungary
 		icon = GFX_focus_generic_attack_hungary
-		x = -2
+		x = -3
 		y = 1
-		relative_position_id = TRN_support_HYA
+		relative_position_id = TRN_fate_of_slovakia
 		cost = 4
 
 		available = {
@@ -8278,7 +8309,8 @@ focus_tree = {
 			}
 		}
 		prerequisite = { 
-			focus = TRN_support_HYA 
+			focus = TRN_fate_of_slovakia 
+			focus = TRN_support_HYA
 		}
 		#mutually_exclusive = { focus = TRN_support_SHA }
 
@@ -8298,9 +8330,9 @@ focus_tree = {
 	focus = { # 루마니아 유전 지대 확보
 		id = TRN_securing_romanian_oil
 		icon = GFX_focus_generic_attack_romania
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = TRN_support_HYA
+		relative_position_id = TRN_fate_of_slovakia
 		cost = 4
 
 		available = {
@@ -8314,7 +8346,8 @@ focus_tree = {
 			is_in_faction_with = ROOT
 		}
 		prerequisite = { 
-			focus = TRN_support_HYA 
+			focus = TRN_fate_of_slovakia 
+			focus = TRN_support_HYA
 		}
 
 		ai_will_do = {
@@ -8561,6 +8594,9 @@ focus_tree = {
 			add_dynamic_modifier = { modifier = TRM_industries_dynamic }
 
 			activate_targeted_decision = { target = 64 decision = TRN_Opelwerk_Brandenburg } # 브란덴부르크
+			hidden_effect = {
+				country_event = { id = trnfla.22 days = 35 }
+			}
 		}
 	}
 	shared_focus = {
