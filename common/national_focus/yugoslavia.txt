@@ -6632,7 +6632,7 @@ focus = {
 	}
 
 	focus = {
-		id = YUG_gauge_Standardization
+		id = YUG_Gauge_Standardization
 		icon = GFX_focus_generic_railroad
 		prerequisite = {
 			focus = YUG_industrialization_program
@@ -6650,7 +6650,7 @@ focus = {
 	focus = {
 		id = YUG_integrated_rail_network
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = YUG_gauge_Standardization }
+		prerequisite = { focus = YUG_Gauge_Standardization }
 		x = 4
 		y = 2
 		relative_position_id = YUG_industrialization_program
