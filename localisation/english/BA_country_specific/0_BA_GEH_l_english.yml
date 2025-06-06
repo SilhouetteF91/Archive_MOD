@@ -1070,6 +1070,9 @@
  GEH_military_tradition_1: "[ROOT.GetAdjective] 군사 전통"
  GEH_military_tradition_1_desc: "허례허식과 파티의 전통을 가지고 있는 판데모니움 소사이어티와 달리, 선도부는 오랜 군사적 전통과 역사를 가지고 있으며 실전에 단련되어 있습니다. 비록 이 군사적 전통과 역사를 비키보토스계 군인들에게 전달하는 것이 어려운 일이라 할지라도요."
 
+ GEH_gehenna_council_idea: "[ROOT.GetAdjective] 평의회"
+ GEH_gehenna_council_idea_desc: "간선제로 의원들을 선출하는 평의회는 정상국가화를 진행하는 게헨나의 새로운 의회 조직이자, 법적으로는 1918년 바이마르 공화국 의회의 역사를 계승한다고 주장합니다. 평의회는 게헨나 통제민주주의의 상징이자, 게헨나가 소라사키 히나 한 사람의 독재 국가에서 과두제 국가로 변화하는 과정을 상징하는 조직입니다."
+
  ### 인물
  GEH_hina: "소라사키 히나"
  GEH_dldhfl: "시로미 이오리"
@@ -1973,25 +1976,25 @@
  GEH_ako_democratic_system_constitution: "게헨나 헌법 제정"
  GEH_ako_democratic_system_constitution_desc: "우리가 게헨나의 통일된 지도자가 됨에 따라, 우리는 한층 나아가 연방공화국의 헌법을 제정할 수 있게 되었습니다."
 
- GEH_ako_democratic_system_constitution_human_right: "헌법 정신: 보편 인권 강조"
+ GEH_ako_democratic_system_constitution_human_right: "§G헌법 정신§!: 보편 인권 강조"
  GEH_ako_democratic_system_constitution_human_right_desc: "우리의 헌법의 중대한 가치로 '모든 인간의 인권'을 강조합니다. 성별, 인종, 성적 지향, 장애, 민족 그리고 종교로 인한 부당한 차별을 받지 않아야 한다는 점이 헌법 정신으로 강조될 것입니다." #친현지인
 
- GEH_ako_democratic_system_constitution_esperanto: "헌법 정신: 에스페란토 지위 보장"
+ GEH_ako_democratic_system_constitution_esperanto: "§G헌법 정신§!: 에스페란토 지위 보장"
  GEH_ako_democratic_system_constitution_esperanto_desc: "우리의 헌법의 중대한 가치로 '모든 인류 국가와의 소통'을 강조합니다. 에스페란토(지구 국제어)를 헌법에 게헨나의 표준어 중 하나로 등재하고 모든 법률을 에스페란토어로도 등재하도록 하는 것은, 우리가 인류 문명과 그들의 역사를 존중한다는 증표가 됩니다." #친현지인
 
- GEH_ako_democratic_system_constitution_worker: "헌법 정신: 노동권"
+ GEH_ako_democratic_system_constitution_worker: "§G헌법 정신§!: 노동권"
  GEH_ako_democratic_system_constitution_worker_desc: "우리의 헌법의 중대한 가치로 '노동자들의 권리'를 강조합니다. 이는 특히 현지인 정당인 도이칠란트 사회민주당의 주장을 수용한 것으로, 노동자들의 숫자 중 압도적으로 키보토스계보다 현지인이 많다는 점에서, 선진적인 노동법을 헌법 수준에서부터 지지하는 것은 큰 의미가 있습니다." #친현지인
 
- GEH_ako_democratic_system_constitution_state_capitalism: "헌법 정신: 국가자본주의"
+ GEH_ako_democratic_system_constitution_state_capitalism: "§O헌법 정신§!: 국가자본주의"
  GEH_ako_democratic_system_constitution_state_capitalism_desc: "우리의 헌법의 중대한 가치로 '국가자본주의'를 강조합니다. 모든 경제는 [ROOT.GetLeader]와 충성스러운 기술관료들에 의해 정부 주도로 통제되어야 합니다. 국가가 시장을 통제하는 특수한 자본주의 체제가 헌법 정신으로 강조될 것입니다." #친키보토스
 
- GEH_ako_democratic_system_constitution_state_internationalism: "헌법 정신: 학원간 연대"
- GEH_ako_democratic_system_constitution_state_internationalism_desc: "우리의 헌법의 중대한 가치로 '학원간 연대'를 강조합니다. 게헨나만이 아니라 트리니티, 밀레니엄, 산해경, 붉은겨울 등 모든 키보토스 국가들과의 연대를 통해 지구에서 생존해야 한다는 점이 헌법 정신으로 강조될 것입니다." #친키보토스
+ GEH_ako_democratic_system_constitution_internationalism: "§O헌법 정신§!: 학원간 연대"
+ GEH_ako_democratic_system_constitution_internationalism_desc: "우리의 헌법의 중대한 가치로 '학원간 연대'를 강조합니다. 게헨나만이 아니라 트리니티, 밀레니엄, 산해경, 붉은겨울 등 모든 키보토스 국가들과의 연대를 통해 지구에서 생존해야 한다는 점이 헌법 정신으로 강조될 것입니다." #친키보토스
 
- GEH_ako_democratic_system_constitution_leader_principle: "헌법 정신: 지도자 원리"
+ GEH_ako_democratic_system_constitution_leader_principle: "§O헌법 정신§!: 지도자 원리"
  GEH_ako_democratic_system_constitution_leader_principle_desc: "우리의 헌법의 중대한 가치로 '히나 의장에 대한 무한한 충성'을 강조합니다. 이미 우리의 헌법은 평의회 의장인 소라사키 히나에게 무한한 권력을 보장하고 있지만, 이것은 단순한 권력 보장을 넘어 모든 공무원, 국가 조직, 법률은 '소라사키 히나의 뜻'을 이루기 위해 존재하며 이를 따라야 한다는 점을 명문화한다는 점에서 단순한 권력 보장 이상의 의미를 갖습니다.\n\n소라사키 히나는 나치를 비롯한 우익 파시스트부터 스탈린주의자와 같은 좌익 파시스트에 이르기까지 다양한 적들을 상대로 통제민주주의를 수호할 수 있는 자유와 질서의 상징이며, 그분의 뜻에 따라 국가가 일사분란하게 움직이는 것은 당연한 일로 강조될 것입니다." #친키보토스
 
- GEH_ako_democratic_system_constitution_feminism: "헌법 정신: 여성주의"
+ GEH_ako_democratic_system_constitution_feminism: "§Y헌법 정신§!: 여성주의"
  GEH_ako_democratic_system_constitution_feminism_desc: "우리의 헌법의 중대한 가치로 '여성주의'를 강조합니다. 이는 헤일로를 가진 여성 위주의 문명인 키보토스 문명과 전통에 대한 지지이기도 하며, 동시에 도이칠란트 현지 페미니스트들이 꿈꿔 온 일이기도 합니다. 키보토스계와 현지 진보주의자들 모두가 동의하는 규정이며, 동시에 헤일로를 갖지 못한 키보토스 수인, 로봇들과 현지 보수파들 모두가 반대하는 헌법 정신이라는 점에서... 이는 가장 '중립적'인 헌법 정신이 될 것입니다." #중립
 
  ## 툴팁
@@ -2015,11 +2018,19 @@
  GEH_ako_amau_leader_text_tt: "§g게헨나 평의회와 아마우 아코 선임행정관에 대한 대중들의 인식은 [GEH_ako_democratic_loc] ([?GEH_ako_democratic_var]) 입니다.§!"
  GEH_ako_amau_leader_text_tt_delayed: "§Y참고:§!§g대중들의 인식은 4차 총회가 완성된 순간 더 이상 변화하지 않습니다.§!"
 
+ GEH_ako_constitution_point_tt: "§g현재 선택한 헌법 가치는 §!§Y[?ako_constitution_point]/3§!§g 입니다.§!"
+
+ GEH_ako_constitution_point_pro_kivotos_tt: "§g이 결정은 §O키보토스인들에게 우호§!§g적인 것으로 인식됩니다.§!"
+ GEH_ako_constitution_point_pro_german_tt: "§g이 결정은 §G현지인들에게 우호§!§g적인 것으로 인식됩니다.§!"
+ GEH_ako_constitution_point_neutral_tt: "§g이 결정은 중립적인 것으로 인식됩니다.§!"
+
  GEH_ako_democratic_system_constitution_tt: "연방공화국 헌법을 제정하기 위한 새로운 결정들이 등장합니다. 여러 결정들 중 새 헌법의 가장 중요한 가치 §Y3개§!를 선택할 수 있습니다."
 
  GEH_ako_democratic_loc_pro_kivotos: "게헨나의 지도자"
  GEH_ako_democratic_loc_pro_german: "현지인들의 개"
  GEH_ako_democratic_loc_neutral: "중립적 중재자"
+
+ GEH_gehenna_council_idea_tt: "$GEH_gehenna_council_idea$ 변동치:\n"
 
  # 커스텀 패스
 

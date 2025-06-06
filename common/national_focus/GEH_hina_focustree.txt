@@ -2343,11 +2343,17 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = GEH_gehenna_council_idea
+			}
+
 			add_stability = 0.02
+			
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.10
 			}
+
 			add_country_leader_role = {
 				character = GEH_dkzh
 				promote_leader = yes

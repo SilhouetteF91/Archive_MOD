@@ -19,6 +19,8 @@ add_namespace = GEH.event
 add_namespace = GEH.war_event
 #히나 마법소녀 이벤트
 add_namespace = GEH.hina.magic_event
+#아코 정부 이벤트
+add_namespace = GEH.ako.gov_event
 #선도부 뉴스 이벤트
 add_namespace = GEH_news
 
@@ -3272,6 +3274,86 @@ country_event = { # 에덴 결전 - 질서의 비상
 		}
 		
 		add_ideas = GEH_victory_trinity
+	}
+}
+
+#게헨나 연방공화국 헌법 논의
+country_event = { 
+	id = GEH.ako.gov_event.1
+	title = GEH.ako.gov_event.1.t
+	desc = GEH.ako.gov_event.1.desc
+
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.gov_event.1.a
+		custom_effect_tooltip = GEH_ako_democratic_system_constitution_tt
+	}
+}
+
+#연방공화국 헌법 반포
+country_event = { 
+	id = GEH.ako.gov_event.2
+	title = GEH.ako.gov_event.2.t
+	desc = GEH.ako.gov_event.2.desc
+
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.gov_event.2.a
+
+	}
+}
+
+#4차 총회에서의 논의 - 평의회의 위치
+country_event = { 
+	id = GEH.ako.gov_event.3
+	title = GEH.ako.gov_event.3.t
+	desc = GEH.ako.gov_event.3.desc
+
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.gov_event.3.a
+		
+	}
+}
+
+#4차 총회에서의 논의 - 평의회의 위치
+country_event = { 
+	id = GEH.ako.gov_event.4
+	title = GEH.ako.gov_event.4.t
+	desc = GEH.ako.gov_event.4.desc
+
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.gov_event.4.a
+		
+	}
+}
+
+#4차 총회에서의 논의 - 평의회의 위치
+country_event = { 
+	id = GEH.ako.gov_event.5
+	title = GEH.ako.gov_event.5.t
+	desc = GEH.ako.gov_event.5.desc
+
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.gov_event.5.a
+		
 	}
 }
 

@@ -151,3 +151,23 @@ GEH_gehenna_legitimacy_category = {
 
     }
 }
+
+GEH_ako_democratic_system_category = {
+    icon = GFX_decision_category_generic_political_actions
+
+    priority = 88
+
+    allowed = {
+        tag = GEH
+    }
+
+    visible = {
+        has_dynamic_modifier = {
+            modifier = GEH_gehenna_council_idea
+        }
+    }
+
+    visible_when_empty = yes
+
+    scripted_gui = GEH_ako_democratic_system_gui
+}

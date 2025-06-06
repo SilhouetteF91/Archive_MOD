@@ -2403,3 +2403,473 @@ GEH_gehenna_legitimacy_category = {
 	}
 }
 
+
+GEH_ako_democratic_system_category = {
+
+	GEH_ako_democratic_system_meeting_with_SPD = {
+		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		visible = {
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 0
+
+		days_remove = 30
+
+		remove_effect = {
+			add_to_variable = {
+				GEH_ako_democratic_var = -1
+				tooltip = GEH_ako_constitution_point_pro_german_tt
+			}
+		}
+
+		modifier = {
+			political_power_factor = -0.15
+		}
+	}
+
+	GEH_ako_democratic_system_meeting_with_capitalists = {
+		icon = GFX_decision_hol_radio_oranje
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		visible = {
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 0
+
+		days_remove = 30
+
+		remove_effect = {
+			add_to_variable = {
+				GEH_ako_democratic_var = 1
+				tooltip = GEH_ako_constitution_point_pro_kivotos_tt
+			}
+		}
+
+		modifier = {
+			political_power_factor = -0.15
+		}
+	}
+
+	GEH_ako_democratic_system_constitution = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = GEH_unified_gehenna_flag
+		}
+
+		visible = {
+			
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 0
+
+		complete_effect = {
+			custom_effect_tooltip = GEH_ako_democratic_system_constitution_tt
+			set_country_flag = GEH_ako_democratic_system_constitution_flag
+
+			hidden_effect = {
+				country_event = { id = GEH.ako.gov_event.1 }
+			}
+		}	
+	}
+
+	GEH_ako_democratic_system_constitution_human_right = {
+		icon = GFX_decision_eng_install_government
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_point_tt
+				check_variable = { ako_constitution_point < 3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point < 3 }
+		}
+
+		ai_will_do = {
+			factor = 0 # AI는 패널티+버프가 다 있는 위험한 헌법을 찍지 않음
+		}
+
+		cost = 0
+
+		complete_effect = {
+			add_to_variable = { ako_constitution_point = 1 }
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_political_power_factor = 0.1 #버프
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_consumer_goods_factor = 0.05 #패널티
+				tooltip = consumer_goods_factor_tt
+			}
+
+			custom_effect_tooltip = enter_tt
+			add_to_variable = {
+				GEH_ako_democratic_var = -2
+				tooltip = GEH_ako_constitution_point_pro_german_tt
+			}
+
+			if = {
+				limit = { check_variable = { ako_constitution_point = 3 } }
+				country_event = { id = GEH.ako.gov_event.2 }
+			}
+		}	
+	}
+
+	GEH_ako_democratic_system_constitution_esperanto = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_point_tt
+				check_variable = { ako_constitution_point < 3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point < 3 }
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 0
+
+		complete_effect = {
+			add_to_variable = { ako_constitution_point = 1 }
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_research_speed_factor = 0.04 #버프
+				tooltip = research_speed_factor_tt
+			}
+
+			custom_effect_tooltip = enter_tt
+			add_to_variable = {
+				GEH_ako_democratic_var = -2
+				tooltip = GEH_ako_constitution_point_pro_german_tt
+			}
+
+			if = {
+				limit = { check_variable = { ako_constitution_point = 3 } }
+				country_event = { id = GEH.ako.gov_event.2 }
+			}
+		}	
+	}
+
+	GEH_ako_democratic_system_constitution_worker = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_point_tt
+				check_variable = { ako_constitution_point < 3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point < 3 }
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 0
+
+		complete_effect = {
+			add_to_variable = { ako_constitution_point = 1 }
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_factory_max_efficiency_factor = 0.04 #버프
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+
+			custom_effect_tooltip = enter_tt
+			add_to_variable = {
+				GEH_ako_democratic_var = -2
+				tooltip = GEH_ako_constitution_point_pro_german_tt
+			}
+
+			if = {
+				limit = { check_variable = { ako_constitution_point = 3 } }
+				country_event = { id = GEH.ako.gov_event.2 }
+			}
+		}	
+	}
+
+	GEH_ako_democratic_system_constitution_state_capitalism = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_point_tt
+				check_variable = { ako_constitution_point < 3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point < 3 }
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 0
+
+		complete_effect = {
+			add_to_variable = { ako_constitution_point = 1 }
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_production_factory_efficiency_gain_factor = 0.04 #버프
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+
+			custom_effect_tooltip = enter_tt
+			add_to_variable = {
+				GEH_ako_democratic_var = 2
+				tooltip = GEH_ako_constitution_point_pro_kivotos_tt
+			}
+
+			if = {
+				limit = { check_variable = { ako_constitution_point = 3 } }
+				country_event = { id = GEH.ako.gov_event.2 }
+			}
+		}	
+	}
+
+	GEH_ako_democratic_system_constitution_internationalism = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_point_tt
+				check_variable = { ako_constitution_point < 3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point < 3 }
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 0
+
+		complete_effect = {
+			add_to_variable = { ako_constitution_point = 1 }
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_surrender_limit = 0.05
+				tooltip = surrender_limit_tt
+			}
+
+			custom_effect_tooltip = enter_tt
+			add_to_variable = {
+				GEH_ako_democratic_var = 2
+				tooltip = GEH_ako_constitution_point_pro_kivotos_tt
+			}
+
+			if = {
+				limit = { check_variable = { ako_constitution_point = 3 } }
+				country_event = { id = GEH.ako.gov_event.2 }
+			}
+		}	
+	}
+
+	GEH_ako_democratic_system_constitution_leader_principle = {
+		icon = GFX_decision_Prefect_team
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_point_tt
+				check_variable = { ako_constitution_point < 3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point < 3 }
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 0
+
+		complete_effect = {
+			add_to_variable = { ako_constitution_point = 1 }
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_surrender_limit = 0.05
+				tooltip = surrender_limit_tt
+			}
+
+			custom_effect_tooltip = enter_tt
+			add_to_variable = {
+				GEH_ako_democratic_var = 2
+				tooltip = GEH_ako_constitution_point_pro_kivotos_tt
+			}
+
+			if = {
+				limit = { check_variable = { ako_constitution_point = 3 } }
+				country_event = { id = GEH.ako.gov_event.2 }
+			}
+		}	
+	}
+
+	GEH_ako_democratic_system_constitution_feminism = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_point_tt
+				check_variable = { ako_constitution_point < 3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point < 3 }
+		}
+
+		ai_will_do = {
+			factor = 0 # AI는 패널티+버프가 다 있는 위험한 헌법을 찍지 않음
+		}
+
+		cost = 0
+
+		complete_effect = {
+			add_to_variable = { ako_constitution_point = 1 }
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_global_building_slots_factor = 0.03
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_research_speed_factor = 0.03
+				tooltip = research_speed_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_consumer_goods_factor = 0.1 #패널티
+				tooltip = consumer_goods_factor_tt
+			}
+
+			custom_effect_tooltip = enter_tt
+			custom_effect_tooltip = GEH_ako_constitution_point_neutral_tt
+
+			if = {
+				limit = { check_variable = { ako_constitution_point = 3 } }
+				country_event = { id = GEH.ako.gov_event.2 }
+			}
+		}	
+	}
+}
