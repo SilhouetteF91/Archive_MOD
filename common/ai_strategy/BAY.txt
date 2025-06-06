@@ -186,7 +186,7 @@ BAY_warfuck_GEH = {
 		always = yes
 	}
 	abort = {
-		always = no
+		has_war_with = TRM
 	}
 	ai_strategy = {
 		type = prepare_for_war

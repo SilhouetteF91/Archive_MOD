@@ -347,9 +347,11 @@ political_actions = {
 						NOT = { has_war_with = ROOT }
 					}
 				}
-				declare_war_on = {
-					target = PREV
-					type = puppet_wargoal_focus
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = puppet_wargoal_focus
+					}
 				}
 			}
 		}
