@@ -6270,7 +6270,7 @@ focus = {
 	focus = {
 		id = YUG_industrialization_program
 		icon = GFX_goal_generic_construction
-		x = 63
+		x = 67
 		y = 0
 
 		cost = 5
@@ -6306,7 +6306,7 @@ focus = {
 		id = YUG_expand_the_mining_industry
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = YUG_industrialization_program }
-		x = 0
+		x = -5
 		y = 1
 		relative_position_id = YUG_industrialization_program
 
@@ -6346,9 +6346,9 @@ focus = {
 		id = YUG_rare_minerals_exploitation
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = YUG_expand_the_mining_industry }
-		x = -3
-		y = 1
-		relative_position_id = YUG_expand_the_mining_industry
+		x = -4
+		y = 2
+		relative_position_id = YUG_industrialization_program
 
 		cost = 5
 
@@ -6519,10 +6519,10 @@ focus = {
 	focus = {
 		id = YUG_develop_civilian_industry
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = YUG_expand_the_mining_industry }
-		x = -1
+		prerequisite = { focus = YUG_industrialization_program }
+		x = 0
 		y = 1
-		relative_position_id = YUG_expand_the_mining_industry
+		relative_position_id = YUG_industrialization_program
 
 		cost = 5
 
@@ -6599,9 +6599,9 @@ focus = {
 	focus = {
 		id = YUG_expand_the_university_of_zagreb
 		icon = GFX_focus_research
-		prerequisite = { focus = YUG_develop_civilian_industry focus = YUG_develop_military_industry }
-		x = 0
-		y = 3
+		prerequisite = { focus = YUG_industrialization_program }
+		x = -2
+		y = 1
 		relative_position_id = YUG_industrialization_program
 
 		cost = 5
@@ -6632,12 +6632,28 @@ focus = {
 	}
 
 	focus = {
+		id = YUG_gauge_Standardization
+		icon = GFX_focus_generic_railroad
+		prerequisite = {
+			focus = YUG_industrialization_program
+		}
+		cost = 5
+		x = 4
+		y = 1
+		relative_position_id = YUG_industrialization_program
+		completion_reward = {
+			add_ideas = YUG_standarded_gauge
+		}
+	}
+
+
+	focus = {
 		id = YUG_integrated_rail_network
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = YUG_expand_the_university_of_zagreb }
-		x = 1
+		prerequisite = { focus = YUG_gauge_Standardization }
+		x = 4
 		y = 2
-		relative_position_id = YUG_develop_civilian_industry
+		relative_position_id = YUG_industrialization_program
 
 		cost = 5
 
@@ -6717,12 +6733,12 @@ focus = {
 		id = YUG_Expand_Shipyards
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = {
-			focus = YUG_expand_the_university_of_zagreb
+			focus = YUG_improve_light_industry
 		}
 		cost = 5
-		x = -2
-		y = 1
-		relative_position_id = YUG_expand_the_university_of_zagreb
+		x = 0
+		y = 3
+		relative_position_id = YUG_industrialization_program
 		available = {
 			OR = {
 				has_full_control_of_state = 103
@@ -6872,10 +6888,10 @@ focus = {
 	focus = {
 		id = YUG_improve_serbian_rail_network
 		icon = GFX_focus_POL_warsaw_main_station
-		prerequisite = { focus = YUG_expand_the_university_of_zagreb }
-		x = 2
-		y = 1
-		relative_position_id = YUG_expand_the_university_of_zagreb
+		prerequisite = { focus = YUG_integrated_rail_network }
+		x = 4
+		y = 3
+		relative_position_id = YUG_industrialization_program
 
 		cost = 5
 
@@ -7045,10 +7061,10 @@ focus = {
 	focus = {
 		id = YUG_improve_light_industry
 		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
-		prerequisite = { focus = YUG_integrated_rail_network }
+		prerequisite = { focus = YUG_develop_civilian_industry }
 		x = 0
-		y = 1
-		relative_position_id = YUG_integrated_rail_network
+		y = 2
+		relative_position_id = YUG_industrialization_program
 
 		cost = 5
 
@@ -7130,10 +7146,10 @@ focus = {
 	focus = {
 		id = YUG_Improve_Heavy_Industry
 		icon = GFX_focus_generic_reorient_production
-		prerequisite = { focus = YUG_improve_light_industry }
-		x = 0
+		prerequisite = { focus = YUG_develop_slovenian_industry }
+		x = 2
 		y = 3
-		relative_position_id = YUG_integrated_rail_network
+		relative_position_id = YUG_industrialization_program
 
 		cost = 5
 
@@ -7197,10 +7213,10 @@ focus = {
 	focus = {
 		id = YUG_develop_slovenian_industry
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = YUG_integrated_rail_network }
-		x = -1
+		prerequisite = { focus = YUG_develop_military_industry }
+		x = 2
 		y = 2
-		relative_position_id = YUG_integrated_rail_network
+		relative_position_id = YUG_industrialization_program
 
 		cost = 5
 
@@ -7323,13 +7339,13 @@ focus = {
 	focus = {
 		id = YUG_local_self_management
 		icon = GFX_focus_generic_self_management
-		prerequisite = { focus = YUG_develop_slovenian_industry }
+		prerequisite = { focus = YUG_Expand_Shipyards }
 		mutually_exclusive = {
 			focus = YUG_central_management
 		}
-		x = -1
+		x = 0
 		y = 4
-		relative_position_id = YUG_integrated_rail_network
+		relative_position_id = YUG_industrialization_program
 
 		cost = 5
 
@@ -7366,10 +7382,10 @@ focus = {
 	focus = {
 		id = YUG_expand_the_university_of_ljubljana
 		icon = GFX_focus_research
-		prerequisite = { focus = YUG_integrated_rail_network }
+		prerequisite = { focus = YUG_expand_the_university_of_belgrad }
 		x = -2
-		y = 1
-		relative_position_id = YUG_integrated_rail_network
+		y = 3
+		relative_position_id = YUG_industrialization_program
 
 		cost = 5
 
@@ -7396,8 +7412,8 @@ focus = {
 			focus = YUG_expand_the_university_of_ljubljana 
 		}
 		x = -2
-		y = 3
-		relative_position_id = YUG_integrated_rail_network
+		y = 4
+		relative_position_id = YUG_industrialization_program
 		completion_reward = {
 			add_ideas = YUG_Idea_Construction_Improvements
 		}
@@ -7412,7 +7428,7 @@ focus = {
 		}
 		x = -2
 		y = 5
-		relative_position_id = YUG_integrated_rail_network
+		relative_position_id = YUG_industrialization_program
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = YUG_Idea_Construction_Improvements
@@ -7424,10 +7440,10 @@ focus = {
 	focus = {
 		id = YUG_develop_military_industry
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = YUG_expand_the_mining_industry }
-		x = 1
+		prerequisite = { focus = YUG_industrialization_program }
+		x = 2
 		y = 1
-		relative_position_id = YUG_expand_the_mining_industry
+		relative_position_id = YUG_industrialization_program
 
 		cost = 5
 
@@ -7476,10 +7492,10 @@ focus = {
 	focus = {
 		id = YUG_serbian_steel
 		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = YUG_integrated_rail_network }
-		x = 2
+		prerequisite = { focus = YUG_expand_the_mining_industry }
+		x = -1
 		y = 1
-		relative_position_id = YUG_integrated_rail_network
+		relative_position_id = YUG_expand_the_mining_industry
 
 		cost = 5
 
@@ -7527,9 +7543,9 @@ focus = {
 			has_full_control_of_state = 108
 		}
 
-		x = 2
-		y = 3
-		relative_position_id = YUG_integrated_rail_network
+		x = -1
+		y = 2
+		relative_position_id = YUG_expand_the_mining_industry
 		completion_reward = {
 			108 = {
 				add_resource = {
@@ -7550,11 +7566,11 @@ focus = {
 		icon = GFX_goal_generic_agriculture
 		cost = 5
 		prerequisite = {
-			focus = YUG_Morava_Ironworks
+			focus = YUG_improve_serbian_rail_network
 		}
-		x = 2
+		x = 4
 		y = 5
-		relative_position_id = YUG_integrated_rail_network
+		relative_position_id = YUG_industrialization_program
 		completion_reward = {
 			add_ideas = YUG_Idea_Rural_Electrification
 			hidden_effect = {
@@ -7590,8 +7606,8 @@ focus = {
 		prerequisite = {
 			focus = YUG_Improved_Productivity
 		}
-		relative_position_id = YUG_integrated_rail_network
-		x = 0
+		relative_position_id = YUG_industrialization_program
+		x = 1
 		y = 6
 		completion_reward = {
 			custom_effect_tooltip = Serbian_Urbanizaton_desciption
@@ -7605,8 +7621,8 @@ focus = {
 		prerequisite = {
 			focus = YUG_Serbian_Urbanization
 		}
-		relative_position_id = YUG_integrated_rail_network
-		x = -2
+		relative_position_id = YUG_industrialization_program
+		x = -1
 		y = 7
 		completion_reward = {
 			custom_effect_tooltip = Northen_Urbanizaton_desciption
@@ -7620,8 +7636,8 @@ focus = {
 		prerequisite = {
 			focus = YUG_Serbian_Urbanization
 		}
-		relative_position_id = YUG_integrated_rail_network
-		x = 0
+		relative_position_id = YUG_industrialization_program
+		x = 1
 		y = 7
 		completion_reward = {
 			custom_effect_tooltip = Bosnia_Urbanizaton_desciption
@@ -7635,8 +7651,8 @@ focus = {
 		prerequisite = {
 			focus = YUG_Serbian_Urbanization
 		}
-		relative_position_id = YUG_integrated_rail_network
-		x = 2
+		relative_position_id = YUG_industrialization_program
+		x = 3
 		y = 7
 		completion_reward = {
 			custom_effect_tooltip = Sourthen_Urbanizaton_desciption
@@ -7646,10 +7662,10 @@ focus = {
 	focus = {
 		id = YUG_expand_the_university_of_belgrad
 		icon = GFX_focus_research
-		prerequisite = { focus = YUG_integrated_rail_network }
-		x = 1
+		prerequisite = { focus = YUG_expand_the_university_of_zagreb }
+		x = -2
 		y = 2
-		relative_position_id = YUG_integrated_rail_network
+		relative_position_id = YUG_industrialization_program
 
 		cost = 5
 
@@ -7679,15 +7695,15 @@ focus = {
 	focus = {
 		id = YUG_central_management
 		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = YUG_expand_the_university_of_belgrad }
+		prerequisite = { focus = YUG_Improve_Heavy_Industry }
 		mutually_exclusive = {
 			focus = YUG_local_self_management
 		}
-		x = 1
+		x = 2
 		y = 4
-		relative_position_id = YUG_integrated_rail_network
+		relative_position_id = YUG_industrialization_program
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 50
@@ -7716,11 +7732,11 @@ focus = {
 		id = YUG_expand_the_sarajevo_arsenals
 		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = YUG_local_self_management focus = YUG_central_management }
-		x = 0
+		x = 1
 		y = 5
-		relative_position_id = YUG_integrated_rail_network
+		relative_position_id = YUG_industrialization_program
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -7796,7 +7812,7 @@ focus = {
 	focus = {
 		id = YUG_modernize_the_air_force
 		icon = GFX_goal_generic_air_doctrine
-		x = 70
+		x = 78
 		y = 0
 
 		cost = 10
@@ -8459,7 +8475,7 @@ focus = {
 	focus = {
 		id = YUG_army_modernization
 		icon = GFX_goal_generic_army_doctrines
-		x = 80
+		x = 88
 
 		cost = 10
 
@@ -9196,7 +9212,7 @@ focus = {
 		id = YUG_expand_the_split_shipyards
 		icon = GFX_goal_generic_construct_naval_dockyard
 		mutually_exclusive = { focus = YUG_expand_the_serbian_shipyards }
-		x = 88
+		x = 96
 		y = 0
 
 		cost = 10

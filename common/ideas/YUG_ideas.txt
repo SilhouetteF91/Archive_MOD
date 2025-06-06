@@ -702,7 +702,6 @@ ideas = {
 		YUG_Idea_Rural_Electrification = {
 			picture = DEN_sahnefront
 			modifier = {
-				political_power_gain = -0.1
 				monthly_population = 0.1
 			}
 			available = {
@@ -727,6 +726,14 @@ ideas = {
 			}
 			available = {
 				always = yes
+			}
+		}
+		YUG_standarded_gauge = {
+			picture = generic_train_tracks
+			modifier = {
+				local_supplies = 0.1
+				production_speed_rail_way_factor = 0.1
+				production_speed_supply_node_factor = 0.5
 			}
 		}
     }
