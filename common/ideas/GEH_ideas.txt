@@ -255,8 +255,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GEM
-				attack_bonus_against = 0.25
-				defense_bonus_against = 0.25
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.20
 			}
 		}
         
@@ -278,8 +278,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GEM
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.20
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.15
 			}
 		}
         
@@ -301,8 +301,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GEM
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.15
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.10
 			}
 		}
         
@@ -325,7 +325,7 @@ ideas = {
 			targeted_modifier = {
 				tag = GEM
 				attack_bonus_against = 0.05
-				defense_bonus_against = 0.10
+				defense_bonus_against = 0.05
 			}
 		}
         
@@ -342,11 +342,11 @@ ideas = {
 				#research_speed_factor = -0.2
 			}
 
-			#targeted_modifier = {
-			#	tag = GEM
-			#	attack_bonus_against = -0.30
-			#	defense_bonus_against = -0.30
-			#}
+			targeted_modifier = {
+				tag = GEM
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.25
+			}
 		}
 		GEH_popular_support_2 = { # 선도부의 정통성
 			picture = GEH_prefect_team_armband
@@ -363,8 +363,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GEM
-				attack_bonus_against = 0.05
-				#defense_bonus_against = 0.05
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.20
 			}
 		}
 		GEH_popular_support_3 = { # 선도부의 정통성
@@ -382,8 +382,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GEM
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.05
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.15
 			}
 		}
         GEH_popular_support_4 = { # 선도부의 정통성
@@ -398,8 +398,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GEM
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.1
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.10
 			}
 		}
 
