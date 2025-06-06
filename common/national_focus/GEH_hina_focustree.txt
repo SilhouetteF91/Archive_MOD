@@ -3189,6 +3189,9 @@ focus_tree = {
             focus = GEH_second_congress_focus
         }
         available = {
+			hidden_trigger = {
+				has_country_flag = GEH_establishment_of_german_autonomous_government_flag
+			}
         }
         completion_reward = {
 			add_political_power = 20

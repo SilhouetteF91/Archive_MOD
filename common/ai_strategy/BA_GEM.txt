@@ -1,0 +1,251 @@
+# GEM의 기본 유닛 생산: 보병 중심
+GEM_unit_production_early = {
+	allowed = { original_tag = GEM }
+	enable = {
+		date < 1940.1.1 # 1940년 이전까지 적용
+	}
+	abort_when_not_enabled = yes
+
+	# --- 육군: 보병에만 집중 ---
+	ai_strategy = {
+		type = role_ratio
+		id = infantry # 보병 비율을 압도적으로 높게 설정
+		value = 100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor # 기갑 생산 억제
+		value = -100
+	}
+    ai_strategy = {
+		type = role_ratio
+		id = mechanized # 기계화보병 생산 억제
+		value = -100
+	}
+
+    ai_strategy = {
+        type = role_ratio
+        id = garrison
+        # 음수 값을 주어 AI가 원하는 주둔군/해안방어 사단 수를 줄입니다.
+        # 예: -30은 평소보다 30% 적은 수의 사단을 원하게 됨을 의미합니다.
+        value = -60
+    }
+	
+	# --- 공군: 방어적인 전투기만 생산 ---
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter # 제공권 방어를 위한 전투기만 생산
+		value = 100
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas # CAS, 폭격기 생산은 0으로 설정
+		value = 0
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 0
+	}
+
+	# --- 장비 생산: 보병과 포병 장비 우선 ---
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 25
+	}
+    ai_strategy = {
+		type = equipment_production_factor
+		id = armor # 기갑 장비 생산 억제
+		value = -50
+	}
+}
+
+# 초기 방어 전략: 내륙에서 버티기
+GEM_early_defense = {
+    allowed = { original_tag = GEM }
+    enable = { date < 1940.6.1 } # 1940년 6월까지 적용
+    abort_when_not_enabled = yes
+
+    # 작전 계획을 '신중한(careful)'으로 설정하여 소모를 최소화
+    ai_strategy = {
+		type = front_control
+		ratio = 0.5
+		priority = 100
+		ordertype = front
+		execution_type = careful
+	}
+
+    # 내륙에 방어 병력을 미리 배치하여 방어선 붕괴 방지
+    ai_strategy = {
+		type = put_unit_buffers
+		states = { # (가상의 내륙 주 ID를 기입)
+			55
+			59
+			51
+		}
+		ratio = 0.20 # 군대의 20%를 예비대로 배치
+		area = asia
+	}
+}
+# 1940년 이후 군비 증강 계획: 기갑
+GEM_rearmament_armor = {
+	allowed = { original_tag = GEM }
+	enable = {
+		date > 1940.1.1
+	}
+	abort = { always = no }
+
+	# 기갑 유닛 비율을 대폭 상향 조정
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 20 # -100에서 20으로 대전환
+	}
+    ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 10 # 기계화보병도 함께 생산
+	}
+    
+    # 기갑 장비 생산에 공장 집중
+    ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 40
+	}
+
+    # 중형 전차 생산라인 최소 5개 유지
+    ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = medium_tank_chassis
+		value = 5
+	}
+}
+
+# 1940년 이후 군비 증강 계획: 공군
+GEM_rearmament_airforce = {
+	allowed = { original_tag = GEM }
+	enable = {
+		date > 1940.1.1
+	}
+	abort = { always = no }
+
+	# 공세적인 공군기 생산 시작
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter # 전투기 비율은 계속 높게 유지
+		value = 150
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas # CAS 생산 시작
+		value = 50
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber # 전술폭격기 생산 시작
+		value = 25
+	}
+    
+    # CAS 장비 생산에 가중치 부여
+    ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 30
+	}
+}
+
+# 1941년 이후 공세 전환
+GEM_late_offense = {
+    allowed = { original_tag = GEM }
+    enable = { date > 1941.1.1 } # 1년간의 재무장을 거친 후 공세로 전환
+    abort_when_not_enabled = yes
+
+    # 작전 계획을 '돌격(rush)'으로 변경
+    ai_strategy = {
+		type = front_control
+		ratio = 0.5
+		priority = 200 # 기존 방어 전략보다 높은 우선순위
+		ordertype = front
+		execution_type = rush
+	}
+
+    # 전선에 기갑 부대를 우선적으로 배치하여 돌파구 형성
+    ai_strategy = {
+		type = front_armor_score
+		value = 150
+	}
+}
+# 산업 계획
+GEM_industrial_plan_1 = {
+    allowed = { original_tag = GEM }
+    enable = { always = yes }
+	abort = { date > 1938.1.1 }
+
+    # 1939년 이전에는 민간 공장을 60개까지 확보하는 것을 목표
+    ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 40
+	}
+}
+GEM_industrial_plan_2 = {
+    allowed = { original_tag = GEM }
+    enable = { date > 1938.1.1 }
+	abort = { always = no }
+
+
+    # 1939년 이후 군수 공장 건설 비율을 대폭 상향
+    ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 75
+	}
+}
+# 평시 특정 지역 방어 우선순위 감소 (수정된 방법)
+GEM_peacetime_deprioritization = {
+    allowed = { original_tag = GEM } 
+    enable = {
+		always = yes
+    }
+	abort = {
+		any_country = {
+			NOT = { tag = FRM }
+			has_war_with = ROOT
+		}
+	}
+
+    # put_unit_buffers를 이용해 해당 주들의 주둔군 통제권을 가져옴
+    ai_strategy = {
+        type = put_unit_buffers
+        states = {
+            55
+            57
+            51
+            1022
+            1025
+            42
+            978
+            50
+            51
+            52
+            53
+			56
+			59
+        }
+        ratio = 0.9
+
+		order_id = 1
+
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = yes
+        
+        # 이 예비대가 어떤 지역의 작전에 사용될 수 있는지 명시 (선택사항)
+        area = europe 
+    }
+}
