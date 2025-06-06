@@ -2385,6 +2385,9 @@ focus_tree = {
 		id = COU_logistics_control_of_student_council
 		icon = GFX_COU_enhance_momoka_sets
 		prerequisite = { focus = COU_inclusion_of_union_in_administrative_committee }
+		mutually_exclusive = {
+			focus = COU_resignation_of_acting_authority
+		}
 		x = 1
 		y = 2
 		relative_position_id = COU_autonomous_legislation
@@ -2410,6 +2413,9 @@ focus_tree = {
 		id = COU_resignation_of_acting_authority
 		icon = GFX_focus_generic_university_2
 		prerequisite = { focus = COU_inclusion_of_union_in_administrative_committee }
+		mutually_exclusive = {
+			focus = COU_logistics_control_of_student_council
+		}
 		x = -1
 		y = 2
 		relative_position_id = COU_autonomous_legislation

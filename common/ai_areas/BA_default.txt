@@ -1,0 +1,8 @@
+areas = {
+
+	esistance_state_gem = {
+        strategic_regions = {
+            275
+        }
+    }
+}
