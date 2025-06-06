@@ -1997,6 +1997,29 @@
  GEH_ako_democratic_system_constitution_feminism: "§Y헌법 정신§!: 여성주의"
  GEH_ako_democratic_system_constitution_feminism_desc: "우리의 헌법의 중대한 가치로 '여성주의'를 강조합니다. 이는 헤일로를 가진 여성 위주의 문명인 키보토스 문명과 전통에 대한 지지이기도 하며, 동시에 도이칠란트 현지 페미니스트들이 꿈꿔 온 일이기도 합니다. 키보토스계와 현지 진보주의자들 모두가 동의하는 규정이며, 동시에 헤일로를 갖지 못한 키보토스 수인, 로봇들과 현지 보수파들 모두가 반대하는 헌법 정신이라는 점에서... 이는 가장 '중립적'인 헌법 정신이 될 것입니다." #중립
 
+ ## 일반 법률
+
+ GEH_ako_democratic_system_law_jewish_protection: "유대인 보호법"
+ GEH_ako_democratic_system_law_jewish_protection_desc: "1933년 도이칠란트 히틀러 정권이 집권한 이후 1935년 붕괴하기까지, 유대인들은 도이칠란트에서의 재산권 문제에 있어서 큰 침해를 입었습니다. 새로운 법률은 유대인들이 자신들이 나치에 의하여 개인 사업체나 토지 등을 강탈당했다는 것을 증명할 수 있을 경우 이것에 대해 보상하도록 지원합니다. 그 예산은 히틀러를 선출한 도이치인들이 세금으로 부담하게 될 것입니다."
+
+ GEH_ako_democratic_system_law_dissolution_of_prussia: "프로이센 자유주 해체"
+ GEH_ako_democratic_system_law_dissolution_of_prussia_desc: "도이칠란트 바이마르 공화국에서도 가장 크고 강대했던 프로이센 자유주는 우리 게헨나 연방에 있어서는 불필요한 존재일 뿐입니다. 우리는 바이마르 공화국의 연방제와 지방자치를 존중하지만, 지나치게 큰 자유주를, 그것도 영토의 중심지가 트리니티 전역을 차지하는 프로이센을 방치하는 것은 위험합니다. 프로이센은 해체될 것이며, 브란덴부르크 자유주를 비롯한 작은 주들로 분할될 것입니다."
+
+ GEH_ako_democratic_system_law_nationalization_of_resources_act: "자원국유화법"
+ GEH_ako_democratic_system_law_nationalization_of_resources_act_desc: "도이칠란트의 자연, 숲과 호수 강과 같은 대지는 게헨나를 위하여 사용되어야 합니다. 우리는 적절한 자원이 존재하는 것으로 여겨지는 미개발 지대를 국영 토지로 압류할 수 있는 권한을 얻습니다. 우리의 법률로 몰수할 수 있는 자원은 도이칠란트인들이 소유한 천연 자원만을 의미하며, 키보토스에서 이주한 자본가들이 만드는 합성고무와 같은 '인공 자원'은 몰수 대상에 포함되지 않습니다. 이 법률은 대전이 이후에도 살아남은 융커들의 토지를 철저하게 몰수하고 그들의 권력을 영구적으로 배제하도록 할 것입니다."
+
+ GEH_ako_democratic_system_law_proportional_representation: "지방의회 비례대표제"
+ GEH_ako_democratic_system_law_proportional_representation_desc: "우리의 통제민주주의로 인하여 도이치인들은 중앙정치에 관여할 수 없지만, 그들은 여전히 자신들의 자치권을 행사할 수 있는 지방의회를 가지고 있습니다. 지방의회에서 키보토스계에게 유리하게 지역구가 책정되는 소선거구제 의석을 줄이고 비례대표 의석을 도입하는 것은 지방 의회에서 도이치인들이 자신들의 권리를 더 많이 행사할 수 있게 만들 것입니다."
+
+ GEH_ako_democratic_system_law_wage_control: "임금통제법"
+ GEH_ako_democratic_system_law_wage_control_desc: "통제민주주의와 국가자본주의라는 두 가지 국가 체제를 유지하기 위해서는 대중들의 지지를 잃어버리지 않는 것도 중요합니다. 임금통제법은 국가가 지나치게 임금이 낮다고 판단되는 사업에 관여하여 노동자들의 임금을 직접 '협상'할 수 있도록 노동자들을 지원합니다."
+
+ GEH_ako_democratic_system_law_special_punishment_act_on_economic_crimes: "경제범죄 특별처벌법"
+ GEH_ako_democratic_system_law_special_punishment_act_on_economic_crimes_desc: "도이칠란트 사회민주당과의 협력을 통하여, 우리는 탈세, 임금 체불, 부당한 근로계약 등을 체결하는 자본가들을 수사하기 위한 특수 경제수사팀을 설립하고, 자본가들에게는 보유한 재산에 비례하여 벌금형 액수를 증액하는 '특별처벌법'을 제정할 것입니다. 게헨나의 질서와 법치는 무력 범죄만이 아닌 경제 범죄에도 동일하게 적용되어야만 합니다."
+
+ GEH_ako_democratic_system_law_public_security_act: "치안유지법"
+ GEH_ako_democratic_system_law_public_security_act_desc: "게헨나 국가 질서를 위협하는 공산주의자들의 정치 활동을 억제하는 이 법률은, 놀랍게도 도이칠란트 사회민주당의 강한 지지를 받습니다. 공산주의자들과 사회민주주의자들은 바이마르 공화국 내내 대립 관계였으며, 사회민주주의자들은 나치당만큼이나 혐오하는 공산주의자들이 게헨나 땅에서 다시는 보이지 않게 되기를 바랍니다."
+
  ## 툴팁
  GEH_benriya_dominate_tt: "우리가 §Y흥신소 68§!을 병합한 §Y최초의 국가§!일 경우, 이벤트로 중점이 개방됩니다."
  GEH_robot_hina_route_tt: "실종된 소라사키 히나를 대체하기 위하여, 우리는 §Y인공지능§!을 이용한 오토마타 히나를 제작하여, 그녀가 실종되었었다는 사실 자체를 친위대 소수 외에 그 누구도 알지 못하게 할 것입니다."
