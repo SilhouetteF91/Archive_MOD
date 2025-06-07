@@ -49,9 +49,6 @@ country_event = {
 				days = 1800
 			}
 			leave_faction = yes
-			delete_unit = { 
-				disband = yes
-			}
 			add_ideas = disarmed_nation
 			add_ideas = civilian_economy
 			set_variable = {
@@ -493,9 +490,6 @@ country_event = {
 				days = 1800
 			}
 			leave_faction = yes
-			delete_unit = { 
-				disband = yes
-			}
 			add_ideas = disarmed_nation
 			add_ideas = civilian_economy
 			set_variable = {

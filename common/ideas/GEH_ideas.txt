@@ -1350,15 +1350,7 @@ ideas = {
 								is_owned_by = ROOT
 								is_controlled_by = ROOT
 							}
-						}
-						transfer_state_to = FRM
-						create_unit = {
-							division = "name = \"27. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.2"
-							owner = FRM
-						}
-						create_unit = {
-							division = "name = \"65. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.7"
-							owner = FRM
+							transfer_state_to = FRM
 						}
 					}
 					
@@ -1368,21 +1360,50 @@ ideas = {
 								is_owned_by = ROOT
 								is_controlled_by = ROOT
 							}
-						}
-						transfer_state_to = FRM
-						create_unit = {
-							division = "name = \"7. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
-							owner = FRM
-						}
-						create_unit = {
-							division = "name = \"11. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.5"
-							owner = FRM
+							transfer_state_to = FRM
 						}
 					}
 
 					if = {
 						limit = {
 							country_exists = FRM
+						}
+						FRM = {
+							BA_halo_tech_tool_effect = yes
+							load_oob = "FRM_1936"
+					
+							28 = {
+								if = {
+									limit = {
+										is_owned_by = FRM
+										is_controlled_by = FRM
+									}
+									create_unit = {
+										division = "name = \"27. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.2"
+										owner = FRM
+									}
+									create_unit = {
+										division = "name = \"65. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.7"
+										owner = FRM
+									}
+								}
+							}
+							1023 = {
+								if = {
+									limit = {
+										is_owned_by = FRM
+										is_controlled_by = FRM
+									}
+									create_unit = {
+										division = "name = \"7. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+										owner = FRM
+									}
+									create_unit = {
+										division = "name = \"11. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.5"
+										owner = FRM
+									}
+								}
+							}
 						}
 						ROOT = { country_event = FRM_event.1 }
 					}
@@ -1853,7 +1874,7 @@ ideas = {
 		}
 
 		GEH_individualism_GEM_army_pandemonium_tt_idea = { #툴팁용
-			name = GEM_army_wehrmacht
+			name = GEM_army_pandemonium
 			allowed = { always = no }
 			modifier = {
 				army_attack_factor = -0.15
