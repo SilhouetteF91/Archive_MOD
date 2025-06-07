@@ -347,9 +347,11 @@ political_actions = {
 						NOT = { has_war_with = ROOT }
 					}
 				}
-				declare_war_on = {
-					target = PREV
-					type = puppet_wargoal_focus
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = puppet_wargoal_focus
+					}
 				}
 			}
 		}
@@ -439,7 +441,12 @@ GEH_external_activities = {
 		}
 
 		available =  {
-			GEM = { has_capitulated = yes }
+			GEM = { 
+				OR = {
+					has_capitulated = yes
+					exists = no
+				}
+			}
 			all_of_scopes = {
 				array = GEH_gem_initial_states
 				OR = {
