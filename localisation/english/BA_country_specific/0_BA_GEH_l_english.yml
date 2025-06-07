@@ -2059,6 +2059,9 @@
  GEH_ako_democratic_loc_pro_german: "현지인들의 개"
  GEH_ako_democratic_loc_neutral: "중립적 중재자"
 
+ GEH_ako_constitution_law_available_pro_kivotos_tt: "평의회에 대한 인식이 §Y$GEH_ako_democratic_loc_pro_kivotos$§!나 §Y$GEH_ako_democratic_loc_neutral$§! 중 하나여야 합니다."
+ GEH_ako_constitution_law_available_pro_german_tt: "평의회에 대한 인식이 §Y$GEH_ako_democratic_loc_pro_german$§!나 §Y$GEH_ako_democratic_loc_neutral$§! 중 하나여야 합니다."
+
  GEH_gehenna_council_idea_tt: "$GEH_gehenna_council_idea$ 변동치:\n"
 
  # 커스텀 패스

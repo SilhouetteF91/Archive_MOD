@@ -347,11 +347,9 @@ political_actions = {
 						NOT = { has_war_with = ROOT }
 					}
 				}
-				ROOT = {
-					declare_war_on = {
-						target = PREV
-						type = puppet_wargoal_focus
-					}
+				declare_war_on = {
+					target = PREV
+					type = puppet_wargoal_focus
 				}
 			}
 		}
@@ -441,12 +439,7 @@ GEH_external_activities = {
 		}
 
 		available =  {
-			GEM = { 
-				OR = {
-					has_capitulated = yes
-					exists = no
-				}
-			}
+			GEM = { has_capitulated = yes }
 			all_of_scopes = {
 				array = GEH_gem_initial_states
 				OR = {
@@ -711,13 +704,23 @@ GEH_ako_love_balance_category = {
 		fire_only_once = no
 
 		available = {
-
+			is_power_balance_in_range = {
+				id = GEH_ako_love_balance
+				range < 80
+			}
 		}
 
 		cost = 5
 
 		ai_will_do = {
-			factor = 400
+			factor = 200
+			modifier = {
+				factor = 0 
+				is_power_balance_in_range = {
+					id = GEH_ako_love_balance
+					range = GEH_hina_hate_ako_side_win
+				}
+			}
 		}
 
 		days_remove = 3
@@ -737,11 +740,21 @@ GEH_ako_love_balance_category = {
 		fire_only_once = no
 
 		available = {
-
+			is_power_balance_in_range = {
+				id = GEH_ako_love_balance
+				range < 80
+			}
 		}
 
 		ai_will_do = {
-			factor = 400
+			factor = 1
+			modifier = {
+				factor = 0 
+				is_power_balance_in_range = {
+					id = GEH_ako_love_balance
+					range = GEH_hina_hate_ako_side_win
+				}
+			}
 		}
 
 		cost = 5
@@ -763,11 +776,21 @@ GEH_ako_love_balance_category = {
 		fire_only_once = no
 
 		available = {
-
+			is_power_balance_in_range = {
+				id = GEH_ako_love_balance
+				range < 80
+			}
 		}
 
 		ai_will_do = {
-			factor = 400
+			factor = 1
+			modifier = {
+				factor = 0 
+				is_power_balance_in_range = {
+					id = GEH_ako_love_balance
+					range = GEH_hina_hate_ako_side_win
+				}
+			}
 		}
 
 		cost = 10
@@ -789,7 +812,10 @@ GEH_ako_love_balance_category = {
 		fire_only_once = no
 
 		available = {
-
+			is_power_balance_in_range = {
+				id = GEH_ako_love_balance
+				range > -80
+			}
 		}
 
 		ai_will_do = {
@@ -815,7 +841,10 @@ GEH_ako_love_balance_category = {
 		fire_only_once = no
 
 		available = {
-
+			is_power_balance_in_range = {
+				id = GEH_ako_love_balance
+				range > -80
+			}
 		}
 
 		ai_will_do = {
@@ -841,7 +870,10 @@ GEH_ako_love_balance_category = {
 		fire_only_once = no
 
 		available = {
-
+			is_power_balance_in_range = {
+				id = GEH_ako_love_balance
+				range > -80
+			}
 		}
 
 		ai_will_do = {
@@ -2877,6 +2909,291 @@ GEH_ako_democratic_system_category = {
 				limit = { check_variable = { ako_constitution_point = 3 } }
 				country_event = { id = GEH.ako.gov_event.2 }
 			}
+		}	
+	}
+
+	## 일반 법률
+	
+	GEH_ako_democratic_system_law_jewish_protection = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_law_available_pro_kivotos_tt
+				check_variable = { GEH_ako_democratic_var > -3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 0 # AI는 패널티+버프가 다 있는 위험한 헌법을 찍지 않음
+		}
+
+		cost = 75
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_drift_defence_factor = 0.15 #버프
+				tooltip = drift_defence_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_consumer_goods_factor = 0.05 #패널티
+				tooltip = consumer_goods_factor_tt
+			}
+
+		}	
+	}
+	
+	GEH_ako_democratic_system_law_dissolution_of_prussia = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_law_available_pro_kivotos_tt
+				check_variable = { GEH_ako_democratic_var > -3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 150
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_stability_factor = 0.05 #버프
+				tooltip = stability_factor_tt
+			}
+
+		}	
+	}
+	
+	GEH_ako_democratic_system_law_nationalization_of_resources_act = {
+		icon = GFX_decision_infiltrate_state
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_law_available_pro_kivotos_tt
+				check_variable = { GEH_ako_democratic_var > -3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 150
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_production_lack_of_resource_penalty_factor = -0.05 #버프
+				tooltip = production_lack_of_resource_penalty_factor_tt
+			}
+
+		}	
+	}
+	
+	GEH_ako_democratic_system_law_proportional_representation = {
+		icon = GFX_decision_SWI_consolidate_council_power
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_law_available_pro_german_tt
+				check_variable = { GEH_ako_democratic_var < 3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 0 # AI는 패널티+버프가 다 있는 위험한 헌법을 찍지 않음
+		}
+
+		cost = 75
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_army_core_defence_factor = 0.05 #버프
+				tooltip = army_core_defence_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_stability_factor = -0.05
+				tooltip = stability_factor_tt
+			}
+
+		}	
+	}
+	
+	GEH_ako_democratic_system_law_wage_control = {
+		icon = GFX_decision_generic_consumer_goods
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_law_available_pro_german_tt
+				check_variable = { GEH_ako_democratic_var < 3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 0 # AI는 패널티+버프가 다 있는 위험한 헌법을 찍지 않음
+		}
+
+		cost = 75
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_industrial_capacity_factory = 0.05 #버프
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_factory_max_efficiency_factor = 0.02 #버프
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_consumer_goods_factor = 0.05 #패널티
+				tooltip = consumer_goods_factor_tt
+			}
+
+		}	
+	}
+	
+	GEH_ako_democratic_system_law_special_punishment_act_on_economic_crimes = {
+		icon = GFX_decision_generic_civil_support
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_law_available_pro_german_tt
+				check_variable = { GEH_ako_democratic_var < 3 }
+			}
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 150
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_global_building_slots_factor = 0.05 #버프
+				tooltip = global_building_slots_factor_tt
+			}
+
+		}	
+	}
+	
+	GEH_ako_democratic_system_law_public_security_act = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+
+		}
+
+		visible = {
+			has_country_flag = GEH_ako_democratic_system_constitution_flag
+			check_variable = { ako_constitution_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 150
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_mobilization_speed = 0.07 #버프
+				tooltip = mobilization_speed_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_fascism_acceptance = -25
+				#tooltip = fascism_acceptance_tt
+			}
+
 		}	
 	}
 }
