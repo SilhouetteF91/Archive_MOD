@@ -711,10 +711,10 @@ GEH_ako_love_balance_category = {
 		fire_only_once = no
 
 		available = {
-			is_power_balance_in_range = {
-				id = GEH_ako_love_balance
-				range < 80
-			}
+			#is_power_balance_in_range = {
+			#	id = GEH_ako_love_balance
+			#	range < 80
+			#}
 		}
 
 		cost = 5
@@ -747,10 +747,10 @@ GEH_ako_love_balance_category = {
 		fire_only_once = no
 
 		available = {
-			is_power_balance_in_range = {
-				id = GEH_ako_love_balance
-				range < 80
-			}
+			#is_power_balance_in_range = {
+			#	id = GEH_ako_love_balance
+			#	range < 80
+			#}
 		}
 
 		ai_will_do = {
@@ -783,10 +783,10 @@ GEH_ako_love_balance_category = {
 		fire_only_once = no
 
 		available = {
-			is_power_balance_in_range = {
-				id = GEH_ako_love_balance
-				range < 80
-			}
+			#is_power_balance_in_range = {
+			#	id = GEH_ako_love_balance
+			#	range < 80
+			#}
 		}
 
 		ai_will_do = {
@@ -819,10 +819,10 @@ GEH_ako_love_balance_category = {
 		fire_only_once = no
 
 		available = {
-			is_power_balance_in_range = {
-				id = GEH_ako_love_balance
-				range > -80
-			}
+			#is_power_balance_in_range = {
+			#	id = GEH_ako_love_balance
+			#	range > -80
+			#}
 		}
 
 		ai_will_do = {
@@ -848,10 +848,10 @@ GEH_ako_love_balance_category = {
 		fire_only_once = no
 
 		available = {
-			is_power_balance_in_range = {
-				id = GEH_ako_love_balance
-				range > -80
-			}
+			#is_power_balance_in_range = {
+			#	id = GEH_ako_love_balance
+			#	range > -80
+			#}
 		}
 
 		ai_will_do = {
@@ -877,10 +877,10 @@ GEH_ako_love_balance_category = {
 		fire_only_once = no
 
 		available = {
-			is_power_balance_in_range = {
-				id = GEH_ako_love_balance
-				range > -80
-			}
+			#is_power_balance_in_range = {
+			#	id = GEH_ako_love_balance
+			#	range > -80
+			#}
 		}
 
 		ai_will_do = {
