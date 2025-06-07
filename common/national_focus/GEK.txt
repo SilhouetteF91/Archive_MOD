@@ -2559,9 +2559,11 @@ focus_tree = {
 				}
 				custom_effect_tooltip = war_aim_against_the_country_annex_tt
 				hidden_effect = {
-					create_wargoal = {
-						target = GEM
-						type = independence_wargoal
+					ROOT = {
+						create_wargoal = {
+							target = PREV
+							type = independence_wargoal
+						}
 					}
 				}
 			}
