@@ -107,6 +107,110 @@ country_event = { #자유조합연대의 새 지도자
 		}
 	}
 }
+country_event = { #노동조합 지원
+	id = shacom.6
+	title = shacom.6.t
+	desc = shacom.6.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #적색 노조
+		name = shacom.6.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+	option = { #가톨릭 노조
+		name = shacom.6.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+}
+country_event = { #현룡문의 운명
+	id = shacom.7
+	title = shacom.7.t
+	desc = shacom.7.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #가둬두자
+		name = shacom.7.a
+		retire_character = SHA_KISAKI
+		retire_character = SHA_MINA
+		add_stability = 0.05
+	}
+	option = { #노동은 교화다!
+		name = shacom.7.b
+		random_other_country = {
+			limit = {
+				original_tag = SHA
+			}
+			every_unit_leader = {
+				limit = {
+					has_trait = SHA_Genryumon_t 
+				}
+				set_nationality = SHA
+			}
+		}
+		add_stability = -0.05
+	}
+}
+country_event = { #프롤레타리아 문화양식
+	id = shacom.8
+	title = shacom.8.t
+	desc = shacom.8.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #붉은 경극부
+		name = shacom.8.a
+		swap_ideas = {
+			remove_idea = SHA_Peking_Opera
+			add_idea = SHA_Peking_Opera_socialism
+		}
+	}
+}
+country_event = { #공공돌봄
+	id = shacom.9
+	title = shacom.9.t
+	desc = shacom.9.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.9.a
+		if = {
+			limit = {
+				has_idea = SHA_aoghkdnjs_idea
+			}
+			swap_ideas = {
+				remove_idea = SHA_aoghkdnjs_idea
+				add_idea = SHA_soc_aoghkdnjs_idea
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = SHA_Plum_Garden_Military_academy_idea
+				add_idea = SHA_soc_Plum_Garden_Military_academy_idea
+			}
+		}
+	}
+}
 
 # 경극부 쿠데타
 country_event = {

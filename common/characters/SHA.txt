@@ -46,6 +46,9 @@ characters={
 			}
 			available = { 
 				SHA_KISAKI = { is_country_leader = no }
+				NOT = {
+					has_government = communism
+				}
 			}
 			cost = 150
 			ai_will_do = {

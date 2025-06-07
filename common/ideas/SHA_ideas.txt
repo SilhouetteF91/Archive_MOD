@@ -36,6 +36,17 @@ ideas = {
 	}
 	country = {
 		#공산
+		SHA_threats_around = { #주변의 위협
+			picture = MEX_revolutionary_army
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				war_support_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+			}
+		}
 		SHA_austro_marxism_1 = { #오스트로 맑시즘
 			name = SHA_austro_marxism
 			picture = AUS_austromarxism
@@ -882,6 +893,15 @@ ideas = {
 				neutrality_drift = 0.1
 			}
 		}
+		# 경극부 - 공산 혁명
+		SHA_Peking_Opera_socialism = {
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = SHA_Peking_Opera
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
 		# 연단방
 		SHA_Eastern_Alchemy_Society_super_low = {
 			picture = SHA_IdeaG_11
@@ -1207,6 +1227,56 @@ ideas = {
 				communism_drift = 0.1
 			}
 		}
+
+		#현지 화합
+		SHA_local_harmony = {
+			name = SHA_local_harmony
+			picture = AUS_farr
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+
+		#현지 화합 - 노조
+		SHA_local_harmony_tu = {
+			name = SHA_local_harmony
+			picture = AUS_farr
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		#현지 화합 - 여성교육
+		SHA_local_harmony_we = {
+			name = SHA_local_harmony
+			picture = AUS_farr
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.025
+			}
+		}
+
+		#현지 화합 - 위에 두 개 다 합친 효과
+		SHA_local_harmony_tuwe = {
+			name = SHA_local_harmony
+			picture = AUS_farr
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.025
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
 		
 		# 오스트리아 실업자 문제
 		SHA_austria_unemployment_problem = {
@@ -1317,6 +1387,41 @@ ideas = {
 				army_leader_start_attack_level = 1
 				army_leader_start_defense_level = 1
 				army_leader_cost_factor = -0.5
+			}
+		}
+
+		#'사회주의' 매화원
+		SHA_soc_aoghkdnjs_idea = {
+			picture = SHA_IdeaG_4
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				experience_gain_army_factor = -0.40
+				army_leader_start_level = 1 
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_cost_factor = -0.5
+				monthly_population = 0.1
+				communism_drift = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		
+		# '사회주의' 매화원 - 사관학교 설립
+		SHA_soc_Plum_Garden_Military_academy_idea = { 
+			picture = SHA_IdeaG_4
+			name = SHA_soc_aoghkdnjs_idea
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				experience_gain_army_factor = -0.2
+				army_leader_start_level = 1 
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_cost_factor = -0.5
+				monthly_population = 0.1
+				communism_drift = 0.05
+				production_factory_start_efficiency_factor = 0.05
 			}
 		}
 		

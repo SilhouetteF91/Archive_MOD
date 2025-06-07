@@ -1364,13 +1364,6 @@ focus_tree = {
 		prerequisite = { focus = SHA_Austrian_appeasement_policy }
 		mutually_exclusive = { focus = SHA_gathering_of_radicals }
 
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = GAEBALJUNG
-				is_debug = yes
-				is_ai = no
-			}
-		}
 		bypass = { }
 		allow_branch = {
 			IF = {
@@ -1400,7 +1393,7 @@ focus_tree = {
 		relative_position_id = SHA_Austrian_appeasement_policy
 
 		completion_reward = {
-			add_stability = 0.05
+			add_ideas = SHA_local_harmony
 				if = {
 					limit = {
 						has_game_rule = {
@@ -1709,14 +1702,51 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_1
 
 		completion_reward = {
-			remove_ideas = SHA_Austrian_fascist_militia
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
+			custom_effect_tooltip = SHA_communism_focus_2_tt
+			if = {
+				limit = {
+					OR = {
+						has_civil_war = yes
+						AND = {
+							has_civil_war = no
+							has_government = communism
+						}
+					}
+				}
+				division_template = {
+					name = "Shanhaijing Red Guard"
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+					}
+				}
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Shanhaijing Red Guard\" division_template = \"Shanhaijing Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = RED
+						count = 5
+					}
+				}
 			}
-			add_stability = -0.15
-			add_war_support = -0.15
-			add_manpower = -500
 		}
 	}
 	focus = { #평의회 운동 재개
@@ -1867,6 +1897,59 @@ focus_tree = {
 				}
 				size = 0.5
 				set_cosmetic_tag = SHA_color
+				hidden_effect = {
+					every_unit_leader = {
+						set_nationality = SHA
+					}
+					SHA = {
+						every_unit_leader = {
+							limit = {
+								has_trait = SHA_Genryumon_t 
+							}
+							set_nationality = PREV.PREV
+						}
+					}
+					SHA_KISAKI = {
+						promote_leader = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = SHA_communism_focus_2
+				}
+				division_template = {
+					name = "Shanhaijing Red Guard"
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Shanhaijing Red Guard\" division_template = \"Shanhaijing Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = RED
+						count = 5
+					}
+				}
 			}
 		}
 	}
@@ -1877,17 +1960,22 @@ focus_tree = {
 		y = 2
 		cost = 5
 
-		prerequisite = { focus = SHA_communism_focus_2 }
-		prerequisite = { focus = SHA_communism_focus_6 focus = SHA_communism_focus_7 }
+		prerequisite = { focus = SHA_communism_focus_6 focus = SHA_communism_focus_7 focus = SHA_communism_focus_2 }
 		bypass = { }
 		available = {
 			has_civil_war = no
 			has_government = communism
 		}
+		select_effect = {
+			country_event = {
+				id = shacom.7
+				days = 10
+			}
+		}
 		relative_position_id = SHA_communism_focus_2
 
 		completion_reward = {
-
+			remove_ideas = SHA_shanhaijing_isolation
 		}
 	}
 	focus = { #국제주의 대오
@@ -1904,7 +1992,9 @@ focus_tree = {
 			focus = SHA_communism_focus_12
 		}
 		completion_reward = {
-
+			SOU = {
+				country_event = generic.2
+			}
 		}
 	}
 	focus = { #산해경-소련 산업 연계
@@ -1919,7 +2009,30 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_9
 
 		completion_reward = {
-
+			SOU = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = SOU
+						infrastructure > 2
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SHA
+					infrastructure > 2
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
 		}
 	}
 	focus = { #소련 군사고문단
@@ -1952,7 +2065,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = SHA_threats_around
 		}
 	}
 	focus = { #사회 개조
@@ -1965,9 +2078,23 @@ focus_tree = {
 		prerequisite = { focus = SHA_communism_focus_12 focus = SHA_communism_focus_9 }
 		bypass = { }
 		relative_position_id = SHA_communism_focus_12
+		cancelable = no
+		select_effect = {
+			
+		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
+			country_event = {
+				id = shacom.8
+				days = 15
+			}
+			country_event = {
+				id = shacom.9
+				days = 30
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			add_stability = -0.05
 		}
 	}
 	focus = { #생산수단 사회화
@@ -1982,7 +2109,6 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_13
 
 		completion_reward = {
-
 		}
 	}
 	focus = { #경제 계획
@@ -2193,7 +2319,27 @@ focus_tree = {
 		relative_position_id = SHA_university_of_vienna
 
 		completion_reward = {
-
+			if = {
+				limit = {
+					has_idea = SHA_local_harmony
+				}
+				swap_ideas = {
+					remove_idea = SHA_local_harmony
+					add_idea = SHA_local_harmony_tu
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SHA_local_harmony_we
+					add_idea = SHA_local_harmony_tuwe
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = shacom.6
+					days = 6
+				}
+			}
 		}
 	}
 
@@ -2217,7 +2363,21 @@ focus_tree = {
 		relative_position_id = SHA_university_of_vienna
 
 		completion_reward = {
-
+			if = {
+				limit = {
+					has_idea = SHA_local_harmony
+				}
+				swap_ideas = {
+					remove_idea = SHA_local_harmony
+					add_idea = SHA_local_harmony_we
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SHA_local_harmony_tu
+					add_idea = SHA_local_harmony_tuwe
+				}
+			}
 		}
 	}
 
