@@ -266,12 +266,9 @@ add_ideas = {
 	GEH_german_nationalism_issue_2
 	BA_a_divided_academy
 	GEM_geh_leadership
+	GEM_maginot_line_french_army
 }
 
-declare_war_on = {
-	target = FRM
-	type = annex_everything
-}
 add_intel = {
     target = GEH
     civilian_intel = 100

@@ -10,7 +10,7 @@ state={
 	}
 
 	history={
-		owner = FRM
+		owner = GEM
 		controller = GEM
 		add_core_of = FRM
 		add_dynamic_modifier = {

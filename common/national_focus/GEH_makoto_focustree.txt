@@ -1213,6 +1213,12 @@ focus_tree = {
 				limit = { has_idea = GEH_Emergency }
 				remove_ideas = GEH_Emergency
 			}
+			58 = {
+				set_demilitarized_zone = no
+			}
+			909 = {
+				set_demilitarized_zone = no
+			}
 		}
 
 	}
@@ -1259,6 +1265,12 @@ focus_tree = {
 					modifier = GEH_ucantusefactory_2
 				}
 				set_state_flag = GEK_state_flag
+			}
+			58 = {
+				set_demilitarized_zone = no
+			}
+			909 = {
+				set_demilitarized_zone = no
 			}
 		}
 

@@ -1,6 +1,25 @@
 add_namespace = FRA_prov_event
 add_namespace = FRA_recover
 add_namespace = FRA_free_france_event
+add_namespace = FRM_event
+country_event = {
+	id = FRM_event.1
+	title = FRM_event.1.t
+	desc = FRM_event.1.d
+	picture = GFX_report_event_bunker_01
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = FRM_event.1.a
+	}
+	option = {
+		name = FRM_event.1.b
+		declare_war_on = {
+			target = FRM
+			type = annex_everything
+		}
+	}
+}
 country_event = {
 	id = FRA_prov_event.2000
 	title = FRA_prov_event.2000.t

@@ -1316,6 +1316,98 @@ ideas = {
 			}
 		}
 
+		GEM_maginot_line_french_army = { #마지노선의 프랑스군
+			picture = FRM_defeatism_idea
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				OR = {
+					AND = {
+						NOT = {
+							controls_state = 28
+							controls_state = 1023
+						}
+					}
+					surrender_progress > 0.24
+				}
+			}
+
+			on_remove = {
+				if = {
+					limit = {
+						surrender_progress > 0.24
+					}
+
+					28 = {
+						if = {
+							limit = {
+								is_owned_by = ROOT
+								is_controlled_by = ROOT
+							}
+						}
+						transfer_state_to = FRM
+						create_unit = {
+							division = "name = \"27. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.2"
+							owner = FRM
+						}
+						create_unit = {
+							division = "name = \"65. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.7"
+							owner = FRM
+						}
+					}
+					
+					1023 = {
+						if = {
+							limit = {
+								is_owned_by = ROOT
+								is_controlled_by = ROOT
+							}
+						}
+						transfer_state_to = FRM
+						create_unit = {
+							division = "name = \"7. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+							owner = FRM
+						}
+						create_unit = {
+							division = "name = \"11. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.5"
+							owner = FRM
+						}
+					}
+
+					if = {
+						limit = {
+							country_exists = FRM
+						}
+						ROOT = { country_event = FRM_event.1 }
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.02
+				experience_gain_army_factor = -0.02
+				custom_modifier_tooltip = GEM_maginot_line_french_army_tt
+			}
+
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = -0.05
+			}
+
+			targeted_modifier = {
+				tag = FRM
+				attack_bonus_against = -0.05
+			}
+		}
+
 		GEM_geh_leadership = { #선도부의 치안 유지
 			picture = GEH_prefect_team_armband
 			allowed = {

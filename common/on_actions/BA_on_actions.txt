@@ -331,12 +331,6 @@ on_actions = {
 					id = MEX_tutorial.0
 				}
 			}
-			FRM = {
-				become_exiled_in = {
-					target = FRA
-					legitimacy = 5
-				}
-			}
 			NSD = {
 				become_exiled_in = {
 					target = ARI
