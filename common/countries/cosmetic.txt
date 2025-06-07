@@ -2768,6 +2768,18 @@ COU_BEL_WALLONIE_NATIONAL_STATE = {
 	color = rgb { 199 187 0 }
 	color_ui = rgb { 209 140 10 }
 }
+GEH_hina_empire = {
+	color = rgb { 114 16 108 }
+	color_ui = rgb { 114 16 108 }
+}
+GEH_republic = {
+	color = rgb { 173 42 125 }
+	color_ui = rgb { 173 42 125 }
+}
+GEH_art_academy = {
+	color = rgb { 227 74 69 }
+	color_ui = rgb { 227 74 69 }
+}
 GEH_revolutionary_government = {
 	color = HSV { 0.95 0.95 0.87 }
 	color_ui = rgb { 10 15 70 }
