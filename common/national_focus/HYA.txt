@@ -362,7 +362,7 @@ focus_tree = {
 	focus = { #
 		relative_position_id = HYA_focus_12
 		id = HYA_focus_16
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_goal_HYA_Draft_Expansion
 		prerequisite = { focus = HYA_focus_12 }
 		prerequisite = { focus = HYA_focus_31 }
 		#mutually_exclusive = { focus = HYA_focus_ }
@@ -945,10 +945,10 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
+	focus = { # 군사개혁
 		relative_position_id = HYA_focus_6
 		id = HYA_focus_31
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_goal_HYA_military_reform
 		prerequisite = { focus = HYA_focus_6 }
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 2
@@ -4786,7 +4786,7 @@ focus_tree = {
 
 	focus = {
 		id = HYA_focus_124
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_goal_HYA_twilight_Ayame
 		prerequisite = { focus = HYA_focus_121 }
 		prerequisite = { focus = HYA_focus_122 }
 		x = 1

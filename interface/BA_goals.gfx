@@ -3001,6 +3001,21 @@ spriteTypes = {
 		textureFile = "gfx/interface/goals/HYA/HYA_Arata.tga"
 	}
 
+	spriteType = {
+		name = "GFX_goal_HYA_military_reform"
+		textureFile = "gfx/interface/goals/HYA/HYA_military_reform.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_twilight_Ayame"
+		textureFile = "gfx/interface/goals/HYA/HYA_twilight_Ayame.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Draft_Expansion"
+		textureFile = "gfx/interface/goals/HYA/HYA_Draft_Expansion.tga"
+	}
+
 	#색채
 	spriteType = {
 		name = "GFX_goal_GEI_invasion"
