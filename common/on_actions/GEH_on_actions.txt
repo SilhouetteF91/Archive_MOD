@@ -15,7 +15,10 @@ on_actions = {
 					# AI 선도부 루트 설정
 					if = {
 						limit = {
-							GEM = { is_ai = yes }
+							has_game_rule = {
+                        	    rule = GEH_ai_behavior
+                        	    option = DEFAULT
+                        	}
 							tag = GEH
 						}
 						random_list = {
@@ -43,20 +46,50 @@ on_actions = {
 					}
 					else_if = {
 						limit = {
-							GEM = { is_ai = no } #만마전이 플레이어임
+							has_game_rule = {
+                        	    rule = GEH_ai_behavior
+                        	    option = GEH_HINA_AI_BEHAVIOR
+                        	}
 							tag = GEH
 						}
-						random_list = {
-							10 = {
-								set_variable = {
-									GEH_route_random = 0 # 히나 독재정
-								}
-							}
-							10 = {
-								set_variable = {
-									GEH_route_random = 2 # 아코 루트
-								}
-							}
+						set_variable = {
+							GEH_route_random = 0 # 히나 독재정
+						}
+					}
+					else_if = {
+						limit = {
+							has_game_rule = {
+                        	    rule = GEH_ai_behavior
+                        	    option = GEH_IORI_AI_BEHAVIOR
+                        	}
+							tag = GEH
+						}
+						set_variable = {
+							GEH_route_random = 1 # 이오리 루트
+						}
+					}
+					else_if = {
+						limit = {
+							has_game_rule = {
+                        	    rule = GEH_ai_behavior
+                        	    option = GEH_AKO_AI_BEHAVIOR
+                        	}
+							tag = GEH
+						}
+						set_variable = {
+							GEH_route_random = 2 # 아코 루트
+						}
+					}
+					else_if = {
+						limit = {
+							has_game_rule = {
+                        	    rule = GEH_ai_behavior
+                        	    option = GEH_GENERIC_AI_BEHAVIOR
+                        	}
+							tag = GEH
+						}
+						set_variable = {
+							GEH_route_random = 3 # 기본 루트
 						}
 					}
 				}
