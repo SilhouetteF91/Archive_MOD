@@ -402,6 +402,130 @@ SHA_congress = {
 	}
 }
 
+SHA_senzu_bean_categories = {
+	SHA_senzu_bean_experiment = {
+		icon = GFX_decision_generic_research
+		available = {
+		}
+		visible = {
+
+		}
+		days_remove = -1
+		cancel_trigger = {
+			has_completed_focus = SHA_Seonin
+		}
+		fire_only_once = no 
+		cost = 35
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		modifier = {
+			power_balance_weekly = 0.005
+		}
+	}
+	SHA_senzu_bean_unethical_experiment = {
+		icon = GFX_decision_generic_research
+		available = {
+		}
+		visible = {
+
+		}
+		days_remove = 30
+		fire_only_once = no 
+		cost = 30
+
+		complete_effect = {
+			add_stability = -0.03
+		} 
+		remove_effect = {
+        		add_power_balance_value = {
+        		    id = SHA_senzu_bean_pb
+        		    value = 0.03
+        		    tooltip_side = SHA_bean_100_side
+        		}
+		}
+	}
+	SHA_senzu_bean_budget_increase = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		available = {
+		}
+		visible = {
+
+		}
+		days_remove = 30
+		fire_only_once = no 
+		cost = 30
+
+		complete_effect = {
+			
+		}
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+		remove_effect = {
+        		add_power_balance_value = {
+        		    id = SHA_senzu_bean_pb
+        		    value = 0.03
+        		    tooltip_side = SHA_bean_100_side
+        		}
+		}
+	}
+	SHA_senzu_bean_herbalism = {
+		icon = GFX_decision_generic_independence
+		available = {
+		}
+		visible = {
+
+		}
+		days_remove = 30
+		fire_only_once = no 
+		cost = 30
+
+		complete_effect = {
+			
+		}
+		modifier = {
+			political_power_factor = -0.1
+		}
+		remove_effect = {
+        		add_power_balance_value = {
+        		    id = SHA_senzu_bean_pb
+        		    value = 0.01
+        		    tooltip_side = SHA_bean_100_side
+        		}
+		}
+	}
+	SHA_senzu_bean_clinical_trials = {
+		icon = GFX_decision_generic_independence
+		available = {
+		}
+		visible = {
+
+		}
+		days_remove = 30
+		fire_only_once = no 
+		cost = 30
+
+		complete_effect = {
+			
+		}
+		modifier = {
+			political_power_factor = -0.1
+		}
+		remove_effect = {
+        		add_power_balance_value = {
+        		    id = SHA_senzu_bean_pb
+        		    value = 0.01
+        		    tooltip_side = SHA_bean_100_side
+        		}
+		}
+	}
+	
+}
+
+
 SHA_coup_of_Black_Tortoise_Promenade = {
 
 	SHA_BTP_revolt_mission = {

@@ -9721,10 +9721,7 @@ country_event = { # 보안국 재편
 		name = trinity.35.a
 		IF = {
 			limit = { has_intelligence_agency = no }
-			create_intelligence_agency = {
-				name = TRM_security_service_of_the_trinity
-				icon = GFX_intelligence_agency_logo_generic_6
-			}
+			create_intelligence_agency = yes
 			else = { gain_random_agency_upgrade = yes }
 		}
 		hidden_effect = {

@@ -795,7 +795,7 @@ focus_tree = {
 	# 선단 투여
 	focus = {
 		id = SHA_Sundan_dosage
-		icon = GFX_focus_generic_coffee
+		icon = GFX_focus_SHA_Sundan_dosage
 		x = -1
 		y = 1
 		relative_position_id = SHA_Eastern_Alchemy_Society_solidarity
@@ -814,7 +814,17 @@ focus_tree = {
 
 
 		completion_reward = {
+			country_event = shakai.1
+			custom_effect_tooltip = SHA_Sundan_dosage_tt
+			hidden_effect = {
+				set_power_balance = {
+					id = SHA_senzu_bean_pb
+					left_side = SHA_bean_0_side
+					right_side = SHA_bean_100_side
 
+					set_value = -1
+				}
+			}
 		}
 	}
 
@@ -871,7 +881,7 @@ focus_tree = {
 	# 
 	focus = {
 		id = SHA_Seonin
-		icon = GFX_focus_SHA_cavalry_charge
+		icon = GFX_focus_SHA_Seonin
 		x = 0
 		y = 3
 		relative_position_id = SHA_cult_of_personality
@@ -884,11 +894,15 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			is_debug = yes
-			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+
 		}
 
-		available = { }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SHA_seonin_custom_trigger
+				has_country_flag = SHA_bean_is_100
+			}
+		}
 		bypass = { }
 
 

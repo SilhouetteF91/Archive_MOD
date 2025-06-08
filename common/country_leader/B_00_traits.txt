@@ -3403,6 +3403,7 @@ leader_traits = {
 		fascism_drift = 0.1
 		master_ideology_drift = 0.1
 		puppet_cost_factor = -0.2
+		annex_cost_factor = -0.2
 	}
 	# 백귀야행
 	HYA_T1a = { #낙천적인 음양부장

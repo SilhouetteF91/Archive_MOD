@@ -2157,6 +2157,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SHA/focus_SHA_Shanhaijing_fascism.tga"  
 	}
 	SpriteType = {
+		name = "GFX_focus_SHA_Sundan_dosage"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_Sundan_dosage.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_SHA_Seonin"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_Seonin.tga"  
+	}
+	SpriteType = {
 		name = "GFX_focus_SHA_fall_of_dragon"
 		texturefile = "gfx/interface/goals/SHA/focus_SHA_fall_of_dragon.tga"  
 	}

@@ -190,7 +190,7 @@ characters={
 				SHA_T4a
 			}
 			available = {
-				SHA_KAI = { is_country_leader = no }
+				NOT = { has_character_flag = SHA_lock_flag }
 			}
 			cost = 150
 			ai_will_do = {
