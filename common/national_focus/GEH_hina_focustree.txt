@@ -2477,6 +2477,14 @@ focus_tree = {
 				country_event = { id = GEH.event.4 }
 				country_event = { id = GEH.event.5 days = 10 }
 			}
+
+			if = {
+				limit = {
+					NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+				}
+				unlock_decision_tooltip = GEH_ako_democratic_system_meeting_with_SPD
+				unlock_decision_tooltip = GEH_ako_democratic_system_meeting_with_capitalists
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -6333,7 +6341,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = GEH_amau_administrative_officer_tt
 
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
 		}
 	}
 
@@ -6371,7 +6384,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_political_advisor_cost_factor = -0.1
+				tooltip = political_advisor_cost_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_drift_defence_factor = 0.05
+				tooltip = drift_defence_factor_tt
+			}
 		}
 	}
 	
@@ -6405,7 +6426,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 
@@ -6439,7 +6464,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_research_speed_factor = 0.03
+				tooltip = research_speed_factor_tt
+			}
 		}
 	}
 	
@@ -6473,7 +6502,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 2
+				uses = 1
+				category = rocketry
+			}
+			
+			mio:GEK_junkers_organization = {
+				add_mio_size = 1
+				add_mio_research_bonus = 0.05
+			}
 		}
 	}
 
@@ -6549,7 +6588,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_drift_defence_factor = -0.05
+				tooltip = drift_defence_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_production_lack_of_resource_penalty_factor = -0.1
+				tooltip = production_lack_of_resource_penalty_factor_tt
+			}
 		}
 	}
 
@@ -6706,7 +6753,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			add_ideas = GEH_intelligence_reform
 		}
 	}
 	
@@ -6720,7 +6767,10 @@ focus_tree = {
 		y = 2
 
 		available = {
-
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_law_available_pro_german_tt
+				check_variable = { GEH_ako_democratic_var < 3 }
+			}
 		}
 
         prerequisite = {
@@ -6748,7 +6798,14 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			60 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -6782,7 +6839,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			add_ideas = GEH_with_SPD
 		}
 	}
 
@@ -6816,7 +6873,11 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			custom_effect_tooltip = GEH_planning_department_idea_tt
+			add_to_variable = {
+				GEH_PL_line_change_production_efficiency_factor = 0.1
+				tooltip = line_change_production_efficiency_factor_tt
+			}
 		}
 	}
 
@@ -6830,7 +6891,10 @@ focus_tree = {
 		y = 2
 
 		available = {
-
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_constitution_law_available_pro_kivotos_tt
+				check_variable = { GEH_ako_democratic_var > -3 }
+			}
 		}
 
         prerequisite = {
@@ -6858,7 +6922,14 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			64 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -6892,7 +6963,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			add_ideas = GEH_with_trinity
 		}
 	}
 
@@ -6926,7 +6997,11 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			custom_effect_tooltip = GEH_planning_department_idea_tt
+			add_to_variable = {
+				GEH_PL_production_factory_start_efficiency_factor = 0.1
+				tooltip = production_factory_start_efficiency_factor_tt
+			}
 		}
 	}
 	
@@ -6964,8 +7039,15 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = GEH_ako_sorasaki_administrative_officer_tt
+
 			hidden_effect = {
 				news_event = { id = GEH_news.10 }
+			}
+
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
 			}
 
 			GEH_dkzh = {
@@ -7005,7 +7087,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_production_speed_industrial_complex_factor = 0.05
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
 		}
 	}
 	
@@ -7039,7 +7129,30 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+			
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.5
+			}
+			
+			mio:GEK_junkers_organization = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.15
+			}
+			
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_research_speed_factor = 0.03
+				tooltip = research_speed_factor_tt
+			}
 		}
 	}
 	

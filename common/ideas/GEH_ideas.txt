@@ -2721,6 +2721,105 @@ ideas = {
 				democratic_drift = 0.04
 			}
 		}
+
+		## 아코-히나 러브라인 4차총회
+		
+		GEH_intelligence_reform = {
+			removal_cost = -1
+
+			picture = generic_spy_intel
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				civilian_intel_to_others = -20.0
+				army_intel_to_others = -10.0
+				navy_intel_to_others = -10.0
+				airforce_intel_to_others = -10.0
+				intelligence_agency_defense = 0.2
+				ENEMY_OPERATIVE_CAPTURE_CHANCE_FACTOR = 0.05
+				agency_upgrade_time = 1
+			}
+		}
+		
+		GEH_with_SPD = {
+			removal_cost = -1
+
+			picture = generic_local_self_management
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				democratic_drift = 0.04
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				local_resources_factor = 0.15
+			}
+		}
+		
+		GEH_with_trinity = {
+			removal_cost = -1
+
+			picture = TRM_icon
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				democratic_drift = 0.04
+				local_resources_factor = 0.1
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+
+
 	}
 	
 	industrial_concern = {
