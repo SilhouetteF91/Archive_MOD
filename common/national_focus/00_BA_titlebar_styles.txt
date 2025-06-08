@@ -8,6 +8,16 @@ style = {
 	current = GFX_focus_current_fucking
 }
 
+# 머티리얼 디자인 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+style = {
+	name = material_design_focus_style
+
+	unavailable = GFX_focus_unavailable_material_design
+	completed = GFX_focus_completed_material_design
+	available = GFX_focus_can_start_material_design
+	current = GFX_focus_current_material_design
+}
+
 # 붉겨 - 방위위원회
 style = {
 	name = REDWINTER_RE4_focus_style

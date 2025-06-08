@@ -1,5 +1,9 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_focus_material_design_1"
+		texturefile = "gfx/interface/goals/material_design/material_design_1.tga"
+	}
+	spriteType = {
 		name = "GFX_focus_idea_KSP_tlsfhldhkdndo"
 		texturefile = "gfx/interface/ideas/HEU/신뢰와우애.tga"
 	}

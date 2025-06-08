@@ -1497,7 +1497,9 @@ focus_tree = {
 	}
 	focus = {
 		id = GEM_ruler_of_gehenna
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_material_design_1
+
+		text_icon = material_design_focus_style
 		cost = 5
 		prerequisite = {
 			focus = GEM_maintaining_dictatorship
