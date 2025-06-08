@@ -3579,6 +3579,15 @@ leader_traits = {
 		offensive_war_stability_factor = 0.10
 		defensive_war_stability_factor = 0.10
 	}
+	HYA_hyakkaryouran_resolution_council_deputy = { #백화요란 분쟁조정위원회의 부장 대리
+		random = no
+	}
+	HYA_Maternal_Torojaemon = { #화조풍월부 산모토 고로자에몬의 부장
+		random = no
+	}
+	HYA_Mangryangz = { #망량즈의 리더
+		random = no
+	}
 	SRT_T1a = { #RABBIT 소대의 소대장
 		random = no
 		sprite = 13

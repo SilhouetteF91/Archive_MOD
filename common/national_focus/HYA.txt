@@ -1137,10 +1137,10 @@ focus_tree = {
 			add_stability = 0.10
 		}
 	}
-	focus = { #
+	focus = { # 연합학원의 상황
 		#relative_position_id = HYA_focus_
 		id = HYA_focus_1
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_HYA_Situation_Academy
 		#prerequisite = { focus = HYA_focus_ }
 		mutually_exclusive = { focus = HYA_focus_70 }
 		x = 31
@@ -2243,10 +2243,10 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #
+	focus = { # 백귀야행 체제 타도
 		#relative_position_id = HYA_focus_
 		id = HYA_focus_70
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_goal_HYA_Overthrow_Regime
 		#prerequisite = { focus = HYA_focus_ }
 		mutually_exclusive = { focus = HYA_focus_1 }
 		x = 45
