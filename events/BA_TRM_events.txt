@@ -7170,11 +7170,11 @@ country_event = {
 			}
 			modifier = {
 				controls_state = 56
-				factor = 2
+				factor = 4
 			}
 			modifier = {
 				controls_state = 59
-				factor = 2
+				factor = 4
 			}
 			modifier = {
 				controls_state = 55
@@ -7211,6 +7211,11 @@ country_event = {
 				FROM = { is_in_faction_with = ROOT }
 			}
 			remove_from_faction = FROM
+		} else_if = {
+			limit = {
+				FROM = { is_in_faction_with = ROOT }
+			}
+			leave_faction = yes
 		}
 		declare_war_on = {
 			target = FROM
