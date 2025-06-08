@@ -211,6 +211,38 @@ country_event = { #공공돌봄
 		}
 	}
 }
+country_event = { #주변의 위협
+	id = shacom.10
+	title = shacom.10.t
+	desc = shacom.10.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.10.a
+		add_war_support = 0.01
+	}
+}
+country_event = { #리히텐슈타인 장악
+	id = shacom.11
+	title = shacom.11.t
+	desc = shacom.11.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.11.a
+		848 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+}
 
 # 경극부 쿠데타
 country_event = {

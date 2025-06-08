@@ -36,6 +36,17 @@ ideas = {
 	}
 	country = {
 		#공산
+		SHA_revolutionary_isolationism = { #혁명적 고립주의
+			picture = SPR_crush_the_revolution
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.05
+				production_speed_infrastructure_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
 		SHA_threats_around = { #주변의 위협
 			picture = MEX_revolutionary_army
 			allowed_civil_war = {
@@ -45,6 +56,21 @@ ideas = {
 				war_support_factor = 0.05
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.1
+			}
+		}
+		SHA_austro_marxism_2 = { #오스트로 맑시즘
+			name = SHA_austro_marxism
+			picture = AUS_austromarxism
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				communism_drift = 0.05
+				industrial_capacity_dockyard = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				political_power_factor = 0.05
+				stability_factor = -0.05
+				consumer_goods_factor = -0.1
 			}
 		}
 		SHA_austro_marxism_1 = { #오스트로 맑시즘

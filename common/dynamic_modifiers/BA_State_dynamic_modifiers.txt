@@ -511,6 +511,12 @@ SHA_red_wien = { #붉은 빈
 	local_building_slots = 1
 }
 
+SHA_Naukograd = { #나우코그라드
+	icon = GFX_modifiers_SWE_hygienic_housing
+	state_production_speed_buildings_factor = -0.1
+	local_building_slots = 1
+}
+
 TRM_Military_occupation = {
 	icon = "GFX_decision_SWE_set_army_budget"
 
