@@ -4832,7 +4832,6 @@ TRN_after_war_decisions = {
 		}
 		available = {
 			#has_completed_focus = TRM_germany_union
-			has_stability > 0.6
 			NOT = { has_idea = TRM_anti_gehenna_idea }
 			GEM = {
 				all_core_state = {
