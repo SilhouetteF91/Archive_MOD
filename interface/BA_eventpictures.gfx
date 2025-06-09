@@ -1146,6 +1146,51 @@ spriteTypes = {
 		name = "GFX_report_event_hina_sorasaki_generic_2"
 		texturefile = "gfx/event_pictures/GEH/hina_sorasaki_generic_2.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_report_event_hina_sorasaki_date_1"
+		texturefile = "gfx/event_pictures/GEH/hina_sorasaki_date_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hina_sorasaki_smile_1"
+		texturefile = "gfx/event_pictures/GEH/hina_sorasaki_smile_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hina_sorasaki_date_2"
+		texturefile = "gfx/event_pictures/GEH/hina_sorasaki_date_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hina_sorasaki_wedding_1"
+		texturefile = "gfx/event_pictures/GEH/hina_sorasaki_wedding_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_iori_shiromi_generic_1"
+		texturefile = "gfx/event_pictures/GEH/iori_shiromi_generic_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_iori_shiromi_generic_2"
+		texturefile = "gfx/event_pictures/GEH/iori_shiromi_generic_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_iori_shiromi_generic_3"
+		texturefile = "gfx/event_pictures/GEH/iori_shiromi_generic_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_ako_amau_angry_1"
+		texturefile = "gfx/event_pictures/GEH/ako_amau_angry_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hina_sorasaki_dead_1"
+		texturefile = "gfx/event_pictures/GEH/hina_sorasaki_dead_1.dds"
+	}
 
 	spriteType = {
 		name = "GFX_news_event_GEH_news_ako_sorasaki"
