@@ -861,6 +861,7 @@
  GEH_ako_route_amau_ending_flag: "히나는 원만하게 아코의 사랑을 §Y거절§!했습니다."
  GEH_ako_route_ako_sorasaki_ending_flag: "히나는 아코의 사랑을 받아들이고 그녀의 §G연인§!이 되었습니다."
  GEH_ako_route_no_hina_ending_flag: "히나가 선도부장직을 사임한 뒤, 아코는 정신적인 §R한계§!에 다다랐습니다."
+ GEH_hina_dead_flag: "소라사키 히나는 §R사망§!했습니다."
 
  NextPhase.0.t: "기회"
  NextPhase.0.desc: "선도부장의 경고에도 불구하고 [GEM.GetName](은)는 국방군과의 협상을 계속 진행하고 있습니다. "

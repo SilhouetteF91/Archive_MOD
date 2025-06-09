@@ -8285,6 +8285,9 @@ focus_tree = {
 
 		completion_reward = {
             GEH_popular_support_up_effect = yes
+			hidden_effect = {
+				country_event = { id = GEH.event.1017 }
+			}
 		}
 	}
 	

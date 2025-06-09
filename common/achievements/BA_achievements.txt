@@ -344,3 +344,26 @@ HEU_coffee_and_aru_story = {
         has_completed_focus = HEU_germany_union
     }
 }
+
+GEH_detroit_police = {
+	possible = {
+		tag = GEH
+	}
+ 
+    happened = {
+		custom_trigger_tooltip = {
+			tooltip = GEH_detroit_police_DESC
+			check_variable = { geh_discipline_var > 99 }
+		}
+    }
+}
+
+GEH_hank_and_connor = {
+	possible = {
+		tag = GEH
+	}
+ 
+    happened = {
+		has_country_flag = GEH_hina_dead_flag
+    }
+}

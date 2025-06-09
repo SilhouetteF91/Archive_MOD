@@ -2647,7 +2647,7 @@ country_event = { #바알 사냥 - 1
 	title = GEH.event.1015.t
 	desc = GEH.event.1015.desc
 
-	picture = GFX_report_event_generic_riot
+	picture = GFX_report_event_ako_amau_angry_1
 
 	is_triggered_only = yes
 
@@ -2662,13 +2662,13 @@ country_event = { #바알 사냥 - 2
 	title = GEH.event.1016.t
 	desc = GEH.event.1016.desc
 
-	picture = GFX_report_event_generic_flowers
+	picture = GFX_report_event_hina_sorasaki_dead_1
 
 	is_triggered_only = yes
 
 	option = { 
 		name = GEH.event.1016.a
-
+		set_country_flag = GEH_hina_dead_flag
 	}
 }
 
