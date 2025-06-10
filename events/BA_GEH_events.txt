@@ -13,6 +13,8 @@ add_namespace = GEH_BTBOTS
 add_namespace = GEH.flavor_event
 #플레이버 이벤트 (아코)
 add_namespace = GEH.ako.flavor_event
+#스토리 이벤트 (아코)
+add_namespace = GEH.ako.story_event
 #기본 중점 이벤트
 add_namespace = GEH.event
 #전쟁 관련 이벤트
@@ -184,7 +186,7 @@ country_event = { # 1차 총회 개막
 	id = hina.4
 	title = hina.4.t
 	desc = hina.4.desc
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_prefect_team_mob_generic_2
 	
     is_triggered_only = yes
 	
@@ -237,7 +239,7 @@ country_event = { # 1차 총회 폐막
 	id = hina.5
 	title = hina.2.t
 	desc = hina.5.desc
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_prefect_team_mob_generic_4
 	
     is_triggered_only = yes
 	
@@ -264,7 +266,7 @@ country_event = { # 돌아온 안정
 	id = hina.6
 	title = hina.6.t
 	desc = hina.6.desc
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_prefect_team_mob_gun_2
 	
     is_triggered_only = yes
     fire_only_once = yes
@@ -335,7 +337,7 @@ country_event = { #
 	id = hina_assembly.1
 	title = hina_assembly.1.t
 	desc = hina_assembly.1.desc
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_iori_shiromi_generic_3
 	
     is_triggered_only = yes
 	
@@ -347,7 +349,7 @@ country_event = { #
 	id = hina_assembly.2
 	title = hina_assembly.2.t
 	desc = hina_assembly.2.desc
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_ako_amau_generic_2
 	
     is_triggered_only = yes
 	
@@ -372,7 +374,7 @@ country_event = { # 민간인 피해 복구, 근데 너무 많이 지원하지 �
 	id = hina_assembly.4
 	title = hina_assembly.4.t
 	desc = hina_assembly.4.desc
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_prefect_team_mob_generic_1
 	
     is_triggered_only = yes
     fire_only_once = yes
@@ -387,7 +389,7 @@ country_event = { # 국방군은 과연 괴멸 됐나?
 	id = hina_assembly.5
 	title = hina_assembly.5.t
 	desc = hina_assembly.5.desc
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_prefect_team_mob_gun_1
 	
     is_triggered_only = yes
     fire_only_once = yes
@@ -402,7 +404,7 @@ country_event = { # 사라진 총학생회장
 	id = hina_assembly.6
 	title = hina_assembly.6.t
 	desc = hina_assembly.6.desc
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_picture_pen_and_papeer
 	
     is_triggered_only = yes
     fire_only_once = yes
@@ -417,7 +419,7 @@ country_event = { # 수상한 만마전의 행동
 	id = hina_assembly.7
 	title = hina_assembly.7.t
 	desc = hina_assembly.7.desc
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_ako_amau_angry_1
 	
     is_triggered_only = yes
     fire_only_once = yes
@@ -435,7 +437,7 @@ country_event = { # 1차 총회 - 1
 	id = hina_assembly.8
 	title = hina_assembly.8.t
 	desc = hina_assembly.8.desc
-	picture = GFX_report_event_hitler_parade
+	picture = GFX_report_event_prefect_team_mob_generic_3
 	
     is_triggered_only = yes
 	
@@ -629,7 +631,7 @@ country_event = { # 1차 총회 - 3
 			NOT = { has_country_flag = hina_assembly_9_flag }
 		}
 	}
-	picture = GFX_report_event_hitler_parade
+	picture = GFX_report_event_iori_shiromi_generic_2
 	
     is_triggered_only = yes
 	
@@ -724,7 +726,7 @@ country_event = { # 1차 총회 - 4
 	id = hina_assembly.11
 	title = hina_assembly.11.t
 	desc = hina_assembly.11.desc
-	picture = GFX_report_event_hitler_parade
+	picture = GFX_report_event_prefect_team_mob_generic_1
 	
     is_triggered_only = yes
 	
@@ -820,7 +822,7 @@ country_event = { # 1차 총회 - 5
 	id = hina_assembly.12
 	title = hina_assembly.12.t
 	desc = hina_assembly.12.desc
-	picture = GFX_report_event_hitler_parade
+	picture = GFX_report_event_hina_sorasaki_smile_1
 	
     is_triggered_only = yes
 	
@@ -1416,7 +1418,7 @@ country_event = { # 아무튼 그 너구리의 탓이에요!
 	id = GEH.flavor_event.2
 	title = GEH.flavor_event.2.t
 	desc = GEH.flavor_event.2.desc
-	picture = GFX_report_event_generic_city
+	picture = GFX_report_event_ako_amau_angry_1
 	
     is_triggered_only = yes
 	
@@ -1430,7 +1432,7 @@ country_event = { # 아무튼 역대전이는 가능해요!
 	id = GEH.flavor_event.3
 	title = GEH.flavor_event.3.t
 	desc = GEH.flavor_event.3.desc
-	picture = GFX_report_event_generic_city
+	picture = GFX_report_event_ako_amau_generic_2
 	
     is_triggered_only = yes
 	
@@ -1542,7 +1544,7 @@ country_event = { # 선도부는 뭐 하는 거야?!
 	id = GEH.flavor_event.10
 	title = GEH.flavor_event.10.t
 	desc = GEH.flavor_event.10.desc
-	picture = GFX_report_event_generic_city
+	picture = GFX_report_event_iori_shiromi_generic_3
 	
     is_triggered_only = yes
 	
@@ -3354,6 +3356,27 @@ country_event = {
 	option = { 
 		name = GEH.ako.gov_event.5.a
 		
+	}
+}
+
+#메루리 동인지 문제
+country_event = { 
+	id = GEH.ako.story_event.7
+	title = GEH.ako.story_event.7.t
+	desc = GEH.ako.story_event.7.desc
+
+	picture = GFX_report_event_hina_sorasaki_date_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.7.a
+		add_command_power = -1
+	}
+
+	option = { 
+		name = GEH.ako.story_event.7.b
+		add_political_power = -1
 	}
 }
 
