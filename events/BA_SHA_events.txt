@@ -243,6 +243,90 @@ country_event = { #리히텐슈타인 장악
 				level = 1
 			}
 		}
+		hidden_effect = {
+			news_event = {
+				id = BA_news.20
+				days = 3
+			}
+		}
+	}
+}
+country_event = { #대중파업
+	id = shacom.12
+	title = shacom.12.t
+	desc = shacom.12.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.12.a
+		add_stability = -0.05
+		every_owned_state = {
+			set_demilitarized_zone = yes
+		}
+		add_ideas = strikes_3
+		hidden_effect = {
+			country_event = {
+				id = shacom.13
+				days = 18
+			}
+		}
+	}
+}
+country_event = { #파업의 승리
+	id = shacom.13
+	title = shacom.13.t
+	desc = shacom.13.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.13.a
+		remove_ideas = strikes_3
+		add_timed_idea = {
+			idea = SHA_aftermath_of_strike
+			days = 150
+		}
+		custom_effect_tooltip = CHL_skip_one_line_tt
+		every_owned_state = {
+			set_demilitarized_zone = no
+		}
+		set_politics = {
+			ruling_party = communism
+		}
+		set_cosmetic_tag = SHA_soviet
+		set_country_flag = SHA_communist_focus_in_progress
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+country_event = { #민족 자결의 원칙
+	id = shacom.14
+	title = shacom.14.t
+	desc = shacom.14.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.14.a
+		add_war_support = 0.05
+		every_neighbor_country = {
+			limit = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			add_opinion_modifier = {
+				target = SHA
+				modifier = RED_expansionism_opinion
+			}
+		}
+		set_autonomy = {
+			target = HYA
+			autonomy_state = autonomy_supervised_state
+		}
 	}
 }
 

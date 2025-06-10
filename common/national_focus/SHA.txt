@@ -1874,10 +1874,17 @@ focus_tree = {
 			communism > 0.4
 		}
 		completion_reward = {
-			set_politics = {
-				ruling_party = communism
+			hidden_effect = {
+				country_event = {
+					id = shacom.12
+					days = 2
+				}
 			}
-			set_cosmetic_tag = SHA_soviet
+			add_political_power = -100
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
 			if = {
 				limit = {
 					has_completed_focus = SHA_communism_focus_2
@@ -1915,8 +1922,6 @@ focus_tree = {
 					}
 				}
 			}
-			set_country_flag = SHA_communist_focus_in_progress
-			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = { #34년에 대한 복수
@@ -4706,7 +4711,7 @@ focus_tree = {
 		icon = GFX_focus_generic_support_the_left_right
 		x = 4
 		y = 1
-		cost = 10
+		cost = 2
 
 		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
 
@@ -4725,6 +4730,19 @@ focus_tree = {
 		relative_position_id = SHA_invade_of_Hyakkiyako
 
 		completion_reward = {
+			add_state_claim = 39
+			add_state_claim = 850
+			add_state_claim = 9
+			add_state_claim = 69
+			add_state_claim = 736
+			add_state_claim = 102
+			add_state_claim = 853
+			add_state_claim = 1017
+			add_state_claim = 852
+			country_event = {
+				id = shacom.14
+				days = 2
+			}
 		}
 	}
 	# 주데텐란트 영유권
@@ -4733,17 +4751,26 @@ focus_tree = {
 		icon = GFX_focus_attack_ABY
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_principle_of_national_self-determination_0 }
 
 		available = {
+			is_neighbor_of = ABY
 		}
-		bypass = { }
+		bypass = {
+			ABY = {
+				exists = no
+			}
+		}
 
 		relative_position_id = SHA_principle_of_national_self-determination_0
 
 		completion_reward = {
+			create_wargoal = {
+				target = ABY
+				type = take_claimed_state
+			}
 		}
 	}
 	# 자치 평의회 공화국 설립
@@ -4752,7 +4779,7 @@ focus_tree = {
 		icon = GFX_focus_GER_establish_volkskommissariats
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_principle_of_national_self-determination_0 }
 
@@ -4763,6 +4790,8 @@ focus_tree = {
 		relative_position_id = SHA_principle_of_national_self-determination_0
 
 		completion_reward = {
+			add_political_power = 30
+			unlock_decision_tooltip = SHA_establish_socialist_autonomy
 		}
 	}
 	# 평의회 원칙
@@ -6155,7 +6184,17 @@ focus_tree = {
 				country_event = shafas.7
 			}
 			hidden_effect = {
-				SHA_MINA = { unit_leader_event = shafas.7  }
+				if = {
+					limit = {
+						has_character = SHA_MINA
+					}
+					SHA_MINA = { unit_leader_event = shafas.7  }
+				}
+				else = {
+					SHA_REIJO = {
+						unit_leader_event = shafas.7
+					}
+				}
 			}
 		}
 	}
@@ -6176,7 +6215,9 @@ focus_tree = {
 		}
 		mutually_exclusive = { }
 
-		available = { }
+		available = {
+			has_character = SHA_MINA
+		}
 		bypass = { }
 
 

@@ -608,6 +608,7 @@ characters={
 		name = AUS_otto_bauer
 		portraits = {
 			civilian = {
+				large = "gfx/leaders/SHA/SHA_otto_bauer.dds"
 				small = "GFX_portrait_AUS_otto_bauer_small"
 			}
 		}

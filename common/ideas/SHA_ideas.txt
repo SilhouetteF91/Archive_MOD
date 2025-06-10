@@ -36,6 +36,30 @@ ideas = {
 	}
 	country = {
 		#공산
+		SHA_socialist_autonomy = { #자치평의회
+			picture = ger_the_great_red_menace
+			modifier = {
+				consumer_goods_factor = -0.1
+				mic_to_overlord_factor = 0.25
+				cic_to_overlord_factor = 0.25
+				army_org_factor = 0.05
+				army_morale_factor = 0.1
+				max_planning = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		SHA_aftermath_of_strike = { #파업의 여파
+			picture = FRA_factory_strikes
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				local_resources_factor = -0.2
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+		}
 		SHA_revolutionary_isolationism = { #혁명적 고립주의
 			picture = SPR_crush_the_revolution
 			allowed_civil_war = {

@@ -1,3 +1,53 @@
+SHA_communism_cat = {
+	SHA_establish_socialist_autonomy = {
+		icon = GFX_decision_BOL_establish_arica_department
+		on_map_mode = map_only
+		state_target = europe
+		visible = {
+			has_completed_focus = SHA_principle_of_national_self-determination_2
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = SHA_socialist_autonomy_flag
+				}
+				FROM.owner = {
+					is_subject_of = SHA
+				}
+
+				OR = {
+					AND = {
+						has_variable = historical_capital_for_country
+						var:historical_capital_for_country = {
+							exists = yes
+							has_capitulated = yes
+							NOT = { tag = ROOT }
+						}
+					}
+					AND = {
+						is_capital = yes
+						CONTROLLER = {
+							NOT = {
+								tag = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		days_remove = 50
+		complete_effect = {
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_supervised_state
+			}
+			FROM.owner = {
+				add_ideas = SHA_socialist_autonomy
+				set_country_flag = SHA_socialist_autonomy_flag
+			}
+		}
+	}
+}
 SHA_congress = {
 	SHA_congress_1 = {
 		cost = 30
