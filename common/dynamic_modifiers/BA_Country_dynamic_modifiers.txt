@@ -624,7 +624,6 @@ GEM_hot_spring_department_dynamic = {
 	political_power_cost = GEH_HSD_var_political_power_cost
 	consumer_goods_factor = GEH_HSD_var_consumer_goods_factor
 	production_speed_buildings_factor = GEH_HSD_var_production_speed_buildings_factor
-	GEH_resistance_strength_hot_spring_department = 2
 }
 
 GEM_gourmet_research_society_dynamic = {
@@ -635,7 +634,6 @@ GEM_gourmet_research_society_dynamic = {
 	conscription_factor = GEH_GRS_var_conscription_factor
 	research_speed_factor = GEH_GRS_var_research_speed_factor
 	resistance_target = GEH_GRS_var_resistance_target
-	GEH_resistance_strength_gourmet_research_society = 2
 }
 
 GEM_army_wehrmacht = { #게헨나군 - 국방군 루트, 사단 조직력, 회복력 및 교리 연구에 특화됨.

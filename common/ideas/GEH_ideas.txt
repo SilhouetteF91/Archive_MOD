@@ -1116,13 +1116,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_weekly = -0.02
-				surrender_limit = -0.30
-				political_power_cost = 1.00
-				
-				democratic_drift = 0.10	
-				consumer_goods_factor = 0.30
-				production_speed_buildings_factor = -0.35
+				GEH_resistance_strength_hot_spring_department = 4
 			}
 		}
 
@@ -1139,13 +1133,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_weekly = -0.015
-				surrender_limit = -0.20
-				political_power_cost = 0.50
-				
-				democratic_drift = 0.07	
-				consumer_goods_factor = 0.20
-				production_speed_buildings_factor = -0.25
+				GEH_resistance_strength_hot_spring_department = 3
 			}
 		}
 
@@ -1162,13 +1150,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_weekly = -0.005
-				surrender_limit = -0.10
-				political_power_cost = 0.25
-				
-				democratic_drift = 0.05
-				consumer_goods_factor = 0.10
-				production_speed_buildings_factor = -0.15
+				GEH_resistance_strength_hot_spring_department = 2
 			}
 		}
 
@@ -1185,10 +1167,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_cost = 0.10
-				
-				democratic_drift = 0.01
-				production_speed_buildings_factor = -0.05
+				GEH_resistance_strength_hot_spring_department = 1
 			}
 		}
 
@@ -1205,11 +1184,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.25
-				political_power_cost = 0.50
-
-				consumer_goods_factor = 0.15
-				production_speed_buildings_factor = -0.15
+				GEH_resistance_strength_hot_spring_department = 2
 			}
 		}
 
@@ -1226,11 +1201,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = -0.25
-				research_speed_factor = -0.40
-				resistance_target = 0.40
-				
-				communism_drift = 0.10
+				GEH_resistance_strength_gourmet_research_society = 4
 			}
 		}
 
@@ -1247,11 +1218,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = -0.20
-				research_speed_factor = -0.30
-				resistance_target = 0.30
-				
-				communism_drift = 0.07
+				GEH_resistance_strength_gourmet_research_society = 3
 			}
 		}
 
@@ -1268,11 +1235,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = -0.10
-				research_speed_factor = -0.20
-				resistance_target = 0.20
-
-				communism_drift = 0.05
+				GEH_resistance_strength_gourmet_research_society = 2
 			}
 		}
 
@@ -1289,11 +1252,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = -0.05
-				research_speed_factor = -0.10
-				resistance_target = 0.10
-
-				communism_drift = 0.01
+				GEH_resistance_strength_gourmet_research_society = 1
 			}
 		}
 
@@ -1310,9 +1269,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.25
-				research_speed_factor = -0.15
-				resistance_target = 0.15
+				GEH_resistance_strength_gourmet_research_society = 2
 			}
 		}
 

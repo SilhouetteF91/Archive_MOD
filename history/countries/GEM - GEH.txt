@@ -25,6 +25,22 @@ add_breakthrough_progress = {
 	value = 0.3
 }
 
+set_variable = { GEH_HSD_var_stability_factor = -0.08 }
+set_variable = { GEH_HSD_var_surrender_limit = -0.08 }
+set_variable = { GEH_HSD_var_political_power_cost = 0.06 }
+set_variable = { GEH_HSD_var_consumer_goods_factor = 0.10 }
+set_variable = { GEH_HSD_var_production_speed_buildings_factor = -0.10 }
+add_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic }
+	
+set_variable = { GEH_GRS_var_stability_factor = -0.08 }
+set_variable = { GEH_GRS_var_conscription_factor = -0.10 }
+set_variable = { GEH_GRS_var_research_speed_factor = -0.10 }
+set_variable = { GEH_GRS_var_resistance_target = 0.08 }
+add_dynamic_modifier = { modifier = GEM_gourmet_research_society_dynamic }
+
+set_variable = { gui_GEH_resistance_strength_hot_spring_department = 4 }
+set_variable = { gui_GEH_resistance_strength_gourmet_research_society = 4 }
+
 set_research_slots = 3
 set_stability = 0.05
 set_war_support = 1

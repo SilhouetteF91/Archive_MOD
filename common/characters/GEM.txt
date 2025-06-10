@@ -268,51 +268,15 @@ characters={
 				}
 			}
 			available = {
-				has_gourmet_research_society = yes
 			}
 			traits = {
-				b_dlsrldlTsmsaltlrrk
+				GEM_gourmet_research_society_trait
 			}
 			ai_will_do = {
 				factor = 24.000
 			}
 		}
 	}
-
-	GEH_Himuro_Sena = { # 히무로 세나
-		name=GEH_Himuro_Sena_name
-		portraits={
-			army={
-				large= "gfx/leaders/GEH/GEH_Himuro_Sena_Portrait.tga"
-				small="gfx/interface/advisors/GEH/GEH_Himuro_Sena_idea.tga"
-			}
-		}
-		gender = female
-		corps_commander={
-			traits={ medical_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=-1
-		}
-		advisor={	
-			slot = high_command
-			idea_token = GEH_Himuro_Sena_high_command
-			allowed = { OR = { original_tag = GEH original_tag = GEM original_tag = HEU } }
-			traits = { GEH_Emergency_Medicine_Sena_Club }
-			available = { 
-				OR = {
-					has_completed_focus = GEH_emergency_medicine_department_support 
-					has_completed_focus = HEU_emergency_medicine_department_support 
-				}
-			}
-			cost = 50
-			ai_will_do = { factor = 80.000 }
-		}
-	}
-
 	GEH_dkzkfl={ #아카리
 		name=GEH_dkzkfl
 		portraits={
@@ -385,7 +349,6 @@ characters={
 			}
 		}
 	}
-
 	GEH_wnszh={  # 준코
 		name=GEH_wnszh
 		portraits={
@@ -422,6 +385,103 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
+		}
+	}
+	
+	GEH_kinugawa_kasumi={ #카스미
+		name=GEH_kinugawa_kasumi
+		portraits={
+			army={
+				large="gfx/leaders/GEH/GEH_kinugawa_kasumi_portrait.tga"
+				small="gfx/interface/advisors/GEH/GEH_kinugawa_kasumi_idea.tga"
+			}
+		}
+		gender = female
+		country_leader={
+			ideology=technocracy
+			traits={  }
+			expire="1965.1.1.1"
+		}
+		corps_commander={
+			traits={ GEM_trait_hot_spring_department }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GEH_kinugawa_kasumi_political_advisor
+			allowed = { 
+				OR = { 
+					original_tag = GEH 
+					original_tag = GEM 
+					original_tag = HEU 
+				} 
+			}
+			available = {
+			}
+			traits = {
+				GEM_hot_spring_department_trait
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	GEH_shimokura_megu={ #메구
+		name=GEH_shimokura_megu
+		portraits={
+			army={
+				large="gfx/leaders/GEH/GEH_shimokura_megu_portrait.tga"
+				small="gfx/interface/advisors/GEH/megu.dds"
+			}
+		}
+		gender = female
+		corps_commander={
+			traits={ GEM_trait_hot_spring_department }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	GEH_Himuro_Sena = { # 히무로 세나
+		name=GEH_Himuro_Sena_name
+		portraits={
+			army={
+				large= "gfx/leaders/GEH/GEH_Himuro_Sena_Portrait.tga"
+				small="gfx/interface/advisors/GEH/GEH_Himuro_Sena_idea.tga"
+			}
+		}
+		gender = female
+		corps_commander={
+			traits={ medical_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+		advisor={	
+			slot = high_command
+			idea_token = GEH_Himuro_Sena_high_command
+			allowed = { OR = { original_tag = GEH original_tag = GEM original_tag = HEU } }
+			traits = { GEH_Emergency_Medicine_Sena_Club }
+			available = { 
+				OR = {
+					has_completed_focus = GEH_emergency_medicine_department_support 
+					has_completed_focus = HEU_emergency_medicine_department_support 
+				}
+			}
+			cost = 50
+			ai_will_do = { factor = 80.000 }
 		}
 	}
 
@@ -490,69 +550,6 @@ characters={
 			traits = { army_CombinedArms_1 }
 			cost = 50
 			ai_will_do = { factor = 1.000 }
-		}
-	}
-	GEH_kinugawa_kasumi={ #카스미
-		name=GEH_kinugawa_kasumi
-		portraits={
-			army={
-				large="gfx/leaders/GEH/GEH_kinugawa_kasumi_portrait.tga"
-				small="gfx/interface/advisors/GEH/GEH_kinugawa_kasumi_idea.tga"
-			}
-		}
-		gender = female
-		country_leader={
-			ideology=technocracy
-			traits={  }
-			expire="1965.1.1.1"
-		}
-		corps_commander={
-			traits={ GEM_trait_hot_spring_department }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=-1
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = GEH_kinugawa_kasumi_political_advisor
-			allowed = { 
-				OR = { 
-					original_tag = GEH 
-					original_tag = GEM 
-					original_tag = HEU 
-				} 
-			}
-			available = {
-				has_hot_spring_department = yes
-			}
-			traits = {
-				captain_of_industry
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-	GEH_shimokura_megu={ #메구
-		name=GEH_shimokura_megu
-		portraits={
-			army={
-				large="gfx/leaders/GEH/GEH_shimokura_megu_portrait.tga"
-				small="gfx/interface/advisors/GEH/megu.dds"
-			}
-		}
-		gender = female
-		corps_commander={
-			traits={ GEM_trait_hot_spring_department }
-			skill=1
-			attack_skill=2
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
 		}
 	}
 	GEH_hatami_ericha={ #하타미 에리카

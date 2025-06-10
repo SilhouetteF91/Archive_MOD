@@ -311,3 +311,527 @@ GEH_military_tradition_effect = {
 		}
 	}
 }
+
+GEM_club_problem_decision_modifier_reload = {
+	if = {
+		limit = { 
+			NOT = { 
+				has_country_flag = club_problem_gourmet_research_society_escape_flag 
+				has_dynamic_modifier = { modifier = GEM_gourmet_research_society_dynamic }
+			} 
+		}
+   	 	add_dynamic_modifier = { modifier = GEM_gourmet_research_society_dynamic }
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = club_problem_hot_spring_department_escape_flag
+				has_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic}
+			}
+		}
+   	 	add_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic }
+	}
+
+	#기본값 설정
+	set_variable = { GEH_ORI_GRS_var_stability_factor = -0.004 }
+	set_variable = { GEH_ORI_GRS_var_surrender_limit = -0.004 }
+	set_variable = { GEH_ORI_GRS_var_political_power_cost = 0.003 }
+	set_variable = { GEH_ORI_GRS_var_consumer_goods_factor = 0.005 }
+	set_variable = { GEH_ORI_GRS_var_production_speed_buildings_factor = -0.005 }
+
+	set_variable = { GEH_ORI_HSD_var_stability_factor = -0.004 }
+	set_variable = { GEH_ORI_HSD_var_conscription_factor = -0.005 }
+	set_variable = { GEH_ORI_HSD_var_research_speed_factor = -0.005 }
+	set_variable = { GEH_ORI_HSD_var_resistance_target = 0.004 }
+	
+	#주 수에 따른 곱셈: 주 수 계산
+	set_temp_variable = { GEM_club_problem_decision_state_var = 0 }
+
+	every_owned_state = {
+		limit = {
+			OR = {
+				state = 56
+				state = 59
+				state = 57
+				state = 55
+				state = 51
+				state = 978
+				state = 1022
+				state = 1025
+				state = 42
+				state = 50
+				state = 52
+				state = 53
+				state = 54
+			}
+		}
+		add_to_temp_variable = { PREV.GEM_club_problem_decision_state_var = 1 }
+	}
+
+	#기본값으로 주 수에 따른 곱셈 연산을 수행할 템프 변수 복제
+	set_temp_variable = { temp_GEH_HSD_var_stability_factor = GEH_ORI_GRS_var_stability_factor }
+	set_temp_variable = { temp_GEH_HSD_var_surrender_limit = GEH_ORI_GRS_var_surrender_limit }
+	set_temp_variable = { temp_GEH_HSD_var_political_power_cost = GEH_ORI_GRS_var_political_power_cost }
+	set_temp_variable = { temp_GEH_HSD_var_consumer_goods_factor = GEH_ORI_GRS_var_consumer_goods_factor }
+	set_temp_variable = { temp_GEH_HSD_var_production_speed_buildings_factor = GEH_ORI_GRS_var_production_speed_buildings_factor }
+	set_temp_variable = { temp_GEH_GRS_var_stability_factor = GEH_ORI_HSD_var_stability_factor }
+	set_temp_variable = { temp_GEH_GRS_var_conscription_factor = GEH_ORI_HSD_var_conscription_factor }
+	set_temp_variable = { temp_GEH_GRS_var_research_speed_factor = GEH_ORI_HSD_var_research_speed_factor }
+	set_temp_variable = { temp_GEH_GRS_var_resistance_target = GEH_ORI_HSD_var_resistance_target }
+
+	#주 수에 따른 곱셈 연산: 수행
+	multiply_temp_variable = { temp_GEH_HSD_var_stability_factor = GEM_club_problem_decision_state_var }
+	multiply_temp_variable = { temp_GEH_HSD_var_surrender_limit = GEM_club_problem_decision_state_var }
+	multiply_temp_variable = { temp_GEH_HSD_var_political_power_cost = GEM_club_problem_decision_state_var }
+	multiply_temp_variable = { temp_GEH_HSD_var_consumer_goods_factor = GEM_club_problem_decision_state_var }
+	multiply_temp_variable = { temp_GEH_HSD_var_production_speed_buildings_factor = GEM_club_problem_decision_state_var }
+	multiply_temp_variable = { temp_GEH_GRS_var_stability_factor = GEM_club_problem_decision_state_var }
+	multiply_temp_variable = { temp_GEH_GRS_var_conscription_factor = GEM_club_problem_decision_state_var }
+	multiply_temp_variable = { temp_GEH_GRS_var_research_speed_factor = GEM_club_problem_decision_state_var }
+	multiply_temp_variable = { temp_GEH_GRS_var_resistance_target = GEM_club_problem_decision_state_var }
+	
+	#가중치 연산 수행
+	set_temp_variable = { temp_GEH_resistance_strength_hot_spring_department = modifier@GEH_resistance_strength_hot_spring_department }
+	set_temp_variable = { temp_GEH_resistance_strength_gourmet_research_society = modifier@GEH_resistance_strength_gourmet_research_society }
+
+	clamp_temp_variable = {
+		var = temp_GEH_resistance_strength_hot_spring_department
+		min = 0
+	}
+	clamp_temp_variable = {
+		var = temp_GEH_resistance_strength_gourmet_research_society
+		min = 0
+	}
+
+	add_to_temp_variable = { temp_GEH_resistance_strength_hot_spring_department = 1 }
+	add_to_temp_variable = { temp_GEH_resistance_strength_gourmet_research_society = 1 }
+
+	set_variable = { gui_GEH_resistance_strength_hot_spring_department = temp_GEH_resistance_strength_hot_spring_department }
+	set_variable = { gui_GEH_resistance_strength_gourmet_research_society = temp_GEH_resistance_strength_gourmet_research_society }
+	add_to_variable = { gui_GEH_resistance_strength_hot_spring_department = 1 }
+	add_to_variable = { gui_GEH_resistance_strength_gourmet_research_society = 1 }
+
+	multiply_temp_variable = { temp_GEH_HSD_var_stability_factor = temp_GEH_resistance_strength_hot_spring_department }
+	multiply_temp_variable = { temp_GEH_HSD_var_surrender_limit = temp_GEH_resistance_strength_hot_spring_department }
+	multiply_temp_variable = { temp_GEH_HSD_var_political_power_cost = temp_GEH_resistance_strength_hot_spring_department }
+	multiply_temp_variable = { temp_GEH_HSD_var_consumer_goods_factor = temp_GEH_resistance_strength_hot_spring_department }
+	multiply_temp_variable = { temp_GEH_HSD_var_production_speed_buildings_factor = temp_GEH_resistance_strength_hot_spring_department }
+	multiply_temp_variable = { temp_GEH_GRS_var_stability_factor = temp_GEH_resistance_strength_gourmet_research_society }
+	multiply_temp_variable = { temp_GEH_GRS_var_conscription_factor = temp_GEH_resistance_strength_gourmet_research_society }
+	multiply_temp_variable = { temp_GEH_GRS_var_research_speed_factor = temp_GEH_resistance_strength_gourmet_research_society }
+	multiply_temp_variable = { temp_GEH_GRS_var_resistance_target = temp_GEH_resistance_strength_gourmet_research_society }
+	
+	#연산 완료된 템프 변수를 모디파이어 변수에 삽입
+	set_variable = { GEH_HSD_var_stability_factor = temp_GEH_HSD_var_stability_factor }
+	set_variable = { GEH_HSD_var_surrender_limit = temp_GEH_HSD_var_surrender_limit }
+	set_variable = { GEH_HSD_var_political_power_cost = temp_GEH_HSD_var_political_power_cost }
+	set_variable = { GEH_HSD_var_consumer_goods_factor = temp_GEH_HSD_var_consumer_goods_factor }
+	set_variable = { GEH_HSD_var_production_speed_buildings_factor = temp_GEH_HSD_var_production_speed_buildings_factor }
+	
+	set_variable = { GEH_GRS_var_stability_factor = temp_GEH_GRS_var_stability_factor }
+	set_variable = { GEH_GRS_var_conscription_factor = temp_GEH_GRS_var_conscription_factor }
+	set_variable = { GEH_GRS_var_research_speed_factor = temp_GEH_GRS_var_research_speed_factor }
+	set_variable = { GEH_GRS_var_resistance_target = temp_GEH_GRS_var_resistance_target }
+}
+
+GEH_german_nationalism_issue_down_effect = {
+	if = { limit = { NOT = { has_idea = GEH_separation_law_1 has_idea = GEH_separation_law_2 } }
+		if = {
+			limit = { has_idea = GEH_german_nationalism_issue_2 }
+			swap_ideas = {
+				remove_idea = GEH_german_nationalism_issue_2
+				add_idea = GEH_german_nationalism_issue_1
+			}
+		}
+		else_if = {
+			limit = { has_idea = GEH_german_nationalism_issue_1 }
+			remove_ideas = GEH_german_nationalism_issue_1
+		}
+		else = {
+			add_stability = 0.10
+		}
+	}
+	else_if = { limit = { has_idea = GEH_separation_law_1 }
+		add_stability = -0.10
+		remove_ideas = GEH_separation_law_1
+		add_ideas = GEH_german_nationalism_issue_1
+	}
+	else = {
+		add_stability = -0.10
+	}
+}
+
+GEH_Manmajun_Bupae_remove_effect = {
+	if = {
+		limit = { has_idea = GEH_Manmajun_Bupae }
+		remove_ideas = GEH_Manmajun_Bupae
+	}
+	if = {
+		limit = { has_idea = GEH_Manmajun_Bupae_1 }
+		remove_ideas = GEH_Manmajun_Bupae_1
+	}
+	if = {
+		limit = { has_idea = GEH_Manmajun_Bupae_2 }
+		remove_ideas = GEH_Manmajun_Bupae_2
+	}
+	if = {
+		limit = { has_idea = GEH_Manmajun_Bupae_3 }
+		remove_ideas = GEH_Manmajun_Bupae_3
+	}
+	if = {
+		limit = { has_idea = GEH_Manmajun_Bupae_4 }
+		remove_ideas = GEH_Manmajun_Bupae_4
+	}
+	if = {
+		limit = { has_idea = GEH_Manmajun_Bupae_5 }
+		remove_ideas = GEH_Manmajun_Bupae_5
+	}
+}
+GEH_Manmajun_Bupae_down_effect = {
+	if = {
+		limit = { has_idea = GEH_Manmajun_Bupae_4 }
+		swap_ideas = {
+			remove_idea = GEH_Manmajun_Bupae_4
+			add_idea = GEH_Manmajun_Bupae_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_Manmajun_Bupae_3 }
+		swap_ideas = {
+			remove_idea = GEH_Manmajun_Bupae_3
+			add_idea = GEH_Manmajun_Bupae_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_Manmajun_Bupae_2 }
+		swap_ideas = {
+			remove_idea = GEH_Manmajun_Bupae_2
+			add_idea = GEH_Manmajun_Bupae_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_Manmajun_Bupae_1 }
+		swap_ideas = {
+			remove_idea = GEH_Manmajun_Bupae_1
+			add_idea = GEH_Manmajun_Bupae_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_Manmajun_Bupae }
+		swap_ideas = {
+			remove_idea = GEH_Manmajun_Bupae
+			add_idea = GEH_Manmajun_Bupae_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_Manmajun_Bupae_5 }
+		remove_ideas = GEH_Manmajun_Bupae_5
+	}
+}
+
+GEH_gourmet_research_society_remove_effect = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = GEM_gourmet_research_society_dynamic } }
+		remove_dynamic_modifier = { modifier = GEM_gourmet_research_society_dynamic }
+	}
+	if = {
+		limit = { has_idea = GEH_gourmet_research_society_1 }
+		remove_ideas = GEH_gourmet_research_society_1
+	}
+	if = {
+		limit = { has_idea = GEH_gourmet_research_society_2 }
+		remove_ideas = GEH_gourmet_research_society_2
+	}
+	if = {
+		limit = { has_idea = GEH_gourmet_research_society_3 }
+		remove_ideas = GEH_gourmet_research_society_3
+	}
+	if = {
+		limit = { has_idea = GEH_gourmet_research_society_4 }
+		remove_ideas = GEH_gourmet_research_society_4
+	}
+}
+
+GEH_hot_spring_department_remove_effect = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic } }
+		remove_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic }
+	}
+	if = {
+		limit = { has_idea = GEH_hot_spring_department_1 }
+		remove_ideas = GEH_hot_spring_department_1
+	}
+	if = {
+		limit = { has_idea = GEH_hot_spring_department_2 }
+		remove_ideas = GEH_hot_spring_department_2
+	}
+	if = {
+		limit = { has_idea = GEH_hot_spring_department_3 }
+		remove_ideas = GEH_hot_spring_department_3
+	}
+	if = {
+		limit = { has_idea = GEH_hot_spring_department_4 }
+		remove_ideas = GEH_hot_spring_department_4
+	}
+}
+
+GEH_hot_spring_department_up_effect = {
+	if = {
+		limit = {
+			has_idea = GEH_hot_spring_department_1
+		}
+		swap_ideas = {
+			remove_idea = GEH_hot_spring_department_1
+			add_idea = GEH_hot_spring_department_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = GEH_hot_spring_department_2
+		}
+		swap_ideas = {
+			remove_idea = GEH_hot_spring_department_2
+			add_idea = GEH_hot_spring_department_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = GEH_hot_spring_department_3
+		}
+		swap_ideas = {
+			remove_idea = GEH_hot_spring_department_3
+			add_idea = GEH_hot_spring_department_4
+		}
+	}
+	else = {
+		start_civil_war = {
+			ideology = democratic
+			size = 0.5
+			army_ratio = 0.25
+			keep_unit_leaders_trigger = {
+				NOT = { has_trait = GEM_trait_hot_spring_department }
+			}
+			GEH_gourmet_research_society_remove_effect = yes
+			GEH_hot_spring_department_remove_effect = yes
+			GEH_Manmajun_Bupae_remove_effect = yes
+		}
+		GEH_hot_spring_department_remove_effect = yes
+		add_timed_idea = {
+			idea = GEH_hot_spring_department_0
+			days = 1080
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -1.00
+		}
+	}
+}
+
+GEH_gourmet_research_society_up_effect = {
+	if = {
+		limit = { has_idea = GEH_gourmet_research_society_1 }
+		swap_ideas = {
+			remove_idea = GEH_gourmet_research_society_1
+			add_idea = GEH_gourmet_research_society_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_gourmet_research_society_2 }
+		swap_ideas = {
+			remove_idea = GEH_gourmet_research_society_2
+			add_idea = GEH_gourmet_research_society_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_gourmet_research_society_3 }
+		swap_ideas = {
+			remove_idea = GEH_gourmet_research_society_3
+			add_idea = GEH_gourmet_research_society_4
+		}
+	}
+	else = {
+		start_civil_war = {
+			ideology = communism
+			size = 0.5
+			army_ratio = 0.25
+			keep_unit_leaders_trigger = {
+				NOT = { has_trait = GEM_trait_gourmet_research_society }
+			}
+			GEH_gourmet_research_society_remove_effect = yes
+			GEH_hot_spring_department_remove_effect = yes
+			GEH_Manmajun_Bupae_remove_effect = yes
+		}
+		GEH_gourmet_research_society_remove_effect = yes
+		add_timed_idea = {
+			idea = GEH_gourmet_research_society_0
+			days = 1080
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -1.00
+		}
+	}
+}
+
+GEH_hot_spring_department_down_effect = {
+	if = {
+		limit = {
+			has_idea = GEH_hot_spring_department_4
+		}
+		swap_ideas = {
+			remove_idea = GEH_hot_spring_department_4
+			add_idea = GEH_hot_spring_department_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = GEH_hot_spring_department_3
+		}
+		swap_ideas = {
+			remove_idea = GEH_hot_spring_department_3
+			add_idea = GEH_hot_spring_department_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = GEH_hot_spring_department_2
+		}
+		swap_ideas = {
+			remove_idea = GEH_hot_spring_department_2
+			add_idea = GEH_hot_spring_department_1
+		}
+	}
+	else = {
+		add_days_mission_timeout = {
+			mission = GEH_hot_spring_department_up
+			days = 30
+		}
+	}
+}
+
+GEH_gourmet_research_society_down_effect = {
+	if = {
+		limit = { has_idea = GEH_gourmet_research_society_4 }
+		swap_ideas = {
+			remove_idea = GEH_gourmet_research_society_4
+			add_idea = GEH_gourmet_research_society_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_gourmet_research_society_3 }
+		swap_ideas = {
+			remove_idea = GEH_gourmet_research_society_3
+			add_idea = GEH_gourmet_research_society_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_gourmet_research_society_2 }
+		swap_ideas = {
+			remove_idea = GEH_gourmet_research_society_2
+			add_idea = GEH_gourmet_research_society_1
+		}
+	}
+	else = {
+		add_days_mission_timeout = {
+			mission = GEH_gourmet_research_society_up
+			days = 30
+		}
+	}
+}
+
+GEH_popular_support_up_effect = {
+	if = {
+		limit = { has_idea = GEH_popular_support_1 }
+		swap_ideas = {
+			remove_idea = GEH_popular_support_1
+			add_idea = GEH_popular_support_2
+		}
+		if = { 
+			limit = { country_exists = GEM }
+			GEM = {
+				country_event = {
+					id = GEH_event.13
+					hours = 04
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_popular_support_2 }
+		swap_ideas = {
+			remove_idea = GEH_popular_support_2
+			add_idea = GEH_popular_support_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_popular_support_3 }
+		swap_ideas = {
+			remove_idea = GEH_popular_support_3
+			add_idea = GEH_popular_support_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_popular_support_4 }
+		swap_ideas = {
+			remove_idea = GEH_popular_support_4
+			add_idea = GEH_popular_support_5
+		}
+	}
+}
+GEH_popular_support_down_effect = {
+	if = {
+		limit = { has_idea = GEH_popular_support_2 }
+		swap_ideas = {
+			remove_idea = GEH_popular_support_2
+			add_idea = GEH_popular_support_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_popular_support_3 }
+		swap_ideas = {
+			remove_idea = GEH_popular_support_3
+			add_idea = GEH_popular_support_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_popular_support_4 }
+		swap_ideas = {
+			remove_idea = GEH_popular_support_4
+			add_idea = GEH_popular_support_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = GEH_popular_support_5 }
+		swap_ideas = {
+			remove_idea = GEH_popular_support_5
+			add_idea = GEH_popular_support_4
+		}
+	}
+}
+GEH_army_refrom_effect = {
+    if = {
+        limit = {
+            has_idea = GEH_individualism_low
+        }
+        swap_ideas = {
+            remove_idea = GEH_individualism_low
+            add_idea = GEH_individualism_low_2
+        }
+        else_if = {
+            limit = {
+                has_idea = GEH_individualism_low_2
+            }
+            swap_ideas = {
+                remove_idea = GEH_individualism_low_2
+                add_idea = GEH_individualism_low_3
+            }
+        }
+        else_if = {
+            limit = {
+                has_idea = GEH_individualism_low_3
+            }
+            remove_ideas = GEH_individualism_low_3
+        }
+    }
+}

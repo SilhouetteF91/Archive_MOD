@@ -49,11 +49,6 @@ GEM_club_problem_decision = {
 		original_tag = GEM
 	}
 	visible = {
-		OR = {
-			has_completed_focus = GEH_warning_wuiongwuiong
-			has_completed_focus = GEM_maintaining_dictatorship
-			has_completed_focus = GEM_Neutralize_Makoto
-		}
 	}
 	priority = 998
 
