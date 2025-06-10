@@ -348,6 +348,11 @@ spriteTypes = {
 	##
 
 	spriteType = {
+		name = "GFX_report_event_yakushi_saya_memorial"
+		texturefile = "gfx/event_pictures/report_event_yakushi_saya_memorial.tga"
+	}
+
+	spriteType = {
 		name = "GFX_report_event_gem_megu"
 		texturefile = "gfx/event_pictures/report_event_gem_megu.tga"
 	}
