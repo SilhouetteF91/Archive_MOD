@@ -1806,6 +1806,7 @@ leader_traits = {
 	GEH_artist = { # 예술가
 		random = no
 		sprite = 13
+		custom_modifier_tooltip = GEH_artist_advisor_tt
 	}
 
 	GEH_bauhaus = { # 바우하우스

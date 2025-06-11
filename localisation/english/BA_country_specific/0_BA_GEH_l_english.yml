@@ -2129,6 +2129,8 @@
 
  GEH_gehenna_council_idea_tt: "$GEH_gehenna_council_idea$ 변동치:\n"
  GEH_planning_department_idea_tt: "기획부 변동치:\n"
+ GEH_amau_rotue_ending_fail_tt: "만약 아코와 히나의 관계가 §R파탄§! 상태일 경우 §R엔딩을 볼 수 없습니다.§!"
+ GEH_artist_advisor_tt: "\n§g게헨나 선도부는 §!§Y예술가§!§g 특성을 가진 조언가를 고용할 경우, 게헨나의 예술적 개혁과 관련된 특수한 결정을 얻습니다.§!"
 
  # 커스텀 패스
 
