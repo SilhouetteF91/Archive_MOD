@@ -3034,10 +3034,20 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_goal_HYA_Military_Mobilization"
+		textureFile = "gfx/interface/goals/HYA/HYA_Military_Mobilization.tga"
+	}
+
+	spriteType = {
 		name = "GFX_goal_HYA_Overthrow_Regime"
 		textureFile = "gfx/interface/goals/HYA/HYA_Overthrow_Regime.tga"
 	}
-	
+
+	spriteType = {
+		name = "GFX_goal_HYA_Urbanization_Plan"
+		textureFile = "gfx/interface/goals/HYA/HYA_Urbanization_Plan.tga"
+	}
+
 	#색채
 	spriteType = {
 		name = "GFX_goal_GEI_invasion"

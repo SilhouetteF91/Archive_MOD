@@ -326,10 +326,10 @@ focus_tree = {
 			add_ideas = HYA_gkdwjs
 		}
 	}
-	focus = { #
+	focus = { # 군수산업 동원
 		relative_position_id = HYA_focus_12
 		id = HYA_focus_14
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_HYA_Military_Mobilization
 		prerequisite = { focus = HYA_focus_50 focus = HYA_focus_51 }
 		prerequisite = { focus = HYA_focus_12 }
 		#mutually_exclusive = { focus = HYA_focus_ }
@@ -1250,10 +1250,10 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #
+	focus = { # 도시화 계획
 		relative_position_id = HYA_focus_2
 		id = HYA_focus_20
-		icon = GFX_goal_reichsautobahn
+		icon = GFX_goal_HYA_Urbanization_Plan
 		prerequisite = { focus = HYA_focus_2 }
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 1
