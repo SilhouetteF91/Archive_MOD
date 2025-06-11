@@ -2107,6 +2107,9 @@ focus_tree = {
 		prerequisite = { focus = SHA_communism_focus_9 }
 		bypass = { }
 		relative_position_id = SHA_communism_focus_9
+		available = {
+			is_ally_with = SOV
+		}
 
 		completion_reward = {
 			976 = {
@@ -2468,6 +2471,8 @@ focus_tree = {
 					add_idea = SHA_local_harmony_tuwe
 				}
 			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = AUS_marianne_pollak
 		}
 	}
 
@@ -4814,6 +4819,23 @@ focus_tree = {
 		relative_position_id = SHA_principle_of_national_self-determination_2
 
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SHA_socialist_autonomy
+					add_idea = SHA_socialist_autonomy_1
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						has_idea = SHA_socialist_autonomy
+					}
+					swap_ideas = {
+						remove_idea = SHA_socialist_autonomy
+						add_idea = SHA_socialist_autonomy_1
+					}
+				}
+			}
 		}
 	}
 	# 민주집중제
@@ -4835,6 +4857,39 @@ focus_tree = {
 		relative_position_id = SHA_principle_of_national_self-determination_2
 
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SHA_socialist_autonomy
+					add_idea = SHA_socialist_autonomy_2
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						has_idea = SHA_socialist_autonomy
+					}
+					swap_ideas = {
+						remove_idea = SHA_socialist_autonomy
+						add_idea = SHA_socialist_autonomy_2
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = SHA_socialist_autonomy_flag
+				}
+				custom_effect_tooltip = SHA_principle_of_national_self-determination_4_tt
+				hidden_effect = {
+					create_country_leader = {
+						name = SHA_socialist_autonomy
+						picture = GFX_portrait_SOV_supreme_soviet
+						expire = "1965.1.1"
+						ideology = war_communism
+						traits = {
+						}
+					}
+				}
+			}
 		}
 	}
 	# 대오스트리아 권역
@@ -4848,12 +4903,32 @@ focus_tree = {
 		prerequisite = { focus = SHA_principle_of_national_self-determination_1 }
 		prerequisite = { focus = SHA_principle_of_national_self-determination_4 focus = SHA_principle_of_national_self-determination_3 }
 		available = {
+			owns_state = 39
+			owns_state = 850
+			owns_state = 9
+			owns_state = 69
+			owns_state = 736
+			owns_state = 102
+			owns_state = 853
+			owns_state = 1017
+			owns_state = 852
 		}
 		bypass = { }
 
 		relative_position_id = SHA_principle_of_national_self-determination_1
 
 		completion_reward = {
+			add_state_core = 39
+			add_state_core = 850
+			add_state_core = 9
+			add_state_core = 69
+			add_state_core = 736
+			add_state_core = 102
+			add_state_core = 853
+			add_state_core = 1017
+			add_state_core = 852
+			add_state_core = 74
+			set_cosmetic_tag = SHA_great_oesterriech
 		}
 	}
 

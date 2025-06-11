@@ -146,6 +146,7 @@ recruit_character = SHA_secret_agent
 recruit_character = SHA_elizabet_von_gutmann
 recruit_character = SHA_bruno_kreisky
 recruit_character = SHA_otto_bauer
+recruit_character = SHA_marianne_pollak
 
 set_convoys = 0
 

@@ -42,7 +42,25 @@ SHA_communism_cat = {
 				autonomy_state = autonomy_supervised_state
 			}
 			FROM.owner = {
-				add_ideas = SHA_socialist_autonomy
+				if = {
+					limit = {
+						SHA = {
+							has_completed_focus = SHA_principle_of_national_self-determination_3
+						}
+					}
+					add_ideas = SHA_socialist_autonomy_1
+				}
+				else_if = {
+					limit = {
+						SHA = {
+							has_completed_focus = SHA_principle_of_national_self-determination_4
+						}
+					}
+					add_ideas = SHA_socialist_autonomy_2
+				}
+				else = {
+					add_ideas = SHA_socialist_autonomy
+				}
 				set_country_flag = SHA_socialist_autonomy_flag
 			}
 		}

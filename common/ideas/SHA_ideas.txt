@@ -36,6 +36,32 @@ ideas = {
 	}
 	country = {
 		#공산
+		SHA_socialist_autonomy_2 = { #자치평의회
+			name = SHA_socialist_autonomy
+			picture = ger_the_great_red_menace
+			modifier = {
+				consumer_goods_factor = -0.1
+				mic_to_overlord_factor = 0.35
+				cic_to_overlord_factor = 0.35
+				army_org_factor = 0.05
+				army_morale_factor = 0.1
+				max_planning = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		SHA_socialist_autonomy_1 = { #자치평의회
+			name = SHA_socialist_autonomy
+			picture = ger_the_great_red_menace
+			modifier = {
+				consumer_goods_factor = -0.15
+				mic_to_overlord_factor = 0.2
+				cic_to_overlord_factor = 0.2
+				army_org_factor = 0.05
+				army_morale_factor = 0.15
+				max_planning = 0.15
+				production_speed_buildings_factor = 0.15
+			}
+		}
 		SHA_socialist_autonomy = { #자치평의회
 			picture = ger_the_great_red_menace
 			modifier = {

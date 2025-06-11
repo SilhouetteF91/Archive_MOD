@@ -613,4 +613,36 @@ characters={
 			}
 		}
 	}
+	SHA_marianne_pollak = {
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_marianne_pollak
+			allowed = { 
+				original_tag = SHA
+			}
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+				has_completed_focus = SHA_womens_education_initiative
+			}
+			visible = {
+				has_completed_focus = SHA_womens_education_initiative
+			}
+			traits = { 
+				ARG_socialist_feminist
+			}
+
+			ai_will_do = {
+				base = 3
+			}
+		}
+		name = AUS_marianne_pollak
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_marianne_pollak_small"
+			}
+		}
+	}
 }
