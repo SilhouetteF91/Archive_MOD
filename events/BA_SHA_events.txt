@@ -801,6 +801,10 @@ country_event = {
 	option = {
 		name = shafas.17.b
 		add_stability = -0.03
+		ai_chance = {
+			base = 40
+			modifier = { is_historical_focus_on = yes }
+		}
 		add_popularity = {
 			ideology = fascism
 			popularity = 0.05

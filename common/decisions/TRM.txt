@@ -4457,7 +4457,7 @@ TRN_after_war_decisions = {
 		}
 		custom_cost_text = decision_cost_CP_25_pp_75
 		fire_only_once = no
-		days_remove = 180
+		days_remove = 90
 		ai_will_do = {
 			factor = 2
 		}

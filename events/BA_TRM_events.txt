@@ -4711,8 +4711,8 @@ country_event = {
 	
 	option = { #
 		name = TRN_after_war_event.20.a
-		set_variable = { TRM_GehennaResistance_speed = 60 }
-		activate_mission = TRM_loop_Gehenna_Resistance
+		#set_variable = { TRM_GehennaResistance_speed = 60 }
+		#activate_mission = TRM_loop_Gehenna_Resistance
 		hidden_effect = {
 			country_event = { id = TRN_after_war_event.21 hours = 02 }
 			country_event = { id = TRN_after_war_event.25 days = 35 }
@@ -9929,6 +9929,10 @@ country_event = { # 게헨나 학원에서 발생한 저항의 움직임
 		}
 		set_variable = { TRM_GehennaResistance_speed = 60 }
 		activate_mission = TRM_loop_Gehenna_Resistance
+		hidden_effect = {
+			country_event = { id = TRN_after_war_event.21 hours = 02 }
+			country_event = { id = TRN_after_war_event.25 days = 35 }
+		}
     }
 }
 country_event = { #게헨나 항복 이벤트
