@@ -626,6 +626,7 @@ GEH_hot_spring_department_up_effect = {
 			popularity = -1.00
 		}
 	}
+	GEM_club_problem_decision_modifier_reload = yes
 }
 
 GEH_gourmet_research_society_up_effect = {
@@ -672,6 +673,7 @@ GEH_gourmet_research_society_up_effect = {
 			popularity = -1.00
 		}
 	}
+	GEM_club_problem_decision_modifier_reload = yes
 }
 
 GEH_hot_spring_department_down_effect = {
@@ -708,6 +710,7 @@ GEH_hot_spring_department_down_effect = {
 			days = 30
 		}
 	}
+	GEM_club_problem_decision_modifier_reload = yes
 }
 
 GEH_gourmet_research_society_down_effect = {
@@ -738,6 +741,7 @@ GEH_gourmet_research_society_down_effect = {
 			days = 30
 		}
 	}
+	GEM_club_problem_decision_modifier_reload = yes
 }
 
 GEH_popular_support_up_effect = {
