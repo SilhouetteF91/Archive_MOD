@@ -6883,7 +6883,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_4th_ako_from_gehenna_to_trinity
-		icon = GFX_focus_TRN_cause_of_trinity
+		icon = GFX_focus_TRN_cause_of_trinity_no_sword
 		cost = 4
 
 		relative_position_id = GEH_amau_seminar

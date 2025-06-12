@@ -153,6 +153,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_cause_of_trinity.tga"
 	}
 	SpriteType = {
+		name = "GFX_focus_TRN_cause_of_trinity_no_sword"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_cause_of_trinity_no_sword.tga"
+	}
+	SpriteType = {
 		name = "GFX_focus_TRN_savior_of_kivotos"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_savior_of_kivotos.tga"
 	}
@@ -205,8 +209,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_Integrity_of_Trinity.tga"
 	}
 	SpriteType = {
-		name = "GFX_focus_TRN_leading_theory"
-		texturefile = "gfx/interface/goals/TRN/focus_TRN_leading_theory.tga"
+		name = "GFX_focus_TRN_destiny_of_trinity"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_destiny_of_trinity.tga"
 	}
 	SpriteType = {
 		name = "GFX_focus_TRN_horseman_of_the_apocalypse"

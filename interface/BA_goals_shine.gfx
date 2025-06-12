@@ -1298,6 +1298,38 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_TRN_cause_of_trinity_no_sword_shine"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_cause_of_trinity_no_sword.tga"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_cause_of_trinity_no_sword.tga"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
+			animationrotation = -90.0		
+			animationlooping = no			
+			animationtime = 0.75				
+			animationdelay = 0			
+			animationblendmode = "add"       
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+	
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_cause_of_trinity_no_sword.tga"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
+			animationrotation = 90.0		
+			animationlooping = no			
+			animationtime = 0.75				
+			animationdelay = 0			
+			animationblendmode = "add"       
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
 		name = "GFX_focus_TRN_savior_of_kivotos_shine"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_savior_of_kivotos.tga"			
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -1714,11 +1746,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_TRN_leading_theory_shine"
-		texturefile = "gfx/interface/goals/TRN/focus_TRN_leading_theory.tga"			
+		name = "GFX_focus_TRN_destiny_of_trinity_shine"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_destiny_of_trinity.tga"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_leading_theory.tga"			
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_destiny_of_trinity.tga"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -1731,7 +1763,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_leading_theory.tga"			
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_destiny_of_trinity.tga"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
