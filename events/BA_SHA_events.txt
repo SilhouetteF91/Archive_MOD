@@ -323,9 +323,21 @@ country_event = { #민족 자결의 원칙
 				modifier = RED_expansionism_opinion
 			}
 		}
-		set_autonomy = {
-			target = HYA
-			autonomy_state = autonomy_supervised_state
+	}
+}
+country_event = { #제2인터내셔널
+	id = shacom.15
+	title = shacom.15.t
+	desc = shacom.15.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.15.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
 		}
 	}
 }
@@ -1236,7 +1248,24 @@ news_event = {
 
 news_event = {
 	id = shanews.04
-	title = shanews.04.t
+	title = {
+		text = shanews.04.t
+		trigger = {
+			SHA = {
+				NOT = {
+					has_country_flag = SHA_communist_focus_in_progress
+				}
+			}
+		}
+	}
+	title = {
+		text = shanews.04.t_1
+		trigger = {
+			SHA = {
+				has_country_flag = SHA_communist_focus_in_progress
+			}
+		}
+	}
 	desc = {
 		text = shanews.04.desc_c
 		trigger = {
@@ -1250,10 +1279,17 @@ news_event = {
 		}
 	}
 	desc = {
+		text = shanews.04.desc_com
+		trigger = {
+			SHA = { has_completed_focus = SHA_communism_focus_12 }
+		}
+	}
+	desc = {
 		text = shanews.04.desc_nothing
 		trigger = {
 			SHA = { 
 				NOT = {
+					has_completed_focus = SHA_communism_focus_12 
 					has_completed_focus = SHA_Kaguya_ousted 
 					has_completed_focus = SHA_conservative_revolution 
 				}

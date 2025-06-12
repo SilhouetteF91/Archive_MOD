@@ -2035,7 +2035,7 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_2
 
 		completion_reward = {
-			remove_ideas = SHA_shanhaijing_isolation
+			add_ideas = SHA_socialist_society
 		}
 	}
 	focus = { #국제주의 대오
@@ -2199,8 +2199,8 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = SHA_austro_marxism_1
-				add_idea = SHA_austro_marxism_2
+				remove_idea = SHA_socialist_society
+				add_idea = SHA_socialist_society_1
 			}
 		}
 	}
@@ -2646,9 +2646,11 @@ focus_tree = {
 			has_country_flag = SHA_communist_focus_in_progress
 		}
 		bypass_effect = {
-			country_event = {
-				id = shacom.11
-				days = 10
+			hidden_effect = {
+				country_event = {
+					id = shacom.11
+					days = 10
+				}
 			}
 		}
 		mutually_exclusive = {  }
@@ -2661,13 +2663,17 @@ focus_tree = {
 					has_completed_focus = SHA_Kaguya_ousted
 					has_completed_focus = SHA_conservative_revolution
 					has_completed_focus = SHA_appointment_of_BTP
-					has_completed_focus = SHA_communist_branch
+					has_completed_focus = SHA_communism_focus_9
+					has_completed_focus = SHA_communism_focus_12
 					has_completed_focus = SHA_Strengthening_Genryumon
 				}
 			}
 		}
 		bypass = {
-			has_global_flag = GFLAG_BAKSANWAR_END
+			OR = {
+				has_global_flag = GFLAG_BAKSANWAR_END
+				is_in_faction = yes
+			}
 		}
 
 
@@ -2677,9 +2683,13 @@ focus_tree = {
 					id = shacom.11
 					days = 10
 				}
+				country_event = {
+					id = shacom.15
+					days = 4
+				}
 			}
 			set_rule = { can_create_factions = yes }
-			create_faction = Shanhaijing_faction
+			create_faction = The_second_internationale
 			add_political_power = 50
 			add_popularity = {
 				ideology = ROOT

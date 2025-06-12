@@ -36,7 +36,36 @@ ideas = {
 	}
 	country = {
 		#공산
-		SHA_socialist_autonomy_2 = { #자치평의회
+		SHA_socialist_society_1 = { #산해경 사회주의
+			name = SHA_socialist_society
+			picture = SOV_system_decentralization
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_cost = 0.1
+				recruitable_population_factor = -0.1
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		SHA_socialist_society = { #산해경 사회주의
+			name = SHA_socialist_society
+			picture = SOV_system_decentralization
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_cost = 0.1
+				recruitable_population_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		SHA_socialist_autonomy_2 = { #자치 평의회
 			name = SHA_socialist_autonomy
 			picture = ger_the_great_red_menace
 			modifier = {
@@ -49,7 +78,7 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 			}
 		}
-		SHA_socialist_autonomy_1 = { #자치평의회
+		SHA_socialist_autonomy_1 = { #자치 평의회
 			name = SHA_socialist_autonomy
 			picture = ger_the_great_red_menace
 			modifier = {
@@ -62,7 +91,7 @@ ideas = {
 				production_speed_buildings_factor = 0.15
 			}
 		}
-		SHA_socialist_autonomy = { #자치평의회
+		SHA_socialist_autonomy = { #자치 평의회
 			picture = ger_the_great_red_menace
 			modifier = {
 				consumer_goods_factor = -0.1
@@ -106,21 +135,6 @@ ideas = {
 				war_support_factor = 0.05
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.1
-			}
-		}
-		SHA_austro_marxism_2 = { #오스트로 맑시즘
-			name = SHA_austro_marxism
-			picture = AUS_austromarxism
-			allowed_civil_war = {
-				always = yes
-			}
-			modifier = {
-				communism_drift = 0.05
-				industrial_capacity_dockyard = 0.1
-				production_factory_efficiency_gain_factor = 0.1
-				political_power_factor = 0.05
-				stability_factor = -0.05
-				consumer_goods_factor = -0.1
 			}
 		}
 		SHA_austro_marxism_1 = { #오스트로 맑시즘
