@@ -2053,7 +2053,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_1    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_1
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2094,7 +2094,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_2    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_2
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2131,7 +2131,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_3    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_3
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2168,7 +2168,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_4    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_4
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2205,7 +2205,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_5    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_5
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2242,7 +2242,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_6    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_6
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2280,7 +2280,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_7    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_7
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2317,7 +2317,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_8    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_8
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2357,7 +2357,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_9    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_9
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2394,7 +2394,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_10    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_10
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2431,7 +2431,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_11    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_11
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2468,7 +2468,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_12    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_12
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2505,7 +2505,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_13    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_13
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2543,7 +2543,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_14    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_14
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2584,7 +2584,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_army_15    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_army_15
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2625,7 +2625,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_1    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_1
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2657,7 +2657,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_2    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_2
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2704,7 +2704,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_3    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_3
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2737,7 +2737,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_4    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_4
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2770,7 +2770,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_5    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_5
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2810,7 +2810,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_6    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_6
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2858,7 +2858,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_7    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_7
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2889,7 +2889,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_8    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_8
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2941,7 +2941,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_9    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_9
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -2975,7 +2975,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_10    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_10
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3009,7 +3009,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_11    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_11
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3065,7 +3065,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_12    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_12
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3093,7 +3093,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_halo_13    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_halo_13
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3135,7 +3135,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_1    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_1
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3212,7 +3212,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_2    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_2
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3240,7 +3240,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_3    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_3
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3268,7 +3268,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_4    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_4
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3308,7 +3308,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_5    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_5
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3348,7 +3348,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_6    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_6
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3382,7 +3382,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_7    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_7
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3416,7 +3416,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_8    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_8
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3450,7 +3450,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_9    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_9
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3484,7 +3484,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_10    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_10
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3518,7 +3518,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_11    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_11
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3555,7 +3555,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_12    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_12
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3592,7 +3592,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_air_13    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_air_13
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3626,7 +3626,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_1    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_1
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3661,7 +3661,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_2    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_2
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3689,7 +3689,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_3    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_3
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3726,7 +3726,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_4    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_4
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3763,7 +3763,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_5    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_5
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3797,7 +3797,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_6    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_6
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3831,7 +3831,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_7    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_7
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3859,7 +3859,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_8    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_8
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3887,7 +3887,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_9    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_9
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3918,7 +3918,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_10    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_10
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3946,7 +3946,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_11    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_11
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -3980,7 +3980,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_12    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_12
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입
@@ -4014,7 +4014,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ABY_focus_navy_13    #중점명
-		icon = GFX_focus_unknown
+		icon = GFX_focus_ABY_navy_13
  		cost = 7.00          #중점 일수(주)
 		search_filters = {
 			#중점의 타입

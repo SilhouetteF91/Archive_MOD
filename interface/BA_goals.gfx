@@ -2687,6 +2687,223 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_ABY_army_1"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_1.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_2"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_2.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_3"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_3.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_4"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_4.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_5"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_5.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_6"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_6.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_7"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_7.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_8"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_8.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_9"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_9.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_10"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_10.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_11"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_11.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_12"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_12.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_13"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_13.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_14"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_14.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_army_15"
+		texturefile = "gfx/interface/goals/ABY/ABY_army_15.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_1"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_1.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_2"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_2.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_3"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_3.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_4"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_4.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_5"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_5.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_6"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_6.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_7"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_7.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_8"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_8.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_9"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_9.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_10"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_10.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_11"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_11.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_12"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_12.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_halo_13"
+		texturefile = "gfx/interface/goals/ABY/ABY_halo_13.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_1"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_1.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_2"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_2.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_3"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_3.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_4"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_4.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_5"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_5.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_6"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_6.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_7"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_7.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_8"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_8.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_9"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_9.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_10"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_10.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_11"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_11.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_12"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_12.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_air_13"
+		texturefile = "gfx/interface/goals/ABY/ABY_air_13.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_1"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_1.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_2"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_2.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_3"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_3.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_4"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_4.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_5"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_5.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_6"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_6.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_7"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_7.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_8"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_8.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_9"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_9.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_10"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_10.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_11"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_11.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_12"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_12.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_ABY_navy_13"
+		texturefile = "gfx/interface/goals/ABY/ABY_navy_13.tga"  
+	}
+
+	SpriteType = {
 		name = "GFX_goal_kai_focus_1"
 		texturefile = "gfx/interface/goals/KAI/KAI_focus.tga"
 	}
