@@ -88,6 +88,9 @@ set_variable = { GEH_CH_political_power_factor = 0 }
 #풍기집행
 set_variable = { geh_discipline_var = 40 }
 
+#기획부 평의회
+set_variable = { GEH_ako_democratic_var = 3 } 
+
 ### 디시전 ###
 
 add_ideas = BA_student_conscription_idea
@@ -221,6 +224,7 @@ recruit_character = GEH_prefect_team_planning_department
 recruit_character = GEH_prefect_team_emergency_committee
 recruit_character = GEH_prefect_team_rescue_country_committee
 recruit_character = GEH_robot_hina
+recruit_character = GEH_ann_fudou
 
 recruit_character = GEH_piet_mondrian
 recruit_character = GEH_karl_schmidt_rottluff
@@ -394,3 +398,6 @@ country_event = { id = GEH.flavor_event.29 days = 1120 }
 country_event = { id = GEH.flavor_event.30 days = 1120 }
 country_event = { id = GEH.flavor_event.33 days = 460 }
 country_event = { id = GEH.flavor_event.34 days = 520 }
+country_event = { id = GEH.flavor_event.35 days = 80 }
+country_event = { id = GEH.flavor_event.36 days = 595 }
+country_event = { id = GEH.flavor_event.37 days = 700 }

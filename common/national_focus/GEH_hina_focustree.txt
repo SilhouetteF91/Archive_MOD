@@ -2374,6 +2374,9 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = GEH.event.1 }
 				country_event = { id = GEH.flavor_event.14 days = 30 random_days = 30 }
+				country_event = { id = GEH.ako.story_event.1 days = 10 random_days = 14 }
+				country_event = { id = GEH.ako.story_event.2 days = 40 random_days = 14 }
+				country_event = { id = GEH.ako.story_event.3 days = 70 random_days = 14 }
 			}
 		}
 		ai_will_do = {
@@ -6482,7 +6485,6 @@ focus_tree = {
 		y = 2
 
 		available = {
-
 		}
 
         prerequisite = {
@@ -6526,7 +6528,7 @@ focus_tree = {
 		y = 4
 
 		available = {
-
+			NOT = { has_country_flag = GEH_ako_route_bad_ending_flag }
 		}
 
         prerequisite = {
@@ -6550,53 +6552,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
-		}
-	}
-
-    focus = {
-		id = GEH_ako_sorasaki_seminar
-		icon = GFX_goal_GEH_ako_sorasaki_seminar
-		cost = 5
-
-		relative_position_id = GEH_ako_sorasaki_administrative_officer
-		x = -1
-		y = 1
-
-		available = {
-
-		}
-
-        prerequisite = {
-            focus = GEH_ako_sorasaki_administrative_officer
-        }
-
-		mutually_exclusive = {
-			focus = GEH_amau_seminar
-		}
-
-		ai_will_do = {
-			base = 100
-			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
-			}
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = GEH_gehenna_council_idea_tt
-			add_to_variable = {
-				GEH_gehenna_council_idea_drift_defence_factor = -0.05
-				tooltip = drift_defence_factor_tt
-			}
-			add_to_variable = {
-				GEH_gehenna_council_idea_production_lack_of_resource_penalty_factor = -0.1
-				tooltip = production_lack_of_resource_penalty_factor_tt
-			}
+			custom_effect_tooltip = GEH_amau_rotue_ending_fail_tt
+			custom_effect_tooltip = enter_tt
+			country_event = { id = GEH.ako.story_event.16 }
 		}
 	}
 
@@ -6754,6 +6712,8 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = GEH_intelligence_reform
+
+			country_event = { id = GEH.ako.gov_event.7 }
 		}
 	}
 	
@@ -6806,6 +6766,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+
+			custom_effect_tooltip = enter_tt
+			country_event = { id = GEH.ako.gov_event.8 }
 		}
 	}
 
@@ -6883,7 +6846,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_4th_ako_from_gehenna_to_trinity
-		icon = GFX_focus_TRN_cause_of_trinity_no_sword
+		icon = GFX_focus_TRN_cause_of_trinity
 		cost = 4
 
 		relative_position_id = GEH_amau_seminar
@@ -6930,6 +6893,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+
+			custom_effect_tooltip = enter_tt
+			country_event = { id = GEH.ako.gov_event.9 }
 		}
 	}
 
@@ -7043,6 +7009,8 @@ focus_tree = {
 
 			hidden_effect = {
 				news_event = { id = GEH_news.10 }
+				country_event = { id = GEH.ako.story_event.9 }
+				country_event = { id = GEH.ako.story_event.10 days = 35 }
 			}
 
 			add_popularity = {
@@ -7054,6 +7022,55 @@ focus_tree = {
 				set_character_name = GEH_ako_sorasaki
 				set_character_flag = GEH_hina_bride
 			}
+		}
+	}
+
+    focus = {
+		id = GEH_ako_sorasaki_seminar
+		icon = GFX_goal_GEH_ako_sorasaki_seminar
+		cost = 5
+
+		relative_position_id = GEH_ako_sorasaki_administrative_officer
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_ako_sorasaki_administrative_officer
+        }
+
+		mutually_exclusive = {
+			focus = GEH_amau_seminar
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GEH_gehenna_council_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_drift_defence_factor = -0.05
+				tooltip = drift_defence_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_council_idea_production_lack_of_resource_penalty_factor = -0.1
+				tooltip = production_lack_of_resource_penalty_factor_tt
+			}
+
+			custom_effect_tooltip = enter_tt
+			country_event = { id = GEH.ako.gov_event.6 }
 		}
 	}
 	
@@ -7177,6 +7194,10 @@ focus_tree = {
 			focus = GEH_ako_sorasaki_ako_s_partner
 		}
 
+		select_effect = {
+			country_event = { id = GEH.ako.story_event.11 }
+		}
+
 		ai_will_do = {
 			base = 100
 			modifier = {
@@ -7191,6 +7212,10 @@ focus_tree = {
 
 		completion_reward = {
 			add_country_leader_trait = GEH_puppet_leader_hina
+
+			hidden_effect = {
+				country_event = { id = GEH.ako.story_event.12 }
+			}
 		}
 	}
 	
@@ -7263,7 +7288,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			country_event = { id = GEH.ako.story_event.13 }
 		}
 	}
 

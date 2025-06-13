@@ -1632,6 +1632,9 @@ unit_leader_event = { #정보부 조사 - 협력적 현지인
 	option = { 
 		name = GEH.flavor_event.20.a 
 		add_political_power = -100
+		hidden_effect = {
+			GEH_prefect_team_spy = { unit_leader_event = { id = GEH.flavor_event.21 days = 14 } }
+		}
 	}
 
 	option = { 
@@ -1643,6 +1646,34 @@ unit_leader_event = { #정보부 조사 - 협력적 현지인
 		add_popularity = {
 			ideology = fascism
 			popularity = 0.04
+		}
+		hidden_effect = {
+			GEH_prefect_team_spy = { unit_leader_event = { id = GEH.flavor_event.21 days = 14 } }
+		}
+	}
+}
+
+unit_leader_event = { #정보부 조사 - 현지인 노동자 총파업
+	id = GEH.flavor_event.21
+	title = GEH.flavor_event.21.t
+	desc = GEH.flavor_event.21.desc
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.flavor_event.21.a 
+		add_command_power = -25
+	}
+
+	option = { 
+		name = GEH.flavor_event.21.b
+		add_popularity = {
+			ideology = communism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.01
 		}
 	}
 }
@@ -1853,6 +1884,58 @@ country_event = { # 게헨나 수영 훈련
 	option = { 
 		name = GEH.flavor_event.34.a 
 		navy_experience = 1
+	}
+}
+
+country_event = { # 도이칠란트 내부 신앙 세력
+	id = GEH.flavor_event.35
+	title = GEH.flavor_event.35.t
+	desc = GEH.flavor_event.35.desc
+	picture = GFX_report_event_german_speech
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.flavor_event.35.a 
+		
+	}
+}
+
+country_event = { # 게헨나의 통치를 반대하는 야당
+	id = GEH.flavor_event.36
+	title = GEH.flavor_event.36.t
+	desc = GEH.flavor_event.36.desc
+	picture = GFX_report_event_germany_politician_handshake
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.flavor_event.36.a 
+		add_political_power = -25
+	}
+}
+
+country_event = { # 바이에른 가톨릭 시위
+	id = GEH.flavor_event.37
+	title = GEH.flavor_event.37.t
+	desc = GEH.flavor_event.37.desc
+	picture = GFX_report_event_german_troops
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.flavor_event.37.a 
+		add_political_power = -15
+		add_stability = 0.02
+	}
+
+	option = { 
+		name = GEH.flavor_event.37.b 
+		add_political_power = -15
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.03
+		}
 	}
 }
 
@@ -2197,6 +2280,7 @@ country_event = { # 죽어가는 계절의 나는
 				}
 			}
 
+			country_event = { id = GEH.ako.story_event.4 days = 3 }
 			GEH_prefect_team_spy = { unit_leader_event = { id = GEH.flavor_event.20 days = 14 } }
 		}
 
@@ -3359,6 +3443,176 @@ country_event = {
 	}
 }
 
+#게헨나 세미나
+country_event = { 
+	id = GEH.ako.gov_event.6
+	title = GEH.ako.gov_event.6.t
+	desc = GEH.ako.gov_event.6.desc
+
+	picture = GFX_report_event_prefect_team_mob_gun_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.gov_event.6.a
+		
+	}
+}
+
+#정보부 개혁
+country_event = { 
+	id = GEH.ako.gov_event.7
+	title = GEH.ako.gov_event.7.t
+	desc = GEH.ako.gov_event.7.desc
+
+	picture = GFX_report_event_prefect_team_mob_gun_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.gov_event.7.a
+		
+	}
+}
+
+#제2 바이마르 공화국
+country_event = { 
+	id = GEH.ako.gov_event.8
+	title = GEH.ako.gov_event.8.t
+	desc = GEH.ako.gov_event.8.desc
+
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.gov_event.8.a
+		
+	}
+}
+
+#에덴 소협상
+country_event = { 
+	id = GEH.ako.gov_event.9
+	title = GEH.ako.gov_event.9.t
+	desc = GEH.ako.gov_event.9.desc
+
+	picture = GFX_report_event_generic_building
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.gov_event.9.a
+		
+	}
+}
+
+#기획부 평의회
+country_event = { 
+	id = GEH.ako.story_event.1
+	title = GEH.ako.story_event.1.t
+	desc = GEH.ako.story_event.1.desc
+
+	picture = GFX_report_event_prefect_team_mob_generic_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.1.a
+		add_command_power = 15
+	}
+}
+
+#아, 달콤한 자유여
+country_event = { 
+	id = GEH.ako.story_event.2
+	title = GEH.ako.story_event.2.t
+	desc = GEH.ako.story_event.2.desc
+
+	picture = GFX_report_event_prefect_team_mob_generic_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.2.a
+
+	}
+}
+
+#통제민주주의에 대한 반응
+country_event = { 
+	id = GEH.ako.story_event.3
+	title = GEH.ako.story_event.3.t
+	desc = GEH.ako.story_event.3.desc
+
+	picture = GFX_report_event_iori_shiromi_generic_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.3.a
+		add_political_power = -15
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.03
+		}
+	}
+}
+
+#연애 성공! 해피엔딩?
+country_event = { 
+	id = GEH.ako.story_event.4
+	title = GEH.ako.story_event.4.t
+	desc = GEH.ako.story_event.4.desc
+
+	picture = GFX_report_event_hina_sorasaki_date_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.4.a
+
+	}
+}
+
+#미래 계획
+country_event = { 
+	id = GEH.ako.story_event.5
+	title = GEH.ako.story_event.5.t
+	desc = GEH.ako.story_event.5.desc
+
+	picture = GFX_report_event_iori_shiromi_generic_3
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = GEH_ako_route_ako_sorasaki_ending_flag
+		has_completed_focus = GEH_first_congress_focus
+		tag = GEH
+	}
+
+	option = { 
+		name = GEH.ako.story_event.5.a
+		country_event = { id = GEH.ako.story_event.6 days = 14 }
+	}
+}
+
+#다른 미래 계획
+country_event = { 
+	id = GEH.ako.story_event.6
+	title = GEH.ako.story_event.6.t
+	desc = GEH.ako.story_event.6.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.6.a
+		country_event = { id = GEH.ako.story_event.7 days = 14 }
+	}
+}
+
 #메루리 동인지 문제
 country_event = { 
 	id = GEH.ako.story_event.7
@@ -3371,12 +3625,206 @@ country_event = {
 
 	option = { 
 		name = GEH.ako.story_event.7.a
-		add_command_power = -1
+		add_political_power = -15
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.03
+		}
+
+		hidden_effect = {
+			country_event = { id = GEH.ako.story_event.8 days = 42 }
+		}
 	}
 
 	option = { 
 		name = GEH.ako.story_event.7.b
-		add_political_power = -1
+		add_political_power = -35
+
+		hidden_effect = {
+			country_event = { id = GEH.ako.story_event.8 days = 42 }
+		}
+	}
+}
+
+#메루리 동인지 문제의 해결
+country_event = { 
+	id = GEH.ako.story_event.8
+	title = GEH.ako.story_event.8.t
+	desc = GEH.ako.story_event.8.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.6.a
+		add_stability = 0.01
+	}
+}
+
+#소라사키 히나의 결혼식
+country_event = { 
+	id = GEH.ako.story_event.9
+	title = GEH.ako.story_event.9.t
+	desc = GEH.ako.story_event.9.desc
+
+	picture = GFX_report_event_hina_sorasaki_wedding_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.9.a
+
+	}
+}
+
+#결혼 이후
+country_event = { 
+	id = GEH.ako.story_event.10
+	title = GEH.ako.story_event.10.t
+	desc = GEH.ako.story_event.10.desc
+
+	picture = GFX_report_event_hina_sorasaki_smile_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.10.a
+
+	}
+}
+
+#아코의 펫
+country_event = { 
+	id = GEH.ako.story_event.11
+	title = GEH.ako.story_event.11.t
+	desc = GEH.ako.story_event.11.desc
+
+	picture = GFX_report_event_ako_amau_smile_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.11.a
+
+	}
+}
+
+#행복하시나요?
+country_event = { 
+	id = GEH.ako.story_event.12
+	title = GEH.ako.story_event.12.t
+	desc = GEH.ako.story_event.12.desc
+
+	picture = GFX_report_event_hina_sorasaki_smile_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.12.a
+
+	}
+}
+
+#소중하게 간직하도록 - 1
+country_event = { 
+	id = GEH.ako.story_event.13
+	title = GEH.ako.story_event.13.t
+	desc = GEH.ako.story_event.13.desc
+
+	picture = GFX_report_event_hina_sorasaki_date_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.13.a
+		country_event = { id = GEH.ako.story_event.14 }
+	}
+}
+
+#소중하게 간직하도록 - 2
+country_event = { 
+	id = GEH.ako.story_event.14
+	title = GEH.ako.story_event.14.t
+	desc = GEH.ako.story_event.14.desc
+
+	picture = GFX_report_event_ako_amau_smile_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.14.a
+		country_event = { id = GEH.ako.story_event.15 }
+
+	}
+}
+
+#소중하게 간직하도록 - 3
+country_event = { 
+	id = GEH.ako.story_event.15
+	title = GEH.ako.story_event.15.t
+	desc = GEH.ako.story_event.15.desc
+
+	picture = GFX_report_event_picture_the_letter
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.15.a
+		custom_effect_tooltip = GEH_ako_route_ending_tt
+		add_stability = 0.2
+		add_war_support = 0.2
+	}
+}
+
+#우정이 이어지도록 - 1
+country_event = { 
+	id = GEH.ako.story_event.16
+	title = GEH.ako.story_event.16.t
+	desc = GEH.ako.story_event.16.desc
+
+	picture = GFX_report_event_hina_sorasaki_date_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.16.a
+		country_event = { id = GEH.ako.story_event.17 }
+	}
+}
+
+#우정이 이어지도록 - 2
+country_event = { 
+	id = GEH.ako.story_event.17
+	title = GEH.ako.story_event.17.t
+	desc = GEH.ako.story_event.17.desc
+
+	picture = GFX_report_event_ako_amau_smile_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.17.a
+		country_event = { id = GEH.ako.story_event.18 }
+
+	}
+}
+
+#우정이 이어지도록 - 3
+country_event = { 
+	id = GEH.ako.story_event.18
+	title = GEH.ako.story_event.18.t
+	desc = GEH.ako.story_event.18.desc
+
+	picture = GFX_report_event_picture_the_letter
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.ako.story_event.18.a
+		custom_effect_tooltip = GEH_ako_route_ending_tt
+		add_stability = 0.2
+		add_war_support = 0.2
 	}
 }
 

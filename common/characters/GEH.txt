@@ -358,12 +358,12 @@ characters={
 			expire="1965.1.1"
 		}
 
-		scientist = {
-			traits = { scientist_trait_aircraft_specialist scientist_trait_bright }
-			skills = {
-				specialization_air = 2
-			}
-		}
+		#scientist = {
+		#	traits = { scientist_trait_aircraft_specialist scientist_trait_bright }
+		#	skills = {
+		#		specialization_air = 2
+		#	}
+		#}
 	}
 
 	GEH_prefect_team_spy ={ #선도부 정보부
@@ -695,5 +695,34 @@ characters={
 		#https://de.wikipedia.org/wiki/Hertha_Gordon-Walcher
 
 		gender = female
+	}
+
+	GEH_ann_fudou ={ #후도 안
+		name=GEH_ann_fudou 
+		portraits={
+			army={
+				large="gfx/leaders/GEH/GEH_ann_fudou.dds"
+				small="gfx/interface/advisors/GEH/GEH_ann_fudou.dds"
+			}
+		}
+
+		gender = female
+
+		advisor={
+			slot = political_advisor
+			idea_token = GEH_ann_fudou
+			allowed = { 
+				OR = { 
+                    original_tag = GEH 
+                    original_tag = GEM 
+					#original_tag = HEU <- 아루에게 사기 친 여자입니다
+                } 
+			}
+
+			available = {
+
+			}
+			traits = { captain_of_industry }
+		}
 	}
 }
