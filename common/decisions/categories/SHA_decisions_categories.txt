@@ -81,6 +81,17 @@ HYA_invade_of_Hyakkiyako_cat = {
 	visible = {
 	}
 }
+SHA_conservative_policy_cat = {
+	priority = 999
+
+	allowed = { original_tag = SHA }
+	visible = { 
+		SHA_KAGUYA = { is_hired_as_advisor  = yes }
+	}
+	icon = GFX_decision_category_SHA_conservative_policy_cat
+
+	visible_when_empty = yes
+}
 SHA_balance_of_power_category = {
 	priority = 0
 	icon = GFX_decision_category_power_struggle

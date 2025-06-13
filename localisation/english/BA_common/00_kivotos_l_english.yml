@@ -25,6 +25,7 @@
  tooltip_effect_upon_focus_completion: "\n§G중점 완료 시 효과:§!\n"
  tooltip_white_line: "   \n"
  unlock_focuses: "§G이 중점은 자동으로 통과되어 다른 중점을 해금합니다.§!"
+ unlock_industrial_concern_tooltip: "§Y산업 업체§!로 §G사용 가능§!:"
 
  #공용 아이디어#
  BA_isolation: "고립"
@@ -93,7 +94,7 @@
  Highlander.13.a: "좋군."
  Highlander.13_tt: "§Y대규모 투자§!에 드는 §Y소비재 공장 변동치§! 감소"
  Highlander.15.t: "궤간 문제"
- Highlander.15.d: "철도 문제가 해소됨에 따라, 우리는 하나의 주요한 궤간을 표준으로 삼아 전역의 철도를 개편할 것입니다. 그러기 위해 우리는 여러 갈래의 궤간 중 하나를 표준으로 삼을 수 있습니다."
+ Highlander.15.d: "지속적인 노력 끝에 철도 문제는 어느 정도 해소되었고, 이제 우리는 하나의 표준 궤간을 정하여 전국 철도망을 통합, 개편할 계획을 세우고 있습니다. 그러나 여기서 새로운 고민이 생겼습니다. 수많은 궤간 중 어떤 것을 표준으로 채택할 것인가 하는 문제입니다. 각 궤간은 서로 다른 장단점을 지니고 있으며, 선택에 따라 다양한 이익을 얻을 수 있습니다."
  Highlander.15.a: "표준궤로 통일하자."
  Highlander.15.b: "표준궤에 협궤를 섞어 쓰자."
  Highlander.15.c: "이베리아 궤간을 쓰자."

@@ -1043,6 +1043,13 @@ ideas = {
 			picture = generic_fascist_workers
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
+
+			cancel = {
+				OR = {
+					has_completed_focus = SHA_conservative_revolution
+					has_completed_focus = SHA_Kaguya_ousted
+				}
+			}
 			
 			modifier = {
 				fascism_drift = 0.1
@@ -1128,7 +1135,32 @@ ideas = {
 				neutrality_drift = 0.01
 				training_time_factor = -0.1
 				army_org_factor = 0.1
-				industrial_capacity_factory = 0.05
+			}
+		}
+		# 산해경 고립 - 보수 혁명 - 제 2차 보수 혁명 + 산해경 비동맹주의
+		SHA_walking_the_dragon_6 = {
+			name = SHA_walking_the_dragon
+			picture = SHA_walking_the_dragon
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			on_add = {
+			}
+			on_remove = {
+				remove_dynamic_modifier = { 
+					modifier = SHA_conservative_revolution_modifier
+				}
+			}
+
+			modifier = {
+				army_core_defence_factor = 0.1
+				consumer_goods_factor = -0.03
+				political_advisor_cost_factor = -0.33
+				neutrality_drift = 0.01
+				training_time_factor = -0.1
+				army_org_factor = 0.1
+
+				custom_modifier_tooltip = SHA_conservative_revolution_modifier_effect_tt
 			}
 		}
 		
@@ -1166,7 +1198,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = 0.15
-				party_popularity_stability_factor = 0.5
+				party_popularity_stability_factor = 0.3
 				neutrality_drift = 0.5
 				stability_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.1
@@ -1188,7 +1220,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = 0.15
-				party_popularity_stability_factor = 0.5
+				party_popularity_stability_factor = 0.3
 				neutrality_drift = 0.5
 				stability_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.1
@@ -1213,7 +1245,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = 0.25
-				party_popularity_stability_factor = 0.5
+				party_popularity_stability_factor = 0.3
 				neutrality_drift = 0.5
 				stability_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.1
@@ -1236,7 +1268,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = 0.25
-				party_popularity_stability_factor = 0.5
+				party_popularity_stability_factor = 0.3
 				neutrality_drift = 0.5
 				stability_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.1
@@ -1724,6 +1756,28 @@ ideas = {
 
 
 		# 툴팁용
+		
+
+		SHA_walking_the_dragon_tooltip_1 = {
+			name = SHA_walking_the_dragon
+			picture = SHA_walking_the_dragon
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+
+			}
+		}
+		SHA_walking_the_dragon_tooltip_2 = {
+			name = SHA_walking_the_dragon
+			picture = SHA_walking_the_dragon
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				army_core_defence_factor = 0.1
+			}
+		}
 		SHA_kaguya_idea_tooltip = {
 			name = SHA_KAGUYA
 			picture = SHA_KAGUYA
@@ -1882,6 +1936,26 @@ ideas = {
 				base = 1
 			}
 
+		}
+
+		SHA_vereinigte_stahlwerke = {
+			
+			allowed = {
+				original_tag = SHA
+			}
+
+			available = {
+				has_country_flag = SHA_vereinigte_stahlwerkei_active_flag
+			}
+			
+			cost = 75
+
+			research_bonus = {
+				excavation_tech = 0.15
+				industry = 0.15
+			}
+			
+			traits = { mining_company }
 		}
 	}
 }

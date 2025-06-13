@@ -165,7 +165,7 @@ set_popularities = {
 
 
 SHA_set_airforce_defaults = yes
-SHA_set_shanhaijing_ns_defaults = yes
+SHA_set_ns_defaults = yes
 SHA_set_army_ns_defaults = yes
 
 set_variable = { SHA_government_jiji = 50 }

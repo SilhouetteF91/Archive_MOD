@@ -7801,9 +7801,9 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 트리니티 선도론
-		id = TRN_leading_theory
-		icon = GFX_focus_TRN_leading_theory
+	focus = { # 트리니티 계획
+		id = TRN_destiny_of_trinity
+		icon = GFX_focus_TRN_destiny_of_trinity
 		prerequisite = { 
 			focus = TRN_supreme_leader 
 			focus = TRN_codification_of_regime
@@ -7821,7 +7821,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			add_war_support = 0.1
+
 		}
 	}
 
@@ -7929,10 +7929,10 @@ focus_tree = {
 		id = TRN_savior_of_kivotos
 		icon = GFX_focus_TRN_savior_of_kivotos
 		prerequisite = { focus = TRN_project_trinity }
-		prerequisite = { focus = TRN_leading_theory }
-		x = 1
-		y = 1
-		relative_position_id = TRN_project_trinity
+		prerequisite = { focus = TRN_destiny_of_trinity }
+		x = 0
+		y = 3
+		relative_position_id = TRN_Integrity_of_Trinity
 		cost = 5
 
 		available = {
@@ -8512,6 +8512,7 @@ focus_tree = {
 			activate_targeted_decision = { target = TRM decision = TRM_Decline_of_the_anti_gehenna_sentiment }
 			activate_targeted_decision = { target = TRM decision = TRM_tighten_control }
 			activate_targeted_decision = { target = TRM decision = TRM_United_Law }
+			activate_targeted_decision = { target = TRM decision = TRN_destroy_FRM }
 			hidden_effect = { 
 				country_event = { id = TRN_after_war_event.24 days = 7 }
 			}
@@ -11482,6 +11483,7 @@ shared_focus = { # 연합법
 		activate_targeted_decision = { target = TRM decision = TRM_Decline_of_the_anti_gehenna_sentiment }
 		activate_targeted_decision = { target = TRM decision = TRM_tighten_control }
 		activate_targeted_decision = { target = TRM decision = TRM_United_Law }
+		activate_targeted_decision = { target = TRM decision = TRN_destroy_FRM }
 		#custom_effect_tooltip = TRM_germany_union_tt
 	}
 }

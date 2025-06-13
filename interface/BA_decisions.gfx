@@ -2005,4 +2005,35 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_2side_icon.dds"
 		legacy_lazy_load = no
 	}
+
+
+	spriteType = {
+		name = "GFX_decision_category_SHA_conservative_policy_cat"
+		texturefile = "gfx/interface/decisions/SHA_prep_icons/decision_category_SHA_conservative_policy_cat.tga"
+	}
+	spriteType = {
+		name = "GFX_decision_SHA_conservative_policy_cat_picture"
+		texturefile = "gfx/interface/decisions/SHA_prep_icons/SHA_conservative_policy_cat.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_SHA_conservative_policy_0"
+		texturefile = "gfx/interface/decisions/SHA_prep_icons/decision_SHA_conservative_policy_0.tga"
+	}
+	spriteType = {
+		name = "GFX_decision_SHA_conservative_policy_1"
+		texturefile = "gfx/interface/decisions/SHA_prep_icons/decision_SHA_conservative_policy_1.tga"
+	}
+	spriteType = {
+		name = "GFX_decision_SHA_conservative_policy_2"
+		texturefile = "gfx/interface/decisions/SHA_prep_icons/decision_SHA_conservative_policy_2.tga"
+	}
+	spriteType = {
+		name = "GFX_decision_SHA_conservative_policy_3"
+		texturefile = "gfx/interface/decisions/SHA_prep_icons/decision_SHA_conservative_policy_3.tga"
+	}
+	spriteType = {
+		name = "GFX_decision_SHA_conservative_xuanwu_merchant_association"
+		texturefile = "gfx/interface/decisions/SHA_prep_icons/decision_SHA_conservative_xuanwu_merchant_association.tga"
+	}
 }

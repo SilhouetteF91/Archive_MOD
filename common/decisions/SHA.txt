@@ -826,6 +826,266 @@ SHA_invade_of_Hyakkiyako_cat = {
 	
 }
 
+SHA_conservative_policy_cat = {
+	SHA_conservative_social_reform = {
+		icon = {
+			key = GFX_decision_SHA_conservative_policy_0
+			trigger = { 
+				FROM = { check_variable = { SHA_decision_select^1 = 0 } }
+			}
+		}
+		icon = {
+			key = GFX_decision_SHA_conservative_policy_1
+			trigger = { 
+				FROM = { check_variable = { SHA_decision_select^1 = 1 } }
+			}
+		}
+		icon = {
+			key = GFX_decision_SHA_conservative_policy_2
+			trigger = { 
+				FROM = { check_variable = { SHA_decision_select^1 = 2 } }
+			}
+		}
+		icon = {
+			key = GFX_decision_SHA_conservative_policy_3
+			trigger = { 
+				FROM = { check_variable = { SHA_decision_select^1 = 3 } }
+			}
+		}
+
+		visible = { check_variable = { SHA_decision_select^1 < 3 } }
+
+		cost = 60
+		days_remove = 60
+		modifier = { political_power_factor = -0.1 }
+
+
+		ai_will_do = { base = 1000 }
+
+		complete_effect = {
+			custom_effect_tooltip = SHA_conservative_revolution_ns_change
+			add_to_variable =  { 
+				SHA_conservative_revolution_stability_factor = 0.05 
+				tooltip = stability_factor_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_war_support = -0.02
+			add_to_variable = { SHA_decision_select^1 = 1 }
+		}
+	}
+	SHA_conservative_economy_reform = {
+		icon = {
+			key = GFX_decision_SHA_conservative_policy_0
+			trigger = { 
+				FROM = { check_variable = { SHA_decision_select^2 = 0 } }
+			}
+		}
+		icon = {
+			key = GFX_decision_SHA_conservative_policy_1
+			trigger = { 
+				FROM = { check_variable = { SHA_decision_select^2 = 1 } }
+			}
+		}
+		icon = {
+			key = GFX_decision_SHA_conservative_policy_2
+			trigger = { 
+				FROM = { check_variable = { SHA_decision_select^2 = 2 } }
+			}
+		}
+		icon = {
+			key = GFX_decision_SHA_conservative_policy_3
+			trigger = { 
+				FROM = { check_variable = { SHA_decision_select^2 = 3 } }
+			}
+		}
+
+		visible = { check_variable = { SHA_decision_select^2 < 3 } }
+
+		cost = 60
+		days_remove = 60
+		modifier = { consumer_goods_factor = 0.05 }
+
+
+		ai_will_do = { base = 1000 }
+
+		complete_effect = {
+
+			custom_effect_tooltip = SHA_conservative_revolution_ns_change
+			add_to_variable =  { 
+				SHA_conservative_revolution_production_speed_industrial_complex_factor = 0.05 
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			add_to_variable = {
+				SHA_conservative_revolution_industrial_capacity_factory = 0.03
+				tooltip = industrial_capacity_factory_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_war_support = -0.02
+			add_political_power = 30
+			add_to_variable = { SHA_decision_select^2 = 1 }
+			set_country_flag = SHA_vereinigte_stahlwerkei_active_flag
+			if = {
+				limit = { check_variable = { SHA_decision_select^2 = 0 } }
+				custom_effect_tooltip = unlock_industrial_concern_tooltip 
+				show_ideas_tooltip = SHA_vereinigte_stahlwerke
+			}
+		}
+	
+	}
+	SHA_conservative_policy_reform = {
+		icon = {
+			key = GFX_decision_SHA_conservative_policy_0
+			trigger = { 
+				FROM = { check_variable = { SHA_decision_select^3 = 0 } }
+			}
+		}
+		icon = {
+			key = GFX_decision_SHA_conservative_policy_1
+			trigger = { 
+				FROM = { check_variable = { SHA_decision_select^3 = 1 } }
+			}
+		}
+		icon = {
+			key = GFX_decision_SHA_conservative_policy_2
+			trigger = { 
+				FROM = { check_variable = { SHA_decision_select^3 = 2 } }
+			}
+		}
+		icon = {
+			key = GFX_decision_SHA_conservative_policy_3
+			trigger = { 
+				FROM = { check_variable = { SHA_decision_select^3 = 3 } }
+			}
+		}
+
+		visible = { check_variable = { SHA_decision_select^3 < 3 } }
+
+		cost = 60
+		days_remove = 60
+		modifier = { political_power_factor = -0.10 }
+
+
+		ai_will_do = { base = 1000 }
+
+		complete_effect = {
+
+			custom_effect_tooltip = SHA_conservative_revolution_ns_change
+			add_to_variable =  { 
+				SHA_conservative_revolution_neutrality_drift = 0.01
+				tooltip = neutrality_drift_tt
+			}
+			add_to_variable = {
+				SHA_conservative_revolution_consumer_goods_factor = -0.03
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				SHA_conservative_revolution_conscription_factor = 0.04
+				tooltip = conscription_factor_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_war_support = -0.02
+			add_political_power = 30
+			add_to_variable = { SHA_decision_select^3 = 1 }
+		}
+	
+	}
+
+	# fire only once
+	SHA_conservative_army_reform = {
+		icon = GFX_decision_generic_military
+
+		visible = {  }
+
+		cost = 60
+		days_remove = 120
+		modifier = {
+			weekly_manpower = 500
+			consumer_goods_factor = 0.05
+			war_support_weekly = 0.003
+			experience_gain_army = -0.03
+		}
+
+		fire_only_once = yes
+
+
+		ai_will_do = { base = 1000 }
+
+		complete_effect = {
+
+			custom_effect_tooltip = SHA_conservative_revolution_ns_change
+			add_to_variable =  { 
+				SHA_conservative_revolution_army_org_factor = 0.03
+				tooltip = army_org_factor_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_war_support = 0.02
+			add_stability = -0.02
+		}
+	
+	}
+
+	SHA_conservative_xuanwu_merchant_association = {
+		icon = GFX_decision_SHA_conservative_xuanwu_merchant_association
+
+		visible = {
+
+		}
+		available = {
+			has_completed_focus = SHA_Sack_of_Rumi
+		}
+
+		cost = 60
+		days_remove = 120
+		modifier = {
+			political_power_factor = -0.1
+			neutrality_drift = -0.02
+		}
+
+		fire_only_once = yes
+
+
+		ai_will_do = { base = 1000 }
+
+		complete_effect = {
+			custom_effect_tooltip = SHA_conservative_revolution_ns_change
+			add_to_variable =  { 
+				SHA_conservative_revolution_stability_factor = 0.02
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				SHA_conservative_revolution_industrial_capacity_factory = 0.02
+				tooltip = industrial_capacity_factory_tt
+			}
+		}
+	
+	}
+
+	# 논외
+	SHA_conservative_clash_of_civilizations = {
+		icon = GFX_decision_generic_intelligence_operation
+
+		fire_only_once = yes 
+
+		cost = 0
+		days_remove = 180
+		modifier = { war_support_weekly = -0.005 }
+
+		visible = {
+			has_completed_focus = SHA_clash_of_civilizations
+		}
+		ai_will_do = { base = 1000 }
+
+		complete_effect = {
+			modify_timed_idea = {
+				idea = SHA_clash_of_civilizations_idea
+				days = 360
+			}
+			add_to_variable = { SHA_decision_select^5 = 1 }
+		}
+	
+	}
+}
+
 political_actions = {
 
 	SHA_Solving_the_austria_Militia = { 

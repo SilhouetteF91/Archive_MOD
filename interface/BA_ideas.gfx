@@ -12,6 +12,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/RED/RE4_Finland_committee.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_SHA_vereinigte_stahlwerke"
+		texturefile = "gfx/interface/ideas/SHA/idea_SHA_vereinigte_stahlwerke.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_SHA_Shanhaijing_Democracy_ns"
 		texturefile = "gfx/interface/ideas/SHA/idea_Shanhaijing_Democracy.tga"
 	}

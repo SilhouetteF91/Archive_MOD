@@ -517,8 +517,10 @@ unit_leader_event = {
 		custom_effect_tooltip = SHA_KAGUYA_tt
 		custom_effect_tooltip = tooltip_white_line
 		show_ideas_tooltip = SHA_KAGUYA_political_advisor
-		hidden_effect = {
-			activate_advisor = SHA_KAGUYA_political_advisor
+		hidden_effect = { activate_advisor = SHA_KAGUYA_political_advisor }
+		unlock_decision_category_tooltip = SHA_conservative_policy_cat
+		add_dynamic_modifier = { 
+			modifier = SHA_conservative_revolution_modifier
 		}
 	}
 }
@@ -954,6 +956,7 @@ country_event = {
 		}
 		remove_ideas = SHA_Peking_Opera_conservative
 		hidden_effect = {
+			country_event = { id = shalose.3 days = 01 }
 			remove_ideas = {
 				SHA_supreme_economic_council
 				SHA_supreme_economic_council_2
@@ -963,12 +966,6 @@ country_event = {
 				SHA_ASFTU
 				SHA_ASFTU_2
 				SHA_ASFTU_3
-			}
-			remove_ideas = {
-				SHA_walking_the_dragon_1
-				SHA_walking_the_dragon_2
-				SHA_walking_the_dragon_3
-				SHA_walking_the_dragon_4
 			}
 			remove_ideas = {
 				SHA_corporate_state_idea_1
