@@ -66,7 +66,14 @@ ideas = {
 				has_government = communism
 			}
 			on_remove = {
-				country_event = shacom.18
+				if = {
+					limit = {
+						has_country_flag = SHA_yield_at_communism_flag
+					}
+				}
+				else = {
+					country_event = shacom.18
+				}
 			}
 		}
 		SHA_will_to_anschluss = { #목표: 안슐루스
@@ -104,21 +111,6 @@ ideas = {
 			}
 			cancel = {
 				owns_state = 64
-			}
-		}
-		SHA_socialist_society_1 = { #산해경 사회주의
-			name = SHA_socialist_society
-			picture = SOV_system_decentralization
-			allowed_civil_war = {
-				always = yes
-			}
-			modifier = {
-				political_power_cost = 0.1
-				recruitable_population_factor = -0.1
-				consumer_goods_factor = -0.1
-				production_factory_efficiency_gain_factor = 0.1
-				industrial_capacity_dockyard = 0.05
-				industrial_capacity_factory = 0.05
 			}
 		}
 		SHA_socialist_society = { #산해경 사회주의
@@ -196,6 +188,9 @@ ideas = {
 				training_time_army_factor = -0.1
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.1
+				resistance_decay_on_our_occupied_states = -0.15
+				resistance_target_on_our_occupied_states = 0.15
+				resistance_damage_to_garrison_on_our_occupied_states = 0.25
 			}
 		}
 		SHA_threats_around = { #주변의 위협
@@ -1500,7 +1495,7 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			modifier = {
 				stability_factor = 0.05
-				research_speed_factor = 0.025
+				research_speed_factor = 0.05
 			}
 		}
 
@@ -1512,9 +1507,23 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			modifier = {
 				stability_factor = 0.05
-				research_speed_factor = 0.025
+				research_speed_factor = 0.05
 				production_factory_efficiency_gain_factor = -0.05
 				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		
+		#현지 화합 - 생산수단 사회화
+		SHA_local_harmony_socialism = {
+			name = SHA_local_harmony
+			picture = AUS_farr
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.1
 			}
 		}
 		

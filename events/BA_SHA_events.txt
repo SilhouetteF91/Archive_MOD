@@ -108,6 +108,22 @@ country_event = { #자유조합연대의 새 지도자
 			}
 		}
 	}
+	option = { #야쿠시 사야
+		trigger = {
+			has_completed_focus = SHA_progressivism_through_science
+		}
+		name = shacom.5.c
+		add_country_leader_role = {
+			character = SHA_SAYA
+			promote_leader = yes
+			country_leader = {
+				ideology = marxism
+				traits = {
+					SHA_T4a_2
+				}
+			}
+		}
+	}
 }
 country_event = { #노동조합 지원
 	id = shacom.6
@@ -213,17 +229,24 @@ country_event = { #공공돌봄
 		}
 	}
 }
-country_event = { #주변의 위협
+unit_leader_event = { #진보는 나의 힘
 	id = shacom.10
 	title = shacom.10.t
 	desc = shacom.10.d
-	picture = GFX_event_SHA_tienanmen
 
     is_triggered_only = yes
 
 	option = { #
 		name = shacom.10.a
-		add_war_support = 0.01
+		add_popularity = {
+			ideology = communism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.01
+		}
+		custom_effect_tooltip = shacom.10_tt
 	}
 }
 country_event = { #리히텐슈타인 장악
@@ -341,7 +364,7 @@ country_event = { #제2인터내셔널
 		}
 	}
 }
-country_event = { #적색 공포
+country_event = { #주변의 위협
 	id = shacom.16
 	title = shacom.16.t
 	desc = shacom.16.d

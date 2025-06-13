@@ -191,6 +191,9 @@ characters={
 			}
 			available = {
 				NOT = { has_character_flag = SHA_lock_flag }
+				SHA_SAYA = {
+					is_country_leader = no
+				}
 			}
 			cost = 150
 			ai_will_do = {
