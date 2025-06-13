@@ -1,7 +1,9 @@
 add_namespace = shafas
+add_namespace = shakai
 add_namespace = shadem
 add_namespace = shafla
 add_namespace = shacom
+add_namespace = shalose
 add_namespace = shadip
 add_namespace = shanews
 
@@ -107,7 +109,270 @@ country_event = { #자유조합연대의 새 지도자
 		}
 	}
 }
+country_event = { #노동조합 지원
+	id = shacom.6
+	title = shacom.6.t
+	desc = shacom.6.d
+	picture = GFX_event_SHA_tienanmen
 
+    is_triggered_only = yes
+
+	option = { #적색 노조
+		name = shacom.6.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+	option = { #가톨릭 노조
+		name = shacom.6.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+}
+country_event = { #현룡문의 운명
+	id = shacom.7
+	title = shacom.7.t
+	desc = shacom.7.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #가둬두자
+		name = shacom.7.a
+		retire_character = SHA_KISAKI
+		retire_character = SHA_MINA
+		add_stability = 0.05
+	}
+	option = { #노동은 교화다!
+		name = shacom.7.b
+		random_other_country = {
+			limit = {
+				original_tag = SHA
+			}
+			every_unit_leader = {
+				limit = {
+					has_trait = SHA_Genryumon_t 
+				}
+				set_nationality = SHA
+			}
+		}
+		add_stability = -0.05
+	}
+}
+country_event = { #프롤레타리아 문화양식
+	id = shacom.8
+	title = shacom.8.t
+	desc = shacom.8.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #붉은 경극부
+		name = shacom.8.a
+		swap_ideas = {
+			remove_idea = SHA_Peking_Opera
+			add_idea = SHA_Peking_Opera_socialism
+		}
+	}
+}
+country_event = { #공공돌봄
+	id = shacom.9
+	title = shacom.9.t
+	desc = shacom.9.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.9.a
+		if = {
+			limit = {
+				has_idea = SHA_aoghkdnjs_idea
+			}
+			swap_ideas = {
+				remove_idea = SHA_aoghkdnjs_idea
+				add_idea = SHA_soc_aoghkdnjs_idea
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = SHA_Plum_Garden_Military_academy_idea
+				add_idea = SHA_soc_Plum_Garden_Military_academy_idea
+			}
+		}
+	}
+}
+country_event = { #주변의 위협
+	id = shacom.10
+	title = shacom.10.t
+	desc = shacom.10.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.10.a
+		add_war_support = 0.01
+	}
+}
+country_event = { #리히텐슈타인 장악
+	id = shacom.11
+	title = shacom.11.t
+	desc = shacom.11.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.11.a
+		848 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		hidden_effect = {
+			news_event = {
+				id = BA_news.20
+				days = 3
+			}
+		}
+	}
+}
+country_event = { #대중파업
+	id = shacom.12
+	title = shacom.12.t
+	desc = shacom.12.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.12.a
+		add_stability = -0.05
+		every_owned_state = {
+			set_demilitarized_zone = yes
+		}
+		add_ideas = strikes_3
+		hidden_effect = {
+			country_event = {
+				id = shacom.13
+				days = 18
+			}
+		}
+	}
+}
+country_event = { #파업의 승리
+	id = shacom.13
+	title = shacom.13.t
+	desc = shacom.13.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.13.a
+		remove_ideas = strikes_3
+		add_timed_idea = {
+			idea = SHA_aftermath_of_strike
+			days = 150
+		}
+		custom_effect_tooltip = CHL_skip_one_line_tt
+		every_owned_state = {
+			set_demilitarized_zone = no
+		}
+		set_politics = {
+			ruling_party = communism
+		}
+		set_cosmetic_tag = SHA_soviet
+		set_country_flag = SHA_communist_focus_in_progress
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+country_event = { #민족 자결의 원칙
+	id = shacom.14
+	title = shacom.14.t
+	desc = shacom.14.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.14.a
+		add_war_support = 0.05
+		every_neighbor_country = {
+			limit = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			add_opinion_modifier = {
+				target = SHA
+				modifier = RED_expansionism_opinion
+			}
+		}
+	}
+}
+country_event = { #제2인터내셔널
+	id = shacom.15
+	title = shacom.15.t
+	desc = shacom.15.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.15.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+
+
+# 신선이 되는 길
+country_event = {
+	id = shakai.1
+	title = shakai.1.t
+	desc = shakai.1.d
+	picture = GFX_report_event_communists_in_riga
+    is_triggered_only = yes
+
+	option = {
+		name = shakai.1.a
+	}
+}
+
+# 잡힌 실마리
+country_event = {
+	id = shakai.2
+	title = shakai.2.t
+	desc = shakai.2.d
+	picture = GFX_report_event_communists_in_riga
+    is_triggered_only = yes
+
+	option = {
+		name = shakai.2.a
+        	add_power_balance_value = {
+        	    id = SHA_senzu_bean_pb
+        	    value = 0.05
+        	    tooltip_side = SHA_bean_100_side
+        	}
+	}
+}
 # 경극부 쿠데타
 country_event = {
 	id = shafas.1
@@ -489,12 +754,12 @@ unit_leader_event = {
 	}
 }
 
-# 세력권 제안
+# 
 country_event = {
 	id = shafas.14
 	title = shafas.14.t
 	desc = shafas.14.d
-	picture = GFX_report_event_communist_leader
+	picture = GFX_report_event_yakushi_saya_memorial
 
     is_triggered_only = yes
 
@@ -505,7 +770,12 @@ country_event = {
 
 	option = {
 		name = shafas.14.b
-
+		set_portraits = {
+			character = SHA_SAYA
+			army = { small = GFX_idea_SHA_lock_Yakushi_Saya }
+			civilian = { small =GFX_idea_SHA_lock_Yakushi_Saya }
+		}
+		SHA_SAYA = { set_character_flag = SHA_lock_flag }
 	}
 }
 
@@ -531,184 +801,14 @@ country_event = {
 	option = {
 		name = shafas.17.b
 		add_stability = -0.03
+		ai_chance = {
+			base = 40
+			modifier = { is_historical_focus_on = yes }
+		}
 		add_popularity = {
 			ideology = fascism
 			popularity = 0.05
 		}
-	}
-}
-
-#  
-country_event = {
-	id = shafas.20
-	title = shafas.20.t
-	desc = shafas.20.d
-	picture = GFX_report_event_communist_leader
-
-    is_triggered_only = yes
-
-	option = {
-		name = shafas.20.a
-		add_stability = -0.05
-		hidden_effect = {
-			country_event = { id = shafas.21 days =04 }
-		}
-	}
-}
-country_event = {
-	id = shafas.21
-	title = shafas.21.t
-	desc = {
-        text = shafas.21.d
-        trigger = { has_government = fascism }
-	}
-	desc = {
-        text = shafas.21.d_2
-        trigger = { 
-			SHA_KAGUYA = { is_hired_as_advisor = yes }
-		}
-	}
-	picture = GFX_report_event_communist_leader
-
-    is_triggered_only = yes
-
-	option = { # 카구야 축출 중점 완료시
-		name = shafas.21.a
-		trigger = { has_government = fascism }
-
-		hidden_effect = {
-			country_event = { id = shafas.22 days = 01 }
-		}
-		effect_tooltip = {
-			remove_ideas = SHA_supreme_economic_council
-			remove_ideas = SHA_ASFTU
-		}
-		hidden_effect = {
-			remove_ideas = {
-				SHA_supreme_economic_council
-				SHA_supreme_economic_council_2
-				SHA_supreme_economic_council_3
-			}
-			remove_ideas = {
-				SHA_ASFTU
-				SHA_ASFTU_2
-				SHA_ASFTU_3
-			}
-		}
-		remove_dynamic_modifier = { modifier = SHA_Shanhaijinfascism }
-		if = {
-			limit = { has_character = SHA_KAI }
-			retire_character = SHA_KAI
-		}
-		
-		#add_country_leader_role = {
-        #    character = SHA_secret_agent
-		#	promote_character = yes
-		#	country_leader = {
-		#		ideology = fascism_ideology
-		#		expire = "1965.1.1.1"
-		#		traits = {  }
-		#	}
-		#}
-		if = {
-			limit = { has_character = SHA_secret_agent }
-			promote_character = SHA_secret_agent
-		}
-	}
-
-	option = { # 보수 혁명 중점 완료시
-		name = shafas.21.b
-		trigger = {
-			SHA_KAGUYA = { is_hired_as_advisor = yes }
-		}
-		#custom_effect_tooltip = remove_political_advisor
-		#show_ideas_tooltip = SHA_KAGUYA_political_advisor
-		if = {
-			limit = { has_character = SHA_KAGUYA }
-			retire_character = SHA_KAGUYA
-		}
-		effect_tooltip = {
-			remove_ideas = SHA_supreme_economic_council
-			remove_ideas = SHA_ASFTU
-			remove_ideas = SHA_walking_the_dragon_1
-			remove_ideas = SHA_corporate_state_idea_1
-		}
-		remove_ideas = SHA_Peking_Opera_conservative
-		hidden_effect = {
-			remove_ideas = {
-				SHA_supreme_economic_council
-				SHA_supreme_economic_council_2
-				SHA_supreme_economic_council_3
-			}
-			remove_ideas = {
-				SHA_ASFTU
-				SHA_ASFTU_2
-				SHA_ASFTU_3
-			}
-			remove_ideas = {
-				SHA_walking_the_dragon_1
-				SHA_walking_the_dragon_2
-				SHA_walking_the_dragon_3
-				SHA_walking_the_dragon_4
-			}
-			remove_ideas = {
-				SHA_corporate_state_idea_1
-				SHA_corporate_state_idea_2
-			}
-
-		}
-
-	}
-}
-country_event = {
-	id = shafas.22
-	title = shafas.22.t
-	desc = shafas.22.d
-	picture = GFX_report_event_communist_leader
-
-    is_triggered_only = yes
-
-	option = {
-		name = shafas.22.a
-		clr_country_flag = BA_ban_fascism_parties_flag
-		clr_country_flag = BA_ban_neutrality_parties_flag
-		clr_country_flag = BA_ban_democratic_parties_flag
-		clr_country_flag = BA_ban_communism_parties_flag
-
-		clr_country_flag = banned_democratic_flag
-		clr_country_flag = banned_communism_flag
-		clr_country_flag = banned_fascism_flag
-		clr_country_flag = banned_neutrality_flag
-		set_party_name = {
-			ideology = democratic
-			long_name = SHA_democratic_party_long
-			name = SHA_democratic_party
-		}
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.25
-		}
-		set_politics = {
-			ruling_party = neutrality
-		}
-		set_party_name = {
-			ideology = neutrality
-			long_name = BA_neutrality_party_name_rerolling_5
-			name = BA_neutrality_party_name_rerolling_5
-		}
-		if = {
-			limit = { has_character = SHA_MINA }
-			promote_character = SHA_MINA
-		}
-		#add_country_leader_role = {
-        #    character = SHA_MINA
-		#	promote_character = yes
-		#	country_leader = {
-		#		ideology = despotism
-		#		expire = "1965.1.1.1"
-		#		traits = { sotamarsalkka }
-		#	}
-		#}
 	}
 }
 
@@ -755,6 +855,179 @@ country_event = {
 
 	option = {
 		name = shadem.2.a
+	}
+}
+#  
+country_event = {
+	id = shalose.1
+	title = shalose.1.t
+	desc = shalose.1.d
+	picture = GFX_report_event_communist_leader
+
+    is_triggered_only = yes
+
+	option = {
+		name = shalose.1.a
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = { id = shalose.2 days =04 }
+		}
+	}
+}
+country_event = {
+	id = shalose.2
+	title = shalose.2.t
+	desc = {
+        text = shalose.2.d
+        trigger = { has_government = fascism }
+	}
+	desc = {
+        text = shalose.2.d_2
+        trigger = { 
+			SHA_KAGUYA = { is_hired_as_advisor = yes }
+		}
+	}
+	picture = GFX_report_event_communist_leader
+
+    is_triggered_only = yes
+
+	option = { # 카구야 축출 중점 완료시
+		name = shalose.2.a
+		trigger = { has_government = fascism }
+
+		hidden_effect = {
+			country_event = { id = shalose.3 days = 01 }
+		}
+		effect_tooltip = {
+			remove_ideas = SHA_supreme_economic_council
+			remove_ideas = SHA_ASFTU
+		}
+		hidden_effect = {
+			remove_ideas = {
+				SHA_supreme_economic_council
+				SHA_supreme_economic_council_2
+				SHA_supreme_economic_council_3
+			}
+			remove_ideas = {
+				SHA_ASFTU
+				SHA_ASFTU_2
+				SHA_ASFTU_3
+			}
+		}
+		remove_dynamic_modifier = { modifier = SHA_Shanhaijinfascism }
+		if = {
+			limit = { has_character = SHA_KAI }
+			retire_character = SHA_KAI
+		}
+		
+		#add_country_leader_role = {
+        #    character = SHA_secret_agent
+		#	promote_character = yes
+		#	country_leader = {
+		#		ideology = fascism_ideology
+		#		expire = "1965.1.1.1"
+		#		traits = {  }
+		#	}
+		#}
+		if = {
+			limit = { has_character = SHA_secret_agent }
+			promote_character = SHA_secret_agent
+		}
+	}
+
+	option = { # 보수 혁명 중점 완료시
+		name = shalose.2.b
+		trigger = {
+			SHA_KAGUYA = { is_hired_as_advisor = yes }
+		}
+		#custom_effect_tooltip = remove_political_advisor
+		#show_ideas_tooltip = SHA_KAGUYA_political_advisor
+		if = {
+			limit = { has_character = SHA_KAGUYA }
+			retire_character = SHA_KAGUYA
+		}
+		effect_tooltip = {
+			remove_ideas = SHA_supreme_economic_council
+			remove_ideas = SHA_ASFTU
+			remove_ideas = SHA_walking_the_dragon_1
+			remove_ideas = SHA_corporate_state_idea_1
+		}
+		remove_ideas = SHA_Peking_Opera_conservative
+		hidden_effect = {
+			remove_ideas = {
+				SHA_supreme_economic_council
+				SHA_supreme_economic_council_2
+				SHA_supreme_economic_council_3
+			}
+			remove_ideas = {
+				SHA_ASFTU
+				SHA_ASFTU_2
+				SHA_ASFTU_3
+			}
+			remove_ideas = {
+				SHA_walking_the_dragon_1
+				SHA_walking_the_dragon_2
+				SHA_walking_the_dragon_3
+				SHA_walking_the_dragon_4
+			}
+			remove_ideas = {
+				SHA_corporate_state_idea_1
+				SHA_corporate_state_idea_2
+			}
+
+		}
+
+	}
+}
+country_event = {
+	id = shalose.3
+	title = shalose.3.t
+	desc = shalose.3.d
+	picture = GFX_report_event_communist_leader
+
+    is_triggered_only = yes
+
+	option = {
+		name = shalose.3.a
+		clr_country_flag = BA_ban_fascism_parties_flag
+		clr_country_flag = BA_ban_neutrality_parties_flag
+		clr_country_flag = BA_ban_democratic_parties_flag
+		clr_country_flag = BA_ban_communism_parties_flag
+
+		clr_country_flag = banned_democratic_flag
+		clr_country_flag = banned_communism_flag
+		clr_country_flag = banned_fascism_flag
+		clr_country_flag = banned_neutrality_flag
+		set_party_name = {
+			ideology = democratic
+			long_name = SHA_democratic_party_long
+			name = SHA_democratic_party
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.25
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = BA_neutrality_party_name_rerolling_5
+			name = BA_neutrality_party_name_rerolling_5
+		}
+		if = {
+			limit = { has_character = SHA_MINA }
+			promote_character = SHA_MINA
+		}
+		#add_country_leader_role = {
+        #    character = SHA_MINA
+		#	promote_character = yes
+		#	country_leader = {
+		#		ideology = despotism
+		#		expire = "1965.1.1.1"
+		#		traits = { sotamarsalkka }
+		#	}
+		#}
 	}
 }
 
@@ -979,7 +1252,24 @@ news_event = {
 
 news_event = {
 	id = shanews.04
-	title = shanews.04.t
+	title = {
+		text = shanews.04.t
+		trigger = {
+			SHA = {
+				NOT = {
+					has_country_flag = SHA_communist_focus_in_progress
+				}
+			}
+		}
+	}
+	title = {
+		text = shanews.04.t_1
+		trigger = {
+			SHA = {
+				has_country_flag = SHA_communist_focus_in_progress
+			}
+		}
+	}
 	desc = {
 		text = shanews.04.desc_c
 		trigger = {
@@ -993,10 +1283,17 @@ news_event = {
 		}
 	}
 	desc = {
+		text = shanews.04.desc_com
+		trigger = {
+			SHA = { has_completed_focus = SHA_communism_focus_12 }
+		}
+	}
+	desc = {
 		text = shanews.04.desc_nothing
 		trigger = {
 			SHA = { 
 				NOT = {
+					has_completed_focus = SHA_communism_focus_12 
 					has_completed_focus = SHA_Kaguya_ousted 
 					has_completed_focus = SHA_conservative_revolution 
 				}

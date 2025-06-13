@@ -16,3 +16,103 @@ defined_text = {
 		localization_key = GEH_ako_democratic_loc_neutral
 	}
 }
+defined_text = {
+	name = gem_club_problem_decision_gourmet_research_society_text_loc
+	text = {
+		trigger = {
+			has_country_flag = club_problem_gourmet_research_society_escape_flag
+		}
+		localization_key = gem_club_problem_decision_gourmet_research_society_escape
+	}
+	text = {
+		localization_key = gem_club_problem_decision_gourmet_research_society_text
+	}
+}
+defined_text = {
+	name = gem_club_problem_decision_hot_spring_department_text_loc
+	text = {
+		trigger = {
+			has_country_flag = club_problem_hot_spring_department_escape_flag
+		}
+		localization_key = gem_club_problem_decision_gourmet_research_society_escape
+	}
+	text = {
+		localization_key = gem_club_problem_decision_hot_spring_department_text
+	}
+}
+defined_text = {
+	name = gem_club_problem_decision_gourmet_research_society_lv_loc
+	text = {
+		trigger = {
+			check_variable = {
+				modifier@GEH_resistance_strength_gourmet_research_society = 1
+			}
+		}
+		localization_key = gem_club_problem_decision_lv1
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				modifier@GEH_resistance_strength_gourmet_research_society = 2
+			}
+		}
+		localization_key = gem_club_problem_decision_lv2
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				modifier@GEH_resistance_strength_gourmet_research_society = 3
+			}
+		}
+		localization_key = gem_club_problem_decision_lv3
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				modifier@GEH_resistance_strength_gourmet_research_society = 4
+			}
+		}
+		localization_key = gem_club_problem_decision_lv4
+	}
+	text = {
+		localization_key = gem_club_problem_decision_lvO
+	}
+}
+defined_text = {
+	name = gem_club_problem_decision_hot_spring_department_lv_loc
+	text = {
+		trigger = {
+			check_variable = {
+				modifier@GEH_resistance_strength_hot_spring_department = 1
+			}
+		}
+		localization_key = gem_club_problem_decision_lv1
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				modifier@GEH_resistance_strength_hot_spring_department = 2
+			}
+		}
+		localization_key = gem_club_problem_decision_lv2
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				modifier@GEH_resistance_strength_hot_spring_department = 3
+			}
+		}
+		localization_key = gem_club_problem_decision_lv3
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				modifier@GEH_resistance_strength_hot_spring_department = 4
+			}
+		}
+		localization_key = gem_club_problem_decision_lv4
+	}
+	text = {
+		localization_key = gem_club_problem_decision_lvO
+	}
+}

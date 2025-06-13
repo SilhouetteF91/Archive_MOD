@@ -131,7 +131,7 @@ characters={
 		country_leader={
 			ideology=moderatism
 			traits={
-				
+				HYA_hyakkaryouran_resolution_council_deputy
 			}
 			expire="1965.1.1.1"
 		}
@@ -638,6 +638,7 @@ characters={
 		country_leader={
 			ideology=anarchist_communism
 			traits={
+				HYA_Mangryangz
 			}
 			expire="1965.1.1.1"
 		}
@@ -708,6 +709,7 @@ characters={
 		country_leader={
 			ideology=fascism_ideology
 			traits={
+				HYA_Maternal_Torojaemon
 			}
 			expire="1965.1.1.1"
 		}

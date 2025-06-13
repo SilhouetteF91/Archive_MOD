@@ -1074,6 +1074,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_idea_SHA_lock_Yakushi_Saya"
+		textureFile = "gfx/interface/advisors/SHA/SHA_lock_Yakushi_Saya.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_idea_SHA_Shun"
 		textureFile = "gfx/interface/advisors/SHA/SHA_Spot_5.tga"
 		legacy_lazy_load = no

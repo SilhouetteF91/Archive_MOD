@@ -39,8 +39,8 @@ intelligence_agency = {
 
 intelligence_agency = {
 
-	picture = GFX_intelligence_agency_logo_trm
-	names = { "Justice Task Force" }
+	picture = GFX_intelligence_agency_logo_generic_6
+	names = { "Trinity General Security Agency" }
 	
 	default = { tag = TRM }
 	available = { original_tag = TRM }

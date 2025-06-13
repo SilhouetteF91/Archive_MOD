@@ -1,3 +1,13 @@
+SHA_communism_cat = {
+	priority = 200
+	icon = GFX_decision_category_generic_communist_revolution
+	allowed = {
+		original_tag = SHA
+	}
+	visible = {
+		has_country_flag = SHA_communist_focus_in_progress
+	}
+}
 SHA_congress = {
 	priority = 950
 	icon = GFX_decision_category_usa_congress
@@ -7,6 +17,14 @@ SHA_congress = {
 	visible = {
 		has_country_flag = SHA_congress_ok
 	}
+}
+SHA_senzu_bean_categories = {
+	allowed = { original_tag = SHA }
+
+	visible = {
+		has_completed_focus = SHA_Sundan_dosage
+	}
+
 }
 SHA_coup_of_Black_Tortoise_Promenade = {
 	priority = 10

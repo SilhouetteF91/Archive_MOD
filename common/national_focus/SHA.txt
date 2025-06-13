@@ -795,7 +795,7 @@ focus_tree = {
 	# 선단 투여
 	focus = {
 		id = SHA_Sundan_dosage
-		icon = GFX_focus_generic_coffee
+		icon = GFX_focus_SHA_Sundan_dosage
 		x = -1
 		y = 1
 		relative_position_id = SHA_Eastern_Alchemy_Society_solidarity
@@ -814,7 +814,17 @@ focus_tree = {
 
 
 		completion_reward = {
+			country_event = shakai.1
+			custom_effect_tooltip = SHA_Sundan_dosage_tt
+			hidden_effect = {
+				set_power_balance = {
+					id = SHA_senzu_bean_pb
+					left_side = SHA_bean_0_side
+					right_side = SHA_bean_100_side
 
+					set_value = -1
+				}
+			}
 		}
 	}
 
@@ -871,7 +881,7 @@ focus_tree = {
 	# 
 	focus = {
 		id = SHA_Seonin
-		icon = GFX_focus_SHA_cavalry_charge
+		icon = GFX_focus_SHA_Seonin
 		x = 0
 		y = 3
 		relative_position_id = SHA_cult_of_personality
@@ -884,11 +894,15 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			is_debug = yes
-			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+
 		}
 
-		available = { }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SHA_seonin_custom_trigger
+				has_country_flag = SHA_bean_is_100
+			}
+		}
 		bypass = { }
 
 
@@ -1364,13 +1378,6 @@ focus_tree = {
 		prerequisite = { focus = SHA_Austrian_appeasement_policy }
 		mutually_exclusive = { focus = SHA_gathering_of_radicals }
 
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = GAEBALJUNG
-				is_debug = yes
-				is_ai = no
-			}
-		}
 		bypass = { }
 		allow_branch = {
 			IF = {
@@ -1400,7 +1407,7 @@ focus_tree = {
 		relative_position_id = SHA_Austrian_appeasement_policy
 
 		completion_reward = {
-			add_stability = 0.05
+			add_ideas = SHA_local_harmony
 				if = {
 					limit = {
 						has_game_rule = {
@@ -1709,14 +1716,51 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_1
 
 		completion_reward = {
-			remove_ideas = SHA_Austrian_fascist_militia
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
+			custom_effect_tooltip = SHA_communism_focus_2_tt
+			if = {
+				limit = {
+					OR = {
+						has_civil_war = yes
+						AND = {
+							has_civil_war = no
+							has_government = communism
+						}
+					}
+				}
+				division_template = {
+					name = "Shanhaijing Red Guard"
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+					}
+				}
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Shanhaijing Red Guard\" division_template = \"Shanhaijing Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = SHA
+						count = 5
+					}
+				}
 			}
-			add_stability = -0.15
-			add_war_support = -0.15
-			add_manpower = -500
 		}
 	}
 	focus = { #평의회 운동 재개
@@ -1830,10 +1874,54 @@ focus_tree = {
 			communism > 0.4
 		}
 		completion_reward = {
-			set_politics = {
-				ruling_party = communism
+			hidden_effect = {
+				country_event = {
+					id = shacom.12
+					days = 2
+				}
 			}
-			set_cosmetic_tag = SHA_soviet
+			add_political_power = -100
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			if = {
+				limit = {
+					has_completed_focus = SHA_communism_focus_2
+				}
+				division_template = {
+					name = "Shanhaijing Red Guard"
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Shanhaijing Red Guard\" division_template = \"Shanhaijing Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = SHA
+						count = 5
+					}
+				}
+			}
 		}
 	}
 	focus = { #34년에 대한 복수
@@ -1867,7 +1955,62 @@ focus_tree = {
 				}
 				size = 0.5
 				set_cosmetic_tag = SHA_color
+				hidden_effect = {
+					every_unit_leader = {
+						set_nationality = SHA
+					}
+					SHA = {
+						every_unit_leader = {
+							limit = {
+								has_trait = SHA_Genryumon_t 
+							}
+							set_nationality = PREV.PREV
+						}
+					}
+					SHA_KISAKI = {
+						promote_leader = yes
+					}
+				}
 			}
+			if = {
+				limit = {
+					has_completed_focus = SHA_communism_focus_2
+				}
+				division_template = {
+					name = "Shanhaijing Red Guard"
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Shanhaijing Red Guard\" division_template = \"Shanhaijing Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+						owner = SHA
+						count = 5
+					}
+				}
+			}
+			set_country_flag = SHA_communist_focus_in_progress
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = { #사회주의 산해경
@@ -1877,17 +2020,22 @@ focus_tree = {
 		y = 2
 		cost = 5
 
-		prerequisite = { focus = SHA_communism_focus_2 }
-		prerequisite = { focus = SHA_communism_focus_6 focus = SHA_communism_focus_7 }
+		prerequisite = { focus = SHA_communism_focus_6 focus = SHA_communism_focus_7 focus = SHA_communism_focus_2 }
 		bypass = { }
 		available = {
 			has_civil_war = no
 			has_government = communism
 		}
+		select_effect = {
+			country_event = {
+				id = shacom.7
+				days = 10
+			}
+		}
 		relative_position_id = SHA_communism_focus_2
 
 		completion_reward = {
-
+			add_ideas = SHA_socialist_society
 		}
 	}
 	focus = { #국제주의 대오
@@ -1904,7 +2052,9 @@ focus_tree = {
 			focus = SHA_communism_focus_12
 		}
 		completion_reward = {
-
+			SOU = {
+				country_event = generic.2
+			}
 		}
 	}
 	focus = { #산해경-소련 산업 연계
@@ -1917,14 +2067,39 @@ focus_tree = {
 		prerequisite = { focus = SHA_communism_focus_9 }
 		bypass = { }
 		relative_position_id = SHA_communism_focus_9
-
+		available = {
+			is_ally_with = SOV
+		}
 		completion_reward = {
-
+			SOU = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = SOU
+						infrastructure > 2
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SHA
+					infrastructure > 2
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
 		}
 	}
-	focus = { #소련 군사고문단
+	focus = { #소련 연구단지
 		id = SHA_communism_focus_11
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_focus_generic_university_2
 		x = 0
 		y = 2
 		cost = 5
@@ -1932,9 +2107,21 @@ focus_tree = {
 		prerequisite = { focus = SHA_communism_focus_9 }
 		bypass = { }
 		relative_position_id = SHA_communism_focus_9
+		available = {
+			is_ally_with = SOV
+		}
 
 		completion_reward = {
-
+			976 = {
+				add_dynamic_modifier = {
+					modifier = SHA_Naukograd
+				}
+				add_building_construction = {
+					type = air_facility
+					level = 1
+					province = 9679
+				}
+			}
 		}
 	}
 	focus = { #주변의 위협
@@ -1952,7 +2139,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = SHA_threats_around
+			hidden_effect = {
+				country_event = {
+					id = shacom.10
+					days = 4
+				}
+			}
 		}
 	}
 	focus = { #사회 개조
@@ -1965,9 +2158,32 @@ focus_tree = {
 		prerequisite = { focus = SHA_communism_focus_12 focus = SHA_communism_focus_9 }
 		bypass = { }
 		relative_position_id = SHA_communism_focus_12
+		cancelable = no
+		select_effect = {
+			country_event = {
+				id = shacom.8
+				days = 15
+			}
+			country_event = {
+				id = shacom.9
+				days = 30
+			}
+		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
+			effect_tooltip = {
+				country_event = {
+					id = shacom.8
+					days = 15
+				}
+				country_event = {
+					id = shacom.9
+					days = 30
+				}
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			add_stability = -0.05
 		}
 	}
 	focus = { #생산수단 사회화
@@ -1982,12 +2198,15 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_13
 
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = SHA_socialist_society
+				add_idea = SHA_socialist_society_1
+			}
 		}
 	}
-	focus = { #경제 계획
+	focus = { #계획 경제
 		id = SHA_communism_focus_15
-		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		icon = GFX_SOV_planned_economy_ccp_2d_sov_compatibility
 		x = 3
 		y = 1
 		cost = 5
@@ -1997,7 +2216,7 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_13
 
 		completion_reward = {
-
+			upgrade_economy_law = yes
 		}
 	}
 	focus = { #혁명적 고립주의
@@ -2012,7 +2231,7 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_12
 
 		completion_reward = {
-
+			add_ideas = SHA_revolutionary_isolationism
 		}
 	}
 
@@ -2193,7 +2412,27 @@ focus_tree = {
 		relative_position_id = SHA_university_of_vienna
 
 		completion_reward = {
-
+			if = {
+				limit = {
+					has_idea = SHA_local_harmony
+				}
+				swap_ideas = {
+					remove_idea = SHA_local_harmony
+					add_idea = SHA_local_harmony_tu
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SHA_local_harmony_we
+					add_idea = SHA_local_harmony_tuwe
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = shacom.6
+					days = 6
+				}
+			}
 		}
 	}
 
@@ -2217,7 +2456,23 @@ focus_tree = {
 		relative_position_id = SHA_university_of_vienna
 
 		completion_reward = {
-
+			if = {
+				limit = {
+					has_idea = SHA_local_harmony
+				}
+				swap_ideas = {
+					remove_idea = SHA_local_harmony
+					add_idea = SHA_local_harmony_we
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SHA_local_harmony_tu
+					add_idea = SHA_local_harmony_tuwe
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = AUS_marianne_pollak
 		}
 	}
 
@@ -2301,6 +2556,9 @@ focus_tree = {
 		relative_position_id = SHA_Austrian_oppression_continues
 		search_filters = {  }
 		cost = 2
+		allow_branch = {
+			NOT = {has_country_flag = SHA_communist_focus_in_progress}
+		}
 
 		mutually_exclusive = {  }
 
@@ -2334,6 +2592,113 @@ focus_tree = {
 		}
 	}
 
+	# (공산용) 제2인터내셔널 재건
+	focus = {
+		id = SHA_communism_diplo_0
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
+		x = 17
+		y = 0
+		offset = {
+			x = -25
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = SHA_Austrian_appeasement_policy 
+			}
+		}
+		offset = {
+			x = -13
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = SHA_gathering_of_radicals 
+			}
+		}
+		offset = {
+			x = -8
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = SHA_local_harmony 
+			}
+		}
+		offset = {
+			x = -21
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_global_flag = GFLAG_BAKSANWAR_END 
+			}
+		}
+		relative_position_id = SHA_Austrian_oppression_continues
+		search_filters = {  }
+		cost = 2
+		allow_branch = {
+			has_country_flag = SHA_communist_focus_in_progress
+		}
+		bypass_effect = {
+			hidden_effect = {
+				country_event = {
+					id = shacom.11
+					days = 10
+				}
+			}
+		}
+		mutually_exclusive = {  }
+
+		available = {
+			date > 1937.1.1
+			custom_trigger_tooltip = {
+				tooltip = SHA_shanhaijing_fact_trigger_tt
+				OR = {
+					has_completed_focus = SHA_Kaguya_ousted
+					has_completed_focus = SHA_conservative_revolution
+					has_completed_focus = SHA_appointment_of_BTP
+					has_completed_focus = SHA_communism_focus_9
+					has_completed_focus = SHA_communism_focus_12
+					has_completed_focus = SHA_Strengthening_Genryumon
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				has_global_flag = GFLAG_BAKSANWAR_END
+				is_in_faction = yes
+			}
+		}
+
+
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = shacom.11
+					days = 10
+				}
+				country_event = {
+					id = shacom.15
+					days = 4
+				}
+			}
+			set_rule = { can_create_factions = yes }
+			create_faction = The_second_internationale
+			add_political_power = 50
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.03
+			}
+			news_event = shanews.04
+		}
+	}
+
 	# 키보토스 외교
 	focus = {
 		id = SHA_Diplomacy_with_Kivotos
@@ -2344,7 +2709,7 @@ focus_tree = {
 		search_filters = {  }
 		cost = 5
 
-		prerequisite = { focus = SHA_Shanhaijing_fact }
+		prerequisite = { focus = SHA_Shanhaijing_fact focus = SHA_communism_diplo_0 }
 		mutually_exclusive = {  }
 
 		available = {
@@ -2514,6 +2879,7 @@ focus_tree = {
 
 		prerequisite = {
 			focus = SHA_Shanhaijing_fact
+			focus = SHA_communism_diplo_0
 		}
 		mutually_exclusive = {  }
 
@@ -2630,6 +2996,7 @@ focus_tree = {
 		
 		allow_branch = {
 			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+			NOT = { has_country_flag = SHA_communist_focus_in_progress }
 		}
 
 		relative_position_id = SHA_invade_of_Hyakkiyako
@@ -2669,6 +3036,7 @@ focus_tree = {
 
 		allow_branch = {
 			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+			NOT = { has_country_flag = SHA_communist_focus_in_progress }
 		}
 
 		relative_position_id = SHA_invade_of_Hyakkiyako
@@ -2939,6 +3307,7 @@ focus_tree = {
 		
 		allow_branch = {
 			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+			NOT = { has_country_flag = SHA_communist_focus_in_progress }
 		}
 
 		relative_position_id = SHA_invade_of_Hyakkiyako
@@ -3413,18 +3782,19 @@ focus_tree = {
 		}
 		bypass = { }
 
+		#allow branch 없애도괜찮은지물어보는걸허락받아도되겠습니까?!
 		allow_branch = {
-			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
-			OR = {
-				has_country_flag = SHA_started_Liberation_SK
-				NOT = {
-					AND = {
-						owns_state = 52
-						owns_state = 53
-						owns_state = 54
-					}
-				}
-			}
+	#		NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+	#		OR = {
+	#			has_country_flag = SHA_started_Liberation_SK
+	#			NOT = {
+	#				AND = {
+	#					owns_state = 52
+	#					owns_state = 53
+	#					owns_state = 54
+	#				}
+	#			}
+	#		}
 		}
 
 		relative_position_id = SHA_the_third_kivotos
@@ -4025,6 +4395,552 @@ focus_tree = {
 	#### 산해경 패전 루트 ####
 	##################
 
+	##################
+	#### 산해경 공산 외교 중점 ####
+	##################
+	
+	# 실천적 오스트로 맑시즘
+	focus = {
+		id = SHA_communism_diplo_1
+		icon = GFX_focus_AUS_austromarxism
+		x = -7
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
+
+		available = {
+			OR = {
+				NOT = { country_exists = HYA  }
+				owns_state = 972
+			}
+			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+		}
+		bypass = { }
+
+		allow_branch = { has_country_flag = SHA_communist_focus_in_progress 
+		}
+
+		mutually_exclusive = {
+			focus = SHA_soviet_diplo_0
+		}
+		relative_position_id = SHA_invade_of_Hyakkiyako
+
+		completion_reward = {
+		}
+	}
+	# 독일인 권리
+	focus = {
+		id = SHA_communism_diplo_2
+		icon = GFX_focus_AUS_the_right_to_self_determination
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_communism_diplo_1 }
+
+		bypass = { }
+
+		relative_position_id = SHA_communism_diplo_1
+
+		completion_reward = {
+		}
+	}
+	# 전간기의 유산
+	focus = {
+		id = SHA_communism_diplo_3
+		icon = GFX_focus_GER_legacy_of_the_spartacus_league
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_communism_diplo_1 }
+
+		bypass = { }
+
+		relative_position_id = SHA_communism_diplo_1
+
+		completion_reward = {
+		}
+	}
+	# 국제 마르크스주의
+	focus = {
+		id = SHA_communism_diplo_4
+		icon = GFX_focus_eng_liberate_the_home_of_marx
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_communism_diplo_2  }
+		prerequisite = { focus = SHA_communism_diplo_3  }
+
+		bypass = { }
+
+		relative_position_id = SHA_communism_diplo_2
+
+		completion_reward = {
+		}
+	}
+	# '안슐루스'
+	focus = {
+		id = SHA_communism_diplo_5
+		icon = GFX_focus_GER_the_austrian_question
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_communism_diplo_4 }
+
+		bypass = { }
+
+		relative_position_id = SHA_communism_diplo_4
+		mutually_exclusive = {
+			focus = SHA_communism_diplo_9
+			focus = SHA_soviet_diplo_4
+		}
+
+		completion_reward = {
+		}
+	}
+
+	# 포위 뚫어내기
+	focus = {
+		id = SHA_communism_diplo_6
+		icon = GFX_focus_GER_end_european_communism
+		x = 3
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_communism_diplo_1 focus = SHA_soviet_diplo_0 }
+
+		bypass = { }
+
+		relative_position_id = SHA_communism_diplo_1
+
+
+		completion_reward = {
+		}
+	}
+	# 인접국 노동자와 연대
+	focus = {
+		id = SHA_communism_diplo_7
+		icon = GFX_focus_GER_the_peoples_victory
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_communism_diplo_6 }
+
+		bypass = { }
+
+		relative_position_id = SHA_communism_diplo_6
+
+
+		completion_reward = {
+		}
+	}
+	# 파르티잔 전술
+	focus = {
+		id = SHA_communism_diplo_8
+		icon = GFX_focus_GER_support_the_proletarian_uprising
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_communism_diplo_6 }
+
+		bypass = { }
+
+		relative_position_id = SHA_communism_diplo_6
+
+
+		completion_reward = {
+		}
+	}
+	# 다뉴비아 사회주의
+	focus = {
+		id = SHA_communism_diplo_9
+		icon = GFX_focus_AUS_danubian_socialist_communes
+		x = 0
+		y = 2
+		cost = 10
+
+		prerequisite = { focus = SHA_communism_diplo_6 }
+
+		bypass = { }
+
+		relative_position_id = SHA_communism_diplo_6
+	
+		mutually_exclusive = {
+			focus = SHA_communism_diplo_5
+			focus = SHA_soviet_diplo_4
+		}
+
+		completion_reward = {
+		}
+	}
+
+	# 초읽기
+	focus = {
+		id = SHA_soviet_diplo_0
+		icon = GFX_focus_BRA_jaguar_diplomacy
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
+
+		mutually_exclusive = {
+			focus = SHA_communism_diplo_1
+		}
+		available = {
+			OR = {
+				NOT = { country_exists = HYA  }
+				owns_state = 972
+			}
+			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+		}
+		bypass = { }
+
+		allow_branch = { has_country_flag = SHA_communist_focus_in_progress 
+		}
+
+		relative_position_id = SHA_invade_of_Hyakkiyako
+
+		completion_reward = {
+		}
+	}
+	# 방어주의
+	focus = {
+		id = SHA_soviet_diplo_1
+		icon = GFX_goal_generic_defence
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_soviet_diplo_0 }
+
+		relative_position_id = SHA_soviet_diplo_0
+
+		completion_reward = {
+		}
+	}
+	# 내부에 집중
+	focus = {
+		id = SHA_soviet_diplo_2
+		icon = GFX_focus_generic_industry_2
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_soviet_diplo_0 }
+
+		relative_position_id = SHA_soviet_diplo_0
+
+		completion_reward = {
+		}
+	}
+	# 키보토스 정체성
+	focus = {
+		id = SHA_soviet_diplo_3
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_soviet_diplo_1 }
+
+		relative_position_id = SHA_soviet_diplo_1
+
+		completion_reward = {
+		}
+	}
+	# 남키보토스 혁명
+	focus = {
+		id = SHA_soviet_diplo_4
+		icon = GFX_goal_RUS_liberation_march
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_soviet_diplo_3 }
+
+		relative_position_id = SHA_soviet_diplo_3
+		mutually_exclusive = {
+			focus = SHA_communism_diplo_5
+			focus = SHA_communism_diplo_9
+		}
+		completion_reward = {
+		}
+	}
+	# 경제개발 5개년 계획
+	focus = {
+		id = SHA_soviet_diplo_5
+		icon = GFX_focus_AFG_helmand_river_authority
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_soviet_diplo_2  }
+
+		relative_position_id = SHA_soviet_diplo_2
+
+		completion_reward = {
+		}
+	}
+	# 모스크바에 충성
+	focus = {
+		id = SHA_soviet_diplo_6
+		icon = GFX_focus_SOV_third_rome
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_soviet_diplo_2 focus = SHA_soviet_diplo_1 }
+
+		relative_position_id = SHA_soviet_diplo_5
+
+		completion_reward = {
+		}
+	}
+
+	# '붉은 홍수'
+	focus = {
+		id = SHA_communism_diplo_10
+		icon = GFX_goal_socialist_lone_warrior
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_communism_diplo_5 focus = SHA_communism_diplo_9 focus = SHA_soviet_diplo_4 focus = SHA_soviet_diplo_6 focus = SHA_principle_of_national_self-determination_5 }
+
+		relative_position_id = SHA_communism_diplo_9
+
+		completion_reward = {
+		}
+	}
+
+	# 민족자결주의
+	focus = {
+		id = SHA_principle_of_national_self-determination_0
+		icon = GFX_focus_generic_support_the_left_right
+		x = 4
+		y = 1
+		cost = 2
+
+		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
+
+		available = {
+			OR = {
+				NOT = { country_exists = HYA  }
+				owns_state = 972
+			}
+			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+		}
+		bypass = { }
+
+		allow_branch = { has_country_flag = SHA_communist_focus_in_progress 
+		}
+
+		relative_position_id = SHA_invade_of_Hyakkiyako
+
+		completion_reward = {
+			add_state_claim = 39
+			add_state_claim = 850
+			add_state_claim = 9
+			add_state_claim = 69
+			add_state_claim = 736
+			add_state_claim = 102
+			add_state_claim = 853
+			add_state_claim = 1017
+			add_state_claim = 852
+			country_event = {
+				id = shacom.14
+				days = 2
+			}
+		}
+	}
+	# 주데텐란트 영유권
+	focus = {
+		id = SHA_principle_of_national_self-determination_1
+		icon = GFX_focus_attack_ABY
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_principle_of_national_self-determination_0 }
+
+		available = {
+			is_neighbor_of = ABY
+		}
+		bypass = {
+			ABY = {
+				exists = no
+			}
+		}
+
+		relative_position_id = SHA_principle_of_national_self-determination_0
+
+		completion_reward = {
+			create_wargoal = {
+				target = ABY
+				type = take_claimed_state
+			}
+		}
+	}
+	# 자치 평의회 공화국 설립
+	focus = {
+		id = SHA_principle_of_national_self-determination_2
+		icon = GFX_focus_GER_establish_volkskommissariats
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_principle_of_national_self-determination_0 }
+
+		available = {
+		}
+		bypass = { }
+
+		relative_position_id = SHA_principle_of_national_self-determination_0
+
+		completion_reward = {
+			add_political_power = 30
+			unlock_decision_tooltip = SHA_establish_socialist_autonomy
+		}
+	}
+	# 평의회 원칙
+	focus = {
+		id = SHA_principle_of_national_self-determination_3
+		icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_principle_of_national_self-determination_2 }
+
+		available = {
+		}
+		bypass = { }
+		mutually_exclusive = {
+			focus = SHA_principle_of_national_self-determination_4
+		}
+
+		relative_position_id = SHA_principle_of_national_self-determination_2
+
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SHA_socialist_autonomy
+					add_idea = SHA_socialist_autonomy_1
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						has_idea = SHA_socialist_autonomy
+					}
+					swap_ideas = {
+						remove_idea = SHA_socialist_autonomy
+						add_idea = SHA_socialist_autonomy_1
+					}
+				}
+			}
+		}
+	}
+	# 민주집중제
+	focus = {
+		id = SHA_principle_of_national_self-determination_4
+		icon = GFX_focus_generic_red_flags
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_principle_of_national_self-determination_2 }
+		mutually_exclusive = {
+			focus = SHA_principle_of_national_self-determination_3
+		}
+		available = {
+		}
+		bypass = { }
+
+		relative_position_id = SHA_principle_of_national_self-determination_2
+
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SHA_socialist_autonomy
+					add_idea = SHA_socialist_autonomy_2
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						has_idea = SHA_socialist_autonomy
+					}
+					swap_ideas = {
+						remove_idea = SHA_socialist_autonomy
+						add_idea = SHA_socialist_autonomy_2
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = SHA_socialist_autonomy_flag
+				}
+				custom_effect_tooltip = SHA_principle_of_national_self-determination_4_tt
+				hidden_effect = {
+					create_country_leader = {
+						name = SHA_socialist_autonomy
+						picture = GFX_portrait_SOV_supreme_soviet
+						expire = "1965.1.1"
+						ideology = war_communism
+						traits = {
+						}
+					}
+				}
+			}
+		}
+	}
+	# 대오스트리아 권역
+	focus = {
+		id = SHA_principle_of_national_self-determination_5
+		icon = GFX_focus_AUS_protector_of_the_danube
+		x = 0
+		y = 2
+		cost = 10
+
+		prerequisite = { focus = SHA_principle_of_national_self-determination_1 }
+		prerequisite = { focus = SHA_principle_of_national_self-determination_4 focus = SHA_principle_of_national_self-determination_3 }
+		available = {
+			owns_state = 39
+			owns_state = 850
+			owns_state = 9
+			owns_state = 69
+			owns_state = 736
+			owns_state = 102
+			owns_state = 853
+			owns_state = 1017
+			owns_state = 852
+		}
+		bypass = { }
+
+		relative_position_id = SHA_principle_of_national_self-determination_1
+
+		completion_reward = {
+			add_state_core = 39
+			add_state_core = 850
+			add_state_core = 9
+			add_state_core = 69
+			add_state_core = 736
+			add_state_core = 102
+			add_state_core = 853
+			add_state_core = 1017
+			add_state_core = 852
+			add_state_core = 74
+			set_cosmetic_tag = SHA_great_oesterriech
+		}
+	}
 
 	
 	##############
@@ -5353,7 +6269,17 @@ focus_tree = {
 				country_event = shafas.7
 			}
 			hidden_effect = {
-				SHA_MINA = { unit_leader_event = shafas.7  }
+				if = {
+					limit = {
+						has_character = SHA_MINA
+					}
+					SHA_MINA = { unit_leader_event = shafas.7  }
+				}
+				else = {
+					SHA_REIJO = {
+						unit_leader_event = shafas.7
+					}
+				}
 			}
 		}
 	}
@@ -5374,7 +6300,9 @@ focus_tree = {
 		}
 		mutually_exclusive = { }
 
-		available = { }
+		available = {
+			has_character = SHA_MINA
+		}
 		bypass = { }
 
 

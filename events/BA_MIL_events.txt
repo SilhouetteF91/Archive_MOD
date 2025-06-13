@@ -2701,40 +2701,48 @@ country_event = { #마지노선 요구
     option = {
         name = MIL_event.63.a
         trigger = {
-            OR = {
-                AND = {
-                    any_country = {
-                        NOT = { tag = ROOT }
-                        owns_state = 28
-                    }
-                    controls_state = 28
-                }
-                AND = {
-                    any_country = {
-                        NOT = { tag = ROOT }
-                        owns_state = 1023
-                    }
-                    controls_state = 1023
-                }
-            }
+            has_idea = GEM_maginot_line_french_army
         }
-        every_country = {
-            limit = {
-                NOT = { tag = ROOT }
-                OR = {
-                    AND = {
-                        owns_state = 28
-                        ROOT = { controls_state = 28 }
-                    }
-                    AND = {
-                        owns_state = 1023
-                        ROOT = { controls_state = 1023 }
-                    }
-                }
-            }
-            ROOT = {
-                white_peace = PREV
-            }
+
+		28 = {
+			if = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+				}
+			}
+			transfer_state_to = FRM
+			create_unit = {
+				division = "name = \"27. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.2"
+				owner = FRM
+			}
+			create_unit = {
+				division = "name = \"65. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.7"
+				owner = FRM
+			}
+		}
+		
+		1023 = {
+			if = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+				}
+			}
+			transfer_state_to = FRM
+			create_unit = {
+				division = "name = \"7. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+				owner = FRM
+			}
+			create_unit = {
+				division = "name = \"11. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.5"
+				owner = FRM
+			}
+		}
+        
+        FRM = {
+            transfer_state = 28
+            transfer_state = 1023
             FROM = {
                 add_ai_strategy = {
                     type = conquer

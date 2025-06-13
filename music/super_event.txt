@@ -87,7 +87,7 @@ music = {
 	}
 }
 music = {
-	song = "maintheme_7"
+	song = "maintheme_5"
 	chance = {
 		modifier = {
 			factor = 0.5
@@ -103,7 +103,7 @@ music = {
 	}
 }
 music = {
-	song = "maintheme_5"
+	song = "maintheme_7"
 	chance = {
 		modifier = {
 			factor = 0.5

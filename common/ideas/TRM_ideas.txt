@@ -1491,6 +1491,9 @@ ideas = {
 		}
 		TRM_anti_partisan_guard_ns = {
 			picture = MEX_politicised_army
+			cancel = {
+				has_country_flag = TRM_United_Law_is_active
+			}
 			modifier = {
 				command_power_gain = 0.4
 				conscription_factor = -0.05

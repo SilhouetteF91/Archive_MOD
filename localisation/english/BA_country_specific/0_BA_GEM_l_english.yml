@@ -897,8 +897,25 @@
  GEM_club_problem_decision:0 "게헨나 동아리"
  GEM_club_problem_decision_desc:0 "§Y게헨나 학원§!의 §G동아리§!중 두 동아리는 대전이 이전부터 활동하던 §Y게헨나 학원§! 전체의 골칫거리들입니다. §3온천개발부§!는 온천개발이라는 명목으로 광범위한 파괴를 일으키고, §p미식연구회§!는 대전이 이후 규모가 급성장하며 독일 길거리 음식을 흠잡으며 게헨나 내 반독 강경파의 지지 속에 현지인을 향한 테러를 가장 앞장서서 벌이고 있습니다.\n\n동아리들의 테러 행각은 §Y게헨나 학원§!의 경영에 큰 차질을 빚고 있으나, 추후 우리는 이러한 동아리들과 §G협력§! 또는 §R탄압§!을 통해 다양한 분야의 이익을 취할 수 있을 것이며, §Y게헨나 학원§!의 안정화는 우리의 손으로 이루어지게 될 것입니다."
 
+ gem_club_problem_decision_gourmet_research_society_text_gui: "[gem_club_problem_decision_gourmet_research_society_text_loc]"
+ gem_club_problem_decision_hot_spring_department_text_gui: "[gem_club_problem_decision_hot_spring_department_text_loc]"
+
  gem_club_problem_decision_gourmet_research_society_text: "미식연구회로 인한 효과:\n - 징병 가능 인구 변동치: [?GEH_GRS_var_conscription_factor|+%.0]\n - 안정도: [?GEH_GRS_var_stability_factor|+%]\n - 연구 속도: [?GEH_GRS_var_research_speed_factor|+%]\n - 저항군 목표: [?GEH_GRS_var_resistance_target|-%.0]"
  gem_club_problem_decision_hot_spring_department_text: "온천개발부로 인한 효과:\n - 매일 정치력 비용: [?GEH_HSD_var_political_power_cost|-]\n - 소비재 공장 변동치: [?GEH_HSD_var_consumer_goods_factor|H.1%]\n - 안정도: [?GEH_HSD_var_stability_factor|+%]\n - 항복 한계치: [?GEH_HSD_var_surrender_limit|+%]\n - 건설 속도: [?GEH_HSD_var_production_speed_buildings_factor|+%]"
+
+ gem_club_problem_decision_gourmet_research_society_escape: "§C미식연구회는 현재 우리를 따르고 있습니다!§!\n미식연구회로 인한 효과:\n - 안정도: §R-5.00%§!\n징병 가능 인구 변동치: §G10%§!"
+ gem_club_problem_decision_hot_spring_department_escape: "§C온천개발부는 현재 우리를 따르고 있습니다!§!\n온천개발부로 인한 효과:\n - 안정도: §R-5.00%§!\n - 건설 속도: §G10.00%§!"
+
+ gem_club_problem_decision_lv_text: "저항 단계"
+ gem_club_problem_decision_gourmet_research_society_lv: "[gem_club_problem_decision_gourmet_research_society_lv_loc]"
+ gem_club_problem_decision_hot_spring_department_lv: "[gem_club_problem_decision_hot_spring_department_lv_loc]"
+
+ gem_club_problem_decision_lvO: "§ROV§!"
+ gem_club_problem_decision_lv4: "§R3§!"
+ gem_club_problem_decision_lv3: "§O3§!"
+ gem_club_problem_decision_lv2: "§Y2§!"
+ gem_club_problem_decision_lv1: "§G1§!"
+
  GEM_hot_spring_department_dynamic: "£decision_icon_small 온천개발부"
  GEM_gourmet_research_society_dynamic: "£decision_icon_small 미식연구회"
 

@@ -2462,7 +2462,18 @@ GEH_ako_democratic_system_category = {
 		fire_only_once = no
 
 		available = {
-
+			has_completed_focus = GEH_prefect_team_democracy
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_democratic_system_4th_end_tt
+				NOT = { has_completed_focus = GEH_three_congress_focus }
+			}
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_democratic_system_numerical_limit_tt
+				AND = {
+					check_variable = { GEH_ako_democratic_var > -5 }
+					check_variable = { GEH_ako_democratic_var < 5 }
+				}
+			}
 		}
 
 		visible = {
@@ -2499,7 +2510,18 @@ GEH_ako_democratic_system_category = {
 		fire_only_once = no
 
 		available = {
-
+			has_completed_focus = GEH_prefect_team_democracy
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_democratic_system_4th_end_tt
+				NOT = { has_completed_focus = GEH_three_congress_focus }
+			}
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_democratic_system_numerical_limit_tt
+				AND = {
+					check_variable = { GEH_ako_democratic_var > -5 }
+					check_variable = { GEH_ako_democratic_var < 5 }
+				}
+			}
 		}
 
 		visible = {

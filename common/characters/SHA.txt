@@ -46,6 +46,9 @@ characters={
 			}
 			available = { 
 				SHA_KISAKI = { is_country_leader = no }
+				NOT = {
+					has_government = communism
+				}
 			}
 			cost = 150
 			ai_will_do = {
@@ -187,7 +190,7 @@ characters={
 				SHA_T4a
 			}
 			available = {
-				SHA_KAI = { is_country_leader = no }
+				NOT = { has_character_flag = SHA_lock_flag }
 			}
 			cost = 150
 			ai_will_do = {
@@ -605,7 +608,40 @@ characters={
 		name = AUS_otto_bauer
 		portraits = {
 			civilian = {
+				large = "gfx/leaders/SHA/SHA_otto_bauer.dds"
 				small = "GFX_portrait_AUS_otto_bauer_small"
+			}
+		}
+	}
+	SHA_marianne_pollak = {
+		advisor = {
+			slot = political_advisor
+			idea_token = AUS_marianne_pollak
+			allowed = { 
+				original_tag = SHA
+			}
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+				has_completed_focus = SHA_womens_education_initiative
+			}
+			visible = {
+				has_completed_focus = SHA_womens_education_initiative
+			}
+			traits = { 
+				ARG_socialist_feminist
+			}
+
+			ai_will_do = {
+				base = 3
+			}
+		}
+		name = AUS_marianne_pollak
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_AUS_marianne_pollak_small"
 			}
 		}
 	}

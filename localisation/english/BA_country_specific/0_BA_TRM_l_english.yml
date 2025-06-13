@@ -1379,6 +1379,7 @@
  TRM_raid_gehenna_resistance: "대규모 게헨나 저항군 체포"
  TRM_germany_union_tt: "@GEM§Y게헨나 학원§!에 §Y핵심주를 획득§!하는 £decision_icon_small §Y결정 해금§!"
  TRM_eradicate_club_resistance: "게헨나 동아리 금지"
+ TRN_destroy_partisans: "유격전"
  TRM_tighten_control: "통제 강화"
  TRM_unification_propaganda: "통합 선전"
  TRM_unification_propaganda_tt: "\n이 결정은 §Y[?TRM_unification_propaganda_re_enable]일§! 후에 다시 사용할 수 있습니다.\n"
@@ -1390,8 +1391,7 @@
  TRM_GehennaResistance_Random_Event_tt: "\n$TRM_loop_Gehenna_Resistance$으로 인한 §Y무작위 사건들이 발생§!합니다!"
  TRM_loop_Gehenna_club_Resistance: "다가오는 게헨나 동아리의 반정부 테러"
  TRM_United_Law: "\"연합법\""
- TRN_destroy_partisans: "유격전"
- TRM_anti_partisan_guard_ns: "반군 진압 전쟁"
+ TRN_destroy_FRM: "마지노선 파괴"
 
  
 
@@ -2362,6 +2362,7 @@
  TRM_cop_of_junker_ns: "융커와 협력"
  TRN_gehenna_clup_resistance_ns: "게헨나 동아리 저항"
  TRN_trinity_socialism_ns: "$TRM_tirinty_socialism$"
+ TRM_anti_partisan_guard_ns: "반군 진압 전쟁"
  # 사건
  trinity.1.t: "티파티"
  trinity.1.desc: "티파티는 상투스, 필리우스, 파테르 분파들의 연합체로, 트리니티 삼두정 체제에서 핵심적인 역할을 담당하는 최고 통치 기관입니다. 각 분파는 서로의 단점을 보완하면서도 견제를 통해 균형을 유지하는 구조를 이루고 있습니다. 이 중 한 분파의 수장은 티파티의 \"호스트\" 직책을 맡으며, 막강한 권한을 행사할 수 있습니다. 그러나 티파티 내의 견제와 상호 보완 구조는 호스트의 권력 남용을 방지하고, 정치적 급진주의를 억제하며 안정적인 통치를 가능하게 합니다.\n\n수년 전, 급진적이고, 전쟁광 성향의 파테르 분파 수장이 티파티 호스트 직책에 오른 일이 있었습니다. 이로 인해 게헨나 학원과의 긴장이 고조되었고, 상황은 결국 필리우스와 상투스 분파가 연합해 호스트에 대한 불신임 결의를 통과시키는 사태로 이어졌습니다. 해당 결의는 받아들여졌지만, 이는 파테르 분파의 자존심에 큰 상처를 남겼습니다. 이러한 갈등은 1935년 대전이 당시 테러 혐의로 감옥에 수감된 파테르 분파 전투병들의 사면을 추진하려던 미소노 미카의 시도가 무산된 이후에도 여전히 완전히 회복되지 않고 있습니다.\n\n이제 운명조차 파테르 분파의 손을 들어주었습니다. 파테르 분파는 키리후지 나기사에 대한 비리 의혹을 제기하며 사법당국에 조사를 촉구했고, 수사 기관은 '신뢰할 수 있는 정보원'들의 증언과 자료를 토대로 키리후지 나기사를 뇌물 수수 혐의로 기소하였습니다. 이에 키리후지 나기사는 분파에 영향이 가는 걸 막기 위해 공식적으로 사임을 발표하였으며, 필리우스 분파의 주요 인사들 또한 이 사법 수사의 흐름 속에서 대거 교체되었습니다. 잔존한 소수의 인물들조차 파테르 분파의 영향력 아래 사실상 무력화될 운명에 처해 있습니다."

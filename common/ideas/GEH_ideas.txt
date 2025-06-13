@@ -1116,13 +1116,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_weekly = -0.02
-				surrender_limit = -0.30
-				political_power_cost = 1.00
-				
-				democratic_drift = 0.10	
-				consumer_goods_factor = 0.30
-				production_speed_buildings_factor = -0.35
+				GEH_resistance_strength_hot_spring_department = 4
 			}
 		}
 
@@ -1139,13 +1133,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_weekly = -0.015
-				surrender_limit = -0.20
-				political_power_cost = 0.50
-				
-				democratic_drift = 0.07	
-				consumer_goods_factor = 0.20
-				production_speed_buildings_factor = -0.25
+				GEH_resistance_strength_hot_spring_department = 3
 			}
 		}
 
@@ -1162,13 +1150,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_weekly = -0.005
-				surrender_limit = -0.10
-				political_power_cost = 0.25
-				
-				democratic_drift = 0.05
-				consumer_goods_factor = 0.10
-				production_speed_buildings_factor = -0.15
+				GEH_resistance_strength_hot_spring_department = 2
 			}
 		}
 
@@ -1185,10 +1167,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_cost = 0.10
-				
-				democratic_drift = 0.01
-				production_speed_buildings_factor = -0.05
+				GEH_resistance_strength_hot_spring_department = 1
 			}
 		}
 
@@ -1205,11 +1184,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.25
-				political_power_cost = 0.50
-
-				consumer_goods_factor = 0.15
-				production_speed_buildings_factor = -0.15
+				GEH_resistance_strength_hot_spring_department = 2
 			}
 		}
 
@@ -1226,11 +1201,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = -0.25
-				research_speed_factor = -0.40
-				resistance_target = 0.40
-				
-				communism_drift = 0.10
+				GEH_resistance_strength_gourmet_research_society = 4
 			}
 		}
 
@@ -1247,11 +1218,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = -0.20
-				research_speed_factor = -0.30
-				resistance_target = 0.30
-				
-				communism_drift = 0.07
+				GEH_resistance_strength_gourmet_research_society = 3
 			}
 		}
 
@@ -1268,11 +1235,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = -0.10
-				research_speed_factor = -0.20
-				resistance_target = 0.20
-
-				communism_drift = 0.05
+				GEH_resistance_strength_gourmet_research_society = 2
 			}
 		}
 
@@ -1289,11 +1252,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = -0.05
-				research_speed_factor = -0.10
-				resistance_target = 0.10
-
-				communism_drift = 0.01
+				GEH_resistance_strength_gourmet_research_society = 1
 			}
 		}
 
@@ -1310,9 +1269,120 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.25
-				research_speed_factor = -0.15
-				resistance_target = 0.15
+				GEH_resistance_strength_gourmet_research_society = 2
+			}
+		}
+
+		GEM_maginot_line_french_army = { #마지노선의 프랑스군
+			picture = FRM_defeatism_idea
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				OR = {
+					AND = {
+						NOT = {
+							controls_state = 28
+							controls_state = 1023
+						}
+					}
+					surrender_progress > 0.24
+				}
+			}
+
+			on_remove = {
+				if = {
+					limit = {
+						surrender_progress > 0.24
+					}
+
+					28 = {
+						if = {
+							limit = {
+								is_owned_by = ROOT
+								is_controlled_by = ROOT
+							}
+							transfer_state_to = FRM
+						}
+					}
+					
+					1023 = {
+						if = {
+							limit = {
+								is_owned_by = ROOT
+								is_controlled_by = ROOT
+							}
+							transfer_state_to = FRM
+						}
+					}
+
+					if = {
+						limit = {
+							country_exists = FRM
+						}
+						FRM = {
+							BA_halo_tech_tool_effect = yes
+							load_oob = "FRM_1936"
+					
+							28 = {
+								if = {
+									limit = {
+										is_owned_by = FRM
+										is_controlled_by = FRM
+									}
+									create_unit = {
+										division = "name = \"27. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.2"
+										owner = FRM
+									}
+									create_unit = {
+										division = "name = \"65. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.7"
+										owner = FRM
+									}
+								}
+							}
+							1023 = {
+								if = {
+									limit = {
+										is_owned_by = FRM
+										is_controlled_by = FRM
+									}
+									create_unit = {
+										division = "name = \"7. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+										owner = FRM
+									}
+									create_unit = {
+										division = "name = \"11. Garnison de la ligne Maginot\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.4 start_equipment_factor = 0.5"
+										owner = FRM
+									}
+								}
+							}
+						}
+						ROOT = { country_event = FRM_event.1 }
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.02
+				experience_gain_army_factor = -0.02
+				custom_modifier_tooltip = GEM_maginot_line_french_army_tt
+			}
+
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = -0.05
+			}
+
+			targeted_modifier = {
+				tag = FRM
+				attack_bonus_against = -0.05
 			}
 		}
 
@@ -1761,7 +1831,7 @@ ideas = {
 		}
 
 		GEH_individualism_GEM_army_pandemonium_tt_idea = { #툴팁용
-			name = GEM_army_wehrmacht
+			name = GEM_army_pandemonium
 			allowed = { always = no }
 			modifier = {
 				army_attack_factor = -0.15
@@ -2608,6 +2678,105 @@ ideas = {
 				democratic_drift = 0.04
 			}
 		}
+
+		## 아코-히나 러브라인 4차총회
+		
+		GEH_intelligence_reform = {
+			removal_cost = -1
+
+			picture = generic_spy_intel
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				civilian_intel_to_others = -20.0
+				army_intel_to_others = -10.0
+				navy_intel_to_others = -10.0
+				airforce_intel_to_others = -10.0
+				intelligence_agency_defense = 0.2
+				ENEMY_OPERATIVE_CAPTURE_CHANCE_FACTOR = 0.05
+				agency_upgrade_time = 1
+			}
+		}
+		
+		GEH_with_SPD = {
+			removal_cost = -1
+
+			picture = generic_local_self_management
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				democratic_drift = 0.04
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				local_resources_factor = 0.15
+			}
+		}
+		
+		GEH_with_trinity = {
+			removal_cost = -1
+
+			picture = TRM_icon
+				
+			allowed = {
+				original_tag = GEH
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				democratic_drift = 0.04
+				local_resources_factor = 0.1
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+
+
 	}
 	
 	industrial_concern = {

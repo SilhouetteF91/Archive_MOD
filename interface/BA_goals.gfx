@@ -1,5 +1,9 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_focus_material_design_1"
+		texturefile = "gfx/interface/goals/material_design/material_design_1.tga"
+	}
+	spriteType = {
 		name = "GFX_focus_idea_KSP_tlsfhldhkdndo"
 		texturefile = "gfx/interface/ideas/HEU/신뢰와우애.tga"
 	}
@@ -149,6 +153,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_cause_of_trinity.tga"
 	}
 	SpriteType = {
+		name = "GFX_focus_TRN_cause_of_trinity_no_sword"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_cause_of_trinity_no_sword.tga"
+	}
+	SpriteType = {
 		name = "GFX_focus_TRN_savior_of_kivotos"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_savior_of_kivotos.tga"
 	}
@@ -201,8 +209,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_Integrity_of_Trinity.tga"
 	}
 	SpriteType = {
-		name = "GFX_focus_TRN_leading_theory"
-		texturefile = "gfx/interface/goals/TRN/focus_TRN_leading_theory.tga"
+		name = "GFX_focus_TRN_destiny_of_trinity"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_destiny_of_trinity.tga"
 	}
 	SpriteType = {
 		name = "GFX_focus_TRN_horseman_of_the_apocalypse"
@@ -2153,6 +2161,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SHA/focus_SHA_Shanhaijing_fascism.tga"  
 	}
 	SpriteType = {
+		name = "GFX_focus_SHA_Sundan_dosage"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_Sundan_dosage.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_SHA_Seonin"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_Seonin.tga"  
+	}
+	SpriteType = {
 		name = "GFX_focus_SHA_fall_of_dragon"
 		texturefile = "gfx/interface/goals/SHA/focus_SHA_fall_of_dragon.tga"  
 	}
@@ -3216,6 +3232,41 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_HYA_Arata"
 		textureFile = "gfx/interface/goals/HYA/HYA_Arata.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_military_reform"
+		textureFile = "gfx/interface/goals/HYA/HYA_military_reform.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_twilight_Ayame"
+		textureFile = "gfx/interface/goals/HYA/HYA_twilight_Ayame.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Draft_Expansion"
+		textureFile = "gfx/interface/goals/HYA/HYA_Draft_Expansion.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Situation_Academy"
+		textureFile = "gfx/interface/goals/HYA/HYA_Situation_Academy.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Military_Mobilization"
+		textureFile = "gfx/interface/goals/HYA/HYA_Military_Mobilization.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Overthrow_Regime"
+		textureFile = "gfx/interface/goals/HYA/HYA_Overthrow_Regime.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Urbanization_Plan"
+		textureFile = "gfx/interface/goals/HYA/HYA_Urbanization_Plan.tga"
 	}
 
 	#색채

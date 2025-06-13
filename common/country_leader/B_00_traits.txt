@@ -1623,6 +1623,25 @@ leader_traits = {
 		political_power_cost = 0.01
 		production_speed_arms_factory_factor = 0.10
 	}
+    GEM_gourmet_research_society_trait = { # 미식연구회
+		sprite = 7
+		random = no
+		war_support_factor = 0.10
+		political_power_gain = 0.15
+		justify_war_goal_time = -0.15
+		annex_cost_factor = -0.15
+		resistance_target = -0.10
+		GEH_resistance_strength_gourmet_research_society = 1
+	}
+    GEM_hot_spring_department_trait = { # 온천개발부
+		sprite = 7
+		random = no
+		production_speed_infrastructure_factor = 0.25
+		production_speed_dockyard_factor = 0.05
+		production_speed_arms_factory_factor = 0.05
+		production_speed_industrial_complex_factor = 0.05
+		GEH_resistance_strength_hot_spring_department = 1
+	}
 	GEM_Neutralize = {
 		random = no
 		political_power_gain = 0.10
@@ -1787,6 +1806,7 @@ leader_traits = {
 	GEH_artist = { # 예술가
 		random = no
 		sprite = 13
+		custom_modifier_tooltip = GEH_artist_advisor_tt
 	}
 
 	GEH_bauhaus = { # 바우하우스
@@ -3403,6 +3423,7 @@ leader_traits = {
 		fascism_drift = 0.1
 		master_ideology_drift = 0.1
 		puppet_cost_factor = -0.2
+		annex_cost_factor = -0.2
 	}
 	# 백귀야행
 	HYA_T1a = { #낙천적인 음양부장
@@ -3578,6 +3599,15 @@ leader_traits = {
 		stability_factor = 0.05
 		offensive_war_stability_factor = 0.10
 		defensive_war_stability_factor = 0.10
+	}
+	HYA_hyakkaryouran_resolution_council_deputy = { #백화요란 분쟁조정위원회의 부장 대리
+		random = no
+	}
+	HYA_Maternal_Torojaemon = { #화조풍월부 산모토 고로자에몬의 부장
+		random = no
+	}
+	HYA_Mangryangz = { #망량즈의 리더
+		random = no
 	}
 	SRT_T1a = { #RABBIT 소대의 소대장
 		random = no

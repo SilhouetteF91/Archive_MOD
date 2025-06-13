@@ -441,6 +441,8 @@ TRM_anti_geh_emotion = {
 	recruitable_population_factor = -0.75
 	local_factories = -0.75
 	resistance_growth = 0.50
+	compliance_growth = -0.15
+	
 	disable_strategic_redeployment = yes
 }
 
@@ -455,6 +457,7 @@ TRM_anti_geh_emotion_2 = {
 	recruitable_population_factor = -0.5
 	local_factories = -0.5
 	resistance_growth = 0.5
+	compliance_growth = -0.1
 	disable_strategic_redeployment = yes
 }
 
@@ -469,6 +472,7 @@ TRM_anti_geh_emotion_3 = {
 	recruitable_population_factor = -0.25
 	local_factories = -0.25
 	resistance_growth = 0.2
+	compliance_growth = -0.05
 	disable_strategic_redeployment = yes
 }
 
@@ -508,6 +512,12 @@ SHA_red_wien = { #붉은 빈
 	enable = { always = yes }
 	icon = GFX_modifiers_GER_socialist_movement
 	state_production_speed_buildings_factor = 0.1
+	local_building_slots = 1
+}
+
+SHA_Naukograd = { #나우코그라드
+	icon = GFX_modifiers_SWE_hygienic_housing
+	state_production_speed_buildings_factor = -0.1
 	local_building_slots = 1
 }
 
