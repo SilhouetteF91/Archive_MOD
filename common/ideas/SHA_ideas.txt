@@ -36,6 +36,76 @@ ideas = {
 	}
 	country = {
 		#공산
+		SHA_offensive_to_red = { #적색 공세
+			picture = generic_shield_against_communism
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = SHA
+				attack_bonus_against_cores = 0.05
+			}
+			modifier = {
+				cannot_call_allies_or_join_wars = 1
+			}
+			cancel = {
+				NOT = {
+					has_war_with = SHA
+				}
+			}
+		}
+		SHA_red_terror = { #적색 공포
+			picture = generic_shield_against_communism
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.005
+			}
+			cancel = {
+				has_government = communism
+			}
+			on_remove = {
+				country_event = shacom.18
+			}
+		}
+		SHA_will_to_anschluss = { #목표: 안슐루스
+			picture = SOV_system_decentralization
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = TRM
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = GEM
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = GEH
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = GEK
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ARI
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = KPD
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = NSD
+				attack_bonus_against = 0.1
+			}
+			cancel = {
+				owns_state = 64
+			}
+		}
 		SHA_socialist_society_1 = { #산해경 사회주의
 			name = SHA_socialist_society
 			picture = SOV_system_decentralization
@@ -115,15 +185,17 @@ ideas = {
 				industrial_capacity_dockyard = -0.1
 			}
 		}
-		SHA_revolutionary_isolationism = { #혁명적 고립주의
-			picture = SPR_crush_the_revolution
+		SHA_threats_around_1 = { #주변의 위협
+			picture = MEX_revolutionary_army
 			allowed_civil_war = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = -0.05
-				production_speed_infrastructure_factor = 0.1
-				production_speed_arms_factory_factor = 0.1
+				war_support_factor = 0.05
+				army_morale_factor = 0.05
+				training_time_army_factor = -0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
 			}
 		}
 		SHA_threats_around = { #주변의 위협
@@ -137,6 +209,52 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 		}
+		SHA_austro_marxism_4 = { #오스트로 맑시즘
+			name = SHA_austro_marxism
+			picture = AUS_austromarxism
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				communism_drift = 0.05
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				political_power_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		SHA_austro_marxism_3 = { #오스트로 맑시즘
+			name = SHA_austro_marxism
+			picture = AUS_austromarxism
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				communism_drift = 0.05
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		SHA_austro_marxism_2 = { #오스트로 맑시즘
+			name = SHA_austro_marxism
+			picture = AUS_austromarxism
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				communism_drift = 0.05
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = 0.05
+				stability_factor = -0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
 		SHA_austro_marxism_1 = { #오스트로 맑시즘
 			name = SHA_austro_marxism
 			picture = AUS_austromarxism
@@ -145,7 +263,7 @@ ideas = {
 			}
 			modifier = {
 				communism_drift = 0.05
-				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
 				production_factory_efficiency_gain_factor = 0.05
 				political_power_factor = 0.05
 				stability_factor = -0.05
@@ -159,7 +277,7 @@ ideas = {
 			modifier = {
 				communism_drift = 0.03
 				democratic_drift = 0.02
-				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
 				production_factory_efficiency_gain_factor = 0.05
 			}
 		}

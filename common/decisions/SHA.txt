@@ -1,4 +1,19 @@
 SHA_communism_cat = {
+	SHA_red_terror_mission = {
+		icon = GFX_decision_generic_ignite_civil_war
+		available = {
+			NOT = {
+				has_government = communism
+			}
+		}
+		days_mission_timeout = 720
+		activation = {
+			always = no
+		}
+		complete_effect = {
+			
+		}
+	}
 	SHA_establish_socialist_autonomy = {
 		icon = GFX_decision_BOL_establish_arica_department
 		on_map_mode = map_only

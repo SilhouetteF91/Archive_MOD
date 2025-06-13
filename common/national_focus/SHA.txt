@@ -2126,7 +2126,10 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_12
 
 		completion_reward = {
-			add_ideas = SHA_revolutionary_isolationism
+			swap_ideas = {
+				remove_idea = SHA_austro_marxism_1
+				add_idea = SHA_austro_marxism_2
+			}
 		}
 	}
 
@@ -4205,7 +4208,7 @@ focus_tree = {
 		icon = GFX_focus_AUS_austromarxism
 		x = -7
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
 
@@ -4215,6 +4218,7 @@ focus_tree = {
 				owns_state = 972
 			}
 			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+			has_completed_focus = SHA_communism_focus_16
 		}
 		bypass = { }
 
@@ -4227,15 +4231,19 @@ focus_tree = {
 		relative_position_id = SHA_invade_of_Hyakkiyako
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHA_austro_marxism_2
+				add_idea = SHA_austro_marxism_3
+			}
 		}
 	}
-	# 독일인 권리
+	# 노동조합주의 차용
 	focus = {
 		id = SHA_communism_diplo_2
-		icon = GFX_focus_AUS_the_right_to_self_determination
+		icon = GFX_focus_generic_workers_and_farmers_rise
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_communism_diplo_1 }
 
@@ -4244,6 +4252,7 @@ focus_tree = {
 		relative_position_id = SHA_communism_diplo_1
 
 		completion_reward = {
+			add_ideas = SHE_strengthening_laborunions
 		}
 	}
 	# 전간기의 유산
@@ -4252,7 +4261,7 @@ focus_tree = {
 		icon = GFX_focus_GER_legacy_of_the_spartacus_league
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_communism_diplo_1 }
 
@@ -4261,6 +4270,10 @@ focus_tree = {
 		relative_position_id = SHA_communism_diplo_1
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHA_threats_around
+				add_idea = SHA_threats_around_1
+			}
 		}
 	}
 	# 국제 마르크스주의
@@ -4269,7 +4282,7 @@ focus_tree = {
 		icon = GFX_focus_eng_liberate_the_home_of_marx
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_communism_diplo_2  }
 		prerequisite = { focus = SHA_communism_diplo_3  }
@@ -4279,6 +4292,10 @@ focus_tree = {
 		relative_position_id = SHA_communism_diplo_2
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHA_austro_marxism_3
+				add_idea = SHA_austro_marxism_4
+			}
 		}
 	}
 	# '안슐루스'
@@ -4287,7 +4304,7 @@ focus_tree = {
 		icon = GFX_focus_GER_the_austrian_question
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_communism_diplo_4 }
 
@@ -4300,6 +4317,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_ideas = SHA_will_to_anschluss
 		}
 	}
 
@@ -4615,7 +4633,7 @@ focus_tree = {
 		icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
 		x = -1
 		y = 1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = SHA_principle_of_national_self-determination_2 }
 
@@ -4654,7 +4672,7 @@ focus_tree = {
 		icon = GFX_focus_generic_red_flags
 		x = 1
 		y = 1
-		cost = 10
+		cost = 4
 
 		prerequisite = { focus = SHA_principle_of_national_self-determination_2 }
 		mutually_exclusive = {
@@ -4708,7 +4726,7 @@ focus_tree = {
 		icon = GFX_focus_AUS_protector_of_the_danube
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_principle_of_national_self-determination_1 }
 		prerequisite = { focus = SHA_principle_of_national_self-determination_4 focus = SHA_principle_of_national_self-determination_3 }

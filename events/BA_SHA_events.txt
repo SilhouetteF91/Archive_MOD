@@ -341,6 +341,74 @@ country_event = { #제2인터내셔널
 		}
 	}
 }
+country_event = { #적색 공포
+	id = shacom.16
+	title = shacom.16.t
+	desc = shacom.16.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.16.a
+		every_neighbor_country = {
+			limit = {
+				NOT = {
+					OR = {
+						has_government = communism
+						original_tag = SWI
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = SHA_red_terror
+				days = 720
+			}
+			country_event = {
+				id = shacom.17
+			 
+			}
+		}
+		activate_mission = SHA_red_terror_mission
+		custom_effect_tooltip = CHL_skip_one_line_tt
+		custom_effect_tooltip = shacom.16_tt
+	}
+}
+country_event = { #적색 공포를 느낌
+	id = shacom.17
+	title = shacom.17.t
+	desc = shacom.17.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #
+		name = shacom.17.a
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = SHA_red_terror
+				days = 720
+			}
+		}
+	}
+}
+country_event = { #공세
+	id = shacom.18
+	title = shacom.18.t
+	desc = shacom.18.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #ㄱㄱ
+		name = shacom.18.a
+		add_ideas = SHA_offensive_to_red
+	}
+	option = { #ㄴㄴ
+		name = shacom.18.a
+		add_ideas = SHA_offensive_to_red
+	}
+}
 
 
 # 신선이 되는 길

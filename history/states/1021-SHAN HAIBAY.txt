@@ -13,7 +13,6 @@ state={
 			industrial_complex = 1
 		}
 		add_core_of = AUS
-		add_dynamic_modifier = { modifier = GEK_catholic_state }
 	}
 	provinces={
 		732 3718 6552 6723 6739 9527 

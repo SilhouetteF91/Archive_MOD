@@ -32,7 +32,6 @@ state = {
 		victory_points = {
 			11612 2
 		}
-		add_dynamic_modifier = { modifier = GEK_catholic_state }
 
 	}
 
