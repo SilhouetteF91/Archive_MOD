@@ -367,3 +367,13 @@ GEH_hank_and_connor = {
 		has_country_flag = GEH_hina_dead_flag
     }
 }
+
+GEH_sorasaki_happy_ending = {
+	possible = {
+		tag = GEH
+	}
+ 
+    happened = {
+		has_completed_focus = GEH_ako_sorasaki_administrative_officer
+    }
+}
