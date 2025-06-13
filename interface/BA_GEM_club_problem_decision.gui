@@ -18,7 +18,7 @@ guiTypes = {
 				position = { x = 100 y = 20 }
 				font = "hoi_16mbs"
 				text = "gem_club_problem_decision_gourmet_research_society_text_gui"
-				maxWidth = 300
+				maxWidth = 230
 				orientation = LEFT
 			}
 
@@ -27,22 +27,45 @@ guiTypes = {
 				spriteType = "GFX_decisions_idea_GEH_gourmet_research_society_process"
 				position = { x = 22 y = 20 }
 			}
+			containerWindowType = {
+				name = "gem_club_problem_decision_gourmet_research_society_lv_window"
+				position = { x = 350 y = 20 }	
+				size = { width = 480 height = 180 }
 
-			instantTextBoxType = {
-				name ="gem_club_problem_decision_gourmet_research_society_lv_text"
-				position = { x = 270 y = 20 }
-				font = "hoi_16mbs"
-				text = "gem_club_problem_decision_lv_text"
-				maxWidth = 300
-				format = center
-			}
-			instantTextBoxType = {
-				name ="gem_club_problem_decision_gourmet_research_society_lv"
-				position = { x = 270 y = 40 }
-				font = "hoi_30header"
-				text = "gem_club_problem_decision_gourmet_research_society_lv"
-				maxWidth = 300
-				format = center
+				instantTextBoxType = {
+					name ="gem_club_problem_decision_gourmet_research_society_lv_text"
+					position = { x = 0 y = 0 }
+					maxWidth = 100
+					font = "hoi_16mbs"
+					text = "gem_club_problem_decision_lv_text"
+					format = center
+				}
+				instantTextBoxType = {
+					name ="gem_club_problem_decision_gourmet_research_society_lv"
+					position = { x = 0 y = 20 }
+					maxWidth = 100
+					font = "hoi_30header"
+					text = "gem_club_problem_decision_gourmet_research_society_lv"
+					format = center
+				}
+
+				buttonType = {
+					name = "gem_club_problem_decision_gourmet_research_society_button_1"
+					position = { x=0 y=50 }
+					quadTextureSprite ="GFX_GEM_club_problem_button_1_button"
+				}
+
+				buttonType = {
+					name = "gem_club_problem_decision_gourmet_research_society_button_2"
+					position = { x=35 y=70 }
+					quadTextureSprite ="GFX_GEM_club_problem_button_2_button"
+				}
+
+				buttonType = {
+					name = "gem_club_problem_decision_gourmet_research_society_button_3"
+					position = { x=70 y=50 }
+					quadTextureSprite ="GFX_GEM_club_problem_button_3_button"
+				}
 			}
 		}
 
@@ -61,7 +84,7 @@ guiTypes = {
 				position = { x = 100 y = 20 }
 				font = "hoi_16mbs"
 				text = "gem_club_problem_decision_hot_spring_department_text_gui"
-				maxWidth = 300
+				maxWidth = 230
 				orientation = LEFT
 			}
 
@@ -71,21 +94,45 @@ guiTypes = {
 				position = { x = 22 y = 20 }
 			}
 
-			instantTextBoxType = {
-				name ="gem_club_problem_decision_hot_spring_department_lv_text"
-				position = { x = 270 y = 20 }
-				font = "hoi_16mbs"
-				text = "gem_club_problem_decision_lv_text"
-				maxWidth = 300
-				format = center
-			}
-			instantTextBoxType = {
-				name ="gem_club_problem_decision_hot_spring_department_lv"
-				position = { x = 270 y = 40 }
-				font = "hoi_30header"
-				text = "gem_club_problem_decision_hot_spring_department_lv"
-				maxWidth = 300
-				format = center
+			containerWindowType = {
+				name = "gem_club_problem_decision_hot_spring_department_lv_window"
+				position = { x = 350 y = 20 }	
+				size = { width = 480 height = 180 }
+
+				instantTextBoxType = {
+					name ="gem_club_problem_decision_hot_spring_department_lv_text"
+					position = { x = 0 y = 0 }
+					maxWidth = 100
+					font = "hoi_16mbs"
+					text = "gem_club_problem_decision_lv_text"
+					format = center
+				}
+				instantTextBoxType = {
+					name ="gem_club_problem_decision_hot_spring_department_lv"
+					position = { x = 0 y = 20 }
+					maxWidth = 100
+					font = "hoi_30header"
+					text = "gem_club_problem_decision_hot_spring_department_lv"
+					format = center
+				}
+
+				buttonType = {
+					name = "gem_club_problem_decision_hot_spring_department_button_1"
+					position = { x=0 y=50 }
+					quadTextureSprite ="GFX_GEM_club_problem_button_1_button"
+				}
+
+				buttonType = {
+					name = "gem_club_problem_decision_hot_spring_department_button_2"
+					position = { x=35 y=70 }
+					quadTextureSprite ="GFX_GEM_club_problem_button_2_button"
+				}
+
+				buttonType = {
+					name = "gem_club_problem_decision_hot_spring_department_button_3"
+					position = { x=70 y=50 }
+					quadTextureSprite ="GFX_GEM_club_problem_button_3_button"
+				}
 			}
 		}
 	}
