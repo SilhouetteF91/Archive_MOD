@@ -124,13 +124,6 @@ TRM_diplomacy_balkan_decision_category = {
 		is_subject = no
 	}
 }
-TRM_story_archive = {
-	priority = 0
-	icon = GFX_decision_category_generic
-	allowed = {
-		original_tag = TRM
-	}
-}
 
 TRN_economic_decisions_category = {
 	icon = GFX_decision_category_SOV_merge_designers

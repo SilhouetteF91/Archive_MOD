@@ -41,17 +41,6 @@ GEK_attack_gehenna = { #조국해방전쟁
 	}
 }
 
-GEK_story_archive = {
-	allowed = {
-	    OR = {
-			original_tag = GEK
-			original_tag = BAY
-		}
-	}
-	visible = {
-	}
-	priority = 0
-}
 
 
 GEK_price_controls_cat = { #가격통제

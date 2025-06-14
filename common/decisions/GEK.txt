@@ -605,45 +605,6 @@ political_actions = {
 	}
 }
 
-GEK_story_archive = {
-	GEK_show_story_archive_gui = {
-		icon = generic_operation
-		allowed = {
-			OR = {
-				original_tag = GEK
-				original_tag = BAY
-			}
-		}
-
-		visible = {
-			ROOT = {
-				check_variable = {
-					story_archive = 0
-				}
-			}
-		}
-
-		available = {
-		}
-
-		complete_effect = {
-			ROOT = {
-				set_variable = {
-					story_archive = 1			
-				}
-			}
-			BA_storyarchive_openui_effects = yes
-		}
-
-		cost = 0
-
-		ai_will_do = {
-			factor = 0
-		}
-	}
-}
-
-
 GEK_price_controls_cat = {
 	GEK_guns_before_butter = {
 

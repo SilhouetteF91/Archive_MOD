@@ -6157,43 +6157,6 @@ HEU_abgeordnetenkammer_decision_category = {
 	}
 }
 
-HEU_story_archive = {
-	HEU_show_story_archive_gui = {
-		icon = generic_operation
-		allowed = {
-			OR = {
-				original_tag = HEU
-			}
-		}
-
-		visible = {
-			ROOT = {
-				check_variable = {
-					story_archive = 0
-				}
-			}
-		}
-
-		available = {
-		}
- 
-		complete_effect = {
-			ROOT = {
-				set_variable = {
-					story_archive = 1			
-				}
-			}
-			BA_storyarchive_openui_effects = yes
-		}
-
-		cost = 0
-
-		ai_will_do = {
-			factor = 0
-		}
-	}
-}
-
 HEU_aru_internet_overdose_decision_category = {
 
 	HEU_aru_internet_overdose_the_last_time = {

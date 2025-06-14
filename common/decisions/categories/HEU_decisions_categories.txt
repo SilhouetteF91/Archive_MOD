@@ -256,11 +256,3 @@ HEU_aru_internet_overdose_decision_category = { #장난스런 스트레이틑
 
     icon = GFX_decision_category_generic
 }
-
-HEU_story_archive = {
-	priority = 0
-	icon = GFX_decision_category_generic
-	allowed = {
-		original_tag = HEU
-	}
-}
