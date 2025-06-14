@@ -6931,43 +6931,7 @@ TRM_diplomacy_balkan_decision_category = {
 		}
 	}
 }
-TRM_story_archive = {
-	TRM_show_story_archive_gui = {
-		icon = generic_operation
-		allowed = {
-			OR = {
-				original_tag = TRM
-			}
-		}
 
-		visible = {
-			ROOT = {
-				check_variable = {
-					story_archive = 0
-				}
-			}
-            has_completed_focus = TRM_Endsige
-		}
-
-		available = {
-		}
- 
-		complete_effect = {
-			ROOT = {
-				set_variable = {
-					story_archive = 1			
-				}
-			}
-			BA_storyarchive_openui_effects = yes
-		}
-
-		cost = 0
-
-		ai_will_do = {
-			factor = 0
-		}
-	}
-}
 political_actions = {
 	TRM_surrender = {
 		allowed = { original_tag = TRM }

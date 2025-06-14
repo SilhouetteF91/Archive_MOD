@@ -48,9 +48,9 @@ set_variable = {
 	story_event_var = 1
 }
 
-add_to_array = {
-	story_archive_national_array = 5
-}
+#add_to_array = {
+#	story_archive_national_array = 5
+#}
 
 set_power_balance = {
 	id = HEU_power_balance

@@ -129,9 +129,9 @@ set_variable = {
 }
 
 # 스토리 아카이브 코드 전쟁해군(4)
-add_to_array = {
-	story_archive_national_array = 4
-}
+#add_to_array = {
+#	story_archive_national_array = 4
+#}
 
 
 add_ideas = {

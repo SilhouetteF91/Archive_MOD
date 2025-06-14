@@ -10,4 +10,14 @@ spriteTypes = {
 		texturefile = "gfx/texticons/Trinity_stroy_archive.png"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_button_story_archive_open_bg"
+		texturefile = "gfx/interface/story_archive_open_bg.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_button_story_archive_open_button"
+		texturefile = "gfx/interface/story_archive_open_button.tga"
+		legacy_lazy_load = no
+	}
 }

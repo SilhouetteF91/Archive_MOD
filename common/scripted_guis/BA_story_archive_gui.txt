@@ -41,7 +41,7 @@ scripted_gui = {
 			#Example Buttons to show it working
 			btn_close_click = {
 				set_variable = {
-					story_archive = false
+					story_archive = 0
 				}
 			}
 
@@ -54,6 +54,55 @@ scripted_gui = {
 				add_to_variable = {
 					var = story_event_var 
 					value = 1
+				}
+			}
+		}
+	}
+	story_archive_open_button_gui = {
+		context_type = player_context
+		parent_window_token = top_bar
+		
+		window_name = "story_archive_open_button_gui_window"
+
+		visible = {	
+			ROOT = {
+				OR = {
+					tag = GEK
+					tag = TRM
+					tag = BEL
+					tag = KSP
+					tag = HEU
+				}
+			}	
+		}
+
+		effects = {
+			#Example Buttons to show it working
+			story_archive_open_click = {
+				BA_storyarchive_openui_effects = yes
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								story_archive = 1
+							}
+						}
+					}
+					set_variable = {
+						story_archive = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								story_archive = 0
+							}
+						}
+					}
+					set_variable = {
+						story_archive = 0
+					}
 				}
 			}
 		}

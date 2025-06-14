@@ -422,755 +422,779 @@ BA_mapower_idea_level_up = {
 }
 
 BA_storyarchive_openui_effects = {
-	if = {
-		# GEK 스토리 아카이브
-		# 조건에 맞춰서 array를 추가해주세요.
+	# 스토리 아카이브 고유 식별코드
+	# BEL (1) - 벨기에
+	# KSP (2) - 발키리
+	# TRM (3) - 트리니티
+	# GEK (4) - 독일 전쟁해군
+	# HEU (5) - 흥신소
+	if = { # GEK 스토리 아카이브
+		# 이 곳에는 태그를 넣습니다.
 		limit = {
 			original_tag = GEK
-			has_country_flag = kivotos_research_on
-			NOT = {
-				check_variable = {
-					story_archive_national_array^1 = 4
+		}
+		if = {
+			# GEK 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				has_country_flag = kivotos_research_on
+				NOT = {
+					check_variable = {
+						story_archive_national_array^0 = 4
+					}
 				}
 			}
+			add_to_array = {
+				story_archive_national_array = 4
+			}
 		}
-		add_to_array = {
-			story_archive_national_array = 4
+		if = {
+			# GEK 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				has_country_flag = kivotos_research_on
+				date > 1936.3.1
+				NOT = {
+					check_variable = {
+						story_archive_national_array^1 = 4
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 4
+			}
+		}
+		if = {
+			# GEK 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				has_country_flag = kivotos_research_on
+				date > 1936.3.15
+				NOT = {
+					check_variable = {
+						story_archive_national_array^2 = 4
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 4
+			}
+		}
+		if = {
+			# GEK 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				has_country_flag = kivotos_research_on
+				date > 1936.4.1
+				NOT = {
+					check_variable = {
+						story_archive_national_array^3 = 4
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 4
+			}
+		}
+		if = {
+			# GEK 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				has_country_flag = kivotos_research_on
+				date > 1936.4.15
+				NOT = {
+					check_variable = {
+						story_archive_national_array^4 = 4
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 4
+			}
+		}
+		if = {
+			# GEK 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				has_country_flag = kivotos_research_on
+				OR = {
+					has_war_with = GEM
+					has_war_with = GEH
+					has_war_with = TRM
+				}
+				date > 1936.4.30
+				NOT = {
+					check_variable = {
+						story_archive_national_array^5 = 4
+					}
+				}
+			}
+			set_country_flag = GEK_has_war_with_kivotos
+			add_to_array = {
+				story_archive_national_array = 4
+			}
+		}
+		if = { # GEK 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				has_country_flag = kivotos_research_on
+				has_country_flag = GEK_has_war_with_kivotos
+				date > 1937.7.15
+				NOT = {
+					check_variable = {
+						story_archive_national_array^6 = 4
+					}
+				}
+			}
+			set_country_flag = GEK_has_war_with_kivotos
+			add_to_array = {
+				story_archive_national_array = 4
+			}
+		}	
+		if = {
+			# GEK 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = { 
+				has_country_flag = kivotos_research_on
+				has_country_flag = GEK_has_war_with_kivotos
+				date > 1938.9.15
+				NOT = {
+					check_variable = {
+						story_archive_national_array^7= 4
+					}
+				}
+			}
+			set_country_flag = GEK_has_war_with_kivotos
+			add_to_array = {
+				story_archive_national_array = 4
+			}
 		}
 	}
-	if = {
-		# GEK 스토리 아카이브
-		# 조건에 맞춰서 array를 추가해주세요.
-		limit = {
-			original_tag = GEK
-			has_country_flag = kivotos_research_on
-			date > 1936.3.1
-			NOT = {
-				check_variable = {
-					story_archive_national_array^2 = 4
-				}
-			}
-		}
-		add_to_array = {
-			story_archive_national_array = 4
-		}
-	}
-	if = {
-		# GEK 스토리 아카이브
-		# 조건에 맞춰서 array를 추가해주세요.
-		limit = {
-			original_tag = GEK
-			has_country_flag = kivotos_research_on
-			date > 1936.3.15
-			NOT = {
-				check_variable = {
-					story_archive_national_array^3 = 4
-				}
-			}
-		}
-		add_to_array = {
-			story_archive_national_array = 4
-		}
-	}
-	if = {
-		# GEK 스토리 아카이브
-		# 조건에 맞춰서 array를 추가해주세요.
-		limit = {
-			original_tag = GEK
-			has_country_flag = kivotos_research_on
-			date > 1936.4.1
-			NOT = {
-				check_variable = {
-					story_archive_national_array^4 = 4
-				}
-			}
-		}
-		add_to_array = {
-			story_archive_national_array = 4
-		}
-	}
-	if = {
-		# GEK 스토리 아카이브
-		# 조건에 맞춰서 array를 추가해주세요.
-		limit = {
-			original_tag = GEK
-			has_country_flag = kivotos_research_on
-			date > 1936.4.15
-			NOT = {
-				check_variable = {
-					story_archive_national_array^5 = 4
-				}
-			}
-		}
-		add_to_array = {
-			story_archive_national_array = 4
-		}
-	}
-	if = {
-		# GEK 스토리 아카이브
-		# 조건에 맞춰서 array를 추가해주세요.
-		limit = {
-			original_tag = GEK
-			has_country_flag = kivotos_research_on
-			OR = {
-				has_war_with = GEM
-				has_war_with = GEH
-				has_war_with = TRM
-			}
-			date > 1936.4.30
-			NOT = {
-				check_variable = {
-					story_archive_national_array^6 = 4
-				}
-			}
-		}
-		set_country_flag = GEK_has_war_with_kivotos
-		add_to_array = {
-			story_archive_national_array = 4
-		}
-	}
-	if = {
-		# GEK 스토리 아카이브
-		# 조건에 맞춰서 array를 추가해주세요.
-		limit = {
-			original_tag = GEK
-			has_country_flag = kivotos_research_on
-			has_country_flag = GEK_has_war_with_kivotos
-			date > 1937.7.15
-			NOT = {
-				check_variable = {
-					story_archive_national_array^7 = 4
-				}
-			}
-		}
-		set_country_flag = GEK_has_war_with_kivotos
-		add_to_array = {
-			story_archive_national_array = 4
-		}
-	}	
-	if = {
-		# GEK 스토리 아카이브
-		# 조건에 맞춰서 array를 추가해주세요.
-		limit = { 
-			original_tag = GEK
-			has_country_flag = kivotos_research_on
-			has_country_flag = GEK_has_war_with_kivotos
-			date > 1938.9.15
-			NOT = {
-				check_variable = {
-					story_archive_national_array^8= 4
-				}
-			}
-		}
-		set_country_flag = GEK_has_war_with_kivotos
-		add_to_array = {
-			story_archive_national_array = 4
-		}
-	}
-	if = {
-		# TRM 스토리 아카이브
-		# 조건에 맞춰서 array를 추가해주세요.
+	if = { # TRM 스토리 아카이브
+		# 이 곳에는 태그를 넣습니다.
 		limit = {
 			original_tag = TRM
-			date > 1936.1.10
-			NOT = {
-				check_variable = {
-					story_archive_national_array^1 = 3
+		}
+		if = {
+			# TRM 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.1.10
+				NOT = {
+					check_variable = {
+						story_archive_national_array^0 = 3
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 3
+			add_to_array = {
+				story_archive_national_array = 3
+			}
 		}
 	}
-	if = {
+	if = { # BEL 스토리 아카이브
+		# 이 곳에는 태그를 넣습니다.
 		limit = {
 			original_tag = BEL
-			date > 1936.1.15
-			NOT = {
-				check_variable = {
-					story_archive_national_array^1 = 1
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.1.15
+				NOT = {
+					check_variable = {
+						story_archive_national_array^0 = 1
+					}
 				}
 			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
 		}
-		add_to_array = {
-			story_archive_national_array = 1
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.1.22
+				NOT = {
+					check_variable = {
+						story_archive_national_array^1 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.1.29
+				NOT = {
+					check_variable = {
+						story_archive_national_array^2 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.3.1
+				NOT = {
+					check_variable = {
+						story_archive_national_array^3 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.4.15
+				NOT = {
+					check_variable = {
+						story_archive_national_array^4 = 1
+					}
+				}					
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.7.4
+				NOT = {
+					check_variable = {
+						story_archive_national_array^5 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.7.15
+				NOT = {
+					check_variable = {
+						story_archive_national_array^6 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.8.1
+				NOT = {
+					check_variable = {
+						story_archive_national_array^7 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.8.15
+				NOT = {
+					check_variable = {
+						story_archive_national_array^8 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.9.1
+				NOT = {
+					check_variable = {
+						story_archive_national_array^9 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.9.15
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^10 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.11.15
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^11 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1936.12.25
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^12 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1937.3.14
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^13 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1937.4.1
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^14 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1937.4.15
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^15 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
+		}
+		if = {
+			# BEL 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				date > 1937.4.18
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^16 = 1
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 1
+			}
 		}
 	}
-	if = {
+	if = { # KSP 스토리 아카이브
+		# 이 곳에는 태그를 넣습니다.
 		limit = {
 			original_tag = KSP
-			date > 1936.1.15
-			NOT = {
-				check_variable = {
-					story_archive_national_array^1 = 2
+		}
+		if = {
+			limit = {
+				date > 1936.1.15
+				NOT = {
+					check_variable = {
+						story_archive_national_array^0 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1936.1.22
-			NOT = {
-				check_variable = {
-					story_archive_national_array^2 = 1
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1936.1.22
-			NOT = {
-				check_variable = {
-					story_archive_national_array^2 = 2
+		if = {
+			limit = {
+				date > 1936.1.22
+				NOT = {
+					check_variable = {
+						story_archive_national_array^1 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1936.1.29
-			NOT = {
-				check_variable = {
-					story_archive_national_array^3 = 1
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1936.1.29
-			NOT = {
-				check_variable = {
-					story_archive_national_array^3 = 2
+		if = {
+			limit = {
+				date > 1936.1.29
+				NOT = {
+					check_variable = {
+						story_archive_national_array^2 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1936.3.1
-			NOT = {
-				check_variable = {
-					story_archive_national_array^4 = 1
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1936.3.1
-			NOT = {
-				check_variable = {
-					story_archive_national_array^4 = 2
+		if = {
+			limit = {
+				date > 1936.3.1
+				NOT = {
+					check_variable = {
+						story_archive_national_array^3 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1936.4.15
-			NOT = {
-				check_variable = {
-					story_archive_national_array^5 = 1
-				}
-			}					
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1936.4.15
-			NOT = {
-				check_variable = {
-					story_archive_national_array^5 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1936.7.4
-			NOT = {
-				check_variable = {
-					story_archive_national_array^6 = 1
+		if = {
+			limit = {
+				date > 1936.4.15
+				NOT = {
+					check_variable = {
+						story_archive_national_array^4 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1936.7.4
-			NOT = {
-				check_variable = {
-					story_archive_national_array^6 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1936.7.15
-			NOT = {
-				check_variable = {
-					story_archive_national_array^7 = 1
+		if = {
+			limit = {
+				date > 1936.7.4
+				NOT = {
+					check_variable = {
+						story_archive_national_array^5 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1936.7.15
-			NOT = {
-				check_variable = {
-					story_archive_national_array^7 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1936.8.1
-			NOT = {
-				check_variable = {
-					story_archive_national_array^8 = 1
+		if = {
+			limit = {
+				date > 1936.7.15
+				NOT = {
+					check_variable = {
+						story_archive_national_array^6 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1936.8.1
-			NOT = {
-				check_variable = {
-					story_archive_national_array^8 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1936.8.15
-			NOT = {
-				check_variable = {
-					story_archive_national_array^9 = 1
+		if = {
+			limit = {
+				date > 1936.8.1
+				NOT = {
+					check_variable = {
+						story_archive_national_array^7 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1936.8.15
-			NOT = {
-				check_variable = {
-					story_archive_national_array^9 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1936.9.1
-			NOT = {
-				check_variable = {
-					story_archive_national_array^10 = 1
+		if = {
+			limit = {
+				date > 1936.8.15
+				NOT = {
+					check_variable = {
+						story_archive_national_array^8 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1936.9.1
-			NOT = {
-				check_variable = {
-					story_archive_national_array^10 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1936.9.15
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^11 = 1
+		if = {
+			limit = {
+				date > 1936.9.1
+				NOT = {
+					check_variable = {
+						story_archive_national_array^9 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1936.9.15
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^11 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1936.11.15
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^12 = 1
+		if = {
+			limit = {
+				date > 1936.9.15
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^10 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1936.11.15
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^12 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1936.12.25
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^13 = 1
+		if = {
+			limit = {
+				date > 1936.11.15
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^11 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1936.12.25
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^13 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1937.3.14
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^14 = 1
+		if = {
+			limit = {
+				date > 1936.12.25
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^12 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1937.3.14
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^14 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1937.4.1
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^15 = 1
+		if = {
+			limit = {
+				date > 1937.3.14
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^13 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1937.4.1
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^15 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1937.4.15
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^16 = 1
+		if = {
+			limit = {
+				date > 1937.4.1
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^14 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1937.4.15
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^16 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		limit = {
-			original_tag = BEL
-			date > 1937.4.18
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^17 = 1
+		if = {
+			limit = {
+				date > 1937.4.15
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^15 = 2
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 1
-		}
-	}
-	if = {
-		limit = {
-			original_tag = KSP
-			date > 1937.4.18
-			has_global_flag = KIABOTOS_Escape
-			NOT = {
-				KSP = {
-					has_idea = KSP_wakamo_sabotage
-				}
-			}	
-			NOT = {
-				check_variable = {
-					story_archive_national_array^17 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 2
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
+		if = {
+			limit = {
+				date > 1937.4.18
+				has_global_flag = KIABOTOS_Escape
+				NOT = {
+					KSP = {
+						has_idea = KSP_wakamo_sabotage
+					}
+				}	
+				NOT = {
+					check_variable = {
+						story_archive_national_array^16 = 2
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 2
+			}
 		}
 	}
-	if = {
-		# HEU 스토리 아카이브
-		# 조건에 맞춰서 array를 추가해주세요.
+	if = { # HEU 스토리 아카이브
+		# 이 곳에는 태그를 넣습니다.
 		limit = {
 			original_tag = HEU
-			NOT = {
-				check_variable = {
-					story_archive_national_array^1 = 2
+		}
+		if = {
+			# HEU 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				NOT = {
+					check_variable = {
+						story_archive_national_array^0 = 5
+					}
 				}
 			}
-		}
-		add_to_array = {
-			story_archive_national_array = 2
-		}
-	}
-	if = {
-		# HEU 스토리 아카이브
-		# 조건에 맞춰서 array를 추가해주세요.
-		limit = {
-			original_tag = HEU
-			NOT = {
-				check_variable = {
-					story_archive_national_array^2 = 2
-				}
+			add_to_array = {
+				story_archive_national_array = 5
 			}
 		}
-		add_to_array = {
-			story_archive_national_array = 2
+		if = {
+			# HEU 스토리 아카이브
+			# 조건에 맞춰서 array를 추가해주세요.
+			limit = {
+				NOT = {
+					check_variable = {
+						story_archive_national_array^1 = 5
+					}
+				}
+			}
+			add_to_array = {
+				story_archive_national_array = 5
+			}
 		}
 	}
 }
