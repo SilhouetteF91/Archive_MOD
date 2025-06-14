@@ -502,6 +502,13 @@ country_event = {
 				popularity = -0.20
 			}
 			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_idea = SHA_red_terror
+				}
+				set_country_flag = SHA_yield_at_communism_flag
+				remove_ideas = SHA_red_terror
+			}
 		}
 		every_country = {
 			limit = { is_puppet_of = HYA }

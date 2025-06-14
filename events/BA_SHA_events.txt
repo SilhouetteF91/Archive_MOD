@@ -61,7 +61,7 @@ country_event = { #평의회 운동
 	id = shacom.4
 	title = shacom.4.t
 	desc = shacom.4.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_communists_in_riga
 
     is_triggered_only = yes
 
@@ -78,7 +78,7 @@ country_event = { #자유조합연대의 새 지도자
 	id = shacom.5
 	title = shacom.5.t
 	desc = shacom.5.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_communist_leader
 
     is_triggered_only = yes
 
@@ -129,7 +129,7 @@ country_event = { #노동조합 지원
 	id = shacom.6
 	title = shacom.6.t
 	desc = shacom.6.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_generic_stock_traders
 
     is_triggered_only = yes
 
@@ -160,7 +160,7 @@ country_event = { #현룡문의 운명
 	id = shacom.7
 	title = shacom.7.t
 	desc = shacom.7.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_kisaki
 
     is_triggered_only = yes
 
@@ -190,7 +190,7 @@ country_event = { #프롤레타리아 문화양식
 	id = shacom.8
 	title = shacom.8.t
 	desc = shacom.8.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_PER_persepolis_party
 
     is_triggered_only = yes
 
@@ -206,7 +206,7 @@ country_event = { #공공돌봄
 	id = shacom.9
 	title = shacom.9.t
 	desc = shacom.9.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_tur_kurds_traditionalists_thwarted
 
     is_triggered_only = yes
 
@@ -253,7 +253,7 @@ country_event = { #리히텐슈타인 장악
 	id = shacom.11
 	title = shacom.11.t
 	desc = shacom.11.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_HUN_hungary_occupies_area
 
     is_triggered_only = yes
 
@@ -278,7 +278,7 @@ country_event = { #대중파업
 	id = shacom.12
 	title = shacom.12.t
 	desc = shacom.12.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_generic_strike
 
     is_triggered_only = yes
 
@@ -301,7 +301,7 @@ country_event = { #파업의 승리
 	id = shacom.13
 	title = shacom.13.t
 	desc = shacom.13.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_sanation_left_victory
 
     is_triggered_only = yes
 
@@ -328,7 +328,7 @@ country_event = { #민족 자결의 원칙
 	id = shacom.14
 	title = shacom.14.t
 	desc = shacom.14.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_cze_divided_nation
 
     is_triggered_only = yes
 
@@ -352,7 +352,7 @@ country_event = { #제2인터내셔널
 	id = shacom.15
 	title = shacom.15.t
 	desc = shacom.15.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_gre_diplomacy
 
     is_triggered_only = yes
 
@@ -368,7 +368,7 @@ country_event = { #주변의 위협
 	id = shacom.16
 	title = shacom.16.t
 	desc = shacom.16.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_generic_panzer_attack
 
     is_triggered_only = yes
 
@@ -401,7 +401,7 @@ country_event = { #적색 공포를 느낌
 	id = shacom.17
 	title = shacom.17.t
 	desc = shacom.17.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_spr_captured_republican
 
     is_triggered_only = yes
 
@@ -419,12 +419,16 @@ country_event = { #공세
 	id = shacom.18
 	title = shacom.18.t
 	desc = shacom.18.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_SOV_military_offensive
 
     is_triggered_only = yes
 
 	option = { #ㄱㄱ
 		name = shacom.18.a
+		declare_war_on = {
+			target = SHA
+			type = topple_government
+		}
 		add_ideas = SHA_offensive_to_red
 		ai_chance = {
 			modifier = {
@@ -438,15 +442,14 @@ country_event = { #공세
 		}
 	}
 	option = { #ㄴㄴ
-		name = shacom.18.a
-		add_ideas = SHA_offensive_to_red
+		name = shacom.18.b
 	}
 }
 country_event = { #맑스주의자들의 방해
 	id = shacom.19
 	title = shacom.19.t
 	desc = shacom.19.d
-	picture = GFX_event_SHA_tienanmen
+	picture = GFX_report_event_communists_cheer
 
     is_triggered_only = yes
 

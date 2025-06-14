@@ -1956,12 +1956,8 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SHA_communism_focus_12
 		}
-		available = {
-			NOT = {
-				has_idea = SHA_shanhaijing_isolation
-			}
-		}
 		completion_reward = {
+			remove_ideas = SHA_shanhaijing_isolation
 			SOU = {
 				country_event = generic.2
 			}
@@ -2102,6 +2098,19 @@ focus_tree = {
 					id = shacom.9
 					days = 30
 				}
+			}
+			custom_effect_tooltip = tooltip_effect_upon_focus_completion
+			if = {
+				limit = { has_idea = disarmed_nation }
+				add_ideas = volunteer_only
+			}
+			if = {
+				limit = { has_idea = volunteer_only }
+				add_ideas = limited_conscription
+			}
+			if = {
+				limit = { has_idea = limited_conscription }
+				add_ideas = extensive_conscription
 			}
 		}
 	}

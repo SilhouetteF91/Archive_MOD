@@ -392,7 +392,7 @@
  SHA_communism_diplo_2: "노동조합주의 차용"
  SHA_communism_diplo_3: "전간기의 유산"
  SHA_communism_diplo_4: "국제 마르크스주의"
- SHA_communism_diplo_4_tt: "§g단 한 번 사용하여 대상이 우리를 향해 공세하지 못 하도록 저지할 수 있습니다!§!"
+ SHA_communism_diplo_4_tt: "§g대상이 우리를 향해 공세하지 못 하도록 저지할 수 있습니다!§!"
  SHA_communism_diplo_5: "'안슐루스'"
 
  SHA_communism_diplo_6: "포위 뚫어내기"
@@ -789,6 +789,7 @@
  SHA_anschluss_decision: "'안슐루스'"
  SHA_red_terror_tt: "\n만료 시: '§Y$shacom.18.t$§!' 사건 발생"
  SHA_stop_red_terror: "[FROM.owner.getname]의 마르크스주의 동지들 활용"
+ SHA_stop_red_terror_flag: "다른 지역에서 우리의 마르크스주의자 동지들이 활동하는 중"
  SHA_establish_socialist_autonomy: "자치 평의회 설립"
 
  SHA_coup_of_Black_Tortoise_Promenade: "현무상회의 인내심 악화"

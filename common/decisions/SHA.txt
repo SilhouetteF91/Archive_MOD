@@ -132,7 +132,17 @@ SHA_communism_cat = {
 			}
 		}
 		cost = 20
+		days_remove = 120
+		remove_effect = {
+			clr_country_flag = SHA_stop_red_terror_flag
+		}
+		available = {
+			NOT = {
+				has_country_flag = SHA_stop_red_terror_flag
+			}
+		}
 		complete_effect = {
+			set_country_flag = SHA_stop_red_terror_flag
 			FROM.owner = {
 				set_country_flag = SHA_yield_at_communism_flag
 				remove_ideas = SHA_red_terror
