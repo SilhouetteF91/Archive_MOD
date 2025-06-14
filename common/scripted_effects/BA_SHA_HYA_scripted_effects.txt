@@ -220,6 +220,9 @@ SHA_set_ns_defaults = {
 	set_variable = { SHA_conservative_revolution_stability_factor = 0 }
 	set_variable = { SHA_conservative_revolution_industrial_capacity_factory = 0 }
 	set_variable = { SHA_conservative_revolution_conscription_factor = 0 }
+	set_variable = { SHA_conservative_revolution_resistance_damage_to_garrison = 0 }
+	set_variable = { SHA_conservative_revolution_political_power_factor = 0 }
+	set_variable = { SHA_conservative_revolution_research_speed_factor = 0 }
 	set_variable = { SHA_conservative_revolution_production_speed_industrial_complex_factor = 0 }
 	set_variable = { SHA_conservative_revolution_army_core_defence_factor = 0 }
 	set_variable = { SHA_conservative_revolution_consumer_goods_factor = 0 }

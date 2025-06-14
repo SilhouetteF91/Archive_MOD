@@ -674,6 +674,10 @@ focus_tree = {
 
 		completion_reward = {
 			add_research_slot = 2
+			custom_effect_tooltip = tooltip_white_line
+			set_country_flag = SHA_vereinigte_stahlwerkei_active_flag
+			custom_effect_tooltip = unlock_industrial_concern_tooltip 
+			show_ideas_tooltip = SHA_vereinigte_stahlwerke
 		}
 	}
 
@@ -3024,6 +3028,53 @@ focus_tree = {
 		}
 	}
 
+	# 총독부 설치
+	focus = {
+		id = SHA_Establishment_of_the_Governor_General
+		icon = GFX_goal_SHA_Establishment_of_the_Governor_General
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_Leave_SHA }
+		mutually_exclusive = { }
+
+		available = { 
+			any_state = {
+				is_core_of = HYA
+				is_owned_by = SHA
+				NOT = { state = 1021 }
+				NOT = { state = 972 }
+			}
+		}
+		bypass = { }
+
+		relative_position_id = SHA_Leave_SHA
+
+		completion_reward = {
+			if = {
+				limit = {
+					any_state = {
+						is_core_of = HYA
+						is_owned_by = SHA
+						NOT = { state = 1021 }
+						NOT = { state = 972 }
+					}
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = HYA
+						NOT = { is_core_of = SHA }
+					}
+					add_dynamic_modifier = { modifier = SHA_Hyakkiyako_governor }
+				}
+			}
+			else = {
+				custom_effect_tooltip = SHA_Establishment_of_the_Governor_General_tt
+			}
+		}
+	}
+
 	# 남 키보토스 정체성 강화
 	focus = {
 		id = SHA_strengthening_identity_of_southern_kivotos
@@ -3115,7 +3166,24 @@ focus_tree = {
 
 
 		completion_reward = {
-
+			add_war_support = 0.1
+			add_state_claim = 4
+			add_state_claim = 1021
+			add_state_claim = 152
+			add_state_claim = 153
+			add_state_claim = 848
+			add_state_claim = 976
+			add_state_claim = 975
+			add_state_claim = 972
+			add_state_claim = 75
+			add_state_claim = 74
+			add_state_claim = 72
+			add_state_claim = 9
+			add_state_claim = 69
+			add_state_claim = 53
+			add_state_claim = 52
+			add_state_claim = 54
+			add_threat = 1
 		}
 	}
 
@@ -3190,14 +3258,17 @@ focus_tree = {
 		id = SHA_Liberation_of_South_Kivotos
 		icon = GFX_goal_RUS_liberation_march
 		x = 0
-		y = 2
+		y = 3
 		cost = 5
 		
 		prerequisite = { 
 			focus = SHA_Special_Military_Operation_for_Slovakia
 			focus  = SHA_Special_Military_Operation_for_Abydos
 		}
-		mutually_exclusive = { }
+		mutually_exclusive = {
+			focus = SHA_Twilight_of_the_Gods
+			focus = SHA_Kivotos_conservative
+		}
 
 		available = {
 
@@ -3423,7 +3494,7 @@ focus_tree = {
 
 		mutually_exclusive = { 
 			focus = SHA_Twilight_of_the_Gods
-			focus = SHA_shanhaijing_non_alignment
+			focus = SHA_Liberation_of_South_Kivotos
 		}
 
 		available = {
@@ -3715,6 +3786,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = SHA_Kivotos_conservative
+			focus = SHA_Liberation_of_South_Kivotos
 		}
 
 		available = { }

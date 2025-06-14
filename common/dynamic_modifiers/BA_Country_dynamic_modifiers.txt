@@ -2420,10 +2420,7 @@ SHA_aup_modifier = {
 SHA_conservative_revolution_modifier = { # 산해경 보수 혁명
 	icon = GFX_idea_SHA_walking_the_dragon
 	remove_trigger = {
-		OR = {
-			SHA_KAGUYA = { is_hired_as_advisor  = no }
-			has_global_flag = GFLAG_BAKSANWAR_END
-		}
+		SHA_KAGUYA = { is_hired_as_advisor  = no }
 	}
 	army_core_defence_factor = SHA_conservative_revolution_army_core_defence_factor
 	consumer_goods_factor = SHA_conservative_revolution_consumer_goods_factor
@@ -2436,6 +2433,9 @@ SHA_conservative_revolution_modifier = { # 산해경 보수 혁명
 	production_speed_industrial_complex_factor = SHA_conservative_revolution_production_speed_industrial_complex_factor
 	industrial_capacity_factory = SHA_conservative_revolution_industrial_capacity_factory
 	conscription_factor = SHA_conservative_revolution_conscription_factor
+	resistance_damage_to_garrison = SHA_conservative_revolution_resistance_damage_to_garrison
+	political_power_factor = SHA_conservative_revolution_political_power_factor
+	research_speed_factor = SHA_conservative_revolution_research_speed_factor
 }
 
 CAN_parliament_anger_modifier = {
