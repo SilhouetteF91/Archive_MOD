@@ -2308,8 +2308,13 @@ GEK_junkers_organization = {
 	}
 
 	available = {
-		FROM = {
-			controls_state = 65
+		IF = {
+			limit = {
+				FROM = { NOT = { tag = GEH } }
+			}
+			FROM = {
+				controls_state = 65
+			}
 		}
 		IF = {
 			limit = {
