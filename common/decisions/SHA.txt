@@ -2,13 +2,27 @@ SHA_communism_cat = {
 	SHA_red_terror_mission = {
 		icon = GFX_decision_generic_ignite_civil_war
 		available = {
-			NOT = {
-				has_government = communism
+			OR = {
+				NOT = {
+					has_government = communism
+				}
+				all_country = {
+					NOT = {
+						has_idea = SHA_red_terror
+					}
+				}
 			}
 		}
+		is_good = yes
 		days_mission_timeout = 720
 		activation = {
 			always = no
+		}
+		timeout_effect = {
+			country_event = {
+				id = shacom.20
+				days = 1
+			}
 		}
 		complete_effect = {
 			

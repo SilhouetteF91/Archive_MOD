@@ -458,6 +458,61 @@ country_event = { #맑스주의자들의 방해
 		remove_ideas = SHA_red_terror
 	}
 }
+country_event = { #혁명전쟁
+	id = shacom.20
+	title = shacom.20.t
+	desc = shacom.20.d
+	picture = GFX_report_event_communists_cheer
+
+    is_triggered_only = yes
+
+	option = { #ㄱㄱ
+		name = shacom.20.a
+		if = {
+			limit = {
+				NOT = {
+					has_template = "Shanhaijing Red Guard"
+				}
+			}
+			division_template = {
+				name = "Shanhaijing Red Guard"
+				regiments = {
+					militia = {
+						x = 0
+						y = 0
+					}
+					militia = {
+						x = 0
+						y = 1
+					}
+					militia = {
+						x = 0
+						y = 2
+					}
+					militia = {
+						x = 1
+						y = 0
+					}
+					militia = {
+						x = 1
+						y = 1
+					}
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = SHA
+				is_controlled_by = SHA
+			}
+			create_unit = {
+				division = "name = \"Shanhaijing Red Guard\" division_template = \"Shanhaijing Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+				owner = SHA
+				count = 2
+			}
+		}
+	}
+}
 
 
 # 신선이 되는 길
