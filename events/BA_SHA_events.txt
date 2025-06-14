@@ -426,10 +426,33 @@ country_event = { #공세
 	option = { #ㄱㄱ
 		name = shacom.18.a
 		add_ideas = SHA_offensive_to_red
+		ai_chance = {
+			modifier = {
+				add = -10
+				tag = GEM
+			}
+			modifier = {
+				add = -10
+				tag = GEH
+			}
+		}
 	}
 	option = { #ㄴㄴ
 		name = shacom.18.a
 		add_ideas = SHA_offensive_to_red
+	}
+}
+country_event = { #맑스주의자들의 방해
+	id = shacom.19
+	title = shacom.19.t
+	desc = shacom.19.d
+	picture = GFX_event_SHA_tienanmen
+
+    is_triggered_only = yes
+
+	option = { #ㄲㅂ
+		name = shacom.19.a
+		remove_ideas = SHA_red_terror
 	}
 }
 

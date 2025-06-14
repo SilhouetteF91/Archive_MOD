@@ -1909,6 +1909,10 @@ SHA_great_oesterriech = {
 	color = rgb { 230 0 0 }
 	color_ui = rgb { 230 0 0 }
 }
+SHA_socialist_GER = {
+	color = rgb { 180 0 0 }
+	color_ui = rgb { 180 0 0 }
+}
 SHA_color = {
 	color = rgb { 3 192 60 }
 	color_ui = rgb { 3 192 60 }

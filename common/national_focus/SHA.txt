@@ -1766,7 +1766,7 @@ focus_tree = {
 			focus = SHA_communism_focus_7
 		}
 		available = {
-			communism > 0.4
+			communism > 0.5
 		}
 		completion_reward = {
 			hidden_effect = {
@@ -1951,6 +1951,11 @@ focus_tree = {
 		relative_position_id = SHA_communism_focus_8
 		mutually_exclusive = {
 			focus = SHA_communism_focus_12
+		}
+		available = {
+			NOT = {
+				has_idea = SHA_shanhaijing_isolation
+			}
 		}
 		completion_reward = {
 			SOU = {
@@ -2506,7 +2511,8 @@ focus_tree = {
 					has_completed_focus = SHA_Kaguya_ousted
 					has_completed_focus = SHA_conservative_revolution
 					has_completed_focus = SHA_appointment_of_BTP
-					has_completed_focus = SHA_communist_branch
+					has_completed_focus = SHA_communism_focus_9
+					has_completed_focus = SHA_communism_focus_12
 					has_completed_focus = SHA_Strengthening_Genryumon
 				}
 			}
@@ -4335,6 +4341,8 @@ focus_tree = {
 				remove_idea = SHA_austro_marxism_3
 				add_idea = SHA_austro_marxism_4
 			}
+			unlock_decision_tooltip = SHA_stop_red_terror
+			custom_effect_tooltip = SHA_communism_diplo_4_tt
 		}
 	}
 	# '안슐루스'
@@ -4355,13 +4363,16 @@ focus_tree = {
 			focus = SHA_soviet_diplo_4
 		}
 
-		completion_reward = {every_state = {
+		completion_reward = {
+			every_state = {
 				limit = {
 					BA_is_GER_core = yes
 					NOT = { is_core_of = ROOT }
 				}
 				add_claim_by = SHA
 			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			unlock_decision_tooltip = SHA_anschluss_decision
 		}
 	}
 

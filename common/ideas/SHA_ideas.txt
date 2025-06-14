@@ -61,6 +61,7 @@ ideas = {
 			}
 			modifier = {
 				stability_factor = -0.005
+				custom_modifier_tooltip = SHA_red_terror_tt
 			}
 			cancel = {
 				has_government = communism
