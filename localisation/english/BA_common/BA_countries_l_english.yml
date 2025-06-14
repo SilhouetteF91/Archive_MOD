@@ -96,6 +96,10 @@
  TRM_DEF:0 "트리니티"
  TRM_ADJ:0 "트리니티"
 
+ TRK:0 "에덴 관리기구"
+ TRK_DEF:0 "게헨나령 점령지"
+ TRK_ADJ:0 "게헨나령 점령지"
+
  TRC_fascism:0 "구호기사단"
  TRC_fascism_DEF:0 "구호기사단"
  TRC_democratic:0 "트리니티 종합학원 재건위원회"

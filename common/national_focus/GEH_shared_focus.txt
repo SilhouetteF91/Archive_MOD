@@ -152,6 +152,12 @@ shared_focus = {
 				remove_core_of = GEM
 			}
 		}
+		if = {
+			limit = { country_exists = TRK }
+			annex_country = {
+				target = TRK
+			}
+		}
 	}
 }
 shared_focus = {

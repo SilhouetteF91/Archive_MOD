@@ -2201,3 +2201,6 @@
  RULE_OPTION_GEH_HINA_DESC:0 "선도부 AI는 §R소라사키 히나§!를 찬양하는 광신도들로 정부가 장악되어, 히나에게 철인 독재를 강요하는 것과 관련 있는 중점 계통도를 따라 내려갈 것입니다."
  RULE_OPTION_GEH_IORI_DESC:0 "선도부 AI는 §O시로미 이오리§!와 실행부가 정권을 획득한 이후, 선도부를 군국주의 국가로 변화시키는 것과 관련 있는 중점 계통도를 따라 내려갈 것입니다."
  RULE_OPTION_GEH_GENERIC_DESC:0 "선도부 AI는 여러 파벌들의 논쟁이 §Y경합§!을 일으켜, 어떠한 개혁도 이루지 못하는 §Y현상유지§!를 실시하는 것과 관련 있는 중점 계통도를 따라 내려갈 것입니다."
+
+
+ TRM_auto_conference_1_division_tt: "다음 주는 게헨나 전체의 합동 조약기구인 '에덴 관리기구'의 위임통치령으로 인정될 것입니다:\n§Y[5.GetName]§!, §Y[60.GetName]§!, §Y[61.GetName]§!, §Y[62.GetName]§!, §Y[63.GetName]§!, §Y[64.GetName]§!, §Y[65.GetName]§!, §Y[66.GetName]§!, §Y[67.GetName]§!, §Y[68.GetName]§!, §Y[86.GetName]§!, §Y[188.GetName]§!, §Y[762.GetName]§!, §Y[763.GetName]§!, §Y[807.GetName]§! .\n\n"

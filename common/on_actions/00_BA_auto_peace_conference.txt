@@ -237,4 +237,43 @@ on_actions = {
 			}
 		}
 	}
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = TRM_auto_conference_1_flag
+					OR = {
+						has_country_flag = auto_conference_1_signatory_faction_leader
+						original_tag = GEH
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = TRM_auto_conference_1
+					}
+					transfer_state_to = TRK
+				}
+				every_country = {
+					limit =	{
+						original_tag = TRM
+						OR = {
+							any_country = {
+								has_country_flag = auto_conference_1_signatory_faction_leader
+								PREV = {
+									is_subject_of = PREV
+								}
+							}
+							is_subject_of = GEH
+						}
+					}
+					TRK = {
+						annex_country = {
+							target = PREV
+							transfer_troops = no
+						}
+					}
+				}
+			}
+		}
+	}
 }

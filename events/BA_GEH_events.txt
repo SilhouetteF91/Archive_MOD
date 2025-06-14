@@ -25,6 +25,151 @@ add_namespace = GEH.hina.magic_event
 add_namespace = GEH.ako.gov_event
 #선도부 뉴스 이벤트
 add_namespace = GEH_news
+#선도부 뉴스 이벤트
+add_namespace = TRM_auto_conference
+
+
+#The Yalta Conference
+country_event = {
+	id = TRM_auto_conference.1
+	title = TRM_auto_conference.1.t
+	desc = TRM_auto_conference.1.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	fire_only_once = yes
+
+	trigger = {
+		#A democratic faction leader whose faction holds at least one German core state while SOV holds another can get this.
+		has_war_with = TRM
+		NOT = { has_country_flag = GEH_unified_gehenna_flag }
+		TRM = {
+			surrender_progress > 0.4
+			has_government = fascism
+		}
+		is_faction_leader = yes
+		any_state = {
+			is_core_of = TRM
+			controller = {
+				is_in_faction_with = ROOT
+			}
+		}
+		NOT = {
+			tag = GEH
+		}
+		NOT = {
+			has_war_with = GEH
+		}
+		GEH = {
+			NOT = { has_country_flag = GEH_unified_gehenna_flag }
+			is_in_faction_with = ROOT
+			has_war_with = TRM
+		}
+		NOT = {
+			has_global_flag = had_auto_conference_1
+		}
+		NOT = {
+			any_state = {
+				is_core_of = TRM
+				controller = {
+					NOT = {
+						tag = TRM
+					}
+					is_in_faction = yes
+					NOT = {
+						OR = {
+							is_in_faction_with = ROOT
+							is_in_faction_with = COU
+						}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 8
+	}
+
+	immediate = {
+		set_global_flag = had_auto_conference_1
+		GEH = {
+			save_event_target_as = auto_conference_1_partner
+		}
+		ROOT = {
+			save_event_target_as = auto_conference_1_origin
+			set_country_flag = auto_conference_1_signatory_faction_leader
+		}
+	}
+
+	option = {
+		name = TRM_auto_conference.1.a
+		ai_chance = {
+			base = 10
+		}
+		hidden_effect = {
+			event_target:auto_conference_1_partner = {
+				country_event = { days = 1 id = TRM_auto_conference.101 }
+			}
+		}
+		custom_effect_tooltip = TRM_auto_conference_1_division_tt
+		event_target:auto_conference_1_partner = {
+			custom_effect_tooltip = needs_approval
+		}
+	}
+
+	option = {
+		name = TRM_auto_conference.1.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+
+#Yalta Conference Follow-up
+country_event = {
+	id = TRM_auto_conference.101
+	title = TRM_auto_conference.101.t
+	desc = TRM_auto_conference.101.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.119.a
+		custom_effect_tooltip = TRM_auto_conference_1_division_tt
+			5 = { set_state_flag = TRM_auto_conference_1 }
+			60 = { set_state_flag = TRM_auto_conference_1 }
+			61 = { set_state_flag = TRM_auto_conference_1 }
+			62 = { set_state_flag = TRM_auto_conference_1 }
+			63 = { set_state_flag = TRM_auto_conference_1 }
+			64 = { set_state_flag = TRM_auto_conference_1 }
+			65 = { set_state_flag = TRM_auto_conference_1 }
+			66 = { set_state_flag = TRM_auto_conference_1 }
+			67 = { set_state_flag = TRM_auto_conference_1 }
+			68 = { set_state_flag = TRM_auto_conference_1 }
+			86 = { set_state_flag = TRM_auto_conference_1 }
+			188 = { set_state_flag = TRM_auto_conference_1 }
+			762 = { set_state_flag = TRM_auto_conference_1 }
+			763 = { set_state_flag = TRM_auto_conference_1 }
+			807 = { set_state_flag = TRM_auto_conference_1 }
+		
+		hidden_effect = {
+			#news_event = { days = 1 id = news.236 }
+		}
+		set_global_flag = TRM_auto_conference_1_flag 
+		log = "TRM_auto_conference_1 START!"
+	}
+
+	option = {
+		name = germany.119.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
 
 country_event = { # 선도부 소집
 	id = NextPhase.0

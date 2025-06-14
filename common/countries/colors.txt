@@ -1140,6 +1140,10 @@ TRM = {
 	color = rgb { 255 181 69 }
 	color_ui = rgb { 255 181 69 }
 }
+TRK = {
+	color = rgb { 255 181 69 }
+	color_ui = rgb { 255 181 69 }
+}
 TRC = {
 	color = rgb { 255 255 245 }
 	color_ui = rgb { 255 181 69 }
