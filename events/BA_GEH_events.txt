@@ -3508,6 +3508,103 @@ country_event = { # 에덴 결전 - 질서의 비상
 	}
 }
 
+country_event = { # 참회할 수 있도록
+	id = GEH.hina.magic_event.1
+	title = GEH.hina.magic_event.1.t
+	desc = GEH.hina.magic_event.1.desc
+
+	picture = GFX_report_event_generic_flowers
+	
+    is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GEH
+		owns_state = 64
+		has_completed_focus = GEH_basking_in_the_brilliance_of_their_serenade_rout_n_end
+		has_global_flag = GEH_hina_return_flag
+		NOT = { has_country_flag = GEH_unified_gehenna_flag }
+		NOT = { country_exists = GEM }
+		NOT = { country_exists = TRM }
+
+		# 히든 루트 조건 종합
+		# 노말 루트 히나 탈주 / 히나 탈주 후 모든 중점 완료해 히나가 돌아옴 / 게헨나, 트리니티 모두 병합 / 선도부는 이 때까지 통일 디시전을 누르지 않음
+	}
+	
+	mean_time_to_happen = { 
+		days = 5
+	}
+	
+	option = { 
+		name = GEH.hina.magic_event.1.a
+		add_political_power = -50
+		hidden_effect = {
+			country_event = { id = GEH.hina.magic_event.2 days = 14 }
+		}
+	}
+	
+	option = { 
+		name = GEH.hina.magic_event.1.b
+		
+	}
+}
+
+country_event = { # 고서 연구
+	id = GEH.hina.magic_event.2
+	title = GEH.hina.magic_event.2.t
+	desc = GEH.hina.magic_event.2.desc
+
+	picture = GFX_report_event_ako_amau_generic_1
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.hina.magic_event.2.a
+		add_political_power = -50
+		hidden_effect = {
+			country_event = { id = GEH.hina.magic_event.3 days = 14 }
+		}
+	}
+	
+	option = { 
+		name = GEH.hina.magic_event.2.b
+		
+	}
+}
+
+country_event = { # 고서 연구
+	id = GEH.hina.magic_event.3
+	title = GEH.hina.magic_event.3.t
+	desc = GEH.hina.magic_event.3.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.hina.magic_event.3.a
+		set_country_flag = GEH_magical_girl_hina
+
+		set_portraits = {
+			character = GEH_hina
+			army = { 
+				large = "gfx/leaders/GEH/GEH_hina_sorasaki_magical_girl.dds" 
+			}
+		}
+		
+		GEH_hina = {
+			add_trait = {
+				trait = brave
+			}
+		}
+	}
+	
+	option = { 
+		name = GEH.hina.magic_event.3.b
+
+	}
+}
+
 #게헨나 연방공화국 헌법 논의
 country_event = { 
 	id = GEH.ako.gov_event.1
