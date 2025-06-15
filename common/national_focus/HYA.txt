@@ -282,6 +282,11 @@ focus_tree = {
 		available = {
 		}   
 		bypass = {
+			OR = {
+				has_war_with = HYA
+				has_global_flag = GFLAG_BAKSANWAR_END
+				has_global_flag = CFLAG_BAKSANWAR_END
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -320,6 +325,7 @@ focus_tree = {
 					has_offensive_war = yes
 				}
 				has_global_flag = GFLAG_BAKSANWAR_END
+				has_global_flag = CFLAG_BAKSANWAR_END
 			}
 		}
 		completion_reward = {
