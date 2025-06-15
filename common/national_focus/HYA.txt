@@ -283,7 +283,8 @@ focus_tree = {
 		}   
 		bypass = {
 			OR = {
-				has_war_with = HYA
+				has_global_flag = GFLAG_BAKSANWAR
+				has_war_with = SHA
 				has_global_flag = GFLAG_BAKSANWAR_END
 				has_global_flag = CFLAG_BAKSANWAR_END
 			}
