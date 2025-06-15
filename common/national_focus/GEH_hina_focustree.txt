@@ -4949,6 +4949,7 @@ focus_tree = {
 		x = 11
 		y = 0
         relative_position_id = GEH_first_congress_focus
+
 		ai_will_do = { 
             base = 1000 
 			modifier = {
@@ -4959,7 +4960,12 @@ focus_tree = {
 				factor = 0.5
 				has_war = no
 			}
+			modifier = {
+				factor = 0
+				date < 1939.12.01
+			}
         }
+
 		available = {
 			is_puppet = no
 			NOT = { is_in_faction_with = TRM }
@@ -4981,7 +4987,7 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				target = TRM
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 	}
