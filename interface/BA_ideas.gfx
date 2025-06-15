@@ -336,6 +336,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/Trinity_air_force.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_TRM_Trinity_navy"
+		textureFile = "gfx/interface/ideas/Trinity_navy.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_TRM_Endsige2"
 		texturefile = "gfx/interface/ideas/trn/TRN_cult_of_personality.tga"
 	}

@@ -30,13 +30,20 @@ SHA_historical = {
 		SHA_union_control
 
 		SHA_Shanhaijing_fascism
+		SHA_Eastern_Alchemy_Society_solidarity
+		SHA_cult_of_personality
 		SHA_consolidate_industries
-		SHA_Expansion_of_military_factories
+		SHA_podium_room_expansion
+
+		SHA_courting_the_princess_of_industry
+		SHA_Construction_of_Kolnbrein_Dam
+		SHA_invest_in_erzberg_steel_mines
 
 		SHA_Shanhaijing_fact
-		SHA_invest_in_erzberg_steel_mines
-		SHA_expand_stpoltner_steelworks
 		SHA_emergency_measures
+		SHA_Expansion_of_military_factories
+		
+		SHA_expand_stpoltner_steelworks
 
 		SHA_address_the_army
 		SHA_Following_doorkeeper_footsteps
@@ -44,30 +51,19 @@ SHA_historical = {
 		SHA_National_Guard_Expansion
 		SHA_heroism_education
 
-		SHA_Eastern_Alchemy_Society_solidarity
-
 		SHA_invade_of_Hyakkiyako
-		SHA_Establishment_of_military_academy
-		SHA_podium_room_expansion
-
-		# 전쟁 이후
-		SHA_establish_the_VES
-		SHA_solidarist_representation
+		SHA_propaganda_bureau_of_army
+		SHA_civic_militarism
 
 		SHA_strengthening_identity_of_southern_kivotos
-
-		SHA_Equipment_Development_Department
-		SHA_Mortar_Development_Department
-		SHA_military_production
-
-		SHA_Special_Military_Operation_for_Abydos
-		SHA_Special_Military_Operation_for_Slovakia
-
-		SHA_Establishment_of_the_Governor_General
-		SHA_industrial_exploitation
 		SHA_Leave_SHA
-		SHA_the_third_kivotos
 
+		SHA_ascension
+		SHA_Alchemy_and_modern_science
+		SHA_supremacy_of_will
+		SHA_supremacy_of_technology
+
+		SHA_economic_organisation_of_SKivotos
 	}
 
 	weight = {

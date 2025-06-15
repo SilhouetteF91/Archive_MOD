@@ -2592,6 +2592,9 @@ leader_traits = {
 		air_strategic_bomber_bombing_factor = 0.1
 		air_bombing_targetting = 0.1
 		rocket_attack_factor = 0.1
+
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
 	}
 	TRN_shepherd_of_trinity = { # 양떼와 목자
 		sprite = 13

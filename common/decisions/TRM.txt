@@ -4914,7 +4914,8 @@ TRN_after_war_decisions = {
 		
 		war_with_on_remove = FRM
 		complete_effect = {
-			declare_war_on = {
+			set_country_flag = TRN_destroy_FRM_flag
+			create_wargoal = {
 				target = FRM
 				type = annex_everything
 			}
@@ -7324,23 +7325,22 @@ TRN_economic_decisions_category = {
 
 		available = {
 			FROM = { is_owned_and_controlled_by = ROOT }
-			num_of_civilian_factories_available_for_projects > 1
 		}
 
-		cost = 40
-		days_remove = 60
+		cost = 35
+		days_remove = 35
 		fire_only_once = yes
 		state_target = yes
 
 		modifier = {
-			civilian_factory_use = 1
+
 		}
 
 		ai_will_do = {
 			factor = 20
 			modifier = {
 				factor = 0
-				has_political_power < 300
+				has_political_power < 159
 			}
 		}
 		remove_effect = {
@@ -7364,7 +7364,7 @@ TRN_economic_decisions_category = {
 		}
 
 		cost = 40
-		days_remove = 60
+		days_remove = 70
 		fire_only_once = yes
 		state_target = yes
 
@@ -7374,10 +7374,6 @@ TRN_economic_decisions_category = {
 
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				factor = 0
-				has_political_power < 300
-			}
 		}
 		remove_effect = {
 			FROM = {
@@ -7389,54 +7385,6 @@ TRN_economic_decisions_category = {
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	TRN_Mittelland_Canal = {
-		icon = GFX_decision_generic_factory
-
-		allowed = { always = no } #activated by effect
-
-		available = {
-			FROM = { is_owned_and_controlled_by = ROOT }
-			59 = { is_owned_and_controlled_by = ROOT }
-			num_of_civilian_factories_available_for_projects > 4
-		}
-
-		cost = 40
-		days_remove = 60
-		fire_only_once = yes
-		state_target = yes
-
-		modifier = {
-			civilian_factory_use = 5
-		}
-
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 0
-				has_political_power < 300
-			}
-		}
-
-		remove_effect = {
-			add_to_variable = { TRN_completed_industrial_decisions = 1 }
-			FROM = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			59 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
@@ -7455,7 +7403,7 @@ TRN_economic_decisions_category = {
 		}
 
 		cost = 40
-		days_remove = 60
+		days_remove = 70
 		fire_only_once = yes
 		state_target = yes
 
@@ -7467,7 +7415,7 @@ TRN_economic_decisions_category = {
 			base = 40
 			modifier = {
 				factor = 0
-				has_political_power < 300
+				has_political_power < 159
 			}
 		}
 
@@ -7510,7 +7458,7 @@ TRN_economic_decisions_category = {
 		}
 
 		cost = 40
-		days_remove = 60
+		days_remove = 70
 		fire_only_once = yes
 		state_target = yes
 
@@ -7522,7 +7470,7 @@ TRN_economic_decisions_category = {
 			base = 40
 			modifier = {
 				factor = 0
-				has_political_power < 300
+				has_political_power < 159
 			}
 		}
 
@@ -7537,6 +7485,48 @@ TRN_economic_decisions_category = {
 				}
 			}
 			62 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	TRN_agricultural_support = {
+		icon = GFX_decision_POL_looming_peasants_strike
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = { is_owned_and_controlled_by = ROOT }
+			61 = { is_owned_and_controlled_by = ROOT }
+			num_of_civilian_factories_available_for_projects > 1
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 0
+				has_political_power < 159
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			61 = {
 				add_extra_state_shared_building_slots = 1
 			}
 		}
@@ -7565,7 +7555,7 @@ TRN_economic_decisions_category = {
 			base = 40
 			modifier = {
 				factor = 0
-				has_political_power < 300
+				has_political_power < 159
 			}
 		}
 
@@ -7612,7 +7602,7 @@ TRN_economic_decisions_category = {
 			base = 40
 			modifier = {
 				factor = 0
-				has_political_power < 300
+				has_political_power < 159
 			}
 		}
 
@@ -7683,12 +7673,11 @@ TRN_economic_decisions_category = {
 		}
 
 		remove_effect = {
-			add_research_slot_until_six = yes
+			add_research_slot_until_five = yes
 			add_breakthrough_progress = {
 				specialization = specialization_land
 				value = 0.5
 			}
-
 		}
 	}
 	TRN_dessert_shop_expansion = {

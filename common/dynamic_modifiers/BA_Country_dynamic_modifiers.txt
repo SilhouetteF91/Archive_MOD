@@ -1563,6 +1563,13 @@ TRM_VVS = { #트리니티 공군
 	air_strategic_bomber_night_penalty = TRM_VVS_air_strategic_bomber_night_penalty
 }
 
+TRM_navy = { #트리니티 해군
+
+    icon = GFX_idea_TRM_Trinity_navy
+
+	naval_has_potf_in_combat_attack = TRM_NAVY_naval_has_potf_in_combat_attack
+}
+
 #카이저 코퍼레이션
 
 KAI_industry_dynamic_modifier = { #카이저 인더스트리

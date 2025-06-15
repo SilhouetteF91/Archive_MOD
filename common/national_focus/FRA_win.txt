@@ -2084,7 +2084,7 @@ focus_tree = {
 	}
 	focus = {
 		#산해경과 연합
-		icon = GFX_goal_chi_mission_to_the_SHA
+		icon = GFX_focus_chi_mission_to_the_SHA
 		id = FRA_focus_concil_12
 		cost = 5
 		x = -6

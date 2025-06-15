@@ -8775,7 +8775,7 @@ country_event = { # 호스트 선출
 	id = trinity.7
 	title = trinity.7.t
 	desc = trinity.7.desc
-	picture = GFX_report_event_generic_communist_congress
+	picture = GFX_report_event_trinity_seia
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -10682,14 +10682,6 @@ country_event = { # 동행인
 
 	option = {
 		name = trnfla.15.a
-		
-			set_country_flag = TRM_after_war_flag_decision_active
-     		activate_targeted_decision = { target = TRM decision = TRM_Gehenna_Military_Civil_Administration}
-			activate_targeted_decision = { target = TRM decision = TRM_raid_gehenna_resistance }
-			activate_targeted_decision = { target = TRM decision = TRM_unification_propaganda }
-			activate_targeted_decision = { target = TRM decision = TRM_Decline_of_the_anti_gehenna_sentiment }
-			activate_targeted_decision = { target = TRM decision = TRM_tighten_control }
-			activate_targeted_decision = { target = TRM decision = TRM_United_Law }
 
 	}
 }
@@ -10833,11 +10825,11 @@ country_event = { # 인터넷 연결 됨!
 		
 	}
 }
-country_event = { # 무인 병동 소란
+country_event = { # [ROOT.GetLeader]님! 제 토지를 찢지마세요!
 	id = trnfla.23
 	title = trnfla.23.t
 	desc = trnfla.23.desc
-	picture = GFX_event_Trinity_Hospital
+	picture = GFX_report_event_generic_riverside_road
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -10845,6 +10837,31 @@ country_event = { # 무인 병동 소란
 	option = {
 		name = trnfla.23.a 
 		
+	}
+}
+country_event = { # 색채 침입 - 미카
+	id = trnfla.24
+	title = trnfla.24.t
+	desc = trnfla.24.desc
+	picture = GFX_event_TRN_mika_event_picture_2
+	
+	is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+		tag = TRM
+		has_country_leader = {
+			character = TRN_alzk
+			ruling_only = yes
+		}
+		has_completed_focus = TRN_necessary_revenge
+		has_global_flag = BA_The_Iridescence
+    }
+
+	option = {
+		name = trnfla.24.a 
+		set_country_flag = TRN_MIKA_Iridescence
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 

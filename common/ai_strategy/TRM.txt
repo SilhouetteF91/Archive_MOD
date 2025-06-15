@@ -80,3 +80,70 @@ TRM_fight_RED = {
 		value = 99
 	}abort = { always = no }
 }
+
+TRM_we_are_bad_at_espionage_because_it_is_expensive_and_not_tanks = { # 정보기관 개선에 공장 낭비하지 마세요
+	allowed = {
+		original_tag = TRM
+		has_dlc = "La Resistance"
+	}
+	enable = {
+		has_intelligence_agency = yes
+		num_of_civilian_factories < 70
+		num_of_civilian_factories > 30
+	}
+	abort = {
+		num_of_civilian_factories > 70
+	}
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = -20
+	}
+}
+
+if_TRM_has_wargoal_against_FRM ={ # 파시즘 정부일때 프랑스 마지노선이 살아 있다면
+	allowed = {
+		original_tag = TRM
+	}
+	enable = {
+		has_government = fascism
+		has_country_flag = TRN_destroy_FRM_flag
+	}
+
+	abort = {
+		NOT = { has_government = fascism }
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = "FRM"
+		value = 999
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = "FRM"
+		value = 999
+	}
+}
+
+TRM_infantry_equipment_3_is_bad = {
+	enable = {
+		tag = TRM
+		TRM = { has_equipment = { infantry_equipment < 80000 } }
+	}
+
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = production_upgrade_desire_offset
+		id = infantry_equipment_3
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = production_upgrade_desire_offset
+		id = infantry_equipment_2
+		value = 100
+	}
+}

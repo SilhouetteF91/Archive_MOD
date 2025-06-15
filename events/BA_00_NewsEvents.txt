@@ -798,6 +798,10 @@ news_event = { #색채의 침입
 	major = yes
 	
 	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = BA_The_Iridescence
+	}
 	
 	option = {
 		name = BA_news.15.a

@@ -1,0 +1,45 @@
+on_actions = {
+	on_war = {
+		effect = {
+			if = { #트리니티가 "TRM_war_preparations" 중점을 완료 했고 전쟁을 선포했을때
+				limit = {
+					original_tag = GER
+					NOT = { has_country_flag = GER_has_war_preparations_flag }
+					OR = {
+						has_completed_focus = GER_prepare_for_the_next_naval_blockade
+						has_completed_focus = GER_war_preparations
+					}
+				}
+				add_timed_idea = {
+					idea = GER_strengthened_supply_lines_ns
+					days = 730
+				}
+				set_country_flag = GER_has_war_preparations_flag
+			}
+		}
+		effect = {
+			if = { # 트리니티가 "TRM_war_preparations" 중점을 완료 했고 전쟁을 선포했을때
+				limit = {
+					original_tag = TRM
+					TRM = { 
+						OR = {
+							has_completed_focus = TRM_war_preparations 
+							AND = {
+								has_completed_focus = TRM_Expand_the_Logistics_Corps
+								has_focus_tree = Trinity_focus
+							}
+						}
+						NOT = { has_country_flag = TRM_had_strengthened_supply_lines_ns }
+					}
+				}
+				TRM = {
+					add_timed_idea = {
+						idea = GER_strengthened_supply_lines_ns
+						days = 730
+					}
+					set_country_flag = TRM_had_strengthened_supply_lines_ns
+				}
+			}
+		}
+	}
+}

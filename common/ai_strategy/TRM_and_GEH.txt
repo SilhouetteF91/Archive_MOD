@@ -142,9 +142,15 @@ GEH_war_TRM = {
 	}
 	enable = {
 		TRM = {
-			focus_progress = {
-				focus = TRM_war_with_gehenna
-				progress > 0.1
+			OR = {
+				focus_progress = {
+					focus = TRM_war_with_gehenna
+					progress > 0.1
+				}
+				focus_progress = {
+					focus = TRN_spiritual_warfare
+					progress > 0.1
+				}
 			}
 		}
 	}
@@ -161,9 +167,15 @@ TRM_war_GEH = {
 	}
 	enable = {
 		TRM = {
-			focus_progress = {
-				focus = TRM_war_with_gehenna
-				progress > 0.1
+			OR = {
+				focus_progress = {
+					focus = TRM_war_with_gehenna
+					progress > 0.1
+				}
+				focus_progress = {
+					focus = TRN_spiritual_warfare
+					progress > 0.1
+				}
 			}
 		}
 	}
@@ -283,6 +295,29 @@ TRM_unit_production = {
 		type = role_ratio
 		id = infantry
 		value = 75 #88 to 70
+	}
+
+	
+	ai_strategy = {
+		type = equipment_production_min_factories #Build these up over time, don't stall
+		id = infantry
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories #Build these up over time, don't stall
+		id = anti_air
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = support_equipment
+		value = 5
 	}
 }
 

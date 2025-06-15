@@ -343,6 +343,10 @@ spriteTypes = {
 		name = "GFX_report_event_generic_swimmingpool"
 		texturefile = "gfx/event_pictures/report_event_generic_swimmingpool.tga"
 	}
+	spriteType = {
+		name = "GFX_report_event_generic_riverside_road"
+		texturefile = "gfx/event_pictures/report_event_generic_riverside_road.tga"
+	}
 	
 	
 	##
@@ -591,10 +595,6 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/TRM/위기파악.tga"
 	}
 	spriteType = {
-		name = "GFX_event_TRN_mika_event_picture"
-		texturefile = "gfx/event_pictures/TRM/mika_event_picture.tga"
-	}
-	spriteType = {
 		name = "GFX_event_TRN_opposition_32"
 		texturefile = "gfx/event_pictures/TRM/아츠코.tga"
 	}
@@ -682,6 +682,18 @@ spriteTypes = {
        name = "GFX_event_Trinity_Hospital"
        texturefile = "gfx/event_pictures/TRM/Trinity_Hospital.tga"
     }
+	spriteType = {
+		name = "GFX_event_TRN_mika_event_picture"
+		texturefile = "gfx/event_pictures/TRM/mika_event_picture.tga"
+	}
+	spriteType = {
+		name = "GFX_event_TRN_mika_event_picture_2"
+		texturefile = "gfx/event_pictures/TRM/mika_event_picture_2.tga"
+	}
+	spriteType = {
+		name = "GFX_event_TRN_mika_event_picture_3"
+		texturefile = "gfx/event_pictures/TRM/mika_event_picture_3.tga"
+	}
     spriteType = {
      	name = "GFX_report_event_ive_alive"
      	texturefile = "gfx/event_pictures/report_event_ive_alive.tga"
@@ -693,6 +705,10 @@ spriteTypes = {
     spriteType = {
      	name = "GFX_report_event_ive_alive_3"
      	texturefile = "gfx/event_pictures/report_event_ive_alive_3.tga"
+    }
+    spriteType = {
+     	name = "GFX_report_event_trinity_seia"
+     	texturefile = "gfx/event_pictures/report_event_trinity_seia.tga"
     }
     spriteType = {
       name = "GFX_event_BA_Poland_Flag"

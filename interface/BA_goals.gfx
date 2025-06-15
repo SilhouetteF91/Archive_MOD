@@ -216,6 +216,10 @@ spriteTypes = {
 		name = "GFX_focus_TRN_horseman_of_the_apocalypse"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_horseman_of_the_apocalypse.tga"
 	}
+	SpriteType = {
+		name = "GFX_focus_TRN_Kyrie_eleison"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_Kyrie_eleison.tga"
+	}
 
 	SpriteType = {
 		name = "GFX_focus_BLM_gang_thugs_war_focus"
@@ -530,6 +534,16 @@ spriteTypes = {
 		name = "GFX_focus_attack_TRN"
 		texturefile = "gfx/interface/goals/BA_old/focus_attack_TRN.tga"
 	}
+	
+	SpriteType = {
+		name = "GFX_focus_attack_KAI"
+		texturefile = "gfx/interface/goals/BA_old/focus_attack_KAI.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_attack_COU"
+		texturefile = "gfx/interface/goals/BA_old/focus_attack_COU.tga"
+	}
 
 	SpriteType = {
 		name = "GFX_focus_chi_mission_to_the_ABY"
@@ -580,6 +594,17 @@ spriteTypes = {
 		name = "GFX_focus_chi_mission_to_the_TRN"
 		texturefile = "gfx/interface/goals/BA_old/focus_chi_mission_to_the_TRN.tga"
 	}
+	
+	SpriteType = {
+		name = "GFX_focus_chi_mission_to_the_KAI"
+		texturefile = "gfx/interface/goals/BA_old/focus_chi_mission_to_the_KAI.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_chi_mission_to_the_COU"
+		texturefile = "gfx/interface/goals/BA_old/focus_chi_mission_to_the_COU.tga"
+	}
+
 	SpriteType = {
 		name = "GFX_focus_YUG_greater_yugoslavia" 
 		texturefile = "gfx/interface/goals/YUG/focus_YUG_greater_yugoslavia.tga"
