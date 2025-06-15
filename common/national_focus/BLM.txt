@@ -1186,7 +1186,7 @@ focus_tree = {
                 character = BLM_Kurihama_Akemi
                 promote_leader = yes
                 country_leader = {
-                    ideology = criminal_state
+                    ideology = crime_syndicate
                     expire = "1965.1.1.1"
                     traits = { BLM_kurihama_akemi_traits }
                 }

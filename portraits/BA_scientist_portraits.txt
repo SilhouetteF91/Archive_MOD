@@ -11,6 +11,19 @@ TRM = {
 		}
 	}
 }
+TRK = {
+	scientist = {
+		female = {
+			"GFX_Portrait_BlueArchive_TRM_scientists_01"
+			"GFX_Portrait_BlueArchive_TRM_scientists_02"
+			"GFX_Portrait_BlueArchive_TRM_scientists_03"
+			"GFX_Portrait_BlueArchive_TRM_scientists_04"
+		}
+		male = {
+			"GFX_portrait_generic_europe_male_01"
+		}
+	}
+}
 COU = {
 	scientist = {
 		female = {
