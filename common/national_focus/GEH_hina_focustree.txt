@@ -6311,6 +6311,24 @@ focus_tree = {
 			set_rule = { CAN_DECLARE_WAR_ON_SAME_IDEOLOGY = yes }
 			set_rule = { can_only_justify_war_on_threat_country = no }
 			set_rule = { can_join_opposite_factions = yes }    
+
+			if = {
+				limit = {
+					check_variable = { GEH_ako_democratic_var > 2 }
+					#GEH_ako_democratic_loc_pro_kivotos
+				}
+				country_event = { id = GEH.ako.gov_event.3 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { GEH_ako_democratic_var < -2 }
+					#GEH_ako_democratic_loc_pro_german
+				}
+				country_event = { id = GEH.ako.gov_event.5 }
+			}
+			else = {
+				country_event = { id = GEH.ako.gov_event.4 }
+			}
 		}
 	}
 
@@ -6355,6 +6373,11 @@ focus_tree = {
 			add_popularity = {
 				ideology = communism
 				popularity = -0.05
+			}
+
+			swap_ruler_traits = {
+				remove = GEH_military_chairman
+				add = GEH_military_chairman_amau
 			}
 		}
 	}
@@ -7027,6 +7050,11 @@ focus_tree = {
 			GEH_dkzh = {
 				set_character_name = GEH_ako_sorasaki
 				set_character_flag = GEH_hina_bride
+			}
+
+			swap_ruler_traits = {
+				remove = GEH_military_chairman
+				add = GEH_military_chairman_ako
 			}
 		}
 	}

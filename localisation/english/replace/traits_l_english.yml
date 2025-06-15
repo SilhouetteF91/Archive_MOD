@@ -80,6 +80,8 @@
 #게헨나 (선도부)
  GEH_military_chairman: "군인 행정가"
  GEH_military_chairman_2: "군벌 지도자"
+ GEH_military_chairman_ako: "제복을 입은 시민\n§g소라사키 히나는 단순한 군부 지도자가 아닙니다. 그녀는 연방공화국의 의장이며, 공화국 평의회에 권력을 크게 이양하고 기술관료들의 정치를 지원합니다.§!"
+ GEH_military_chairman_amau: "제복을 입은 시민\n§g소라사키 히나는 단순한 군부 지도자가 아닙니다. 연방공화국의 헌법을 수호하는 평의회 의장으로서 그녀는 법과 질서 그리고 굳건한 통제민주주의의 상징이 되었습니다.§!"
  b_tjsehqnwkd_start: "선도부장"
  b_tjsehqnwkd_week: "강철의 선도부장"
  b_tjsehqnwkd: "강철의 선도부장"
@@ -106,6 +108,8 @@
  GEH_last_hope_of_prefect_team: "선도부 최후의 희망"
  GEH_puppet_leader_hina: "꼭두각시 지도자\n§g아코가 모든 일을 대신 할 텐데, 왜 국정 운영 따위를 신경 써야 할까요?§!"
  GEH_ako_partner_leader_hina: "아코의 파트너\n§g아코가 곁에 있는 한, 히나는 절대 무너지지 않을 것입니다.§!"
+ GEH_pioneer_of_science: "과학의 선구자\n§g평의회 체제는 밀레니엄을 따라잡는 것을 목표로 발전하고 있습니다. 어떤 어려움에도 불구하고, 우리는 밀레니엄의 과학 기술을 따라잡을 것입니다.§!"
+ GEH_yumeji_no_hana: "꿈길 위의 꽃\n§g소라사키 히나는 선도부 정보부에서부터 도이칠란트 중앙당에 이르기까지 광범위하게 퍼져 있던 아코에 대한 비토를 모두 물리치고, 두 사람의 행복을 이루어냈습니다.§!"
 #레드윈터 / 붉은겨울
  hate_soviet: "반소비에트 정서\n" 
  b_tjrlwkd: "체리노 서기장 동지"

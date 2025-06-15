@@ -3917,8 +3917,8 @@ country_event = {
 	option = { 
 		name = GEH.ako.story_event.15.a
 		custom_effect_tooltip = GEH_ako_route_ending_tt
-		add_stability = 0.2
-		add_war_support = 0.2
+
+		add_country_leader_trait = GEH_yumeji_no_hana
 	}
 }
 
@@ -3968,8 +3968,8 @@ country_event = {
 	option = { 
 		name = GEH.ako.story_event.18.a
 		custom_effect_tooltip = GEH_ako_route_ending_tt
-		add_stability = 0.2
-		add_war_support = 0.2
+
+		add_country_leader_trait = GEH_pioneer_of_science
 	}
 }
 

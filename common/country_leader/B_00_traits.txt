@@ -1623,6 +1623,22 @@ leader_traits = {
 		political_power_cost = 0.01
 		production_speed_arms_factory_factor = 0.10
 	}
+	GEH_military_chairman_ako = { #제복을 입은 시민
+		random = no
+		hidden_modifier = {
+			ai_desired_divisions_factor = 3
+		}
+        war_support_factor = 0.1
+		party_popularity_stability_factor = 0.1
+	}
+	GEH_military_chairman_amau = { #제복을 입은 시민
+		random = no
+		hidden_modifier = {
+			ai_desired_divisions_factor = 3
+		}
+        war_support_factor = 0.1
+		production_speed_arms_factory_factor = 0.1
+	}
     GEM_gourmet_research_society_trait = { # 미식연구회
 		sprite = 7
 		random = no
@@ -1908,6 +1924,26 @@ leader_traits = {
 		hidden_modifier = {
         	ai_desired_divisions_factor = 0.30
 		}
+	}
+
+	GEH_pioneer_of_science = { # 과학의 선구자 (선임행정관 아코 루트 엔딩)
+		random = no
+		sp_nuclear_reactor_speed_factor = 0.2
+		sp_nuclear_bomb_speed_factor = 0.2
+		sp_nuclear_warheads_speed_factor = 0.2
+		sp_tag_rocket_speed_factor = 0.2
+		sp_tag_jet_speed_factor = 0.2
+		sp_air_intercontinental_bomber_speed_factor = 0.2
+		sp_rockets_long_range_ballistic_missile_speed_factor = 0.2
+		sp_rockets_medium_range_ballistic_missile_speed_factor = 0.2
+		sp_rockets_ballistic_missile_speed_factor = 0.2
+	}
+
+	GEH_yumeji_no_hana = { # 꿈길 위의 꽃 (소라사키 아코 루트 엔딩)
+		random = no
+		compliance_gain = 0.05
+		democratic_drift = 0.06
+		non_core_manpower = 0.05
 	}
 
 	GEH_School_Lunch_Club_Juri = { # 급양부 - 주리
