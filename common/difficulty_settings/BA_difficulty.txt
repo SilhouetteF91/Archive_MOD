@@ -12,9 +12,21 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
+		key = "custom_diff_strong_GEM"
+		modifier = diff_strong_ai_generic
+		countries = { GEM }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
 		key = "custom_diff_strong_GEH"
 		modifier = diff_strong_ai_generic
 		countries = { GEH }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_Gehenna"
+		modifier = diff_strong_ai_generic
+		countries = { GEM GEH }
 		multiplier = 2.0
 	}
 	difficulty_setting = {
