@@ -770,6 +770,7 @@ ideas = {
 					NOT = {
 						original_tag = KPD
 						original_tag = NSD
+						original_tag = ARI
 						AND = {
 							original_tag = TRM
 							is_dynamic_country = yes
@@ -787,7 +788,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-                production_speed_buildings_factor = 0.20
+                	production_speed_buildings_factor = 0.20
 				custom_modifier_tooltip = TRN_reindustrialization_tt
 			}
 		}
@@ -801,7 +802,7 @@ ideas = {
 					NOT = {
 						original_tag = KPD
 						original_tag = NSD
-						original_tag = AIR
+						original_tag = ARI
 						AND = {
 							original_tag = TRM
 							is_dynamic_country = yes
@@ -821,9 +822,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-                production_speed_arms_factory_factor = 0.15
-                production_speed_industrial_complex_factor = 0.05
-                stability_weekly = 0.015
+               	production_speed_arms_factory_factor = 0.15
+               	production_speed_industrial_complex_factor = 0.05
+               	stability_weekly = 0.015
 				custom_modifier_tooltip = TRN_reindustrialization_tt
 			}
 		}

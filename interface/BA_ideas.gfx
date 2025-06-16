@@ -312,6 +312,22 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/gei/GEI_dimension_tunnel.tga"
 	}
 	spriteType = {
+		name = "GFX_mio_TRN_trinity_armory"
+		texturefile = "gfx/interface/ideas/TRN/mio_조병창.tga"
+	}
+	spriteType = {
+		name = "GFX_mio_TRN_trinity_artillery"
+		texturefile = "gfx/interface/ideas/TRN/mio_포제조사.tga"
+	}
+	spriteType = {
+		name = "GFX_mio_TRN_trinity_motors"
+		texturefile = "gfx/interface/ideas/TRN/mio_자동차제조사.tga"
+	}
+	spriteType = {
+		name = "GFX_mio_TRN_trinity_tank_design_bureau"
+		texturefile = "gfx/interface/ideas/TRN/mio_중형전차제조사.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_TRN_trinity_cause_2_ns"
 		texturefile = "gfx/interface/ideas/TRN/idea_TRN_Integrity_of_Trinity_ns.tga"
 	}

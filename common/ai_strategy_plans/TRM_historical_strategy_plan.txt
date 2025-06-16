@@ -48,6 +48,8 @@ TRM_historical = {
         #산업 중점
         TRN_german_company_acceptance
         TRN_KRUPP_steel
+        BA_new_world_technology
+        BA_factoriesof_new_world # 전쟁이 끝났음 '고립' 때지게 하기
         
 
         # 외치 -> 군사 중점 쭉 달리기
@@ -59,7 +61,15 @@ TRM_historical = {
         TRM_war_preparations # 전쟁 준비
         TRM_Anti_Gehenna_Pro_Geramny # 반 게헨나, 친 독일
         TRM_war_with_gehenna # 특별군사작전 Z
+
+        # 군수생산법
         TRN_gunsu_sangsan_bub
+        
+        # 안찍은 군사 중점들 찍게 하기
+        TRM_Reorganise_Armament_Production
+        TRM_Expand_the_Logistics_Corps
+        TRM_encourage_radio_use
+
         TRN_Contract_with_Mauser
         TRN_military_industrial_complex
         
@@ -67,13 +77,7 @@ TRM_historical = {
         TRM_after_war
         TRM_anti_gehenna_focus_3
         TRM_anti_gehenna_focus_2
-        BA_new_world_technology
-        BA_factoriesof_new_world # 전쟁이 끝났음 '고립' 때지게 하기
 
-        # 안찍은 군사 중점들 찍게 하기
-        TRM_Reorganise_Armament_Production
-        TRM_Expand_the_Logistics_Corps
-        TRM_encourage_radio_use
 
         # 연합법 선언
         TRM_germany_union

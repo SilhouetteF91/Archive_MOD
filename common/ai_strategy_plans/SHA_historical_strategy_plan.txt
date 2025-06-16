@@ -64,6 +64,8 @@ SHA_historical = {
 		SHA_supremacy_of_technology
 
 		SHA_economic_organisation_of_SKivotos
+        	BA_new_world_technology
+        	BA_factoriesof_new_world # 전쟁이 끝났음 '고립' 때지게 하기
 	}
 
 	weight = {

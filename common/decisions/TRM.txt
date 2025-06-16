@@ -7363,17 +7363,17 @@ TRN_economic_decisions_category = {
 			num_of_civilian_factories_available_for_projects > 1
 		}
 
-		cost = 40
+		cost = 35
 		days_remove = 70
 		fire_only_once = yes
 		state_target = yes
 
 		modifier = {
-			civilian_factory_use = 2
+			civilian_factory_use = 1
 		}
 
 		ai_will_do = {
-			factor = 20
+			base = 120
 		}
 		remove_effect = {
 			FROM = {
