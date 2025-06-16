@@ -3392,7 +3392,9 @@ focus_tree = {
 		}
         select_effect = {
             country_event = { id = hina.1 }
+            country_event = { id = GEH.event.1038 days = 14 }
         }
+
 		completion_reward = {
             custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
             effect_tooltip = {
@@ -3403,9 +3405,9 @@ focus_tree = {
 			add_war_support = -0.1
 			add_stability = 0.2
             add_political_power = 120
-            set_capital = {
-                state = 55
-            }
+            #set_capital = {
+            #    state = 55
+            #}
             GEH_popular_support_up_effect = yes
 			if = {
 				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }

@@ -3283,6 +3283,38 @@ country_event = { #아마우 히나의 결혼식
 	}
 }
 
+country_event = { #[ROOT.GetName] 수도 결정
+	id = GEH.event.1038
+	title = GEH.event.1038.t
+	desc = GEH.event.1038.desc
+
+	picture = GFX_report_event_prefect_team_mob_generic_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1038.a
+	    ai_chance = {
+		    base = 10
+	    }
+		add_stability = 0.01
+	}
+
+	option = { 
+		name = GEH.event.1038.a
+	    ai_chance = {
+		    base = 3
+	    }
+		add_political_power = 25
+		
+		
+		set_capital = {
+			state = 55
+			remember_old_capital = no
+		}
+	}
+}
+
 country_event = { #선도부 해외 방문 계획
 	id = GEH.event.2000
 	title = GEH.event.2000.t
