@@ -8,7 +8,7 @@ GEH_historical = {
 	enable = {
         OR = {
 		    is_historical_focus_on = yes
-            has_completed_focus = GEH_fear_eyes_
+            has_completed_focus = GEH_get_legitimacy
         }
 	}
 
@@ -17,9 +17,6 @@ GEH_historical = {
 	}
 
 	ai_national_focuses = {
-        # 혁명 성공하면 이거 먼저 찍어야하는데 
-        GEH_get_legitimacy
-        #
         GEH_fear_eyes_
         GEH_Conquer_the_Central
         GEH_attack_plan_ONE_FOUR_TWO
