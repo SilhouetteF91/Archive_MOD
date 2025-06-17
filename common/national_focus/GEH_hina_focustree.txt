@@ -824,7 +824,7 @@ focus_tree = {
 
 	focus = {
 		id = GEH_start_focus
-		icon = GFX_focus_rom_parties_end
+		icon = GFX_goal_GEH_start_focus
 		cost = 2
         ai_will_do = {
             base = 999
@@ -1951,7 +1951,7 @@ focus_tree = {
     }
     focus = {
         id = GEH_distinction_of_zealous_members
-        icon = GFX_goal_generic_war_with_comintern
+        icon = GFX_goal_GEH_distinction_of_zealous_members
         relative_position_id = GEH_hina_route_focus
         x = -1
         y = 1
@@ -12460,4 +12460,459 @@ focus_tree = {
 	}
 
 # 공군 중점 끝/
+# /외교 중점 시작
+
+	focus = {
+		id = GEH_diplomacy_focus
+		icon = GFX_goal_GEH_diplomacy_focus
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		cost = 3
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available = {
+			has_completed_focus = GEH_first_congress_focus
+			
+			custom_trigger_tooltip = {
+				tooltip = THIS_IS_WIP_TT
+				has_country_flag = GAEBALJUNG
+			}
+		}
+
+		allow_branch = {
+			
+		}
+
+		x = 0
+		y = 7
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_realpolitik_focus
+		icon = GFX_goal_GEH_prefect_team_charge_gray
+		
+		relative_position_id = GEH_diplomacy_focus
+
+		cost = 3
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_focus
+		}
+
+		mutually_exclusive = {
+			focus = GEH_diplomacy_managed_democracy_focus
+		}
+
+		mutually_exclusive = {
+			focus = GEH_diplomacy_isolationism_focus
+		}
+
+		x = 6
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_realpolitik_focus_1
+		icon = GFX_focus_GER_weltpolitik
+		text_icon = GER_inner_circle_focus_style
+		
+		relative_position_id = GEH_diplomacy_realpolitik_focus
+
+		cost = 5
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+			
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_realpolitik_focus
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_find_collaborator
+		}
+
+		x = 0
+		y = 2
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_managed_democracy_focus
+		icon = GFX_focus_GER_total_control_over_domestic_affairs
+		
+		relative_position_id = GEH_diplomacy_focus
+
+		cost = 3
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+			OR = {
+				has_completed_focus = GEH_ako_route_focus
+			}
+		}
+
+		mutually_exclusive = {
+			focus = GEH_diplomacy_realpolitik_focus
+		}
+
+		mutually_exclusive = {
+			focus = GEH_diplomacy_isolationism_focus
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_focus
+		}
+
+		x = 4
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_managed_democracy_focus_1
+		icon = GFX_focus_GER_expand_pacific_holdings
+		text_icon = GER_inner_circle_focus_style
+		
+		relative_position_id = GEH_diplomacy_managed_democracy_focus
+
+		cost = 5
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+			
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_managed_democracy_focus
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_find_collaborator
+		}
+		
+		x = 0
+		y = 2
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_find_collaborator
+		icon = GFX_focus_GER_integration_of_puppet_economies
+		text_icon = GER_inner_circle_focus_style
+		
+		relative_position_id = GEH_diplomacy_managed_democracy_focus
+
+		cost = 5
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+			
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_managed_democracy_focus
+			focus = GEH_diplomacy_realpolitik_focus
+		}
+
+		x = 1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_european_hegemonic
+		icon = GFX_focus_GER_integration_of_puppet_economies
+		text_icon = GER_inner_circle_focus_style
+		
+		relative_position_id = GEH_diplomacy_managed_democracy_focus
+
+		cost = 5
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+			
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_managed_democracy_focus_1
+			focus = GEH_diplomacy_realpolitik_focus_1
+		}
+
+		x = 1
+		y = 3
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_isolationism_focus
+		icon = GFX_focus_AFG_against_kabul 
+		
+		relative_position_id = GEH_diplomacy_focus
+
+		cost = 3
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+			OR = {
+				has_completed_focus = GEH_ako_route_focus
+				has_completed_focus = GEH_main_route_focus
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_focus
+		}
+
+		mutually_exclusive = {
+			focus = GEH_diplomacy_realpolitik_focus
+		}
+
+		mutually_exclusive = {
+			focus = GEH_diplomacy_managed_democracy_focus
+		}
+
+		x = 2
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_isolationism_focus_1
+		icon = GFX_focus_GER_customs_union
+		text_icon = GER_inner_circle_focus_style
+		
+		relative_position_id = GEH_diplomacy_isolationism_focus
+
+		cost = 5
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_isolationism_focus
+		}
+
+		x = 1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_isolationism_focus_2
+		icon = GFX_focus_GER_european_confederation
+		text_icon = GER_inner_circle_focus_style
+		
+		relative_position_id = GEH_diplomacy_isolationism_focus
+
+		cost = 5
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_isolationism_focus_1
+		}
+
+		x = 0
+		y = 2
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_isolationism_focus_3
+		icon = GFX_goal_GEH_economic_reactivation
+		text_icon = GER_inner_circle_focus_style
+		
+		relative_position_id = GEH_diplomacy_isolationism_focus
+
+		cost = 5
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_isolationism_focus_2
+		}
+
+		x = 1
+		y = 3
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_crisis_in_kivotos_focus
+	
+		icon = GFX_focus_GEI_prena_card
+
+		icon = {
+			trigger = {
+				GEI = {
+					has_cosmetic_tag = GEI_DEC
+				}
+			}
+			value = GFX_GEI_DEC_recon
+		} 
+
+		icon = {
+			GEI = {
+				has_cosmetic_tag = GEI_The_Colour
+			}
+			value = GFX_focus_GEI_arona
+		} 
+		
+		relative_position_id = GEH_diplomacy_focus
+
+		cost = 3
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+			OR = {
+				GEI = {
+					has_cosmetic_tag = GEI_DEC
+				}
+				GEI = {
+					has_cosmetic_tag = GEI_The_Colour
+				}
+			}
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_focus
+		}
+
+		x = -1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_chroma_crisis_focus
+		icon = GFX_goal_GEI_invasion
+		
+		relative_position_id = GEH_diplomacy_crisis_in_kivotos_focus
+
+		cost = 3
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+			GEI = { has_cosmetic_tag = GEI_The_Colour }
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_crisis_in_kivotos_focus
+		}
+
+		x = -2
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GEH_diplomacy_decagrammaton_crisis_focus
+		icon = GFX_GEI_DEC_box
+		
+		relative_position_id = GEH_diplomacy_crisis_in_kivotos_focus
+
+		cost = 3
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available ={
+			GEI = { has_cosmetic_tag = GEI_DEC }
+		}
+
+		prerequisite = {
+			focus = GEH_diplomacy_crisis_in_kivotos_focus
+		}
+
+		x = 2
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
 }

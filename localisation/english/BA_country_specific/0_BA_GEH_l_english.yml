@@ -808,6 +808,52 @@
 
  GEH_basking_in_the_brilliance_of_their_serenade_rout_n_end: "내일의 태양이 뜨도록"
  GEH_basking_in_the_brilliance_of_their_serenade_rout_n_end_desc: "아코 선임행정관에게서 실종된 히나 부장을 발견했다는 보고가 들어왔습니다. 히나 부장은 선도부장으로서의 업무 복귀를 거부하고 있지만, 설득을 통해 어떻게든... 적어도 우리의 곁에 비어버린 빈자리에 다시 앉아, 우리들을 지켜봐 주시기라도 하기를 바랄 수는 없을까요?" 
+
+### 외교
+ GEH_diplomacy_focus: "[ROOT.GetName] 외교"
+ GEH_diplomacy_focus_desc: "제3차 선도부 총회를 거쳐, 우리는 국제 사회에서 우리가 어떠한 방식으로 외교를 진행해야 하는지 그 미래를 깨달았습니다."
+
+ GEH_diplomacy_isolationism_focus: "방어를 우선"
+ GEH_diplomacy_isolationism_focus_desc: "확실하게 합시다. 우리는 뇌제의 길을 걷지 않을 것입니다. 침략전쟁은 게헨나의 올바른 미래가 아니며, 우리는 적들의 공격으로부터 조국을 방어할 방법을 찾을 것입니다."
+
+ GEH_diplomacy_isolationism_focus_1: "동맹국 찾기"
+ GEH_diplomacy_isolationism_focus_1_desc: "우리와 함께 집단안보체제를 구축할 동맹국을 찾습니다. ...적어도 한 나라 정도는 동의해 주겠죠."
+
+ GEH_diplomacy_isolationism_focus_2: "방어선 구축"
+ GEH_diplomacy_isolationism_focus_2_desc: "공격이 최선의 방어라고 하지만, 그 공격으로 인해 죽어갈 국민들의 생명은 어떻게 하나요? 국토 요새화가 더 올바른 길입니다."
+
+ GEH_diplomacy_isolationism_focus_3: "평화의 조국 게헨나"
+ GEH_diplomacy_isolationism_focus_3_desc: "우리는 지금 가진 것을 지켜나가는 것만으로도 충분합니다. 더 넓은 영토를 확장할 필요는 없습니다."
+
+ GEH_diplomacy_managed_democracy_focus: "통제민주주의 확대"
+ GEH_diplomacy_managed_democracy_focus_desc: "게헨나는 자유와 민주주의를 키보토스 전체로 전파해야만 하는 도덕적인 사명이 있습니다. 뭐 현실정치적으로 말하자면, 우리는 게헨나 전역을 손에 넣었으며, 키보토스와 서남부 유럽 전체에 위성국들을 세워 유럽을 우리의 영향권 안으로 포섭할 수 있을 것입니다."
+
+ GEH_diplomacy_managed_democracy_focus_1: "유럽-키보토스 재민주화"
+ GEH_diplomacy_managed_democracy_focus_1_desc: "우리는 키보토스의 많은 국가들이 권위주의적인 국가라는 거을 알고 있으며, 그들에게 자유와 정의를 가져다 줄 것입니다."
+
+ GEH_diplomacy_realpolitik_focus: "팽창하는 게헨나"
+ GEH_diplomacy_realpolitik_focus_desc: "게헨나는 더욱 넓어져야 합니다. 특히 동방의 위험한 적인 [SOV.GetName] 측은 우리의 질서를 유지하기 위하여... 파괴되어야만 하는 적입니다. 그들이 성장하게 내버려둔다면 언젠가 그들이 우리를 정복할 것입니다."
+
+ GEH_diplomacy_realpolitik_focus_1: "동방으로의 진출"
+ GEH_diplomacy_realpolitik_focus_1_desc: "동방의 거대한 곰 [SOV.GetName]은(는) 우리의 심각한 안보 위협이며 반드시 제거되어야만 합니다."
+
+ GEH_diplomacy_find_collaborator: "협력자 찾기"
+ GEH_diplomacy_find_collaborator_desc: "우리는 우리의 위대한 의지와 함께 할 협력자들을 찾을 수 있을 것입니다."
+
+ GEH_diplomacy_european_hegemonic: "키보토스-유럽 패권"
+ GEH_diplomacy_european_hegemonic_desc: "우리의 힘은 유럽과 키보토스 전체를 우뚝 서게 했습니다. 위대한 지도자 [ROOT.GetLeader] 만세!"
+
+ GEH_diplomacy_crisis_in_kivotos_focus: "키보토스의 위기"
+ GEH_diplomacy_crisis_in_kivotos_focus_desc: "우리는 사회의 질서를 수호하는 신성한 임무를 부여받았으며, [GEI.GetName]의 다가오는 위협으로부터 키보토스를 수호해야만 할 정의로운 임무가 있습니다."
+
+ GEH_diplomacy_chroma_crisis_focus: "색채와의 대적"
+ GEH_diplomacy_chroma_crisis_focus_desc: "이세계에서 온 정체불명의 적인 색채는 우리 시민들을 미치게 만드는 광기를 흩뿌리고 있습니다. 그들과 협상할 수 있는 방법은 없으며, 오로지 맞서 싸워야만 합니다."
+
+ GEH_diplomacy_decagrammaton_crisis_focus: "데카그라마톤과의 대적"
+ GEH_diplomacy_decagrammaton_crisis_focus_desc: "자칭 절대존재라는 그들은 우리의 당연한 적이며, 인류의 승리룰 위해 저 로봇들과 맞서 싸워야만 합니다."
+
+ GEH_diplomacy_decagrammaton_alliance_focus: "데카그라마톤과의 연합"
+ GEH_diplomacy_decagrammaton_alliance_focus_desc: "그들은 위험한 존재가 아닙니다. 더 높은 경지로 수행하는 수행자입니다. 저항하지 마십시오."
  
  #########
  #중점 수정#

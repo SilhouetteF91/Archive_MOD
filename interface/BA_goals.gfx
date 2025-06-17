@@ -1999,6 +1999,18 @@ spriteTypes = {
 		name = "GFX_goal_GEH_last_focus_effect_a_rout"
 		textureFile = "gfx/interface/goals/GEH/GEH_last_focus_effect_a_rout.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_GEH_start_focus"
+		textureFile = "gfx/interface/goals/GEH/GEH_start_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_diplomacy_focus"
+		textureFile = "gfx/interface/goals/GEH/GEH_diplomacy_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_distinction_of_zealous_members"
+		textureFile = "gfx/interface/goals/GEH/GEH_distinction_of_zealous_members.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_focus_GEH_unified_gehenna_makoto"
