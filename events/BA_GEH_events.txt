@@ -42,6 +42,10 @@ country_event = {
 		#A democratic faction leader whose faction holds at least one German core state while SOV holds another can get this.
 		has_war_with = TRM
 		NOT = { has_country_flag = GEH_unified_gehenna_flag }
+		OR = {
+			original_tag = GEM
+			original_tag = HEU
+		}
 		TRM = {
 			surrender_progress > 0.4
 			has_government = fascism
