@@ -71,4 +71,102 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
+
+	# flag
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_ABY"
+		texturefile = "gfx/flags/small/ABY.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_GEM"
+		texturefile = "gfx/flags/small/GEM.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_GEH"
+		texturefile = "gfx/flags/small/GEH.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_HEU"
+		texturefile = "gfx/flags/small/HEU.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_MIL"
+		texturefile = "gfx/flags/small/MIL.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_TRM"
+		texturefile = "gfx/flags/small/TRM.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_HYA"
+		texturefile = "gfx/flags/small/HYA.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_SHA"
+		texturefile = "gfx/flags/small/SHA.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_RED"
+		texturefile = "gfx/flags/small/RED.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_KSP"
+		texturefile = "gfx/flags/small/KSP.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_ARI"
+		texturefile = "gfx/flags/small/ARI.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_SHE"
+		texturefile = "gfx/flags/small/SHE.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_COU"
+		texturefile = "gfx/flags/small/COU.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_BLM"
+		texturefile = "gfx/flags/small/BLM.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_GEI"
+		texturefile = "gfx/flags/small/GEI.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_KAI"
+		texturefile = "gfx/flags/small/KAI.tga"
+		legacy_lazy_load = no
+	}
+
 }

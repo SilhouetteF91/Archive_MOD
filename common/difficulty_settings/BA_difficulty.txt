@@ -1,14 +1,8 @@
 difficulty_settings = {
 	difficulty_setting = {
-		key = "custom_diff_strong_HUN"
+		key = "custom_diff_strong_ABY"
 		modifier = diff_strong_ai_generic
-		countries = { HUN }
-		multiplier = 2.0
-	}
-	difficulty_setting = {
-		key = "custom_diff_strong_TRN"
-		modifier = diff_strong_ai_generic
-		countries = { TRM }
+		countries = { ABY }
 		multiplier = 2.0
 	}
 	difficulty_setting = {
@@ -24,9 +18,15 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
+		key = "custom_diff_strong_HEU"
+		modifier = diff_strong_ai_generic
+		countries = { HEU }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
 		key = "custom_diff_strong_Gehenna"
 		modifier = diff_strong_ai_generic
-		countries = { GEM GEH }
+		countries = { GEM GEH HEU }
 		multiplier = 2.0
 	}
 	difficulty_setting = {
@@ -36,27 +36,9 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
-		key = "custom_diff_strong_SHE"
+		key = "custom_diff_strong_TRN"
 		modifier = diff_strong_ai_generic
-		countries = { SHE }
-		multiplier = 2.0
-	}
-	difficulty_setting = {
-		key = "custom_diff_strong_ABY"
-		modifier = diff_strong_ai_generic
-		countries = { ABY }
-		multiplier = 2.0
-	}
-	difficulty_setting = {
-		key = "custom_diff_strong_COU"
-		modifier = diff_strong_ai_generic
-		countries = { COU }
-		multiplier = 2.0
-	}
-	difficulty_setting = {
-		key = "custom_diff_strong_RED"
-		modifier = diff_strong_ai_generic
-		countries = { RED }
+		countries = { TRM }
 		multiplier = 2.0
 	}
 	difficulty_setting = {
@@ -72,15 +54,33 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
+		key = "custom_diff_strong_RED"
+		modifier = diff_strong_ai_generic
+		countries = { RED }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
 		key = "custom_diff_strong_KSP"
 		modifier = diff_strong_ai_generic
 		countries = { KSP }
 		multiplier = 2.0
 	}
 	difficulty_setting = {
-		key = "custom_diff_strong_HEU"
+		key = "custom_diff_strong_ARI"
 		modifier = diff_strong_ai_generic
-		countries = { HEU}
+		countries = { ARI }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_SHE"
+		modifier = diff_strong_ai_generic
+		countries = { SHE }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_COU"
+		modifier = diff_strong_ai_generic
+		countries = { COU }
 		multiplier = 2.0
 	}
 	difficulty_setting = {
