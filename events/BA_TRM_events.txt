@@ -3941,6 +3941,50 @@ country_event = { # 룩셈과 일시적 동맹? - 룩셈측의 거부
 
 	}	
 }
+
+country_event = { # 산해경 측에게 자유의 라디오 방송함
+	id = TRMDIP.63
+	title = TRMDIP.63.t
+	desc = TRMDIP.63.d
+	picture = GFX_report_event_generic_trinity_campus
+
+	fire_only_once = no
+	is_triggered_only = yes 
+
+	option = { # 
+		name = TRMDIP.63.b
+		add_timed_idea = {
+			idea = TRN_shanhaijing_austrian_militia_ns
+			days = 180
+		}
+	}	
+}
+
+country_event = { # 백귀야행 - 트리니티 경제협력
+	id = TRMDIP.64
+	title = TRMDIP.64.t
+	desc = TRMDIP.64.d
+	picture = GFX_report_event_generic_trinity_campus
+
+	fire_only_once = no
+	is_triggered_only = yes 
+
+	option = { # 
+		name = TRMDIP.64.a
+
+	}	
+
+	option = { # 
+		name = TRMDIP.64.b
+
+	}	
+
+	option = { # 
+		name = TRMDIP.64.c
+		custom_effect_tooltip = TRM_eng_event_chain_tt
+	}
+}
+
 ##############################
 #####IRON SWORD OPERATION#####
 ##############################
@@ -9900,10 +9944,21 @@ country_event = { # 트리니티 재개발
 	picture = GFX_event_Trinity_Campus
 	
 	is_triggered_only = yes
-    fire_only_once = no
+     fire_only_once = no
 
 	option = { 
 		name = trinity.40.a
+		add_manpower = -1500
+		
+		random_owned_controlled_state = {
+			limit = { is_core_of = PREV }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
     }
 }
 
@@ -10036,6 +10091,25 @@ country_event = { # 게헨나 동아리 문제
 				damage = 0.7
 			}
 		}
+	}
+}
+
+country_event = { # 아리우스 분교의 운명
+	id = trinity.44
+	title = trinity.44.t
+	desc = trinity.44.desc
+	picture = GFX_report_event_generic_trinity_campus
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = trinity.44.a
+
+	}
+	option = {
+		name = trinity.44.b
+
 	}
 }
 
@@ -10699,16 +10773,16 @@ country_event = { # 부작용
 		add_political_power = -50
 		add_stability = 0.03
 		
-		set_temp_variable = { TRN_Honor_change = 5 }
+		set_temp_variable = { TRN_Honor_change = 3 }
 		TRN_add_Honor = yes
 	}
 
 	option = {
 		name = trnfla.16.b
-		add_political_power = -50
-		add_stability = 0.03
+		add_political_power = 25
+		add_stability = -0.03
 
-		set_temp_variable = { TRN_Honor_change = -5 }
+		set_temp_variable = { TRN_Honor_change = -3 }
 		TRN_add_Honor = yes
 	}
 
@@ -10862,6 +10936,18 @@ country_event = { # 색채 침입 - 미카
 		name = trnfla.24.a 
 		set_country_flag = TRN_MIKA_Iridescence
 		mark_focus_tree_layout_dirty = yes
+	}
+}
+unit_leader_event = { # 하카리 아츠코
+	id = trnfla.25
+	title = trnfla.25.t
+	desc = trnfla.25.desc
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnfla.25.a 
 	}
 }
 

@@ -7853,7 +7853,7 @@ TRN_trinity_world_cat = {
 		icon = GFX_decision_eng_trade_unions_demand
 		allowed = { always = no }
 		available = {
-			#has_completed_focus = TRN_securing_romanian_oil
+			TRM = { is_neighbor_of = ROM }
 		}
 		visible = {
 
@@ -7871,6 +7871,207 @@ TRN_trinity_world_cat = {
 			declare_war_on = {
 				target = FROM
 				type = puppet_wargoal_focus
+			}
+		}
+	}
+
+	TRN_sha_attack_use_austrian = {
+		icon = GFX_decision_eng_trade_unions_demand
+		allowed = { always = no }
+		available = {
+
+		}
+		visible = {
+
+		}
+		fire_only_once = yes 
+
+		ai_will_do = { base = 40 }
+		complete_effect = {
+			SHA = {
+				country_event = TRMDIP.63
+				custom_effect_tooltip = tooltip_white_line
+				effect_tooltip = {
+					add_timed_idea = {
+						idea = TRN_shanhaijing_austrian_militia_ns
+						days = 180
+					}
+				}
+			}
+		}
+	}
+
+	TRN_support_HYA_decision = {
+		icon = {
+			key = GFX_decision_hya_flag_1
+			trigger = {
+				FROM = {
+					check_variable = { TRN_support_HYA_var = 0 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_hya_flag_2
+			trigger = {
+				FROM = { 
+					check_variable = { TRN_support_HYA_var = 1 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_hya_flag_3
+			trigger = {
+				FROM = { 
+					check_variable = {TRN_support_HYA_var = 2 }
+				}
+			}
+		}
+		allowed = { }
+
+		available = {
+			hidden_trigger = {
+				FROM = { 
+					check_variable = { TRN_support_HYA_var < 3 } 
+				}
+			}
+		}
+		visible = {
+			FROM = { 
+				check_variable = { TRN_support_HYA_var < 3 } 
+			}
+		}
+		fire_only_once = no
+
+		days_remove = 35
+		ai_will_do = { base = 80 }
+
+		complete_effect = {
+			add_to_variable = { TRN_support_HYA_var = 1 }
+			custom_effect_tooltip = TRN_support_HYA_var_tt
+			IF = {
+				limit = { 
+					FROM = {
+						check_variable = { TRN_support_HYA_var = 0 }
+					}
+				}
+				HYA = { 
+					country_event = { id = TRMDIP.64 days = 05 } 
+				}
+			}
+			#IF = {
+			#	limit = { 
+			#		FROM = {
+			#			check_variable = { TRN_support_HYA_var = 1 }
+			#		}
+			#	}
+			#	HYA = { 
+			#		country_event = { id = TRMDIP.65 days = 05 } 
+			#	}
+			#}
+			#IF = {
+			#	limit = { 
+			#		FROM = {
+			#			check_variable = { TRN_support_HYA_var = 2 }
+			#		}
+			#	}
+			#	HYA = { 
+			#		country_event = { id = TRMDIP.66 days = 05 } 
+			#	}
+			#}
+		}
+		remove_effect = {
+			IF = {
+				limit = { 
+					FROM = {
+						check_variable = { TRN_support_HYA_var = 2 }
+					}
+				}
+				custom_effect_tooltip = TRN_support_HYA_decision_remove_tt
+				effect_tooltip = { remove_decision = TRN_support_HYA_decision }
+			}
+
+		}
+	}
+	
+	TRN_influence_baltics_decision = {
+		priority = 1
+		icon = GFX_decision_SWI_expand_covert_operations 
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				factor = 0.5
+				FROM = {
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = FROM 
+					ratio > 1
+				}
+			}
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = FROM 
+					ratio > 1.25
+				}
+			}
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = FROM 
+					ratio > 1.5
+				}
+			}
+		}
+
+		targets = { EST LAT LIT }
+
+		target_trigger = {
+			FROM = {
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+				OR = {
+					is_in_faction = no
+					is_in_faction_with = ROOT
+				}
+				NOT = { has_government = fascism }
+				fascism < 50
+			}
+		}
+
+		target_root_trigger =  {
+			has_completed_focus = TRN_influence_the_baltics
+			has_government = fascism
+		}
+
+		fire_only_once = no
+
+		cost = 25
+
+		days_re_enable = 732 #Match the Timed NS below + couple of days to make sure NS is gone when the decision comes back
+
+		complete_effect = {
+			hidden_effect = {
+				FROM = {
+					country_event = { id = wuw_GER_diplomacy.10 days = 1 } 
+				}
+			}
+
+			effect_tooltip = {
+				FROM = {
+					add_timed_idea = {
+						idea = GER_fascism_influence
+						days = 730 #Match the days_re_enable above
+					}
+					add_opinion_modifier = { 
+						target = TRM
+						modifier = TRN_german_influence
+					}
+				}
 			}
 		}
 	}

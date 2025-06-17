@@ -1323,7 +1323,6 @@ SHA_conservative_policy_cat = {
 				idea = SHA_clash_of_civilizations_idea
 				days = 360
 			}
-			add_to_variable = { SHA_decision_select^5 = 1 }
 		}
 	
 	}

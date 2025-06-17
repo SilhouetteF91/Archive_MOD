@@ -7967,23 +7967,6 @@ focus_tree = {
 		will_lead_to_war_with = RE4
 
 		completion_reward = {
-				every_country = {
-					limit = { 
-						kivotos_tag = yes 
-						NOT = { tag = GEI }
-					}
-					ROOT = {
-						declare_war_on = {
-							target = PREV
-							type = annex_everything
-						}
-					}
-				}
-
-			add_named_threat = {
-				threat = 25
-				name = TRN_savior_of_kivotos
-			}
 
 		}
 	}
@@ -8016,6 +7999,9 @@ focus_tree = {
 			unlock_decision_category_tooltip = TRN_trinity_world_cat
 			activate_targeted_decision = { target = TRM decision = TRN_lend_our_support }
 			activate_targeted_decision = { target = TRM decision = TRN_international_propaganda }
+			hidden_effect = {
+				country_event = { id = trinity.44 days = 14 }
+			}
 		}
 	}
 
@@ -8081,7 +8067,8 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			activate_targeted_decision = { target = POL decision = TRN_border_fortifications }
+			custom_effect_tooltip = TRN_influence_the_baltics_unlock_tt
+			#unlock_decision_tooltip = TRN_influence_baltics_decision
 		}
 	}
 
@@ -8220,6 +8207,12 @@ focus_tree = {
 		}
 		available = {
 			85 = { is_fully_controlled_by = TRM }
+			EST = { is_puppet = no }
+			LAT = { is_puppet = no }
+			LIT = { is_puppet = no }
+		}
+		bypass = {
+
 		}
 
 
@@ -8282,7 +8275,19 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
+			add_political_power  = 35
+			add_opinion_modifier = {
+				target = SHA
+				modifier = small_increase
+			}
+			add_opinion_modifier = {
+				target = HYA
+				modifier = small_increase
+			}
+			add_opinion_modifier = {
+				target = ABY
+				modifier = BUL_threatening_neighbor
+			}
 		}
 	}
 
@@ -8296,7 +8301,7 @@ focus_tree = {
 
 		available = {
 			HYA = {
-				NOT = { has_government = communism }
+				NOT = { has_completed_focus = HYA_focus_70 }
 			}
 		}
 		prerequisite = { focus = TRN_southern_kivotos_dip }
@@ -8304,12 +8309,14 @@ focus_tree = {
 		ai_will_do = {
 
 		}
+		
 		completion_reward = {
-
+			set_variable = { TRN_support_HYA_var = 0 }
+			unlock_decision_tooltip = TRN_support_HYA_decision
 		}
 	}
 
-	focus = { # 슬로바키아의 운명
+	focus = { # 아비도스의 운명
 		id = TRN_fate_of_abydos
 		icon = GFX_focus_attack_ABY
 		x = 1
@@ -8361,12 +8368,13 @@ focus_tree = {
 				target = HUN
 				type = puppet_wargoal_focus
 			}
+			activate_targeted_decision = { decision = TRN_romania_give_the_oil target = ROM }
 		}
 	}
 
-	focus = { # 루마니아 유전 지대 확보
-		id = TRN_securing_romanian_oil
-		icon = GFX_focus_generic_attack_romania
+	focus = { # 산하이징 조약 파쇄
+		id = TRN_Breaking_Sanhaijing_treaty
+		icon = GFX_focus_attack_SHA
 		x = -1
 		y = 1
 		relative_position_id = TRN_fate_of_abydos
@@ -8374,14 +8382,12 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			ROM = {
+			SHA = {
 				is_subject = no
 				NOT = { is_in_faction_with = ROOT }
 			}
 		}
-		bypass = {
-			is_in_faction_with = ROOT
-		}
+
 		prerequisite = { 
 			focus = TRN_fate_of_abydos 
 			focus = TRN_support_HYA
@@ -8391,9 +8397,13 @@ focus_tree = {
 
 		}
 
-		will_lead_to_war_with = ROM
+		will_lead_to_war_with = SHA
 		completion_reward = {
-			activate_targeted_decision = { decision = TRN_romania_give_the_oil target = ROM }
+			create_wargoal = {
+				target = SHA
+				type = puppet_wargoal_focus
+			}
+			activate_targeted_decision = { decision = TRN_sha_attack_use_austrian target = TRM }
 		}
 	}
 
@@ -8773,14 +8783,6 @@ focus_tree = {
 				uses = 1
 				category = tp_tech
 			}
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-				limit = { country_exists = GEI }
-				create_wargoal = {
-					target = GEI
-					type = annex_everything
-				}
-			}
 		}
 	}
 
@@ -8802,10 +8804,31 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
+
+			add_tech_bonus = {
+				bonus = 0.75
 				uses = 1
-				category = naval_doctrine
+				category = marine_tech
+				name = TRN_Kyrie_eleison
+			}
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					uses = 2
+					category = cat_marines_doctrine
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { country_exists = GEI }
+				create_wargoal = {
+					target = GEI
+					type = annex_everything
+				}
 			}
 
 		}

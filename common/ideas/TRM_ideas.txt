@@ -1521,5 +1521,17 @@ ideas = {
 				attack_bonus_against = 0.05
 			}
 		}
+		TRN_shanhaijing_austrian_militia_ns = {
+			picture = SWE_radiotjanst_corrupted
+
+			modifier = {
+				war_support_factor = -0.15
+			}
+
+			targeted_modifier = {
+				tag = TRM
+				attack_bonus_against = -0.05
+			}
+		}
 	}
 }

@@ -290,4 +290,8 @@ opinion_modifiers = {
 	SLO_anti_hungary = {
 		value = -50
 	}
+
+	TRN_german_influence = {
+		value = 25
+	}
 }

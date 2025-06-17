@@ -2051,4 +2051,17 @@ spriteTypes = {
 		name = "GFX_decision_SHA_conservative_xuanwu_merchant_association"
 		texturefile = "gfx/interface/decisions/SHA_prep_icons/decision_SHA_conservative_xuanwu_merchant_association.tga"
 	}
+	
+	spriteType = {
+		name = "GFX_decision_hya_flag_1"
+		texturefile = "gfx/interface/decisions/decision_hya_flag_1.tga"
+	}
+	spriteType = {
+		name = "GFX_decision_hya_flag_2"
+		texturefile = "gfx/interface/decisions/decision_hya_flag_2.tga"
+	}
+	spriteType = {
+		name = "GFX_decision_hya_flag_3"
+		texturefile = "gfx/interface/decisions/decision_hya_flag_3.tga"
+	}
 }
