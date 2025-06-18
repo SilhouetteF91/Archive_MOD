@@ -1656,6 +1656,9 @@ focus_tree = {
 					add_country_leader_trait = GEH_blame_director
 				}
 			}
+			GEM = {
+				add_stability = -0.05
+			}
         }
         ai_will_do = {
             factor = 1
@@ -1825,6 +1828,9 @@ focus_tree = {
             focus = GEH_indiscriminate_conscription
         }
         completion_reward = {
+			add_dynamic_modifier = {
+				modifier = GEH_gehenna_war_department_idea
+			}
 			army_experience = 25
 		    add_tech_bonus = {
 			    name = GEH_military_leadership_committee
@@ -6653,7 +6659,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = GEH_planning_department_idea_tt
+			custom_effect_tooltip = GEH_PL
 			add_to_variable = {
 				GEH_PL_line_change_production_efficiency_factor = 0.1
 				tooltip = line_change_production_efficiency_factor_tt
@@ -6780,7 +6786,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = GEH_planning_department_idea_tt
+			custom_effect_tooltip = GEH_PL
 			add_to_variable = {
 				GEH_PL_production_factory_start_efficiency_factor = 0.1
 				tooltip = production_factory_start_efficiency_factor_tt
@@ -7162,6 +7168,20 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.10
 			add_war_support = -0.10
+	
+			GEH_hina = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = fascism_ideology
+						expire = "1980.1.1"
+						desc = "GEH_hina_ako_route_base_leader_desc"
+						traits = {
+							b_tjsehqnwkd GEH_military_chairman GEH_blame_director
+						}
+					}
+				}
+			}
 		}
 	}
     focus = {
@@ -7298,6 +7318,40 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = GEH_gehenna_war_department_idea_tt
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_mobilization_laws_cost_factor = -0.15
+				tooltip = mobilization_laws_cost_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
+			custom_effect_tooltip = GEH_indefinite_extension_of_emergency_powers_tt
+			hidden_effect = {
+				set_temp_variable = {
+					var = fascism_var
+					value = party_popularity@neutrality
+				}
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@neutrality
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = ban_ideology_var
+				}
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = fascism_var
+			}
+			set_politics = {
+				ruling_party = fascism #히나 파시즘 리더
+				elections_allowed = no
+			}   
+			custom_effect_tooltip = enter_tt
 			if = {
 				limit = {
 					all_character = {
@@ -7312,12 +7366,27 @@ focus_tree = {
 				}
 			}
 			every_character = {
-				limit = { has_trait = GEH_blame_director }
+				limit = {
+					has_trait = GEH_blame_director
+					has_ideology = despotism
+				}
 				swap_country_leader_traits = {
+					ideology = despotism
 					remove = GEH_blame_director
 					add = GEH_blame_director_2
 				}
 			}
+			every_character = {
+				limit = {
+					has_trait = GEH_blame_director
+					has_ideology = fascism_ideology
+				}
+				swap_country_leader_traits = {
+					ideology = fascism_ideology
+					remove = GEH_blame_director
+					add = GEH_blame_director_2
+				}
+			}     
 		}
 	}
     focus = {
@@ -7361,9 +7430,27 @@ focus_tree = {
 				}
 			}
 			every_character = {
-				limit = { has_trait = GEH_blame_director }
-				remove_country_leader_trait = GEH_blame_director
+				limit = {
+					has_trait = GEH_blame_director
+					has_ideology = despotism
+				}
+				swap_country_leader_traits = {
+					ideology = despotism
+					remove = GEH_blame_director
+					add = GEH_blame_director_2
+				}
 			}
+			every_character = {
+				limit = {
+					has_trait = GEH_blame_director
+					has_ideology = fascism_ideology
+				}
+				swap_country_leader_traits = {
+					ideology = fascism_ideology
+					remove = GEH_blame_director
+					add = GEH_blame_director_2
+				}
+			}     
 		}
 	}
     focus = {
@@ -7392,6 +7479,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+
+			swap_ruler_traits = {
+				remove = GEH_military_chairman
+				add = GEH_military_chairman_c
+			}
 		}
 	}
     focus = {
@@ -7404,6 +7496,7 @@ focus_tree = {
 		y = 1
 
 		available = {
+			has_government = fascism
 		}
         prerequisite = {
             focus = GEH_national_defense_commissioner_sorasaki_hina
@@ -7420,6 +7513,15 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = GEH_gehenna_war_department_idea_tt
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_drift_defence_factor = 0.50
+				tooltip = drift_defence_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_fascism_drift = 0.05
+				tooltip = fascism_drift_tt
+			}
 		}
 	}
     focus = {
@@ -7448,6 +7550,13 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = GEH_gehenna_war_department_idea_tt
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_conscription_factor = 0.25
+				tooltip = conscription_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
+			add_stability = -0.10
 		}
 	}
     focus = {
@@ -7476,6 +7585,19 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = GEH_gehenna_war_department_idea_tt
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
 		}
 	}
     focus = {
@@ -7533,6 +7655,17 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+            custom_effect_tooltip = GEH_RU
+            add_to_variable = {
+				GEH_RU_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+            add_to_variable = {
+				GEH_RU_army_attack_factor = -0.02
+				tooltip = army_attack_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
+			add_stability = 0.10
 		}
 	}
     focus = {
@@ -7561,6 +7694,15 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+            custom_effect_tooltip = GEH_PL
+            add_to_variable = {
+				GEH_PL_consumer_goods_factor = -0.02
+				tooltip = consumer_goods_factor_tt
+			}
+            add_to_variable = {
+				GEH_PL_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
 		}
 	}
     focus = {
@@ -7589,6 +7731,15 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = GEH_CH
+			add_to_variable = {
+				GEH_CH_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				GEH_CH_conscription_factor = 0.05
+				tooltip = conscription_factor_tt
+			}
 		}
 	}
     focus = {
@@ -7601,6 +7752,7 @@ focus_tree = {
 		y = 1
 
 		available = {
+			has_government = neutrality
 		}
         prerequisite = {
             focus = GEH_restoration_of_medical_department_authority
@@ -7617,6 +7769,15 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = GEH_gehenna_war_department_idea_tt
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_drift_defence_factor = 0.50
+				tooltip = drift_defence_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_neutrality_drift = 0.05
+				tooltip = neutrality_drift_tt
+			}
 		}
 	}
     focus = {
@@ -7645,7 +7806,24 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		completion_reward = {
+		completion_reward = { 
+			custom_effect_tooltip = GEH_gehenna_war_department_idea_tt
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_consumer_goods_factor = 0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_research_speed_factor = 0.02
+				tooltip = research_speed_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_war_department_idea_democratic_acceptance = 25
+				tooltip = democratic_acceptance_tt
+			}
 		}
 	}
 # 이오리 중점 최종장 끝/

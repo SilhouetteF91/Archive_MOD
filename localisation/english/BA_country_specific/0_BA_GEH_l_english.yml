@@ -88,19 +88,19 @@
  GEH_systemic_militarization: "체제적 군사화"
  GEH_injecting_hostility: "적대감 주입"
  GEH_leadership_of_the_executive_branch: "실행부의 지도"
- GEH_war_department: "전쟁부"
+ GEH_war_department: "전쟁부 통합 초안"
  GEH_military_leadership_committee: "군사선도위원회"
 
  GEH_iori_route_focus_desc: "시로미 이오리는 이전 총회에서 자신의 능력을 입증하였고, 이내 만마전을 향한 공격이라는 거대한 테제 아래에 움직이는 선도부의 방향을 결정했습니다."
  GEH_preparation_of_war_with_pantemonium_desc: "[GEM.GetAdjective] 측은 우리 선도부를 향한 적대 행위를 대전이 이전부터 이어오고 있으며, 대전이 이후로는 공식적으로 우리를 향한 적대를 서슴지 않고 있습니다. 이들을 완전히 파멸시키지 않고서는 선도부에 미래란 존재하지 않습니다!"
  GEH_indiscriminate_conscription_desc: "만마전을 향한 거대한 투쟁을 위해서는 수많은 병력의 동원이 필요합니다. 학생과 독일인들을 가리지 않고 향후 벌어질 진격에 동원하기 위해 광범위한 동원 절차가 마련될 것입니다."
- GEH_propaganda_spread_desc: "[GEM.GetAdjective]의 지배 하에 있는 지역에 선도부를 향한 선전물을 배부하는 것은 만마전의 추악한 이상을 공개하고 선도부를 향한 지지를 끌어올릴 수 있을 것입니다."
+ GEH_propaganda_spread_desc: "[GEM.GetAdjective]의 지배 하에 있는 지역에 선도부를 향한 선전물을 배부하는 것은 만마전의 추악한 이상을 공개하고 선도부를 향한 지지를 끌어올릴 수 있을 것입니다. 적어도, 당분간은요. 우리의 명분과 이상을 져버릴지라도, 만마전을 향한 네거티브 정치 공작과 반만마전 포퓰리즘은 지속되어야 합니다."
  GEH_expulsion_of_pandemonium_desc: "이제 때가 되었습니다! 신속하고 빠르게 선도부의 군은 [GEM.GetAdjective]의 지배 영토로 향할 것입니다. 원한의 고리를 끊어내고 선도부의 항구적 평화를 만들어 내어야만 합니다."
  GEH_systemic_militarization_desc: "실행부는 선도부의 광범위한 무력행사를 담당하는 기관이며, 실행부의 지배적 권한을 정립하기 위해서는 다양한 군사적 체제가 도입되어야만 합니다."
  GEH_injecting_hostility_desc: "만마전을 향한 적대적 선전 교육을 의무화하여 우리의 낮은 지지율로 인한 학생들의 전쟁 동원 거부를 해결할 것입니다."
  GEH_leadership_of_the_executive_branch_desc: "언제까지 소라사키 히나의 책임을 가중하며 모든 군사작전을 직접 감독하에 진행할 수는 없습니다. 소라사키 히나의 개인에 가중되는 책임을 실행부에 양도할 것입니다. 이제는 선도부장이 아닌 선도부가 강조되어야 합니다."
  GEH_war_department_desc: "선도부는 이제 광범위한 전쟁을 준비해야 하며, 이러한 행동을 돕기 위해 실행부와 비슷한 역할을 하지만 조금 더 실험적이고 대비적인 핵심 인물들을 모은 전쟁부를 신설할 것입니다."
- GEH_military_leadership_committee_desc: "선도부의 통치는 선도부원이 선행되어야 합니다. 군사적 영광과 교리의 정립이 선도부의 존재 이유이자 선도부 이데올로기의 근간입니다."
+ GEH_military_leadership_committee_desc: "선도부의 통치는 선도부원이 선행되어야 합니다. 군사적 영광과 교리의 정립이 선도부의 존재 이유이자 선도부 이데올로기의 근간입니다. 기획된 전쟁부는 이제 공식적으로 부의 일부로 편입될 것이며, 게헨나 학원의 구국적 안정과 광역적인 통제를 위한 첫 걸음이 될 것입니다."
 
  ## 히나 루트 ##
  GEH_hina_route_focus: "소라사키 히나의 영도"
@@ -601,6 +601,21 @@
  GEH_german_equality_conscription: "독일계 평등 징병"
  GEH_our_new_supporters: "...우리의 새로운 지지자들!"
  GEH_universalism_charter: "'보편주의' 헌장"
+
+ GEH_gradual_dismantling_of_conscription_system_desc: "만마전과 트리니티라는 거대한 주적 두 개가 모두 궤멸하고, 게헨나의 세계적 위치가 안정돼 가는 현재, 우리는 비대한 징병제를 축소하고 정상 국가화를 추진해야 합니다."
+ GEH_dismantling_of_militarized_system_desc: "대중영합주의와 네거티브, 그리고 소수자 박해와 수많은 가짜 선전들은 현재 게헨나 정치의 일상과도 같아졌습니다. 우리는 이 극도로 위태로운 선전 기계들을 축소하고 안정적인 국가를 수립하기 위한 첫걸음을 내디딜 것입니다."
+ GEH_indefinite_extension_of_emergency_powers_desc: "...한번 피를 묻힌 이상, 시로미 이오리와 실행부는 두 번 다시는 이전으로 돌아갈 수 없습니다. 소라사키 히나는 본인의 안녕을 위해 시로미 이오리라는 기나긴 동료이자 대전이 이전부터 이어온 연을 훼손시킬 수 없을 것입니다."
+ GEH_investigation_of_shirokami_ioris_war_crimes_desc: "소라사키 히나는 시로미 이오리와 선도부가 벌이는 행위에 질렸으며, 이내 그들의 영향력을 크게 훼손시키고 게헨나 학원을 이전으로 되돌리기 위한 거대한 개혁을 추진할 것입니다. 비록 그것이 키보토스 시절부터 이어져 온 연을 훼손시킬지라도요."
+ GEH_execution_unit_temporary_sanctions_desc: "시로미 이오리의 실행부는 현재 게헨나 선도부에서 가장 막강한 권력을 휘두르는 거대 조직이며, 이는 시로미 이오리를 제외하더라도 선도부의 정상국가화에 크나큰 장애물이 될 것입니다."
+ GEH_restoration_of_planning_department_authority_desc: "실행부와 기획부 간의 권력 투쟁은 키보토스 시절부터 이어져 왔으며, 실행부가 정치적 주도권을 가지고 있는 현재 기획부의 권한은 선도부 사상 최악으로 축소되어 있습니다. 우리는 이를 조정하고 양 부서의 충돌을 완화할 방안을 마련할 것입니다."
+ GEH_restoration_of_medical_department_authority_desc: "실행부와 전쟁부의 다양한 월권 행위들에 의해 의료부가 행하는 여러 활동은 손상되어 왔으며, 우리는 이를 바로잡을 것입니다."
+ GEH_gehenna_prefect_team_revival_desc: "게헨나 선도부는 학생을 보호하고 규율을 유지하는 선에서 멈춰 서야만 합니다. 게헨나 학원과 선도부는 현재 구분되지 아니할 정도로 정치적 지도력이 일방적이나, 우리는 선도부의 본질을 다시 되새기고 확인해야 합니다."
+ GEH_cornerstone_of_a_defense_nation_desc: "실행부의 일방적인 폭정 속에서 나타난 가장 특징적인 점이자, 최고의 발명품은 다름 아닌 전쟁부일 것입니다. 그러기에 우리는 선도부 체제의 여러 군사 작전 수행의 오류를 수정하고 다양한 전쟁 활동을 보조해 온 전쟁부를 고작 실행부의 일방적 이용 조직이 아닌, 문민 통제의 원칙을 도입하고 게헨나 전체의 방위를 위한 조직으로 인정할 것입니다."
+ GEH_national_defense_commissioner_sorasaki_hina_desc: "실행부와 전쟁부를 유의미하게 분리하고 게헨나 학원의 안정화를 추진하기 위해서는, 선도부장과 전쟁부장의 겸임과 실행부와의 괴리가 필요합니다. 소라사키 히나는 이를 위해 국방위원장이라는 새로운 게헨나 학생회장직을 창설하고, 이에 스스로 오를 것입니다."
+ GEH_departure_with_a_sigh_desc: "게헨나 학원의 이상, 민주주의의 가치, 선도부의 목표…. 이제는 잊힌 말입니다. 누가 뭐라고 하더라도, 현재의 선도부는 군부 독재정권으로 비치며, 사실은 부정할 수 없는 사실입니다. 그러나, 우리는 우리의 국체를 지키기 위해서. 이 체제를 수호해야 합니다."
+ GEH_german_equality_conscription_desc: "어쩌면, 독일인들을 향한 관용과 유화책을 통해 더 나은 국가를 만들기 위해 노력할 수 있습니다. 새로운 선도부의 이상향을 찾아내고 우리는 그 것을 향해 움직일 것입니다."
+ GEH_our_new_supporters_desc: "좋아요, 절대로 학생과 키보토스계 인류의 지지를 끌어내는 데 실패해서 광범위한 평등주의를 도입하고 독일계를 편으로 끌어들이는 것이 아닙니다. 이는 그저 선도부가 본래 해야 했을 두 세계 간의 갈등을 조절하고 이상을 유지하는 일일 뿐입니다."
+ GEH_universalism_charter_desc: "'모든 국민은 평등하다. 누구든지 출신 지역, 인종, 국적에 의하여 정치적 - 경제적 - 사회적 - 문화적 생활의 모든 영역에 있어서 차별을 받지 아니한다.'\n\n게헨나 선도부는 이제 키보토스인과 지구인 간 갈등을 중재하고, 두 세계의 안정적인 통합과 인종 갈등에 대한 반대로 이루어질 것입니다."
 
  GEH_gradual_dismantling_of_conscription_system_desc: "만마전과의 급진적이고 폭력적인 전쟁을 최단기간 내에 준비하기 위해 시행된 징병제도를 완화할 차례입니다. 비대한 징병법으로 인해 산업, 유통, 금융 등 모든 부분에서 문제가 발생하고 있기에 우리는 최대한 빠르게 징병 제도를 완화할 방안을 떠올려 낼 것입니다."
  GEH_dismantling_of_militarized_system_desc: "시로미 이오리의 전쟁부는 만마전과 트리니티를 향한 전쟁을 이어가며 비대하게 확대되었으며, 이에서 수많은 월권과 권력 충돌 그리고 장교들의 부패가 이어지고 있기에, 이를 해결할 필요가 있습니다."
@@ -1139,6 +1154,9 @@
 
  GEH_gehenna_council_idea: "[ROOT.GetAdjective] 평의회"
  GEH_gehenna_council_idea_desc: "간선제로 의원들을 선출하는 평의회는 정상국가화를 진행하는 게헨나의 새로운 의회 조직이자, 법적으로는 1918년 바이마르 공화국 의회의 역사를 계승한다고 주장합니다. 평의회는 게헨나 통제민주주의의 상징이자, 게헨나가 소라사키 히나 한 사람의 독재 국가에서 과두제 국가로 변화하는 과정을 상징하는 조직입니다."
+
+ GEH_gehenna_war_department_idea: "[ROOT.GetAdjective] 전쟁부"
+ GEH_gehenna_war_department_idea_desc: "게헨나 학원의 광범위한 군사 작전과 대전략, 그리고 총체적인 작전계획을 통괄하는 합동참모본부로, 게헨나 학생군과 독일인으로 이루어진 군대, 그 외 수많은 통합된 하위 조직들을 지휘하며 게헨나 학원의 실질적인 군수 통수권이자 대전쟁을 준비하는 거대한 조직입니다."
 
  GEH_intelligence_reform: "방첩 개혁"
  GEH_intelligence_reform_desc: "게헨나 정보부는 이제 외부에 대한 방첩 권한만을 가지며, 국내 수사에 대한 권한은 사실상 박탈됩니다. 이는 지금까지 기획부에 펼쳐온 정보부를 향한 단순한 보복성 조치 이상을 넘어, 정보부가 필요 이상으로 권한을 행사하지 못하게 하기 위함이기도 합니다."
@@ -2208,6 +2226,7 @@
  GEH_benriya_dominate_tt: "우리가 §Y흥신소 68§!을 병합한 §Y최초의 국가§!일 경우, 이벤트로 중점이 개방됩니다."
  GEH_robot_hina_route_tt: "실종된 소라사키 히나를 대체하기 위하여, 우리는 §Y인공지능§!을 이용한 오토마타 히나를 제작하여, 그녀가 실종되었었다는 사실 자체를 친위대 소수 외에 그 누구도 알지 못하게 할 것입니다."
  GEH_without_hina_route_tt: "실종된 소라사키 히나를 대체할 수 있는 것은 아무것도 없습니다. 우리는 친위대에 의한 §Y집단지도체제§!를 통해, 소라사키 히나의 의지와 통치 철학을 우리식으로 해석하여 조국을 이끌 것입니다."
+ GEH_indefinite_extension_of_emergency_powers_tt: "현재 §Y비동맹주의 지지율§!을 §Y파시즘 지지율§!로 변환합니다."
 
  GEH_Disciplinary_Committee_heer_tt: "£GFX_army_experience 게헨나 히어"
  GEH_Disciplinary_Committee_luftwaffe_tt: "£GFX_air_experience 게헨나 루프트바페"
@@ -2245,8 +2264,8 @@
  GEH_ako_constitution_law_available_pro_german_tt: "평의회에 대한 인식이 §Y$GEH_ako_democratic_loc_pro_german$§!나 §Y$GEH_ako_democratic_loc_neutral$§! 중 하나여야 합니다."
  GEH_ako_constitution_law_available_end_tt: "평의회에 대한 인식이 §Y$GEH_ako_democratic_loc_pro_german$§!나 §Y$GEH_ako_democratic_loc_neutral$§! 중 하나여야 합니다."
 
- GEH_gehenna_council_idea_tt: "$GEH_gehenna_council_idea$ 변동치:\n"
- GEH_planning_department_idea_tt: "기획부 변동치:\n"
+ GEH_gehenna_war_department_idea_tt: "§Y$GEH_gehenna_war_department_idea$§! 변동치:\n"
+ GEH_gehenna_council_idea_tt: "§Y$GEH_gehenna_council_idea$§! 변동치:\n"
  GEH_amau_rotue_ending_fail_tt: "만약 아코와 히나의 관계가 §R파탄§! 상태일 경우 §R엔딩을 볼 수 없습니다.§!"
  GEH_artist_advisor_tt: "\n§g게헨나 선도부는 §!§Y예술가§!§g 특성을 가진 조언가를 고용할 경우, 게헨나의 예술적 개혁과 관련된 특수한 결정을 얻습니다.§!"
 
