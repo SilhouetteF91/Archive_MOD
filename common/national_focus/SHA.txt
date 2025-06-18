@@ -1653,7 +1653,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = CHL_skip_one_line_tt
 				capital_scope = {
-					c국eate_unit = {
+					create_unit = {
 						division = "name = \"Shanhaijing Red Guard\" division_template = \"Shanhaijing Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 						owner = SHA
 						count = 5
