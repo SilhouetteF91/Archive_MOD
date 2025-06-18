@@ -36,7 +36,19 @@ ideas = {
 	}
 	country = {
 		#공산
-		SHA_offensive_to_red = { #적색 공세
+		SHA_sabotage_by_workers = { #노동자들의 태업
+			picture = SOV_factionalism_modifier
+			targeted_modifier = {
+				tag = SHA
+				attack_bonus_against_cores = -0.1
+			}
+			cancel = {
+				NOT = {
+					OR = {has_idea = SHA_offensive_to_red has_idea = SHA_red_terror}
+				}
+			}
+		}
+		SHA_offensive_to_red = { #공세
 			picture = generic_shield_against_communism
 			allowed_civil_war = {
 				always = yes
@@ -114,6 +126,25 @@ ideas = {
 				owns_state = 64
 			}
 		}
+		SHA_socialist_society_1 = { #산해경 사회주의
+			name = SHA_socialist_society
+			picture = SOV_system_decentralization
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_cost = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				resistance_damage_to_garrison_on_our_occupied_states = 0.35
+				resistance_decay_on_our_occupied_states = -0.15
+				resistance_target_on_our_occupied_states = 0.15
+				resistance_damage_to_garrison_on_our_occupied_states = 0.25
+				compliance_growth_on_our_occupied_states = -0.35
+				enemy_army_speed_factor = -0.1
+			}
+		}
 		SHA_socialist_society = { #산해경 사회주의
 			name = SHA_socialist_society
 			picture = SOV_system_decentralization
@@ -179,6 +210,7 @@ ideas = {
 			}
 		}
 		SHA_threats_around_1 = { #주변의 위협
+			name = SHA_threats_around
 			picture = MEX_revolutionary_army
 			allowed_civil_war = {
 				always = yes
@@ -189,9 +221,8 @@ ideas = {
 				training_time_army_factor = -0.1
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.1
-				resistance_decay_on_our_occupied_states = -0.15
-				resistance_target_on_our_occupied_states = 0.15
-				resistance_damage_to_garrison_on_our_occupied_states = 0.25
+				army_attack_speed_factor = 0.1
+				supply_combat_penalties_on_core_factor = -0.1
 			}
 		}
 		SHA_threats_around = { #주변의 위협

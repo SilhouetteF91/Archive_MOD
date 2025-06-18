@@ -1653,7 +1653,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = CHL_skip_one_line_tt
 				capital_scope = {
-					create_unit = {
+					c국eate_unit = {
 						division = "name = \"Shanhaijing Red Guard\" division_template = \"Shanhaijing Red Guard\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 						owner = SHA
 						count = 5
@@ -1956,8 +1956,16 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SHA_communism_focus_12
 		}
-		completion_reward = {
+		cancelable = no
+		select_effect = {
 			remove_ideas = SHA_shanhaijing_isolation
+		}
+		completion_reward = {
+			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
+			effect_tooltip = {
+				remove_ideas = SHA_shanhaijing_isolation
+			}
+			custom_effect_tooltip = tooltip_effect_upon_focus_completion
 			SOU = {
 				country_event = generic.2
 			}
@@ -2046,19 +2054,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = SHA_threats_around
-			add_days_mission_timeout = {
-				mission = SHA_red_terror_mission
-				days = 30
-			}
-			every_country = {
-				limit = {
-					has_idea = SHA_red_terror
-				}
-				modify_timed_idea = {
-					idea = SHA_red_terror
-					days = 30
-				}
-			}
 		}
 	}
 	focus = { #사회 개조
@@ -4363,29 +4358,11 @@ focus_tree = {
 			}
 		}
 	}
-	# 노동조합주의 차용
+	# 사회주의 군사정책
 	focus = {
 		id = SHA_communism_diplo_2
-		icon = GFX_focus_generic_workers_and_farmers_rise
+		icon = GFX_focus_HABSBURG_defensive_hussars
 		x = -1
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_communism_diplo_1 }
-
-		bypass = { }
-
-		relative_position_id = SHA_communism_diplo_1
-
-		completion_reward = {
-			add_ideas = SHE_strengthening_laborunions
-		}
-	}
-	# 전간기의 유산
-	focus = {
-		id = SHA_communism_diplo_3
-		icon = GFX_focus_GER_legacy_of_the_spartacus_league
-		x = 1
 		y = 1
 		cost = 5
 
@@ -4400,6 +4377,25 @@ focus_tree = {
 				remove_idea = SHA_threats_around
 				add_idea = SHA_threats_around_1
 			}
+		}
+	}
+	# 전간기의 유산
+	focus = {
+		id = SHA_communism_diplo_3
+		icon = GFX_focus_GER_legacy_of_the_spartacus_league
+		x = 1
+		y = 1
+		cost = 2
+
+		prerequisite = { focus = SHA_communism_diplo_1 }
+
+		bypass = { }
+
+		relative_position_id = SHA_communism_diplo_1
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = 0.1
 		}
 	}
 	# 국제 마르크스주의
@@ -4463,7 +4459,7 @@ focus_tree = {
 		icon = GFX_focus_GER_end_european_communism
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_communism_diplo_1 focus = SHA_soviet_diplo_0 }
 
@@ -4473,6 +4469,19 @@ focus_tree = {
 
 
 		completion_reward = {
+			add_days_mission_timeout = {
+				mission = SHA_red_terror_mission
+				days = 75
+			}
+			every_country = {
+				limit = {
+					has_idea = SHA_red_terror
+				}
+				modify_timed_idea = {
+					idea = SHA_red_terror
+					days = 75
+				}
+			}
 		}
 	}
 	# 인접국 노동자와 연대
@@ -4481,7 +4490,7 @@ focus_tree = {
 		icon = GFX_focus_GER_the_peoples_victory
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_communism_diplo_6 }
 
@@ -4491,6 +4500,23 @@ focus_tree = {
 
 
 		completion_reward = {
+			add_days_mission_timeout = {
+				mission = SHA_red_terror_mission
+				days = 60
+			}
+			every_country = {
+				limit = {
+					has_idea = SHA_red_terror
+				}
+				modify_timed_idea = {
+					idea = SHA_red_terror
+					days = 60
+				}
+				add_timed_idea = {
+					idea = SHA_sabotage_by_workers
+					days = 180
+				}
+			}
 		}
 	}
 	# 파르티잔 전술
@@ -4499,16 +4525,22 @@ focus_tree = {
 		icon = GFX_focus_GER_support_the_proletarian_uprising
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_communism_diplo_6 }
-
+		available = {
+			has_war = yes
+		}
 		bypass = { }
 
 		relative_position_id = SHA_communism_diplo_6
 
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHA_socialist_society
+				add_idea = SHA_socialist_society_1
+			}
 		}
 	}
 	# 다뉴비아 사회주의
@@ -4517,7 +4549,7 @@ focus_tree = {
 		icon = GFX_focus_AUS_danubian_socialist_communes
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_communism_diplo_6 }
 

@@ -3,6 +3,7 @@
  #아이디어
 
   #공산
+ SHA_sabotage_by_workers: "노동자들의 태업"
  SHA_offensive_to_red: "공세"
  SHA_red_terror: "적색 공포"
  SHA_will_to_anschluss: "목표: §R안슐루스§!"
@@ -10,7 +11,6 @@
  SHA_socialist_autonomy: "자치 평의회"
  SHA_aftermath_of_strike: "파업의 여파"
  SHA_threats_around: "주변의 위협"
- SHA_threats_around_1: "전간기의 유산"
  SHA_austro_marxism: "오스트로 맑시즘"
 
  SHA_laws: "제정된 법률"
@@ -389,7 +389,7 @@
  SHA_principle_of_national_self-determination_5: "대오스트리아 권역"
 
  SHA_communism_diplo_1: "실천적 오스트로 맑시즘"
- SHA_communism_diplo_2: "노동조합주의 차용"
+ SHA_communism_diplo_2: "사회주의 군사정책"
  SHA_communism_diplo_3: "전간기의 유산"
  SHA_communism_diplo_4: "국제 마르크스주의"
  SHA_communism_diplo_4_tt: "§g대상이 우리를 향해 공세하지 못 하도록 저지할 수 있습니다!§!"
