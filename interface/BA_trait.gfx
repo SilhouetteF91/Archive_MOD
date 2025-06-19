@@ -132,4 +132,12 @@ spriteTypes = {
 		name = "GFX_trait_medical_officer"
 		textureFile = "gfx/interface/traits/medical_officer.dds"
 	}
+	spriteType = {
+		name = "GFX_trait_powerful_sublime"
+		textureFile = "gfx/interface/traits/trait_powerful_sublime.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_legendary_sublime"
+		textureFile = "gfx/interface/traits/trait_legendary_sublime.dds"
+	}
 }

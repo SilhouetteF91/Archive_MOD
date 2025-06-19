@@ -24,7 +24,7 @@ characters={
 		}
 
 		field_marshal={
-			traits={ Offensive_Doctrine Aggressive_Assaulter urban_assault_specialist }
+			traits={ Offensive_Doctrine Aggressive_Assaulter urban_assault_specialist powerful_sublime }
 			skill=3
 			attack_skill=4 #+1
 			defense_skill=2

@@ -742,7 +742,7 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			traits={ career_officer harsh_leader front_line_general war_hero }
+			traits={ career_officer harsh_leader front_line_general war_hero powerful_sublime }
 			skill=6
 			attack_skill=6
 			defense_skill=5

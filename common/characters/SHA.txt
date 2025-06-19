@@ -28,6 +28,7 @@ characters={
 				media_personality
 				unyielding_defender
 				SHA_Genryumon_t
+				powerful_sublime
 			}
 			skill=3
 			attack_skill=2

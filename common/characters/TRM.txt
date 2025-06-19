@@ -107,7 +107,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = {  }
+			traits = { powerful_sublime }
 			skill=1
 			attack_skill=1
 			defense_skill=1
@@ -165,7 +165,7 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			traits = { front_line_general politically_connected media_personality harsh_leader trait_reckless brilliant_strategist expert_improviser }
+			traits = { front_line_general politically_connected media_personality harsh_leader trait_reckless brilliant_strategist expert_improviser legendary_sublime }
 			skill=5
 			attack_skill=3
 			defense_skill=2

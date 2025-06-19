@@ -33,7 +33,7 @@ characters={
 
 		field_marshal={
 			traits = { 
-				desert_fox infantry_officer inflexible_strategist infantry_leader defensive_doctrine unyielding_defender inspirational_leader
+				desert_fox infantry_officer inflexible_strategist infantry_leader defensive_doctrine unyielding_defender inspirational_leader legendary_sublime
 			}
 			skill=5
 			attack_skill=5

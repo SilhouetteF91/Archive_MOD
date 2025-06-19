@@ -13,7 +13,7 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			traits={ infantry_officer war_hero trait_cautious front_line_general urban_assault_specialist }
+			traits={ infantry_officer war_hero trait_cautious front_line_general urban_assault_specialist legendary_sublime }
 			skill=5
 			attack_skill=4
 			defense_skill=5
