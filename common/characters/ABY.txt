@@ -117,7 +117,7 @@ characters={
 		gender = female
 		corps_commander={
 			traits= {
-				trait_reckless armor_officer hill_fighter ranger trait_mountaineer desert_fox trickster
+				trait_reckless armor_officer hill_fighter ranger trait_mountaineer desert_fox trickster powerful_sublime
 			}
 			skill=4
 			attack_skill=6
