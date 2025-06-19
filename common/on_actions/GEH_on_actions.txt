@@ -97,4 +97,30 @@ on_actions = {
 		}
 	}
 
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = GEH_managed_democracy_union_flag
+					GEH = { is_subject = no }
+					FROM = { tag = GEH }
+				}
+				add_ideas = GEH_managed_democracy_union_idea
+			}
+		}
+	}
+
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = GEH_managed_democracy_union_flag
+					GEH = { is_subject = no }
+					FROM = { tag = GEH }
+				}
+				add_ideas = GEH_managed_democracy_union_idea
+			}
+		}
+	}
+
 }

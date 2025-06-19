@@ -835,6 +835,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/geh/GEH_gun_and_cure.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_GEH_managed_democratic_partnership"
+		textureFile = "gfx/interface/ideas/geh/GEH_managed_democratic_partnership.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_GEH_gehenna_war_department"
 		textureFile = "gfx/interface/ideas/geh/GEH_gehenna_war_department.tga"
 	}

@@ -1167,6 +1167,9 @@
  GEH_with_trinity: "에덴 소협상"
  GEH_with_trinity_desc: "트리니티와 게헨나의 오랜 분열과 대립은 대전이 이후 인류와 키보토스계의 분열만큼 심하지는 않습니다. 우리는 지방 관료들을 임명하는 데 있어서 트리니티계에 대한 엄격한 할당제를 실시하고 트리니티와 게헨나가 진정으로 친구가 될 수 있도록 노력할 것입니다."
 
+ GEH_managed_democracy_union_idea: "통제민주주의 협력국"
+ GEH_managed_democracy_union_idea_desc: "[ROOT.GetName]은(는) [GEH.GetName]을 위하여 충성하는 통제민주주의 협력국입니다. 국민들에게 권리를 제한함으로서 극단주의 세력으로부터 사회 질서를 보호하며, 동시에 자유주의적인 이상의 실현을 위해 노력합니다."
+
  ### 인물
  GEH_hina: "소라사키 히나"
  GEH_dldhfl: "시로미 이오리"
@@ -2272,6 +2275,8 @@
  GEH_ako_route_ending_tt: "§g아코 루트의 엔딩이 펼쳐집니다. 아코와 히나의 이야기는 이렇게 끝을 맺지만, 이 세계에서 두 사람은 앞으로도 멋진 이야기들을 만들어 나갈 수 있을 것입니다. 미래를 향해, 게헨나 선도부의 두 친우는 함께 나아갑니다.\n\n게헨나 선도부를 위해 만들어진 모든 컨텐츠를 즐겨 주셔서 감사합니다. 플레이 해 주신 여러분들이 없었다면 불가능했을 것입니다. 감사합니다!§!\n\n"
 
  TRM_auto_conference_1_division_tt: "다음 주는 게헨나 전체의 합동 조약기구인 '에덴 관리기구'의 위임통치령으로 인정될 것입니다:\n§Y[5.GetName]§!, §Y[60.GetName]§!, §Y[61.GetName]§!, §Y[62.GetName]§!, §Y[63.GetName]§!, §Y[64.GetName]§!, §Y[65.GetName]§!, §Y[66.GetName]§!, §Y[67.GetName]§!, §Y[68.GetName]§!, §Y[86.GetName]§!, §Y[188.GetName]§!, §Y[762.GetName]§!, §Y[763.GetName]§!, §Y[807.GetName]§! .\n\n"
+
+ GEH_managed_democracy_union_tt: "우리의 위성국들을 §Y통제민주주의 협력국§!으로 지정합니다. 새롭게 위성국이 되는 국가에도 적용됩니다."
 
  # 커스텀 패스
 
