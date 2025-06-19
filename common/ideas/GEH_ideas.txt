@@ -2776,6 +2776,37 @@ ideas = {
 			}
 		}
 
+		## 아코 루트 외교
+		
+		GEH_managed_democracy_union_idea = {
+			removal_cost = -1
+
+			picture = GEH_managed_democratic_partnership
+				
+			allowed = {
+
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			available = {
+
+			}
+					
+			modifier = {
+				master_ideology_drift = 0.04
+				local_resources_factor = 0.1
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				autonomy_gain = -0.3
+				autonomy_manpower_share = 0.5
+			}
+			
+		}
+
+
 
 	}
 	
