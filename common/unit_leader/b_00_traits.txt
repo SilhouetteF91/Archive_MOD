@@ -978,9 +978,9 @@ leader_traits = {
 		trait_type = personality_trait
 		
 		modifier = {
-            wounded_chance_factor = -0.5
-			army_morale_factor = 0.03
-            experience_loss_factor = -0.04
+            wounded_chance_factor = -0.4
+			army_morale_factor = 0.04
+            experience_loss_factor = -0.08
 		}
 
 		new_commander_weight = {
