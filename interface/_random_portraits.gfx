@@ -122,6 +122,38 @@ spriteTypes = {
 		name = "GFX_Portrait_BlueArchive_GEH_Generic_4"
 		texturefile = "gfx/leaders/ZZZ_BlueArchive/Portrait_BlueArchive_GEH_Generic_4.dds"
 	}
+	spriteType = {
+		name = "GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+		texturefile = "gfx/leaders/ZZZ_BlueArchive/Portrait_BlueArchive_prefect_team_Generic_1.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+		texturefile = "gfx/leaders/ZZZ_BlueArchive/Portrait_BlueArchive_prefect_team_Generic_2.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+		texturefile = "gfx/leaders/ZZZ_BlueArchive/Portrait_BlueArchive_prefect_team_Generic_3.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+		texturefile = "gfx/leaders/ZZZ_BlueArchive/Portrait_BlueArchive_prefect_team_Generic_4.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+		texturefile = "gfx/leaders/ZZZ_BlueArchive/Portrait_BlueArchive_prefect_team_Generic_5.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+		texturefile = "gfx/leaders/ZZZ_BlueArchive/Portrait_BlueArchive_Gehenna_Generic_1.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+		texturefile = "gfx/leaders/ZZZ_BlueArchive/Portrait_BlueArchive_Gehenna_Generic_2.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_BlueArchive_Gehenna_Generic_3"
+		texturefile = "gfx/leaders/ZZZ_BlueArchive/Portrait_BlueArchive_Gehenna_Generic_3.dds"
+	}
 
 	spriteType = {
 		name = "GFX_Portrait_BlueArchive_MIL_Generic_1"

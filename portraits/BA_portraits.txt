@@ -365,6 +365,14 @@ GEH = { #게헨나 선도부
 			"GFX_Portrait_BlueArchive_GEH_Generic_2"
 			"GFX_Portrait_BlueArchive_GEH_Generic_3"
 			"GFX_Portrait_BlueArchive_GEH_Generic_4"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 		}
 	}
 	navy = {
@@ -377,6 +385,14 @@ GEH = { #게헨나 선도부
 			"GFX_Portrait_BlueArchive_GEH_Generic_2"
 			"GFX_Portrait_BlueArchive_GEH_Generic_3"
 			"GFX_Portrait_BlueArchive_GEH_Generic_4"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 		}
 	}
 	political = {
@@ -388,6 +404,14 @@ GEH = { #게헨나 선도부
 				"GFX_Portrait_BlueArchive_GEH_Generic_2"
 				"GFX_Portrait_BlueArchive_GEH_Generic_3"
 				"GFX_Portrait_BlueArchive_GEH_Generic_4"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 			}
 		}
 		democratic = {
@@ -398,6 +422,14 @@ GEH = { #게헨나 선도부
 				"GFX_Portrait_BlueArchive_GEH_Generic_2"
 				"GFX_Portrait_BlueArchive_GEH_Generic_3"
 				"GFX_Portrait_BlueArchive_GEH_Generic_4"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 			}
 		}
 		fascism = {
@@ -408,6 +440,14 @@ GEH = { #게헨나 선도부
 				"GFX_Portrait_BlueArchive_GEH_Generic_2"
 				"GFX_Portrait_BlueArchive_GEH_Generic_3"
 				"GFX_Portrait_BlueArchive_GEH_Generic_4"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 			}
 		}
 		neutrality = {
@@ -418,6 +458,14 @@ GEH = { #게헨나 선도부
 				"GFX_Portrait_BlueArchive_GEH_Generic_2"
 				"GFX_Portrait_BlueArchive_GEH_Generic_3"
 				"GFX_Portrait_BlueArchive_GEH_Generic_4"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 			}
 		}
 	}
@@ -428,6 +476,9 @@ GEM = { #게헨나 만마전
 			"GFX_Portrait_BlueArchive_GEH_Generic_1"
 			"GFX_Portrait_BlueArchive_GEH_Generic_2"
 			"GFX_Portrait_BlueArchive_GEH_Generic_3"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 		}
 	}
 	navy = {
@@ -440,6 +491,9 @@ GEM = { #게헨나 만마전
 			"GFX_Portrait_BlueArchive_GEH_Generic_1"
 			"GFX_Portrait_BlueArchive_GEH_Generic_2"
 			"GFX_Portrait_BlueArchive_GEH_Generic_3"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 		}
 	}
 	political = {
@@ -451,6 +505,9 @@ GEM = { #게헨나 만마전
 				"GFX_Portrait_BlueArchive_GEH_Generic_1"
 				"GFX_Portrait_BlueArchive_GEH_Generic_2"
 				"GFX_Portrait_BlueArchive_GEH_Generic_3"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 			}
 		}
 		democratic = {
@@ -461,6 +518,9 @@ GEM = { #게헨나 만마전
 				"GFX_Portrait_BlueArchive_GEH_Generic_1"
 				"GFX_Portrait_BlueArchive_GEH_Generic_2"
 				"GFX_Portrait_BlueArchive_GEH_Generic_3"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 			}
 		}
 		fascism = {
@@ -471,6 +531,9 @@ GEM = { #게헨나 만마전
 				"GFX_Portrait_BlueArchive_GEH_Generic_1"
 				"GFX_Portrait_BlueArchive_GEH_Generic_2"
 				"GFX_Portrait_BlueArchive_GEH_Generic_3"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 			}
 		}
 		neutrality = {
@@ -481,6 +544,9 @@ GEM = { #게헨나 만마전
 				"GFX_Portrait_BlueArchive_GEH_Generic_1"
 				"GFX_Portrait_BlueArchive_GEH_Generic_2"
 				"GFX_Portrait_BlueArchive_GEH_Generic_3"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 			}
 		}
 	}
@@ -491,6 +557,14 @@ HEU = { #게헨나 공용
 		female = {
 			"GFX_Portrait_BlueArchive_GEH_Generic_2"
 			"GFX_Portrait_BlueArchive_GEH_Generic_3"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 		}
 	}
 	navy = {
@@ -502,6 +576,14 @@ HEU = { #게헨나 공용
 		female = {
 			"GFX_Portrait_BlueArchive_GEH_Generic_2"
 			"GFX_Portrait_BlueArchive_GEH_Generic_3"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+			"GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+			"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 		}
 	}
 	political = {
@@ -512,6 +594,14 @@ HEU = { #게헨나 공용
 			female = {
 				"GFX_Portrait_BlueArchive_GEH_Generic_2"
 				"GFX_Portrait_BlueArchive_GEH_Generic_3"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 			}
 		}
 		democratic = {
@@ -521,6 +611,14 @@ HEU = { #게헨나 공용
 			female = {
 				"GFX_Portrait_BlueArchive_GEH_Generic_2"
 				"GFX_Portrait_BlueArchive_GEH_Generic_3"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 			}
 		}
 		fascism = {
@@ -530,6 +628,14 @@ HEU = { #게헨나 공용
 			female = {
 				"GFX_Portrait_BlueArchive_GEH_Generic_2"
 				"GFX_Portrait_BlueArchive_GEH_Generic_3"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 			}
 		}
 		neutrality = {
@@ -539,6 +645,14 @@ HEU = { #게헨나 공용
 			female = {
 				"GFX_Portrait_BlueArchive_GEH_Generic_2"
 				"GFX_Portrait_BlueArchive_GEH_Generic_3"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_1"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_2"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_3"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_4"
+				"GFX_Portrait_BlueArchive_prefect_team_Generic_5"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_1"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_2"
+				"GFX_Portrait_BlueArchive_Gehenna_Generic_3"
 			}
 		}
 	}
