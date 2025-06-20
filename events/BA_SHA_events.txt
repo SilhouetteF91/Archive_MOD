@@ -431,6 +431,7 @@ country_event = { #공세
 		}
 		add_ideas = SHA_offensive_to_red
 		ai_chance = {
+			base = 10
 			modifier = {
 				add = -10
 				tag = GEM

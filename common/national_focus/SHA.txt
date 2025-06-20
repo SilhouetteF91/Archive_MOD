@@ -4709,6 +4709,20 @@ focus_tree = {
 				}
 				custom_effect_tooltip = SHA_will_to_anschluss_tt_2
 				add_ideas = SHA_will_to_anschluss
+				every_other_country = {
+					limit = {
+						any_state = {
+							BA_is_GER_core = yes
+							is_owned_by = PREV
+						}
+					}
+					SHA = {
+						declare_war_on = {
+							target = PREV
+							type = take_claimed_state
+						}
+					}
+				}
 			}
 			else = {
 				custom_effect_tooltip = SHA_will_to_anschluss_tt_1
