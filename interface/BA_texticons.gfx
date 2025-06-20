@@ -169,4 +169,101 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+	# Medium
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_ABY_medium"
+		texturefile = "gfx/flags/medium/ABY.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_GEM_medium"
+		texturefile = "gfx/flags/medium/GEM.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_GEH_medium"
+		texturefile = "gfx/flags/medium/GEH.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_HEU_medium"
+		texturefile = "gfx/flags/medium/HEU.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_MIL_medium"
+		texturefile = "gfx/flags/medium/MIL.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_TRM_medium"
+		texturefile = "gfx/flags/medium/TRM.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_HYA_medium"
+		texturefile = "gfx/flags/medium/HYA.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_SHA_medium"
+		texturefile = "gfx/flags/medium/SHA.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_RED_medium"
+		texturefile = "gfx/flags/medium/RED.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_KSP_medium"
+		texturefile = "gfx/flags/medium/KSP.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_ARI_medium"
+		texturefile = "gfx/flags/medium/ARI.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_SHE_medium"
+		texturefile = "gfx/flags/medium/SHE.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_COU_medium"
+		texturefile = "gfx/flags/medium/COU.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_BLM_medium"
+		texturefile = "gfx/flags/medium/BLM.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_GEI_medium"
+		texturefile = "gfx/flags/medium/GEI.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_BA_game_rule_flag_KAI_medium"
+		texturefile = "gfx/flags/medium/KAI.tga"
+		legacy_lazy_load = no
+	}
+
 }

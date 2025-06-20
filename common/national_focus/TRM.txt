@@ -6830,6 +6830,7 @@ focus_tree = {
 			activate_targeted_decision = { target = 86 decision = TRN_Basis_Scholar_development } # 포젠
 			activate_targeted_decision = { target = 763 decision = TRN_Kimigayama_shipbuilding_plant } # 쾨니히스베르크
 			activate_targeted_decision = { target = 63 decision = TRN_Stettin_heavy_industry } # 힌터포메른
+			activate_targeted_decision = { target = 762 decision = TRN_katowice_mining } # 카토비체
 			
 		}
 	}
@@ -7168,6 +7169,7 @@ focus_tree = {
 				country_event = { id = trinity.37 days = 150 } # 소규모 동아리들의 운명
 				country_event = { id = trinity.36 days = 210 } # 안보 상황
 				country_event = { id = trnfla.12 days = 365 } # 세이아 음모론
+				# country_event = { id = trn }
 			}
 			set_country_flag = TRN_mika_honor_activate
 			unlock_decision_category_tooltip = TRN_Mika_honor_decision_cat
@@ -7690,7 +7692,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = TRN_second_trintiy
-		cost = 7
+		cost = 5
 
 		available = {
 			has_global_flag = TRINITY_WON_THE_GEHENNA
@@ -7739,7 +7741,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
+			add_country_leader_trait = TRN_Misono_the_mother_of_trinity
 		}
 	}
 
@@ -7797,6 +7799,55 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			add_ideas = TRN_project_trinity_ns
+			if = {
+				limit = {
+					NOT = {
+						is_researching_technology = atomic_research
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = TRN_project_trinity
+					bonus = 0.5
+					uses = 1
+					ahead_reduction = 1
+					category = nuclear
+				}
+			}
+			else = {
+				if = {
+					limit = { NOT = { is_special_project_being_researched = sp:sp_nuclear_reactor } }
+					sp:sp_nuclear_reactor = { add_project_progress_ratio = 0.1 }
+				}
+				if = { #
+					limit = {
+						controls_province = 3340 #그라이프스발트
+						62 = { #포어포메른
+							is_owned_and_controlled_by = ROOT
+							can_construct_building = nuclear_facility
+						}
+					}
+					62 = { #포어포메른
+						add_building_construction = {
+							type = nuclear_facility
+							level = 1
+							province = 3340 #그라이프스발트
+							instant_build = yes
+						}
+					}
+				}
+				else = {
+					random_owned_controlled_state = {
+						prioritize = { 62 }
+						limit = {
+							is_core_of = ROOT
+							can_construct_building = nuclear_facility
+						}
+						construct_building_in_random_province = { nuclear_facility = 1 }
+					}
+				}
+			}
 
 		}
 	}
@@ -7844,7 +7895,19 @@ focus_tree = {
 
 		}
 		completion_reward = {
-
+			add_ideas = TRN_legacy_of_the_prophets_ns
+			TRN_alzk = {
+				swap_country_leader_traits = {
+					remove = TRN_mika_trait_2
+					add = TRN_mika_trait_last_focus
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_rule = can_send_volunteers } 
+				}
+				set_rule = { can_send_volunteers = yes }
+			}
 		}
 	}
 
@@ -7915,6 +7978,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			add_ideas = TRN_michael_and_warriors_ns
 			if = {
 				limit = { has_character = TRN_alzk }
 				TRN_alzk = {
@@ -8288,6 +8352,7 @@ focus_tree = {
 				target = ABY
 				modifier = BUL_threatening_neighbor
 			}
+			activate_targeted_decision = { target = TRM decision = TRN_south_kivotos_propaganda }
 		}
 	}
 
@@ -8303,6 +8368,7 @@ focus_tree = {
 			HYA = {
 				NOT = { has_completed_focus = HYA_focus_70 }
 			}
+			NOT = { has_completed_focus = TRN_spiritual_warfare }
 		}
 		prerequisite = { focus = TRN_southern_kivotos_dip }
 
@@ -8528,6 +8594,34 @@ focus_tree = {
 			hidden_effect = { 
 				news_event = { id = trinitynews.5 hours = 01 } 
 			}
+		}
+	}
+
+	focus = { #
+		id = TRN_northern_kivotos_diplomacy
+		icon = GFX_focus_TRN_northern_kivotos_dip
+		x = 3
+		y = 1
+		relative_position_id = TRN_impossible_to_coexist
+		cost = 5
+
+		bypass = {
+			
+		}
+
+		available = {
+			has_government = fascism
+		}
+		prerequisite = { 
+			focus = TRN_impossible_to_coexist 
+		}
+		mutually_exclusive = {  }
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
 		}
 	}
 
@@ -8866,6 +8960,7 @@ focus_tree = {
 			add_dynamic_modifier = { modifier = TRM_industries_dynamic }
 
 			activate_targeted_decision = { target = 64 decision = TRN_Opelwerk_Brandenburg } # 브란덴부르크
+			activate_targeted_decision = { target = 64 decision = TRN_dessert_shop_expansion } # 브란덴부르크 
 			hidden_effect = {
 				country_event = { id = trnfla.22 days = 35 }
 			}

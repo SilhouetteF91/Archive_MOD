@@ -33,6 +33,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_category_Trinity_border.tga"
 		legacy_lazy_load = no
 	}
+ 
+	spriteType = {
+		name = "GFX_decision_category_Kozeki_Ui_Halo"
+		texturefile = "gfx/interface/decisions/decision_category_Kozeki_Ui_Halo.tga"
+		legacy_lazy_load = no
+	}
 
 	spriteType = {
 		name = "GFX_decision_scissors"
@@ -588,6 +594,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_cat_TRN_Mika_honor_long"
 		texturefile = "gfx/interface/decisions/decision_cat_TRN_Mika_honor_long.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_cat_TRN_Ministry_of_Economic_Development"
+		texturefile = "gfx/interface/decisions/decision_cat_TRN_Ministry_of_Economic_Development.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {

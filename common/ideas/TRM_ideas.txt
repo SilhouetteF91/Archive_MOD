@@ -1533,5 +1533,68 @@ ideas = {
 				attack_bonus_against = -0.05
 			}
 		}
+
+		TRN_HYA_customs_union_ns = {
+
+			cancel = {
+				OR = {
+					has_war_with = TRM
+					has_war_with = HYA
+				}
+			}
+			on_add = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			on_remove = {
+				add_offsite_building = { type = industrial_complex level = -1 }
+			}
+			modifier = {
+				custom_modifier_tooltip = GER_german_trade_offshore_tt
+			}
+			targeted_modifier = {
+				tag = TRM
+
+				trade_cost_for_target_factor = -0.2
+			}
+			targeted_modifier = {
+				tag = HYA
+
+				trade_cost_for_target_factor = -0.2
+			}
+		}
+
+		TRN_project_trinity_ns = {
+			picture = SOV_atomic_bomb_project
+			modifier = {
+				consumer_goods_factor = 0.1
+				nuclear_production_factor = 0.1
+				specialization_nuclear_speed_factor = 0.1
+				production_speed_rocket_site_factor = 0.2
+			}
+			research_bonus = {
+				nuclear = 0.1
+				rocketry = 0.15
+			}
+		}
+		TRN_legacy_of_the_prophets_ns = {  
+			picture = generic_neutrality_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				guarantee_cost = -0.33
+				sp_tag_nuclear_power_speed_factor = 0.1
+				sp_tag_rocket_speed_factor = 0.1
+				send_volunteer_size = 2
+				operative_slot = 2
+			}
+		}
+		TRN_michael_and_warriors_ns = {  
+			picture = SWE_varnplikt
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.1
+				party_popularity_stability_factor = 0.15
+				war_stability_factor = 0.2
+			}
+		}
 	}
 }
