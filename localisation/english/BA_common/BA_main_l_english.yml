@@ -292,7 +292,7 @@
  custom_diff_strong_GEI: "£GFX_BA_game_rule_flag_GEI  게마트리아 강화"
  custom_diff_strong_KAI: "£GFX_BA_game_rule_flag_KAI  카이저 코퍼레이션 강화"
  Debug_BA_gathering_storm_desc: "제가 보인다면 버그 리포트를 작성해주세요."
- highlight_major_1_tt: "@TRM §Y트리니티 종합학원§! 경로:\n\n§P미소노 미카§!:\n키보토스의 구세주 §t(미완성)§!\n-양떼와 목자\n-묵시록의 기수\n\n§Y키리후지 나기사§!:\n-§g철의 여인§! §t(미완성)§!"
+ highlight_major_1_tt: "@TRM §Y트리니티 종합학원§! 경로:\n\n§P미소노 미카§!:\n키보토스의 구세주 §t(미완성)§!\n-양떼와 목자\n-묵시록의 기수\n\n§Y키리후지 나기사§!:\n§g철의 여인§! §t(미완성)§!\n-트리니티 패권주의\n-에덴 조약 재결성"
  highlight_major_3_tt: "@GEM §Y판데모니움 소사이어티§! 경로:\n\n게헨나 공용 경로\n-게헨나 제일주의\n\n국방군과 협상\n-연방국가\n-독일 국방군\n\n마코토 무력화\n-나츠메 이로하\n-...이부키?\n"
 
  BA_game_rule: "블루 아카이브 모드 커스텀 게임 규칙"
