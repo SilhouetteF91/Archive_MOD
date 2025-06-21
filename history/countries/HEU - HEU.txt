@@ -16,6 +16,7 @@ set_variable = { Global.aru_stat_point_array^2 = 6 } #결의, り의 고로아�
 set_variable = { Global.aru_stat_point_array^3 = 8 } #카리스마, や의 고로아와세 8
 
 set_variable = { ROOT.halo_militia_cap = 12 } # 사단 제한, 헤일로 민병의 사단 제한과 같아야 함
+set_variable = { country_intro_page_count = 2 } #Intro screen
 
 set_country_flag = kivotos_research_on
 add_ideas = BA_student_conscription_idea
