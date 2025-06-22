@@ -257,6 +257,7 @@ ideas = {
 				tag = GEM
 				attack_bonus_against = 0.15
 				defense_bonus_against = 0.20
+				breakthrough_bonus_against = 0.20
 			}
 		}
         
@@ -280,6 +281,7 @@ ideas = {
 				tag = GEM
 				attack_bonus_against = 0.10
 				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
 			}
 		}
         
@@ -303,6 +305,7 @@ ideas = {
 				tag = GEM
 				attack_bonus_against = 0.05
 				defense_bonus_against = 0.10
+				breakthrough_bonus_against = 0.10
 			}
 		}
         
@@ -326,6 +329,7 @@ ideas = {
 				tag = GEM
 				attack_bonus_against = 0.05
 				defense_bonus_against = 0.05
+				breakthrough_bonus_against = 0.05
 			}
 		}
         
@@ -346,6 +350,7 @@ ideas = {
 				tag = GEM
 				attack_bonus_against = -0.20
 				defense_bonus_against = -0.25
+				breakthrough_bonus_against = -0.25
 			}
 		}
 		GEH_popular_support_2 = { # 선도부의 정통성
@@ -365,6 +370,7 @@ ideas = {
 				tag = GEM
 				attack_bonus_against = -0.15
 				defense_bonus_against = -0.20
+				breakthrough_bonus_against = -0.20
 			}
 		}
 		GEH_popular_support_3 = { # 선도부의 정통성
@@ -384,6 +390,7 @@ ideas = {
 				tag = GEM
 				attack_bonus_against = -0.10
 				defense_bonus_against = -0.15
+				breakthrough_bonus_against = -0.15
 			}
 		}
         GEH_popular_support_4 = { # 선도부의 정통성
@@ -400,6 +407,7 @@ ideas = {
 				tag = GEM
 				attack_bonus_against = -0.05
 				defense_bonus_against = -0.10
+				breakthrough_bonus_against = -0.10
 			}
 		}
 
