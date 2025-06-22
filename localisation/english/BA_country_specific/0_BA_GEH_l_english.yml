@@ -629,6 +629,10 @@
 
  GEH_last_focus_effect: "미래를 향해"
  GEH_last_focus_effect_desc: "§g우리는 우리가 걸어온 길을 되돌아볼 차례입니다.§!"
+ GEH_second_congress_focus_effect: "현재를 바라보며"
+ GEH_second_congress_focus_effect_desc: "§g1차 총회는 우리가 나아갈 길을 결정해줄 것입니다.§!"
+ GEH_second_congress_focus_effect_tt: "이 중점은 §Y$GEH_second_congress_focus$§! 중점 완료시 온전한 중점 계통도로 변경될 것입니다."
+ GEH_second_congress_focus_effect_tt2: "아직 우리는 §Y$GEH_second_congress_focus$§! 중점을 완료하지 않았습니다."
  GEH_last_focus_effect_tt: "이 중점은 §Y$GEH_last_focus_3$§! 중점 완료시 온전한 중점 계통도로 변경될 것입니다."
  GEH_last_focus_effect_tt2: "아직 우리는 §Y$GEH_last_focus_3$§! 중점을 완료하지 않았습니다."
 

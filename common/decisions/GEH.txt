@@ -510,8 +510,6 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
 
 		visible = {
 			NOT = {
-				has_completed_focus = GEH_gehenna_leader
-				has_completed_focus = GEH_three_congress_focus
 				has_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
 			}
 		}
@@ -523,11 +521,7 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = GEH_basking_in_the_brilliance_of_their_serenade_trigger_tt
-				OR = {
-					has_completed_focus = GEH_gehenna_leader
-					has_completed_focus = GEH_three_congress_focus
-					has_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
-				}
+				has_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
 			}
 		}
 

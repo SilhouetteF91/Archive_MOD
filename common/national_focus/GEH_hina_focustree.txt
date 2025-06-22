@@ -1493,6 +1493,52 @@ focus_tree = {
 			add_research_slot = 1 #4개
 		}
 	}
+    focus = {
+		id = GEH_second_congress_focus_effect
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 0
+
+		relative_position_id = GEH_second_congress_focus
+		x = 0
+		y = 2
+
+		allow_branch = {
+			OR = {
+				is_debug = yes
+				has_completed_focus = GEH_zero_congress_focus
+			}
+			NOT = {
+				has_country_flag = hina_assembly_h_flag
+				has_country_flag = hina_assembly_a_flag
+				has_country_flag = hina_assembly_c_flag
+				has_country_flag = hina_assembly_normal_flag
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_second_congress_focus_effect_tt
+				always = no
+			}
+		}
+        prerequisite = {
+            focus = GEH_second_congress_focus
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = GEH_second_congress_focus_effect_tt2
+		}
+	}
 
 # /이오리 중점 시작
 	focus = {
@@ -1502,6 +1548,13 @@ focus_tree = {
         x = 3
         y = 1
         cost = 5
+		offset = {
+			trigger = {
+				is_debug = yes
+			}
+			x = 2
+			y = 0
+		}
 		allow_branch = {
 			OR = {
 				is_debug = yes
@@ -1864,7 +1917,7 @@ focus_tree = {
 			trigger = {
 				is_debug = yes
 			}
-			x = 8
+			x = 10
 			y = 0
 		}
 		prerequisite = {
@@ -2303,7 +2356,7 @@ focus_tree = {
 			trigger = {
 				is_debug = yes
 			}
-			x = 16
+			x = 18
 			y = 0
 		}
 		prerequisite = {
@@ -2696,7 +2749,7 @@ focus_tree = {
 			trigger = {
 				is_debug = yes
 			}
-			x = 24
+			x = 26
 			y = 0
 		}
 		prerequisite = {
@@ -3168,7 +3221,7 @@ focus_tree = {
 			trigger = {
 				is_debug = yes
 			}
-			x = 2
+			x = 3
 			y = 0
 		}
         prerequisite = {
@@ -5549,19 +5602,12 @@ focus_tree = {
 		icon = GFX_goal_GEH_newgehenna
 		cost = 5
 
-		relative_position_id = GEH_first_congress_focus
-		x = -9
+		relative_position_id = GEH_second_congress_focus
+		x = 0
 		y = 8
 
 		mutually_exclusive = {
 			focus = GEH_three_congress_focus_no_hina
-		}
-
-		allow_branch = {
-			OR = {
-				is_debug = yes
-				has_completed_focus = GEH_zero_congress_focus
-			}
 		}
 
 		available_if_capitulated = yes
@@ -5944,18 +5990,10 @@ focus_tree = {
 				has_country_flag = hina_assembly_a_serenade_flag
 				has_country_flag = hina_assembly_c_serenade_flag
 				has_country_flag = hina_assembly_normal_serenade_flag
-			}
-			OR = {
-				is_debug = yes
-				AND = {
-					has_completed_focus = GEH_zero_congress_focus
-					NOT = { 
-						has_country_flag = hina_assembly_h_next_flag
-						has_country_flag = hina_assembly_a_next_flag
-						has_country_flag = hina_assembly_c_next_flag
-						has_country_flag = hina_assembly_normal_next_flag
-					}
-				}
+				has_country_flag = hina_assembly_h_next_flag
+				has_country_flag = hina_assembly_a_next_flag
+				has_country_flag = hina_assembly_c_next_flag
+				has_country_flag = hina_assembly_normal_next_flag
 			}
 		}
 
