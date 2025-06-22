@@ -2324,3 +2324,8 @@
  RULE_OPTION_GEH_IORI_DESC:0 "선도부 AI는 §O시로미 이오리§!와 실행부가 정권을 획득한 이후, 선도부를 군국주의 국가로 변화시키는 것과 관련 있는 중점 계통도를 따라 내려갈 것입니다."
  RULE_OPTION_GEH_GENERIC_DESC:0 "선도부 AI는 여러 파벌들의 논쟁이 §Y경합§!을 일으켜, 어떠한 개혁도 이루지 못하는 §Y현상유지§!를 실시하는 것과 관련 있는 중점 계통도를 따라 내려갈 것입니다."
 
+ ### 훈장 ###
+ GEH_royal_order_of_the_crown: "십자훈장"
+ GEH_pour_le_merite: "푸르 르 메리트"
+ GEH_roter_adlerorden: "적수리 훈장"
+ GEH_schwarzer_adlerorden: "흑수리 훈장"

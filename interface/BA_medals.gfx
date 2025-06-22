@@ -14,4 +14,37 @@ spriteTypes = {
 		texturefile = "gfx/interface/medals/COU_medal_strip_large.dds"
 		noOfFrames = 7
     }
+
+	spriteType = {
+		name = "GFX_HEU_medal_1"
+		texturefile = "gfx/interface/medals/HEU_medal_1.dds"
+    }
+
+	spriteType = {
+		name = "GFX_HEU_medal_2"
+		texturefile = "gfx/interface/medals/HEU_medal_2.dds"
+    }
+
+	spriteType = {
+		name = "GFX_HEU_medal_3"
+		texturefile = "gfx/interface/medals/HEU_medal_3.dds"
+    }
+
+	spriteType = {
+		name = "GFX_HEU_medal_4"
+		texturefile = "gfx/interface/medals/HEU_medal_4.dds"
+    }
+
+	spriteType = {
+		name = "GFX_HEU_medal_strip"
+		texturefile = "gfx/interface/medals/HEU_medal_strip.dds"
+		noOfFrames = 4
+    }
+
+	spriteType = {
+		name = "GFX_HEU_medal_strip_large"
+		texturefile = "gfx/interface/medals/HEU_medal_strip_large.dds"
+		noOfFrames = 4
+    }
+	
 }
