@@ -3306,6 +3306,41 @@ spriteTypes = {
 		textureFile = "gfx/interface/goals/HYA/HYA_Urbanization_Plan.tga"
 	}
 
+	spriteType = {
+		name = "GFX_goal_HYA_Momoyo_Hall_Expansion"
+		textureFile = "gfx/interface/goals/HYA/HYA_Momoyo_Hall_Expansion.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Defense_Industry"
+		textureFile = "gfx/interface/goals/HYA/HYA_Defense_Industry.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Suppression_Merchant_Associations"
+		textureFile = "gfx/interface/goals/HYA/HYA_Suppression_Merchant_Associations.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_We_War"
+		textureFile = "gfx/interface/goals/HYA/HYA_We_War.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Mangryangz_conciliation"
+		textureFile = "gfx/interface/goals/HYA/HYA_Mangryangz_conciliation.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_Mangryangz_Destruction"
+		textureFile = "gfx/interface/goals/HYA/HYA_Mangryangz_Destruction.tga"
+	}
+
+	spriteType = {
+		name = "GFX_goal_HYA_War_South_Kivotos"
+		textureFile = "gfx/interface/goals/HYA/HYA_War_South_Kivotos.tga"
+	}
+
 	#색채
 	spriteType = {
 		name = "GFX_goal_GEI_invasion"

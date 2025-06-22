@@ -46,10 +46,10 @@ focus_tree = {
 			army_experience = 25
 		}
 	}
-	focus = { #
+	focus = { # 방위산업
 		relative_position_id = HYA_focus_6
 		id = HYA_focus_48
-		icon = GFX_goal_generic_production2
+		icon = GFX_goal_HYA_Defense_Industry
 		prerequisite = { focus = HYA_focus_6 }
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = -4
@@ -247,10 +247,10 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #
+	focus = { # 우리의 전쟁
 		relative_position_id = HYA_focus_6
 		id = HYA_focus_7
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_goal_HYA_We_War
 		prerequisite = { focus = HYA_focus_6 }
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 0
@@ -269,10 +269,10 @@ focus_tree = {
 			add_ideas = HYA_dnfldmlwjswod
 		}
 	}
-	focus = { #
+	focus = { # 남키보토스 전쟁
 		relative_position_id = HYA_focus_6
 		id = HYA_focus_12
-		icon = GFX_goal_TRN_HYAKKIYAKO_attack
+		icon = GFX_goal_HYA_War_South_Kivotos
 		prerequisite = { focus = HYA_focus_7 }
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = 0
@@ -1028,10 +1028,10 @@ focus_tree = {
 			add_stability = 0.05
 		}
 	}
-	focus = {
+	focus = { # 망량즈 회유
 		relative_position_id = HYA_focus_26
 		id = HYA_focus_29
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_HYA_Mangryangz_conciliation
 		prerequisite = { focus = HYA_focus_31 }
 		mutually_exclusive = { focus = HYA_focus_30 }
 		x = -1
@@ -1085,10 +1085,10 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
+	focus = { # 망량즈 파괴 개시
 		relative_position_id = HYA_focus_26
 		id = HYA_focus_30
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_HYA_Mangryangz_Destruction
 		prerequisite = { focus = HYA_focus_28 }
 		mutually_exclusive = { focus = HYA_focus_29 }
 		x = 1
@@ -1167,10 +1167,10 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #
+	focus = { # 상인조합 억제
 		relative_position_id = HYA_focus_1
 		id = HYA_focus_10
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		icon = GFX_goal_HYA_Suppression_Merchant_Associations
 		prerequisite = { focus = HYA_focus_1 }
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = -2
@@ -1217,10 +1217,10 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #
+	focus = { # 백야당 확장
 		relative_position_id = HYA_focus_2
 		id = HYA_focus_19
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_HYA_Momoyo_Hall_Expansion
 		prerequisite = { focus = HYA_focus_2 }
 		#mutually_exclusive = { focus = HYA_focus_ }
 		x = -1
@@ -4777,7 +4777,7 @@ focus_tree = {
 		cost = 5
 	}
 
-	focus = {
+	focus = { # 백련의 계승자
 		id = HYA_focus_123
 		icon = GFX_goal_demand_sudetenland
 		prerequisite = { focus = HYA_focus_119 }
