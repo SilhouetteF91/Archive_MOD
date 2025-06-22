@@ -2498,7 +2498,8 @@ ideas = {
 			modifier = {
 				army_leader_start_attack_level = 1
 				army_leader_start_defense_level = 1
-				modifier_army_sub_unit_halo_infantry_org_recovery_cap_factor = 0.10
+				land_doctrine_cost_factor = -0.10
+				air_doctrine_cost_factor = -0.10
 			}
 		}
 
