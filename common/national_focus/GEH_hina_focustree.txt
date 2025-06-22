@@ -3446,7 +3446,7 @@ focus_tree = {
 			trigger = {
 				is_debug = yes
 			}
-			x = 26
+			x = 28
 			y = 0
 		}
         select_effect = {
@@ -11151,6 +11151,745 @@ focus_tree = {
 	}
 
 # 히나 탈주: 노말 중점 최종장 끝/
+
+# /히나 탈주: 외교 중점 최종장 시작
+
+
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy
+		icon = GFX_focus_HABSBURG_reform_gemeinsame_armee
+		cost = 5
+
+		relative_position_id = GEH_three_congress_focus_no_hina
+		x = 16
+		y = 1
+		
+		offset = {
+			x = 30
+			trigger = {
+				is_debug = yes
+			}
+		}
+
+		available = {
+
+			custom_trigger_tooltip = {
+				tooltip = THIS_IS_WIP_TT
+				has_country_flag = GAEBALJUNG
+			}
+
+			#is_subject = no
+			#has_completed_focus = GEH_zero_congress_focus
+			#has_completed_focus = GEH_second_congress_focus
+			#has_completed_focus = GEH_first_congress_focus
+			#OR = {
+			#	has_completed_focus = GEH_military_leadership_committee
+			#	has_completed_focus = GEH_gehenna_leader
+			#	has_completed_focus = GEH_student_peoples_will
+			#	has_completed_focus = GEH_sword_defending_gehenna_peoples
+			#	has_completed_focus = GEH_institutional_stabilization
+			#}
+			#has_completed_focus = GEH_factory_focus_1
+			#has_completed_focus = GEH_Trinity_war
+			#custom_trigger_tooltip = {
+			#	tooltip = GEH_three_congress_focus_trigger
+			#	count_triggers = {
+			#		amount = 3
+			#		has_completed_focus = GEH_look_to_the_west
+			#		has_completed_focus = GEH_west_army_focus_1
+			#		has_completed_focus = GEH_west_army_focus_2
+			#		has_completed_focus = GEH_west_army_focus_3
+			#		has_completed_focus = GEH_Leverage_Perfect_team_strengths
+			#		has_completed_focus = GEH_prefect_army_focus_1
+			#		has_completed_focus = GEH_prefect_army_focus_2
+			#		has_completed_focus = GEH_prefect_army_focus_3
+			#		has_completed_focus = GEH_Army_focus_1
+			#		has_completed_focus = GEH_Army_focus_2
+			#		has_completed_focus = GEH_Army_focus_3
+			#	}
+			#}
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_attack_benelux 
+		icon = GFX_goal_TRM_invade_benelux
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy
+        }
+
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina_diplomacy_befriend_benelux
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_befriend_benelux 
+		icon = GFX_focus_generic_influence_benelux
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy
+        }
+
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina_diplomacy_attack_benelux
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		icon = GFX_focus_NOR_the_lone_wolf_norway
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy
+		x = -5
+		y = 2
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_attack_benelux
+            focus = GEH_three_congress_focus_no_hina_diplomacy_befriend_benelux
+		}
+		
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom
+		}
+		
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina_diplomacy_neutrality
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_central_europe_union
+		icon = GFX_focus_GER_european_confederation
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		x = 0
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_attack_millennium
+		icon = GFX_focus_attack_MIL
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		x = -1
+		y = 2
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_attack_kaiser
+		icon = GFX_focus_attack_KAI
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		x = -2
+		y = 3
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_attack_millennium
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_attack_south_kivotos
+		icon = GFX_focus_GER_all_for_the_front
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		x = 1
+		y = 2
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_1
+		icon = GFX_focus_generic_fiat
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		x = 0
+		y = 3
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_attack_south_kivotos
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_2
+		icon = GFX_focus_RAJ_the_crown_and_the_world
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		x = 2
+		y = 3
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_attack_south_kivotos
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_3
+		icon = GFX_focus_generic_spread_fascism
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		x = 1
+		y = 4
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_1
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_2
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom
+		icon = GFX_goal_GEH_distinction_of_zealous_members
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy
+		x = 0
+		y = 2
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_attack_benelux
+            focus = GEH_three_congress_focus_no_hina_diplomacy_befriend_benelux
+		}
+		
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		}
+		
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina_diplomacy_neutrality
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_claim_intermarium
+		icon = GFX_focus_GER_the_eastern_border
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_anti_bolshevism_declaration
+		icon = GFX_focus_SWE_the_beast_stirs
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_attack_soviet
+		icon = GFX_focus_attack_soviet
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom
+		x = 0
+		y = 2
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_claim_intermarium
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_anti_bolshevism_declaration
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id =  GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_1
+
+		icon = GFX_focus_SOV_panslavic_nationalism
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_attack_soviet
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_attack_soviet
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id =  GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_2
+
+		icon = GFX_focus_generic_winter_warfare
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_attack_soviet
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_attack_soviet
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id =  GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_3
+
+		icon = GFX_goal_HEU_gehenna
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_attack_soviet
+		x = 0
+		y = 2
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_1
+            focus = GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_2
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy
+		x = 4
+		y = 2
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_attack_benelux
+            focus = GEH_three_congress_focus_no_hina_diplomacy_befriend_benelux
+		}
+		
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
+		}
+		
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
 
 ## 히나 탈주 중점 끝/
 

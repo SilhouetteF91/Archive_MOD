@@ -883,7 +883,50 @@
 
  GEH_diplomacy_decagrammaton_alliance_focus: "데카그라마톤과의 연합"
  GEH_diplomacy_decagrammaton_alliance_focus_desc: "그들은 위험한 존재가 아닙니다. 더 높은 경지로 수행하는 수행자입니다. 저항하지 마십시오."
- 
+
+ ### 히나 탈주 루트 외교 ###
+
+ GEH_three_congress_focus_no_hina_diplomacy: "제4차 [ROOT.GetAdjective] 총회"
+
+ GEH_three_congress_focus_no_hina_diplomacy_attack_benelux: "저지대 통합"
+
+ GEH_three_congress_focus_no_hina_diplomacy_befriend_benelux: "총학생회의 베네룩스 통치 존중"
+
+ #### 게헨나 예외주의
+ GEH_three_congress_focus_no_hina_diplomacy_gehenna_first: "게헨나 예외주의"
+
+ GEH_three_congress_focus_no_hina_diplomacy_central_europe_union: "미텔에우로파 전선"
+
+ GEH_three_congress_focus_no_hina_diplomacy_attack_millennium: "서부 키보토스 정복"
+
+ GEH_three_congress_focus_no_hina_diplomacy_attack_kaiser: "카이저의 영향력 일소"
+
+ GEH_three_congress_focus_no_hina_diplomacy_attack_south_kivotos: "남부 키보토스 정복" 
+
+ GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_1: "우리의 규율 강제" 
+
+ GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_2: "키보토스계가 하나로"
+
+ GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_3: "모든 질서는 게헨나로 향한다"
+
+ #### 키보토스의 수호자
+ GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom: "키보토스의 수호자"
+
+ GEH_three_congress_focus_no_hina_diplomacy_claim_intermarium: "인터마리움 영유권 주장"
+
+ GEH_three_congress_focus_no_hina_diplomacy_anti_bolshevism_declaration: "반볼셰비즘 선언"
+
+ GEH_three_congress_focus_no_hina_diplomacy_attack_soviet: "신들의 황혼 작전"
+
+ GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_1: "백군 지원자 모집"
+
+ GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_2: "동계전 긴급 훈련"
+
+ GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_3: "게헨나 동방 개척"
+
+ #### 중립 정책
+ GEH_three_congress_focus_no_hina_diplomacy_neutrality: "중립 게헨나"
+
  #########
  #중점 수정#
 #########
