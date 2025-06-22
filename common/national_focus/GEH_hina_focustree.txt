@@ -7175,12 +7175,16 @@ focus_tree = {
 					country_leader = {
 						ideology = fascism_ideology
 						expire = "1980.1.1"
-						desc = "GEH_hina_ako_route_base_leader_desc"
+						desc = "GEH_hina_c_route_base_leader_desc"
 						traits = {
 							b_tjsehqnwkd GEH_military_chairman GEH_blame_director
 						}
 					}
 				}
+			}
+	
+			set_country_leader_description = {
+				desc = GEH_hina_c_route_base_leader_desc
 			}
 		}
 	}
@@ -7369,6 +7373,7 @@ focus_tree = {
 				limit = {
 					has_trait = GEH_blame_director
 					has_ideology = despotism
+					is_character = GEH_hina
 				}
 				swap_country_leader_traits = {
 					ideology = despotism
@@ -7380,13 +7385,40 @@ focus_tree = {
 				limit = {
 					has_trait = GEH_blame_director
 					has_ideology = fascism_ideology
+					is_character = GEH_hina
 				}
 				swap_country_leader_traits = {
 					ideology = fascism_ideology
 					remove = GEH_blame_director
 					add = GEH_blame_director_2
 				}
-			}     
+			}   
+			every_character = {
+				limit = {
+					has_trait = GEH_blame_director
+					has_ideology = despotism
+					NOT = { 
+						is_character = GEH_hina
+					}
+				}
+				remove_country_leader_trait = {
+					ideology = neutrality
+					trait = GEH_blame_director
+				}
+			}
+			every_character = {
+				limit = {
+					has_trait = GEH_blame_director
+					has_ideology = fascism_ideology
+					NOT = { 
+						is_character = GEH_hina
+					}
+				}
+				remove_country_leader_trait = {
+					ideology = fascism
+					trait = GEH_blame_director
+				}
+			}    
 		}
 	}
     focus = {
@@ -7434,10 +7466,9 @@ focus_tree = {
 					has_trait = GEH_blame_director
 					has_ideology = despotism
 				}
-				swap_country_leader_traits = {
-					ideology = despotism
-					remove = GEH_blame_director
-					add = GEH_blame_director_2
+				remove_country_leader_trait = {
+					ideology = neutrality
+					trait = GEH_blame_director
 				}
 			}
 			every_character = {
@@ -7445,10 +7476,9 @@ focus_tree = {
 					has_trait = GEH_blame_director
 					has_ideology = fascism_ideology
 				}
-				swap_country_leader_traits = {
-					ideology = fascism_ideology
-					remove = GEH_blame_director
-					add = GEH_blame_director_2
+				remove_country_leader_trait = {
+					ideology = fascism
+					trait = GEH_blame_director
 				}
 			}     
 		}
