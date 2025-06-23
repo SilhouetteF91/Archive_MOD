@@ -348,6 +348,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/TRN/idea_TRN_HYA_customs_union_ns.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_TRN_arius_problem_ns"
+		textureFile = "gfx/interface/ideas/TRN/TRN_arius_problem_ns.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_TRM_Trinity_Grande_Armee"
 		textureFile = "gfx/interface/ideas/Trinity_Grande_Armee.tga"
 	}

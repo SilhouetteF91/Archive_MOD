@@ -4047,6 +4047,24 @@ country_event = { # 백귀야행 - 트리니티 군사 협력
 
 	option = { #
 		name = TRMDIP.67.a
+		army_experience = 75
+		add_doctrine_cost_reduction = {
+			name = TRMDIP_67_RESEARCH_BONUS_NAME
+			cost_reduction = 0.75
+			category = land_doctrine
+			uses = 1
+		}
+
+	}
+	option = { #
+		name = TRMDIP.64.c
+		custom_effect_tooltip = TRM_eng_event_chain_tt
+
+		hidden_effect = {
+			TRM = { 
+				country_event = { id = TRMDIP.65 hours = 01 }
+			}
+		}
 	}
 }
 
@@ -10170,11 +10188,18 @@ country_event = { # 아리우스 분교의 운명
 
 	option = {
 		name = trinity.44.a
-
+		add_power_balance_value = {
+			id = TRM_power_balance
+			value = -0.05
+		}
+		set_temp_variable = { TRN_Honor_change = 1 }
+		TRN_add_Honor = yes
 	}
 	option = {
 		name = trinity.44.b
-
+		set_temp_variable = { TRN_Honor_change = -1 }
+		TRN_add_Honor = yes
+		add_war_support = 0.02
 	}
 }
 
@@ -11003,16 +11028,36 @@ country_event = { # 색채 침입 - 미카
 		mark_focus_tree_layout_dirty = yes
 	}
 }
-unit_leader_event = { # 하카리 아츠코
+country_event = { # 하카리 아츠코 발동용
 	id = trnfla.25
 	title = trnfla.25.t
 	desc = trnfla.25.desc
+	picture = GFX_report_event_atsuko
+	
+	is_triggered_only = no
+    	fire_only_once = yes
+
+	trigger = {
+		tag = TRM
+		has_completed_focus = TRN_religious_conversion
+		has_completed_focus = TRN_annex_the_bandit_states
+		TRM = { has_character = atsuko }
+	}
+	option = {
+		name = trnfla.25.a 
+	}
+}
+
+country_event = { # 백화요란 - 정의실현부 공동 훈련
+	id = trnfla.27
+	title = trnfla.27.t
+	desc = trnfla.27.desc
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
-		name = trnfla.25.a 
+		name = trnfla.27.a 
 	}
 }
 
