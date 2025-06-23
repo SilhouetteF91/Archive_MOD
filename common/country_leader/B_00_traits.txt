@@ -3668,13 +3668,13 @@ leader_traits = {
 		army_attack_factor = 0.10
 		army_defence_factor = 0.10
 	}
-	HYA_hyakkaryouran_resolution_council_chairman = { #퇴부와 백련의 계승자
+	HYA_hyakkaryouran_resolution_council_chairman = { #백련의 계승자
 		random = no
 		stability_factor = 0.05
 		offensive_war_stability_factor = 0.10
 		defensive_war_stability_factor = 0.10
 	}
-	HYA_hyakkaryouran_resolution_council_deputy = { #백화요란 분쟁조정위원회의 부장 대리
+	HYA_hyakkaryouran_resolution_council_deputy = { #백화요란 분쟁조정위원회의 부장 (임시)
 		random = no
 	}
 	HYA_Maternal_Torojaemon = { #화조풍월부 산모토 고로자에몬의 부장
@@ -3682,6 +3682,11 @@ leader_traits = {
 	}
 	HYA_Mangryangz = { #망량즈의 리더
 		random = no
+	}
+	HYA_Twilight_Savior = { #황혼의 구원자
+		random = no
+		justify_war_goal_time = -0.50
+		DRIFT_DEFENCE_FACTOR = 0.25
 	}
 	SRT_T1a = { #RABBIT 소대의 소대장
 		random = no

@@ -294,4 +294,8 @@ opinion_modifiers = {
 	TRN_german_influence = {
 		value = 25
 	}
+
+	TRN_arius_problem_modifier = {
+		value = -100
+	}
 }

@@ -1453,6 +1453,20 @@ ideas = {
 				party_popularity_stability_factor = 0.2
 			}
 		}
+		TRN_trinity_cause_3_ns = {
+			name = TRN_trinity_cause_ns
+			picture = TRN_trinity_cause_2_ns
+			
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = 0.1
+				modifier_army_sub_unit_halo_infantry_attack_factor = 0.05
+				modifier_army_sub_unit_halo_infantry_defence_factor = 0.05
+				party_popularity_stability_factor = 0.2
+				army_attack_against_major_factor = 0.05
+				army_defence_against_major_factor = 0.1
+			}
+		}
 		TRM_trinity_farm_ns = {
 			picture = LIT_invested_in_farms
 			modifier = {
@@ -1594,6 +1608,45 @@ ideas = {
 				army_org_factor = 0.1
 				party_popularity_stability_factor = 0.15
 				war_stability_factor = 0.2
+			}
+		}
+		TRN_arius_problem_ns = {
+			on_add = {
+				TRM = {
+					add_opinion_modifier = {
+						target = ARI
+						modifier = TRN_arius_problem_modifier
+					}
+				}
+				ARI = {
+					add_opinion_modifier = {
+						target = TRM
+						modifier = TRN_arius_problem_modifier
+					}
+				}
+
+			}
+			on_remove = {
+				TRM = {
+					remove_opinion_modifier = {
+						target = ARI
+						modifier = TRN_arius_problem_modifier
+					}
+				}
+				ARI = {
+					remove_opinion_modifier = {
+						target = TRM
+						modifier = TRN_arius_problem_modifier
+					}
+				}
+			}
+			modifier = {
+				stability_factor = -0.05
+				custom_modifier_tooltip = TRN_arius_problem_modifier_tt
+			}
+			targeted_modifier = {
+				tag = ARI
+				attack_bonus_against_cores = -0.1
 			}
 		}
 	}
