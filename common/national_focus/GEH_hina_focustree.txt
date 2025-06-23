@@ -4013,7 +4013,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = GEH_national_defence_fund
-				days = 720
+				days = 730 #2년
 			}
 		}
 	}
@@ -11171,6 +11171,30 @@ focus_tree = {
 			}
 		}
 
+		offset = {
+			x = -4
+			trigger = {
+				is_debug = no
+				has_country_flag = hina_assembly_a_serenade_flag
+			}
+		}
+
+		offset = {
+			x = -3
+			trigger = {
+				is_debug = no
+				has_country_flag = hina_assembly_c_serenade_flag
+			}
+		}
+
+		offset = {
+			x = -4
+			trigger = {
+				is_debug = no
+				has_country_flag = hina_assembly_normal_serenade_flag
+			}
+		}
+
 		available = {
 
 			custom_trigger_tooltip = {
@@ -11241,7 +11265,35 @@ focus_tree = {
 		y = 1
 
 		available = {
+			is_puppet = no
+		}
 
+		bypass = {
+			OR = {
+				AND = {
+					NOT = { country_exists = SHE }
+					NOT = { country_exists = COU }
+					NOT = { country_exists = KSP }
+				}
+				OR = {
+					has_war_with = SHE
+					has_war_with = COU
+					has_war_with = KSP
+				}
+			}
+		}
+
+		bypass_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = SHE
+						is_core_of = COU
+						is_core_of = KSP
+					}
+				}
+				add_claim_by = ROOT
+			}
 		}
 		
         prerequisite = {
@@ -11265,7 +11317,44 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = SHE
+						is_core_of = COU
+						is_core_of = KSP
+					}
+				}
+				add_claim_by = ROOT
+			}
 
+			if = {
+				limit = {
+					NOT = { SHE = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = SHE
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = {
+					NOT = { COU = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = COU
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = {
+					NOT = { KSP = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = KSP
+					type = puppet_wargoal_focus
+				}
+			}
 		}
 	}
 
@@ -11279,7 +11368,7 @@ focus_tree = {
 		y = 1
 
 		available = {
-
+			is_puppet = no
 		}
 		
         prerequisite = {
@@ -11303,7 +11392,39 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_opinion_modifier = {
+				target = SHE
+				modifier = friendship_om
+			}
+			add_opinion_modifier = {
+				target = COU
+				modifier = friendship_om
+			}
+			add_opinion_modifier = {
+				target = KSP
+				modifier = friendship_om
+			}
 
+			SHE = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = friendship_om
+				}
+			}
+			COU = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = friendship_om
+				}
+			}
+			KSP = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = friendship_om
+				}
+			}
+
+			add_stability = 0.05
 		}
 	}
 
@@ -11317,7 +11438,7 @@ focus_tree = {
 		y = 2
 
 		available = {
-
+			is_puppet = no
 		}
 		
         prerequisite = {
@@ -11330,23 +11451,30 @@ focus_tree = {
 		}
 		
 		mutually_exclusive = {
-			focus = GEH_three_congress_focus_no_hina_diplomacy_neutrality
+			focus = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
 		}
 
 		ai_will_do = {
 			base = 100
-			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
-			}
 		}
 
 		completion_reward = {
-
+			set_rule = {
+				can_create_factions = yes
+			}
+			add_war_support = 0.1
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = KAI
+						original_tag = MIL
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+			}
 		}
 	}
 
@@ -11360,7 +11488,10 @@ focus_tree = {
 		y = 1
 
 		available = {
-
+			OR = {
+				is_in_faction = no
+				is_faction_leader = yes
+			}
 		}
 		
         prerequisite = {
@@ -11370,17 +11501,19 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
+				factor = 3
 				has_war = yes
 			}
 		}
 
 		completion_reward = {
-
+			set_country_flag = GEH_finding_ally_flag
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction = GEH_central_europe
+			}
 		}
 	}
 
@@ -11394,27 +11527,41 @@ focus_tree = {
 		y = 2
 
 		available = {
-
+			is_puppet = no
 		}
 		
         prerequisite = {
             focus = GEH_three_congress_focus_no_hina_diplomacy_gehenna_first
 		}
 
+		search_filters = {			
+			FOCUS_FILTER_ANNEXATION
+		}
+
 		ai_will_do = {
 			base = 100
 			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
+				factor = 0
+				has_war_with_major = yes # 대규모 전선을 두 개로 만들지 않는다
 			}
 		}
 
 		completion_reward = {
-
+			if = {
+				limit = {
+					MIL = { owns_state = 16 }
+				}
+				create_wargoal = {
+					target = MIL
+					type = puppet_wargoal_focus
+				}
+			}
+			else = {
+				create_wargoal = {
+					target = FRA
+					type = puppet_wargoal_focus
+				}
+			}
 		}
 	}
 
@@ -11428,7 +11575,11 @@ focus_tree = {
 		y = 3
 
 		available = {
+			is_puppet = no
+		}
 
+		bypass = {
+			has_war_with = KAI
 		}
 		
         prerequisite = {
@@ -11438,17 +11589,16 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
+				factor = 0
+				has_war_with_major = yes # 대규모 전선을 두 개로 만들지 않는다
 			}
 		}
 
 		completion_reward = {
-
+			create_wargoal = {
+				target = KAI
+				type = puppet_wargoal_focus
+			}
 		}
 	}
 
@@ -11472,17 +11622,39 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
+				factor = 0
+				has_war_with_major = yes # 대규모 전선을 두 개로 만들지 않는다
 			}
 		}
 
 		completion_reward = {
-
+			if = {
+				limit = {
+					NOT = { SHA = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = SHA
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = {
+					NOT = { HYA = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = HYA
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = {
+					NOT = { ABY = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = ABY
+					type = puppet_wargoal_focus
+				}
+			}
 		}
 	}
 
@@ -11516,6 +11688,19 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = GEH_gehenna_first_discipline_1 }
+					NOT = { has_idea = GEH_gehenna_first_discipline_2 }
+				}
+				add_ideas = GEH_gehenna_first_discipline_1
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = GEH_gehenna_first_discipline_1
+					add_idea = GEH_gehenna_first_discipline_2
+				}
+			}
 
 		}
 	}
@@ -11550,7 +11735,19 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			if = {
+				limit = {
+					NOT = { has_idea = GEH_gehenna_first_discipline_1 }
+					NOT = { has_idea = GEH_gehenna_first_discipline_2 }
+				}
+				add_ideas = GEH_gehenna_first_discipline_1
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = GEH_gehenna_first_discipline_1
+					add_idea = GEH_gehenna_first_discipline_2
+				}
+			}
 		}
 	}
 
@@ -11564,7 +11761,11 @@ focus_tree = {
 		y = 4
 
 		available = {
-
+			16 = { owns_or_subject_of = yes } #밀레니엄
+			126 = { owns_or_subject_of = yes } #카이저
+			4 = { owns_or_subject_of = yes } #산해경
+			9 = { owns_or_subject_of = yes } #백귀야행
+			has_war = no
 		}
 		
         prerequisite = {
@@ -11576,15 +11777,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 100
-			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
-			}
+			base = 1000
 		}
 
 		completion_reward = {
@@ -11602,7 +11795,7 @@ focus_tree = {
 		y = 2
 
 		available = {
-
+			is_puppet = no
 		}
 		
         prerequisite = {
@@ -11615,23 +11808,19 @@ focus_tree = {
 		}
 		
 		mutually_exclusive = {
-			focus = GEH_three_congress_focus_no_hina_diplomacy_neutrality
+			focus = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
 		}
 
 		ai_will_do = {
 			base = 100
-			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
-			}
 		}
 
 		completion_reward = {
-
+			set_rule = {
+				can_create_factions = yes
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
 		}
 	}
 	 
@@ -11647,6 +11836,28 @@ focus_tree = {
 		available = {
 
 		}
+
+		bypass = {
+			OR = {
+				NOT = { country_exists = POL }
+				POL = { is_in_faction_with = ROOT }
+			}
+		}
+
+		bypass_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = POL
+						is_core_of = ROM
+						is_core_of = LIT
+						is_core_of = LAT
+						is_core_of = EST
+					}
+				}
+				add_claim_by = ROOT
+			}
+		}
 		
         prerequisite = {
             focus = GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom
@@ -11655,17 +11866,29 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
+				factor = 0
+				has_war_with_major = yes # 대규모 전선을 두 개로 만들지 않는다
 			}
 		}
 
 		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = POL
+						is_core_of = ROM
+						is_core_of = LIT
+						is_core_of = LAT
+						is_core_of = EST
+					}
+				}
+				add_claim_by = ROOT
+			}
 
+			create_wargoal = {
+				target = POL
+				type = annex_everything
+			}
 		}
 	}
 	 
@@ -11679,7 +11902,11 @@ focus_tree = {
 		y = 1
 
 		available = {
+			NOT = { has_government = communism }
+		}
 
+		bypass = {
+			has_government = communism
 		}
 		
         prerequisite = {
@@ -11699,7 +11926,23 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			
+			add_political_power = 120
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.10
+			}
 
+			every_other_country = {
+				limit = {
+					has_government = communism
+					NOT = { has_ideology = monarchist_socialism }
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+			}
 		}
 	}
 	 
@@ -11713,7 +11956,17 @@ focus_tree = {
 		y = 2
 
 		available = {
+			is_puppet = no
+			any_neighbor_country = {
+				tag = SOV
+			}
+		}
 
+		bypass = {
+			OR = {
+				NOT = { country_exists = SOV }
+				SOV = { is_in_faction_with = ROOT }
+			}
 		}
 		
         prerequisite = {
@@ -11727,17 +11980,16 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
+				factor = 0
+				has_war_with_major = yes # 대규모 전선을 두 개로 만들지 않는다
 			}
 		}
 
 		completion_reward = {
-
+			create_wargoal = {
+				target = SOV
+				type = puppet_wargoal_focus
+			}
 		}
 	}
 	 
@@ -11752,7 +12004,14 @@ focus_tree = {
 		y = 1
 
 		available = {
+			has_war_with = SOV
+		}
 
+		bypass = {
+			OR = {
+				NOT = { country_exists = SOV }
+				SOV = { is_puppet_of = ROOT }
+			}
 		}
 		
         prerequisite = {
@@ -11761,18 +12020,21 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 100
-			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
-			}
 		}
 
 		completion_reward = {
-
+			add_intel = {
+			    target = SOV
+			    civilian_intel = 40
+			    army_intel = 20
+			    navy_intel = 20
+			    airforce_intel = 20
+			}
+			
+			add_collaboration = {
+			    target = SOV
+			    value = 0.15
+			}
 		}
 	}
 	 
@@ -11787,7 +12049,14 @@ focus_tree = {
 		y = 1
 
 		available = {
+			has_war_with = SOV
+		}
 
+		bypass = {
+			OR = {
+				NOT = { country_exists = SOV }
+				SOV = { is_puppet_of = ROOT }
+			}
 		}
 		
         prerequisite = {
@@ -11807,7 +12076,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_timed_idea = {
+				idea = GEH_winter_special_equipment
+				days = 730
+			}
 		}
 	}
 	 
@@ -11822,7 +12094,7 @@ focus_tree = {
 		y = 2
 
 		available = {
-
+			219 = { owns_or_subject_of = yes }
 		}
 		
         prerequisite = {
@@ -11848,8 +12120,8 @@ focus_tree = {
 	}
 	 
     focus = {
-		id = GEH_three_congress_focus_no_hina_diplomacy_neutrality
-		icon = GFX_goal_generic_neutrality_focus
+		id = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
+		icon = GFX_goal_GEH_prefect_team_charge_gray
 		cost = 3
 
 		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy
@@ -11871,6 +12143,329 @@ focus_tree = {
 		
 		mutually_exclusive = {
 			focus = GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			add_stability = 0.1
+			every_other_country = {
+				limit = {
+					original_tag = ITA
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+			}
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction = GEH_central_europe
+			}
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_alliance
+		icon = GFX_focus_AFG_establish_darulaman
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
+		}
+
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_merge
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_merge
+		icon = GFX_focus_GER_the_austrian_question
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
+		}
+
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_alliance
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_soviet_peace
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
+		x = 3
+		y = 1
+
+		available = {
+			country_exists = SOV
+			NOT = { has_war_with = SOV }
+			SOV = { is_puppet = no }
+			is_puppet = no
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_soviet_military_exchange
+		icon = GFX_focus_SOV_organization_centralization_discipline
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
+		x = 3
+		y = 2
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_soviet_peace
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			add_ideas = GEH_weapons_licensing
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_balkans_alliance
+		icon = GFX_focus_generic_balkan_diplomacy
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
+		x = -1
+		y = 2
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_merge
+            focus = GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_alliance
+		}
+
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina_diplomacy_balkans_merge
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_balkans_merge
+		icon = GFX_focus_generic_balkans_focus
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
+		x = 1
+		y = 2
+
+		available = {
+
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_merge
+            focus = GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_alliance
+		}
+
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina_diplomacy_balkans_alliance
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_attack_italy
+		icon = GFX_focus_attack_italy
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
+		x = 0
+		y = 3
+
+		available = {
+			is_puppet = no
+		}
+
+		bypass = {
+			OR = {
+				NOT = { country_exists = ITA }
+				ITA = { is_in_faction_with = ROOT }
+			}
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_balkans_alliance
+            focus = GEH_three_congress_focus_no_hina_diplomacy_balkans_merge
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = ITA
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	 
+    focus = {
+		id = GEH_three_congress_focus_no_hina_diplomacy_union_south_kivotos
+		icon = GFX_focus_generic_the_council_of_europe
+		cost = 3
+
+		relative_position_id = GEH_three_congress_focus_no_hina_diplomacy_realpolitik
+		x = 0
+		y = 4
+
+		available = {
+			2 = { owns_or_subject_of = yes } #로마
+			has_war = no
+		}
+		
+        prerequisite = {
+            focus = GEH_three_congress_focus_no_hina_diplomacy_attack_italy
 		}
 
 		ai_will_do = {

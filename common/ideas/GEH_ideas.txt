@@ -2815,6 +2815,81 @@ ideas = {
 			
 		}
 
+		### 히나 탈주 루트 외교 ###
+
+		GEH_winter_special_equipment = {
+	   		picture = SWE_save_finland
+				
+			allowed = {
+
+			}
+
+			available = {
+
+			}
+
+			modifier = {
+				terrain_trait_xp_gain_factor = 0.1
+       			acclimatization_cold_climate_gain_factor = 0.10
+			}
+  		}
+
+		GEH_gehenna_first_discipline_1 = {
+			name = GEH_gehenna_first_discipline
+
+	   		picture = generic_air_bonus
+				
+			allowed = {
+
+			}
+
+			available = {
+
+			}
+
+			modifier = {
+				resistance_damage_to_garrison = -0.15
+				resistance_growth = -0.1
+			}
+  		}
+
+		GEH_gehenna_first_discipline_2 = {
+			name = GEH_gehenna_first_discipline
+
+	   		picture = generic_air_bonus
+				
+			allowed = {
+
+			}
+
+			available = {
+
+			}
+
+			modifier = {
+				resistance_damage_to_garrison = -0.15
+				resistance_growth = -0.1
+				unit_infantry_design_cost_factor = -0.5
+				org_loss_at_low_org_factor = -0.1
+			}
+  		}
+		
+		GEH_weapons_licensing = {
+			allowed = {
+				
+			}
+
+			picture = generic_license_production
+				
+			removal_cost = -1
+				
+
+			modifier = {
+				license_production_speed = 0.25
+				license_purchase_cost = -0.5
+			}
+		}
+
 
 
 	}
