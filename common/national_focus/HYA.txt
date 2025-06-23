@@ -1105,7 +1105,7 @@ focus_tree = {
 			remove_ideas = HYA_mangryangz
 		}
 	}
-	focus = {
+	focus = { # 수행의 힘
 		relative_position_id = HYA_focus_26
 		id = HYA_focus_32
 		icon = GFX_focus_jap_spiritual_mobilization
@@ -1125,7 +1125,7 @@ focus_tree = {
 			add_ideas = HYA_suhanghim
 		}
 	}
-	focus = { #
+	focus = {
 		relative_position_id = HYA_focus_32
 		id = HYA_focus_45
 		icon = GFX_goal_HYA_Kosaka_Wakamo_suspend
@@ -4757,7 +4757,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { # 모두를 지켜보는 눈
 		id = HYA_focus_121
 		icon = GFX_goal_demand_sudetenland
 		prerequisite = { focus = HYA_focus_123 }
@@ -4765,6 +4765,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = HYA_focus_119
 		cost = 5
+		completion_reward = {
+			add_ideas = HYA_Observe_Eye
+		}
 	}
 
 	focus = {
@@ -4791,7 +4794,7 @@ focus_tree = {
 	    }
 	}
 
-	focus = {
+	focus = { # 황혼의 아야메
 		id = HYA_focus_124
 		icon = GFX_goal_HYA_twilight_Ayame
 		prerequisite = { focus = HYA_focus_121 }
@@ -4828,5 +4831,28 @@ focus_tree = {
 		y = 1
 		relative_position_id = HYA_focus_120
 		cost = 5
+	}
+
+	focus = { # 황혼의 힘을 세계에 향하여
+		id = HYA_focus_126
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HYA_focus_124 }
+		x = 0
+		y = 1
+		relative_position_id = HYA_focus_124
+		cost = 5
+	}
+
+	focus = { # 황혼의 구원자
+		id = HYA_focus_127
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HYA_focus_126 }
+		x = 0
+		y = 2
+		relative_position_id = HYA_focus_126
+		cost = 5
+		completion_reward={
+			add_country_leader_trait = HYA_Twilight_Savior
+	    }
 	}
 }

@@ -723,5 +723,14 @@ ideas = {
 				production_speed_bunker_factor = 0.2
 			}
 		}
+		HYA_Observe_Eye = {
+			picture = generic_infantry_bonus
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				RESISTANCE_TARGET = -0.10
+				RESISTANCE_DECAY = 0.15
+			}
+		}
 	}
 }
