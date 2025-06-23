@@ -3553,6 +3553,66 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_GEI_DEC_on_the_beach"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_on_the_beach.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_arona"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_arona.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_chokamah"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_chokamah.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_glory"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_glory.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_god_help"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_god_help.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_heaven_door"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_heaven_door.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_homefront"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_homefront.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_schale"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_schale.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_path_of_aspirations_and_corpses"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_path_of_aspirations_and_corpses.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_requiem"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_requiem.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_liberation_front"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_liberation_front.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_mil"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_mil.png"
+	}
+
+	spriteType = {
 		name = "GFX_GEI_DEC_influenced"
 		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_influenced.png"
 	}

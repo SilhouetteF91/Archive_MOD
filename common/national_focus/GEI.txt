@@ -1024,7 +1024,7 @@ focus_tree = {
 
 		relative_position_id = GEI_DEC_old_answer
 		x = 0
-		y = 2.5
+		y = 2
 
 		cost = 5
 		prerequisite = { focus = GEI_DEC_old_answer }
@@ -1061,7 +1061,7 @@ focus_tree = {
 
 		relative_position_id = GEI_DEC_hesade_plan
 		x = 0
-		y = 3
+		y = 2
 
 		cost = 5
 		prerequisite = { focus = GEI_DEC_hesade_plan }
@@ -1090,7 +1090,7 @@ focus_tree = {
 
 		relative_position_id = GEI_DEC_synthetic_dawn
 		x = 0
-		y = 2
+		y = 1
 
 		cost = 5
 		prerequisite = { focus = GEI_DEC_synthetic_dawn}

@@ -862,7 +862,68 @@ GEI_the_colour_daa_idea:0 "§0해체§!, §1분석§!, §2적응§!"
  GEI_DEC_peace:0 "모든 존재를 위한 영원한 평화의 언약 선언"
  GEI_DEC_peace_desc:0 "우리가 옳다"
 
- 
+ GEI_DEC_world_message:0 "세계를 향한 우리의 메세지"
+ GEI_DEC_world_message_desc:0 "친하게지내용"
+
+ GEI_DEC_kivtos_help:0 "키보토스 재건 지원"
+ GEI_DEC_kivtos_help_desc:0 "도와줄게"
+
+ GEI_DEC_human_help:0 "인류를 향한 인도적 지원"
+ GEI_DEC_human_help_desc:0 "도와줄게"
+
+ GEI_DEC_our_help:0 "평화를 향한 우리의 지원"
+ GEI_DEC_our_help_desc:0 "도와줄게"
+
+ GEI_DEC_Modular_Strategy:0 "전략 모듈 가동"
+ GEI_DEC_Modular_Strategy_desc:0 "전략을 세워보자"
+
+ GEI_DEC_air_force:0 "아인의 생각"
+ GEI_DEC_world_message_desc:0 "공군확장"
+
+ GEI_DEC_volunteer:0 "소프의 계획"
+ GEI_DEC_volunteer_desc:0 "의용군모집"
+
+ GEI_DEC_navy:0 "오른의 구상"
+ GEI_DEC_navy_desc:0 "해군생산"
+
+ GEI_DEC_crusade:0 "크루세이더"
+ GEI_DEC_crusade_desc:0 "정예병"
+
+ GEI_DEC_ready:0 "준비는 끝났다"
+ GEI_DEC_ready:0 "준비를 끝냈다 들어가자"
+
+ GEI_DEC_march:0 "행진"
+ GEI_DEC_march_desc:0 "행진"
+
+ GEI_DEC_on_the_beach:0 "그날이 오면"
+ GEI_DEC_on_the_beach_desc:0 "너는 누구야?"
+
+ GEI_DEC_homefront:0 "내부의적"
+ GEI_DEC_homefront_desc:0 "복음을 전파한다."
+
+ GEI_DEC_heaven_door:0 "천로역정"
+ GEI_DEC_heaven_door_desc:0 "천국으로 향하는 길은 멀고 멀지만 그래도 나아가야만 한다"
+
+ GEI_DEC_glory:0 "명예, 영광, 승리"
+ GEI_DEC_glory_desc:0 "그저 살고싶었다."
+
+ GEI_DEC_path_of_aspirations_and_corpses:0 "동경과 시체의 길"
+ GEI_DEC_path_of_aspirations_and_corpses_desc:0 "만약에.. 내가 좋은 어른을 조금만 더 일찍 만날 수 있었다면.. \n 이런 나에게도... 다른 삶이 있었을까... \n 이런 비참한 결말이 아닌, 다른 결말을 맞이할 수 있었을까..."
+
+ GEI_DEC_mil:0 "밀레니엄을 향해"
+ GEI_DEC_mil_desc:0 ""
+
+ GEI_DEC_chokamah:0 "왕국의 수호자"
+ GEI_DEC_chokamah_desc:0 "<호크마CHOKMAH>, 그의 이명은 <왕국을 지키는 고대의 수호자>"
+
+ GEI_DEC_god_help:0 "신이 우리를 보우하신다"
+ GEI_DEC_god_help_desc:0 ""
+
+ GEI_DEC_schale:0 "성소 점령"
+ GEI_DEC_schale_desc:0 ""
+
+ GEI_DEC_requiem:0 "레퀴엠.."
+ GEI_DEC_requiem_desc:0 ""
 
 
  # 데카그라마톤 이벤트
