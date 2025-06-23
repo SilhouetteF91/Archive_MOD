@@ -114,6 +114,7 @@
  MEX_focus_rent_freeze_desc: "카이저 코퍼레이션이라고 불리는 기업에서 재미있는 소식이 들려왔습니다. 그들이 대부분 기계인간이라는 것, 그리고 그 기계인간들이 우리 석유에 관심을 가지고 있다는 사실입니다! 멕시코의 석유를 그들에게 주는 대가로 그들의 기술 판매를 요청한다면, 분명 그들에게도, 우리에게도 큰 도움이 될 것입니다!"
  MEX_focus_ejido_worker_militias: "새로운 산업 기술"
  MEX_focus_party_of_the_revolution: ""인터넷" 도입"
+ MEX_focus_party_of_the_revolution_desc: "인터넷은 기적의 기술입니다"
  MEX_focus_rural_infrastructure: "새로운 농업 기술"
  MEX_focus_peripheral_infrastructure: "미래를 향하여"
  MEX_focus_rural_schools: "베테랑을 향한 손길"
@@ -131,6 +132,8 @@
  MEX_focus_capital_reserves: "비센테와의 협력"
  MEX_focus_television_innovators: "PCM과의 협력"
  MEX_focus_community_of_nations: "농촌 지원금"
+ MEX_focus_purchase_belize: "점진적인 산업화 개시"
+ MEX_focus_nationlaize_the_oil_fields: ""
 
  # 이벤트
  MEX_tutorial.0.t: "OTL 멕시코와의 차이점 - 인물"
