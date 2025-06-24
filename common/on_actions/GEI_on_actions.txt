@@ -5,7 +5,7 @@ on_actions = {
 				limit = {
 					original_tag = GEI
 					NOT = { has_global_flag = GEI_end_flag }
-					has_country_flag = The_Colour_country_flag
+					#has_country_flag = The_Colour_country_flag
 				}
 				set_global_flag = GEI_end_flag
 				FROM = { set_country_flag = GEI_end_FROM_flag }

@@ -2329,6 +2329,18 @@
  GEH_ako_democratic_system_law_public_security_act: "치안유지법"
  GEH_ako_democratic_system_law_public_security_act_desc: "게헨나 국가 질서를 위협하는 공산주의자들의 정치 활동을 억제하는 이 법률은, 놀랍게도 도이칠란트 사회민주당의 강한 지지를 받습니다. 공산주의자들과 사회민주주의자들은 바이마르 공화국 내내 대립 관계였으며, 사회민주주의자들은 나치당만큼이나 혐오하는 공산주의자들이 게헨나 땅에서 다시는 보이지 않게 되기를 바랍니다."
 
+ ## 선도부 동맹국 디시전
+ #### 발칸 국가 ####
+ GEH_finding_alliance_YUG: "[YUG.GetNameDef] 측에 동맹 제안"
+ GEH_finding_alliance_ALB: "[ALB.GetNameDef] 측에 동맹 제안"
+ GEH_finding_alliance_BUL: "[BUL.GetNameDef] 측에 동맹 제안"
+ GEH_finding_alliance_ROM: "[ROM.GetNameDef] 측에 동맹 제안"
+ GEH_finding_alliance_GRE: "[GRE.GetNameDef] 측에 동맹 제안"
+
+ GEH_finding_alliance_ABY: "[ABY.GetNameDef] 측에 동맹 제안"
+ GEH_finding_alliance_HYA: "[HYA.GetNameDef] 측에 동맹 제안"
+ GEH_finding_alliance_SHA: "[SHA.GetNameDef] 측에 동맹 제안"
+
  ## 툴팁
  GEH_benriya_dominate_tt: "우리가 §Y흥신소 68§!을 병합한 §Y최초의 국가§!일 경우, 이벤트로 중점이 개방됩니다."
  GEH_robot_hina_route_tt: "실종된 소라사키 히나를 대체하기 위하여, 우리는 §Y인공지능§!을 이용한 오토마타 히나를 제작하여, 그녀가 실종되었었다는 사실 자체를 친위대 소수 외에 그 누구도 알지 못하게 할 것입니다."
@@ -2382,6 +2394,7 @@
  TRM_auto_conference_1_division_tt: "다음 주는 게헨나 전체의 합동 조약기구인 '에덴 관리기구'의 위임통치령으로 인정될 것입니다:\n§Y[5.GetName]§!, §Y[60.GetName]§!, §Y[61.GetName]§!, §Y[62.GetName]§!, §Y[63.GetName]§!, §Y[64.GetName]§!, §Y[65.GetName]§!, §Y[66.GetName]§!, §Y[67.GetName]§!, §Y[68.GetName]§!, §Y[86.GetName]§!, §Y[188.GetName]§!, §Y[762.GetName]§!, §Y[763.GetName]§!, §Y[807.GetName]§! .\n\n"
 
  GEH_managed_democracy_union_tt: "우리의 위성국들을 §Y통제민주주의 협력국§!으로 지정합니다. 새롭게 위성국이 되는 국가에도 적용됩니다."
+ GEH_if_faction_leader_tt: "만약 §Y[ROOT.GetNameDef]§!이(가) 세력 지도국이라면:"
 
  # 커스텀 패스
 

@@ -217,10 +217,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_horseman_of_the_apocalypse.tga"
 	}
 	SpriteType = {
-		name = "GFX_focus_TRN_threat_removal"
-		texturefile = "gfx/interface/goals/TRN/focus_TRN_threat_removal.tga"
-	}
-	SpriteType = {
 		name = "GFX_focus_TRN_Kyrie_eleison"
 		texturefile = "gfx/interface/goals/TRN/focus_TRN_Kyrie_eleison.tga"
 	}
