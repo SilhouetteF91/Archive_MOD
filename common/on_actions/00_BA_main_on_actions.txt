@@ -160,19 +160,6 @@ on_actions = {
 				set_country_flag = BA_ban_neutrality_parties_flag
 			}
 		}
-
-		effect = { # 게마트리아가 괴뢰국이 되면
-			if = {
-				limit = { 
-					original_tag = GEI
-					has_template = "Decagrammaton Division" 
-				}
-				delete_unit_template_and_units = {
-					division_template = "Decagrammaton Division"
-					disband = yes
-				}
-			}
-		}
 	}
 	on_release_as_puppet = {
 		effect = {
@@ -246,19 +233,6 @@ on_actions = {
 				}
 				add_ideas = BA_student_conscription_week_idea
 				set_country_flag = BA_target_of_intensive_care_flag
-			}
-		}
-
-		effect = { # 게마트리아가 괴뢰국이 되면
-			if = {
-				limit = { 
-					original_tag = GEI
-					has_template = "Decagrammaton Division" 
-				}
-				delete_unit_template_and_units = {
-					division_template = "Decagrammaton Division"
-					disband = yes
-				}
 			}
 		}
 	}
