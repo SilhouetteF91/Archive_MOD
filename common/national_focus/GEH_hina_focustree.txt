@@ -12214,7 +12214,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = GEH_if_faction_leader_tt
+			unlock_decision_tooltip = GEH_finding_alliance_ABY
+			unlock_decision_tooltip = GEH_finding_alliance_HYA
+			unlock_decision_tooltip = GEH_finding_alliance_SHA
 		}
 	}
 	 
@@ -12252,7 +12255,33 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			if = {
+				limit = {
+					NOT = { SHA = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = SHA
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = {
+					NOT = { HYA = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = HYA
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = {
+					NOT = { ABY = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = ABY
+					type = puppet_wargoal_focus
+				}
+			}
 		}
 	}
 	 
@@ -12362,7 +12391,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = GEH_if_faction_leader_tt
+			unlock_decision_tooltip = GEH_finding_alliance_YUG
+			unlock_decision_tooltip = GEH_finding_alliance_ALB
+			unlock_decision_tooltip = GEH_finding_alliance_BUL
+			unlock_decision_tooltip = GEH_finding_alliance_ROM
+			unlock_decision_tooltip = GEH_finding_alliance_GRE
 		}
 	}
 	 
@@ -12401,7 +12435,51 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			if = {
+				limit = {
+					NOT = { YUG = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = YUG
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = {
+					NOT = { ALB = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = ALB
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = {
+					NOT = { BUL = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = BUL
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = {
+					NOT = { ROM = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = ROM
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = {
+					NOT = { GRE = { is_in_faction_with = ROOT } }
+				}	
+				create_wargoal = {
+					target = GRE
+					type = puppet_wargoal_focus
+				}
+			}
 		}
 	}
 	 

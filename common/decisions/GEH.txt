@@ -510,6 +510,8 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
 
 		visible = {
 			NOT = {
+				has_completed_focus = GEH_gehenna_leader
+				has_completed_focus = GEH_three_congress_focus
 				has_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
 			}
 		}
@@ -521,7 +523,11 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = GEH_basking_in_the_brilliance_of_their_serenade_trigger_tt
-				has_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
+				OR = {
+					has_completed_focus = GEH_gehenna_leader
+					has_completed_focus = GEH_three_congress_focus
+					has_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
+				}
 			}
 		}
 
@@ -3254,4 +3260,322 @@ GEH_ako_democratic_system_category = {
 
 		}	
 	}
+}
+
+GEH_finding_alliance_category = {
+
+	GEH_finding_alliance_YUG = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			country_exists = YUG
+			NOT = { has_war_with = YUG }
+			YUG = { is_puppet = no }
+			YUG = { is_in_faction = no }
+			is_puppet = no
+		}
+
+		visible = {
+			has_completed_focus = GEH_three_congress_focus_no_hina_diplomacy_balkans_alliance
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 25
+
+		complete_effect = {
+			YUG = {
+				country_event = generic.2
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "YUG"
+				value = 200
+			}
+		}	
+	}
+
+	GEH_finding_alliance_ALB = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			country_exists = ALB
+			NOT = { has_war_with = ALB }
+			ALB = { is_puppet = no }
+			ALB = { is_in_faction = no }
+			is_puppet = no
+		}
+
+		visible = {
+			has_completed_focus = GEH_three_congress_focus_no_hina_diplomacy_balkans_alliance
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 25
+
+		complete_effect = {
+			ALB = {
+				country_event = generic.2
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ALB"
+				value = 200
+			}
+		}	
+	}
+
+	GEH_finding_alliance_BUL = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			country_exists = BUL
+			NOT = { has_war_with = BUL }
+			BUL = { is_puppet = no }
+			BUL = { is_in_faction = no }
+			is_puppet = no
+		}
+
+		visible = {
+			has_completed_focus = GEH_three_congress_focus_no_hina_diplomacy_balkans_alliance
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 25
+
+		complete_effect = {
+			BUL = {
+				country_event = generic.2
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "BUL"
+				value = 200
+			}
+		}	
+	}
+
+	GEH_finding_alliance_ROM = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			country_exists = ROM
+			NOT = { has_war_with = ROM }
+			ROM = { is_puppet = no }
+			ROM = { is_in_faction = no }
+			is_puppet = no
+		}
+
+		visible = {
+			has_completed_focus = GEH_three_congress_focus_no_hina_diplomacy_balkans_alliance
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 25
+
+		complete_effect = {
+			ROM = {
+				country_event = generic.2
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROM"
+				value = 200
+			}
+		}	
+	}
+
+	GEH_finding_alliance_GRE = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			country_exists = GRE
+			NOT = { has_war_with = GRE }
+			GRE = { is_puppet = no }
+			GRE = { is_in_faction = no }
+			is_puppet = no
+		}
+
+		visible = {
+			has_completed_focus = GEH_three_congress_focus_no_hina_diplomacy_balkans_alliance
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 25
+
+		complete_effect = {
+			GRE = {
+				country_event = generic.2
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "GRE"
+				value = 200
+			}
+		}	
+	}
+
+	## 남키보토스 ##
+
+	GEH_finding_alliance_ABY = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			country_exists = ABY
+			NOT = { has_war_with = ABY }
+			ABY = { is_puppet = no }
+			ABY = { is_in_faction = no }
+			is_puppet = no
+		}
+
+		visible = {
+			has_completed_focus = GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_alliance
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 25
+
+		complete_effect = {
+			ABY = {
+				country_event = generic.2
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ABY"
+				value = 200
+			}
+		}	
+	}
+
+	GEH_finding_alliance_HYA = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			country_exists = HYA
+			NOT = { has_war_with = HYA }
+			HYA = { is_puppet = no }
+			HYA = { is_in_faction = no }
+			is_puppet = no
+		}
+
+		visible = {
+			has_completed_focus = GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_alliance
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 25
+
+		complete_effect = {
+			HYA = {
+				country_event = generic.2
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "HYA"
+				value = 200
+			}
+		}	
+	}
+
+	GEH_finding_alliance_SHA = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			country_exists = SHA
+			NOT = { has_war_with = SHA }
+			SHA = { is_puppet = no }
+			SHA = { is_in_faction = no }
+			is_puppet = no
+		}
+
+		visible = {
+			has_completed_focus = GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_alliance
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		cost = 25
+
+		complete_effect = {
+			SHA = {
+				country_event = generic.2
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "SHA"
+				value = 200
+			}
+		}	
+	}
+
 }
