@@ -160,6 +160,19 @@ on_actions = {
 				set_country_flag = BA_ban_neutrality_parties_flag
 			}
 		}
+
+		effect = { # 게마트리아가 괴뢰국이 되면
+			if = {
+				limit = { 
+					original_tag = GEI
+					has_template = "Decagrammaton Division" 
+				}
+				delete_unit_template_and_units = {
+					division_template = "Decagrammaton Division"
+					disband = yes
+				}
+			}
+		}
 	}
 	on_release_as_puppet = {
 		effect = {
@@ -235,10 +248,49 @@ on_actions = {
 				set_country_flag = BA_target_of_intensive_care_flag
 			}
 		}
+
+		effect = { # 게마트리아가 괴뢰국이 되면
+			if = {
+				limit = { 
+					original_tag = GEI
+					has_template = "Decagrammaton Division" 
+				}
+				delete_unit_template_and_units = {
+					division_template = "Decagrammaton Division"
+					disband = yes
+				}
+			}
+		}
 	}
 	on_subject_free = {
 		effect = {
 			BA_halo_infantry_unban_effect = yes
+		}
+		effect = {
+			if = {
+				limit = { 
+					original_tag = GEI
+					NOT = { has_template = "Decagrammaton Division"  }
+				}
+				division_template = {
+					name = "Decagrammaton Division"		
+					division_names_group = GEI_DAM_01
+					is_locked = yes
+					force_allow_recruiting = yes
+					division_cap = 1
+					regiments = {
+						decagrammaton_armor = { x = 0 y = 0 }
+						decagrammaton_armor = { x = 0 y = 1 }
+						decagrammaton_armor = { x = 0 y = 2 }
+					}
+					support = {
+				        halo_recon = { x = 0 y = 0 }
+				        engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+						anti_air = { x = 0 y = 3 }
+					}
+				}
+			}
 		}
 	}
 	on_release_as_free = {
