@@ -24,7 +24,6 @@ GEH_State_government_dismantlement_work_category = {
             has_completed_focus = GEH_establishment_of_german_autonomous_government 
         }
     }
-    visible_when_empty = yes
 }
 GEH_external_activities = {
     icon = GFX_decision_category_ger_military_buildup
