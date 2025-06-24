@@ -1,4 +1,5 @@
 capital = 8 #여기가 바로 룩셈
+set_cosmetic_tag = HEU_luxembourg
 
 oob = "HEU_1936"
 
