@@ -854,7 +854,8 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-				}
+			
+		}
 	}
 
     #인간의 역사

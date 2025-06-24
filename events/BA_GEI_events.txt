@@ -2212,6 +2212,42 @@ country_event = {
 	}
 }
 
+# 키보토스 재건 이벤트
+country_event = {
+	id = GEI_DEC_event.11
+	title = GEI_DEC_event.11.t
+	desc = GEI_DEC_event.11.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.11.a
+		add_timed_idea = {
+				idea = GEI_DEC_kivtos_help
+				days = 365
+			}
+	}
+}
+
+# 인류지원 이벤트
+country_event = {
+	id = GEI_DEC_event.12
+	title = GEI_DEC_event.12.t
+	desc = GEI_DEC_event.12.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.12.a
+		add_timed_idea = {
+				idea = GEI_DEC_human_help
+				days = 365
+			}
+	}
+}
+
 
 
 

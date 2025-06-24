@@ -351,7 +351,7 @@ focus_tree = {
 
 	focus = {
 		id = GEI_DEC_volunteer
-		icon = GFX_GEI_DEC_volunteer
+		icon = GFX_GEI_DEC_ain
 
 		x = 0
 		y = 1
@@ -403,7 +403,7 @@ focus_tree = {
 
 	focus = {
 		id = GEI_DEC_air_force
-		icon = GFX_GEI_DEC_air_force
+		icon = GFX_GEI_DEC_sof
 
 		x = -2
 		y = 1
@@ -422,13 +422,53 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
+			custom_effect_tooltip = GEI_air_force
+			hidden_effect = { 
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "By Blood Alone"
+						}
+					}
+					set_technology = {
+						cv_early_fighter = 1
+						cv_CAS1 = 1
+						cv_naval_bomber1 = 1
+						early_fighter = 1
+						fighter1 = 1
+						fighter2 = 1
+						naval_bomber1 = 1
+						naval_bomber2 = 1
+						early_bomber = 1
+						CAS1 = 1
+						CAS2 = 1
+						}
+
+				}
+				else = {
+					set_technology = { fighter1 = 1 } 
+					set_technology = { fighter2 = 1 }
+					set_technology = { CAS1 = 1 }
+					set_technology = { early_bomber = 1 }
+					set_technology = { naval_bomber = 1 }
+					set_technology = { naval_bomber = 2 }
+					set_technology = { fighter2 = 1 }
+					set_technology = { aircraft_construction = 1 }
+					set_technology = {
+						aircraft_construction = 1
+						iw_small_airframe = 1
+						iw_medium_airframe = 1
+						basic_small_airframe = 1
+
+					}
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = GEI_DEC_navy
-		icon = GFX_GEI_DEC_navy
+		icon = GFX_GEI_DEC_orn
 
 		x = 2
 		y = 1
@@ -447,7 +487,39 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+    			limit = {
+        			is_core_of = PREV
+    			}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+
+			add_tech_bonus = {
+				name = GEI_cruiser_modernization
+				bonus = 4.0
+				uses = 1
+				category = cl_tech	
+				category = ca_tech
+				category = dd_tech	
+			}
+
+			create_equipment_variant = {
+				name = "prophet Class"								
+				type = ship_hull_submarine_1
+				name_group = FIN_SS_HISTORICAL
+				role_icon_index = 1
+				modules = {
+					fixed_ship_torpedo_slot = ship_torpedo_sub_1
+					fixed_ship_engine_slot = sub_ship_engine_1
+					rear_1_custom_slot = ship_mine_layer_sub
+    }
+}
+
 		}
 	}
 
@@ -497,6 +569,34 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			ITA = {
+				country_event = {id = GEI_DEC_event.12}
+			}
+
+			POL = {
+				country_event = {id = GEI_DEC_event.12}
+			}
+
+			YUG = {
+				country_event = {id = GEI_DEC_event.12}
+			}
+
+			HUN = {
+				country_event = {id = GEI_DEC_event.12}
+			}
+
+			IRE = {
+				country_event = {id = GEI_DEC_event.12}
+			}
+
+			GEK = {
+				country_event = {id = GEI_DEC_event.12}
+			}
+
+			FRA = {
+				country_event = {id = GEI_DEC_event.12}
+			}
+
 			
 		}
 	}
@@ -522,31 +622,17 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
-		}
-	}
 
-	focus = {
-		id = GEI_DEC_kivtos_help
-		icon = GFX_GEI_DEC_kivtos_help
+			every_country = {
+                limit = {
+                    NOT = {
+                        kivotos_tag = no
+                        tag = GEI
+                    }
+                }
 
-		x = -1
-		y = 1
-        relative_position_id = GEI_DEC_world_message
-
-		cost = 1
-        prerequisite = { focus = GEI_DEC_world_message}
-		text_icon = The_New_Order_focus_style
-
-		available = {
-			
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
-		}
-		completion_reward = {
+                country_event = {id = GEI_DEC_event.11}
+            }
 			
 		}
 	}

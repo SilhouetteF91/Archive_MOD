@@ -1533,7 +1533,7 @@ ideas = {
 
 			modifier = {
 				mobilization_speed = -0.5
-				training_time_factor = +1
+				training_time_factor = 0.3
 				ai_focus_aggressive_factor = 3
 				#justify_war_goal_time = -1
 				attrition = -0.2
@@ -1610,6 +1610,44 @@ ideas = {
             modifier = {
                 industrial_capacity_factory = -0.2
 				production_factory_start_efficiency_factor = -0.2
+            }
+        }
+
+		GEI_DEC_kivtos_help = { # 키보토스 재건지원
+            picture = GEI_DEC_riot_riot
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+            modifier = {
+                production_speed_buildings_factor = 0.3
+				production_factory_start_efficiency_factor = 0.2
+            }
+        }
+
+		GEI_DEC_human_help = { # 인류를 향한 인도적 지원 
+            picture = GEI_DEC_riot_riot
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.2
+				cic_construction_boost = 0.2
             }
         }
 	}
