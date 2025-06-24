@@ -2649,6 +2649,13 @@ focus_tree = {
 					civilian = { large ="GFX_HEU_aru_rikuhachima_fascist_Portrait" }
 				}
 			}
+
+			IF = {
+				limit = {
+					has_cosmetic_tag = HEU_luxembourg
+				}
+				drop_cosmetic_tag = yes
+			}
 			
 			set_global_flag = HEU_68_route_flag
 			HEU_bop_high_decrease_effect = yes
