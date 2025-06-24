@@ -3252,17 +3252,17 @@
  HEU_aru_fascist_leader_68_happy_ending_desc: "버추얼 스트리머 카자노 히오리와의 만남과 대립은 리쿠하치마 아루에게 큰 충격을 주었습니다. 아루가 처음 룩셈부르크에 남은 이유, 샤를로테 대공의 비극적인 죽음과 그로 인한 키보토스계로서의 죄책감. 아루는 어느 순간 자신이 그 모든 것을 잃어버리고, '대전이' 당일의 침략자들처럼 현지인들에게 자신의 관념을 강제하고 있었다는 것을 깨닫게 되었습니다. 아루가 비록 사악한 하드보일드 무법자를 꿈꾸는 사람이기는 했지만, 이런 사악함을 원한 것은 아니었습니다.\n\n68혁명이라는 시도 자체는 옳았을 것입니다. 키보토스인들의 삶의 질은 이전보다 나아졌으며, 세상은 아루가 원하는 방향으로 빠르게 바뀌고 있습니다. 하지만 아루는 그 발전 속에서 현지인들이 버려졌다는 사실을 깨달았습니다. 아루의 작은 낙원은 누군가의 희생을 통해 쌓아올려졌고 새로운 총학생회는 현지인들에 아무런 관심도 갖지 않았습니다.\n\n이것은 아루가 꿈꾸는 해피엔딩이 아니었습니다. '키보토스인과 현지인이 모두 사이좋게 살아갈 수 있는 작은 낙원'. 샤를로테의 유골함 앞에 서며, 아루는 한 때 잊고 있었던 그 꿈을 다시 떠올렸습니다. 결국 누군가가 춤추지 못하는 혁명은, 모두를 위한 혁명이 아니니까요."
 
  ### 힘의 균형 ###
- HEU_power_balance:0 "아루의 심리 상태"
- HEU_hard_boiled_side:0 "하드보일드"
- HEU_half_boiled_side:0 "하프보일드"
+ HEU_power_balance:0 "룩셈부르크 내부 결속도"
+ HEU_hard_boiled_side:0 "룩셈부르크-키보토스 대립"
+ HEU_half_boiled_side:0 "룩셈부르크-키보토스 조화"
 
- HEU_half_boiled_side_low:0 "약간 현지인에 온정적"
- HEU_half_boiled_side_high:0 "현지인에 온정적"
- HEU_half_boiled_side_win:0 "현지인과의 조화"
+ HEU_half_boiled_side_low:0 "문화적 조화"
+ HEU_half_boiled_side_high:0 "현지인에 우호적"
+ HEU_half_boiled_side_win:0 "현지인과의 완전한 협력"
 
- HEU_hard_boiled_side_low:0 "약간의 냉혹함"
- HEU_hard_boiled_side_high:0 "냉혹함"
- HEU_hard_boiled_side_win:0 "현지인에 대한 냉소주의"
+ HEU_hard_boiled_side_low:0 "문화적 대립"
+ HEU_hard_boiled_side_high:0 "현지인 차별"
+ HEU_hard_boiled_side_win:0 "현지인에 대한 심각한 차별"
 
  HEU_sympathy_for_the_locals:0 "현지인에 대한 공감"
  HEU_sympathy_for_the_kivotos:0 "키보토스계에 대한 공감"
