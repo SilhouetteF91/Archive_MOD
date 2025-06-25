@@ -5379,6 +5379,30 @@ news_event = { # 스트레사 전선
 	
 }
 
+news_event = { # 메트릭스
+    id = BA_news.141
+    title = BA_news.141.t
+    desc = BA_news.141.desc
+    picture = GFX_news_event_GEI_metrix
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.141.a # 필요한 조치였다.
+		trigger = {
+			tag = GEI
+        }
+    }
+
+    option = {
+        name = BA_news.141.b # 끔찍하군
+		trigger = {
+			NOT = { tag = GEI }
+        }
+    }
+}
+
 
 
 #news_event = { # 미국 트리니티 에덴 점령

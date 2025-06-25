@@ -370,7 +370,9 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
+			news_event = { id = BA_news.141 hours = 3 }
+			war_support_factor = 0.30
+			add_stability = 0.40
 		}
 	}
 
@@ -397,7 +399,7 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
+	
 		}
 	}
 
@@ -509,16 +511,56 @@ focus_tree = {
 			}
 
 			create_equipment_variant = {
-				name = "prophet Class"								
-				type = ship_hull_submarine_1
-				name_group = FIN_SS_HISTORICAL
-				role_icon_index = 1
-				modules = {
-					fixed_ship_torpedo_slot = ship_torpedo_sub_1
-					fixed_ship_engine_slot = sub_ship_engine_1
-					rear_1_custom_slot = ship_mine_layer_sub
-    }
-}
+					name = "Prophet Class"
+					type = ship_hull_super_heavy_1
+					name_group = JAP_BB_HISTORICAL
+					parent_version = 0
+					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+					modules = {
+						fixed_ship_battery_slot = ship_super_heavy_battery_1
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = heavy_ship_engine_2
+						fixed_ship_secondaries_slot = ship_secondaries_2
+						fixed_ship_armor_slot = ship_armor_shbb
+						front_1_custom_slot = ship_anti_air_1
+						front_2_custom_slot = empty
+						mid_1_custom_slot = empty
+						mid_2_custom_slot = ship_secondaries_2
+						mid_3_custom_slot = ship_secondaries_2
+						rear_1_custom_slot = ship_super_heavy_battery_1
+						rear_2_custom_slot = ship_airplane_launcher_1
+					}
+				}
+				
+				custom_effect_tooltip = GEI_DEC_battle_shipt_tt
+				hidden_effect = {
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "GEI" 
+							version_name = "Prophet Class"
+						}
+						name = "낙원" 
+						requested_factories = 1
+						progress = 0.95
+						amount = 1
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "GEI" 
+							version_name = "Prophet Class"
+						}
+						name = "예리코" 
+						requested_factories = 1
+						progress = 0.95
+						amount = 1
+					}
+				}
+			
+			
 
 		}
 	}
@@ -1097,6 +1139,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			news_event = { id = BA_news.139 hours = 1}
+
+			DE1 = {
+				transfer_state = 15
+				division_template = {
+					name = "Security Guard"
+					division_names_group = KIV_SEC_01
+					regiments = {
+						militia = {x = 0 y = 0}
+						militia = {x = 0 y = 1}
+					}
+					priority = 0
+				}
+				15 = {
+					create_unit = {
+						division = "division_template = \"Security Guard\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
+						count = 10
+						owner = DE1
+					}
+				}
+			}
+			
+			GEI = {puppet = DE1}
 		}
 	}
 
