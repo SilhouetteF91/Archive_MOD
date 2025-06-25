@@ -492,7 +492,7 @@ focus_tree = {
 				news_event = { id = BA_news.3 days = 3 }
 				news_event = { id = trinitynews.3 days = 180 }
 				add_country_leader_role = {
-					character = TRN_alzk
+					character = TRN_Misono_Mika
 					promote_leader = yes
 					country_leader = {
 						ideology = pater_nazism
@@ -1088,15 +1088,15 @@ focus_tree = {
 			custom_effect_tooltip = TRM_Endsige2_tt
 			hidden_effect = {
 				remove_country_leader_role = {
-					character = TRN_alzk
+					character = TRN_Misono_Mika
 					ideology = pater_nazism
 				}
 				add_country_leader_role = {
-					character = TRN_alzk
+					character = TRN_Misono_Mika
 					promote_leader = yes
 					country_leader = {
 						ideology = pater_nazism
-						desc = "TRN_alzk_DESC_2"
+						desc = "TRN_Misono_Mika_DESC_2"
 						traits = {
 							#TRN_mika_trait_1
 							#TRN_mika_trait_2
@@ -3115,12 +3115,12 @@ focus_tree = {
 						}
 					}
 					PREV = {  # Original country
-						TRN_alzk = { # Character
+						TRN_Misono_Mika = { # Character
 							set_nationality = PREV.PREV
 							# Transfers to breakaway
 						}
 					}
-					promote_character = TRN_alzk
+					promote_character = TRN_Misono_Mika
 				}
 				set_country_flag = ARI_puppet_state
 				set_cosmetic_tag = TRM_pater
@@ -3139,7 +3139,7 @@ focus_tree = {
 		x = -3
 		y = 3
 		completion_reward = {
-			TRN_skrltk = {
+			TRN_Kirifuji_Nagisa = {
 				remove_country_leader_trait = TRM_house_arrest
 			}
 			add_stability = 0.15
@@ -5423,7 +5423,7 @@ focus_tree = {
 			}
 			else = {
 				has_country_leader = {
-					character = TRN_skrltk
+					character = TRN_Kirifuji_Nagisa
 					ruling_only = yes
 				}
 			}
@@ -5982,7 +5982,7 @@ focus_tree = {
 			value = GFX_goal_TRN_uber_alles
 			trigger = {
 				has_country_leader = {
-					character = TRN_skrltk
+					character = TRN_Kirifuji_Nagisa
 					ruling_only = yes
 				}
 			}
@@ -5992,7 +5992,7 @@ focus_tree = {
 			trigger = {
 				NOT = {
 					has_country_leader = {
-						character = TRN_skrltk
+						character = TRN_Kirifuji_Nagisa
 						ruling_only = yes
 					}
 				}
@@ -6704,7 +6704,7 @@ focus_tree = {
 		x = 4
 		y = 0
 		relative_position_id = TRN_bring_in_vigilantes
-		cost = 2
+		cost = 4
 
 		available = {
 			has_full_control_of_state = 68
@@ -6716,6 +6716,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = { id = trnfla.23 }
+			swap_ideas = {
+				add_idea = TRN_agrarian_2_ns
+				remove_idea = TRN_agrarian_ns
+			}
 			63 = { #힌터포메른
 				BA_increase_state_category_by_one_level = yes
 			}
@@ -6794,7 +6798,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			add_ideas = TRM_cop_of_junker_ns
+				add_ideas = TRM_cop_of_junker_ns
 		}
 	}
 
@@ -6911,8 +6915,6 @@ focus_tree = {
 				uses = 1
 				category = electronics
 			}
-
-			activate_targeted_decision = { target = 64 decision = TRN_expansion_of_KWG }
 		}
 	}
 
@@ -6980,7 +6982,7 @@ focus_tree = {
 		completion_reward = {
 			modify_timed_idea = {
 				idea = BA_railway_gauge_issue
-				days = -365
+				days = -720
 			}
 		}
 	}
@@ -6998,7 +7000,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = TRN_political_instability_ns }
 			has_country_leader = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				ruling_only = yes
 			}
 		}
@@ -7025,7 +7027,7 @@ focus_tree = {
 
 		available = {
 			has_country_leader = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				ruling_only = yes
 			}
 		}
@@ -7061,7 +7063,7 @@ focus_tree = {
 
 		available = {
 			has_country_leader = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				ruling_only = yes
 			}
 		}
@@ -7072,6 +7074,9 @@ focus_tree = {
 			add_popularity = { ideology = fascism popularity = 0.06 }
 			add_ideas = TRN_JTF_political_commissar_ns
 			country_event = trinity.14 #정의실현부 정치의원
+			hidden_effect = {
+
+			}
 		}
 	}
 	focus = {
@@ -7085,7 +7090,7 @@ focus_tree = {
 
 		available = {
 			has_country_leader = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				ruling_only = yes
 			}
 		}
@@ -7096,7 +7101,7 @@ focus_tree = {
 			country_event = { id = trinity.16 days = 05 } # 상투스 분파의 절멸
 			country_event = { id = trinity.17 days = 15 } # 필리우스 분파의 운명
 			country_event = { id = trinity.19 days = 25 } # 파테르 분파 내부의 불충
-			country_event = { id = trinity.21 days = 50 random_days = 50 } # 트리니티 의용군단
+			country_event = { id = trinity.21 days = 56 random_days = 45 } # 트리니티 의용군단
 		}
 		completion_reward = {
 			set_temp_variable = { TRN_Honor_change = -10 }
@@ -7109,7 +7114,6 @@ focus_tree = {
 			
 			hidden_effect = {
 				country_event = { id = trinity.22 days = 15 } # 충성조항
-				TRM_hans_zehrer = { unit_leader_event = { id = trinity.39 days = 70 } } # 한스 프리체
 			}
 		}
 	}
@@ -7125,7 +7129,7 @@ focus_tree = {
 
 		available = {
 			has_country_leader = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				ruling_only = yes
 			}
 		}
@@ -7147,7 +7151,7 @@ focus_tree = {
 			effect_tooltip = { country_event = trinity.20 }
 			hidden_effect = {
 				set_country_leader_ideology = pater_nazism
-				TRN_alzk = { 
+				TRN_Misono_Mika = { 
 					unit_leader_event = trinity.20 
 				}
 			}
@@ -7165,11 +7169,12 @@ focus_tree = {
 				BA_ban_communism_effect = yes
 				BA_ban_neutrality_effect = yes
 
-				country_event = { id = trinity.35 days = 30 } # 보안국 재편
-				country_event = { id = trinity.37 days = 150 } # 소규모 동아리들의 운명
+				country_event = { id = trinity.35 days = 15 } # 보안국 재편
+				TRM_hans_zehrer = { unit_leader_event = { id = trinity.39 days = 25 random_days = 25 } } # 한스 프리체
+				country_event = { id = trinity.37 days = 35 random_days = 125 } # 소규모 동아리들의 운명
+				country_event = { id = trnfla.28 days = 35 random_days = 65 }
 				country_event = { id = trinity.36 days = 210 } # 안보 상황
 				country_event = { id = trnfla.12 days = 365 } # 세이아 음모론
-				# country_event = { id = trn }
 			}
 			set_country_flag = TRN_mika_honor_activate
 			unlock_decision_category_tooltip = TRN_Mika_honor_decision_cat
@@ -7298,14 +7303,18 @@ focus_tree = {
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = TRN_Carl_Schmitt_idea
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = TRM_alfred_rosenberg
 
-			custom_effect_tooltip = tooltip_white_line
-			add_power_balance_value = {
-				id = TRM_power_balance
-				value = 0.15
+			IF = {
+				limit = { 
+					has_power_balance = { id = TRM_power_balance }
+				}
+				activate_targeted_decision = { target = TRM decision = TRN_honor_sovereign_dictatorship }
 			}
+
+			#add_power_balance_value = {
+			#	id = TRM_power_balance
+			#	value = 0.15
+			#}
 		}
 	}
 	
@@ -7350,10 +7359,16 @@ focus_tree = {
 				trait = TRM_defender_of_faith
 			}
 			custom_effect_tooltip = tooltip_white_line
-			add_power_balance_value = {
-				id = TRM_power_balance
-				value = -0.15
+			IF = {
+				limit = { 
+					has_power_balance = { id = TRM_power_balance }
+				}
+				activate_targeted_decision = { target = TRM decision = TRN_honor_utilize_the_church_authority }
 			}
+			#add_power_balance_value = {
+			#	id = TRM_power_balance
+			#	value = -0.15
+			#}
 		}
 	}
 	
@@ -7370,7 +7385,7 @@ focus_tree = {
 			has_government = fascism
 			power_balance_value = {
 				id = TRM_power_balance
-				value > 0.79
+				value > 0.49
 			}
 		}
 		mutually_exclusive = { focus = TRN_student_solidarity }
@@ -7410,6 +7425,11 @@ focus_tree = {
 			}
 			add_named_threat = { threat = 5 name = TRN_Fourth_Reich }
 
+			add_power_balance_value = {
+				id = TRM_power_balance
+				value = 0.15
+			}
+
 		}
 	}
 	
@@ -7429,7 +7449,7 @@ focus_tree = {
 			has_government = fascism
 			power_balance_value = {
 				id = TRM_power_balance
-				value < -0.79
+				value < -0.49
 			}
 		}
 		mutually_exclusive = { focus = TRN_Fourth_Reich }
@@ -7461,6 +7481,10 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = TRN_Hifumi_political_advisor
 
+			add_power_balance_value = {
+				id = TRM_power_balance
+				value = -0.15
+			}
 		}
 	}
 
@@ -7763,7 +7787,7 @@ focus_tree = {
 
 		available = {
 			has_country_leader = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				ruling_only = yes
 			}
 			OR = {
@@ -7795,7 +7819,7 @@ focus_tree = {
 
 		available = {
 			has_country_leader = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				ruling_only = yes
 			}
 			OR = {
@@ -7938,7 +7962,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = TRN_legacy_of_the_prophets_ns
-			TRN_alzk = {
+			TRN_Misono_Mika = {
 				swap_country_leader_traits = {
 					remove = TRN_mika_trait_2
 					add = TRN_mika_trait_last_focus
@@ -8022,8 +8046,8 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = TRN_michael_and_warriors_ns
 			if = {
-				limit = { has_character = TRN_alzk }
-				TRN_alzk = {
+				limit = { has_character = TRN_Misono_Mika }
+				TRN_Misono_Mika = {
 					remove_trait = { trait = front_line_general }
 				}
 			}
@@ -8074,91 +8098,110 @@ focus_tree = {
 		will_lead_to_war_with = ITA
 
 		completion_reward = {
-			
-			custom_effect_tooltip = GER_war_against_major_countries_in_europe_tt
-			every_other_country = {
+			IF = {
 				limit = {
-					is_major = yes
-					any_controlled_state = {
-						is_on_continent = europe
-					}
 					OR = {
-						is_in_faction_with = ROOT
-						is_guaranteed_by = ROOT
-						has_non_aggression_pact_with = ROOT
+						TRN_very_low_honor = yes
+						TRN_low_honor = yes
 					}
-					NOT = {
-						GER = {
-							has_wargoal_against = PREV
+				}
+				custom_effect_tooltip = TRN_your_honor_is_low_tt
+				custom_effect_tooltip = GER_war_against_major_countries_in_europe_tt
+				every_other_country = {
+					limit = {
+						is_major = yes
+						any_controlled_state = {
+							is_on_continent = europe
+						}
+						OR = {
+							is_in_faction_with = ROOT
+							is_guaranteed_by = ROOT
+							has_non_aggression_pact_with = ROOT
+						}
+						NOT = {
+							GER = {
+								has_wargoal_against = PREV
+							}
 						}
 					}
-				}
-				if = {
-					limit = {
-						ROOT = { is_faction_leader = yes }
+					if = {
+						limit = {
+							ROOT = { is_faction_leader = yes }
+						}
+						ROOT = { remove_from_faction = PREV }
 					}
-					ROOT = { remove_from_faction = PREV }
-				}
-				else_if = {
-					limit = {
-						is_faction_leader = no
+					else_if = {
+						limit = {
+							is_faction_leader = no
+						}
+						ROOT = { leave_faction = yes }
 					}
-					ROOT = { leave_faction = yes }
-				}
-				if = {
-					limit = {
+					if = {
+						limit = {
+							ROOT = {
+								has_guaranteed = PREV
+							}
+						}
 						ROOT = {
-							has_guaranteed = PREV
+							diplomatic_relation = {
+							    country = PREV
+							    relation = guarantee
+							    active = no
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_non_aggression_pact_with = ROOT
+						}
+						ROOT = {
+							diplomatic_relation = {
+							    country = PREV
+							    relation = non_aggression_pact
+							    active = no
+							}
 						}
 					}
 					ROOT = {
-						diplomatic_relation = {
-						    country = PREV
-						    relation = guarantee
-						    active = no
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
 						}
 					}
 				}
-				if = {
+				every_other_country = {
 					limit = {
-						has_non_aggression_pact_with = ROOT
-					}
-					ROOT = {
-						diplomatic_relation = {
-						    country = PREV
-						    relation = non_aggression_pact
-						    active = no
+						is_major = yes
+						any_controlled_state = {
+							is_on_continent = europe
+						}
+						NOT = { is_in_faction_with = ROOT }
+						NOT = { is_guaranteed_by = ROOT }
+						NOT = { has_non_aggression_pact_with = ROOT }	
+						NOT = {
+							GER = {
+								has_wargoal_against = PREV
+							}
 						}
 					}
-				}
-				ROOT = {
-					create_wargoal = {
-						type = annex_everything
-						target = PREV
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
 					}
 				}
 			}
-			every_other_country = {
+
+			IF = {
 				limit = {
-					is_major = yes
-					any_controlled_state = {
-						is_on_continent = europe
-					}
-					NOT = { is_in_faction_with = ROOT }
-					NOT = { is_guaranteed_by = ROOT }
-					NOT = { has_non_aggression_pact_with = ROOT }	
-					NOT = {
-						GER = {
-							has_wargoal_against = PREV
-						}
+					OR = {
+						TRN_middle_honor = yes
+						TRN_high_honor = yes
+						TRN_very_high_honor = yes
 					}
 				}
-				ROOT = {
-					create_wargoal = {
-						type = annex_everything
-						target = PREV
-					}
-				}
+				custom_effect_tooltip = TRN_your_honor_is_high_tt
 			}
 
 		}
@@ -8801,6 +8844,39 @@ focus_tree = {
 				type = puppet_wargoal_focus
 			}
 			activate_targeted_decision = { decision = TRN_sha_attack_use_austrian target = TRM }
+		}
+	}
+
+	focus = { #
+		id = TRN_secure_yugoslavia
+		icon = GFX_focus_generic_attack_yugoslavia
+		x = -1
+		y = 1
+		relative_position_id = TRN_Breaking_Sanhaijing_treaty
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+			is_subject = no
+			YUG = {
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+		prerequisite = { 
+			focus = TRN_Breaking_Sanhaijing_treaty 
+			focus = TRN_secure_hungary
+		}
+		mutually_exclusive = {  }
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
 		}
 	}
 

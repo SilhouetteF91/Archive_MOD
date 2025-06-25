@@ -352,6 +352,18 @@ spriteTypes = {
 		name = "GFX_report_event_generic_riverside_road"
 		texturefile = "gfx/event_pictures/report_event_generic_riverside_road.tga"
 	}
+	spriteType = {
+		name = "GFX_report_event_generic_kivotos_city"
+		texturefile = "gfx/event_pictures/report_event_generic_kivotos_city.tga"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_kivotos_city_2"
+		texturefile = "gfx/event_pictures/report_event_generic_kivotos_city_2.tga"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_kivotos_city_3"
+		texturefile = "gfx/event_pictures/report_event_generic_kivotos_city_3.tga"
+	}
 	
 	
 	##

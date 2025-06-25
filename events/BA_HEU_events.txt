@@ -4718,7 +4718,7 @@ country_event = { #룩셈부르크 대공국의 멸망
 				ROOT = {
 					NOT = {
 						has_country_leader = {
-							character = TRN_alzk
+							character = TRN_Misono_Mika
 							ruling_only = yes
 						}
 					}
@@ -4757,7 +4757,7 @@ country_event = { #룩셈부르크 대공국의 멸망
 			AND = {
 				ROOT = {
 					has_country_leader = {
-						character = TRN_alzk
+						character = TRN_Misono_Mika
 						ruling_only = yes
 					}
 				}
