@@ -285,6 +285,9 @@
  GEH_anti_iori_party:0 "크릭스레히츠게그너"
  GEH_anti_iori_party_long:0 "크릭스레히츠게그너 (Kriegsrechtsgegner, 계엄령 반대파)"
 
+ GEH_pro_robot_hina_party:0 "게헨나 친위부"
+ GEH_pro_robot_hina_party_long:0 "게헨나 친위부"
+
  KaiserCorporationGeneralMeeting:0 "카이저 노동자 협동조합 운영위원회"
  GeneralMeeting:0 "협동조합 운영위원회"
  KaiserCorporationTradeUnion:0 "카이저 코퍼레이션 노동조합"
