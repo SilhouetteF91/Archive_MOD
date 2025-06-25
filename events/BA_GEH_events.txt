@@ -42,6 +42,10 @@ country_event = {
 		#A democratic faction leader whose faction holds at least one German core state while SOV holds another can get this.
 		has_war_with = TRM
 		NOT = { has_country_flag = GEH_unified_gehenna_flag }
+		OR = {
+			original_tag = GEM
+			original_tag = HEU
+		}
 		TRM = {
 			surrender_progress > 0.4
 			has_government = fascism
@@ -721,7 +725,9 @@ country_event = { # 1차 총회 - 2
 		}
 
 		if = {
-			limit = { has_country_flag = GEH_event_hina_route_flag1 }
+			limit = { 
+				has_country_flag = GEH_event_hina_route_flag1 
+			}
 			custom_effect_tooltip = hina_assembly_h_2_tt
 		}
 		else = {
@@ -805,7 +811,10 @@ country_event = { # 1차 총회 - 3
 		}
 
 		if = {
-			limit = { has_country_flag = GEH_event_hina_route_flag2 }
+			limit = {
+				has_country_flag = GEH_event_hina_route_flag1
+				has_country_flag = GEH_event_hina_route_flag2
+			}
 			custom_effect_tooltip = hina_assembly_h_2_tt
 		}
 		set_country_flag = GEH_event_hina_route_flag3
@@ -923,7 +932,11 @@ country_event = { # 1차 총회 - 4
 		}
 
 		if = {
-			limit = { has_country_flag = GEH_event_hina_route_flag3 }
+			limit = {
+				has_country_flag = GEH_event_hina_route_flag1
+				has_country_flag = GEH_event_hina_route_flag2
+				has_country_flag = GEH_event_hina_route_flag3
+			}
 			custom_effect_tooltip = hina_assembly_h_2_tt
 		}
 		else = {
