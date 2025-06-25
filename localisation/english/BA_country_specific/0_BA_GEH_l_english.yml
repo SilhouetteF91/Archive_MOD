@@ -887,61 +887,88 @@
  ### 히나 탈주 루트 외교 ###
 
  GEH_three_congress_focus_no_hina_diplomacy: "제4차 [ROOT.GetAdjective] 총회"
+ GEH_three_congress_focus_no_hina_diplomacy_desc: "전쟁, 분쟁, 정치적 혼란... 대전이 이후 우리에게는 많은 고통이 있었지만, 그럼에도 불구하고 [ROOT.GetLeader] 정부는 혼란을 수습하고 제4차 총회를 개최할 준비를 마쳤습니다. 새로운 총회에서는 내부 통합을 마친 우리의 대외 정책을 결정할 예정입니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_attack_benelux: "저지대 통합"
+ GEH_three_congress_focus_no_hina_diplomacy_attack_benelux_desc: "저지대는 무능력한 총학생회와 샬레의 대립으로 혼란을 겪었습니다. 그들 모두가 우리의 적입니다."
 
- GEH_three_congress_focus_no_hina_diplomacy_befriend_benelux: "총학생회의 베네룩스 통치 존중"
+ GEH_three_congress_focus_no_hina_diplomacy_befriend_benelux: "저지대 통치 존중"
+ GEH_three_congress_focus_no_hina_diplomacy_befriend_benelux_desc: "우리는 총학생회나 샬레가 저지대를 마음대로 통치하도록 내버려 둘 것입니다. 우리의 목표는 더 큰 곳에 있으며... 그들과의 전쟁으로 인해 국력을 낭비할 필요는 없습니다."
 
  #### 게헨나 예외주의
  GEH_three_congress_focus_no_hina_diplomacy_gehenna_first: "게헨나 예외주의"
+ GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_desc: "게헨나는 키보토스의 기존 질서에서 예외적인 국가이며, 키보토스 전체의 패권을 장악할 국력과 자격을 갖추고 있습니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_central_europe_union: "미텔에우로파 전선"
+ GEH_three_congress_focus_no_hina_diplomacy_central_europe_union_desc: "어느 국가도 홀로 설 수 없습니다. 위대한 게헨나의 건설을 위하여 우리는 가장 믿을 수 있는 국가들과 협력 전선을 구축할 것입니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_attack_millennium: "서부 키보토스 정복"
+ GEH_three_congress_focus_no_hina_diplomacy_attack_millennium_desc: "밀레니엄 지역의 뛰어난 기술은 그녀들이 아닌 우리 게헨나를 위하여 사용되어야만 합니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_attack_kaiser: "카이저의 영향력 일소"
+ GEH_three_congress_focus_no_hina_diplomacy_attack_kaiser_desc: "카이저 코퍼레이션은 대전이 이전부터 키보토스 각지에서 수많은 범죄, 무법 행위를 지원했습니다. 그리고 그들 역시 키보토스를 정복하고자 하는 야망을 가지고 있습니다. 게헨나의 질서에 부합하지 않는 카이저와 [KAI.GetLedaer]의 야망은 이제 일소되어야만 합니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_attack_south_kivotos: "남부 키보토스 정복" 
+ GEH_three_congress_focus_no_hina_diplomacy_attack_south_kivotos_desc: "대전이 이후 게헨나 남부로 옮겨진 남부 키보토스 국가들은 우리에게 큰 위협이 되고 있습니다. 그들이 존재하지 않게 하는 것이 게헨나의 질서를 위한 길입니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_1: "우리의 규율 강제" 
+ GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_1_desc: "우리는 대전이 이전부터 규율과 질서를 통해 올바른 게헨나 사회를 이룩하고자 했습니다. 우리의 점령지들에서도 같은 일을 할 것입니다. 그들이 원하든, 원하지 않든."
 
  GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_2: "키보토스계가 하나로"
+ GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_2_desc: "대전이로 인한 혼란은 키보토스 국가들과 현지 국가들의 대립을 불러 일으켰습니다. 우리 키보토스가 하나의 거대한 질서 아래에 뭉치지 않는다면, 분열된 채로 패배하게 될 것입니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_3: "모든 질서는 게헨나로 향한다"
+ GEH_three_congress_focus_no_hina_diplomacy_gehenna_first_discipline_3_desc: "뇌제의 꿈은 이루어졌습니다. 게헨나는 키보토스 위에 우뚝 섰습니다. 모든 게헨나의 영웅들이 우리를 자랑스럽게 생각할 것입니다. [ROOT.GetName]의 영광과 [ROOT.GetLeader]의 승리가 우리 앞에 있습니다."
 
  #### 키보토스의 수호자
  GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom: "키보토스의 수호자"
+ GEH_three_congress_focus_no_hina_diplomacy_protection_of_freedom_desc: "우리는 동방으로 나아가, 키보토스를 위협하는 사악한 동부 인류 국가들과 맞서 싸워야 합니다. 우리는 키보토스를 붉은 곰으로부터 지켜내는 강인한 방패가 될 것입니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_claim_intermarium: "인터마리움 영유권 주장"
+ GEH_three_congress_focus_no_hina_diplomacy_claim_intermarium_desc: "동부 유럽은 [SOV.GetName] 측의 공격을 방어하기 위해, 필연적으로 우리가 소유해야만 하는 안전지대입니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_anti_bolshevism_declaration: "반볼셰비즘 선언"
+ GEH_three_congress_focus_no_hina_diplomacy_anti_bolshevism_declaration_desc: "소위 마르크스-레닌주의라는 것은 붉은겨울의 체리노 서기장의 모형 콧수염보다도 못한 조잡한 이데올로기에 불과합니다. 자유로운 게헨나 질서의 전파를 위하여 우리는 모든 종류의 볼셰비즘에 단호히 맞서 싸울 것입니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_attack_soviet: "신들의 황혼 작전"
+ GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_desc: "모스크바는 썩은 문과 같으며, 게헨나의 위대한 군대가 발로 차면 그대로 부서져 열릴 것입니다. 모든 전쟁 준비가 완료되었으며 우리는 게헨나의 영광을 위해 싸울 것입니다. 반드시 승리하리라!"
 
  GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_1: "백군 지원자 모집"
+ GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_1_desc: "폭압적인 [SOV.GetName]의 통치로부터 저항하는 현지 세력들과 접촉해, 우리는 동방에서의 활동에 이익을 얻을 수 있습니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_2: "동계전 긴급 훈련"
+ GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_2_desc: "[SOV.GetAdjective] 영토는 매우 춥고 척박하며, 동계전을 위한 장비와 특수 훈련을 통해 전장에서의 싸움에 대비해야만 합니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_3: "게헨나 동방 개척"
+ GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_3_desc: "새로 얻은 동부 영토는 적절한 관리를 거쳐 게헨나에 통합될 것입니다. 우리는 이 전쟁에서 승리하고 키보토스를 붉은 악몽으로부터 보호했습니다. 이 위대한 업적은 앞으로도 기억될 것입니다."
 
  #### 현실정치
  GEH_three_congress_focus_no_hina_diplomacy_realpolitik: "현실정치"
+ GEH_three_congress_focus_no_hina_diplomacy_realpolitik_desc: "우리는 여러 동맹국들을 얻고, 중부유럽의 정치적, 군사적 패권을 장악할 것입니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_alliance: "남키보토스 동맹"
+ GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_alliance_desc: "남키보토스는 가까운 거리를 가진 지역이며, 우리와 이해관계가 다소 일치합니다. 그들과 협력하는 것이 서로의 공동 번영을 이루어낼 수 있을 것입니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_merge: "남키보토스 통합"
+ GEH_three_congress_focus_no_hina_diplomacy_south_kivotos_merge_desc: "남키보토스는 우리의 잠재적인 적이 될 수 있으며, 그들이 우리를 공격하기 전에 우리가 먼저 그들을 공격할 필요가 있습니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_balkans_alliance: "발칸에 영향력 행사"
+ GEH_three_congress_focus_no_hina_diplomacy_balkans_alliance_desc: "발칸은 분열되어 있지만 강하며, 그들은 우리의 좋은 파트너가 될 수 있습니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_balkans_merge: "발칸 정복"
+ GEH_three_congress_focus_no_hina_diplomacy_balkans_merge_desc: "발칸은 분열되어 있기 때문에 각개격파할 수 있는 적이며, 우리의 확장 정책을 위하여 제거되어야만 합니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_attack_italy: "알라리크 작전"
+ GEH_three_congress_focus_no_hina_diplomacy_attack_italy_desc: "이탈리아는 대전이 이후에도 국체를 보존하는 데 성공하였지만, 그들의 행운은 이제 끝입니다. [ITA.GetLeader]의 권좌는 무너질 것이며, 우리는 로마에 게헨나의 깃발을 꽂을 것입니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_union_south_kivotos: "남키보토스 해방 선언"
+ GEH_three_congress_focus_no_hina_diplomacy_union_south_kivotos_desc: "이탈리아 식민제국의 붕괴는 우리가 남키보토스 전체의 패권을 완전히 얻게 되는 상징적인 사건이 되었습니다. 우리는 키보토스에 우뚝 선 강대국이 되었습니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_soviet_peace: "[ROOT.GetAdjective]-[SOV.GetAdjective] 불가침조약"
+ GEH_three_congress_focus_no_hina_diplomacy_soviet_peace_desc: "적어도 지금 당장은 우리으 칼끝은 남방을 향하고 있으며, [SOV.GetLeader] 측과 당장 대립각을 세우며 전선을 늘릴 필요는 없습니다. 그들과 일시적인 불가침 조약을 맺고 평화를 유지하는 편이 나을 것입니다."
 
  GEH_three_congress_focus_no_hina_diplomacy_soviet_military_exchange: "[SOV.GetAdjective] 기술교류협정"
+ GEH_three_congress_focus_no_hina_diplomacy_soviet_military_exchange_desc: "서로의 차이에도 불구하고 [SOV.GetName]의 무기들은 매우 우수하며, 우리가 대전이 이후 지구에서 강력한 패권을 유지하는 데에 큰 도움이 될 것입니다."
 
  #########
  #중점 수정#
@@ -1768,6 +1795,25 @@
  GEH.event.1038.desc: "우리가 게헨나를 하나로 통합하는 데 성공하면서, 새로운 총회에서 수도 이전에 대한 논의가 진행되었습니다. 게헨나 선도부 본부가 있는 남구에 잔류하거나, 게헨나의 중심지인 중앙구로 수도를 옮기는 것도 가능합니다. 도시의 부유함은 중앙구 쪽이 훨씬 낫지만, 새 선도부 본부를 증축하는 데 걸리는 비용 문제로 인해 수도 이전을 반대하는 목소리도 높습니다. 특히 중앙구가 만마전의 중심지라는 점은 수도 이전에 대한 거부감을 늘리고 있습니다."
  GEH.event.1038.a: "지금 이곳이 가장 좋은 장소야"
  GEH.event.1038.b: "중앙구로 가자"
+
+ GEH.event.1039.t: "불가침 조약을 제안하는 [FROM.GetName]"
+ GEH.event.1039.desc: "[FROM.GetLeader] 측은 [FROM.GetNameDef]-[ROOT.GetNameDef] 두 국가가 대립하는 것을 원하지 않으며, 두 국가의 평화가 서로에게 더 큰 이익이 될 것이라고 제안했습니다. 우리의 외교 전문가들은 [FROM.GetAdjective]의 현재 전략적인 관심이 다른 곳에 있기 때문에, 후방의 안전을 보장하기 위하여 우리와의 평화 조약을 추진하고 있는 것이라고 판단했습니다. 어떤 결론을 내리든 [ROOT.GetAdjective]에 손해가 가는 결정은 아닐 것입니다."
+ GEH.event.1039.a: "우리 시대의 평화!"
+ GEH.event.1039.b: "아니, 거절한다"
+
+ GEH.event.1040.t: "불가침 조약을 받아들인 [FROM.GetName]"
+ GEH.event.1040.desc: "우리의 합리적인 불가침 제안 조약을 [FROM.GetLeader] 측이 동의했습니다. 이제 [FROM.GetNameDef]-[ROOT.GetNameDef] 두 국가 사이에 전쟁은 없을 것입니다. 최소한 당분간은요."
+
+ GEH.event.1041.t: "불가침 조약을 거부한 [FROM.GetName]"
+ GEH.event.1041.desc: "우리의 합리적인 불가침 제안 조약을 [FROM.GetLeader] 측이 거절했습니다. 안타깝지만 그들의 거부로 인해 우리는 안전한 전선을 확보하는 데 실패했습니다. 평화가 거절당한 이상 [FROM.GetName]의 군대가 우리를 공격할 가능성에 대해서도 대비할 필요가 있습니다."
+
+ GEH.event.1042.t: "제4차 총회의 개회"
+ GEH.event.1042.desc: "[ROOT.GetNameDef]의 최근 성과는 정말로 놀라운 수준이었습니다. 우리는 둘로 분열된 게헨나를 통합하였으며, 트리니티와의 오랜 분쟁을 종결지을 수 있었습니다. 당면한 문제들을 해결함으로서 우리는 새로운 문제 - 바로 게헨나 외부에 있는 다른 국가들과의 외교 관계에 대해 논의를 시작했습니다.\n\n총회에서는 강경한 의견들이 많이 등장했습니다. 일부 파벌은 우리가 과거 '뇌제'가 그랬던 것처럼 키보토스 전체를 정복해야 한다고 주장했습니다. 또 다른 파벌은 반대로 우리가 키보토스를 지키는 자유의 방패가 되어야 한다는 의견을 내놓았습니다. 어느 파벌의 주장이든간에 한 가지는 확실합니다. 히나 부장의 사임 이후 [ROOT.GetName]의 여론은 강한 호전주의가 지배하게 되었습니다."
+ GEH.event.1042.a: "게헨나는 그 어느 학원보다도 높이 서야 한다"
+
+ GEH.event.1043.t: "제4차 총회의 종료"
+ GEH.event.1043.desc: "[ROOT.GetLeader]의 선택이 우리의 미래를 결정할 것입니다. 제4차 총회에서 우리는 다양한 외교 정책 의견들을 수렴하였으며, 총회는 성공적으로 마무리되었습니다. 게헨나는 키보토스의 방패가 되어야 할까요, 아니면 키보토스를 정복하는 검이 되어야 할까요?"
+ GEH.event.1043.a: "어느 선택이든, 게헨나는 승리할 것이다"
 
  # 2000~ 만마전과 싸우기 위한 선도부 외국 조사 / 만마전과의 적대적 외교 이벤트
 

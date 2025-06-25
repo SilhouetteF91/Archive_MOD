@@ -1955,6 +1955,22 @@ leader_traits = {
 		democratic_drift = 0.06
 		non_core_manpower = 0.05
 	}
+	
+	GEH_the_terrible = { # 뇌제 (히나 탈주 외교루트 엔딩 1)
+		random = no
+		weekly_casualties_war_support = 0.003
+		experience_gain_army_factor = 0.10
+		special_forces_attack_factor = 0.1
+	    special_forces_defence_factor = 0.1
+	}
+	
+	GEH_the_guardian_of_freedom = { # 자유의 수호자
+		random = no
+		communism_acceptance = -50
+		surrender_limit = 0.1
+		opinion_gain_monthly_factor = 0.1
+		required_garrison_factor = -0.10
+	}
 
 	GEH_School_Lunch_Club_Juri = { # 급양부 - 주리
 		sprite = 13

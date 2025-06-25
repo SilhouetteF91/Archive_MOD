@@ -8401,6 +8401,17 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.6
 			}
+			
+			set_party_name = {
+				ideology = fascism
+				long_name = GEH_pro_robot_hina_party_long
+				name = GEH_pro_robot_hina_party
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = GEH_planning_department_long
+				name = GEH_planning_department
+			}
 
 			set_politics = {
 				ruling_party = fascism
@@ -11197,41 +11208,38 @@ focus_tree = {
 
 		available = {
 
+			is_subject = no
+			has_completed_focus = GEH_zero_congress_focus
+			has_completed_focus = GEH_second_congress_focus
+			has_completed_focus = GEH_first_congress_focus
+			OR = {
+				has_completed_focus = GEH_military_leadership_committee
+				has_completed_focus = GEH_gehenna_leader
+				has_completed_focus = GEH_student_peoples_will
+				has_completed_focus = GEH_sword_defending_gehenna_peoples
+				has_completed_focus = GEH_institutional_stabilization
+			}
+			has_completed_focus = GEH_factory_focus_1
+			has_completed_focus = GEH_Trinity_war
 			custom_trigger_tooltip = {
-				tooltip = THIS_IS_WIP_TT
-				has_country_flag = GAEBALJUNG
+				tooltip = GEH_three_congress_focus_trigger
+				count_triggers = {
+					amount = 3
+					has_completed_focus = GEH_look_to_the_west
+					has_completed_focus = GEH_west_army_focus_1
+					has_completed_focus = GEH_west_army_focus_2
+					has_completed_focus = GEH_west_army_focus_3
+					has_completed_focus = GEH_Leverage_Perfect_team_strengths
+					has_completed_focus = GEH_prefect_army_focus_1
+					has_completed_focus = GEH_prefect_army_focus_2
+					has_completed_focus = GEH_prefect_army_focus_3
+					has_completed_focus = GEH_Army_focus_1
+					has_completed_focus = GEH_Army_focus_2
+					has_completed_focus = GEH_Army_focus_3
+				}
 			}
 
-			#is_subject = no
-			#has_completed_focus = GEH_zero_congress_focus
-			#has_completed_focus = GEH_second_congress_focus
-			#has_completed_focus = GEH_first_congress_focus
-			#OR = {
-			#	has_completed_focus = GEH_military_leadership_committee
-			#	has_completed_focus = GEH_gehenna_leader
-			#	has_completed_focus = GEH_student_peoples_will
-			#	has_completed_focus = GEH_sword_defending_gehenna_peoples
-			#	has_completed_focus = GEH_institutional_stabilization
-			#}
-			#has_completed_focus = GEH_factory_focus_1
-			#has_completed_focus = GEH_Trinity_war
-			#custom_trigger_tooltip = {
-			#	tooltip = GEH_three_congress_focus_trigger
-			#	count_triggers = {
-			#		amount = 3
-			#		has_completed_focus = GEH_look_to_the_west
-			#		has_completed_focus = GEH_west_army_focus_1
-			#		has_completed_focus = GEH_west_army_focus_2
-			#		has_completed_focus = GEH_west_army_focus_3
-			#		has_completed_focus = GEH_Leverage_Perfect_team_strengths
-			#		has_completed_focus = GEH_prefect_army_focus_1
-			#		has_completed_focus = GEH_prefect_army_focus_2
-			#		has_completed_focus = GEH_prefect_army_focus_3
-			#		has_completed_focus = GEH_Army_focus_1
-			#		has_completed_focus = GEH_Army_focus_2
-			#		has_completed_focus = GEH_Army_focus_3
-			#	}
-			#}
+			has_global_flag = GEH_BTBOTS_END_NEXT_flag
 		}
 		
         prerequisite = {
@@ -11250,8 +11258,14 @@ focus_tree = {
 			}
 		}
 
-		completion_reward = {
+		select_effect = {
+			country_event = { id = GEH.event.1042 }
+		}
 
+		completion_reward = {
+			country_event = { id = GEH.event.1043 }
+			add_political_power = 120
+			add_war_support = 0.05
 		}
 	}
 
@@ -11781,7 +11795,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_country_leader_trait = GEH_the_terrible
 		}
 	}
 	 
@@ -12115,7 +12129,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = {
+					SOV = { is_puppet_of = ROOT }
+				}
+				SOV = {
+					add_autonomy_ratio = {
+						value = -0.5
+						localization = GEH_three_congress_focus_no_hina_diplomacy_attack_soviet_3
+					}
+				}
+			}
 
+			add_country_leader_trait = GEH_the_guardian_of_freedom
+			
 		}
 	}
 	 
@@ -12318,7 +12345,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			SOV = {
+				country_event = { id = GEH.event.1039 hours = 6 }
+			}
 		}
 	}
 	 
@@ -12332,7 +12361,8 @@ focus_tree = {
 		y = 2
 
 		available = {
-
+			country_exists = SOV
+			NOT = { has_war_with = SOV }
 		}
 		
         prerequisite = {
@@ -12352,6 +12382,23 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_1 
+				amount = 2500  
+				producer = SOV
+			}
+
+			add_equipment_subsidy = {
+				cic = 500
+				equipment_type = light_tank_chassis
+				seller_tags = { SOV } 
+			}
+			add_equipment_subsidy = {
+				cic = 500
+				equipment_type = infantry_equipment
+				seller_tags  = { SOV }
+			}
+
 			add_ideas = GEH_weapons_licensing
 		}
 	}
@@ -12560,6 +12607,20 @@ focus_tree = {
 
 		completion_reward = {
 
+			if = {
+				limit = {
+					ITA = { is_puppet_of = ROOT }
+				}
+				ITA = {
+					add_autonomy_ratio = {
+						value = -0.5
+						localization = GEH_three_congress_focus_no_hina_diplomacy_union_south_kivotos
+					}
+				}
+			}
+
+			add_war_support = 0.2
+			add_stability = 0.2
 		}
 	}
 	
