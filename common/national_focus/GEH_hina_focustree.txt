@@ -11174,6 +11174,15 @@ focus_tree = {
 		relative_position_id = GEH_three_congress_focus_no_hina
 		x = 16
 		y = 1
+
+		allow_branch = {
+			OR = {
+				has_country_flag = hina_assembly_h_serenade_flag
+				has_country_flag = hina_assembly_a_serenade_flag
+				has_country_flag = hina_assembly_c_serenade_flag
+				has_country_flag = hina_assembly_normal_serenade_flag
+			}
+		}
 		
 		offset = {
 			x = 30
