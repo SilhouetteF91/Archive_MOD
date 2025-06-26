@@ -3621,4 +3621,19 @@ spriteTypes = {
 		name = "GFX_GFX_GEI_DEC_Modular_Strategy"
 		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_Modular_Strategy.png"
 	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_synth"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_synth.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_base_camp"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_base_camp.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_our_help"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_our_help.png"
+	}
 }

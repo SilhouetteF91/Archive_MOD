@@ -5403,6 +5403,78 @@ news_event = { # 메트릭스
     }
 }
 
+news_event = { # 동시다발적테러
+    id = BA_news.142
+    title = BA_news.142.t
+    desc = BA_news.142.desc
+    picture = GFX_news_event_GEI_metrix
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.142.a # 이제 시작이다.
+		trigger = {
+			tag = GEI
+        }
+    }
+
+    option = {
+        name = BA_news.142.b # C&C를 파견해라
+		trigger = {
+			tag = MIL
+        }
+    }
+
+	option = {
+        name = BA_news.142.c # 천년수도 에덴은 이 정도로 무너지지 않습니다.
+		trigger = {
+			tag = TRM
+        }
+    }
+
+	option = {
+        name = BA_news.142.d # 이부키... 이부키는 무사한가?
+		trigger = {
+			tag = GEM
+        }
+    }
+
+	option = {
+        name = BA_news.142.e # 선도부원들을 소집해라!
+		trigger = {
+			tag = GEH
+        }
+    }
+
+	option = {
+        name = BA_news.142.f # 눈보라가 불어오는구나
+		trigger = {
+			tag = RED
+        }
+    }
+
+	option = {
+        name = BA_news.142.g # 이런건 하드보일드가 아니야..
+		trigger = {
+			tag = HEU
+        }
+    }
+
+	option = {
+        name = BA_news.142.h # 어떠한 이유든 테러는 용납될 수 없다.
+		trigger = {
+			NOT = { tag = GEI }
+			NOT = { tag = MIL }
+			NOT = { tag = TRM }
+			NOT = { tag = GEM }
+			NOT = { tag = GEH }
+			NOT = { tag = RED }
+			NOT = { tag = HEU }
+        }
+    }
+}
+
 
 
 #news_event = { # 미국 트리니티 에덴 점령

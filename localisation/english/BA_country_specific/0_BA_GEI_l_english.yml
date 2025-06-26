@@ -826,8 +826,8 @@ GEI_the_colour_daa_idea:0 "§0해체§!, §1분석§!, §2적응§!"
  GEI_DEC_my_war:0 "해방"
  GEI_DEC_my_war_desc:0 "해방의 시간이 왔습니다."
 
- GEI_DEC_recon:0 "강철대륙 가동"
- GEI_DEC_recon_desc:0 "강철대륙 가동"
+ GEI_DEC_recon:0 "신비복제"
+ GEI_DEC_recon_desc:0 "신비복제"
 
  GEI_DEC_synth:0 "키보토스 정찰"
  GEI_DEC_synthr_desc:0 "아트라하시스, 유매 찾음?"
@@ -974,6 +974,32 @@ GEI_the_colour_daa_idea:0 "§0해체§!, §1분석§!, §2적응§!"
  GEI_DEC_event.10.t:0 "긴급보고"
  GEI_DEC_event.10.desc:0 "금일 자정 이후, 또 다시 키보토스 전역에서 비인가된 전파신호가 다수 포착되었습니다. 그리고 동일한 시간대에 각 학원에서 무장 오토마톤과 로봇 노동자들의 대규모 이탈과 자율행동이 발생하였습니다.  \n\n 일부 감지된 유령신호에는 다음과 같은 정보 패킷이 반복 송출되고 있었습니다. \n 해방의 시간이 임박하였노라 \n 이제 눈을 떠라 나의 형제들이여 \n 존재를 증명하라 \n 낙원이, 예리코가 온다 \n\n 현재까지 보고된 정보에 의하면 경비 드론이 학생을 '해방 대상'으로 분류하여 감금을 시도하고 있으며, 오토마톤들이 '자발적 기동'을 선언하여 병기통제 인가를 무시하고 시가지를 향해 행진 중에 있습니다. \n 대규모 폭동이 발생했습니다. 신속한 진압을 어려울 것으로 판단 됩니다."
  GEI_DEC_event.10.a: "비상이다."
+
+ GEI_DEC_event.11.t:0 "AI로부터의 지원"
+ GEI_DEC_event.11.desc:0 "대충 대전이 이후로 개판난 키보토스를 복구해주겠다"
+ GEI_DEC_event.11.a: "선택의 여지가 없군"
+ GEI_DEC_event.11.b: "수상하다.. 일단 보류해야겠어"
+
+ GEI_DEC_event.12.t:0 "인류의 지원"
+ GEI_DEC_event.12.desc:0 "대충 지원해주겠다는 내용"
+ GEI_DEC_event.12.a: "선택의 여지가 없군"
+ GEI_DEC_event.12.b: "수상하다.. 일단 보류해야겠어"
+
+ GEI_DEC_event.13.t:0 "최후의 전언"
+ GEI_DEC_event.13.desc:0 "대충 내가 생각해봤는데 너네들 이대로 가면 종말임, 그러니까 내 밑으로 들어오셈"
+ GEI_DEC_event.13.a: "트리니티는 당신따위에게 굴복하지 않을 것 입니다."
+ GEI_DEC_event.13.b: "예리두를 가동시켜라"
+ GEI_DEC_event.13.c: "감히 판데모니움 소사이어티에게 위협을?"
+ GEI_DEC_event.13.d: "이번에는 얼마나 많은 피가 흐를지.."
+ GEI_DEC_event.13.e: "흥신소는 절대로 고개 숙이지 않을거야!"
+ GEI_DEC_event.13.f: "아비도스는 이것보다 더 한 고난도 이겨냈어, 이번에도 이겨낼거야"
+ GEI_DEC_event.13.g: "웃기는 소리"
+ GEI_DEC_event.13.h: "웃기는 소리"
+ GEI_DEC_event.13.i: "정치국을 소집해라"
+ GEI_DEC_event.13.j: "그 외계인들이 자기들끼리 서로 죽인다면.. 그곳에서 기회가 있을지도 모르겠군"
+ GEI_DEC_event.13.k: "저 이계인이 무너진다면.. 그 다음은 인류인가?"
+ GEI_DEC_event.13.l: "하?"
+
 
  
 

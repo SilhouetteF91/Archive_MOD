@@ -2228,6 +2228,10 @@ country_event = {
 				days = 365
 			}
 	}
+
+	option = { 
+		name = GEI_DEC_event.11.b
+	}
 }
 
 # 인류지원 이벤트
@@ -2245,6 +2249,10 @@ country_event = {
 				idea = GEI_DEC_human_help
 				days = 365
 			}
+	}
+
+	option = { 
+		name = GEI_DEC_event.12.b
 	}
 }
 
@@ -2376,6 +2384,21 @@ country_event = {
 	
 	option = { 
 		name = GEI_DEC_event.14.a
+	}
+}
+
+country_event = { #내부의적 동시다발테러 이벤트
+	id = GEI_DEC_event.15
+	title = GEI_DEC_event.15.t
+	desc = GEI_DEC_event.15.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.15.a
+		stability_factor = -0.1
+		war_support_factor = -0.1
 	}
 }
 
