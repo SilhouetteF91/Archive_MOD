@@ -831,6 +831,7 @@ focus_tree = {
 				}
 	}
 
+
 	#외부로
 	focus = {
 		id = GEI_DEC_outside
@@ -854,6 +855,7 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+
 		
 		}
 	}

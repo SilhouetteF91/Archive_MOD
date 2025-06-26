@@ -116,7 +116,7 @@ focus_tree = {
 			add_ideas = GEI_DEC_otomaton
 		}
 	}
-	# 키보토스 정찰
+	# 강철대륙
 
 	focus = {
 		id = GEI_DEC_recon
@@ -139,7 +139,8 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
+			add_ideas = GEI_DEC_dimension_tunnel
+
 		}
 	}
 
@@ -320,6 +321,7 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+
 			
 		}
 	}
@@ -345,7 +347,7 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
+			add_ideas = GEI_DEC_decagaki
 		}
 	}
 
@@ -371,8 +373,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			news_event = { id = BA_news.141 hours = 3 }
-			war_support_factor = 0.30
-			add_stability = 0.40
+			add_ideas = GEI_DEC_metrix
 		}
 	}
 
@@ -399,6 +400,38 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+
+			GEI = {
+                division_template = {
+                    name = "CRUSADE"
+                    division_names_group = KIV_SEC_01
+                    regiments = {
+                        Infantry = {x = 0 y = 0}
+                        Infantry = {x = 0 y = 1}
+                        Infantry = {x = 0 y = 2}
+						Infantry = {x = 1 y = 0}
+						Infantry = {x = 1 y = 1}
+						Infantry = {x = 1 y = 2}
+                    }
+                    priority = 2
+                }
+
+                capital_scope = {
+				create_unit = {
+					division = "name = \"1. Veritas Crusade\" division_template = \"CRUSADE\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"2. The Templar Vanguard\" division_template = \"CRUSADE\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"3. Glorious Crusade\" division_template = \"CRUSADE\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = GEI
+				}
+				
+			}
+        }
 	
 		}
 	}
@@ -752,7 +785,26 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
+			declare_war_on = {
+				target = KAI
+				type = annex_everything
+			}
+
+			bypass = {
+			OR = {
+				NOT = { country_exists = KAI }
+				owns_state = 131
+				owns_state = 931
+				owns_state = 130
+				owns_state = 132
+				owns_state = 129
+				owns_state = 128
+				owns_state = 338
+				owns_state = 123
+				owns_state = 127
+				owns_state = 126
+			}
+		}	
 		}
 	}
 
@@ -800,281 +852,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GEI_DEC_influenced
-		icon = GFX_GEI_DEC_influenced
-
-		x = 4
-		y = 1
-        relative_position_id = GEI_DEC_my_war
-
-		cost = 1
-        prerequisite = { focus = GEI_DEC_my_war}
-		text_icon = The_New_Order_focus_style
-		
-
-		available = {
-			
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
-		}
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GEI_DEC_zero_one
-		icon = GFX_GEI_DEC_zero_one
-
-		x = 0
-		y = 1
-        relative_position_id = GEI_DEC_influenced
-
-		cost = 1
-        prerequisite = { focus = GEI_DEC_influenced}
-		text_icon = The_New_Order_focus_style
-		
-
-		available = {
-			
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
-		}
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GEI_DEC_ghost
-		icon = GFX_GEI_DEC_ghostghostghost
-
-		x = 0
-		y = 1
-        relative_position_id = GEI_DEC_zero_one
-
-		cost = 1
-        prerequisite = { focus = GEI_DEC_zero_one}
-		text_icon = The_New_Order_focus_style
-		
-
-		available = {
-			
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
-		}
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GEI_DEC_ain
-		icon = GFX_GEI_DEC_ain
-
-		x = -2
-		y = 1
-        relative_position_id = GEI_DEC_ghost
-
-		cost = 1
-        prerequisite = { focus = GEI_DEC_ghost}
-		text_icon = The_New_Order_focus_style
-		
-
-		available = {
-			
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
-		}
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GEI_DEC_radio_disturbance
-		icon = GFX_GEI_DEC_radio_disturbance
-
-		x = 0
-		y = 1
-        relative_position_id = GEI_DEC_ain
-
-		cost = 1
-        prerequisite = { focus = GEI_DEC_ain}
-		text_icon = The_New_Order_focus_style
-		
-
-		available = {
-			
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
-		}
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GEI_DEC_sof
-		icon = GFX_GEI_DEC_sof
-
-		x = 0
-		y = 1
-        relative_position_id = GEI_DEC_ghost
-
-		cost = 1
-        prerequisite = { focus = GEI_DEC_ghost}
-		text_icon = The_New_Order_focus_style
-		
-
-		available = {
-			
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
-		}
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GEI_DEC_army_student
-		icon = GFX_GEI_DEC_army_student
-
-		x = 0
-		y = 1
-        relative_position_id = GEI_DEC_sof
-
-		cost = 1
-        prerequisite = { focus = GEI_DEC_sof}
-		text_icon = The_New_Order_focus_style
-		
-
-		available = {
-			
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
-		}
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GEI_DEC_orn
-		icon = GFX_GEI_DEC_orn
-
-		x = 2
-		y = 1
-        relative_position_id = GEI_DEC_ghost
-
-		cost = 1
-        prerequisite = { focus = GEI_DEC_ghost}
-		text_icon = The_New_Order_focus_style
-		
-
-		available = {
-			
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
-		}
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GEI_DEC_metrix
-		icon = GFX_GEI_DEC_metrix
-
-		x = 0
-		y = 1
-        relative_position_id = GEI_DEC_orn
-
-		cost = 1
-        prerequisite = { focus = GEI_DEC_orn}
-		text_icon = The_New_Order_focus_style
-		
-
-		available = {
-			
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
-		}
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GEI_DEC_march_dawn
-		icon = GFX_GEI_DEC_march_dawn
-
-		x = -2
-		y = 2
-        relative_position_id = GEI_DEC_metrix
-
-		cost = 1
-        prerequisite = { focus = GEI_DEC_metrix }
-		prerequisite = { focus = GEI_DEC_army_student }
-		prerequisite = { focus = GEI_DEC_radio_disturbance }
-		text_icon = The_New_Order_focus_style
-		available = { }
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			DE1 = {
-				transfer_state = 15
-				division_template = {
-					name = "Security Guard"
-					division_names_group = KIV_SEC_01
-					regiments = {
-						militia = { x = 0 y = 0 }
-						militia = { x = 0 y = 1 }
-					}
-					priority = 0
-				}
-				15 = {
-					create_unit = {
-						division = "division_template = \"Security Guard\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
-						count = 10
-						owner = DE1
-					}
-				}
-			}
-			GEI = { puppet = DE1 }
-		}
-	}
-
-
-	focus = {
 		id = GEI_DEC_my_war
 		icon = GFX_GEI_DEC_my_war
 
@@ -1089,8 +866,8 @@ focus_tree = {
 		
 
 		available = {
-			
 		}
+
 		search_filters = {
 			
 						FOCUS_FILTER_ANNEXATION
@@ -1108,6 +885,7 @@ focus_tree = {
                 }
 
                 country_event = {id = GEI_DEC_event.10}
+				country_event = {id = GEI_DEC_event.13 hours = 24}
                 add_opinion_modifier = {
                     target = GEI
                     modifier = GEI_DEC_hostile_ai
@@ -1120,8 +898,8 @@ focus_tree = {
 		id = GEI_DEC_liberation_front
 		icon = GFX_GEI_DEC_liberation_front
 
-		x = -4
-		y = 1
+		x = 0
+		y = 2
         relative_position_id = GEI_DEC_my_war
 
 		cost = 1

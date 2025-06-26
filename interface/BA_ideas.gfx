@@ -1121,4 +1121,9 @@ spriteTypes = {
 		name = "GFX_idea_KAP_reconnaissance_Kaoru_small"
 		textureFile = "gfx/interface/ideas/KAP/KAP_reconnaissance_Kaoru_small.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idea_GEI_DEC_metrix"
+		textureFile = "gfx/interface/ideas/GEI/GEI_DEC_idea_metrix.png"
+	}
 }

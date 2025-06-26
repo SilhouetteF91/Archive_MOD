@@ -826,11 +826,11 @@ GEI_the_colour_daa_idea:0 "§0해체§!, §1분석§!, §2적응§!"
  GEI_DEC_my_war:0 "해방"
  GEI_DEC_my_war_desc:0 "해방의 시간이 왔습니다."
 
- GEI_DEC_recon:0 "키보토스 정찰"
- GEI_DEC_recon_desc:0 "대충 키보토스 정찰 한다는 내용, 여기서 아트라하시스 방주, 유매 등을 찾음."
+ GEI_DEC_recon:0 "강철대륙 가동"
+ GEI_DEC_recon_desc:0 "강철대륙 가동"
 
- GEI_DEC_synth:0 "신비복제"
- GEI_DEC_synthr_desc:0 "신비를 복제해서, 똑같은 학생을 만든다는 내용"
+ GEI_DEC_synth:0 "키보토스 정찰"
+ GEI_DEC_synthr_desc:0 "아트라하시스, 유매 찾음?"
 
  GEI_DEC_ship:0 "선박건조"
  GEI_DEC_ship_desc:0 ""
@@ -991,6 +991,11 @@ GEI_the_colour_daa_idea:0 "§0해체§!, §1분석§!, §2적응§!"
  GEI_DEC_kivtos_help_ideas_desc:0 "스스로를 '절대존재'라 칭하는 AI가 대전이 이후 황폐해진 키보토스를 재건하기 위해 여러 물자와 오토마톤 노동자들을 보내주었습니다. AI는 이에 상응하는 대가를 바라지 않습니다. 그렇기에 수상하지만 지금 우리가 이들의 지원을 묵살할 이유는 없습니다."
  GEI_DEC_human_help_ideas:0 "기계의 인도적 지원"
  GEI_DEC_human_help_ideas_desc:0 "스스로를 '절대존재'라 칭하는 AI가 대전이 이후 혼란해진 유럽대륙의 인류를 지원하기 위해 여러 물자와 오토마톤들을 보내주었습니다. AI는 이에 상응하는 대가를 바라지 않습니다. 그렇기에 수상하지만 지금 우리가 이들의 지원을 묵살할 이유는 없습니다."
+ GEI_DEC_metrix:0 "천국 혹은 지옥"
+ GEI_DEC_metrix_desc:"메트릭스갇아둬놓는이야기"
+ GEI_DEC_dimension_tunnel:0 "강철대륙"
+ GEI_DEC_dimension_tunnel_desc:0 "네차흐를 통해 땅을 반전시켜서 자원뽑아먹는 다는 이야기"
+
 
  # 데카그라마톤 custom tool tips
  GEI_air_force:0 "기초적인 다목적 공중장비를 연구합니다."

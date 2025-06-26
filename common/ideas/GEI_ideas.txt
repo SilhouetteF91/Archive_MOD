@@ -1650,5 +1650,46 @@ ideas = {
 				cic_construction_boost = 0.2
             }
         }
+
+		GEI_DEC_metrix = { # 지옥 혹은 천국 
+            picture = GEI_DEC_metrix
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.3
+				war_support_weekly = 0.1
+				required_garrison_factor = -2
+				resistance_activity = -2
+				resistance_target = -2
+            }
+        }
+
+		GEI_DEC_decagaki = { # 데카가키
+            picture = GEI_DEC_metrix
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+            modifier = {
+                army_speed_factor = 0.05
+                max_planning = 0.3
+            }
+        }
 	}
 }

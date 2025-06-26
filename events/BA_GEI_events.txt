@@ -2248,6 +2248,137 @@ country_event = {
 	}
 }
 
+# 최후 전언 이벤트
+country_event = {
+	id = GEI_DEC_event.13
+	title = GEI_DEC_event.13.t
+	desc = GEI_DEC_event.13.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { # 트리니티 
+		name = GEI_DEC_event.13.a
+		trigger = {
+			TAG = TRM
+		}
+	}
+
+	option = { # 밀레니엄
+		name = GEI_DEC_event.13.b
+		trigger = {
+			TAG = MIL
+		}
+	}
+
+	option = { # 게헨나
+		name = GEI_DEC_event.13.c
+		trigger = {
+			TAG = GEM
+		}
+	}
+
+	option = { # 흥신소
+		name = GEI_DEC_event.13.d
+		trigger = {
+			TAG = HEU
+		}
+	}
+
+	option = { # 붉겨
+		name = GEI_DEC_event.13.e
+		trigger = {
+			TAG = RED
+		}
+	}
+
+	option = { # 아비도스
+		name = GEI_DEC_event.13.f
+		trigger = {
+			TAG = ABY
+		}
+	}
+
+	option = { # 백귀야행
+		name = GEI_DEC_event.13.g
+		trigger = {
+			TAG = HYA
+		}
+	}
+
+	option = { # 산해경
+		name = GEI_DEC_event.13.h
+		trigger = {
+			TAG = SHA
+		}
+	}
+
+	option = { # 소련
+		name = GEI_DEC_event.13.i
+		trigger = {
+			TAG = SOV
+		}
+	}
+
+	option = { # 이탈리아
+		name = GEI_DEC_event.13.j
+		trigger = {
+			TAG = ITA
+		}
+	}
+
+	option = { # 미합중국
+		name = GEI_DEC_event.13.k
+		trigger = {
+			TAG = USA
+		}
+	}
+
+	option = { # 선도부
+		name = GEI_DEC_event.13.l
+		trigger = {
+			TAG = GEH
+		}
+	}
+
+	option = { # 나머지
+		name = GEI_DEC_event.13.m
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = USA
+					TAG = ITA
+					TAG = SOV
+					TAG = RED
+					TAG = SHA
+					TAG = MIL
+					TAG = HYA
+					TAG = ABY
+					TAG = HEU
+					TAG = GEM
+					TAG = MIL
+					TAG = TRM
+					TAG = GEH
+				}
+			}
+		}
+	}
+}
+
+# 강철대륙 이벤트
+country_event = {
+	id = GEI_DEC_event.14
+	title = GEI_DEC_event.14.t
+	desc = GEI_DEC_event.14.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.14.a
+	}
+}
+
 
 
 

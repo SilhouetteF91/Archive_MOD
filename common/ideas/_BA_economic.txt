@@ -595,5 +595,41 @@ ideas = {
 				monthly_population = 0.15
 			}
 		}
+		GEI_DEC_dimension_tunnel = { #차원 터널
+
+			picture = GFX_idea_GEI_dimension_tunnel
+
+			cost = 150
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0
+				country_resource_oil = 80
+				country_resource_aluminium = 100
+				country_resource_rubber = 50
+				country_resource_tungsten = 100
+				country_resource_steel = 200
+				country_resource_chromium = 60
+				weekly_manpower = 500
+				production_lack_of_resource_penalty_factor = -0.6
+				supply_factor = 0.5
+				Intelligence_agency_defense = 10
+				army_fuel_consumption_factor = -2
+				air_fuel_consumption_factor = -2
+				navy_fuel_consumption_factor = -2
+				airforce_intel_to_others = -200
+				army_intel_to_others = -200
+				civilian_intel_to_others = -200
+				navy_intel_to_others = -200
+			}
+		}
 	}
 }
