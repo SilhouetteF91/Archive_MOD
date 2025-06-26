@@ -134,13 +134,10 @@ focus_tree = {
 			
 		}
 		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward = {
 			add_ideas = GEI_DEC_dimension_tunnel
-
 		}
 	}
 

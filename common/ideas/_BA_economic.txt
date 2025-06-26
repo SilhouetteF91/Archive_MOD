@@ -597,7 +597,7 @@ ideas = {
 		}
 		GEI_DEC_dimension_tunnel = { #차원 터널
 
-			picture = GFX_idea_GEI_dimension_tunnel
+			picture = GEI_dimension_tunnel
 
 			cost = 150
 
@@ -630,6 +630,7 @@ ideas = {
 				civilian_intel_to_others = -200
 				navy_intel_to_others = -200
 			}
+			cancel_if_invalid = no
 		}
 	}
 }
