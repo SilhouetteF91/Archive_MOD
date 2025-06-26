@@ -496,10 +496,21 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_decision_category_GEH_Fuuki"
+		texturefile = "gfx/interface/decisions/decision_category_GEH_Fuuki.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_decision_Gehenna_Emblem"
 		texturefile = "gfx/interface/decisions/decision_Gehenna_Emblem.tga"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_decision_FRA_Algeria_crisis"
+		texturefile = "gfx/interface/decisions/BA_ARG_crisis.tga"
+		legacy_lazy_load = no
+	}
+	
 	spriteType = {
 		name = "GFX_decision_Trinity_Emblem"
 		texturefile = "gfx/interface/decisions/decision_Trinity_Emblem.tga"
@@ -516,11 +527,10 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_decision_FRA_Algeria_crisis"
-		texturefile = "gfx/interface/decisions/BA_ARG_crisis.tga"
+		name = "GFX_decision_TRN_Sakurako_Halo"
+		texturefile = "gfx/interface/decisions/decision_TRN_Sakurako_Halo.tga"
 		legacy_lazy_load = no
 	}
-
 	spriteType = {
 		name = "GFX_decisions_TRN_library_committee"
 		texturefile = "gfx/interface/decisions/TRN_library_committee.tga"

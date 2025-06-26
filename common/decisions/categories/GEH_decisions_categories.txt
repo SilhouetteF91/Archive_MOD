@@ -88,7 +88,7 @@ GEH_ako_love_balance_category = {
 }
 
 GEH_discipline_system_category = {
-    icon = GFX_decision_category_generic_political_actions
+    icon = GFX_decision_category_GEH_Fuuki
 
     priority = 88
 

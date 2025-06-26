@@ -715,6 +715,19 @@ spriteTypes = {
 		textureFile = "gfx/leaders/TRN/TRN_Yutori_Natsu_Portrait.tga"
 	}
 
+	spriteType = { # 모브 1
+		name = "GFX_Portrait_TRN_Mob_01"
+		textureFile = "gfx/leaders/TRN/Portrait_TRN_Mob_01.tga"
+	}
+	spriteType = { # 모브 2
+		name = "GFX_Portrait_TRN_Mob_02"
+		textureFile = "gfx/leaders/TRN/Portrait_TRN_Mob_02.tga"
+	}
+	spriteType = { # 모브 3
+		name = "GFX_Portrait_TRN_Mob_03"
+		textureFile = "gfx/leaders/TRN/Portrait_TRN_Mob_03.tga"
+	}
+
 
 	# 트리니티 조언가
 	spriteType = { # 나기사

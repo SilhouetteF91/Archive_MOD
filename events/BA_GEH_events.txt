@@ -1942,7 +1942,7 @@ country_event = { # 억척어멈과 그 자식들
 	trigger = {
 		TRM = {
 			has_country_leader = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				ruling_only = yes
 			}
 		}

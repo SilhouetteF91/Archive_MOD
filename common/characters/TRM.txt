@@ -1,6 +1,6 @@
 characters={
-	TRN_skrltk={ #나기사
-		name=TRN_skrltk
+	TRN_Kirifuji_Nagisa={ #나기사
+		name=TRN_Kirifuji_Nagisa
 		portraits={
 			civilian={
 				large= GFX_TRN_Kirihuji_Nagisa_Official_Portrait
@@ -151,8 +151,8 @@ characters={
 			}
 		}
 	}
-	TRN_alzk = { #미카
-		name = TRN_alzk
+	TRN_Misono_Mika = { #미카
+		name = TRN_Misono_Mika
 		portraits={
 			civilian={
 				large= GFX_TRN_Misono_Mika_Portrait_Official
@@ -177,7 +177,7 @@ characters={
 		advisor = {
     		slot = political_advisor
 			desc = TRN_Mika_advisor_desc
-    		idea_token = TRN_alzk_political_advisor
+    		idea_token = TRN_Misono_Mika_political_advisor
 			can_be_fired = no
 			allowed = {
 				original_tag = TRM
@@ -199,7 +199,7 @@ characters={
 			ideology=tea_party_fascism_ideology
 			traits={ TRM_pater_faction }
 			expire="1965.1.1"
-			desc = TRN_alzk_leader_desc
+			desc = TRN_Misono_Mika_leader_desc
 		}
 	}
 	TRN_tea_party ={ #티파티
@@ -1166,7 +1166,7 @@ characters={
 		name=TRN_chika_amabe
 		portraits={
 			civilian = {
-				large = GFX_Portrait_BlueArchive_TRM_Generic_2
+				large = GFX_Portrait_TRN_Mob_01
 			}
 		}
 	}
@@ -1174,7 +1174,7 @@ characters={
 		name=TRN_Natsuki_Kato
 		portraits={
 			civilian = {
-				large = GFX_Portrait_BlueArchive_TRM_Generic_3
+				large = GFX_Portrait_TRN_Mob_02
 			}
 		}
 	}

@@ -8,10 +8,8 @@ add_namespace = TRM_ironsword_event
 
 add_namespace = trnfla # 플레이버 이벤트
 add_namespace = trinity 
-add_namespace = trnhonor # 명예
 add_namespace = trinitynews # 뉴스 이벤트
 add_namespace = trinitypartyconvention # 전당대회용
-add_namespace = trinitykultur # 문 화 투 쟁
 ##
 # TRMDIP 1 ~ 49 리워크 이전 외교 이벤트
 # TRMDIP 50~ 리워크 이후 외교 이벤트
@@ -35,7 +33,7 @@ country_event = {
 				}
 			}
 			set_portraits = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				civilian = { large = GFX_TRN_Misono_Mika_Portrait_Kon_ka }
 			}
 		}
@@ -47,7 +45,7 @@ country_event = {
 				}
 			}
 			set_portraits = {
-				character = TRN_skrltk
+				character = TRN_Kirifuji_Nagisa
 				civilian = { large = GFX_TRN_Kirihuji_Nagisa_Portrait_Kon_ka }
 			}
 		}
@@ -71,7 +69,7 @@ country_event = {
 				}
 			}
 			set_portraits = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				civilian={
 					large= GFX_Maki_portrait
 					small= GFX_Maki
@@ -440,7 +438,7 @@ country_event = { #미카 집권 이벤트 (진짜 중요!!)
 			BA_ban_democratic_effect = yes
 			BA_ban_communism_effect = yes
 			BA_ban_neutrality_effect = yes
-			activate_advisor = TRN_alzk_political_advisor
+			activate_advisor = TRN_Misono_Mika_political_advisor
 		}
 	}
 }
@@ -1574,7 +1572,7 @@ country_event = {  # 미카..너..!!
 	
 	option = { #
 		name = TRM_event.67.a
-			TRN_skrltk = {
+			TRN_Kirifuji_Nagisa = {
 				remove_country_leader_role = {
 					ideology = tea_party_neutrality_ideology
 				}
@@ -1906,7 +1904,7 @@ country_event = {
 			long_name = TRM_nagisa_democratic_party
 			name = TRM_nagisa_democratic_party
 		}
-		TRN_skrltk = {
+		TRN_Kirifuji_Nagisa = {
 			remove_country_leader_role = {
 				ideology = despotism
 			}
@@ -1953,7 +1951,7 @@ country_event = {
 				always = no
 			}
 			add_country_leader_role = {
-				character = TRN_skrltk
+				character = TRN_Kirifuji_Nagisa
 				promote_leader = yes
 				country_leader = {
 					ideology = liberalism
@@ -1964,7 +1962,7 @@ country_event = {
 		}
 		else = {
 			add_country_leader_role = {
-				character = TRN_skrltk
+				character = TRN_Kirifuji_Nagisa
 				promote_leader = yes
 				country_leader = {
 					ideology = liberalism
@@ -2645,7 +2643,7 @@ country_event = { # 모스크바 총독부는 누굴로?
         effect_tooltip = {
         event_target:Trinity_Puppet_RUS = {
             TRM = {
-                TRN_skrltk = {
+                TRN_Kirifuji_Nagisa = {
                     set_portraits = {
 				        civilian = { large = "gfx/leaders/TRN/TRN_Kirihuji_Nagisa_angry_Portrait.tga" }
                     }
@@ -2653,7 +2651,7 @@ country_event = { # 모스크바 총독부는 누굴로?
                 }
             }
             add_country_leader_role = {
-                character = TRN_skrltk
+                character = TRN_Kirifuji_Nagisa
                 country_leader = {
     				expire = "1965.1.1"
                     ideology = pater_nazism
@@ -3251,7 +3249,7 @@ country_event = { # 트리니티와 동맹을 맺은 독일계 국가는 이 이
         #TRM = {
          #   has_government = fascism
          #   has_country_leader = {
-		#		character = TRN_alzk
+		#		character = TRN_Misono_Mika
 		#		ruling_only = yes 
         #    }
         #}
@@ -3972,6 +3970,9 @@ country_event = { # 백귀야행 - 트리니티 경제협력
 
 	option = { # 
 		name = TRMDIP.64.a
+		ai_chance = {
+			base = 20
+		}
 		add_ideas = TRN_HYA_customs_union_ns
 		add_opinion_modifier = {
 			target = TRM
@@ -3986,6 +3987,13 @@ country_event = { # 백귀야행 - 트리니티 경제협력
 
 	option = { # 
 		name = TRMDIP.64.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				threat > 26
+				add = 999
+			}
+		}
 		custom_effect_tooltip = TRM_eng_event_chain_tt
 
 		hidden_effect = {
@@ -4054,7 +4062,15 @@ country_event = { # 백귀야행 - 트리니티 군사 협력
 			category = land_doctrine
 			uses = 1
 		}
-
+		effect_tooltip = {
+			add_named_threat = {
+				threat = 5
+				name = TRMDIP_67_NAME
+			}
+		}
+		TRM = {
+			country_event = { id = TRMDIP.68 hours = 05 }
+		}
 	}
 	option = { #
 		name = TRMDIP.64.c
@@ -4064,6 +4080,35 @@ country_event = { # 백귀야행 - 트리니티 군사 협력
 			TRM = { 
 				country_event = { id = TRMDIP.65 hours = 01 }
 			}
+		}
+	}
+}
+
+country_event = { # 백귀야행 - 트리니티 공동훈련 - 백귀야행의 수락
+	id = TRMDIP.68
+	title = TRMDIP.68.t
+	desc = TRMDIP.68.d
+	picture = GFX_report_event_generic_trinity_building
+
+	fire_only_once = no
+	is_triggered_only = yes 
+
+	option = { #
+		name = TRMDIP.68.a
+		army_experience = 25
+		add_doctrine_cost_reduction = {
+			name = TRMDIP_67_RESEARCH_BONUS_NAME
+			cost_reduction = 0.75
+			category = land_doctrine
+			uses = 1
+		}
+		add_named_threat = {
+			threat = 2
+			name = TRMDIP_67_NAME
+		}
+		hidden_effect = {
+			country_event = { id = trnfla.27 days = 05 }
+			HYA = { country_event = { id = trnfla.27 days = 05 } }
 		}
 	}
 }
@@ -5449,7 +5494,7 @@ country_event = { # 디버그 이벤트
 	option = { #
 		name = TRM_event.2003.a
 			set_portraits = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				civilian = { 
 					large = GFX_TRN_Misono_Mika_Portrait_Official
 				}
@@ -5458,7 +5503,7 @@ country_event = { # 디버그 이벤트
 	option = {
 		name = TRM_event.2003.d
 			set_portraits = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				civilian = { 
 					large = GFX_TRN_Misono_Mika_Portrait_Kon_ka
 				}
@@ -5608,7 +5653,7 @@ country_event = {  # 디버그 이벤트
 	}
 	option = { #
 		name = TRM_event.2000.d
-		TRN_alzk = {
+		TRN_Misono_Mika = {
 			remove_country_leader_role = {
 				ideology = pater_nazism
 			}
@@ -5616,7 +5661,7 @@ country_event = {  # 디버그 이벤트
 				country_leader = {
 				expire = "1965.1.1"
 				ideology = pater_nazism
-				desc = "TRN_alzk_DESC_2"
+				desc = "TRN_Misono_Mika_DESC_2"
 				traits = {
 				}
 			}
@@ -6536,9 +6581,9 @@ country_event = {
 		5 = { set_demilitarized_zone = yes }
 		807 = { set_demilitarized_zone = yes }
 		762 = { set_demilitarized_zone = yes }
-		retire_character = TRN_alzk 
+		retire_character = TRN_Misono_Mika 
 		retire_character = TRN_tpdldk
-		retire_character = TRN_skrltk
+		retire_character = TRN_Kirifuji_Nagisa
 		hidden_effect = {
 			remove_ideas = {
 				TRM_safe_trinity
@@ -8765,6 +8810,7 @@ country_event = { # 티파티 통제
 			remove_idea = TRM_safe_trinity
 			add_idea = TRN_political_instability_ns
 		}
+		add_ideas = TRN_agrarian_ns
 		if = {
 			limit = {
 				NOT = { has_focus_tree = Trinity_focus }
@@ -8787,7 +8833,7 @@ country_event = { # 티파티 통제
 	option = {
 		name = trinity.1.a
 		remove_trait = {
-			character = TRN_skrltk
+			character = TRN_Kirifuji_Nagisa
 			slot = political_advisor
 			trait = b_cjstkdmldusgkq
 		}
@@ -9049,7 +9095,7 @@ unit_leader_event = { # 미카의 호스트 취임
 	option = {
 		name = trinity.11.a
 		add_country_leader_role = {
-			character = TRN_alzk
+			character = TRN_Misono_Mika
 			promote_leader = yes
 			country_leader = {
 				ideology = tea_party_ideology
@@ -9058,7 +9104,7 @@ unit_leader_event = { # 미카의 호스트 취임
 					TRN_mika_trait_1
 					TRM_pater_faction
 				}
-				desc = TRN_alzk_leader_desc
+				desc = TRN_Misono_Mika_leader_desc
 			}
 		}
 		effect_tooltip = {
@@ -9186,7 +9232,7 @@ country_event = { # 필리우스 분파의 운명
 		
 		custom_effect_tooltip = tooltip_white_line
 		remove_advisor_role = {
-			character = TRN_skrltk
+			character = TRN_Kirifuji_Nagisa
 			slot = political_advisor
 		}
     }
@@ -9204,7 +9250,7 @@ country_event = { # 필리우스 분파의 운명
 		
 		custom_effect_tooltip = tooltip_white_line
 		remove_advisor_role = {
-			character = TRN_skrltk
+			character = TRN_Kirifuji_Nagisa
 			slot = political_advisor
 		}
     }
@@ -9241,12 +9287,12 @@ country_event = { # 파테르 분파 내부의 불충
 		set_politics = { ruling_party = fascism elections_allowed = no }
 		effect_tooltip = {
 			add_country_leader_role = {
-				character = TRN_alzk
+				character = TRN_Misono_Mika
 				promote_leader = yes
 				country_leader = {
 					ideology = tea_party_fascism_ideology
 					traits = { TRN_mika_trait_2 }
-					desc = TRN_alzk_leader_desc
+					desc = TRN_Misono_Mika_leader_desc
 				}
 			}
 		}
@@ -9681,10 +9727,10 @@ country_event = { # 여성 인권에 대한 논의
 			id = TRM_power_balance
 			value = -0.05
 		}
-		add_stability = -0.1
+		add_stability = -0.2
 		add_timed_idea = {
 			idea = TRN_womens_rights_movement_ns
-			days = 360
+			days = 365
 		}
     }
 
@@ -9699,7 +9745,7 @@ country_event = { # 여성 인권에 대한 논의
 		}
 		add_timed_idea = {
 			idea = TRN_womens_rights_movement_war_support_ns
-			days = 360
+			days = 365
 		}
 		add_stability = 0.02
     }
@@ -9774,7 +9820,7 @@ country_event = { # '호스트 선출제'
 		}
 		effect_tooltip = { country_event = { id = trinity.11 days = 02 } }
 		hidden_effect = {
-			TRN_alzk = {
+			TRN_Misono_Mika = {
 				unit_leader_event = { id = trinity.11 days = 02 }
 			}
 		}
@@ -10203,16 +10249,21 @@ country_event = { # 아리우스 분교의 운명
 	}
 }
 
-country_event = {
-	id = trnhonor.0
-	title = trnhonor.0.t
-	desc = trnhonor.0.desc
-	picture = GFX_event_Trinity_Campus
+country_event = { # 아리우스 분교의 운명
+	id = trinity.45
+	title = trinity.45.t
+	desc = trinity.45.desc
+	picture = GFX_report_event_generic_trinity_building
 
 	is_triggered_only = yes
-	
-	option = { 
-		name = trnhonor.0.a
+	fire_only_once = no
+
+	option = {
+		name = trinity.45.a
+
+	}
+	option = {
+		name = trinity.45.b
 
 	}
 }
@@ -11015,7 +11066,7 @@ country_event = { # 색채 침입 - 미카
     trigger = {
 		tag = TRM
 		has_country_leader = {
-			character = TRN_alzk
+			character = TRN_Misono_Mika
 			ruling_only = yes
 		}
 		has_completed_focus = TRN_necessary_revenge
@@ -11058,6 +11109,51 @@ country_event = { # 백화요란 - 정의실현부 공동 훈련
 
 	option = {
 		name = trnfla.27.a 
+	}
+}
+
+country_event = { # 중앙구에서의 충돌
+	id = trnfla.28
+	title = trnfla.28.t
+	desc = trnfla.28.desc
+	picture = GFX_report_event_generic_kivotos_city_2
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnfla.28.a
+		trigger = {
+			has_country_leader = {
+				ruling_only = yes
+				character = TRN_Misono_Mika
+			}
+		}
+		activate_mission = TRN_Mika_honor_social_problem
+	}
+
+	option = {
+		name = trnfla.28.a
+		trigger = {
+			has_country_leader = {
+				ruling_only = yes
+				character = TRN_Kirifuji_Nagisa
+			}
+		}
+	}
+}
+
+country_event = { # 중앙구에서의 충돌
+	id = trnfla.29
+	title = trnfla.29.t
+	desc = trnfla.29.desc
+	picture = GFX_report_event_generic_kivotos_city_2
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnfla.29.a
 	}
 }
 

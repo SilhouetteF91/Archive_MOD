@@ -1128,7 +1128,7 @@ on_actions = {
 						TRM = { 
 							has_focus_tree = TRM_focus_tree
 							has_country_leader = {
-								character = TRN_alzk
+								character = TRN_Misono_Mika
 								ruling_only = yes
 							}
 							NOT = { has_country_flag = TRM_focus_locked_flag } 

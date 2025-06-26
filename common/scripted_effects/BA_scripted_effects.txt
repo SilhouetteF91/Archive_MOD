@@ -1308,7 +1308,7 @@ TRM_NEW_ORDER_SOV_LOSE = {
                     limit = { has_global_flag = TRM_nasia_is_moscow_governor }
                         event_target:Trinity_Puppet_RUS = {
                         TRM = {
-                            TRN_skrltk = {
+                            TRN_Kirifuji_Nagisa = {
                                 set_portraits = {
 				                    civilian = { large = "gfx/leaders/TRN/TRN_Kirihuji_Nagisa_angry_Portrait.tga" }
                                 }
@@ -1316,7 +1316,7 @@ TRM_NEW_ORDER_SOV_LOSE = {
                         }
                     }
                     add_country_leader_role = {
-                        character = TRN_skrltk
+                        character = TRN_Kirifuji_Nagisa
                         country_leader = {
     				        expire = "1965.1.1"
                             ideology = pater_nazism
