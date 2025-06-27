@@ -572,6 +572,16 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_decision_header_TRN_Teaparty"
+		texturefile = "gfx/interface/decisions/decision_header_TRN_Teaparty.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_cat_trinity_teaparty"
+		texturefile = "gfx/interface/decisions/decision_cat_trinity_teaparty.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_TRN_decisions_peace"
 		texturefile = "gfx/interface/decisions/TRN_peace.tga"
 		legacy_lazy_load = no

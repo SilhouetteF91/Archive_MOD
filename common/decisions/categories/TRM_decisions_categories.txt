@@ -27,7 +27,7 @@ TRN_after_war_decisions = {
 	priority = 90
 }
 TRN_internal_factions_categories = {
-	icon = GFX_decision_category_generic_fascism
+	icon = GFX_decision_cat_trinity_teaparty
 	scripted_gui = TRM_internal_factions_decision_ui
 	allowed = {
 		tag = TRM
@@ -46,6 +46,7 @@ TRN_internal_factions_categories = {
 	visible_when_empty = no
 }
 TRN_Seia_problem_decisions = {
+	picture = GFX_TRN_Seia_problem
 	allowed = {
 		tag = TRM
 		NOT = {

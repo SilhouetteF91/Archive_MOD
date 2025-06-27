@@ -269,8 +269,8 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
 ############################
 
 
- TRN_internal_factions_categories: "내부 파벌"
- TRN_internal_factions_categories_desc: "\n\n£GFX_decisions_TRN_library_committee\n\n\n\n\n트리니티가 다른 세계로 전이된 이후 잠겨있던 수많은 갈등들이 떠올랐습니다.\n이들은 각자의 이익을 위해 행동할 것이며 이들과 트리니티의 이익을 위해서 협력하거나, 제거되어야 하는지 결정해야 합니다."
+ TRN_internal_factions_categories: "티파티"
+ TRN_internal_factions_categories_desc: "\n\n£GFX_decision_header_TRN_Teaparty\n\n\n\n\n대전이 사태 이후 이어진 일련의 사건들은 트리니티 삼두정의 기반을 뿌리째 흔들기에 충분했습니다. 각 분파는 더 이상 협치를 위한 파트너가 아니라, 자신들의 이익을 위해 움직이는 이해집단이 되어버렸습니다. 내부의 신뢰는 무너졌고, 서로에 대한 의심과 견제는 점점 노골적으로 드러나고 있습니다. 이들과 손을 잡고 타협할 것인지, 아니면 그 존재 자체를 위협으로 간주하고 제거할 것인지. 분파들은 그들만의 논리와 명분으로 움직이고 있지만, 결국 남는 것은 권력과 생존을 위한 싸움뿐입니다.\n\n"
  TRM_ui_loyalty_header: "충성도"
  TRM_ui_popularity_header: "영향력"
 
