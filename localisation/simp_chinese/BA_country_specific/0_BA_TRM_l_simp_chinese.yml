@@ -1548,7 +1548,7 @@ TRN_launch_operation_against_Misaki: "对§3今西美咲§!的行动开始"
 TRN_launch_operation_against_Hiyori: "对§4土岐田ひより§!的行动开始"
 # 世伊被欺负的人是谁
 TRN_Seia_problem_decisions: "找出罪犯"
-TRN_Seia_problem_decisions_desc: "\n\n£GFX_TRN_Seia_problem\n\n\n\n\n茶会执行委员遭到袭击。由于罪犯迅速逃离现场，我们没能抓住他，但通过犯罪工具和附近警卫的证词，我们认为找出他们不会有太大问题。"
+TRN_Seia_problem_decisions_desc: "茶会执行委员遭到袭击。由于罪犯迅速逃离现场，我们没能抓住他，但通过犯罪工具和附近警卫的证词，我们认为找出他们不会有太大问题。"
 TRN_who_is_criminal: "现场调查"
 TRN_who_is_criminal_2: "追踪罪犯"
 TRN_who_is_criminal_3: "抓捕"

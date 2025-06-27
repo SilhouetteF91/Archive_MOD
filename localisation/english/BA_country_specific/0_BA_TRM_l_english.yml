@@ -1661,7 +1661,7 @@
 
 # 세이아 괴롭힌 놈 누구냐
  TRN_Seia_problem_decisions: "범인 색출"
- TRN_Seia_problem_decisions_desc: "\n\n£GFX_TRN_Seia_problem\n\n\n\n\n티파티 임원이 공격받는 일이 벌어졌습니다. 범인은 현장에서 재빠르게 도주한 탓에 잡진 못하였지만 범행 도구와 주변 경호원들의 증언을 통해 그들을 색출하는데에 큰 지장은 없을 것이라 정의실현부는 판단하였습니다."
+ TRN_Seia_problem_decisions_desc: "티파티 임원이 공격받는 일이 벌어졌습니다. 범인은 현장에서 재빠르게 도주한 탓에 잡진 못하였지만 범행 도구와 주변 경호원들의 증언을 통해 그들을 색출하는데에 큰 지장은 없을 것이라 정의실현부는 판단하였습니다."
  TRN_who_is_criminal: "현장 조사"
  TRN_who_is_criminal_2: "범인 동선 파악"
  TRN_who_is_criminal_3: "색출"

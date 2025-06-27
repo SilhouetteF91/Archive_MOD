@@ -1533,7 +1533,7 @@ TRN_launch_operation_against_Misaki: "§3今科ミサキ§!に対する作戦開
 TRN_launch_operation_against_Hiyori: "§4槌永ヒヨリ§!に対する作戦開始"
 #セイアをいじめた奴は誰だ
 TRN_Seia_problem_decisions: "犯人捜索"
-TRN_Seia_problem_decisions_desc: "\n\n£GFX_TRN_Seia_problem\n\n\n\n\nティーパーティーの役員が攻撃されるという事件が起きました。犯人は現場から素早く逃走したため捕まえることはできませんでしたが、犯行道具と周辺の警備員の証言を通して、彼らを捜索するのに大きな支障はないだろうと正義実現部は判断しました。"
+TRN_Seia_problem_decisions_desc: "ティーパーティーの役員が攻撃されるという事件が起きました。犯人は現場から素早く逃走したため捕まえることはできませんでしたが、犯行道具と周辺の警備員の証言を通して、彼らを捜索するのに大きな支障はないだろうと正義実現部は判断しました。"
 TRN_who_is_criminal: "現場調査"
 TRN_who_is_criminal_2: "犯人動線の把握"
 TRN_who_is_criminal_3: "捜索"

@@ -496,7 +496,7 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_decision_category_GEH_Fuuki"
+		name = "GFX_decision_category_GEH_Prefect_team"
 		texturefile = "gfx/interface/decisions/decision_category_GEH_Fuuki.tga"
 		legacy_lazy_load = no
 	}
@@ -569,6 +569,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TRN_decisions_arius_squad"
 		texturefile = "gfx/interface/decisions/TRN_arius_squad.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_header_TRN_Teaparty"
+		texturefile = "gfx/interface/decisions/decision_header_TRN_Teaparty.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_cat_trinity_teaparty"
+		texturefile = "gfx/interface/decisions/decision_cat_trinity_teaparty.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -1524,6 +1534,60 @@ spriteTypes = {
 	spriteType = {
         name = "GFX_GEH_ako_amau_leader_icon"
         texturefile = "gfx/interface/decisions/GEH_prefect_team_decisions/GEH_ako_amau_leader_icon.dds"
+        legacy_lazy_load = no
+    }
+
+### 히나 선도부 지옥 ###
+
+	frameAnimatedSpriteType = {
+		name = "GFX_GEH_hell_spritesheet"
+		texturefile = "gfx/interface/decisions/GEH_prefect_team_decisions/GEH_hell_spritesheet.dds"
+		#legacy_lazy_load = no
+		noOfFrames = 25
+		animation_rate_fps = 7
+		looping = yes
+		play_on_show = yes
+	}
+	
+	spriteType = {
+        name = "GFX_GEH_hina_sorasaki_frame"
+        texturefile = "gfx/interface/decisions/GEH_prefect_team_decisions/GEH_hina_sorasaki_frame.dds"
+        legacy_lazy_load = no
+    }
+	
+	spriteType = {
+        name = "GFX_GEH_ako_amau_frame"
+        texturefile = "gfx/interface/decisions/GEH_prefect_team_decisions/GEH_ako_amau_frame.dds"
+        legacy_lazy_load = no
+    }
+	
+	spriteType = {
+        name = "GFX_GEH_hina_corruption_gui_text"
+        texturefile = "gfx/interface/decisions/GEH_prefect_team_decisions/GEH_hina_corruption_gui_text.dds"
+        legacy_lazy_load = no
+    }
+
+	spriteType = {
+        name = "GFX_GEH_hina_corruption_gui_down"
+        texturefile = "gfx/interface/decisions/GEH_prefect_team_decisions/GEH_hina_corruption_gui_down.dds"
+        legacy_lazy_load = no
+    }
+
+	spriteType = {
+        name = "GFX_GEH_hina_corruption_gui_background"
+        texturefile = "gfx/interface/decisions/GEH_prefect_team_decisions/GEH_hina_corruption_gui_background.dds"
+        legacy_lazy_load = no
+    }
+
+	spriteType = {
+        name = "GFX_decision_category_GEH_hina_dress_eligma"
+        texturefile = "gfx/interface/decisions/GEH_prefect_team_decisions/decision_category_GEH_hina_dress_eligma.dds"
+        legacy_lazy_load = no
+    }
+
+	spriteType = {
+        name = "GFX_decision_category_GEH_hina_eligma"
+        texturefile = "gfx/interface/decisions/GEH_prefect_team_decisions/decision_category_GEH_hina_eligma.dds"
         legacy_lazy_load = no
     }
 
