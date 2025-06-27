@@ -172,16 +172,11 @@ country_event = { #현룡문의 운명
 	}
 	option = { #노동은 교화다!
 		name = shacom.7.b
-		random_other_country = {
-			limit = {
-				original_tag = SHA
-			}
-			every_unit_leader = {
-				limit = {
-					has_trait = SHA_Genryumon_t 
-				}
-				set_nationality = SHA
-			}
+		SHA_KISAKI = {
+			set_nationality = SHA
+		}
+		SHA_MINA = {
+			set_nationality = SHA
 		}
 		add_stability = -0.05
 	}
@@ -511,6 +506,186 @@ country_event = { #혁명전쟁
 				owner = SHA
 				count = 2
 			}
+		}
+	}
+}
+unit_leader_event = { #당독재
+	id = shacom.21
+	title = shacom.21.t
+	desc = shacom.21.d
+
+    is_triggered_only = yes
+
+	option = { #ㄱㄱ
+		name = shacom.21.a
+		add_country_leader_trait = SHA_chairman
+	}
+}
+country_event = { #대약진!
+	id = shacom.22
+	title = shacom.22.t
+	desc = shacom.22.d
+	picture = GFX_report_event_generic_factory
+    is_triggered_only = yes
+
+	option = { #ㄱㄱ
+		name = shacom.22.a
+		activate_mission = SHA_glm_agriculture
+		activate_mission = SHA_glm_arming
+		activate_mission = SHA_glm_culture
+		activate_mission = SHA_glm_military
+
+		unlock_decision_tooltip = SHA_glm_collective_agriculture
+		hidden_effect = {
+			country_event = {
+				id = shacom.26
+				days = 363
+			}	
+		}
+	}
+}
+unit_leader_event = {
+ 	#새를 잡을까요?
+	id = shacom.23
+	title = shacom.23.t
+	desc = shacom.23.d
+    is_triggered_only = yes
+	fire_only_once = yes
+	option = { #ㄴㄴ
+		name = shacom.23.a
+		add_stability = 0.01
+	}
+}
+country_event = { #발견된 인민공사의 비효율성 
+	id = shacom.24
+	title = shacom.24.t
+	desc = shacom.24.d
+	picture = GFX_report_event_DEN_danish_politics
+    is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #ㄱㄱ
+		name = shacom.24.a
+		add_political_power = -30
+		every_owned_state = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = SHA_collective_farm
+				}
+			}
+			remove_building = {
+				type = infrastructure
+				level = 1
+			}
+			remove_dynamic_modifier = {
+				modifier = SHA_collective_farm
+			}
+		}
+	}
+}
+country_event = { #문화혁명 찐빠
+	id = shacom.25
+	title = shacom.25.t
+	desc = shacom.25.d
+	picture = GFX_report_event_ger_civil_war
+    is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #ㄱㄱ
+		name = shacom.25.a
+		add_stability = -0.01
+		4 = {
+			damage_building = {
+				type = landmark_hofburg_palace
+				damage = 0.35
+			}
+		}
+	}
+}
+country_event = { #대약진 운동의 결과
+	id = shacom.26
+	title = shacom.26.t
+	desc = shacom.26.d
+	picture = GFX_report_event_tur_political_rally
+    is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #ㄱㄱ
+		name = shacom.26.a
+		if = {
+			limit = {
+				has_country_flag = SHA_glm_agriculture_flag
+			}
+			custom_effect_tooltip = shacom.26_tt_1
+			every_owned_state = {
+				BA_increase_state_category_by_one_level = yes
+			}
+		}
+		else = {
+			custom_effect_tooltip = shacom.26_tt_2
+			add_timed_idea = {
+				idea = SHA_failed_agriculture
+				days = 360
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = SHA_glm_military_flag
+			}
+			custom_effect_tooltip = shacom.26_tt_3
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = shacom.26_tt_4
+			add_timed_idea = {
+				idea = SHA_failed_arms
+				days = 360
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = SHA_glm_culture_flag
+			}
+			custom_effect_tooltip = shacom.26_tt_5
+			add_political_power = 50
+		}
+		else = {
+			custom_effect_tooltip = shacom.26_tt_6
+			add_timed_idea = {
+				idea = SHA_failed_culture
+				days = 360
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = SHA_glm_military_flag
+			}
+			custom_effect_tooltip = shacom.26_tt_7
+			army_experience = 50
+			air_experience = 30
+		}
+		else = {
+			custom_effect_tooltip = shacom.26_tt_8
+			add_timed_idea = {
+				idea = SHA_failed_military
+				days = 360
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = SHA_glm_agriculture_flag
+				has_country_flag = SHA_glm_arming_flag
+				has_country_flag = SHA_glm_culture_flag
+				has_country_flag = SHA_glm_military_flag
+			}
+			custom_effect_tooltip = shacom.26_tt_9
+			add_ideas = SHA_total_success
 		}
 	}
 }
@@ -1432,14 +1607,6 @@ news_event = {
 			}
 		}
 	}
-	title = {
-		text = shanews.04.t_1
-		trigger = {
-			SHA = {
-				has_country_flag = SHA_communist_focus_in_progress
-			}
-		}
-	}
 	desc = {
 		text = shanews.04.desc_c
 		trigger = {
@@ -1450,12 +1617,6 @@ news_event = {
 		text = shanews.04.desc_s
 		trigger = {
 			SHA = { has_completed_focus = SHA_Kaguya_ousted }
-		}
-	}
-	desc = {
-		text = shanews.04.desc_com
-		trigger = {
-			SHA = { has_completed_focus = SHA_communism_focus_12 }
 		}
 	}
 	desc = {
@@ -1511,6 +1672,75 @@ news_event = {
 		effect_tooltip = { add_threat = 3 }
 	}
 }
+
+news_event = { #공산용 팩션 이벤트
+	id = shanews.05
+	title = {
+		text = shanews.05.t
+		trigger = {
+			SHA = {has_completed_focus = SHA_communism_focus_9}
+		}
+	}
+	title = {
+		text = shanews.04.t_1
+		trigger = {
+			SHA = {NOT = {has_completed_focus = SHA_communism_focus_9}}
+		}
+	}
+	desc = {
+		text = shanews.05.desc_1
+		trigger = {
+			SHA = {has_completed_focus = SHA_communism_focus_9}
+		}
+	}
+	desc = {
+		text = shanews.05.desc_2
+		trigger = {
+			SHA = {NOT = {has_completed_focus = SHA_communism_focus_9}}
+		}
+	}
+	picture = GFX_news_event_SOV_supreme_soviet
+	
+	major = yes	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { add_threat = 3 }
+	}
+		
+	option = {
+		name = shanews.04.a
+		trigger = { original_tag = SHA }
+		effect_tooltip = { add_threat = 3 }
+	}
+		
+	option = {
+		name = shanews.03.b
+		trigger = {
+			original_tag = HYA
+		}
+		effect_tooltip = { add_threat = 3 }
+	}
+		
+	option = {
+		name = shanews.04.c
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { original_tag = HYA }
+			NOT = { original_tag = SHA }
+		}
+		effect_tooltip = { add_threat = 3 }
+	}
+		
+	option = {
+		name = shanews.04.d
+		trigger = {
+			NOT = { Kivotos_tag = yes }
+		}
+		effect_tooltip = { add_threat = 3 }
+	}
+}
+
 
 # 찻잎 수출
 country_event = {

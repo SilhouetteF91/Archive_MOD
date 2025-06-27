@@ -1960,15 +1960,18 @@ focus_tree = {
 		select_effect = {
 			remove_ideas = SHA_shanhaijing_isolation
 		}
+		available = {
+			SHA_otto_bauer = {
+				is_country_leader = no
+			}
+		}
 		completion_reward = {
 			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
 			effect_tooltip = {
 				remove_ideas = SHA_shanhaijing_isolation
 			}
 			custom_effect_tooltip = tooltip_effect_upon_focus_completion
-			SOU = {
-				country_event = generic.2
-			}
+			add_ideas = SHA_stalinism_program
 		}
 	}
 	focus = { #산해경-소련 산업 연계
@@ -2168,6 +2171,18 @@ focus_tree = {
 				remove_idea = SHA_austro_marxism_1
 				add_idea = SHA_austro_marxism_2
 			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SHA
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SHA
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 
@@ -2332,7 +2347,7 @@ focus_tree = {
 	focus = {
 		id = SHA_formation_of_labor_union
 		icon = GFX_focus_FIN_finnish_federation_of_trade_unions
-		x = -1
+		x = 1
 		y = 1
 		cost = 5
 
@@ -2372,11 +2387,11 @@ focus_tree = {
 		}
 	}
 
-	# 여성 교육
+	# 과학을 통한 진보
 	focus = {
-		id = SHA_womens_education_initiative
-		icon = GFX_focus_AUS_womens_education_initiative
-		x = 1
+		id = SHA_progressivism_through_science
+		icon = GFX_focus_SHA_yakushi_saya
+		x = -1
 		y = 1
 		cost = 5
 
@@ -2390,6 +2405,46 @@ focus_tree = {
 		bypass = { }
 
 		relative_position_id = SHA_university_of_vienna
+
+		completion_reward = {
+			remove_trait = {
+				character = SHA_SAYA
+				trait = SHA_T4a
+				slot = political_advisor
+			}
+			add_trait = {
+				character = SHA_SAYA
+				trait = SHA_T4a_2
+				slot = political_advisor
+			}
+			SHA_SAYA = {
+				hidden_effect = {
+					unit_leader_event = shacom.10
+				}
+			}
+		}
+	}
+
+	# 여성 교육
+	focus = {
+		id = SHA_womens_education_initiative
+		icon = GFX_focus_AUS_womens_education_initiative
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_progressivism_through_science
+		}
+		mutually_exclusive = {
+			focus = SHA_affiliate_with_catholic
+		}
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_progressivism_through_science
 
 		completion_reward = {
 			if = {
@@ -2412,42 +2467,79 @@ focus_tree = {
 		}
 	}
 
-	# 과학을 통한 진보
+	# 가톨릭과 제휴
 	focus = {
-		id = SHA_progressivism_through_science
-		icon = GFX_focus_SHA_yakushi_saya
-		x = 1
+		id = SHA_affiliate_with_catholic
+		icon = GFX_focus_assist_catholic
+		x = 3
 		y = 1
 		cost = 5
 
 		prerequisite = { 
-			focus = SHA_formation_of_labor_union
+			focus = SHA_progressivism_through_science
+		}
+		mutually_exclusive = {
 			focus = SHA_womens_education_initiative
 		}
-		mutually_exclusive = { }
 
 		available = { 
 		}
 		bypass = { }
 
-		relative_position_id = SHA_formation_of_labor_union
+		relative_position_id = SHA_progressivism_through_science
 
 		completion_reward = {
-			remove_trait = {
-				character = SHA_SAYA
-				trait = SHA_T4a
-				slot = political_advisor
-			}
-			add_trait = {
-				character = SHA_SAYA
-				trait = SHA_T4a_2
-				slot = political_advisor
-			}
-			SHA_SAYA = {
-				hidden_effect = {
-					unit_leader_event = shacom.10
-				}
-			}
+		}
+	}
+
+
+	# 해방신학
+	focus = {
+		id = SHA_liberation_theology
+		icon = GFX_focus_BRA_socialist_theologians
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_womens_education_initiative
+		}
+		mutually_exclusive = {
+			focus = SHA_state_atheism
+		}
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_womens_education_initiative
+
+		completion_reward = {
+		}
+	}
+
+	# 국가무신론
+	focus = {
+		id = SHA_state_atheism
+		icon = GFX_focus_ARG_state_atheism
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_womens_education_initiative
+		}
+		mutually_exclusive = {
+			focus = SHA_liberation_theology
+		}
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_womens_education_initiative
+
+		completion_reward = {
 		}
 	}
 
@@ -2542,9 +2634,10 @@ focus_tree = {
 		}
 	}
 
-	# (공산용) 제2인터내셔널 재건
+	# (공산용) 제2인터내셔널 재건 / 코민테른 서부 전선
 	focus = {
 		id = SHA_communism_diplo_0
+		dynamic = yes
 		icon = GFX_focus_SOV_international_union_of_soviet_republics
 		x = 17
 		y = 0
@@ -2596,6 +2689,7 @@ focus_tree = {
 			has_country_flag = SHA_communist_focus_in_progress
 		}
 		bypass_effect = {
+			set_rule = { can_create_factions = yes }
 			hidden_effect = {
 				country_event = {
 					id = shacom.11
@@ -2633,19 +2727,32 @@ focus_tree = {
 					id = shacom.11
 					days = 10
 				}
-				country_event = {
-					id = shacom.15
-					days = 4
+				if = {
+					limit = {
+						has_completed_focus = SHA_communism_focus_12
+					}
+					country_event = {
+						id = shacom.15
+						days = 4
+					}
 				}
 			}
 			set_rule = { can_create_factions = yes }
-			create_faction = The_second_internationale
+			if = {
+				limit = {
+					has_completed_focus = SHA_communism_focus_9
+				}
+				create_faction = SHA_comintern_western_front
+			}
+			else = {
+				create_faction = The_second_internationale
+			}
 			add_political_power = 50
 			add_popularity = {
 				ideology = ROOT
 				popularity = 0.03
 			}
-			news_event = shanews.04
+			news_event = shanews.05
 		}
 	}
 
@@ -4463,15 +4570,28 @@ focus_tree = {
 
 		prerequisite = { focus = SHA_communism_diplo_1 focus = SHA_soviet_diplo_0 }
 
-		bypass = { }
+		bypass = {
+			all_country = {
+				NOT = {
+					has_idea = SHA_red_terror
+				}
+			}
+		}
 
 		relative_position_id = SHA_communism_diplo_1
 
 
 		completion_reward = {
-			add_days_mission_timeout = {
-				mission = SHA_red_terror_mission
-				days = 75
+			if = {
+				limit = {
+					any_country = {
+						has_idea = SHA_red_terror
+					}
+				}
+				add_days_mission_timeout = {
+					mission = SHA_red_terror_mission
+					days = 60
+				}
 			}
 			every_country = {
 				limit = {
@@ -4479,7 +4599,7 @@ focus_tree = {
 				}
 				modify_timed_idea = {
 					idea = SHA_red_terror
-					days = 75
+					days = 60
 				}
 			}
 		}
@@ -4487,7 +4607,7 @@ focus_tree = {
 	# 인접국 노동자와 연대
 	focus = {
 		id = SHA_communism_diplo_7
-		icon = GFX_focus_GER_the_peoples_victory
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
 		x = -1
 		y = 1
 		cost = 5
@@ -4500,9 +4620,16 @@ focus_tree = {
 
 
 		completion_reward = {
-			add_days_mission_timeout = {
-				mission = SHA_red_terror_mission
-				days = 60
+			if = {
+				limit = {
+					any_country = {
+						has_idea = SHA_red_terror
+					}
+				}
+				add_days_mission_timeout = {
+					mission = SHA_red_terror_mission
+					days = 60
+				}
 			}
 			every_country = {
 				limit = {
@@ -4566,13 +4693,13 @@ focus_tree = {
 		}
 	}
 
-	# 초읽기
+	# 당독재 확립
 	focus = {
 		id = SHA_soviet_diplo_0
-		icon = GFX_focus_BRA_jaguar_diplomacy
+		icon = GFX_focus_GER_proletarian_dictatorship
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
 
@@ -4585,6 +4712,7 @@ focus_tree = {
 				owns_state = 972
 			}
 			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+			has_completed_focus = SHA_communism_focus_9
 		}
 		bypass = { }
 
@@ -4594,36 +4722,61 @@ focus_tree = {
 		relative_position_id = SHA_invade_of_Hyakkiyako
 
 		completion_reward = {
+			set_party_name = {
+				ideology = communism
+				long_name = SHA_communism_party_volsheviks_long
+				name = SHA_communism_party_volsheviks
+			}
+			add_political_power = 50
+			random_character = {
+				limit = {
+					is_country_leader = yes
+				}
+				unit_leader_event = shacom.21
+			}
 		}
 	}
-	# 방어주의
+	# 대약진!
 	focus = {
 		id = SHA_soviet_diplo_1
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_GER_the_peoples_victory
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
+		mutually_exclusive = {
+			focus = SHA_soviet_diplo_2
+		}
 
 		prerequisite = { focus = SHA_soviet_diplo_0 }
 
 		relative_position_id = SHA_soviet_diplo_0
 
 		completion_reward = {
+			country_event = {
+				id =shacom.22
+				days = 3
+			}
 		}
 	}
-	# 내부에 집중
+	# 경제개발 5개년 계획
 	focus = {
 		id = SHA_soviet_diplo_2
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_focus_AFG_helmand_river_authority
 		x = 1
 		y = 1
-		cost = 10
-
+		cost = 5
+		mutually_exclusive = {
+			focus = SHA_soviet_diplo_1
+		}
 		prerequisite = { focus = SHA_soviet_diplo_0 }
 
 		relative_position_id = SHA_soviet_diplo_0
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = SHA_five_year_plan
+				years = 5
+			}
 		}
 	}
 	# 키보토스 정체성
@@ -4632,13 +4785,17 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
-		prerequisite = { focus = SHA_soviet_diplo_1 }
+		prerequisite = { focus = SHA_soviet_diplo_1 focus = SHA_soviet_diplo_2 }
 
 		relative_position_id = SHA_soviet_diplo_1
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHA_austro_marxism_1
+				add_idea = SHA_kivotos_socialism
+			}
 		}
 	}
 	# 남키보토스 혁명
@@ -4647,7 +4804,7 @@ focus_tree = {
 		icon = GFX_goal_RUS_liberation_march
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_soviet_diplo_3 }
 
@@ -4657,21 +4814,40 @@ focus_tree = {
 			focus = SHA_communism_diplo_9
 		}
 		completion_reward = {
+			add_war_support = 0.1
+			add_state_claim = 4
+			add_state_claim = 1021
+			add_state_claim = 152
+			add_state_claim = 153
+			add_state_claim = 848
+			add_state_claim = 976
+			add_state_claim = 975
+			add_state_claim = 972
+			add_state_claim = 75
+			add_state_claim = 74
+			add_state_claim = 72
+			add_state_claim = 9
+			add_state_claim = 69
+			add_state_claim = 53
+			add_state_claim = 52
+			add_state_claim = 54
+			add_threat = 1
 		}
 	}
-	# 경제개발 5개년 계획
+	# 학생 개병제
 	focus = {
 		id = SHA_soviet_diplo_5
-		icon = GFX_focus_AFG_helmand_river_authority
+		icon = GFX_focus_AFG_royal_guard
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
-		prerequisite = { focus = SHA_soviet_diplo_2  }
+		prerequisite = { focus = SHA_soviet_diplo_2 focus = SHA_soviet_diplo_1 }
 
 		relative_position_id = SHA_soviet_diplo_2
 
 		completion_reward = {
+			add_ideas = SHA_conscription_student
 		}
 	}
 	# 모스크바에 충성
@@ -4680,7 +4856,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_third_rome
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_soviet_diplo_2 focus = SHA_soviet_diplo_1 }
 
@@ -4928,7 +5104,6 @@ focus_tree = {
 		available = {
 			owns_state = 39
 			owns_state = 850
-			owns_state = 9
 			owns_state = 69
 			owns_state = 736
 			owns_state = 102
@@ -4943,7 +5118,6 @@ focus_tree = {
 		completion_reward = {
 			add_state_core = 39
 			add_state_core = 850
-			add_state_core = 9
 			add_state_core = 69
 			add_state_core = 736
 			add_state_core = 102

@@ -36,6 +36,89 @@ ideas = {
 	}
 	country = {
 		#공산
+		SHA_conscription_student = { #학생 개병제
+			picture = eng_imperial_conscription
+			# YUG_federal_defense_council
+			# generic_victors_of_ww1
+			# generic_pp_unity_bonus
+			# generic_morale_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+
+			on_remove = {
+				set_variable = { BA_halo_infantry_cap_edit_var = -3 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+
+			removal_cost = -1
+		
+			modifier = {
+				custom_modifier_tooltip = kivotos_halo_add3_tt
+			}
+		}
+		SHA_five_year_plan = {
+			picture = SOV_second_five_year_plan
+			modifier = {
+				local_building_slots_factor = 0.15
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		SHA_total_success = { #성공한 대약진 운동
+			picture = GER_wage_war_on_capitalism
+			modifier = {
+				army_attack_factor = 0.05
+				political_power_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		SHA_failed_military = { #실패한 군제개혁
+			picture = chi_incompetent_officers
+			modifier = {
+				army_attack_factor = -0.05
+			}
+		}
+		SHA_failed_culture = { #실패한 문화혁명
+			picture = SPR_political_violence
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
+		SHA_failed_arms = { #실패한 무기생산 가속
+			picture = POL_disjointed_industry
+			modifier = {
+				industrial_capacity_factory = -0.05
+			}
+		}
+		SHA_failed_agriculture = { #실패한 농업집단화
+			picture = POL_looming_peasants_strike
+			modifier = {
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		SHA_stalinism_program = { #스탈린주의 강령
+			picture = generic_communist_army
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
 		SHA_sabotage_by_workers = { #노동자들의 태업
 			picture = SOV_factionalism_modifier
 			targeted_modifier = {
@@ -280,6 +363,17 @@ ideas = {
 				stability_factor = -0.1
 				production_speed_infrastructure_factor = 0.1
 				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		SHA_kivotos_socialism = { #키보토스 특색 사회주의
+			picture = FIN_socialist_welfare
+			modifier = {
+				communism_drift = 0.05
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = 0.15
+				stability_factor = -0.1
+				compliance_growth = 0.15
 			}
 		}
 		SHA_austro_marxism_1 = { #오스트로 맑시즘
