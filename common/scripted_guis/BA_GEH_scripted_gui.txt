@@ -28,5 +28,9 @@ scripted_gui = {
 		context_type = decision_category
 		window_name = "GEH_ako_democratic_gui_window"
 	}
+	GEH_hina_corruption_gui = {
+		context_type = decision_category
+		window_name = "GEH_hina_corruption_gui_window"
+	}
 
 }
