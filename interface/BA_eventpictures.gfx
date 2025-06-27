@@ -289,6 +289,16 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_GEI_metrix.png"
 	}
 
+	spriteType = { 
+		name = "GFX_news_event_GEI_terror"
+		texturefile = "gfx/event_pictures/news_event_GEI_terror.png"
+	}
+
+	spriteType = { 
+		name = "GFX_news_event_GEI_world_message"
+		texturefile = "gfx/event_pictures/news_event_GEI_world_message.png"
+	}
+
 
   #
 

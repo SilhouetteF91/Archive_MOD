@@ -4986,7 +4986,7 @@ news_event = { # 미엥지모제의 붕괴
     major = yes
     is_triggered_only = yes
 
-    option = { # 우리가 간다 
+    option = { 
         name = BA_news.128.a
     }
 }
@@ -5407,7 +5407,7 @@ news_event = { # 동시다발적테러
     id = BA_news.142
     title = BA_news.142.t
     desc = BA_news.142.desc
-    picture = GFX_news_event_GEI_metrix
+    picture = GFX_news_event_GEI_terror
 
     major = yes
     is_triggered_only = yes
@@ -5471,6 +5471,30 @@ news_event = { # 동시다발적테러
 			NOT = { tag = GEH }
 			NOT = { tag = RED }
 			NOT = { tag = HEU }
+        }
+    }
+}
+
+news_event = { # 기계의 재건지원 선언
+    id = BA_news.143
+    title = BA_news.143.t
+    desc = BA_news.143.desc
+    picture = GFX_news_event_GEI_world_message
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.143.a # 공멸을 피하기 위해선..
+		trigger = {
+			tag = GEI
+        }
+    }
+
+    option = {
+        name = BA_news.143.b # 기계가 재건을 지원해준다고?
+		trigger = {
+			NOT = { tag = GEI }
         }
     }
 }
