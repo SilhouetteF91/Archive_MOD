@@ -1905,6 +1905,10 @@ SHA_soviet = {
 	color = rgb { 230 0 0 }
 	color_ui = rgb { 230 0 0 }
 }
+SHA_danubian = {
+	color = rgb { 230 20 20 }
+	color_ui = rgb { 230 0 0 }
+}
 SHA_great_oesterriech = {
 	color = rgb { 230 0 0 }
 	color_ui = rgb { 230 0 0 }

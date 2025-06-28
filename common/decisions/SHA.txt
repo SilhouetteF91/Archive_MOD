@@ -257,6 +257,125 @@ SHA_communism_cat = {
 			set_cosmetic_tag = SHA_socialist_GER
 		}
 	}
+	#다뉴브 연방 선포
+	SHA_danubian_decision = {
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 55
+		}
+		fire_only_once = yes
+		allowed = {
+			original_tag = SHA
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				OR = {
+					is_core_of = HUN
+					is_core_of = SLO
+					AND = {
+						is_core_of = YUG
+						NOT = {
+							is_owned_by = ITA
+						}
+					}
+				}
+			}
+		}
+		visible = {
+			original_tag = SHA
+			has_completed_focus = SHA_communism_diplo_9
+		}
+		available = {
+			is_subject = no
+			SLO = {all_core_state = {
+				is_controlled_by = SHA
+			}}
+			HUN = {all_core_state = {
+				is_controlled_by = SHA
+			}}
+			YUG = {all_core_state = {
+				OR = {
+					is_owned_by = ITA
+					is_controlled_by = SHA
+				}
+			}}
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = YUG
+						is_core_of = HUN
+						is_core_of = SLO
+					}
+					NOT = {
+						is_core_of = SHA
+					}
+				}
+				add_core_of = SHA
+			}
+			set_cosmetic_tag = SHA_danubian
+		}
+	}
+	#대오스트리아 선포
+	SHA_great_osterreich_decision = {
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 55
+		}
+		fire_only_once = yes
+		allowed = {
+			original_tag = SHA
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				OR = {
+					is_core_of = AUS
+					state = 39
+					state = 850
+					state = 69
+					state = 736
+					state = 102
+					state = 853
+					state = 1017
+					state = 852
+					state = 972
+				}
+			}
+		}
+		visible = {
+			original_tag = SHA
+			has_completed_focus = SHA_principle_of_national_self-determination_5
+		}
+		available = {
+			is_subject = no
+			controls_state = 39
+			controls_state = 850
+			controls_state = 69
+			controls_state = 736
+			controls_state = 102
+			controls_state = 853
+			controls_state = 1017
+			controls_state = 852
+			controls_state = 972
+		}
+
+		complete_effect = {
+			add_state_core = 39
+			add_state_core = 850
+			add_state_core = 69
+			add_state_core = 736
+			add_state_core = 102
+			add_state_core = 853
+			add_state_core = 1017
+			add_state_core = 852
+			add_state_core = 972
+			set_cosmetic_tag = SHA_great_oesterriech
+		}
+	}
 	SHA_stop_red_terror = { #~~의 맑스주의 동지들 활용
 		icon = GFX_decision_revolt
 		on_map_mode = map_only

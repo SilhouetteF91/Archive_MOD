@@ -36,6 +36,52 @@ ideas = {
 	}
 	country = {
 		#공산
+		SHA_Kirchenbeitragsgesetz = { #교회 헌금법
+			picture = ARG_state_atheism
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		SHA_resistance_of_catholics_1 = { #사그라드는 가톨릭교도 저항
+			picture = MEX_church_power_2
+			modifier = {
+				political_power_cost = 0.05
+				stability_factor = -0.03
+				conscription_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		SHA_resistance_of_catholics_2 = { #약한 가톨릭교도 저항
+			picture = MEX_church_power_2
+			modifier = {
+				political_power_cost = 0.1
+				stability_factor = -0.06
+				conscription_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+		SHA_resistance_of_catholics_3 = { #거센 가톨릭교도 저항
+			picture = MEX_church_power_3
+			modifier = {
+				political_power_cost = 0.15
+				stability_factor = -0.09
+				conscription_factor = -0.15
+				consumer_goods_factor = 0.15
+			}
+		}
+		SHA_liberation_theology = { #해방 신학
+			picture = ARG_liberation_theology
+			modifier = {
+				fascism_drift = -0.05
+				fascism_acceptance = -10
+				local_building_slots_factor = 0.05
+				stability_factor = 0.03
+				political_power_gain = 0.1
+				communism_drift = 0.1
+				conscription_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
 		SHA_antifa_1 = { #반파시즘 투쟁
 			name = SHA_antifa
 			picture = GER_iron_front
@@ -124,6 +170,23 @@ ideas = {
 				production_speed_buildings_factor = -0.05
 			}
 		}
+		SHA_marx-leninism = { #마르크스-레닌주의 강령
+			picture = generic_communist_army
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+			modifier = {
+				political_power_factor = 0.1
+				monthly_population = 0.05
+				production_speed_buildings_factor = 0.05
+				stability_factor = 0.1
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
 		SHA_stalinism_program = { #스탈린주의 강령
 			picture = generic_communist_army
 			targeted_modifier = {
@@ -177,7 +240,10 @@ ideas = {
 				custom_modifier_tooltip = SHA_red_terror_tt
 			}
 			cancel = {
-				has_government = communism
+				OR = {
+					has_war_with = SHA				
+					has_government = communism
+				}
 			}
 			on_remove = {
 				if = {
@@ -191,7 +257,7 @@ ideas = {
 			}
 		}
 		SHA_will_to_anschluss = { #목표: 안슐루스
-			picture = SOV_system_decentralization
+			picture = BEL_legacy_of_the_great_war
 			allowed_civil_war = {
 				always = yes
 			}
@@ -212,10 +278,6 @@ ideas = {
 				attack_bonus_against = 0.1
 			}
 			targeted_modifier = {
-				tag = ARI
-				attack_bonus_against = 0.1
-			}
-			targeted_modifier = {
 				tag = KPD
 				attack_bonus_against = 0.1
 			}
@@ -227,6 +289,82 @@ ideas = {
 				owns_state = 64
 			}
 		}
+		SHA_will_to_danubian = { #목표: 다뉴비아
+			picture = AUS_airforce
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = SLO
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = YUG
+				attack_bonus_against = 0.1
+			}
+			cancel = {
+				owns_state = 43
+				owns_state = 107
+			}
+		}
+		SHA_will_to_southern_kivotos = { #목표: 남키보토스
+			picture = SWI_spirit_of_helvetia_aggressive_war
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = HYA
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ABY
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = GEH
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = GEM
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = TRM
+				attack_bonus_against = 0.1
+			}
+			cancel = {
+				owns_state = 52
+			}
+		}
+		SHA_will_to_great_osterreich = { #목표: 대오스트리아
+			picture = AUS_aggression
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = HYA
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ABY
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = YUG
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.1
+			}
+			cancel = {
+				owns_state = 39
+			}
+		}
 		SHA_socialist_society_1 = { #산해경 사회주의
 			name = SHA_socialist_society
 			picture = SOV_system_decentralization
@@ -234,7 +372,6 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				political_power_cost = 0.1
 				production_factory_efficiency_gain_factor = 0.05
 				industrial_capacity_dockyard = 0.05
 				industrial_capacity_factory = 0.05
@@ -253,8 +390,6 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				political_power_cost = 0.1
-				recruitable_population_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.05
 				industrial_capacity_dockyard = 0.05
 				industrial_capacity_factory = 0.05

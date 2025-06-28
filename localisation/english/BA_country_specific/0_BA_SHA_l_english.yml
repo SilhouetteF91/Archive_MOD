@@ -3,6 +3,12 @@
  #아이디어
 
   #공산
+ SHA_Kirchenbeitragsgesetz: "교회 헌금법"
+ SHA_Kirchenbeitragsgesetz_desc: "'Kirchenbeitragsgesetz', 교회 헌금법은 오스트리아에서 공인된 종교 단체가 신도로부터 일정한 금액의 헌금을 받을 수 있도록 정한 법적 제도입니다. 이 헌금은 세금이 아닌 자발적 소속에 따른 의무로, 징수는 종교 단체가 자체적으로 진행하며, 국가는 이에 대한 법적 근거를 제공합니다. 우리는 이를 통해 교회가 재정 운영을 자체적으로 하도록 교정하는 대신 그들로부터 조세하여 세속주의의 원칙을 실현할 것입니다."
+ SHA_resistance_of_catholics_1: "사그라드는 가톨릭교도 저항"
+ SHA_resistance_of_catholics_2: "산발적인 가톨릭교도 저항"
+ SHA_resistance_of_catholics_3: "거센 가톨릭교도 저항"
+
  SHA_antifa: "반파시즘 투쟁"
  SHA_conscription_student: "학생 개병제"
  SHA_kivotos_socialism: "키보토스 특색 사회주의"
@@ -13,11 +19,15 @@
  SHA_failed_culture: "실패한 문화혁명"
  SHA_failed_agriculture: "실패한 농업집단화"
  SHA_stalinism_program_1: "키보토스 특색 사회주의"
+ SHA_marx-leninism: "마르크스-레닌주의"
  SHA_stalinism_program: "스탈린주의 강령"
  SHA_sabotage_by_workers: "노동자들의 태업"
  SHA_offensive_to_red: "공세"
  SHA_red_terror: "적색 공포"
  SHA_will_to_anschluss: "목표: §R안슐루스§!"
+ SHA_will_to_danubian: "목표: §4다뉴비아§!"
+ SHA_will_to_southern_kivotos: "목표: §P남키보토스§!"
+ SHA_will_to_great_osterreich: "목표: §O대오스트리아§!"
  SHA_socialist_society: "산해경 사회주의"
  SHA_socialist_autonomy: "자치 평의회"
  SHA_aftermath_of_strike: "파업의 여파"
@@ -349,7 +359,7 @@
  SHA_womens_education_initiative_desc: "산해경에서는 오랜 시간 동안 여성들에게도 평등한 교육 기회가 보장되어 왔습니다. 그러나 오스트리아에서는 상황이 달랐습니다. 여성들은 차별적인 대우를 받아왔으며, 그 결과 교육 기회의 부족이라는 현실로 그 격차가 증명되었습니다."
  SHA_progressivism_through_science: "과학을 통한 진보"
  SHA_liberation_theology: "해방신학"
- SHA_state_atheism: "국가무신론"
+ SHA_state_atheism: "세속주의 원칙"
  SHA_affiliate_with_catholic: "가톨릭과 제휴"
  SHA_progressivism_through_science_desc: ""
  SHA_fight_against_extremism: "극단주의에 대항"
@@ -412,6 +422,7 @@
  SHA_communism_diplo_4: "국제 마르크스주의"
  SHA_communism_diplo_4_tt: "§g대상이 우리를 향해 공세하지 못 하도록 저지할 수 있습니다!§!"
  SHA_communism_diplo_5: "'안슐루스'"
+ 
 
  SHA_communism_diplo_6: "포위 뚫어내기"
  SHA_communism_diplo_7: "인접국 노동자와 연대"
@@ -428,8 +439,25 @@
  SHA_soviet_diplo_6: "모스크바에 충성"
 
  SHA_communism_diplo_10: "'붉은 홍수'"
- SHA_will_to_anschluss_tt_1: "§g-------------------------------\n중점 $SHA_communism_diplo_5$ 완료시(비활성화):§!\n\n"
- SHA_will_to_anschluss_tt_2: "-------------------------------\n중점 §Y$SHA_communism_diplo_5$§! 완료시(§G활성화§!):\n\n"
+
+ SHA_will_to_anschluss_tt_1: "§g=====================\n중점 $SHA_communism_diplo_5$ 완료시(비활성화):§!\n\n"
+ SHA_will_to_anschluss_tt_2: "=====================\n중점 §Y$SHA_communism_diplo_5$§! 완료시(§G활성화§!):\n\n"
+ SHA_will_to_anschluss_tt_3: "§Y독일 핵심주§!를 소유한 §Y모든 국가§!에 §R선전포고§!"
+
+ SHA_will_to_danubian_tt_1: "\n§g=====================\n중점 $SHA_communism_diplo_9$ 완료시(비활성화):§!\n\n"
+ SHA_will_to_danubian_tt_2: "\n=====================\n중점 §Y$SHA_communism_diplo_9$§! 완료시(§G활성화§!):\n\n"
+ SHA_will_to_danubian_tt_3: "§Y슬로바키아 핵심주§!, §Y헝가리 핵심주§!, §Y유고슬라비아 핵심주§!를 소유한 §Y모든 국가§!에 §R선전포고§!"
+
+ SHA_will_to_southern_kivotos_tt_1: "\n§g=====================\n중점 $SHA_soviet_diplo_4$ 완료시(비활성화):§!\n\n"
+ SHA_will_to_southern_kivotos_tt_2: "\n=====================\n중점 §Y$SHA_soviet_diplo_4$§! 완료시(§G활성화§!):\n\n"
+ SHA_will_to_southern_kivotos_tt_3: "§Y남키보토스 주§!를 소유한 §Y모든 국가§!에 §R선전포고§!"
+
+ SHA_will_to_comintern_tt_1: "\n§g=====================\n중점 $SHA_soviet_diplo_6$ 완료시(비활성화):§!\n\n"
+ SHA_will_to_comintern_tt_2: "\n=====================\n중점 §Y$SHA_soviet_diplo_6$§! 완료시(§G활성화§!):\n\n"
+ 
+ SHA_will_to_great_osterreich_tt_1: "\n§g=====================\n중점 $SHA_principle_of_national_self-determination_5$ 완료시(비활성화):§!\n\n"
+ SHA_will_to_great_osterreich_tt_2: "\n=======================\n중점 §Y$SHA_principle_of_national_self-determination_5$§! 완료시(§G활성화§!):\n\n"
+ SHA_will_to_great_osterreich_tt_3: "§Y대오스트리아 주§!를 소유한 §Y모든 국가§!에 §R선전포고§!"
 
  # 승전 공용
  SHA_strengthening_identity_of_southern_kivotos: "남키보토스 정체성 강화"
@@ -667,6 +695,12 @@
  shacom.26_tt_7: "\n§Y대약진 운동: 군제개혁§!이 §G완료되었습니다:§!\n"
  shacom.26_tt_8: "\n§Y대약진 운동: 군제개혁§!을 §R완료하지 못 했습니다:§!\n"
  shacom.26_tt_9: "\n§G모든 대약진 운동을 완료했습니다!§!\n"
+ shacom.27.t: "가톨릭교도 저항"
+ shacom.27.d: "우리의 산해경에 대한 새로운 노선을 일찍이 경계했던 오스트리아 현지 가톨릭 세력은 행동에 들어가기로 결심했습니다. 가톨릭은 교회와 교도 간의 강한 조직력을 동원해서 농촌을 중심으로 우리의 대의에 반대한 정치적 결사를 이루고 있습니다."
+ shacom.27.a: "젠장!"
+ shacom.28.t: "가톨릭교도 저항 분쇄"
+ shacom.28.d: "지난 기간동안 우리의 정치적 반대 결사였던 가톨릭 교회의 저항을 우리는 가시적으로 격퇴해내었습니다. 이제 그들의 남은 끄나풀들을 법률적 수단과 경제적 수단을 통해 짓밟고 저항의 여지를 온전히 분쇄할 것입니다!"
+ shacom.28.a: "투쟁!"
 
  shafas.1.t: "경극부의 쿠데타!"
  shafas.1.d: "\"산해경의 전통의 이름 아래, 현룡문의 문주 $SHA_KISAKI$, 규탄한다!\"\n\n경극이 예정되었던 운명의 날, 백호 광장에는 수백의 관중과 경극부가 운집했습니다. 그러나 이날 선보인 경극은 단순한 공연이 아니었습니다. 이는 현 산해경 현룡문의 문주인 $SHA_KISAKI$를 \"검은 군주\"에 비유하며 직접적으로 겨냥한 날카로운 풍자극이었습니다.\n\n경극의 줄거리는 어리석은 검은 군주가 변혁의 바람을 맞이하겠다며 성문을 함부로 열어 난세를 초래하고 백성을 혼란에 빠뜨린다는 내용이었습니다. 공연은 무대 위에서 펼쳐지는 환상적인 장면들과 함께 문주를 향한 강렬한 비판의 메시지를 담아냈습니다. 경극이 끝나자마자 광장은 함성으로 들끓었고, 현룡문의 급진파와 보수파들이 본격적으로 활동하기 시작하였습니다.\n\n결국 이 날의 공연은 단순한 경극이 아닌 혁명의 신호탄이 되었습니다.. 급진파와 보수파들은 경극부와 합세하여 백호 광장에서 문주 $SHA_KISAKI$의 축출을 선언했고, 현장은 혼란과 분노로 뒤덮였습니다.\n\n현재 $SHA_KISAKI$는 VIP 자택에 연금된 상황입니다. 전 문주라는 지위 덕분에 일정한 예우를 받고 있는 상황입니다. 그러나 그의 몰락 이후 산해경의 미래는 여전히 안갯속에 가려져 있습니다. 새롭게 문주의 자리에 오른 $SHA_KAGUYA$의 정책 방향이 무엇일지, 사람들 사이에서는 설왕설래가 이어지고 있습니다.\n\n그러나 내부적으로 우려의 목소리가 나오고 있습니다. 몇 년전 산해경의 치안을 어지럽힌 $SHA_KAI$가 다시 한 번 더 사악한 음모를 꾸미고 있다는 위험한 소문이 돌고 있습니다..."
@@ -846,6 +880,8 @@
  SHA_communism_cat: "붉은 홍수"
  SHA_red_terror_mission: "§R적색 공포§!"
  SHA_anschluss_decision: "'안슐루스'"
+ SHA_danubian_decision: "다뉴브 연방 선포"
+ SHA_great_osterreich_decision: "대오스트리아 선포"
  SHA_red_terror_tt: "\n만료 시: '§Y$shacom.18.t$§!' 사건 발생"
  SHA_stop_red_terror: "[FROM.owner.getname]의 마르크스주의 동지들 활용"
  SHA_stop_red_terror_flag: "다른 지역에서 우리의 마르크스주의자 동지들이 활동하는 중"

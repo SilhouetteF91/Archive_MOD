@@ -1574,6 +1574,12 @@ focus_tree = {
 				id = shacom.1
 				days = 2
 			}
+			hidden_effect = {
+				country_event = {
+					id = shacom.27
+					days = 10
+				}
+			}
 		}
 	}
 	focus = { #'붉은 빈'
@@ -2073,14 +2079,22 @@ focus_tree = {
 		available = {
 			has_completed_focus = SHA_formation_of_labor_union
 			has_completed_focus = SHA_womens_education_initiative
+			OR = {
+				has_completed_focus = SHA_liberation_theology
+				has_completed_focus = SHA_state_atheism
+			}
 		}
 		select_effect = {
 			country_event = {
 				id = shacom.8
-				days = 15
+				days = 10
 			}
 			country_event = {
 				id = shacom.9
+				days = 20
+			}
+			country_event = {
+				id = shacom.28
 				days = 30
 			}
 		}
@@ -2088,14 +2102,18 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
 			effect_tooltip = {
-				country_event = {
-					id = shacom.8
-					days = 15
-				}
-				country_event = {
-					id = shacom.9
-					days = 30
-				}
+			country_event = {
+				id = shacom.8
+				days = 10
+			}
+			country_event = {
+				id = shacom.9
+				days = 20
+			}
+			country_event = {
+				id = shacom.28
+				days = 30
+			}
 			}
 			custom_effect_tooltip = tooltip_effect_upon_focus_completion
 			if = {
@@ -2258,7 +2276,7 @@ focus_tree = {
 		icon = GFX_focus_AUS_release_imprisoned_leaders
 		x = -1
 		y = 1
-		cost = 5
+		cost = 4
 
 		prerequisite = { 
 			focus = SHA_appointment_of_BTP 
@@ -2336,7 +2354,7 @@ focus_tree = {
 		bypass = { }
 
 		relative_position_id = SHA_fight_against_extremism
-		
+
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = SHA_antifa
@@ -2376,10 +2394,10 @@ focus_tree = {
 		icon = GFX_focus_FIN_finnish_federation_of_trade_unions
 		x = 1
 		y = 1
-		cost = 5
+		cost = 4
 
 		prerequisite = { 
-			focus = SHA_university_of_vienna
+			focus = SHA_release_austrian_politician
 		}
 		mutually_exclusive = { }
 
@@ -2434,6 +2452,24 @@ focus_tree = {
 		relative_position_id = SHA_university_of_vienna
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SHA_resistance_of_catholics_2
+				}
+				swap_ideas = {
+					remove_idea = SHA_resistance_of_catholics_2
+					add_idea = SHA_resistance_of_catholics_1
+				}
+			}
+			if = {
+				limit = {
+					has_idea = SHA_resistance_of_catholics_3
+				}
+				swap_ideas = {
+					remove_idea = SHA_resistance_of_catholics_3
+					add_idea = SHA_resistance_of_catholics_2
+				}
+			}
 			remove_trait = {
 				character = SHA_SAYA
 				trait = SHA_T4a
@@ -2509,7 +2545,8 @@ focus_tree = {
 			focus = SHA_womens_education_initiative
 		}
 
-		available = { 
+		available = {
+			has_country_flag = GAEBALJUNG 
 		}
 		bypass = { }
 
@@ -2526,7 +2563,7 @@ focus_tree = {
 		icon = GFX_focus_BRA_socialist_theologians
 		x = -1
 		y = 1
-		cost = 5
+		cost = 4
 
 		prerequisite = { 
 			focus = SHA_agrarian_socialism
@@ -2542,16 +2579,38 @@ focus_tree = {
 		relative_position_id = SHA_womens_education_initiative
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SHA_resistance_of_catholics_2
+				}
+				swap_ideas = {
+					remove_idea = SHA_resistance_of_catholics_2
+					add_idea = SHA_resistance_of_catholics_1
+				}
+			}
+			if = {
+				limit = {
+					has_idea = SHA_resistance_of_catholics_3
+				}
+				swap_ideas = {
+					remove_idea = SHA_resistance_of_catholics_3
+					add_idea = SHA_resistance_of_catholics_2
+				}
+			}
+			swap_ideas = {
+				remove_idea = SHA_antifa_1
+				add_idea = SHA_liberation_theology
+			}
 		}
 	}
 
-	# 국가무신론
+	# 세속주의 원칙
 	focus = {
 		id = SHA_state_atheism
 		icon = GFX_focus_ARG_state_atheism
 		x = 1
 		y = 1
-		cost = 5
+		cost = 4
 
 		prerequisite = { 
 			focus = SHA_womens_education_initiative
@@ -2567,6 +2626,28 @@ focus_tree = {
 		relative_position_id = SHA_womens_education_initiative
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SHA_resistance_of_catholics_2
+				}
+				swap_ideas = {
+					remove_idea = SHA_resistance_of_catholics_2
+					add_idea = SHA_resistance_of_catholics_1
+				}
+			}
+			if = {
+				limit = {
+					has_idea = SHA_resistance_of_catholics_3
+				}
+				swap_ideas = {
+					remove_idea = SHA_resistance_of_catholics_3
+					add_idea = SHA_resistance_of_catholics_2
+				}
+			}
+			add_timed_idea = {
+				idea = SHA_Kirchenbeitragsgesetz
+				years = 2
+			}
 		}
 	}
 
@@ -4717,6 +4798,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = HUN
+						is_core_of = YUG
+						is_core_of = SLO
+					}
+				}
+				add_claim_by = SHA
+			}
 		}
 	}
 
@@ -4858,7 +4949,6 @@ focus_tree = {
 			add_state_claim = 53
 			add_state_claim = 52
 			add_state_claim = 54
-			add_threat = 1
 		}
 	}
 	# 학생 개병제
@@ -4890,6 +4980,10 @@ focus_tree = {
 		relative_position_id = SHA_soviet_diplo_5
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHA_stalinism_program 
+				add_idea = SHA_marx-leninism 
+			}
 		}
 	}
 
@@ -4902,7 +4996,7 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = { focus = SHA_communism_diplo_5 focus = SHA_communism_diplo_9 focus = SHA_soviet_diplo_4 focus = SHA_soviet_diplo_6 focus = SHA_principle_of_national_self-determination_5 }
-
+	
 		relative_position_id = SHA_communism_diplo_9
 
 		completion_reward = {
@@ -4912,25 +5006,179 @@ focus_tree = {
 				}
 				custom_effect_tooltip = SHA_will_to_anschluss_tt_2
 				add_ideas = SHA_will_to_anschluss
-				every_other_country = {
-					limit = {
-						any_state = {
-							BA_is_GER_core = yes
-							is_owned_by = PREV
+				hidden_effect = {
+					every_other_country = {
+						limit = {
+							any_state = {
+								BA_is_GER_core = yes
+								is_owned_by = PREV
+							}
 						}
-					}
-					SHA = {
-						declare_war_on = {
-							target = PREV
-							type = take_claimed_state
+						SHA = {
+							declare_war_on = {
+								target = PREV
+								type = take_claimed_state
+							}
 						}
 					}
 				}
+				custom_effect_tooltip = SHA_will_to_anschluss_tt_3
 			}
 			else = {
 				custom_effect_tooltip = SHA_will_to_anschluss_tt_1
 				effect_tooltip = {
 					add_ideas = SHA_will_to_anschluss
+					custom_effect_tooltip = SHA_will_to_anschluss_tt_3
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = SHA_communism_diplo_9
+				}
+				custom_effect_tooltip = SHA_will_to_danubian_tt_2
+				add_ideas = SHA_will_to_danubian
+				custom_effect_tooltip = SHA_will_to_danubian_tt_3
+				hidden_effect = {
+					every_other_country = {
+						limit = {
+							any_state = {
+								OR = {
+									is_core_of = HUN
+									is_core_of = YUG
+									is_core_of = SLO
+								}
+								is_owned_by = PREV
+							}
+						}
+						SHA = {
+							declare_war_on = {
+								target = PREV
+								type = take_claimed_state
+							}
+						}
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = SHA_will_to_danubian_tt_1
+				effect_tooltip = {
+					add_ideas = SHA_will_to_danubian
+					custom_effect_tooltip = SHA_will_to_danubian_tt_3
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = SHA_soviet_diplo_4
+				}
+				custom_effect_tooltip = SHA_will_to_southern_kivotos_tt_2
+				add_ideas = SHA_will_to_southern_kivotos
+				custom_effect_tooltip = SHA_will_to_southern_kivotos_tt_3
+				hidden_effect = {
+					every_other_country = {
+						limit = {
+							any_state = {
+								OR = {
+									state = 4
+									state = 1021
+									state = 152
+									state = 153
+									state = 848
+									state = 976
+									state = 975
+									state = 972
+									state = 75
+									state = 74
+									state = 72
+									state = 9
+									state = 69
+									state = 53
+									state = 52
+									state = 54
+								}
+								is_owned_by = PREV
+							}
+						}
+						SHA = {
+							declare_war_on = {
+								target = PREV
+								type = take_claimed_state
+							}
+						}
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = SHA_will_to_southern_kivotos_tt_1
+				effect_tooltip = {
+					add_ideas = SHA_will_to_southern_kivotos
+					custom_effect_tooltip = SHA_will_to_southern_kivotos_tt_3
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = SHA_soviet_diplo_6
+				}
+				custom_effect_tooltip = SHA_will_to_comintern_tt_2
+				dismantle_faction = yes
+				leave_faction = yes
+				SOU = {
+					country_event = {
+						id = generic.2
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = SHA_will_to_comintern_tt_1
+				dismantle_faction = yes
+				leave_faction = yes
+				effect_tooltip = {
+					SOU = {
+						country_event = {
+							id = generic.2
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = SHA_principle_of_national_self-determination_5
+				}
+				custom_effect_tooltip = SHA_will_to_great_osterreich_tt_2
+				add_ideas = SHA_will_to_great_osterreich
+				custom_effect_tooltip = SHA_will_to_great_osterreich_tt_3
+				hidden_effect = {
+					every_other_country = {
+						limit = {
+							any_state = {
+								OR = {
+									is_core_of = AUS
+									state = 39
+									state = 850
+									state = 69
+									state = 736
+									state = 102
+									state = 853
+									state = 1017
+									state = 852
+									state = 972
+								}
+								is_owned_by = PREV
+							}
+						}
+						SHA = {
+							declare_war_on = {
+								target = PREV
+								type = take_claimed_state
+							}
+						}
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = SHA_will_to_great_osterreich_tt_1
+				effect_tooltip = {
+					add_ideas = SHA_will_to_great_osterreich
+					custom_effect_tooltip = SHA_will_to_great_osterreich_tt_3
 				}
 			}
 		}
@@ -4961,15 +5209,6 @@ focus_tree = {
 		relative_position_id = SHA_invade_of_Hyakkiyako
 
 		completion_reward = {
-			add_state_claim = 39
-			add_state_claim = 850
-			add_state_claim = 9
-			add_state_claim = 69
-			add_state_claim = 736
-			add_state_claim = 102
-			add_state_claim = 853
-			add_state_claim = 1017
-			add_state_claim = 852
 			country_event = {
 				id = shacom.14
 				days = 2
@@ -5128,31 +5367,23 @@ focus_tree = {
 
 		prerequisite = { focus = SHA_principle_of_national_self-determination_1 }
 		prerequisite = { focus = SHA_principle_of_national_self-determination_4 focus = SHA_principle_of_national_self-determination_3 }
-		available = {
-			owns_state = 39
-			owns_state = 850
-			owns_state = 69
-			owns_state = 736
-			owns_state = 102
-			owns_state = 853
-			owns_state = 1017
-			owns_state = 852
-		}
+
 		bypass = { }
 
 		relative_position_id = SHA_principle_of_national_self-determination_1
 
 		completion_reward = {
-			add_state_core = 39
-			add_state_core = 850
-			add_state_core = 69
-			add_state_core = 736
-			add_state_core = 102
-			add_state_core = 853
-			add_state_core = 1017
-			add_state_core = 852
-			add_state_core = 74
-			set_cosmetic_tag = SHA_great_oesterriech
+			add_war_support = 0.1
+			add_state_claim = 39
+			add_state_claim = 850
+			add_state_claim = 69
+			add_state_claim = 736
+			add_state_claim = 102
+			add_state_claim = 853
+			add_state_claim = 1017
+			add_state_claim = 852
+			add_state_claim = 972
+			unlock_decision_tooltip = SHA_great_osterreich_decision
 		}
 	}
 
