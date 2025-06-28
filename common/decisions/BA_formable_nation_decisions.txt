@@ -495,8 +495,18 @@ BA_from_southern_kivotos = {
 				if = {
 					limit = {
 						tag = SHA
+						NOT = {
+							has_government = communism
+						}
 					}
 					set_cosmetic_tag = SHA_southern_kivoto
+				}
+				else_if = {
+					limit = {
+						tag = SHA
+						has_government = communism
+					}
+					set_cosmetic_tag = SHA_southern_kivoto_com
 				}
 				else_if = {
 					limit = {

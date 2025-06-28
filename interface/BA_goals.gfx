@@ -3636,4 +3636,14 @@ spriteTypes = {
 		name = "GFX_GEI_DEC_our_help"
 		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_our_help.png"
 	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_two_face"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_two_face.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_crusade"
+		textureFile = "gfx/interface/goals/GEI/focus_GFX_GEI_DEC_crusade.png"
+	}
 }

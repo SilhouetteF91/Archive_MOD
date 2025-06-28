@@ -508,6 +508,14 @@ SHA_attack_plan = {
 	army_attack_factor = 0.1
 }
 
+SHA_collective_farm = { #인민공사
+	enable = { always = yes }
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+	local_building_slots = 1
+	state_resources_factor = 0.05
+	recruitable_population_factor = 0.05
+}
+
 SHA_red_wien = { #붉은 빈
 	enable = { always = yes }
 	icon = GFX_modifiers_GER_socialist_movement

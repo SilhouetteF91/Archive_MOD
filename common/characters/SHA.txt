@@ -625,10 +625,6 @@ characters={
 				original_tag = SHA
 			}
 			available = {
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
 				has_completed_focus = SHA_womens_education_initiative
 			}
 			visible = {

@@ -1733,10 +1733,6 @@ GEI_The_Colour = {
 	color = rgb { 80 0 140 }
 	color_ui = rgb { 0 0 0 }
 }
-GEI_DEC = {
-	color = rgb { 255 144 0 }
-	color_ui = HSV { 255 144 0 }
-}
 LAI_SPAIN = { ### 라 이베리아 이스터에그 ###
 	color = rgb { 255 222 94 }
 	color_ui = rgb { 255 222 94 }
@@ -1900,6 +1896,10 @@ GEM_german_only = {
 HEU_ARU3 = {
 	color = rgb { 227 74 69 }
 	color_ui = rgb { 227 74 69 }
+}
+SHA_southern_kivoto_com = {
+	color = rgb { 230 0 0 }
+	color_ui = rgb { 230 0 0 }
 }
 SHA_soviet = {
 	color = rgb { 230 0 0 }
@@ -2791,4 +2791,8 @@ GEH_art_academy = {
 GEH_revolutionary_government = {
 	color = HSV { 0.95 0.95 0.87 }
 	color_ui = rgb { 10 15 70 }
+}
+GEI_DEC = {
+	color = RGB { 242 99 34 }
+	color_ui = RGB { 242 99 34 }
 }

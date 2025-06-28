@@ -29,6 +29,155 @@ SHA_communism_cat = {
 		}
 	}
 	
+	#대약진운동
+	SHA_glm_agriculture = { #농업집단화
+		icon = GFX_decision_POL_organize_strike_two
+		available = {
+			all_core_state = {
+				has_dynamic_modifier = {
+					modifier = SHA_collective_farm
+				}
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 360
+		activation = {
+			always = no
+		}
+		timeout_effect = {
+		}
+		complete_effect = {
+			set_country_flag = SHA_glm_agriculture_flag
+		}
+	}
+	SHA_glm_collective_agriculture = { #인민공사 설립
+		icon = GFX_decision_POL_organize_strike_two
+		on_map_mode = map_only
+		state_target = europe
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = SHA_soviet_diplo_1
+		}
+		target_trigger = {
+			FROM = {
+				FROM.owner = {
+					tag = SHA
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = SHA_collective_farm
+					}
+				}
+			}
+		}
+		days_remove = 30
+		remove_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = SHA_collective_farm
+				}
+			}
+			hidden_effect = {
+				random_list = {
+					1 = {
+						random_character = {
+							limit = {
+								is_country_leader = yes
+							}
+							unit_leader_event = shacom.23
+						}
+					}
+					9 = {}
+				}
+			}
+			hidden_effect = {
+				random_list = {
+					1 = {
+						random_character = {
+							limit = {
+								is_country_leader = yes
+							}
+							unit_leader_event = shacom.23
+						}
+					}
+					9 = {}
+				}
+				random_list = {
+					1 = {
+						country_event = {
+							id = shacom.24
+							days = 3
+						}
+					}
+					9 = {}
+				}
+			}
+		}
+		cost = 30
+	}
+	SHA_glm_arming = { #무기 생산 가속
+		icon = GFX_decision_gre_faction_management
+		available = {
+			arms_factory > 19
+		}
+		is_good = yes
+		days_mission_timeout = 360
+		activation = {
+			always = no
+		}
+		timeout_effect = {
+		}
+		complete_effect = {
+			set_country_flag = SHA_glm_arming_flag
+		}
+	}
+	SHA_glm_culture = { #문화 혁명
+		icon = GFX_decision_generic_political_discourse
+		available = {
+			has_completed_focus = SHA_communism_focus_14
+			has_completed_focus = SHA_communism_focus_15
+			OR = {
+				has_completed_focus = SHA_liberation_theology
+				has_completed_focus = SHA_state_atheism
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 360
+		activation = {
+			always = no
+		}
+		timeout_effect = {
+		}
+		complete_effect = {
+			set_country_flag = SHA_glm_culture_flag
+		}
+	}
+	SHA_glm_military = { #군제 개혁
+		icon = GFX_decision_generic_military
+		available = {
+			has_army_manpower = {
+				size > 450000
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 360
+		activation = {
+			always = no
+		}
+		timeout_effect = {
+		}
+		complete_effect = {
+			hidden_effect = {
+				country_event = {
+					id = shacom.25
+					days = 5
+				}
+			}
+			set_country_flag = SHA_glm_military_flag
+		}
+	}
+
+	#안슐루스
 	SHA_anschluss_decision = {
 		icon = GFX_decision_generic_form_nation
 
@@ -164,7 +313,7 @@ SHA_communism_cat = {
 			}
 		}
 	}
-	SHA_establish_socialist_autonomy = {
+	SHA_establish_socialist_autonomy = { #자치평의회
 		icon = GFX_decision_BOL_establish_arica_department
 		on_map_mode = map_only
 		state_target = europe
@@ -173,10 +322,10 @@ SHA_communism_cat = {
 		}
 		target_trigger = {
 			FROM = {
-				NOT = {
-					has_country_flag = SHA_socialist_autonomy_flag
-				}
 				FROM.owner = {
+					NOT = {
+						has_country_flag = SHA_socialist_autonomy_flag
+					}
 					is_subject_of = SHA
 				}
 
