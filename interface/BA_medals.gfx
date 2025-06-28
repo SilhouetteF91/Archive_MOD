@@ -46,5 +46,17 @@ spriteTypes = {
 		texturefile = "gfx/interface/medals/HEU_medal_strip_large.dds"
 		noOfFrames = 4
     }
+
+	spriteType = {
+		name = "GFX_HEU_benriya_medal_strip"
+		texturefile = "gfx/interface/medals/HEU_benriya_medal_strip.dds"
+		noOfFrames = 1
+    }
+
+	spriteType = {
+		name = "GFX_HEU_benriya_medal_strip_large"
+		texturefile = "gfx/interface/medals/HEU_benriya_medal_strip_large.dds"
+		noOfFrames = 1
+    }
 	
 }

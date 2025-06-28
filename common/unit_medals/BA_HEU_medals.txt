@@ -111,4 +111,31 @@ unit_medals = {
 		}
 	}
 	
+	### 흥신소 68
+
+	HEU_thank_you_medal = { #아루의 감사패
+		
+		available = {
+			original_tag = HEU
+			has_country_leader = {
+				character = HEU_aru
+				ruling_only = yes
+			}
+		}
+
+		frame = 1
+		icon = "GFX_HEU_benriya_medal_strip"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			max_dig_in_factor = 0.1
+			recon_factor_while_entrenched = 0.1
+		}
+
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
+
 }

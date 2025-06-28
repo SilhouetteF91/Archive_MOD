@@ -2210,9 +2210,8 @@
  GEH_discipline_system_weak_discipline_tt: "\n§g$GEH_first_congress_focus$ 중점이 완료된다면 감소하는 규율의 양이 절반(소숫점 반올림)으로 감소합니다.§!"
  GEH_end_discipline: "규율은 $GEH_Army_focus_7$ 중점을 완료하면 최대치로 고정되며, 더 이상 감소하지 않습니다."
 
- GEH_military_power_category: "선도부 국방정책"
- GEH_military_power_category_desc: "\n\n£GFX_HEU_total_assault_kaitenger\n\n\n\n\n\n§G게헨나 선도부§!는 대전이 이전에는 단독으로 §Y만마전§!을 완전히 파괴할 수 있는 강력한 세력이었으나, §Y대전이§!로 인한 신비 고갈과 도이칠란트인들의 유입이라는 예상할 수 없는 상황으로 인해 국력의 격차가 발생했습니다.\n\n우리 선도부가 시대의 흐름 앞에 무너지는 일이 발생하지 않도록, 우리는 우리가 가진 자산을 최대한 활용하고 선도부가 무너지지 않도록 계속해서 §Y국방력§!에 투자해야만 합니다. 선도부의 미래는 우리가 어떻게 행동하는지에 따라 결정될 것입니다.\n"
- # 카이텐저 이미지는 임시!!
+ GEH_military_power_category: "[ROOT.GetAdjective] 국방정책"
+ GEH_military_power_category_desc: "\n\n\n\n\n£GFX_GEH_military_power_prefect_team\n\n\n\n\n\n\n\n\n§G게헨나 선도부§!는 대전이 이전에는 단독으로 §Y판데모니움 소사이어티§!를 완전히 파괴할 수 있는 강력한 조직이었으나, §Y대전이§!로 인한 신비의 고갈과 도이칠란트인들의 유입이라는 예상할 수 없는 상황으로 인해 국력의 격차가 발생했습니다.\n\n우리가 시대의 흐름 앞에 무너지는 일이 발생하지 않도록, 우리는 우리가 가진 자산을 최대한 활용하고 [ROOT.GetAdjective]의 지속적인 존립을 위하여 계속해서 §Y국방력§!에 투자해야만 합니다. [ROOT.GetAdjective]의 미래는 우리가 어떻게 행동하는지에 따라 결정될 것입니다.\n"
 
  GEH_military_power_52_factory: "[52.GetName] 군수 공장 설립"
  GEH_military_power_52_factory_desc: "새로운 군수 공장 설립을 위한 적극적인 투자는 다가오는 전쟁을 위한 중요한 자산이 될 것입니다."

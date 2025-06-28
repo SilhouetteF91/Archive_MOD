@@ -1591,6 +1591,12 @@ spriteTypes = {
         legacy_lazy_load = no
     }
 
+	spriteType = {
+        name = "GFX_GEH_military_power_prefect_team"
+        texturefile = "gfx/interface/decisions/GEH_prefect_team_decisions/GEH_military_power_prefect_team.dds"
+        legacy_lazy_load = no
+    }
+
 	progressbartype = {
 		name = "GFX_ABY_focus_progressbar"
 		textureFile1 = "gfx/interface/decisions/ABY_focus_gui/ABY_progressbar.dds"
