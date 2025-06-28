@@ -1716,7 +1716,9 @@ country_event = {
 				modifier = COU_opinion_friend_of_kivotos_small_negative
 			}
 		}
-		country_event = { id = BA_generic_event.1304 days = 14 }
+		puppet = {
+			target = COU
+		}
 	}
 	option = {
 		name = BA_generic_event.1303.c

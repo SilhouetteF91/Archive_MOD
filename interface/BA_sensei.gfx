@@ -11,4 +11,11 @@ spriteTypes = {
 		name = "GFX_ba_generic_event_gsc_lin_angry"
 		textureFile = "gfx/event_pictures/BA/BA_gsc_lin_angry.png"
 	}
+
+
+	# interface
+	spriteType = {
+		name = "GFX_ba_miyunshi_frame"
+		textureFile = "gfx/interface/sensei_event/BA_Super_Event_Window_no_break.png"
+	}
 }
