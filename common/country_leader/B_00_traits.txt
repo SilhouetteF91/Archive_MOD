@@ -3313,6 +3313,10 @@ leader_traits = {
 		max_planning_factor = 0.10
 		planning_speed = 0.10
 	}
+	SHA_chairman = {
+		random = no
+		political_advisor_cost_factor = -0.1
+	}
 	SHA_T1a = { #암흑의 군주
 		random = no
 		stability_factor = 0.05

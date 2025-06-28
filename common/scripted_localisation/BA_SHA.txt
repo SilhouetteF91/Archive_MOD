@@ -1,0 +1,17 @@
+defined_text = {
+	name = SHA_communism_diplo
+	text = {
+		trigger = {
+			NOT = {
+				has_completed_focus = SHA_communism_focus_9
+			}
+		}
+		localization_key = SHA_rebuild_second_international
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SHA_communism_focus_9
+		}
+		localization_key = SHA_comintern_western_front
+	}
+}
