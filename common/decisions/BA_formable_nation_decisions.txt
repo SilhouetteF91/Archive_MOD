@@ -399,6 +399,12 @@ gehenna_unification = {
 			}
 			if = {
 				limit = {
+					tag = GEM
+				}
+				news_event = { id = BA_news.144 }
+			}
+			if = {
+				limit = {
 					has_idea = BA_a_divided_academy
 				}
 				remove_ideas = BA_a_divided_academy

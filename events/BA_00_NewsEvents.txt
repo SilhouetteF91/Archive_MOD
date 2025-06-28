@@ -5499,6 +5499,54 @@ news_event = { # 기계의 재건지원 선언
     }
 }
 
+news_event = { # 게헨나 재통일
+    id = BA_news.144
+    title = BA_news.144.t
+    desc = BA_news.144.desc
+    picture = GFX_news_event_HEU_news_makoto
+
+    major = yes
+    is_triggered_only = yes
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_pandemonium_society"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 31
+					days = 15
+				}
+			}
+		}
+	}
+
+	option = {
+		name = BA_news.144.a
+		trigger = {
+			tag = GEM
+		}
+	}
+
+	option = {
+		name = BA_news.144.b
+		trigger = {
+			NOT = { tag = GEM }
+			Kivotos_tag = yes
+		}
+	}
+
+	option = {
+		name = BA_news.144.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
 
 
 #news_event = { # 미국 트리니티 에덴 점령
