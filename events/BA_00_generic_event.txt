@@ -1610,11 +1610,21 @@ country_event = {
 	desc = BA_generic_event.19.d
 	picture = GFX_ba_generic_event_gsc_president
 	
-	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = BA_generic_event.19.a
+		hidden_effect = {
+			every_character = {
+				limit = {
+					has_trait = BA_teacher
+				}
+				remove_trait = {
+					trait = BA_teacher
+				}
+			}
+		}
+
 		add_country_leader_trait = {
 			trait = BA_teacher
 		}

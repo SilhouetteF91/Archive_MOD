@@ -50,6 +50,33 @@ on_actions = {
 			if = { limit = { has_country_flag = BA_ban_neutrality_parties_flag has_government = neutrality }
 				BA_neutrality_party_name_rerolling = yes
 			}
+			# 비학원국가 & ai가 아닐 때, 정권 따-잇 하는 상황일 때 플레이어 지도자에세 선생님 트레잇 부여
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = PROJECT_SENSEI_RULE
+						option = PROJECT_SENSEI_RULE_ON
+					}
+					Kivotos_tag = no
+					is_ai = no
+				}
+				country_event = { id = BA_generic_event.19 hours = 12 }
+			}
+	}
+	on_government_change = {
+		effect = {
+			# 비학원국가 & ai가 아닐 때, 정권 따-잇 하는 상황일 때 플레이어 지도자에세 선생님 트레잇 부여
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = PROJECT_SENSEI_RULE
+						option = PROJECT_SENSEI_RULE_ON
+					}
+					Kivotos_tag = no
+					is_ai = no
+				}
+				country_event = { id = BA_generic_event.19 hours = 12 }
+			}
 		}
 	}
 	on_puppet = {
