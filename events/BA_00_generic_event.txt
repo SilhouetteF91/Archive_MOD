@@ -1609,7 +1609,8 @@ country_event = {
 	title = BA_generic_event.19.t
 	desc = BA_generic_event.19.d
 	picture = GFX_ba_generic_event_gsc_president
-	
+
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -1628,5 +1629,123 @@ country_event = {
 		add_country_leader_trait = {
 			trait = BA_teacher
 		}
+
+		country_event = { id = BA_generic_event.1301 days = 14 }
 	}	
+}
+
+# 센세모드 이벤트 13XX부터
+country_event = {
+	id = BA_generic_event.1301
+	title = BA_generic_event.1301.t
+	desc = BA_generic_event.1301.d
+	picture = GFX_ba_generic_event_gsc_lin
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_generic_event.1301.a
+		COU = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = COU_opinion_friend_of_kivotos
+			}
+		}
+		country_event = { id = BA_generic_event.1303 days = 7 }
+	}
+	option = {
+		name = BA_generic_event.1301.b
+		country_event = { id = BA_generic_event.1302 }
+	}
+}
+
+country_event = {
+	id = BA_generic_event.1302
+	title = BA_generic_event.1302.t
+	desc = BA_generic_event.1302.d
+	picture = GFX_ba_generic_event_gsc_lin
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_generic_event.1302.a
+		COU = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = COU_opinion_friend_of_kivotos
+			}
+		}
+		country_event = { id = BA_generic_event.1303 days = 7 }
+	}
+	option = {
+		name = BA_generic_event.1302.b
+		COU = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = COU_opinion_friend_of_kivotos_small
+			}
+		}
+		country_event = { id = BA_generic_event.1303 days = 7 }
+	}
+}
+
+country_event = {
+	id = BA_generic_event.1303
+	title = BA_generic_event.1303.t
+	desc = BA_generic_event.1303.d
+	picture = GFX_ba_generic_event_gsc_lin
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_generic_event.1303.a
+		annex_country = {
+			target = COU
+			transfer_troops = yes
+		}
+		add_political_power = 100
+	}
+	option = {
+		name = BA_generic_event.1303.b
+		COU = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = COU_opinion_friend_of_kivotos_small_negative
+			}
+		}
+		country_event = { id = BA_generic_event.1304 days = 14 }
+	}
+	option = {
+		name = BA_generic_event.1303.c
+		COU = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = COU_opinion_friend_of_kivotos_negative
+			}
+		}
+		country_event = { id = BA_generic_event.1304 days = 14 }
+	}
+}
+
+country_event = {
+	id = BA_generic_event.1304
+	title = BA_generic_event.1304.t
+	desc = BA_generic_event.1304.d
+	picture = GFX_ba_generic_event_gsc_lin_angry
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_generic_event.1304.a
+		COU = {
+			declare_war_on = {
+				target = ROOT
+				type = puppet_wargoal_focus
+			}
+		}
+	}
 }

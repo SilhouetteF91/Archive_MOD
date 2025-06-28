@@ -3,4 +3,12 @@ spriteTypes = {
 		name = "GFX_ba_generic_event_gsc_president"
 		textureFile = "gfx/event_pictures/BA/BA_gsc_president.png"
 	}
+	spriteType = {
+		name = "GFX_ba_generic_event_gsc_lin"
+		textureFile = "gfx/event_pictures/BA/BA_gsc_lin.png"
+	}
+	spriteType = {
+		name = "GFX_ba_generic_event_gsc_lin_angry"
+		textureFile = "gfx/event_pictures/BA/BA_gsc_lin_angry.png"
+	}
 }
