@@ -236,6 +236,33 @@ scripted_gui = {
 			}
 		}
 
+		triggers = {
+			BA_Super_Event_Image_gehenna_reunification_benriya_visible = {
+				has_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 29
+				}
+			}
+		}
+
+		triggers = {
+			BA_Super_Event_Image_gehenna_reunification_prefect_team_visible = {
+				has_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 30
+				}
+			}
+		}
+
+		triggers = {
+			BA_Super_Event_Image_gehenna_reunification_pandemonium_society_visible = {
+				has_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 31
+				}
+			}
+		}
+
 		#내전 슈퍼 이벤트
 
 		############

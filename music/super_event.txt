@@ -386,3 +386,21 @@ music = {
         factor = 0
     }
 }
+music = {
+    song = "BA_ami_go_home"
+    chance = {
+        factor = 0
+    }
+}
+music = {
+    song = "BA_ons_heemecht"
+    chance = {
+        factor = 0
+    }
+}
+music = {
+    song = "BA_pandemonium_society"
+    chance = {
+        factor = 0
+    }
+}

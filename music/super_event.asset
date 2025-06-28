@@ -215,5 +215,20 @@ music = {
 	volume =  1
 }
 
+music = {
+	name = "BA_ami_go_home"
+	file = "super_event/ami_go_home.ogg"
+	volume =  1
+}
+music = {
+	name = "BA_ons_heemecht"
+	file = "super_event/ons_heemecht.ogg"
+	volume =  1
+}
+music = {
+	name = "BA_pandemonium_society"
+	file = "super_event/pandemonium_society.ogg"
+	volume =  1
+}
 
 

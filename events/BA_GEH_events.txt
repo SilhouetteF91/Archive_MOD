@@ -4739,6 +4739,22 @@ news_event = {
 	major = yes
 	is_triggered_only = yes
 
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_ami_go_home"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 30
+					days = 15
+				}
+			}
+		}
+	}
+
 	option = {
 		name = GEH_news.14.a
 		trigger = {
@@ -4770,6 +4786,22 @@ news_event = {
 	
 	major = yes
 	is_triggered_only = yes
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_ami_go_home"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 30
+					days = 15
+				}
+			}
+		}
+	}
 
 	option = {
 		name = GEH_news.15.a
@@ -4803,6 +4835,22 @@ news_event = {
 	major = yes
 	is_triggered_only = yes
 
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_ami_go_home"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 30
+					days = 15
+				}
+			}
+		}
+	}
+
 	option = {
 		name = GEH_news.16.a
 		trigger = {
@@ -4834,6 +4882,22 @@ news_event = {
 	
 	major = yes
 	is_triggered_only = yes
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_ami_go_home"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 30
+					days = 15
+				}
+			}
+		}
+	}
 
 	option = {
 		name = GEH_news.17.a

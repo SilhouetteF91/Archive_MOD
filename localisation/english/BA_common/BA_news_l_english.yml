@@ -963,6 +963,21 @@ BA_news.93.b:0 "믿을 수 없는 일이 벌어졌다."
  sup_COU_KAYA_LETSGo_QUOTE: "...그런 중우정치 같은 방법으로는,\n아무것도 해결하지 못합니다.\n키보토스는, 초인에 의해 지휘되어야 합니다."
  sup_COU_KAYA_LETSGo_QUOTE_NAME: "- 시라누이 카야"
  sup_COU_KAYA_LETSGo_REMARK: "어둠 속에서 고개를 들다"
+ 
+ sup_gehenna_reunification_benriya: "게헨나의 재통일"
+ sup_gehenna_reunification_benriya_QUOTE: "얽매이는 것도, 상처받을 일도 없으니 좋지만,\n그래도 혼자는 쓸쓸하니까."
+ sup_gehenna_reunification_benriya_QUOTE_NAME: "- 오니카타 카요코"
+ sup_gehenna_reunification_benriya_REMARK: "함께 하는 편이 더 즐겁잖아"
+ 
+ sup_gehenna_reunification_prefect_team: "게헨나의 재통일"
+ sup_gehenna_reunification_prefect_team_QUOTE: "...어떤 일이 있건, 선도부가 해야 할 일은 달라지지 않아.\n늘 있는 일이니까."
+ sup_gehenna_reunification_prefect_team_QUOTE_NAME: "- 소라사키 히나"
+ sup_gehenna_reunification_prefect_team_REMARK: "질서를 위하여"
+ 
+ sup_gehenna_reunification_pandemonium_society: "게헨나의 재통일"
+ sup_gehenna_reunification_pandemonium_society_QUOTE: "세상이 평화로워진다면... 괴로운 일은 없어질 거야.\n사람을 조종할 수 있다면 그런 일은 일어나지 않을 거잖아?\n이부키나 마코토 쨩에게도 괴로운 기억을 주지 않아도 돼"
+ sup_gehenna_reunification_pandemonium_society_QUOTE_NAME: "- 쿄고쿠 사츠키"
+ sup_gehenna_reunification_pandemonium_society_REMARK: "평화를 위한 정복"
 
  #아리우스 이벤트#
  ARI_all_blood.t:0 "'모든 피는 평등하다' 연설"

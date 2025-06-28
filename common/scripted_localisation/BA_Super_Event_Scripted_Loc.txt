@@ -254,6 +254,33 @@ defined_text = {
         }
         localization_key = "sup_COU_KAYA_LETSGo"
     }
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 29
+            }
+        }
+        localization_key = "sup_gehenna_reunification_benriya"
+    }
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 30
+            }
+        }
+        localization_key = "sup_gehenna_reunification_prefect_team"
+    }
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 31
+            }
+        }
+        localization_key = "sup_gehenna_reunification_pandemonium_society"
+    }
 }
 defined_text = {
     name = get_BA_Super_Event_quote
@@ -509,6 +536,33 @@ defined_text = {
             }
         }
         localization_key = "sup_COU_KAYA_LETSGo_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 29
+            }
+        }
+        localization_key = "sup_gehenna_reunification_benriya_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 30
+            }
+        }
+        localization_key = "sup_gehenna_reunification_prefect_team_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 31
+            }
+        }
+        localization_key = "sup_gehenna_reunification_pandemonium_society_QUOTE"
     }
 }
 defined_text = {
@@ -766,6 +820,33 @@ defined_text = {
         }
         localization_key = "sup_COU_KAYA_LETSGo_QUOTE_NAME"
     }
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 29
+            }
+        }
+        localization_key = "sup_gehenna_reunification_benriya_QUOTE_NAME"
+    }
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 30
+            }
+        }
+        localization_key = "sup_gehenna_reunification_prefect_team_QUOTE_NAME"
+    }
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 31
+            }
+        }
+        localization_key = "sup_gehenna_reunification_pandemonium_society_QUOTE_NAME"
+    }
 }
 defined_text = {
     name = get_BA_Super_Event_remark
@@ -1021,5 +1102,32 @@ defined_text = {
             }
         }
         localization_key = "sup_COU_KAYA_LETSGo_REMARK"
+    }
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 29
+            }
+        }
+        localization_key = "sup_gehenna_reunification_benriya_REMARK"
+    }
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 30
+            }
+        }
+        localization_key = "sup_gehenna_reunification_prefect_team_REMARK"
+    }
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 31
+            }
+        }
+        localization_key = "sup_gehenna_reunification_pandemonium_society_REMARK"
     }
 }

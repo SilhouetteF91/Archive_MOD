@@ -179,6 +179,24 @@ guiTypes = {
             position = {x = 9 y = 68}
 			alwaystransparent = yes
         }
+		iconType = {
+            name = "BA_Super_Event_Image_gehenna_reunification_benriya"
+            spriteType = "GFX_sp_event_gehenna_reunification"
+            position = {x = 9 y = 68}
+			alwaystransparent = yes
+        }
+		iconType = {
+            name = "BA_Super_Event_Image_gehenna_reunification_prefect_team"
+            spriteType = "GFX_sp_event_gehenna_reunification"
+            position = {x = 9 y = 68}
+			alwaystransparent = yes
+        }
+		iconType = {
+            name = "BA_Super_Event_Image_gehenna_reunification_pandemonium_society"
+            spriteType = "GFX_sp_event_gehenna_reunification"
+            position = {x = 9 y = 68}
+			alwaystransparent = yes
+        }
 
 
 
