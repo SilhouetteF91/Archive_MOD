@@ -13,34 +13,6 @@ country_event = { #1936년 신년사, 국회 본회의장 속기록
 	option = { 
 		name = HEU_event.0.a 
 		country_event = HEU_event.1001
-		if = {
-			limit = {
-				has_game_rule = {
-					rule = HEU_dress_Portrait_Rule
-					option = HEU_dress_Portrait_Rule_on
-				}
-			}
-			set_portraits = {
-				character = HEU_aru
-				civilian = { large = GFX_HEU_ARU_DRESS_Portrait }
-				army = { large = GFX_HEU_ARU_DRESS_Portrait }
-			}
-			set_portraits = {
-				character = HEU_ancmzl
-				civilian = { large = GFX_HEU_MUTSUKI_DRESS_Portrait }
-				army = { large = GFX_HEU_MUTSUKI_DRESS_Portrait }
-			}
-			set_portraits = {
-				character = HEU_zkdyzh
-				civilian = { large = GFX_HEU_KAYOKO_DRESS_Portrait }
-				army = { large = GFX_HEU_KAYOKO_DRESS_Portrait }
-			}
-			set_portraits = {
-				character = HEU_gkfnzk
-				civilian = { large = GFX_HEU_HARUKA_DRESS_Portrait }
-				army = { large = GFX_HEU_HARUKA_DRESS_Portrait }
-			}
-		}
 	}
 }
 
@@ -8812,7 +8784,7 @@ news_event = {
 	id = HEU_news.22
 	title = HEU_news.22.t
 	desc = HEU_news.22.desc
-	picture = GFX_news_event_HEU_news_aru_hina
+	picture = GFX_news_event_HEU_news_aru_dress
 	
 	major = yes
 	is_triggered_only = yes
@@ -9055,6 +9027,55 @@ news_event = {
 
 	option = {
 		name = HEU_news.27.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 흥신소 68의 게헨나 재통일
+news_event = {
+	id = HEU_news.28
+	title = HEU_news.28.t
+	desc = HEU_news.28.desc
+	picture = GFX_news_event_HEU_news_aru_charisma
+	
+	major = yes
+	is_triggered_only = yes
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_ons_heemecht"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 29
+					days = 15
+				}
+			}
+		}
+	}
+
+	option = {
+		name = HEU_news.28.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.28.b
+		trigger = {
+			NOT = { tag = HEU }
+			Kivotos_tag = yes
+		}
+	}
+
+	option = {
+		name = HEU_news.28.c
 		trigger = {
 			Kivotos_tag = no
 		}
