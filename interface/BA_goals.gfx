@@ -1793,6 +1793,10 @@ spriteTypes = {
 		name = "GFX_goal_GEH_hot_spring"
 		textureFile = "gfx/interface/goals/GEH/GEH_hot_spring.tga"
 	}
+	spriteType = {
+		name = "GFX_goal_GEH_Geotechnical_Investigations"
+		textureFile = "gfx/interface/goals/GEH/GEH_Geotechnical_Investigations.tga"
+	}
 	# 흥신소68 중점 GFX
 	SpriteType = { 
 		name = "GFX_goal_HEU_dkfn"

@@ -4966,7 +4966,7 @@ focus_tree = {
 	}
 	focus = { #지반 조사
 		id = GEM_Geotechnical_Investigations
-		icon = GFX_focus_POL_develop_polish_shipbuilding
+		icon = GFX_goal_GEH_Geotechnical_Investigations
 		cost = 4.00
 		prerequisite = { focus = GEM_hot_spring }
 		relative_position_id = GEM_hot_spring
