@@ -400,7 +400,7 @@ country_event = {
 		FROM = { country_event = { id = HYA_event.12 hours = 3 } }
 	}
 	option = {
-		name = HYA_event.11.a
+		name = HYA_event.11.b
 		ai_chance = {
 			modifier = {
 				has_government = democratic
