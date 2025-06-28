@@ -1603,7 +1603,7 @@ focus_tree = {
 	}
 	focus = { #좌익 민병대
 		id = SHA_communism_focus_2
-		icon = GFX_focus_YUG_pan_slavic_congress
+		icon = GFX_focus_GER_support_the_proletarian_uprising
 		x = 1
 		y = 1
 		cost = 5
@@ -1825,7 +1825,7 @@ focus_tree = {
 	}
 	focus = { #34년에 대한 복수
 		id = SHA_communism_focus_7
-		icon = GFX_focus_GER_support_the_proletarian_uprising
+		icon = GFX_focus_AFG_scavenging
 		x = 0
 		y = 2
 		cost = 5
@@ -2299,7 +2299,7 @@ focus_tree = {
 		icon = GFX_focus_SHA_remove_POC
 		x = -4
 		y = 0
-		cost = 5
+		cost = 2
 
 		prerequisite = { 
 			focus = SHA_appointment_of_BTP 
@@ -2314,7 +2314,34 @@ focus_tree = {
 		relative_position_id = SHA_release_austrian_politician
 
 		completion_reward = {
+			add_ideas = SHA_antifa
+		}
+	}
 
+	# 농촌 사회주의의 이론
+	focus = {
+		id = SHA_agrarian_socialism
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 0
+		y = 2
+		cost = 4
+
+		prerequisite = { 
+			focus = SHA_fight_against_extremism
+		}
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_fight_against_extremism
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHA_antifa
+				add_idea = SHA_antifa_1
+			}
 		}
 	}
 
@@ -2502,7 +2529,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { 
-			focus = SHA_womens_education_initiative
+			focus = SHA_agrarian_socialism
 		}
 		mutually_exclusive = {
 			focus = SHA_state_atheism

@@ -9046,7 +9046,7 @@ shared_focus = { #라인 강의 기적
 
 shared_focus = { #종교 정책
 	id = GEK_RM_rel_focus_0
-	icon = GFX_focus_SOV_rebuild_the_savior_cathedral
+	icon = GFX_focus_SOV_patriarch_of_all_russia
 	prerequisite = {
 		focus = GE1_start_focus
 		focus = GE2_start_focus

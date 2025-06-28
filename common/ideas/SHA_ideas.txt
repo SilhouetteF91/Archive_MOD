@@ -36,6 +36,24 @@ ideas = {
 	}
 	country = {
 		#공산
+		SHA_antifa_1 = { #반파시즘 투쟁
+			name = SHA_antifa
+			picture = GER_iron_front
+			modifier = {
+				fascism_drift = -0.05
+				fascism_acceptance = -10
+				local_building_slots_factor = 0.05
+				stability_factor = 0.03
+			}
+		}
+		SHA_antifa = { #반파시즘 투쟁
+			name = SHA_antifa
+			picture = GER_iron_front
+			modifier = {
+				fascism_drift = -0.05
+				fascism_acceptance = -10
+			}
+		}
 		SHA_conscription_student = { #학생 개병제
 			picture = eng_imperial_conscription
 			# YUG_federal_defense_council
