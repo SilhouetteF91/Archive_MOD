@@ -12,26 +12,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/RED/RE4_Finland_committee.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_SHA_vereinigte_stahlwerke"
-		texturefile = "gfx/interface/ideas/SHA/idea_SHA_vereinigte_stahlwerke.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_SHA_Shanhaijing_Democracy_ns"
-		texturefile = "gfx/interface/ideas/SHA/idea_Shanhaijing_Democracy.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_SHA_shadow_of_Shintani_Kai"
-		texturefile = "gfx/interface/ideas/SHA/idea_SHA_shadow_of_Shintani_Kai.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_SHA_Shintani_kais_cult_of_personality_ns"
-		texturefile = "gfx/interface/ideas/SHA/SHA_Shintani_kais_cult_of_personality_ns.tga"
-	}
-	spriteType = {
-		name = "GFX_idea_SHA_airforce"
-		texturefile = "gfx/interface/ideas/SHA/idea_SHA_airforce.tga"
-	}
-	spriteType = {
 		name = "GFX_Shanhaijing_MIO_airforce"
 		texturefile = "gfx/interface/ideas/SHA/MIO_국가항공국.tga"
 	}
@@ -777,6 +757,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_SHA_corporate_state"
 		texturefile = "gfx/interface/ideas/SHA/SHA_corporate_state.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_vereinigte_stahlwerke"
+		texturefile = "gfx/interface/ideas/SHA/idea_SHA_vereinigte_stahlwerke.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Shanhaijing_Democracy_ns"
+		texturefile = "gfx/interface/ideas/SHA/idea_Shanhaijing_Democracy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_shadow_of_Shintani_Kai"
+		texturefile = "gfx/interface/ideas/SHA/idea_SHA_shadow_of_Shintani_Kai.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Shintani_kais_cult_of_personality_ns"
+		texturefile = "gfx/interface/ideas/SHA/SHA_Shintani_kais_cult_of_personality_ns.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_austria_unemployment_problem"
+		texturefile = "gfx/interface/ideas/SHA/SHA_great_depression.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_HYA_organization_recruitment"
