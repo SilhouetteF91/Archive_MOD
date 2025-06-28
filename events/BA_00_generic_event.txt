@@ -1603,3 +1603,20 @@ country_event = { # 사악한 동맹 컷!!
 	name = BA_generic_event.18.a
   }
 }  
+
+country_event = {
+	id = BA_generic_event.19 # 나의 실수였어요.
+	title = BA_generic_event.19.t
+	desc = BA_generic_event.19.d
+	picture = GFX_ba_generic_event_gsc_president
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_generic_event.19.a
+		add_country_leader_trait = {
+			trait = BA_teacher
+		}
+	}	
+}
