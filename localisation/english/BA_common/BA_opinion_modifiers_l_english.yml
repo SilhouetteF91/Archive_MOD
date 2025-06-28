@@ -60,3 +60,10 @@
  RED_never_pay: "돈을 갚지 않음"
  RED_rational_choice: "합리적인 선택"
  RED_expansionism_opinion: "확장주의 정책"
+
+ # 센세모드 관련
+ # 관계도 수치
+ COU_opinion_friend_of_kivotos: "키보토스의 친구"
+ COU_opinion_friend_of_kivotos_small: "키보토스에 대한 호의"
+ COU_opinion_friend_of_kivotos_small_negative: "애매한 태도"
+ COU_opinion_friend_of_kivotos_negative: "제안 거절"

@@ -298,4 +298,24 @@ opinion_modifiers = {
 	TRN_arius_problem_modifier = {
 		value = -100
 	}
+
+	COU_opinion_friend_of_kivotos = {
+		value = 100
+	}
+
+	COU_opinion_friend_of_kivotos_small = {
+		value = 50
+	}
+
+	COU_opinion_friend_of_kivotos_small_negative = {
+		value = -25
+	}
+
+	COU_opinion_friend_of_kivotos_negative = {
+		value = -50
+	}
+
+	ABY_traitor_opinion = {
+		value = -200
+	}
 }

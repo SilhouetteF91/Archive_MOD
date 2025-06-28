@@ -60,8 +60,22 @@ on_actions = {
 					Kivotos_tag = no
 					is_ai = no
 				}
-				country_event = { id = BA_generic_event.19 hours = 12 }
+				hidden_effect = {
+					every_character = {
+						limit = {
+							has_trait = BA_teacher
+						}
+						remove_trait = {
+							trait = BA_teacher
+						}
+					}
+				}
+
+				add_country_leader_trait = {
+					trait = BA_teacher
+				}
 			}
+		}
 	}
 	on_government_change = {
 		effect = {
@@ -75,7 +89,20 @@ on_actions = {
 					Kivotos_tag = no
 					is_ai = no
 				}
-				country_event = { id = BA_generic_event.19 hours = 12 }
+				hidden_effect = {
+					every_character = {
+						limit = {
+							has_trait = BA_teacher
+						}
+						remove_trait = {
+							trait = BA_teacher
+						}
+					}
+				}
+
+				add_country_leader_trait = {
+					trait = BA_teacher
+				}
 			}
 		}
 	}
