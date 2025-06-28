@@ -37,6 +37,19 @@
  ARI_gehenna_invasion: "게헨나와의 전쟁"
 
 
+ ARI_second_hideout: "트리니티에 대항한 두 번째 망명자"
+ ARI_ss_rejection: "친위대 수용 거부"
+
+ ARI_danzig_nazi_party_forced_dissolution: "단치히 나치당 강제해산"
+ ARI_dawn_offensive: "새벽 공세"
+ ARI_citizen_reorganization: "시민 재조직"
+ ARI_hikari_atsuko_reinstatement: "하카리 아츠코 복권"
+ ARI_international_diplomacy: "국제주의 외교"
+ ARI_contact_with_poland: "폴란드와 접촉"
+ ARI_soviet_support: "소련의 지원"
+ ARI_antitinity_alignment: "반트리니티 대오"
+ ARI_antitinity_joint_cooperation: "보복주의 고조"
+
  ARI_emergency_now: "사태 파악"
  ARI_make_difference: "진실 폭로"
  ARI_contact_with_local_parties: "정당과 접촉"
@@ -53,7 +66,7 @@
  ARI_class_theory: "계급론"
  ARI_the_proletariat: "무산자들"
  ARI_dismantling_nazism: "나치즘 파훼"
- ARI_we_are_arians: "우리는 아리우스다"
+ ARI_we_are_arians: "독일인 영향력 경계"
  ARI_anti_trinity_arius_german_united_front: "반트리니티 독일-아리우스 연합전선"
  ARI_overthrow_of_danzig: "단치히 전복"
  ARI_parliamentarism: "의회주의"
@@ -133,7 +146,7 @@
  ARI_greater_germania_tooltip_GEM: "시작 시점 §Y[GEM.GetNameWithFlag]§! 지역의 §Y모든 독일 핵심§! 주 지배"
  ARI_greater_germania_tooltip_GEH: "시작 시점 §Y[GEH.GetNameWithFlag]§! 지역의 §Y모든 독일 핵심§! 주 지배"
  ARI_greater_germania_tooltip_SHA: "시작 시점 §Y[SHA.GetNameWithFlag]§! 지역의 §Y모든 오스트리아 핵심§! 주 지배"
- ARI_greater_germania_tooltip_SUD: "§Y주데텐란트§! 지역 지배"
+ ARI_greater_germania_tooltip_SUD: "모든 §Y주데텐란트§! 지역 지배"
  ARI_harmony_with_the_new_world_flag: "§Y$ARI_harmony_with_the_new_world$§! 중점 완료"
  ARI_german_lands_tt: "\n§Y$ARI_german_provisional_government$§! 중점 완료 시:"
  ARI_restoration_of_germany: "영토 수복"

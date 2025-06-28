@@ -1,8 +1,13 @@
 focus_tree = {
 	id = ARI_focus_tree
-	continuous_focus_position = { x = 10 y = 1250 }
+	continuous_focus_position = {
+		x = 10
+		y = 10
+	}
 	shared_focus = BA_new_world_technology
 	shared_focus = Eden_formation_of_alliance_treaty_organization
+	shared_focus = NSAR_danzigs_ss
+	shared_focus = NSAR_german_ss
 	country = {
 		factor = 0
 		modifier = {
@@ -12,30 +17,224 @@ focus_tree = {
 	}
 	default = no
 
+
 	focus = {
-        id = ARI_use_hanran #혼란 이용
+		id = NSAR_danzigs_ss
+		
+		icon = GFX_focus_GER_integrated_economies
+
+		cost = 5
+
+		x = 40
+		y = 0
+
+		available = { 
+			original_tag = ARI
+			OR = {
+				country_exists = NSD
+				NOT = { has_war_with = NSD }
+			}
+		} 
+
+		bypass = {
+			original_tag = ARI
+			NOT = {
+				country_exists = NSD
+			}
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+
+		available_if_capitulated = no
+
+		select_effect = {
+		}
+
+		completion_reward = {
+
+			effect_tooltip = {
+				NSD = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 200
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 50
+					}
+				}
+			}
+
+			hidden_effect = {
+				#NSD = { complete_national_focus = NSAR_danzigs_ss }
+			}
+		}
+	}
+
+
+	focus = {
+		id = NSAR_german_ss
+		
+		icon = GFX_focus_GER_expand_ss_security_duties
+
+		cost = 2
+
+		x = 20
+		y = 0
+
+		available = { 
+			original_tag = NSD
+			OR = {
+				country_exists = ARI
+				NOT = { has_war_with = ARI }
+			}
+		} 
+
+		bypass = {
+			original_tag = NSD
+			NOT = {
+				country_exists = ARI
+			}
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+
+		available_if_capitulated = no
+
+		select_effect = {
+		}
+
+		completion_reward = {
+			add_stability = 0.02
+		}
+	}
+
+
+	focus = {
+		id = NSAR_antitinity_joint_cooperation
+
+		prerequisite = {
+			focus = NSAR_danzigs_ss
+		}
+		
+		icon = GFX_focus_generic_army_doctrines_2
+
+		cost = 2
+
+		x = 0
+		y = 3
+
+		relative_position_id = NSAR_danzigs_ss
+
+		available = { 
+			original_tag = ARI
+			NOT = { has_idea = ARI_undisturbed_wareconomy }
+			NOT = { country_exists = NSD }
+			NOT = { has_completed_focus = NSAR_eagle_on_ashes }
+		} 
+
+		bypass = {
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+
+		available_if_capitulated = no
+
+		select_effect = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+
+	focus = {
+		id = NSAR_eagle_on_ashes
+		
+		icon = GFX_focus_GER_expand_ss_security_duties
+
+		cost = 2
+
+		prerequisite = {
+			focus = NSAR_german_ss
+		}
+
+		x = 0
+		y = 3
+
+		relative_position_id = NSAR_german_ss
+
+		available = { 
+			original_tag = NSD
+			OR = {
+				country_exists = ARI
+				NOT = { has_war_with = ARI }
+			}
+			NOT = { has_completed_focus = NSAR_antitinity_joint_cooperation }
+		} 
+
+		bypass = {
+			original_tag = NSD
+			NOT = {
+				country_exists = ARI
+			}
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+
+		available_if_capitulated = no
+
+		select_effect = {
+		}
+
+		completion_reward = {
+			
+			IF = {
+				limit = { original_tag = NSD }
+			}
+			ELSE_IF = {
+				limit = { original_tag = ARI }
+				effect_tooltip = {
+					add_stability = 0.02
+				}
+			}
+
+			hidden_effect = {
+				ARI = { unlock_national_focus = NSAR_german_ss }
+			}
+		}
+	}
+	focus = {
+		id = ARI_use_hanran		#혼란 이용
 		icon = GFX_goal_generic_major_war
 		dynamic = yes
-        cost = 5.00
-        x = 20
-        y = 0
-        completion_reward = {
+		cost = 5
+		x = 55
+		y = 0
+		completion_reward = {
 			add_political_power = 120
 		}
-    }
-
-    focus = {
-        id = ARI_war_with_trinity #트리니티와의 전쟁
+	}
+	focus = {
+		id = ARI_war_with_trinity		#트리니티와의 전쟁
 		icon = GFX_focus_attack_TRN
 		dynamic = yes
-        cost = 10.00
-
+		cost = 10
 		available = {
 			is_subject = no
 			date > 1940.1.1
-			NOT = { is_in_faction_with = TRM }
+			NOT = {
+				is_in_faction_with = TRM
+			}
 		}
-
 		bypass = {
 			is_subject = no
 			TRM = {
@@ -48,16 +247,18 @@ focus_tree = {
 				}
 			}
 		}
-
 		x = -5
 		y = 1
 		relative_position_id = ARI_use_hanran
-        completion_reward = {
+		completion_reward = {
 			if = {
 				limit = {
 					has_tech = nukes
 				}
-				news_event = { id = BA_news.36 hours = 6 }
+				news_event = {
+					id = BA_news.36
+					hours = 6
+				}
 				TRM = {
 					launch_nuke = {
 						province = 6521
@@ -76,34 +277,36 @@ focus_tree = {
 				type = annex_everything
 			}
 		}
-    }
-
-    focus = {
-        id = ARI_quiet_rearmament #조용한 재무장
+	}
+	focus = {
+		id = ARI_quiet_rearmament		#조용한 재무장
 		icon = GFX_focus_secret_rearmament
 		dynamic = yes
-		cost = 5.00
-		prerequisite = { focus = ARI_use_hanran }
-        x = 2
-        y = 1
+		cost = 5
+		prerequisite = {
+			focus = ARI_use_hanran
+		}
+		x = 2
+		y = 1
 		relative_position_id = ARI_use_hanran
-        completion_reward = {
+		completion_reward = {
 			add_manpower = 5000
 			add_equipment_to_stockpile = {
 				type = kivotos_infantry_equipment_0
 				amount = 2000
 			}
 		}
-    }
-
+	}
 	focus = {
-        id = ARI_deceptive_operation #기만 작전
+		id = ARI_deceptive_operation		#기만 작전
 		icon = GFX_goal_generic_dangerous_deal
 		dynamic = yes
-        cost = 5.00
-		prerequisite = { focus = ARI_quiet_rearmament }
-        x = 1
-        y = 1
+		cost = 5
+		prerequisite = {
+			focus = ARI_quiet_rearmament
+		}
+		x = 1
+		y = 1
 		relative_position_id = ARI_quiet_rearmament
 		available = {
 			has_war = no
@@ -111,16 +314,16 @@ focus_tree = {
 				has_completed_focus = ARI_war_with_trinity
 			}
 		}
-        completion_reward = {
+		completion_reward = {
 			add_political_power = 50
 			swap_ideas = {
 				remove_idea = BA_ARI_bitter_revanchism
 				add_idea = BA_ARI_bitter_revanchism_2
 			}
 		}
-    }
+	}
 	focus = {
-		id = ARI_contact_with_azusa #아즈사와 접촉
+		id = ARI_contact_with_azusa		#아즈사와 접촉
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		dynamic = yes
 		cost = 5
@@ -130,14 +333,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ARI_deceptive_operation
-
 		available = {
 			TRM = {
 				has_completed_focus = TRN_yurijono_seia
 			}
 		}
-
-		completion_reward = { 
+		completion_reward = {
 			TRM = {
 				TRN_dkwmtk = {
 					set_nationality = ARI
@@ -146,7 +347,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ARI_deny_trinity #삼위일체론 부정
+		id = ARI_deny_trinity		#삼위일체론 부정
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		prerequisite = {
 			focus = ARI_from_end_to_end
@@ -172,7 +373,11 @@ focus_tree = {
 			controls_state = 763
 			controls_state = 5
 			if = {
-				limit = { NOT = { has_country_flag = ARI_event_32_a_flag } }
+				limit = {
+					NOT = {
+						has_country_flag = ARI_event_32_a_flag
+					}
+				}
 				controls_state = 807
 			}
 		}
@@ -180,10 +385,12 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = ARI_war_with_trinity
-
 		completion_reward = {
 			effect_tooltip = {
-				if = { limit = { has_completed_focus = ARI_night_of_the_long_knives }
+				if = {
+					limit = {
+						has_completed_focus = ARI_night_of_the_long_knives
+					}
 					swap_ideas = {
 						remove_idea = BA_ARI_bitter_revanchism_2
 						add_idea = BA_ARI_bitter_revanchism_GER
@@ -197,26 +404,44 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				if = { limit = { has_idea = BA_ARI_bitter_revanchism_2 }
+				if = {
+					limit = {
+						has_idea = BA_ARI_bitter_revanchism_2
+					}
 					swap_ideas = {
 						remove_idea = BA_ARI_bitter_revanchism_2
 						add_idea = BA_ARI_bitter_revanchism_3
 					}
 				}
-				else_if = { limit = { has_idea = BA_ARI_bitter_revanchism }
+				else_if = {
+					limit = {
+						has_idea = BA_ARI_bitter_revanchism
+					}
 					swap_ideas = {
 						remove_idea = BA_ARI_bitter_revanchism
 						add_idea = BA_ARI_bitter_revanchism_3
 					}
 				}
-				else_if = { limit = { has_completed_focus = ARI_night_of_the_long_knives }
-					if = { limit = { has_idea = BA_ARI_bitter_revanchism }
+				else_if = {
+					limit = {
+						has_completed_focus = ARI_night_of_the_long_knives
+					}
+					if = {
+						limit = {
+							has_idea = BA_ARI_bitter_revanchism
+						}
 						remove_ideas = BA_ARI_bitter_revanchism
 					}
-					if = { limit = { has_idea = BA_ARI_bitter_revanchism_2 }
+					if = {
+						limit = {
+							has_idea = BA_ARI_bitter_revanchism_2
+						}
 						remove_ideas = BA_ARI_bitter_revanchism_2
 					}
-					if = { limit = { has_idea = BA_ARI_bitter_revanchism_3 }
+					if = {
+						limit = {
+							has_idea = BA_ARI_bitter_revanchism_3
+						}
 						remove_ideas = BA_ARI_bitter_revanchism_3
 					}
 					add_ideas = BA_ARI_bitter_revanchism_GER
@@ -230,7 +455,11 @@ focus_tree = {
 			add_state_core = 763
 			add_state_core = 5
 			if = {
-				limit = { NOT = { has_country_flag = ARI_event_32_a_flag } }
+				limit = {
+					NOT = {
+						has_country_flag = ARI_event_32_a_flag
+					}
+				}
 				add_state_core = 807
 			}
 			every_controlled_state = {
@@ -243,7 +472,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ARI_step_onto_the_world_stage #세계를 향한 도약
+		id = ARI_step_onto_the_world_stage		#세계를 향한 도약
 		icon = GFX_goal_generic_propaganda
 		prerequisite = {
 			focus = ARI_deny_trinity
@@ -255,7 +484,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ARI_deny_trinity
-
 		completion_reward = {
 			effect_tooltip = {
 				swap_ideas = {
@@ -264,15 +492,19 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				if = {  
-					limit = { has_idea = ARI_undisturbed_wareconomy }
+				if = {
+					limit = {
+						has_idea = ARI_undisturbed_wareconomy
+					}
 					swap_ideas = {
 						remove_idea = ARI_undisturbed_wareconomy
 						add_idea = war_economy
 					}
 				}
-				else_if = {  
-					limit = { has_idea = ARI_wareconomy }
+				else_if = {
+					limit = {
+						has_idea = ARI_wareconomy
+					}
 					swap_ideas = {
 						remove_idea = ARI_undisturbed_wareconomy
 						add_idea = war_economy
@@ -288,48 +520,56 @@ focus_tree = {
 		}
 	}
 	focus = {
-        id = ARI_TRM_penetration #트리니티 침투
+		id = ARI_TRM_penetration		#트리니티 침투
 		icon = GFX_focus_prc_infiltration
 		dynamic = yes
-        cost = 10.00
+		cost = 10
 		available = {
 			has_war = no
 			NOT = {
 				has_completed_focus = ARI_war_with_trinity
 			}
 		}
-		prerequisite = { focus = ARI_deceptive_operation }
-        x = -1
-        y = 1
+		prerequisite = {
+			focus = ARI_deceptive_operation
+		}
+		x = -1
+		y = 1
 		will_lead_to_war_with = TRM
 		relative_position_id = ARI_deceptive_operation
-        completion_reward = {
+		completion_reward = {
 			unlock_decision_category_tooltip = ARI_penetration
 			763 = {
-				set_state_flag = penetration_complet 
+				set_state_flag = penetration_complet
 			}
-			set_variable = { ARI_eye_var = 1 }
-			set_variable = { ARI_penetration_state_var = 1 }
-			set_variable = { ARI_penetration_per_var = 0.05 }
+			set_variable = {
+				ARI_eye_var = 1
+			}
+			set_variable = {
+				ARI_penetration_state_var = 1
+			}
+			set_variable = {
+				ARI_penetration_per_var = 0.05
+			}
 		}
-    }
-
-    focus = {
-        id = ARI_from_end_to_end #끝에서 끝으로
+	}
+	focus = {
+		id = ARI_from_end_to_end		#끝에서 끝으로
 		icon = GFX_goal_generic_political_pressure
 		dynamic = yes
-        cost = 10.00
-		prerequisite = { focus = ARI_quiet_rearmament }
-        x = -2
-        y = 2
+		cost = 10
+		prerequisite = {
+			focus = ARI_quiet_rearmament
+		}
+		x = -2
+		y = 2
 		relative_position_id = ARI_quiet_rearmament
-        completion_reward = {
+		completion_reward = {
 			add_ideas = ARI_from_end_to_end_idea
 		}
-    }
-
+	}
 	focus = {
-		id = ARI_nationalize_war_industry #군공 압수
+		id = ARI_nationalize_war_industry		#군공 압수
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = {
 			focus = ARI_use_hanran
@@ -358,7 +598,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ARI_vanitas_vanitatum #바니바니
+		id = ARI_vanitas_vanitatum		#바니바니
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = {
 			focus = ARI_nationalize_war_industry
@@ -368,12 +608,12 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ARI_nationalize_war_industry
-		completion_reward = { 
+		completion_reward = {
 			add_ideas = ARI_vanitas_vanitatum_idea
 		}
 	}
 	focus = {
-		id = ARI_second_council #제2회 공회의
+		id = ARI_second_council		#제2회 공회의
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = {
 			focus = ARI_war_with_trinity
@@ -393,17 +633,18 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ARI_war_with_trinity
-
 		available = {
 		}
-
 		completion_reward = {
 			add_research_slot = 1
-			country_event = { id = ARI_event.2 hours = 24 }
+			country_event = {
+				id = ARI_event.2
+				hours = 24
+			}
 		}
 	}
-
-	focus = { #5개년 계획 추진
+	focus = {
+		#5개년 계획 추진
 		id = ARI_five_year_plan_implementation
 		icon = GFX_focus_generic_industry_1
 		prerequisite = {
@@ -416,10 +657,11 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = ARI_deny_trinity
-
 		complete_tooltip = {
 			every_state = {
-				limit = { has_state_flag = ARI_five_year_plan_implementation_1C }
+				limit = {
+					has_state_flag = ARI_five_year_plan_implementation_1C
+				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -427,7 +669,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -467,9 +708,9 @@ focus_tree = {
 				set_state_flag = ARI_five_year_plan_implementation_1C
 			}
 		}
-	} 
-
-	focus = { #기간산업체
+	}
+	focus = {
+		#기간산업체
 		id = ARI_core_industries
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = {
@@ -482,14 +723,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ARI_five_year_plan_implementation
-
-
 		completion_reward = {
 			add_ideas = FRA_rad_gigan
 		}
 	}
-
-	focus = { #독일 기업 투자
+	focus = {
+		#독일 기업 투자
 		id = ARI_german_corporate_investment
 		icon = GFX_focus_research
 		prerequisite = {
@@ -502,13 +741,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ARI_five_year_plan_implementation
-
 		completion_reward = {
 			add_research_slot = 1
 		}
 	}
-
-	focus = { #산업 동원 계획
+	focus = {
+		#산업 동원 계획
 		id = ARI_industrial_mobilization_plan
 		icon = GFX_goal_generic_production2
 		prerequisite = {
@@ -522,7 +760,6 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ARI_five_year_plan_implementation
-
 		completion_reward = {
 			add_offsite_building = {
 				type = arms_factory
@@ -530,9 +767,9 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #게헨나와 전쟁 준비
-		id = ARI_gehenna_war_preparations 
+	focus = {
+		#게헨나와 전쟁 준비
+		id = ARI_gehenna_war_preparations
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = {
 			focus = ARI_deny_trinity
@@ -544,22 +781,22 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = ARI_deny_trinity
-
 		completion_reward = {
 			add_tech_bonus = {
 				category = infantry_weapons
 				category = cat_anti_air
 				category = artillery
 				uses = 3
-				bonus = 1.0
+				bonus = 1
 			}
 		}
 	}
 	focus = {
-		id = ARI_kickstart_the_war_industry # 전시 산업
-		prerequisite = { focus = ARI_gehenna_war_preparations }
+		id = ARI_kickstart_the_war_industry		# 전시 산업
+		prerequisite = {
+			focus = ARI_gehenna_war_preparations
+		}
 		available = {
-
 		}
 		ai_will_do = {
 			base = 100
@@ -571,7 +808,9 @@ focus_tree = {
 		cost = 5
 		complete_tooltip = {
 			every_state = {
-				limit = { has_state_flag = ARI_state_flag }
+				limit = {
+					has_state_flag = ARI_state_flag
+				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -579,7 +818,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -609,7 +847,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ARI_prepare_for_the_inevitable # 초토화 작전
+		id = ARI_prepare_for_the_inevitable		# 초토화 작전
 		icon = GFX_focus_SWE_let_fly_all_guns
 		available = {
 			has_completed_focus = ARI_from_end_to_end
@@ -617,13 +855,13 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 		}
-		prerequisite = { focus = ARI_gehenna_war_preparations }
-
-
+		prerequisite = {
+			focus = ARI_gehenna_war_preparations
+		}
 		x = -1
 		y = 1
 		relative_position_id = ARI_gehenna_war_preparations
-		cost = 5.00
+		cost = 5
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = ARI_from_end_to_end_idea
@@ -632,21 +870,23 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ARI_military_training # 군사 훈련
+		id = ARI_military_training		# 군사 훈련
 		icon = GFX_focus_generic_license_production
 		available = {
-
 		}
 		ai_will_do = {
 			base = 100
 		}
-		prerequisite = { focus = ARI_prepare_for_the_inevitable }
-		prerequisite = { focus = ARI_kickstart_the_war_industry }
-
+		prerequisite = {
+			focus = ARI_prepare_for_the_inevitable
+		}
+		prerequisite = {
+			focus = ARI_kickstart_the_war_industry
+		}
 		x = -1
 		y = 1
 		relative_position_id = ARI_kickstart_the_war_industry
-		cost = 10.00
+		cost = 10
 		completion_reward = {
 			army_experience = 25
 			add_doctrine_cost_reduction = {
@@ -655,11 +895,10 @@ focus_tree = {
 				uses = 3
 				category = land_doctrine
 			}
-
 		}
 	}
-
-	focus = { #게헨나 침공
+	focus = {
+		#게헨나 침공
 		id = ARI_gehenna_invasion
 		icon = GFX_focus_attack_GEH
 		prerequisite = {
@@ -668,13 +907,15 @@ focus_tree = {
 		prerequisite = {
 			focus = ARI_military_training
 		}
-
 		available = {
 			is_puppet = no
-			has_army_manpower = { size > 349999 }
-			NOT = { is_in_faction_with = GEM }
+			has_army_manpower = {
+				size > 349999
+			}
+			NOT = {
+				is_in_faction_with = GEM
+			}
 		}
-
 		bypass = {
 			is_subject = no
 			GEM = {
@@ -698,7 +939,6 @@ focus_tree = {
 		x = 0
 		y = 5
 		relative_position_id = ARI_deny_trinity
-
 		completion_reward = {
 			create_wargoal = {
 				target = GEM
@@ -710,7 +950,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	############################################################################################################
 	############################################################################################################
 	############################################################################################################
@@ -748,22 +987,27 @@ focus_tree = {
 	############################################################################################################
 	############################################################################################################
 	############################################################################################################
-
-	focus = {# 사태 파악
+	focus = {
+		# 사태 파악
 		id = ARI_emergency_now
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 5
-		x = 35
+		x = 30
 		y = 0
 		available = {
 		}
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			factor = 0
+		}
 		completion_reward = {
-			country_event = { id = ARI_event.5 hours = 8 }
+			country_event = {
+				id = ARI_event.5
+				hours = 8
+			}
 		}
 	}
-
-	focus = { #현지 정당과 접촉
+	focus = {
+		#현지 정당과 접촉
 		id = ARI_contact_with_local_parties
 		icon = GFX_goal_tripartite_pact
 		prerequisite = {
@@ -773,16 +1017,17 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ARI_emergency_now
-
 		available = {
 		}
-
 		completion_reward = {
-			country_event = { id = ARI_event.7 hours = 8 }
+			country_event = {
+				id = ARI_event.7
+				hours = 8
+			}
 		}
 	}
-
-	focus = { #노동자 시위대와 접촉
+	focus = {
+		#노동자 시위대와 접촉
 		id = ARI_contact_with_workers_protest_groups
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = {
@@ -792,16 +1037,17 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ARI_emergency_now
-
 		available = {
 		}
-
 		completion_reward = {
-			country_event = { id = ARI_event.6 hours = 8 }
+			country_event = {
+				id = ARI_event.6
+				hours = 8
+			}
 		}
 	}
-
-	focus = { #현지 상황 파악
+	focus = {
+		#현지 상황 파악
 		id = ARI_understanding_of_local_conditions
 		icon = GFX_focus_POL_clamp_down_on_danzig
 		prerequisite = {
@@ -814,10 +1060,8 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ARI_emergency_now
-
 		available = {
 		}
-
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = ARI_undisturbed_wareconomy
@@ -825,125 +1069,34 @@ focus_tree = {
 			}
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.10
+				popularity = 0.1
 			}
 			add_popularity = {
 				ideology = communism
-				popularity = 0.10
+				popularity = 0.1
 			}
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.10
+				popularity = 0.1
 			}
 		}
 	}
-
-	focus = { #지배권 행사
-		id = ARI_exercise_of_dominance
-		icon = GFX_focus_generic_support_the_left_right
-		prerequisite = {
-			focus = ARI_understanding_of_local_conditions
-		}
-		mutually_exclusive = { focus = ARI_from_the_bottom_up }
-		cost = 5
-		x = 2
-		y = 3
-		relative_position_id = ARI_emergency_now
-
-		available = {
-		}
-
-		completion_reward = {
-			add_war_support = 0.10
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.10
-			}
-		}
-	}
-
-	focus = { #나치당 인정
-		id = ARI_recognition_of_the_nazi_party
-		icon = GFX_focus_ger_reichskommisariats
-		prerequisite = {
-			focus = ARI_exercise_of_dominance
-		}
-		cost = 5
-		x = 1
-		y = 1
-		relative_position_id = ARI_exercise_of_dominance
-
-		available = {
-		}
-
-		completion_reward = {
-			add_dynamic_modifier = { modifier = ARI_nazi_party }
-		}
-	}
-
-	focus = { #독일인과 밀접한 결속
-		id = ARI_close_contact_with_germans
-		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = {
-			focus = ARI_recognition_of_the_nazi_party
-		}
-		cost = 5
-		x = 1
-		y = 1
-		relative_position_id = ARI_recognition_of_the_nazi_party
-
-		available = {
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = ARI_close_contact_with_germans_tt
-			add_to_variable = { ARI_nazi_party_conscription = 0.05 }
-		}
-	}
-
-	focus = { #저항군과 접촉
-		id = ARI_contact_with_resistance_groups
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = {
-			focus = ARI_recognition_of_the_nazi_party
-		}
-		cost = 5
-		x = -1
-		y = 1
-		relative_position_id = ARI_recognition_of_the_nazi_party
-
-		available = {
-		}
-
-		completion_reward = {
-			add_manpower = 12000
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 3000
-			}
-			add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 150
-			}
-		}
-	}
-
-	focus = { #낮은 곳으로부터
+	focus = {
+		#낮은 곳으로부터
 		id = ARI_from_the_bottom_up
 		icon = GFX_focus_generic_public_works
 		prerequisite = {
 			focus = ARI_understanding_of_local_conditions
 		}
-		mutually_exclusive = { focus = ARI_exercise_of_dominance }
-		
+		mutually_exclusive = {
+			focus = ARI_exercise_of_dominance
+		}
 		cost = 5
 		x = -2
 		y = 3
 		relative_position_id = ARI_emergency_now
-
 		available = {
 		}
-
 		completion_reward = {
 			add_stability = -0.05
 			add_popularity = {
@@ -957,25 +1110,148 @@ focus_tree = {
 			add_ideas = ARI_political_landscape_changes
 		}
 	}
-
-	focus = { #신은 죽었다
-		id = ARI_god_is_dead
-		icon = GFX_focus_mex_triumph_over_the_cristeros
+	focus = {
+		#지배권 행사
+		id = ARI_exercise_of_dominance
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = {
+			focus = ARI_understanding_of_local_conditions
+		}
+		mutually_exclusive = {
+			focus = ARI_from_the_bottom_up
+		}
+		available = {
+		}
+		cancel_effect = {
+			complete_national_focus = ARI_from_the_bottom_up
+		}
+		cancel = {
+			NSD = {
+				exists = yes
+				has_capitulated = no
+				NOT = {
+					has_war_with = TRM
+				}
+			}
+		}
+		cost = 5
+		x = 2
+		y = 3
+		relative_position_id = ARI_emergency_now
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = ARI_ss_rejection
 		prerequisite = {
 			focus = ARI_from_the_bottom_up
+			focus = NSAR_eagle_on_ashes
+		}
+		mutually_exclusive = {
+			focus = ARI_second_hideout
+		}
+		dynamic = yes
+		icon = GFX_focus_generic_printing_press
+		cost = 5
+		x = -9
+		y = 2
+		relative_position_id = ARI_understanding_of_local_conditions
+		available = {
+			original_tag = ARI
+			NOT = {
+				country_exists = NSD
+			}
+		}
+		bypass = {
+			NSD = {
+				exists = yes
+				has_capitulated = no
+				NOT = {
+					has_war_with = TRM
+				}
+			}
+		}
+		ai_will_do = {
+			base = 999
+		}
+		available_if_capitulated = no
+		select_effect = {
+		}
+		completion_reward = {
+			set_global_flag = NSD_the_SS_went_to_america
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+		}
+	}
+	focus = {
+		#단치히 나치당 강제해산
+		id = ARI_danzig_nazi_party_forced_dissolution
+		icon = GFX_focus_POL_ban_nazi_party
+		prerequisite = {
+			focus = ARI_ss_rejection
 		}
 		cost = 5
 		x = -2
-		y = 2
-		relative_position_id = ARI_from_the_bottom_up
-
+		y = 1
+		relative_position_id = ARI_ss_rejection
 		available = {
 		}
-
+		completion_reward = {
+			custom_effect_tooltip = ARI_class_theory_tt
+			add_to_variable = {
+				ARI_arian_production_factory_max_efficiency_factor = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+		}
+	}
+	focus = {
+		#새벽 공세
+		id = ARI_dawn_offensive
+		icon = GFX_focus_POL_clamp_down_on_danzig
+		prerequisite = {
+			focus = ARI_danzig_nazi_party_forced_dissolution
+		}
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ARI_danzig_nazi_party_forced_dissolution
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#시민 재조직
+		id = ARI_citizen_reorganization
+		icon = GFX_focus_RAJ_a_private_military
+		prerequisite = {
+			focus = ARI_danzig_nazi_party_forced_dissolution
+		}
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ARI_danzig_nazi_party_forced_dissolution
+		available = {
+		}
 		completion_reward = {
 			custom_effect_tooltip = ARI_god_is_dead_tt
-			add_to_variable = { ARI_arian_political_power_gain = 0.15 }
-			add_to_variable = { ARI_arian_consumer_goods_factor = -0.05 }
+			add_to_variable = {
+				ARI_arian_political_power_gain = 0.15
+			}
+			add_to_variable = {
+				ARI_arian_consumer_goods_factor = -0.05
+			}
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05
@@ -986,231 +1262,116 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #노동 조합과의 연대
-		id = ARI_solidarity_with_trade_unions
-		icon = GFX_goal_generic_attack_allies
+	focus = {
+		#아츠코 복권
+		id = ARI_hikari_atsuko_reinstatement
+		icon = GFX_ARI_princess_of_arius
 		prerequisite = {
-			focus = ARI_from_the_bottom_up
-			focus = ARI_exercise_of_dominance
+			focus = ARI_dawn_offensive
+			focus = ARI_citizen_reorganization
+		}
+		mutually_exclusive = {
+			focus = ARI_antitinity_alignment
+		}
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = ARI_danzig_nazi_party_forced_dissolution
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 120
+			remove_ideas = BA_ARI_tragedy
+			country_event = {
+				id = ARI_event.41
+				hours = 8
+			}
+		}
+	}
+	focus = {
+		#국제 외교
+		id = ARI_international_diplomacy
+		icon = GFX_focus_AUS_disregard_the_treaties
+		prerequisite = {
+			focus = ARI_ss_rejection
 		}
 		cost = 5
 		x = 2
 		y = 1
-		relative_position_id = ARI_from_the_bottom_up
-
+		relative_position_id = ARI_ss_rejection
 		available = {
 		}
-
 		completion_reward = {
-			custom_effect_tooltip = ARI_solidarity_with_trade_unions_tt
-			add_to_variable = { ARI_arian_industrial_capacity_factory = 0.05 }
-			add_to_variable = { ARI_arian_industrial_capacity_dockyard = 0.05 }
 		}
 	}
-
-	focus = { #독일 존중
-		id = ARI_german_nationalism
-		icon = GFX_focus_generic_spread_fascism
+	focus = {
+		#폴란드와 접촉
+		id = ARI_contact_with_poland
+		icon = GFX_focus_POL_reach_out_to_underground_state
 		prerequisite = {
-			focus = ARI_solidarity_with_trade_unions
-		}
-		mutually_exclusive = { focus = ARI_the_proletariat }
-		cost = 5
-		x = 0
-		y = 1
-		relative_position_id = ARI_solidarity_with_trade_unions
-
-		available = {
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = ARI_german_nationalism_tt
-			add_to_variable = { ARI_arian_war_support_factor = 0.10 }
-			add_to_variable = { ARI_arian_conscription_factor = 0.10 }
-		}
-	}
-
-	focus = { #계급론
-		id = ARI_class_theory
-		icon = GFX_focus_generic_provoke_border_clashes
-		prerequisite = {
-			focus = ARI_from_the_bottom_up
+			focus = ARI_international_diplomacy
 		}
 		cost = 5
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = ARI_from_the_bottom_up
-
+		relative_position_id = ARI_international_diplomacy
 		available = {
 		}
-
 		completion_reward = {
-			custom_effect_tooltip = ARI_class_theory_tt
-			add_to_variable = { ARI_arian_production_factory_max_efficiency_factor = 0.05 }
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.10
-			}
 		}
 	}
-
-	focus = { #무산자들
-		id = ARI_the_proletariat
-		icon = GFX_focus_generic_workers_and_farmers_rise
+	focus = {
+		#소련의 지원
+		id = ARI_soviet_support
+		icon = GFX_focus_chi_mission_to_the_soviet_union
 		prerequisite = {
-			focus = ARI_class_theory
+			focus = ARI_international_diplomacy
 		}
-		mutually_exclusive = { focus = ARI_german_nationalism }
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ARI_international_diplomacy
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#반트리니티 대오
+		id = ARI_antitinity_alignment
+		icon = GFX_focus_generic_treaty
+		prerequisite = {
+			focus = ARI_contact_with_poland
+			focus = ARI_soviet_support
+		}
+		mutually_exclusive = {
+			focus = ARI_hikari_atsuko_reinstatement
+		}
 		cost = 5
 		x = 0
 		y = 2
-		relative_position_id = ARI_from_the_bottom_up
-
+		relative_position_id = ARI_international_diplomacy
 		available = {
 		}
-
 		completion_reward = {
-			custom_effect_tooltip = ARI_the_proletariat_tt
-			add_to_variable = { ARI_arian_production_factory_efficiency_gain_factor = -0.05 }
-			add_to_variable = { ARI_arian_production_factory_max_efficiency_factor = 0.10 }
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-		}
-	}
-
-	focus = { #나치즘 파훼
-		id = ARI_dismantling_nazism
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
-		prerequisite = {
-			focus = ARI_the_proletariat
-		}
-		prerequisite = {
-			focus = ARI_god_is_dead
-		}
-		mutually_exclusive = { focus = ARI_anti_trinity_arius_german_united_front focus = ARI_we_are_arians }
-		cost = 10
-		x = -1
-		y = 3
-		relative_position_id = ARI_from_the_bottom_up
-
-		available = {
-            custom_trigger_tooltip = {
-                tooltip = THIS_IS_WIP_TT
-			    has_country_flag = GAEBALJUNG
-            }
-		}
-
-		completion_reward = {
-			set_global_flag = NSD_the_SS_went_to_america
 			add_political_power = 120
 			remove_ideas = BA_ARI_tragedy
-			country_event = { id = ARI_event.41 hours = 8 }
 		}
 	}
-
-	focus = { #우리는 아리우스다
-		id = ARI_we_are_arians
-		icon = GFX_goal_generic_defence
-		prerequisite = {
-			focus = ARI_the_proletariat
-			focus = ARI_german_nationalism
-			focus = ARI_close_contact_with_germans
-			focus = ARI_contact_with_resistance_groups
-		}
-		mutually_exclusive = { focus = ARI_dismantling_nazism focus = ARI_anti_trinity_arius_german_united_front }
-		cost = 10
-		x = 0
-		y = 2
-		relative_position_id = ARI_solidarity_with_trade_unions
-
-		completion_reward = {
-			set_global_flag = NSD_the_SS_went_to_america
-			custom_effect_tooltip = ARI_we_are_arians_tt
-			add_to_variable = { ARI_nazi_party_stability_factor = 0.10 }
-			if = { limit = { has_dynamic_modifier = { modifier = ARI_nazi_party } }
-				custom_effect_tooltip = ARI_we_are_arians_tooltip
-				add_to_variable = { ARI_nazi_party_stability_factor = -0.10 }
-			}
-			add_political_power = 80
-			if = {
-				limit = { has_idea = ARI_political_landscape_changes }
-				remove_ideas = ARI_political_landscape_changes
-			}
-		}
-	}
-
-	focus = { #반트리니티 독일-아리우스 연합전선
-		id = ARI_anti_trinity_arius_german_united_front
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = {
-			focus = ARI_german_nationalism
-			focus = ARI_contact_with_resistance_groups
-		}
-		prerequisite = {
-			focus = ARI_close_contact_with_germans
-		}
-		available = {
-			NOT = {
-				has_global_flag = NSD_the_SS_went_to_america
-				has_global_flag = NSD_the_SS_went_to_gottland
-			}
-			NOT = { country_exists = NSD }
-		}
-		mutually_exclusive = { focus = ARI_dismantling_nazism focus = ARI_we_are_arians }
-		cost = 10
-		x = 0
-		y = 2
-		relative_position_id = ARI_recognition_of_the_nazi_party
-
-		available = {
-		}
-
-		completion_reward = {
-			set_global_flag = NSD_the_SS_went_to_arius
-			custom_effect_tooltip = ARI_anti_trinity_arius_german_united_front_tt
-			add_to_variable = { ARI_arian_war_support_factor = 0.10 }
-			add_to_variable = { ARI_nazi_party_war_support_factor = 0.10 }
-			add_political_power = 20
-			add_stability = -0.10
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.10
-			}
-			remove_ideas = BA_ARI_tragedy
-			hidden_effect = {
-				if = { limit = { TRM = { has_country_flag = GOODBYENAGISA } }
-					ARI = {
-						country_event = { id = ARI_event.23 hours = 8 }
-					}
-				}
-				swap_ideas = {
-					remove_idea = BA_student_conscription_idea
-					add_idea = BA_student_conscription_week_idea
-				}
-			}
-		}
-	}
-
-	focus = { #무기 밀수
+	focus = {
+		#무기 밀수
 		id = ARI_arms_smuggling
 		icon = GFX_goal_generic_small_arms
 		prerequisite = {
-			focus = ARI_dismantling_nazism
-			focus = ARI_we_are_arians
+			focus = ARI_antitinity_alignment
 		}
 		cost = 5
-		x = -2
+		x = 0
 		y = 1
-		relative_position_id = ARI_we_are_arians
-
+		relative_position_id = ARI_antitinity_alignment
 		available = {
 			is_subject = no
-			has_government = fascism
 		}
-
 		bypass = {
 			TRM = {
 				OR = {
@@ -1221,7 +1382,6 @@ focus_tree = {
 				}
 			}
 		}
-
 		completion_reward = {
 			add_stability = -0.05
 			add_equipment_to_stockpile = {
@@ -1234,28 +1394,686 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #단치히 전복
+	focus = {
+		id = ARI_second_hideout
+		prerequisite = {
+			focus = ARI_exercise_of_dominance
+		}
+		prerequisite = {
+			focus = NSAR_antitinity_joint_cooperation
+		}
+		mutually_exclusive = {
+			focus = ARI_ss_rejection
+		}
+		icon = GFX_goal_TRN_info_nazi
+		cost = 5
+		x = 9
+		y = 2
+		relative_position_id = ARI_understanding_of_local_conditions
+		available = {
+			original_tag = ARI
+			NOT = {
+				has_global_flag = NSD_the_SS_went_to_america
+				has_global_flag = NSD_the_SS_went_to_gottland
+			}
+			NOT = {
+				has_completed_focus = NSAR_eagle_on_ashes
+			}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			base = 999
+		}
+		available_if_capitulated = no
+		select_effect = {
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_country_leader_role = {
+				character = ARI_reinhard_heydrich
+				promote_leader = no
+				country_leader = {
+					ideology = nazism
+					expire = "1965.1.1.1"
+					traits = {
+						ARI_reinhard_heydrich_Atrait
+					}
+				}
+			}
+			add_ideas = ARI_reinhard_heydrich_idea_1
+		}
+	}
+	focus = {
+		#행정 체계 통합
+		id = ARI_integration_of_administrative_system
+		icon = GFX_focus_generic_treaty
+		prerequisite = {
+			focus = ARI_second_hideout
+		}
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = ARI_second_hideout
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = ARI_integration_of_administrative_system_tt
+			add_to_variable = {
+				ARI_arian_production_factory_efficiency_gain_factor = 0.05
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		#망명자 수용
+		id = ARI_acceptance_of_exiles
+		icon = GFX_focus_eng_special_air_service
+		prerequisite = {
+			focus = ARI_integration_of_administrative_system
+		}
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = ARI_integration_of_administrative_system
+		available = {
+			is_subject = no
+			has_war_with = TRM
+		}
+		bypass = {
+			TRM = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					is_subject = yes
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					GEK = {
+						is_in_faction = yes
+						NOT = {
+							has_war_with = ARI
+						}
+					}
+				}
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					leave_faction = yes
+					GEK = {
+						country_event = {
+							id = generic.2
+						}
+					}
+					GEK = {
+						ROOT = {
+							add_ai_strategy = {
+								type = alliance
+								id = PREV
+								value = 100
+							}
+						}
+						add_ai_strategy = {
+							type = alliance
+							id = ROOT
+							value = 100
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						is_in_faction = no
+					}
+					GEK = {
+						country_event = {
+							id = generic.2
+						}
+					}
+					GEK = {
+						ROOT = {
+							add_ai_strategy = {
+								type = alliance
+								id = PREV
+								value = 100
+							}
+						}
+						add_ai_strategy = {
+							type = alliance
+							id = ROOT
+							value = 100
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						is_in_faction = yes
+						GEK = {
+							is_in_faction = no
+							NOT = {
+								has_war_with = ARI
+							}
+						}
+					}
+					GEK = {
+						country_event = {
+							id = generic.5
+						}
+					}
+					GEK = {
+						ROOT = {
+							add_ai_strategy = {
+								type = alliance
+								id = PREV
+								value = 100
+							}
+						}
+						add_ai_strategy = {
+							type = alliance
+							id = ROOT
+							value = 100
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						GEM = {
+							is_in_faction = yes
+							has_completed_focus = GEM_deutsches_reich
+							NOT = {
+								has_war_with = ARI
+							}
+						}
+					}
+					if = {
+						limit = {
+							is_in_faction = yes
+						}
+						leave_faction = yes
+						GEM = {
+							country_event = {
+								id = generic.2
+							}
+						}
+						GEM = {
+							ROOT = {
+								add_ai_strategy = {
+									type = alliance
+									id = PREV
+									value = 100
+								}
+							}
+							add_ai_strategy = {
+								type = alliance
+								id = ROOT
+								value = 100
+							}
+						}
+					}
+					if = {
+						limit = {
+							is_in_faction = no
+						}
+						GEM = {
+							country_event = {
+								id = generic.2
+							}
+						}
+						GEM = {
+							ROOT = {
+								add_ai_strategy = {
+									type = alliance
+									id = PREV
+									value = 100
+								}
+							}
+							add_ai_strategy = {
+								type = alliance
+								id = ROOT
+								value = 100
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = TRM
+				}
+				custom_effect_tooltip = ARI_acceptance_of_exiles_tt
+				hidden_effect = {
+					add_ideas = ARI_german_defectors_1
+				}
+				division_template = {
+					name = "Deutsches Freikorps"
+					priority = 1
+					division_names_group = GEK_INF_01
+					is_locked = yes
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+					}
+					support = {
+						engineer = {
+							x = 0
+							y = 0
+						}
+						recon = {
+							x = 0
+							y = 1
+						}
+						artillery = {
+							x = 0
+							y = 2
+						}
+					}
+				}
+				TRM = {
+					add_ideas = ARI_german_defectors_2
+					country_event = {
+						id = ARI_event.70
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = TRM
+					}
+				}
+				effect_tooltip = {
+					custom_effect_tooltip = ARI_acceptance_of_exiles_tt
+					TRM = {
+						add_ideas = ARI_german_defectors_2
+						country_event = {
+							id = ARI_event.71
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		#독일 민족의 영토
+		id = ARI_german_lands
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = {
+			focus = ARI_integration_of_administrative_system
+		}
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ARI_integration_of_administrative_system
+		available = {
+			is_subject = no
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			has_army_manpower = {
+				size > 349999
+			}
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						controls_state = 4
+						controls_state = 152
+						controls_state = 153
+						controls_state = 848
+						controls_state = 1021
+						controls_state = 69
+						controls_state = 972
+						controls_state = 74
+					}
+				}
+				ROOT = {
+					custom_effect_tooltip = war_aim_against_the_country_annex_tt
+					hidden_effect = {
+						create_wargoal = {
+							target = PREV
+							type = annex_everything
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = ARI_german_lands_tt
+			unlock_decision_tooltip = ARI_german_national_unification
+			unlock_decision_tooltip = ARI_sudeten_liberation
+			unlock_decision_tooltip = ARI_germanization_of_alsace_lorraine
+		}
+	}
+	focus = {
+		#나치당 인정
+		id = ARI_recognition_of_the_nazi_party
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = {
+			focus = ARI_second_hideout
+		}
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = ARI_second_hideout
+		available = {
+		}
+		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = ARI_nazi_party
+			}
+		}
+	}
+	focus = {
+		#독일인과 밀접한 결속
+		id = ARI_close_contact_with_germans
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = {
+			focus = ARI_recognition_of_the_nazi_party
+		}
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ARI_recognition_of_the_nazi_party
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = ARI_close_contact_with_germans_tt
+			add_to_variable = {
+				ARI_nazi_party_conscription = 0.05
+			}
+		}
+	}
+	focus = {
+		#저항군과 접촉
+		id = ARI_contact_with_resistance_groups
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = {
+			focus = ARI_recognition_of_the_nazi_party
+		}
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ARI_recognition_of_the_nazi_party
+		available = {
+		}
+		completion_reward = {
+			add_manpower = 12000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 150
+			}
+		}
+	}
+	focus = {
+		#자유를 향한 외침
+		id = ARI_cry_for_freedom
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = {
+			focus = ARI_hikari_atsuko_reinstatement
+		}
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = ARI_hikari_atsuko_reinstatement
+		available = {
+			has_completed_focus = ARI_from_the_bottom_up
+		}
+		completion_reward = {
+			custom_effect_tooltip = ARI_cry_for_freedom_tt
+			add_to_variable = {
+				ARI_arian_production_factory_efficiency_gain_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_arian_army_org_factor = 0.1
+			}
+		}
+	}
+	focus = {
+		#아리우스 노동자주의
+		id = ARI_arian_laborism
+		icon = GFX_focus_FIN_socialist_welfare
+		prerequisite = {
+			focus = ARI_antitinity_alignment
+			focus = ARI_hikari_atsuko_reinstatement
+		}
+		cost = 5
+		x = -3
+		y = 1
+		relative_position_id = ARI_antitinity_alignment
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = ARI_solidarity_with_trade_unions_tt
+			add_to_variable = {
+				ARI_arian_industrial_capacity_factory = 0.05
+			}
+			add_to_variable = {
+				ARI_arian_industrial_capacity_dockyard = 0.05
+			}
+			add_ideas = ARI_labor_union_within_the_government
+		}
+	}
+	focus = {
+		#보복주의 고조
+		id = ARI_antitinity_joint_cooperation
+		icon = GFX_goal_generic_propaganda
+		prerequisite = {
+			focus = ARI_antitinity_alignment
+		}
+		mutually_exclusive = {
+			focus = ARI_parliamentarism
+			focus = ARI_overthrow_of_danzig
+		}
+		cost = 5
+		x = 2
+		y = 2
+		relative_position_id = ARI_antitinity_alignment
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = ARI_cry_for_freedom_tt
+			add_to_variable = {
+				ARI_arian_production_factory_efficiency_gain_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_arian_army_org_factor = 0.1
+			}
+			remove_ideas = ARI_political_landscape_changes
+		}
+	}
+	focus = {
+		#우리는 아리우스다
+		id = ARI_we_are_arians
+		icon = GFX_goal_generic_defence
+		prerequisite = {
+			focus = ARI_contact_with_resistance_groups
+			focus = ARI_close_contact_with_germans
+			focus = ARI_acceptance_of_exiles
+			focus = ARI_german_lands
+		}
+		mutually_exclusive = {
+			focus = ARI_anti_trinity_arius_german_united_front
+		}
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = ARI_integration_of_administrative_system
+		completion_reward = {
+			set_global_flag = NSD_the_SS_went_to_america
+			custom_effect_tooltip = ARI_we_are_arians_tt
+			add_to_variable = {
+				ARI_nazi_party_stability_factor = 0.1
+			}
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = ARI_nazi_party
+					}
+				}
+				custom_effect_tooltip = ARI_we_are_arians_tooltip
+				add_to_variable = {
+					ARI_nazi_party_stability_factor = -0.1
+				}
+			}
+			add_political_power = 80
+			if = {
+				limit = {
+					has_idea = ARI_political_landscape_changes
+				}
+				remove_ideas = ARI_political_landscape_changes
+			}
+			remove_ideas = BA_ARI_tragedy
+		}
+	}
+	focus = {
+		#반트리니티 독일-아리우스 연합전선
+		id = ARI_anti_trinity_arius_german_united_front
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = {
+			focus = ARI_contact_with_resistance_groups
+			focus = ARI_close_contact_with_germans
+			focus = ARI_acceptance_of_exiles
+			focus = ARI_german_lands
+		}
+		mutually_exclusive = {
+			focus = ARI_we_are_arians
+		}
+		available = {
+			NOT = {
+				has_global_flag = NSD_the_SS_went_to_america
+				has_global_flag = NSD_the_SS_went_to_gottland
+			}
+			NOT = {
+				country_exists = NSD
+			}
+		}
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = ARI_recognition_of_the_nazi_party
+		available = {
+		}
+		completion_reward = {
+			set_global_flag = NSD_the_SS_went_to_arius
+			custom_effect_tooltip = ARI_anti_trinity_arius_german_united_front_tt
+			add_to_variable = {
+				ARI_arian_war_support_factor = 0.1
+			}
+			add_to_variable = {
+				ARI_nazi_party_war_support_factor = 0.1
+			}
+			add_political_power = 20
+			add_stability = -0.1
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			remove_ideas = BA_ARI_tragedy
+			hidden_effect = {
+				if = {
+					limit = {
+						TRM = {
+							has_country_flag = GOODBYENAGISA
+						}
+					}
+					ARI = {
+						country_event = {
+							id = ARI_event.23
+							hours = 8
+						}
+					}
+				}
+				swap_ideas = {
+					remove_idea = BA_student_conscription_idea
+					add_idea = BA_student_conscription_week_idea
+				}
+			}
+		}
+	}
+	focus = {
+		#단치히 전복
 		id = ARI_overthrow_of_danzig
 		icon = GFX_goal_TRN_GO_TO_EAST
 		prerequisite = {
-			focus = ARI_dismantling_nazism
+			focus = ARI_cry_for_freedom
 		}
-		mutually_exclusive = { focus = ARI_parliamentarism }
+		mutually_exclusive = {
+			focus = ARI_parliamentarism
+			focus = ARI_antitinity_joint_cooperation
+		}
 		cost = 10
-		x = -6
-		y = 4
-		relative_position_id = ARI_from_the_bottom_up
-
+		x = 0
+		y = 1
+		relative_position_id = ARI_cry_for_freedom
 		available = {
-			communism > 0.40
-            custom_trigger_tooltip = {
-                tooltip = THIS_IS_WIP_TT
-			    has_country_flag = GAEBALJUNG
-            }
+			communism > 0.4
+			custom_trigger_tooltip = {
+				tooltip = THIS_IS_WIP_TT
+				has_country_flag = GAEBALJUNG
+			}
 		}
-
 		completion_reward = {
+			custom_effect_tooltip = ARI_the_proletariat_tt
+			add_to_variable = {
+				ARI_arian_production_factory_efficiency_gain_factor = -0.05
+			}
+			add_to_variable = {
+				ARI_arian_production_factory_max_efficiency_factor = 0.1
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 			set_politics = {
 				ruling_party = communism
 				elections_allowed = no
@@ -1265,53 +2083,37 @@ focus_tree = {
 			remove_ideas = ARI_political_landscape_changes
 		}
 	}
-
-	focus = { #의회주의
+	focus = {
+		#의회주의
 		id = ARI_parliamentarism
 		icon = GFX_focus_BRA_reach_out_to_military_dem
 		#GFX_focus_ARG_strengthening_the_concordancia
 		prerequisite = {
-			focus = ARI_dismantling_nazism
+			focus = ARI_antitinity_alignment
 		}
-		mutually_exclusive = { focus = ARI_overthrow_of_danzig }
+		mutually_exclusive = {
+			focus = ARI_antitinity_joint_cooperation
+			focus = ARI_overthrow_of_danzig
+		}
 		cost = 10
 		x = -2
-		y = 4
-		relative_position_id = ARI_from_the_bottom_up
-
+		y = 2
+		relative_position_id = ARI_antitinity_alignment
 		available = {
-			fascism < 0.40
-			communism < 0.40
+			fascism < 0.4
+			communism < 0.4
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_parliamentarism_tt
 			hidden_effect = {
-				807 = { set_state_flag = penetration_complet }
-				86 = { set_state_flag = penetration_complet }
-				762 = { set_state_flag = penetration_complet }
-			}
-			if = {
-				limit = {
-					ARI_free_city_of_danzig_parliament = {
-						can_be_country_leader = yes
-						has_ideology_group = neutrality
-					}
+				807 = {
+					set_state_flag = penetration_complet
 				}
-				promote_character = {
-					character = ARI_free_city_of_danzig_parliament
-					ideology = moderatism
+				86 = {
+					set_state_flag = penetration_complet
 				}
-			}
-			else = {
-				add_country_leader_role = {
-					character = ARI_free_city_of_danzig_parliament
-					promote_leader = yes
-					country_leader = {
-						ideology = moderatism
-						expire = "1965.1.1.1"
-						traits = { ARI_danzig_parliament_Btrait ARI_danzig_parliament_Ctrait }
-					}
+				762 = {
+					set_state_flag = penetration_complet
 				}
 			}
 			if = {
@@ -1333,54 +2135,70 @@ focus_tree = {
 					country_leader = {
 						ideology = conservatism
 						expire = "1965.1.1.1"
-						traits = { ARI_danzig_parliament_Atrait ARI_danzig_parliament_Ctrait }
+						traits = {
+							ARI_danzig_parliament_Atrait
+							ARI_danzig_parliament_Btrait
+							ARI_danzig_parliament_Ctrait
+						}
 					}
 				}
 			}
 			if = {
-				limit = { democratic < 0.20 }
+				limit = {
+					democratic < 0.2
+				}
 				add_popularity = {
 					ideology = democratic
-					popularity = 0.20
+					popularity = 0.2
 				}
 			}
 			else_if = {
-				limit = { democratic < 0.40 }
+				limit = {
+					democratic < 0.4
+				}
 				add_popularity = {
 					ideology = democratic
-					popularity = 0.10
+					popularity = 0.1
 				}
 			}
 			if = {
-				limit = { neutrality < 0.20 }
+				limit = {
+					neutrality < 0.2
+				}
 				add_popularity = {
 					ideology = neutrality
-					popularity = 0.20
+					popularity = 0.2
 				}
 			}
 			else_if = {
-				limit = { neutrality < 0.40 }
+				limit = {
+					neutrality < 0.4
+				}
 				add_popularity = {
 					ideology = neutrality
-					popularity = 0.10
+					popularity = 0.1
 				}
 			}
 			set_politics = {
-				ruling_party = neutrality
+				ruling_party = democratic
 				elections_allowed = no
 				long_name = ARI_parliament_neutrality_party_long
 				name = ARI_parliament_neutrality_party
 			}
-			set_party_name = {
-				ideology = democratic
-				long_name = ARI_parliament_party_long
-				name = ARI_parliament_party
+			set_rule = {
+				CAN_DECLARE_WAR_ON_SAME_IDEOLOGY = yes
+			}
+			set_rule = {
+				can_only_justify_war_on_threat_country = no
+			}
+			set_rule = {
+				can_join_opposite_factions = yes
 			}
 			remove_ideas = ARI_political_landscape_changes
 		}
 	}
-
-	focus = { #폴란드 정부와 제휴
+	focus = {
+		#폴란드 정부와 제휴
 		id = ARI_poland_government_alliance
 		icon = GFX_focus_generic_polish_deal
 		prerequisite = {
@@ -1388,33 +2206,36 @@ focus_tree = {
 		}
 		cost = 10
 		x = -1
-		y = 2
+		y = 1
 		relative_position_id = ARI_parliamentarism
-
 		available = {
 			is_subject = no
 			is_in_faction = no
-			POL = { 
-				hidden_trigger = { 
+			POL = {
+				hidden_trigger = {
 					exists = yes
 					has_capitulated = no
 				}
 				is_subject = no
-				has_civil_war = no	
-				NOT = { has_war_with = ROOT }	
+				has_civil_war = no
+				NOT = {
+					has_war_with = ROOT
+				}
 			}
 		}
-
 		completion_reward = {
 			POL = {
-				country_event = { id = ARI_event.27 hours = 12 }
+				country_event = {
+					id = ARI_event.27
+					hours = 12
+				}
 			}
 			custom_effect_tooltip = if_they_accept
 			custom_effect_tooltip = ARI_poland_government_alliance_tt
 		}
 	}
-
-	focus = { #반트리니티 조약 공식화
+	focus = {
+		#반트리니티 조약 공식화
 		id = ARI_anti_trinity_treaty_formalization
 		icon = GFX_goal_TRN_Blocking_attacks_from_the_outside
 		prerequisite = {
@@ -1422,28 +2243,35 @@ focus_tree = {
 		}
 		cost = 5
 		x = -1
-		y = 3
+		y = 2
 		relative_position_id = ARI_parliamentarism
-
 		available = {
 			is_subject = no
 			any_country = {
-				NOT = { tag = ARI }
+				NOT = {
+					tag = ARI
+				}
 				has_war_with = TRM
 				has_civil_war = no
 			}
 		}
-
 		completion_reward = {
-			add_war_support = 0.20
-			if = { limit = { is_in_faction = no }
+			add_war_support = 0.2
+			if = {
+				limit = {
+					is_in_faction = no
+				}
 				every_country = {
 					limit = {
-						NOT = { tag = ARI }
+						NOT = {
+							tag = ARI
+						}
 						has_war_with = TRM
 						has_civil_war = no
 						is_faction_leader = yes
-						NOT = { is_in_faction_with = ROOT }
+						NOT = {
+							is_in_faction_with = ROOT
+						}
 					}
 					country_event = generic.2
 				}
@@ -1451,7 +2279,9 @@ focus_tree = {
 			else = {
 				every_country = {
 					limit = {
-						NOT = { tag = ARI }
+						NOT = {
+							tag = ARI
+						}
 						has_war_with = TRM
 						has_civil_war = no
 						is_in_faction = no
@@ -1465,21 +2295,19 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #트리니티 자본 흡수
+	focus = {
+		#트리니티 자본 흡수
 		id = ARI_trinity_capital_absorption
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = {
 			focus = ARI_parliamentarism
 		}
 		cost = 5
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = ARI_parliamentarism
-
 		available = {
 		}
-
 		completion_reward = {
 			add_ideas = ARI_parasitic_economy
 			random_owned_controlled_state = {
@@ -1499,8 +2327,8 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #아리우스 재건운동
+	focus = {
+		#아리우스 재건운동
 		id = ARI_reconstruction_movement
 		icon = GFX_goal_generic_construction2
 		prerequisite = {
@@ -1508,18 +2336,19 @@ focus_tree = {
 		}
 		cost = 5
 		x = 1
-		y = 3
+		y = 2
 		relative_position_id = ARI_parliamentarism
-
 		available = {
 		}
-
 		completion_reward = {
 			effect_tooltip = {
 				remove_ideas = ARI_pyeho_hakwon
 			}
 			hidden_effect = {
-				if = { limit = { has_idea = ARI_pyeho_hakwon } 
+				if = {
+					limit = {
+						has_idea = ARI_pyeho_hakwon
+					}
 					remove_ideas = ARI_pyeho_hakwon
 				}
 			}
@@ -1555,51 +2384,8 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #생산 장려
-		id = ARI_production_encouragement
-		icon = GFX_goal_generic_production2
-		prerequisite = {
-			focus = ARI_anti_trinity_treaty_formalization
-			focus = ARI_reconstruction_movement
-		}
-		cost = 10
-		x = 0
-		y = 4
-		relative_position_id = ARI_parliamentarism
-
-		available = {
-		}
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = ARI_anti_trinity_production_front
-				days = 280
-			}
-		}
-	}
-
-	focus = { #아리우스 노동자주의
-		id = ARI_arian_laborism
-		icon = GFX_focus_FIN_socialist_welfare
-		prerequisite = {
-			focus = ARI_overthrow_of_danzig
-			focus = ARI_parliamentarism
-		}
-		cost = 5
-		x = -2
-		y = 1
-		relative_position_id = ARI_parliamentarism
-
-		available = {
-		}
-
-		completion_reward = {
-			add_ideas = ARI_labor_union_within_the_government
-		}
-	}
-
-	focus = { #현지 재산 점거
+	focus = {
+		#현지 재산 점거
 		id = ARI_local_property_occupation
 		icon = GFX_focus_DEN_heavy_regulations
 		prerequisite = {
@@ -1609,15 +2395,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ARI_overthrow_of_danzig
-
 		available = {
 		}
-
 		completion_reward = {
 		}
 	}
-
-	focus = { #해방론
+	focus = {
+		#해방론
 		id = ARI_liberation_ideology
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
 		prerequisite = {
@@ -1627,53 +2411,51 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = ARI_overthrow_of_danzig
-
 		available = {
 		}
-
 		completion_reward = {
 		}
 	}
-
-	focus = { #신 또한 헛되다
+	focus = {
+		#신 또한 헛되다
 		id = ARI_atheism
 		icon = GFX_focus_BRA_state_atheism
 		prerequisite = {
 			focus = ARI_liberation_ideology
 		}
-		mutually_exclusive = { focus = ARI_liberation_theology }
+		mutually_exclusive = {
+			focus = ARI_liberation_theology
+		}
 		cost = 5
 		x = -1
 		y = 1
 		relative_position_id = ARI_liberation_ideology
-
 		available = {
 		}
-
 		completion_reward = {
 		}
 	}
-
-	focus = { #구원을 행하라
+	focus = {
+		#구원을 행하라
 		id = ARI_liberation_theology
 		icon = GFX_focus_BRA_socialist_theologians
 		prerequisite = {
 			focus = ARI_liberation_ideology
 		}
-		mutually_exclusive = { focus = ARI_atheism }
+		mutually_exclusive = {
+			focus = ARI_atheism
+		}
 		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = ARI_liberation_ideology
-
 		available = {
 		}
-
 		completion_reward = {
 		}
 	}
-
-	focus = { #아리우스 생산혁명
+	focus = {
+		#아리우스 생산혁명
 		id = ARI_arian_industrial_revolution
 		icon = GFX_goal_generic_soviet_construction
 		prerequisite = {
@@ -1683,22 +2465,17 @@ focus_tree = {
 		prerequisite = {
 			focus = ARI_local_property_occupation
 		}
-		prerequisite = {
-			focus = ARI_arian_laborism
-		}
 		cost = 5
 		x = 0
 		y = 3
 		relative_position_id = ARI_overthrow_of_danzig
-
 		available = {
 		}
-
 		completion_reward = {
 		}
 	}
-
-	focus = { #인민해방군
+	focus = {
+		#인민해방군
 		id = ARI_peoples_liberation_army
 		icon = GFX_focus_YUG_pan_slavic_congress
 		prerequisite = {
@@ -1709,475 +2486,443 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = ARI_liberation_ideology
-
 		available = {
 		}
-
 		completion_reward = {
 		}
 	}
-
-	focus = { #자유를 향한 외침
-		id = ARI_cry_for_freedom
-		icon = GFX_focus_generic_strike_at_democracy2
-		prerequisite = {
-			focus = ARI_arms_smuggling
-		}
-		cost = 10
-		x = -2
-		y = 2
-		relative_position_id = ARI_we_are_arians
-
-		available = {
-			has_completed_focus = ARI_from_the_bottom_up
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = ARI_cry_for_freedom_tt
-			add_to_variable = { ARI_arian_production_factory_efficiency_gain_factor = 0.05 }
-			add_to_variable = { ARI_arian_army_org_factor = 0.10 }
-		}
-	}
-
-	focus = { #아리우스 민족주의
+	focus = {
+		#아리우스 민족주의
 		id = ARI_arius_nationalism
 		icon = GFX_goal_generic_propaganda
 		prerequisite = {
 			focus = ARI_we_are_arians
 		}
+		mutually_exclusive = {
+			focus = ARI_gotthold_ephraim_lessing
+		}
 		cost = 5
-		x = 0
-		y = 1
+		x = -2
+		y = 2
 		relative_position_id = ARI_we_are_arians
-
 		available = {
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_arius_nationalism_tt
-			add_to_variable = { ARI_arian_war_support_factor = 0.10 }
-			add_to_variable = { ARI_arian_army_org_factor = 0.05 }
+			add_to_variable = {
+				ARI_arian_war_support_factor = 0.1
+			}
+			add_to_variable = {
+				ARI_arian_army_org_factor = 0.05
+			}
 		}
 	}
-
-	focus = { #해방군
+	focus = {
+		#반트리니티 민족위원회
+		id = ARI_anti_trinity_national_committee
+		icon = GFX_goal_generic_national_unity
+		prerequisite = {
+			focus = ARI_antitinity_joint_cooperation
+		}
+		mutually_exclusive = {
+			focus = ARI_national_liberation_army
+		}
+		cost = 5
+		x = 4
+		y = 1
+		relative_position_id = ARI_antitinity_joint_cooperation
+		available = {
+		}
+		completion_reward = {
+			add_ideas = ARI_anti_trinity_national_liberation_army
+		}
+	}
+	focus = {
+		#해방군
 		id = ARI_national_liberation_army
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = {
 			focus = ARI_arius_nationalism
 		}
+		mutually_exclusive = {
+			focus = ARI_anti_trinity_national_committee
+		}
 		cost = 5
-		x = 0
-		y = 2
-		relative_position_id = ARI_we_are_arians
-
+		x = 6
+		y = 1
+		relative_position_id = ARI_antitinity_joint_cooperation
 		available = {
 		}
-
 		completion_reward = {
 			add_ideas = ARI_arian_liberation_army
 		}
 	}
-
-	focus = { #반트리니티 민족위원회
-		id = ARI_anti_trinity_national_committee
-		icon = GFX_goal_generic_national_unity
+	focus = {
+		#아리우스 종합학원
+		id = ARI_arian_general_school
+		icon = GFX_goal_generic_attack_allies
 		prerequisite = {
+			focus = ARI_anti_trinity_national_committee
 			focus = ARI_national_liberation_army
-		}
-		prerequisite = {
-			focus = ARI_cry_for_freedom
 		}
 		cost = 10
-		x = -1
-		y = 3
-		relative_position_id = ARI_we_are_arians
-
+		x = 1
+		y = 1
+		relative_position_id = ARI_anti_trinity_national_committee
 		available = {
+			is_subject = no
+			controls_state = 188
+			controls_state = 763
+			controls_state = 5
+			controls_state = 807
+			controls_state = 60
+			controls_state = 61
+			controls_state = 62
+			controls_state = 63
+			controls_state = 64
+			controls_state = 65
+			controls_state = 66
+			controls_state = 67
+			controls_state = 68
 		}
-
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = ARI_arian_liberation_army
-				add_idea = ARI_anti_trinity_national_liberation_army
+			add_political_power = 120
+			add_stability = 0.1
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = ARI_intercultural_integration
+					}
+				}
+				TRM = {
+					every_core_state = {
+						add_core_of = ARI
+					}
+				}
+				set_cosmetic_tag = ARI_general_school
 			}
+			country_event = {
+				id = ARI_event.17
+				hours = 8
+			}
+			add_ideas = ARI_student_resistance
 		}
 	}
-
-	focus = { #독일 독립 약속
-		id = ARI_german_promise_of_independence
-		icon = GFX_focus_ger_oppose_hitler
+	focus = {
+		#공개 재판
+		id = ARI_public_executions
+		icon = GFX_focus_generic_court
 		prerequisite = {
-			focus = ARI_national_liberation_army
-		}
-		prerequisite = {
-			focus = ARI_acceptance_of_exiles
+			focus = ARI_arian_general_school
 		}
 		cost = 5
 		x = 1
-		y = 3
-		relative_position_id = ARI_we_are_arians
-
+		y = 2
+		relative_position_id = ARI_arian_general_school
 		available = {
+			is_subject = no
 		}
-
 		completion_reward = {
-			custom_effect_tooltip = ARI_german_promise_of_independence_tt
-			add_to_variable = { ARI_nazi_party_generate_wargoal_tension = -0.25 }
-			add_to_variable = { ARI_nazi_party_justify_war_goal_time = -0.05 }
-			add_to_variable = { ARI_nazi_party_annex_cost_factor = -0.15 }
-			add_stability = -0.05
+			add_political_power = 120
+			country_event = ARI_event.26
 		}
 	}
-
-	focus = { #행정 체계 통합
-		id = ARI_integration_of_administrative_system
-		icon = GFX_focus_generic_treaty
+	focus = {
+		#군정 수립
+		id = ARI_military_government_establishment
+		icon = GFX_goal_generic_defence
 		prerequisite = {
-			focus = ARI_we_are_arians
-			focus = ARI_anti_trinity_arius_german_united_front
+			focus = ARI_arian_general_school
 		}
 		cost = 5
-		x = 0
-		y = 4
-		relative_position_id = ARI_exercise_of_dominance
-
+		x = -1
+		y = 1
+		relative_position_id = ARI_arian_general_school
 		available = {
-			has_completed_focus = ARI_exercise_of_dominance
+			is_subject = no
 		}
-
 		completion_reward = {
-			custom_effect_tooltip = ARI_integration_of_administrative_system_tt
-			add_to_variable = { ARI_arian_production_factory_efficiency_gain_factor = 0.05 }
+			swap_ideas = {
+				remove_idea = ARI_student_resistance
+				add_idea = ARI_military_government_establishment_idea
+			}
+		}
+	}
+	focus = {
+		#전후 복구
+		id = ARI_postwar_reconstruction
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = {
+			focus = ARI_military_government_establishment
+		}
+		cost = 5
+		x = -1
+		y = 2
+		relative_position_id = ARI_arian_general_school
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
-						building = arms_factory
-						size > 1
+						building = industrial_complex
+						size > 0
 						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
 			}
 		}
 	}
-
-	focus = { #망명자 수용
-		id = ARI_acceptance_of_exiles
-		icon = GFX_focus_eng_special_air_service
+	focus = {
+		#트리니티 상징물 파괴
+		id = ARI_trinity_symbol_destruction
+		icon = GFX_focus_FIN_parmis_devils
 		prerequisite = {
-			focus = ARI_integration_of_administrative_system
+			focus = ARI_public_executions
 		}
-		cost = 10
+		prerequisite = {
+			focus = ARI_postwar_reconstruction
+		}
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = ARI_public_executions
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_political_power = 60
+		}
+	}
+	focus = {
+		#식민화 개발
+		id = ARI_colonial_development
+		icon = GFX_focus_DEN_heavy_regulations
+		prerequisite = {
+			focus = ARI_public_executions
+		}
+		cost = 5
 		x = 0
 		y = 1
-		relative_position_id = ARI_integration_of_administrative_system
-
+		relative_position_id = ARI_public_executions
 		available = {
 			is_subject = no
-			has_war_with = TRM
 		}
-		bypass = {
-			TRM = {
-				OR = {
-					exists = no
-					has_capitulated = yes
-					is_subject = yes
-					is_in_faction_with = ROOT
+		complete_tooltip = {
+			every_state = {
+				limit = {
+					has_state_flag = ARI_colonial_development_2IC
 				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = -12000
 			}
 		}
-
 		completion_reward = {
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					GEK = {
-						is_in_faction = yes
-						NOT = { has_war_with = ARI }
+					NOT = {
+						state = 85
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					NOT = {
+						has_state_flag = ARI_colonial_development_2IC
 					}
 				}
-				if = {
-					limit = {
-						is_in_faction = yes
-					}
-					leave_faction = yes
-					GEK = { country_event = { id = generic.2 } }
-					GEK = {
-						ROOT = {
-							add_ai_strategy = {
-								type = alliance
-								id = PREV
-								value = 100
-							}
-						}
-						add_ai_strategy = {
-							type = alliance
-							id = ROOT
-							value = 100
-						}
-					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
 				}
-				else_if = {
-					limit = {
-						is_in_faction = no
-					}
-					GEK = { country_event = { id = generic.2 } }
-					GEK = {
-						ROOT = {
-							add_ai_strategy = {
-								type = alliance
-								id = PREV
-								value = 100
-							}
-						}
-						add_ai_strategy = {
-							type = alliance
-							id = ROOT
-							value = 100
-						}
-					}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = -12000
+				set_state_flag = ARI_colonial_development_2IC
 			}
-			else = {
-				if = {
-					limit = {
-						is_in_faction = yes
-						GEK = {
-							is_in_faction = no
-							NOT = { has_war_with = ARI }
-						}
-					}
-					GEK = { country_event = { id = generic.5 } }
-					GEK = {
-						ROOT = {
-							add_ai_strategy = {
-								type = alliance
-								id = PREV
-								value = 100
-							}
-						}
-						add_ai_strategy = {
-							type = alliance
-							id = ROOT
-							value = 100
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						GEM = {
-							is_in_faction = yes
-							has_completed_focus = GEM_deutsches_reich
-							NOT = { has_war_with = ARI }
-						}
-					}
-					if = {
-						limit = {
-							is_in_faction = yes
-						}
-						leave_faction = yes
-						GEM = { country_event = { id = generic.2 } }
-						GEM = {
-							ROOT = {
-								add_ai_strategy = {
-									type = alliance
-									id = PREV
-									value = 100
-								}
-							}
-							add_ai_strategy = {
-								type = alliance
-								id = ROOT
-								value = 100
-							}
-						}
-					}
-					if = {
-						limit = {
-							is_in_faction = no
-						}
-						GEM = { country_event = { id = generic.2 } }
-						GEM = {
-							ROOT = {
-								add_ai_strategy = {
-									type = alliance
-									id = PREV
-									value = 100
-								}
-							}
-							add_ai_strategy = {
-								type = alliance
-								id = ROOT
-								value = 100
-							}
-						}
-					}
-				}
-			}
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					has_war_with = TRM
-				}
-				custom_effect_tooltip = ARI_acceptance_of_exiles_tt
-				hidden_effect = { add_ideas = ARI_german_defectors_1 }
-				division_template = {
-					name = "Deutsches Freikorps"
-					priority = 1
-					division_names_group = GEK_INF_01
-					is_locked = yes
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-			
-	    			   	infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
+					NOT = {
+						state = 85
 					}
-		
-					support = {
-						engineer = { x = 0 y = 0 }
-						recon = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					NOT = {
+						has_state_flag = ARI_colonial_development_2IC
 					}
 				}
-				TRM = {
-					add_ideas = ARI_german_defectors_2
-					country_event = { id = ARI_event.70 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
 				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = -12000
+				set_state_flag = ARI_colonial_development_2IC
 			}
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					NOT = { has_war_with = TRM }
-				}
-				effect_tooltip = {
-					custom_effect_tooltip = ARI_acceptance_of_exiles_tt
-					TRM = {
-						add_ideas = ARI_german_defectors_2
-						country_event = { id = ARI_event.71 }
+					NOT = {
+						state = 85
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					NOT = {
+						has_state_flag = ARI_colonial_development_2IC
 					}
 				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = -12000
+				set_state_flag = ARI_colonial_development_2IC
 			}
 		}
 	}
-
-	focus = { #독일 민족의 영토
-		id = ARI_german_lands
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+	focus = {
+		#새 역사의 시작
+		id = ARI_new_beginning_of_history
+		icon = GFX_focus_ICE_state_corporatism
 		prerequisite = {
-			focus = ARI_integration_of_administrative_system
+			focus = ARI_trinity_symbol_destruction
+		}
+		prerequisite = {
+			focus = ARI_colonial_development
 		}
 		cost = 5
-		x = 2
-		y = 1
-		relative_position_id = ARI_integration_of_administrative_system
-
+		x = -1
+		y = 2
+		relative_position_id = ARI_public_executions
 		available = {
 			is_subject = no
-			OR = {
-				has_government = fascism
-				has_government = neutrality
-			}
-			has_army_manpower = { size > 349999 }
 		}
-
 		completion_reward = {
-			every_country = {
-				limit = {
-					OR = {
-						controls_state = 4
-						controls_state = 152
-						controls_state = 153
-						controls_state = 848
-						controls_state = 1021
-						controls_state = 69
-						controls_state = 972
-						controls_state = 74
-					}
-				}
-				ROOT = {
-					custom_effect_tooltip = war_aim_against_the_country_annex_tt
-					hidden_effect = {
-						create_wargoal = {
-							target = PREV
-							type = annex_everything
-						}
-					}
-				}
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.2
 			}
-			custom_effect_tooltip = ARI_german_lands_tt
-			unlock_decision_tooltip = ARI_german_national_unification
-			unlock_decision_tooltip = ARI_sudeten_liberation
-			unlock_decision_tooltip = ARI_germanization_of_alsace_lorraine
+			swap_ideas = {
+				remove_idea = ARI_military_government_establishment_idea
+				add_idea = ARI_new_beginning_of_history_idea
+			}
 		}
 	}
-
-	focus = { #조우
-		id = ARI_meeting
-		icon = GFX_goal_TRN_info_nazi
-		prerequisite = {
-			focus = ARI_anti_trinity_arius_german_united_front
-		}
-		cost = 5
-		x = 6
-		y = 4
-		relative_position_id = ARI_exercise_of_dominance
-
-		available = {
-			is_subject = no
-			has_government = fascism
-		}
-
-		completion_reward = {
-			add_country_leader_role = {
-				character = ARI_reinhard_heydrich
-				promote_leader = no
-				country_leader = {
-					ideology = nazism
-					expire = "1965.1.1.1"
-					traits = { ARI_reinhard_heydrich_Atrait }
-				}
-			}
-			add_ideas = ARI_reinhard_heydrich_idea_1
-		}
-	}
-
-	focus = { #전 독일의 보안국장
+	focus = {
+		#전 독일의 보안국장
 		id = ARI_security_chief_of_former_germany
 		icon = GFX_focus_generic_full_social_mobilization
 		prerequisite = {
-			focus = ARI_meeting
+			focus = ARI_we_are_arians
+			focus = ARI_anti_trinity_arius_german_united_front
 		}
 		cost = 5
-		x = 4
-		y = 1
-		relative_position_id = ARI_meeting
-
+		x = 2
+		y = 2
+		relative_position_id = ARI_anti_trinity_arius_german_united_front
 		available = {
 			is_subject = no
 			has_government = fascism
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_security_chief_of_former_germany_tt
 			add_trait = {
 				character = ARI_reinhard_heydrich
 				ideology = nazism
 				trait = ARI_reinhard_heydrich_Btrait
-		   	}
+			}
 			hidden_effect = {
-				if = { limit = { has_idea = ARI_reinhard_heydrich_idea_1 }
+				if = {
+					limit = {
+						has_idea = ARI_reinhard_heydrich_idea_1
+					}
 					swap_ideas = {
 						remove_idea = ARI_reinhard_heydrich_idea_1
 						add_idea = ARI_reinhard_heydrich_idea_2
 					}
 				}
-				if = { limit = { has_idea = ARI_reinhard_heydrich_idea_1_D }
+				if = {
+					limit = {
+						has_idea = ARI_reinhard_heydrich_idea_1_D
+					}
 					swap_ideas = {
 						remove_idea = ARI_reinhard_heydrich_idea_1_D
 						add_idea = ARI_reinhard_heydrich_idea_2_D
@@ -2186,8 +2931,8 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #행정 명령 행사
+	focus = {
+		#행정 명령 행사
 		id = ARI_exercise_of_executive_orders
 		icon = GFX_focus_SWE_revoke_militia_law
 		prerequisite = {
@@ -2197,12 +2942,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ARI_security_chief_of_former_germany
-
 		available = {
 			is_subject = no
 			has_government = fascism
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_exercise_of_executive_orders_tooltip
 			hidden_effect = {
@@ -2213,24 +2956,43 @@ focus_tree = {
 					division_names_group = GEK_SS_01
 					is_locked = yes
 					regiments = {
-						militia = { x = 0 y = 0 }
-						militia = { x = 0 y = 1 }
-						militia = { x = 0 y = 2 }
-			
-						militia = { x = 1 y = 0 }
-						militia = { x = 1 y = 1 }
-						militia = { x = 1 y = 2 }
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+						militia = {
+							x = 1
+							y = 2
+						}
 					}
-		
 					support = {
-						recon = { x = 0 y = 0 }
+						recon = {
+							x = 0
+							y = 0
+						}
 					}
 				}
 			}
 		}
 	}
-
-	focus = { #보안국의 새로운 지휘부
+	focus = {
+		#보안국의 새로운 지휘부
 		id = ARI_new_leadership_of_the_security_agency
 		icon = GFX_focus_ARG_crackdown_on_corruption
 		prerequisite = {
@@ -2240,12 +3002,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ARI_security_chief_of_former_germany
-
 		available = {
 			is_subject = no
 			has_government = fascism
 		}
-
 		completion_reward = {
 			effect_tooltip = {
 				swap_ideas = {
@@ -2261,13 +3021,19 @@ focus_tree = {
 						ideology = nazism
 					}
 				}
-				if = { limit = { has_idea = ARI_reinhard_heydrich_idea_2 }
+				if = {
+					limit = {
+						has_idea = ARI_reinhard_heydrich_idea_2
+					}
 					swap_ideas = {
 						remove_idea = ARI_reinhard_heydrich_idea_2
 						add_idea = ARI_reinhard_heydrich_idea_3
 					}
 				}
-				if = { limit = { has_idea = ARI_reinhard_heydrich_idea_2_D }
+				if = {
+					limit = {
+						has_idea = ARI_reinhard_heydrich_idea_2_D
+					}
 					swap_ideas = {
 						remove_idea = ARI_reinhard_heydrich_idea_2_D
 						add_idea = ARI_reinhard_heydrich_idea_3_D
@@ -2276,8 +3042,8 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #제국안전본부
+	focus = {
+		#제국안전본부
 		id = ARI_reichssicherheitshauptamt
 		icon = GFX_focus_generic_secret_service_agency
 		prerequisite = {
@@ -2290,42 +3056,53 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = ARI_security_chief_of_former_germany
-
 		available = {
 			is_subject = no
 			has_government = fascism
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_reichssicherheitshauptamt_tt
-			add_to_variable = { ARI_nazi_party_war_support_factor = 0.10 }
-			add_to_variable = { ARI_nazi_party_army_attack_factor = 0.05 }
-			add_to_variable = { ARI_nazi_party_army_defence_factor = 0.05 }
+			add_to_variable = {
+				ARI_nazi_party_war_support_factor = 0.1
+			}
+			add_to_variable = {
+				ARI_nazi_party_army_attack_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_nazi_party_army_defence_factor = 0.05
+			}
 		}
 	}
-
-	focus = { #기독교 부정
+	focus = {
+		#기독교 부정
 		id = ARI_gotthold_ephraim_lessing
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		prerequisite = {
-			focus = ARI_meeting
+			focus = ARI_anti_trinity_arius_german_united_front
+		}
+		mutually_exclusive = {
+			focus = ARI_arius_nationalism
 		}
 		cost = 5
-		x = 0
-		y = 1
-		relative_position_id = ARI_meeting
-
+		x = -2
+		y = 2
+		relative_position_id = ARI_anti_trinity_arius_german_united_front
 		available = {
 			has_government = fascism
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_gotthold_ephraim_lessing_tt
-			add_to_variable = { ARI_arian_stability_factor = -0.05 }
-			add_to_variable = { ARI_arian_army_org_factor = 0.05 }
-			add_to_variable = { ARI_arian_monthly_population = -0.10 }
+			add_to_variable = {
+				ARI_arian_stability_factor = -0.05
+			}
+			add_to_variable = {
+				ARI_arian_army_org_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_arian_monthly_population = -0.1
+			}
 			add_political_power = 120
-			add_war_support = 0.20
+			add_war_support = 0.2
 			hidden_effect = {
 				remove_dynamic_modifier = {
 					modifier = ARI_arian_faith
@@ -2351,8 +3128,8 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #영향력 확대
+	focus = {
+		#영향력 확대
 		id = ARI_purge_of_opposition
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = {
@@ -2362,31 +3139,38 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ARI_gotthold_ephraim_lessing
-
 		available = {
 			has_government = fascism
 		}
-
 		completion_reward = {
 			add_trait = {
 				character = ARI_reinhard_heydrich
 				ideology = nazism
 				trait = dictator
-		   	}
+			}
 			hidden_effect = {
-				if = { limit = { has_idea = ARI_reinhard_heydrich_idea_1 }
+				if = {
+					limit = {
+						has_idea = ARI_reinhard_heydrich_idea_1
+					}
 					swap_ideas = {
 						remove_idea = ARI_reinhard_heydrich_idea_1
 						add_idea = ARI_reinhard_heydrich_idea_1_D
 					}
 				}
-				if = { limit = { has_idea = ARI_reinhard_heydrich_idea_2 }
+				if = {
+					limit = {
+						has_idea = ARI_reinhard_heydrich_idea_2
+					}
 					swap_ideas = {
 						remove_idea = ARI_reinhard_heydrich_idea_2
 						add_idea = ARI_reinhard_heydrich_idea_2_D
 					}
 				}
-				if = { limit = { has_idea = ARI_reinhard_heydrich_idea_3 }
+				if = {
+					limit = {
+						has_idea = ARI_reinhard_heydrich_idea_3
+					}
 					swap_ideas = {
 						remove_idea = ARI_reinhard_heydrich_idea_3
 						add_idea = ARI_reinhard_heydrich_idea_3_D
@@ -2395,8 +3179,8 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #세뇌 절차
+	focus = {
+		#세뇌 절차
 		id = ARI_brainwashing_procedure
 		icon = GFX_goal_TRN_radio_propaganda
 		prerequisite = {
@@ -2406,20 +3190,24 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ARI_gotthold_ephraim_lessing
-
 		available = {
 			has_government = fascism
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_brainwashing_procedure_tt
-			add_to_variable = { ARI_arian_political_power_factor = 0.10 }
-			add_to_variable = { ARI_arian_war_support_factor = 0.05 }
-			add_to_variable = { ARI_nazi_party_drift_defence_factor = 0.30 }
+			add_to_variable = {
+				ARI_arian_political_power_factor = 0.1
+			}
+			add_to_variable = {
+				ARI_arian_war_support_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_nazi_party_drift_defence_factor = 0.3
+			}
 		}
 	}
-
-	focus = { #아리우스 장악
+	focus = {
+		#아리우스 장악
 		id = ARI_control_of_arius
 		icon = GFX_focus_rom_handle_king
 		prerequisite = {
@@ -2432,14 +3220,15 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = ARI_gotthold_ephraim_lessing
-
 		available = {
 			is_subject = no
 			has_government = fascism
 		}
-
 		completion_reward = {
-			if = { limit = { can_be_country_leader = ARI_reinhard_heydrich }
+			if = {
+				limit = {
+					can_be_country_leader = ARI_reinhard_heydrich
+				}
 				promote_character = ARI_reinhard_heydrich
 			}
 			else = {
@@ -2449,26 +3238,46 @@ focus_tree = {
 					country_leader = {
 						ideology = nazism
 						expire = "1965.1.1.1"
-						traits = { ARI_reinhard_heydrich_Atrait }
+						traits = {
+							ARI_reinhard_heydrich_Atrait
+						}
 					}
 				}
 			}
-			if = { limit = { has_idea = ARI_reinhard_heydrich_idea_1 }
+			if = {
+				limit = {
+					has_idea = ARI_reinhard_heydrich_idea_1
+				}
 				remove_ideas = ARI_reinhard_heydrich_idea_1
 			}
-			if = { limit = { has_idea = ARI_reinhard_heydrich_idea_2 }
+			if = {
+				limit = {
+					has_idea = ARI_reinhard_heydrich_idea_2
+				}
 				remove_ideas = ARI_reinhard_heydrich_idea_2
 			}
-			if = { limit = { has_idea = ARI_reinhard_heydrich_idea_3 }
+			if = {
+				limit = {
+					has_idea = ARI_reinhard_heydrich_idea_3
+				}
 				remove_ideas = ARI_reinhard_heydrich_idea_3
 			}
-			if = { limit = { has_idea = ARI_reinhard_heydrich_idea_1_D }
+			if = {
+				limit = {
+					has_idea = ARI_reinhard_heydrich_idea_1_D
+				}
 				remove_ideas = ARI_reinhard_heydrich_idea_1_D
 			}
-			if = { limit = { has_idea = ARI_reinhard_heydrich_idea_2_D }
+			if = {
+				limit = {
+					has_idea = ARI_reinhard_heydrich_idea_2_D
+				}
 				remove_ideas = ARI_reinhard_heydrich_idea_2_D
 			}
-			if = { limit = { has_idea = ARI_reinhard_heydrich_idea_3_D }
+			if = {
+				limit = {
+					has_idea = ARI_reinhard_heydrich_idea_3_D
+				}
 				remove_ideas = ARI_reinhard_heydrich_idea_3_D
 			}
 			set_party_name = {
@@ -2478,129 +3287,8 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #자유 아리우스
-		id = ARI_free_arians
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		prerequisite = {
-			focus = ARI_anti_trinity_national_committee
-		}
-		cost = 5
-		x = -1
-		y = 5
-		relative_position_id = ARI_we_are_arians
-
-		available = {
-			is_subject = no
-			has_government = fascism
-		}
-
-		completion_reward = {
-			add_stability = -0.05
-		}
-	}
-
-	focus = { #독일 임시정부
-		id = ARI_german_provisional_government
-		icon = GFX_goal_generic_territory_or_war
-		prerequisite = {
-			focus = ARI_german_promise_of_independence
-		}
-		cost = 5
-		x = 1
-		y = 4
-		relative_position_id = ARI_we_are_arians
-
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			unlock_decision_category_tooltip = ARI_restoration_of_germany
-		}
-	}
-
-	focus = { #위임통치 지속
-		id = ARI_trustee_administration_continuation
-		icon = GFX_focus_CZE_german_puppet
-		prerequisite = {
-			focus = ARI_german_provisional_government
-		}
-		mutually_exclusive = { focus = ARI_harmony_with_the_new_world }
-		cost = 5
-		x = 0
-		y = 1
-		relative_position_id = ARI_german_provisional_government
-
-		available = {
-			is_subject = no
-			any_country = {
-				original_tag = GER
-				is_subject_of = ROOT
-			}
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = ARI_we_are_arians_tooltip
-			add_to_variable = { ARI_nazi_party_stability_factor = -0.10 }
-			every_other_country = {
-				limit = {
-					original_tag = GER
-					is_subject_of = ROOT
-				}
-				add_autonomy_score = {
-					value = -25
-					localization = ARI_trustee_administration_continuation
-				}
-				add_opinion_modifier = { 
-					target = ROOT
-					modifier = medium_decrease
-				}
-			}
-		}
-	}
-
-	focus = { #조화 추구
-		id = ARI_harmony_with_the_new_world
-		icon = GFX_goal_generic_alliance
-		prerequisite = {
-			focus = ARI_german_provisional_government
-		}
-		mutually_exclusive = { focus = ARI_trustee_administration_continuation }
-		cost = 10
-		x = 2
-		y = 1
-		relative_position_id = ARI_german_provisional_government
-
-		available = {
-			is_subject = no
-			any_country = {
-				original_tag = GER
-				is_subject_of = ROOT
-			}
-		}
-
-		completion_reward = {
-			set_country_flag = ARI_harmony_with_the_new_world_flag
-			every_other_country = {
-				limit = {
-					original_tag = GER
-					is_subject_of = ROOT
-				}
-				add_autonomy_score = {
-					value = 25
-					localization = ARI_harmony_with_the_new_world
-				}
-				add_opinion_modifier = { 
-					target = ROOT
-					modifier = medium_increase
-				}
-			}
-		}
-	}
-
-	focus = { #국제공산주의
+	focus = {
+		#국제공산주의
 		id = ARI_international_communism
 		icon = GFX_focus_ETH_callout_to_the_world
 		prerequisite = {
@@ -2613,38 +3301,41 @@ focus_tree = {
 		x = -2
 		y = 5
 		relative_position_id = ARI_overthrow_of_danzig
-
 		available = {
 		}
-
 		completion_reward = {
 		}
 	}
-
-	focus = { #국제도시
+	focus = {
+		#국제도시
 		id = ARI_international_city
 		icon = GFX_focus_ARG_strengthening_the_concordancia
 		prerequisite = {
-			focus = ARI_production_encouragement
+			focus = ARI_anti_trinity_treaty_formalization
+			focus = ARI_reconstruction_movement
 		}
 		cost = 10
 		x = 0
-		y = 5
+		y = 3
 		relative_position_id = ARI_parliamentarism
-
 		available = {
 			TRM = {
 				OR = {
 					exists = no
 					has_capitulated = yes
 					is_subject_of = ROOT
-					NOT = { has_war_with = ARI }
+					NOT = {
+						has_war_with = ARI
+					}
 				}
 			}
 		}
-
 		completion_reward = {
 			set_cosmetic_tag = ARI_arian_danzig_federation
+			add_timed_idea = {
+				idea = ARI_anti_trinity_production_front
+				days = 280
+			}
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = ARI_wareconomy
@@ -2652,15 +3343,19 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				if = {  
-					limit = { has_idea = ARI_undisturbed_wareconomy }
+				if = {
+					limit = {
+						has_idea = ARI_undisturbed_wareconomy
+					}
 					swap_ideas = {
 						remove_idea = ARI_undisturbed_wareconomy
 						add_idea = war_economy
 					}
 				}
-				else_if = {  
-					limit = { has_idea = ARI_wareconomy }
+				else_if = {
+					limit = {
+						has_idea = ARI_wareconomy
+					}
 					swap_ideas = {
 						remove_idea = ARI_undisturbed_wareconomy
 						add_idea = war_economy
@@ -2675,52 +3370,8 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #아리우스 종합학원
-		id = ARI_arian_general_school
-		icon = GFX_goal_generic_attack_allies
-		prerequisite = {
-			focus = ARI_free_arians
-			focus = ARI_trustee_administration_continuation
-		}
-		cost = 10
-		x = 0
-		y = 6
-		relative_position_id = ARI_we_are_arians
-
-		available = {
-			is_subject = no
-			controls_state = 188
-			controls_state = 763
-			controls_state = 5
-			controls_state = 807
-			
-			controls_state = 60
-			controls_state = 61
-			controls_state = 62
-			controls_state = 63
-			controls_state = 64
-			controls_state = 65
-			controls_state = 66
-			controls_state = 67
-			controls_state = 68
-		}
-
-		completion_reward = {
-			add_political_power = 120
-			add_stability = 0.10
-			TRM = {
-				every_core_state = {
-					add_core_of = ARI
-				}
-			}
-			set_cosmetic_tag = ARI_general_school
-			country_event = { id = ARI_event.17 hours = 8 }
-			add_ideas = ARI_student_resistance
-		}
-	}
-
-	focus = { #2차 장검의 밤
+	focus = {
+		#2차 장검의 밤
 		id = ARI_night_of_the_long_knives
 		icon = GFX_goal_radio_silence
 		prerequisite = {
@@ -2730,10 +3381,9 @@ focus_tree = {
 			focus = ARI_reichssicherheitshauptamt
 		}
 		cost = 10
-		x = 7
+		x = 0
 		y = 6
 		relative_position_id = ARI_anti_trinity_arius_german_united_front
-
 		available = {
 			is_subject = no
 			has_government = fascism
@@ -2747,12 +3397,13 @@ focus_tree = {
 			controls_state = 67
 			controls_state = 68
 		}
-
 		completion_reward = {
-			set_country_flag = BA_german_claimant_3 #독일 정통성 높음 (하이드리히 전용)
+			set_country_flag = BA_german_claimant_3			#독일 정통성 높음 (하이드리히 전용)
 			add_political_power = 60
 			every_state = {
-				limit = { BA_is_GER_core = yes }
+				limit = {
+					BA_is_GER_core = yes
+				}
 				add_core_of = ARI
 			}
 			set_cosmetic_tag = ARI_german
@@ -2760,7 +3411,10 @@ focus_tree = {
 				state = 64
 				remember_old_capital = no
 			}
-			country_event = { id = ARI_event.16 hours = 8 }
+			country_event = {
+				id = ARI_event.16
+				hours = 8
+			}
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = BA_ARI_bitter_revanchism_3
@@ -2768,13 +3422,22 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				if = { limit = { has_idea = BA_ARI_bitter_revanchism }
+				if = {
+					limit = {
+						has_idea = BA_ARI_bitter_revanchism
+					}
 					remove_ideas = BA_ARI_bitter_revanchism
 				}
-				if = { limit = { has_idea = BA_ARI_bitter_revanchism_2 }
+				if = {
+					limit = {
+						has_idea = BA_ARI_bitter_revanchism_2
+					}
 					remove_ideas = BA_ARI_bitter_revanchism_2
 				}
-				if = { limit = { has_idea = BA_ARI_bitter_revanchism_3 }
+				if = {
+					limit = {
+						has_idea = BA_ARI_bitter_revanchism_3
+					}
 					remove_ideas = BA_ARI_bitter_revanchism_3
 				}
 				add_ideas = BA_ARI_bitter_revanchism_GER
@@ -2791,43 +3454,174 @@ focus_tree = {
 			}
 		}
 	}
-	
-	focus = { #이권 침탈
+	focus = {
+		#독일 독립 약속
+		id = ARI_german_promise_of_independence
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = {
+			focus = ARI_arius_nationalism
+		}
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ARI_arius_nationalism
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = ARI_german_promise_of_independence_tt
+			add_to_variable = {
+				ARI_nazi_party_generate_wargoal_tension = -0.25
+			}
+			add_to_variable = {
+				ARI_nazi_party_justify_war_goal_time = -0.05
+			}
+			add_to_variable = {
+				ARI_nazi_party_annex_cost_factor = -0.15
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		#독일 임시정부
+		id = ARI_german_provisional_government
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = {
+			focus = ARI_german_promise_of_independence
+		}
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ARI_german_promise_of_independence
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_political_power = 60
+			unlock_decision_category_tooltip = ARI_restoration_of_germany
+		}
+	}
+	focus = {
+		#위임통치 지속
+		id = ARI_trustee_administration_continuation
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = {
+			focus = ARI_german_provisional_government
+		}
+		mutually_exclusive = {
+			focus = ARI_harmony_with_the_new_world
+		}
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ARI_german_provisional_government
+		available = {
+			is_subject = no
+			any_country = {
+				original_tag = GER
+				is_subject_of = ROOT
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = ARI_we_are_arians_tooltip
+			add_to_variable = {
+				ARI_nazi_party_stability_factor = -0.1
+			}
+			every_other_country = {
+				limit = {
+					original_tag = GER
+					is_subject_of = ROOT
+				}
+				add_autonomy_score = {
+					value = -25
+					localization = ARI_trustee_administration_continuation
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_decrease
+				}
+			}
+		}
+	}
+	focus = {
+		#조화 추구
+		id = ARI_harmony_with_the_new_world
+		icon = GFX_goal_generic_alliance
+		prerequisite = {
+			focus = ARI_german_provisional_government
+		}
+		mutually_exclusive = {
+			focus = ARI_trustee_administration_continuation
+		}
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = ARI_german_provisional_government
+		available = {
+			is_subject = no
+			any_country = {
+				original_tag = GER
+				is_subject_of = ROOT
+			}
+		}
+		completion_reward = {
+			set_country_flag = ARI_harmony_with_the_new_world_flag
+			every_other_country = {
+				limit = {
+					original_tag = GER
+					is_subject_of = ROOT
+				}
+				add_autonomy_score = {
+					value = 25
+					localization = ARI_harmony_with_the_new_world
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_increase
+				}
+			}
+		}
+	}
+	focus = {
+		#이권 침탈
 		id = ARI_exploitation_of_vested_interests
 		icon = GFX_focus_renounce_the_treaty_of_trianon
 		prerequisite = {
 			focus = ARI_trustee_administration_continuation
 		}
 		cost = 5
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = ARI_trustee_administration_continuation
-
 		available = {
 			is_subject = no
 			any_country = {
 				original_tag = GER
 				is_subject_of = ROOT
-				compare_autonomy_progress_ratio < 0.50
+				compare_autonomy_progress_ratio < 0.5
 			}
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_we_are_arians_tooltip
-			add_to_variable = { ARI_nazi_party_stability_factor = -0.10 }
+			add_to_variable = {
+				ARI_nazi_party_stability_factor = -0.1
+			}
 			every_other_country = {
 				limit = {
 					original_tag = GER
 					is_subject_of = ROOT
 				}
 				custom_effect_tooltip = ARI_exploitation_of_vested_interests_tt
-				set_variable = { ARI_german_reconstruction_government_cic_to_overlord_factor = 0.45 }
-				set_variable = { ARI_german_reconstruction_government_mic_to_overlord_factor = 0.80 }
+				set_variable = {
+					ARI_german_reconstruction_government_cic_to_overlord_factor = 0.45
+				}
+				set_variable = {
+					ARI_german_reconstruction_government_mic_to_overlord_factor = 0.8
+				}
 			}
 		}
 	}
-	
-	focus = { #반대파 제거
+	focus = {
+		#반대파 제거
 		id = ARI_suppression_of_opposition
 		icon = GFX_focus_rom_handle_king
 		prerequisite = {
@@ -2837,31 +3631,31 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ARI_exploitation_of_vested_interests
-
 		available = {
 			is_subject = no
 			any_country = {
 				original_tag = GER
 				is_subject_of = ROOT
-				compare_autonomy_progress_ratio < 0.30
+				compare_autonomy_progress_ratio < 0.3
 			}
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_we_are_arians_tooltip
-			add_to_variable = { ARI_nazi_party_stability_factor = -0.10 }
+			add_to_variable = {
+				ARI_nazi_party_stability_factor = -0.1
+			}
 			add_political_power = 100
 			every_other_country = {
 				limit = {
 					original_tag = GER
 					is_subject_of = ROOT
 				}
-				add_stability = -0.10
+				add_stability = -0.1
 			}
 		}
 	}
-	
-	focus = { #병합
+	focus = {
+		#병합
 		id = ARI_annexation
 		icon = GFX_goal_anschluss
 		prerequisite = {
@@ -2871,7 +3665,6 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ARI_exploitation_of_vested_interests
-
 		available = {
 			is_subject = no
 			any_country = {
@@ -2880,7 +3673,6 @@ focus_tree = {
 				compare_autonomy_progress_ratio < 0.05
 			}
 		}
-
 		completion_reward = {
 			remove_dynamic_modifier = {
 				modifier = ARI_nazi_party
@@ -2892,7 +3684,9 @@ focus_tree = {
 					is_subject_of = ROOT
 				}
 				every_controlled_state = {
-					limit = { is_core_of = PREV }
+					limit = {
+						is_core_of = PREV
+					}
 					add_core_of = ARI
 				}
 				ARI = {
@@ -2904,39 +3698,44 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #이문화 통합
+	focus = {
+		#이문화 통합
 		id = ARI_intercultural_integration
 		icon = GFX_goal_tripartite_pact
 		prerequisite = {
 			focus = ARI_harmony_with_the_new_world
 		}
 		cost = 10
-		x = 3
+		x = 0
 		y = 1
 		relative_position_id = ARI_harmony_with_the_new_world
-
 		available = {
 			is_subject = no
 			any_country = {
 				original_tag = GER
 				is_subject_of = ROOT
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = ARI_german_reconstruction_government
+					}
+				}
 			}
 			has_country_flag = {
 				flag = ARI_harmony_with_the_new_world_flag
 				days > 180
 			}
 		}
-
 		completion_reward = {
-			set_country_flag = BA_german_claimant_1 #독일 정통성 낮음
+			set_country_flag = BA_german_claimant_1			#독일 정통성 낮음
 			every_other_country = {
 				limit = {
 					original_tag = GER
 					is_subject_of = ROOT
 				}
 				every_controlled_state = {
-					limit = { is_core_of = PREV }
+					limit = {
+						is_core_of = PREV
+					}
 					add_core_of = ARI
 				}
 				ARI = {
@@ -2947,14 +3746,14 @@ focus_tree = {
 				}
 			}
 			set_cosmetic_tag = ARI_union_german
-			if = { 
-				limit = { 
+			if = {
+				limit = {
 					OR = {
-						controls_state = 64 
+						controls_state = 64
 						any_country = {
 							original_tag = GER
 							is_subject_of = ROOT
-							controls_state = 64 
+							controls_state = 64
 						}
 					}
 				}
@@ -2963,15 +3762,15 @@ focus_tree = {
 					remember_old_capital = no
 				}
 			}
-			set_rule = {	
+			set_rule = {
 				can_create_factions = yes
 			}
 			custom_effect_tooltip = enter_tt
 			add_ideas = ARI_student_resistance
 		}
 	}
-
-	focus = { #베를린 군사 재판
+	focus = {
+		#베를린 군사 재판
 		id = ARI_berlin_military_tribunal
 		icon = GFX_focus_BRA_tribunal
 		prerequisite = {
@@ -2979,22 +3778,22 @@ focus_tree = {
 			focus = ARI_night_of_the_long_knives
 		}
 		cost = 10
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = ARI_night_of_the_long_knives
-
 		available = {
 			is_subject = no
 		}
-
 		completion_reward = {
-		    set_province_name = { id = 6521 name = Berlin }
-			country_event = { id = ARI_event.18 hours = 8 }
-			add_stability = 0.10
+			country_event = {
+				id = ARI_event.18
+				hours = 8
+			}
+			add_stability = 0.1
 		}
 	}
-
-	focus = { #트리니티 문화 말살
+	focus = {
+		#트리니티 문화 말살
 		id = ARI_trinity_cultural_annihilation
 		icon = GFX_goal_TRN_Blocking_attacks_from_the_outside
 		prerequisite = {
@@ -3004,28 +3803,24 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ARI_berlin_military_tribunal
-
 		available = {
 		}
-
 		completion_reward = {
 			effect_tooltip = {
 				remove_ideas = ARI_student_resistance
 			}
 			hidden_effect = {
-				if = { limit = { has_idea = ARI_student_resistance }
+				if = {
+					limit = {
+						has_idea = ARI_student_resistance
+					}
 					remove_ideas = ARI_student_resistance
 				}
 			}
-			set_province_name = { id = 6558 name = Poznan }
-			set_province_name = { id = 6332 name = Konigsberg }
-			#set_province_name = { id = 6469 name = Dusseldorf }
-			#set_province_name = { id = 6488 name = Frankfurt }
-			#set_province_name = { id = 692 name = Munich }
 		}
 	}
-
-	focus = { #민족공동체 활성화
+	focus = {
+		#민족공동체 활성화
 		id = ARI_national_community_revitalization
 		icon = GFX_focus_generic_reorient_production
 		prerequisite = {
@@ -3035,20 +3830,26 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ARI_berlin_military_tribunal
-
 		available = {
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_national_community_revitalization_tt
-			add_to_variable = { ARI_nazi_party_political_power_gain = 0.05 }
-			add_to_variable = { ARI_nazi_party_consumer_goods_factor = 0.05 }
-			add_to_variable = { ARI_nazi_party_industrial_capacity_factory = 0.05 }
-			add_to_variable = { ARI_nazi_party_industrial_capacity_dockyard = 0.05 }
+			add_to_variable = {
+				ARI_nazi_party_political_power_gain = 0.05
+			}
+			add_to_variable = {
+				ARI_nazi_party_consumer_goods_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_nazi_party_industrial_capacity_factory = 0.05
+			}
+			add_to_variable = {
+				ARI_nazi_party_industrial_capacity_dockyard = 0.05
+			}
 		}
 	}
-
-	focus = { #독일노동전선
+	focus = {
+		#독일노동전선
 		id = ARI_german_labor_front
 		icon = GFX_goal_generic_union_agreement
 		prerequisite = {
@@ -3056,13 +3857,11 @@ focus_tree = {
 			focus = ARI_night_of_the_long_knives
 		}
 		cost = 5
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = ARI_night_of_the_long_knives
-
 		available = {
 		}
-
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -3111,8 +3910,8 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #국가재건동맹 수립
+	focus = {
+		#국가재건동맹 수립
 		id = ARI_formation_of_the_national_reconstruction_alliance
 		icon = GFX_goal_generic_construction2
 		prerequisite = {
@@ -3122,10 +3921,8 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ARI_german_labor_front
-
 		available = {
 		}
-
 		completion_reward = {
 			add_timed_idea = {
 				idea = ARI_land_reconstruction_project
@@ -3133,8 +3930,8 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #경제자립주의
+	focus = {
+		#경제자립주의
 		id = ARI_economic_autarky
 		icon = GFX_focus_generic_german_trade
 		prerequisite = {
@@ -3144,18 +3941,18 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ARI_german_labor_front
-
 		available = {
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_economic_autarky_tt
-			add_to_variable = { ARI_nazi_party_production_lack_of_resource_penalty_factor = -0.10 }
+			add_to_variable = {
+				ARI_nazi_party_production_lack_of_resource_penalty_factor = -0.1
+			}
 			add_war_support = 0.05
 		}
 	}
-
-	focus = { #민족 융화 추진
+	focus = {
+		#민족 융화 추진
 		id = ARI_cultural_integration_efforts
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = {
@@ -3165,19 +3962,23 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ARI_intercultural_integration
-
 		available = {
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_cultural_integration_efforts_tt
-			add_to_variable = { ARI_arian_conscription = -0.005 }
-			add_to_variable = { ARI_arian_production_factory_max_efficiency_factor = 0.05 }
-			add_to_variable = { ARI_arian_production_speed_buildings_factor = 0.05 }
+			add_to_variable = {
+				ARI_arian_conscription = -0.005
+			}
+			add_to_variable = {
+				ARI_arian_production_factory_max_efficiency_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_arian_production_speed_buildings_factor = 0.05
+			}
 		}
 	}
-
-	focus = { #독일 민족에 대한 새로운 정의
+	focus = {
+		#독일 민족에 대한 새로운 정의
 		id = ARI_redefinition_of_the_german_nation
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = {
@@ -3187,17 +3988,15 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ARI_cultural_integration_efforts
-
 		available = {
 		}
-
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.15
 		}
 	}
-
-	focus = { #테러와의 전쟁
+	focus = {
+		#테러와의 전쟁
 		id = ARI_war_on_terror
 		icon = GFX_focus_generic_annex_country
 		prerequisite = {
@@ -3207,10 +4006,8 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = ARI_night_of_the_long_knives
-
 		available = {
 		}
-
 		completion_reward = {
 			add_timed_idea = {
 				idea = ARI_crackdown_on_anti_government_activities
@@ -3218,8 +4015,8 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #수용소 확장
+	focus = {
+		#수용소 확장
 		id = ARI_large_scale_expansion_of_detention_facilities
 		icon = GFX_goal_tmr_kill_jew_kill_more_jews_focus
 		prerequisite = {
@@ -3229,19 +4026,19 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ARI_war_on_terror
-
 		available = {
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = ARI_large_scale_expansion_of_detention_facilities_tt
-			add_to_variable = { ARI_nazi_party_resistance_target = -0.10 }
+			add_to_variable = {
+				ARI_nazi_party_resistance_target = -0.1
+			}
 			add_political_power = 120
 			add_stability = 0.05
 		}
 	}
-
-	focus = { #독일 민족의 대게르만국
+	focus = {
+		#독일 민족의 대게르만국
 		id = ARI_greater_germania
 		icon = GFX_focus_ARI_greater_germania
 		prerequisite = {
@@ -3256,7 +4053,6 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = ARI_berlin_military_tribunal
-
 		available = {
 			is_subject = no
 			custom_trigger_tooltip = {
@@ -3273,7 +4069,6 @@ focus_tree = {
 				controls_state = 67
 				controls_state = 68
 			}
-
 			custom_trigger_tooltip = {
 				tooltip = ARI_greater_germania_tooltip_GEM
 				controls_state = 42
@@ -3288,14 +4083,12 @@ focus_tree = {
 				controls_state = 1022
 				controls_state = 1025
 			}
-
 			custom_trigger_tooltip = {
 				tooltip = ARI_greater_germania_tooltip_GEH
 				controls_state = 52
 				controls_state = 53
 				controls_state = 54
 			}
-
 			custom_trigger_tooltip = {
 				tooltip = ARI_greater_germania_tooltip_SHA
 				controls_state = 4
@@ -3304,7 +4097,6 @@ focus_tree = {
 				controls_state = 848
 				controls_state = 1021
 			}
-
 			custom_trigger_tooltip = {
 				tooltip = ARI_greater_germania_tooltip_SUD
 				controls_state = 69
@@ -3312,30 +4104,32 @@ focus_tree = {
 				controls_state = 74
 			}
 		}
-
 		completion_reward = {
 			set_cosmetic_tag = ARI_greater_german_reich
-
 			every_state = {
 				limit = {
 					BA_is_GER_core = yes
-					NOT = { is_core_of = ROOT }
+					NOT = {
+						is_core_of = ROOT
+					}
 				}
 				add_core_of = ARI
 			}
-
 			AUS = {
 				every_core_state = {
 					limit = {
-						NOT = { is_core_of = ARI }
+						NOT = {
+							is_core_of = ARI
+						}
 					}
 					add_core_of = ARI
 				}
 			}
-
 			every_state = {
 				limit = {
-					NOT = { is_core_of = ARI }
+					NOT = {
+						is_core_of = ARI
+					}
 					OR = {
 						state = 69
 						state = 972
@@ -3346,303 +4140,24 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #공개 재판
-		id = ARI_public_executions
-		icon = GFX_focus_generic_court
-		prerequisite = {
-			focus = ARI_arian_general_school
-		}
-		cost = 5
-		x = 0
-		y = 2
-		relative_position_id = ARI_arian_general_school
-
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			add_political_power = 120
-			country_event = ARI_event.26
-		}
-	}
-
-	focus = { #트리니티 상징물 파괴
-		id = ARI_trinity_symbol_destruction
-		icon = GFX_focus_FIN_parmis_devils
-		prerequisite = {
-			focus = ARI_public_executions
-		}
-		prerequisite = {
-			focus = ARI_postwar_reconstruction
-		}
-		cost = 5
-		x = -1
-		y = 1
-		relative_position_id = ARI_public_executions
-
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			set_province_name = { id = 6558 name = Poznan }
-			set_province_name = { id = 6332 name = Konigsberg }
-		}
-	}
-
-	focus = { #식민화 개발
-		id = ARI_colonial_development
-		icon = GFX_focus_DEN_heavy_regulations
-		prerequisite = {
-			focus = ARI_public_executions
-		}
-		cost = 5
-		x = 1
-		y = 1
-		relative_position_id = ARI_public_executions
-
-		available = {
-			is_subject = no
-		}
-
-		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = ARI_colonial_development_2IC }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_manpower = -12000
-			}
-		}
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					NOT = { state = 85 }
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					NOT = { has_state_flag = ARI_colonial_development_2IC }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_manpower = -12000
-				set_state_flag = ARI_colonial_development_2IC
-			}
-			random_owned_controlled_state = {
-				limit = {
-					NOT = { state = 85 }
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					NOT = { has_state_flag = ARI_colonial_development_2IC }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_manpower = -12000
-				set_state_flag = ARI_colonial_development_2IC
-			}
-			random_owned_controlled_state = {
-				limit = {
-					NOT = { state = 85 }
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					NOT = { has_state_flag = ARI_colonial_development_2IC }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_manpower = -12000
-				set_state_flag = ARI_colonial_development_2IC
-			}
-		}
-	}
-
-	focus = { #새 역사의 시작
-		id = ARI_new_beginning_of_history
-		icon = GFX_focus_ICE_state_corporatism
-		prerequisite = {
-			focus = ARI_trinity_symbol_destruction
-		}
-		prerequisite = {
-			focus = ARI_colonial_development
-		}
-		cost = 5
-		x = 0
-		y = 2
-		relative_position_id = ARI_public_executions
-
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			add_stability = 0.10
-			add_war_support = 0.10
-			add_popularity = {
-				ideology = ROOT
-				popularity = 0.20
-			}
-			swap_ideas = {
-				remove_idea = ARI_military_government_establishment_idea
-				add_idea = ARI_new_beginning_of_history_idea
-			}
-		}
-	}
-
-	focus = { #군정 수립
-		id = ARI_military_government_establishment
-		icon = GFX_goal_generic_defence
-		prerequisite = {
-			focus = ARI_arian_general_school
-		}
-		cost = 5
-		x = -1
-		y = 1
-		relative_position_id = ARI_arian_general_school
-
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = ARI_student_resistance
-				add_idea = ARI_military_government_establishment_idea
-			}
-		}
-	}
-
-	focus = { #전후 복구
-		id = ARI_postwar_reconstruction
-		icon = GFX_focus_generic_support_the_left_right
-		prerequisite = {
-			focus = ARI_military_government_establishment
-			focus = ARI_international_city
-		}
-		cost = 5
-		x = -2
-		y = 2
-		relative_position_id = ARI_arian_general_school
-
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = { #폴란드와 결속
+	focus = {
+		#폴란드와 결속
 		id = ARI_strengthening_alliance_with_poland
 		icon = GFX_focus_POL_reassert_silesian_claims
 		prerequisite = {
 			focus = ARI_international_city
 		}
-		mutually_exclusive = { focus = ARI_appeasement_at_kibotus }
+		mutually_exclusive = {
+			focus = ARI_appeasement_at_kibotus
+		}
 		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = ARI_international_city
-
 		available = {
 			is_subject = no
 			is_in_faction_with = POL
 		}
-
 		completion_reward = {
 			add_opinion_modifier = {
 				target = POL
@@ -3665,7 +4180,7 @@ focus_tree = {
 				hidden_effect = {
 					capital_scope = {
 						add_extra_state_shared_building_slots = 2
-						add_building_construction = {	
+						add_building_construction = {
 							type = industrial_complex
 							level = 2
 							instant_build = yes
@@ -3675,19 +4190,20 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = { #키보토스 유화책
+	focus = {
+		#키보토스 유화책
 		id = ARI_appeasement_at_kibotus
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = {
 			focus = ARI_international_city
 		}
-		mutually_exclusive = { focus = ARI_strengthening_alliance_with_poland }
+		mutually_exclusive = {
+			focus = ARI_strengthening_alliance_with_poland
+		}
 		cost = 10
 		x = -1
 		y = 1
 		relative_position_id = ARI_international_city
-
 		available = {
 			is_subject = no
 			OR = {
@@ -3696,7 +4212,9 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = NO_end_of_the_kivotos_alliance
-				NOT = { has_global_flag = end_of_the_kivotos_alliance }
+				NOT = {
+					has_global_flag = end_of_the_kivotos_alliance
+				}
 			}
 			var:global.kivotos_alliance_leader = {
 				exists = yes
@@ -3704,7 +4222,6 @@ focus_tree = {
 				is_subject = no
 			}
 		}
-
 		completion_reward = {
 			random_country = {
 				limit = {
@@ -3713,12 +4230,15 @@ focus_tree = {
 					has_capitulated = no
 					is_subject = no
 				}
-				country_event = { id = COU_kivotos_alliance.8 hours = 8 }
+				country_event = {
+					id = COU_kivotos_alliance.8
+					hours = 8
+				}
 			}
 		}
 	}
-
-	focus = { #트리니티 협력정부
+	focus = {
+		#트리니티 협력정부
 		id = ARI_trinity_coalition_government
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = {
@@ -3729,7 +4249,6 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ARI_international_city
-
 		available = {
 			is_subject = no
 			any_state = {
@@ -3741,7 +4260,6 @@ focus_tree = {
 				}
 			}
 		}
-
 		completion_reward = {
 			create_dynamic_country = {
 				original_tag = TRM
@@ -3762,20 +4280,24 @@ focus_tree = {
 					puppet = PREV
 				}
 				hidden_effect = {
-					set_country_flag = kivotos_research_on #헤일로 보병 허가
-					if = { #헤일로 보병 연구 보조
+					set_country_flag = kivotos_research_on					#헤일로 보병 허가
+					if = {
+						#헤일로 보병 연구 보조
 						limit = {
-							NOT = { has_tech = kivotos_infantry_weapons }
+							NOT = {
+								has_tech = kivotos_infantry_weapons
+							}
 						}
 						set_technology = {
 							kivotos_infantry_weapons = 1
 						}
 					}
-					set_variable = { BA_halo_infantry_cap_edit_var = 2 } #헤일로 보병 변수 확인을 위한 추가
+					set_variable = {
+						BA_halo_infantry_cap_edit_var = 2
+					}
+					#헤일로 보병 변수 확인을 위한 추가
 					BA_halo_infantry_cap_edit_effect = yes
-
-					BA_halo_infantry_ban_effect = yes #헤일로 보병 금지
-
+					BA_halo_infantry_ban_effect = yes					#헤일로 보병 금지
 					add_ideas = BA_student_conscription_idea
 					kill_ideology_leader = democratic
 					kill_ideology_leader = communism
@@ -3783,13 +4305,14 @@ focus_tree = {
 					kill_ideology_leader = neutrality
 					set_cosmetic_tag = ARI_arius_administrative_academy
 					BA_puppet_on_action_effect = yes
-
 					load_focus_tree = generic_focus
 				}
 			}
 			every_country = {
-				limit ={
-					NOT = { tag = ROOT }
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
 					is_in_faction_with = ROOT
 					any_state = {
 						is_owned_and_controlled_by = PREV
@@ -3800,12 +4323,15 @@ focus_tree = {
 						}
 					}
 				}
-				country_event = { id = ARI_event.38 hours = 12 }
+				country_event = {
+					id = ARI_event.38
+					hours = 12
+				}
 			}
 		}
 	}
-
-	focus = { #악연 청산
+	focus = {
+		#악연 청산
 		id = ARI_reconciliation_of_grievances
 		icon = GFX_goal_generic_military_deal
 		prerequisite = {
@@ -3815,7 +4341,6 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = ARI_international_city
-
 		available = {
 			is_subject = no
 			any_country = {
@@ -3823,10 +4348,11 @@ focus_tree = {
 				is_subject_of = ROOT
 			}
 		}
-
 		complete_tooltip = {
 			every_state = {
-				limit = { has_state_flag = ARI_reconciliation_of_grievances_1IF1IC }
+				limit = {
+					has_state_flag = ARI_reconciliation_of_grievances_1IF1IC
+				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
@@ -3842,18 +4368,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			random_country = {
-				limit = { 
+				limit = {
 					is_subject_of = ARI
 				}
 				random_owned_controlled_state = {
 					limit = {
-						NOT = { state = 85 }
+						NOT = {
+							state = 85
+						}
 						free_building_slots = {
 							building = industrial_complex
 							size > 1
 							include_locked = yes
 						}
-						NOT = { has_state_flag = ARI_reconciliation_of_grievances_1IF1IC }
+						NOT = {
+							has_state_flag = ARI_reconciliation_of_grievances_1IF1IC
+						}
 					}
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
@@ -3870,13 +4400,17 @@ focus_tree = {
 				}
 				random_owned_controlled_state = {
 					limit = {
-						NOT = { state = 85 }
+						NOT = {
+							state = 85
+						}
 						free_building_slots = {
 							building = industrial_complex
 							size > 1
 							include_locked = yes
 						}
-						NOT = { has_state_flag = ARI_reconciliation_of_grievances_1IF1IC }
+						NOT = {
+							has_state_flag = ARI_reconciliation_of_grievances_1IF1IC
+						}
 					}
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
@@ -3892,12 +4426,10 @@ focus_tree = {
 					set_state_flag = ARI_reconciliation_of_grievances_1IF1IC
 				}
 			}
-			set_province_name = { id = 6558 name = Poznan }
-			set_province_name = { id = 6332 name = Konigsberg }
 		}
 	}
-
-	focus = { #아리우스-프로이센 연방
+	focus = {
+		#아리우스-프로이센 연방
 		id = ARI_arius_prussian_federation
 		icon = GFX_ARI_arius_prussian_federation
 		prerequisite = {
@@ -3907,7 +4439,6 @@ focus_tree = {
 		x = 0
 		y = 4
 		relative_position_id = ARI_international_city
-
 		available = {
 			is_subject = no
 			any_country = {
@@ -3915,7 +4446,6 @@ focus_tree = {
 				is_subject_of = ROOT
 			}
 		}
-
 		completion_reward = {
 			set_cosmetic_tag = ARI_arian_prussian_federation
 			every_country = {
@@ -3931,7 +4461,10 @@ focus_tree = {
 					}
 				}
 			}
-			country_event = { id = ARI_event.42 hours = 12 }
+			country_event = {
+				id = ARI_event.42
+				hours = 12
+			}
 		}
 	}
 }

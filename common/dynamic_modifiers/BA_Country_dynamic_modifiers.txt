@@ -1913,8 +1913,8 @@ ARI_german_reconstruction_government = { # 독일 재건정부
 	remove_trigger = {
 		OR = {
 			is_subject = no
-			check_variable = { ARI_german_reconstruction_government_cic_to_overlord_factor < 0.01 }
-			check_variable = { ARI_german_reconstruction_government_mic_to_overlord_factor < 0.01 }
+			check_variable = { ARI_german_reconstruction_government_cic_to_overlord_factor < 0 }
+			check_variable = { ARI_german_reconstruction_government_mic_to_overlord_factor < 0 }
 		}
 	}
 

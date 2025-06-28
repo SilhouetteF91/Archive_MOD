@@ -483,9 +483,8 @@ ARI_restoration_of_germany = {
 								state = 188
 							}
 						}
-						PREV = {
-							transfer_state = PREV
-						}
+						transfer_state_to = PREV
+						add_core_of = PREV
 					}
 					ROOT = {
 						set_autonomy = {

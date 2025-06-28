@@ -18,6 +18,26 @@ style = {
 	current = GFX_focus_current_material_design
 }
 
+# 친위대
+style = {
+	name = NSAR_NSD_focus_style
+
+	unavailable = GFX_focus_unavailable_joint_NSD_bg
+	completed = GFX_focus_completed_joint_NSD_bg
+	available = GFX_focus_can_start_joint_NSD_bg
+	current = GFX_focus_current_joint_NSD
+}
+
+# 아리우스
+style = {
+	name = NSAR_ARI_focus_style
+
+	unavailable = GFX_focus_unavailable_joint_ARI_bg
+	completed = GFX_focus_completed_joint_ARI_bg
+	available = GFX_focus_can_start_joint_ARI_bg
+	current = GFX_focus_current_joint_ARI
+}
+
 # 붉겨 - 방위위원회
 style = {
 	name = REDWINTER_RE4_focus_style
