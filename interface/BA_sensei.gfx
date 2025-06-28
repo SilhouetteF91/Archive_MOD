@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ba_generic_event_gsc_president"
+		textureFile = "gfx/event_pictures/BA/BA_gsc_president.png"
+	}
+}

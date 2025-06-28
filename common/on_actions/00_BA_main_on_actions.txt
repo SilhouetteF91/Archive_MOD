@@ -349,6 +349,22 @@ on_actions = {
 			if = {
 				limit = {
 					has_game_rule = {
+						rule = PROJECT_SENSEI_RULE
+						option = PROJECT_SENSEI_RULE_ON
+					}
+					Kivotos_tag = no
+				}
+				# 대충 비학원 국가 지도자 선생화
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					country_event = { id = BA_generic_event.19 hours = 12 }
+				}				
+			}
+			if = {
+				limit = {
+					has_game_rule = {
 						rule = shit_project_KV_rule
 						option = shit_project_KV_rule_on
 					}

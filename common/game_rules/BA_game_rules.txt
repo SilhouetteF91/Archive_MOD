@@ -84,6 +84,23 @@ trn_collapse_rule = {
 		desc = "trn_collapse_rule_On_DESC"
 	}
 }
+
+PROJECT_SENSEI_RULE = {
+	name = "PROJECT_SENSEI_RULE_NAME"
+	group = "BA_game_rule"
+
+	default = {	
+		name = PROJECT_SENSEI_RULE_OFF
+		text = "PROJECT_SENSEI_RULE_OFF_NAME"
+		desc = "PROJECT_SENSEI_RULE_DESC"
+	}
+	option = {
+		name = PROJECT_SENSEI_RULE_ON
+		text = "PROJECT_SENSEI_RULE_ON_NAME"
+		desc = "PROJECT_SENSEI_RULE_DESC"
+	}
+}
+
 Trinity_Misono_Mika_Portrait_Rule = {
 	name = "Trinity_Mika_Portrait_rule_name"
 	group = "BA_game_rule"
