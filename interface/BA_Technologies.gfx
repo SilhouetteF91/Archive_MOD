@@ -58,6 +58,10 @@ spriteTypes = {
 
 	########
 
+	spriteType = {
+    	name = "GFX_repeater_battalion_tech_medium"
+	    texturefile = "gfx/interface/technologies/advanced_machine_tools.dds"
+   	}
 
 	SpriteType = {
 		name = "GFX_kivotos_halo_upgrade_1_medium"

@@ -31,6 +31,8 @@
  halo_recon_desc: "헤일로로 보호받는 정찰중대."
  kivotos_dron: "키보토스 드론"
  kivotos_dron_desc: "키보토스에서 운용하는 드론."
+ repeater_battalion: "신호 중계 중대"
+ repeater_battalion_desc: "광범위한 연산장치와 신호 중계기를 동반하는 신호 중계 중대입니다. 중앙 프레임의 광대역 통신 신호를 수신하기 위한 거대 안테나를 운용합니다."
  #기갑사단#
  decagrammaton_armor: "데카그라마톤의 예언자"
  decagrammaton_armordesc: "거대한 자동화 기계 장치."
