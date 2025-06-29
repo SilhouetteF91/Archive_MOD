@@ -294,7 +294,7 @@
  Debug_BA_gathering_storm_desc: "제가 보인다면 버그 리포트를 작성해주세요."
  highlight_major_1_tt: "@RED §Y붉은겨울 연방학원§! 경로: \n\n\n\n\n\n£GFX_RED_path_texticon\n\n\n\n\n\n\n이곳에 푸딩 입력"
  highlight_major_2_tt: "@MIL §Y밀레니엄 사이언스 스쿨§! 경로: \n\n\n\n\n\n£GFX_MIL_path_texticon\n\n\n\n\n\n\n100kg"
- highlight_major_3_tt: "@TRM §Y트리니티 종합학원§! 경로: \n\n\n\n\n\n£GFX_TRM_path_texticon\n\n\n\n\n\n\n §g미소노 미카의 쿠데타§!\n  £white_dot §g트리니티 기사단국 건설§!\n\n §Y키리후지 나기사 집권§!\n  £white_dot §g~~~§!"
+ highlight_major_3_tt: "@TRM §Y트리니티 종합학원§! 경로: \n\n\n\n\n\n£GFX_TRM_path_texticon\n\n\n\n\n\n §Y두 번째 트리니티로 가는 길§! - §P미소노 미카§!\n  £white_dot §g공정한 트리니티 건설§!\n  £white_dot §g묵시록의 기수§! - §t(미완성)§!\n  £white_dot §g양떼와 목자§! - §t(미완성)§!\n\n §Y키리후지 나기사 집권§!\n  £white_dot §g~~~§!\n\n§g========================================§!\n§Y안내§!: 트리니티 종합학원은 카이저라이히 형식을 따른 간단한 서사 중심의 국가입니다. 중점 플레이가 주가 되며, 블루 아카이브 모드에 처음 입문하시는 분들이나 트리니티 학생들의 일상적인 이야기를 가볍게 즐기고 싶은 유저분들께 추천드립니다."
  highlight_major_4_tt: "@COU §Y키보토스 총학생회§! 경로:  \n\n\n\n\n\n£GFX_COU_path_texticon\n\n\n\n\n\n\n카야 실장까지 숨참는다"
  highlight_major_5_tt: "@GEM §Y판데모니움 소사이어티§! 경로: \n\n\n\n\n\n£GFX_GEM_path_texticon\n\n\n\n\n\n\n §g하누마 마코토의 독재§!\n  £white_dot §g나치 국방군 집권§!\n  £white_dot §g하누마 마코토 정권 유지§! - §G(기본 설정)§!\n\n§g하누마 마코토 실각§!\n  £white_dot §Y나츠메 이로하§! 의장\n  £white_dot §Y탄가 이부키§! 의장"
  highlight_major_6_tt: "@HYA §Y백귀야행 연합학원§! 경로: \n\n\n\n\n\n£GFX_HYA_path_texticon\n\n\n\n\n\n\n최강 일각 라이온"
