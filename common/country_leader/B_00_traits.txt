@@ -4829,8 +4829,8 @@ leader_traits = {
 		stability_factor = 0.25
 		research_speed_factor = 0.10
 		production_speed_buildings_factor = 0.10
-		local_building_slots_factor = 0.25
-		local_building_slots_factor = 3
+		global_building_slots_factor = 0.25
+		global_building_slots = 5
 	}
 }
  
