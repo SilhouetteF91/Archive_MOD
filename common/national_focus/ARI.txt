@@ -23,16 +23,38 @@ focus_tree = {
 		
 		icon = GFX_focus_GER_integrated_economies
 
+		text_icon = NSAR_ARI_focus_style
+
 		cost = 5
 
-		x = 40
+		x = 34
 		y = 0
 
 		available = { 
-			original_tag = ARI
-			OR = {
-				country_exists = NSD
-				NOT = { has_war_with = NSD }
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = NSAR_danzigs_ss_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = saori
+						FLAG_DAYS = [?NSAR_danzigs_ss_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = ARI_focus_can_only_game_started_tt
+						CHARACTER = saori
+						FOCUS = GEH_zero_congress_focus
+					}
+					always = no
+				}
 			}
 		} 
 
@@ -79,16 +101,38 @@ focus_tree = {
 		
 		icon = GFX_focus_GER_expand_ss_security_duties
 
-		cost = 2
+		text_icon = NSAR_NSD_focus_style
 
-		x = 20
+		cost = 5
+
+		x = 26
 		y = 0
 
-		available = { 
-			original_tag = NSD
-			OR = {
-				country_exists = ARI
-				NOT = { has_war_with = ARI }
+		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = NSAR_german_ss_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = reinhard_heydrich
+						FLAG_DAYS = [?NSAR_german_ss_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = ARI_focus_can_only_game_started_tt
+						CHARACTER = reinhard_heydrich
+						FOCUS = GEH_zero_congress_focus
+					}
+					always = no
+				}
 			}
 		} 
 
@@ -109,7 +153,22 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.02
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -131,13 +190,20 @@ focus_tree = {
 		relative_position_id = NSAR_danzigs_ss
 
 		available = { 
-			original_tag = ARI
-			NOT = { has_idea = ARI_undisturbed_wareconomy }
-			NOT = { country_exists = NSD }
-			NOT = { has_completed_focus = NSAR_eagle_on_ashes }
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
 		} 
 
 		bypass = {
+			NOT = { has_idea = ARI_undisturbed_wareconomy }
+			NOT = { country_exists = NSD }
+			NOT = { has_completed_focus = NSAR_eagle_on_ashes }
+		}
+
+		bypass_effect = {
+			add_political_power = 20
 		}
 
 		ai_will_do = {
@@ -150,6 +216,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = BYPASS_EFFECTS
+			effect_tooltip = {
+				add_political_power = 20
+			}
 		}
 	}
 
@@ -157,7 +227,7 @@ focus_tree = {
 	focus = {
 		id = NSAR_eagle_on_ashes
 		
-		icon = GFX_focus_GER_expand_ss_security_duties
+		icon = GFX_focus_GER_realpolitik
 
 		cost = 2
 
@@ -171,19 +241,24 @@ focus_tree = {
 		relative_position_id = NSAR_german_ss
 
 		available = { 
-			original_tag = NSD
-			OR = {
-				country_exists = ARI
-				NOT = { has_war_with = ARI }
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
 			}
-			NOT = { has_completed_focus = NSAR_antitinity_joint_cooperation }
 		} 
 
 		bypass = {
-			original_tag = NSD
-			NOT = {
-				country_exists = ARI
+			NSD = {
+				exists = yes
+				has_capitulated = no
+				NOT = {
+					has_war_with = TRM
+				}
 			}
+		}
+
+		bypass_effect = {
+			add_political_power = 20
 		}
 
 		ai_will_do = {
@@ -196,19 +271,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
-			IF = {
-				limit = { original_tag = NSD }
-			}
-			ELSE_IF = {
-				limit = { original_tag = ARI }
-				effect_tooltip = {
-					add_stability = 0.02
-				}
-			}
-
-			hidden_effect = {
-				ARI = { unlock_national_focus = NSAR_german_ss }
+			custom_effect_tooltip = BYPASS_EFFECTS
+			effect_tooltip = {
+				add_political_power = 20
 			}
 		}
 	}

@@ -1,5 +1,7 @@
 ﻿capital = 85
 
+country_event = { id = ARI_hidden.1 days = 1 }
+
 oob = "ARI_1936"
 
 recruit_character = saori
