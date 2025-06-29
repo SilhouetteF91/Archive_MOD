@@ -324,45 +324,8 @@ focus_tree = {
 			clr_country_flag = ABY_descision_focus_abydos_6_ongoing_flag
 			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_6_completed_flag
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command
-				}
-				country_event = {
-					id = ABY_descision_focus_event.25
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_2
-				}
-				country_event = {
-					id = ABY_descision_focus_event.26
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_3
-				}
-				country_event = {
-					id = ABY_descision_focus_event.27
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_4
-				}
-				country_event = {
-					id = ABY_descision_focus_event.28
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_5
-				}
-				country_event = {
-					id = ABY_descision_focus_event.29
-				}
+			country_event = {
+				id = ABY_descision_focus_event.25
 			}
 			ABY_scripted_effect_getsokku_plus_effect = yes
 			ABY_scripted_effect_getsokku_plus_effect = yes
@@ -493,45 +456,8 @@ focus_tree = {
 			clr_country_flag = ABY_descision_focus_abydos_9_ongoing_flag
 			clr_country_flag = ABY_descision_focus_abydos_line_doing_flag
 			set_country_flag = ABY_descision_focus_abydos_9_completed_flag
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command
-				}
-				country_event = {
-					id = ABY_descision_focus_event.25
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_2
-				}
-				country_event = {
-					id = ABY_descision_focus_event.26
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_3
-				}
-				country_event = {
-					id = ABY_descision_focus_event.27
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_4
-				}
-				country_event = {
-					id = ABY_descision_focus_event.28
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_5
-				}
-				country_event = {
-					id = ABY_descision_focus_event.29
-				}
+			country_event = {
+				id = ABY_descision_focus_event.26
 			}
 			ABY_scripted_effect_getsokku_plus_effect = yes
 			ABY_scripted_effect_getsokku_plus_effect = yes
@@ -1019,45 +945,8 @@ focus_tree = {
 			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_3_completed_flag
 			#중점 완료시 얻는 보상
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command
-				}
-				country_event = {
-					id = ABY_descision_focus_event.25
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_2
-				}
-				country_event = {
-					id = ABY_descision_focus_event.26
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_3
-				}
-				country_event = {
-					id = ABY_descision_focus_event.27
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_4
-				}
-				country_event = {
-					id = ABY_descision_focus_event.28
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_5
-				}
-				country_event = {
-					id = ABY_descision_focus_event.29
-				}
+			country_event = {
+				id = ABY_descision_focus_event.27
 			}
 			ABY_scripted_effect_getsokku_plus_effect = yes
 			ABY_scripted_effect_getsokku_plus_effect = yes
@@ -1140,45 +1029,8 @@ focus_tree = {
 			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_5_completed_flag
 			#중점 완료시 얻는 보상
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command
-				}
-				country_event = {
-					id = ABY_descision_focus_event.25
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_2
-				}
-				country_event = {
-					id = ABY_descision_focus_event.26
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_3
-				}
-				country_event = {
-					id = ABY_descision_focus_event.27
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_4
-				}
-				country_event = {
-					id = ABY_descision_focus_event.28
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_5
-				}
-				country_event = {
-					id = ABY_descision_focus_event.29
-				}
+			country_event = {
+				id = ABY_descision_focus_event.28
 			}
 			ABY_scripted_effect_getsokku_plus_effect = yes
 			ABY_scripted_effect_getsokku_plus_effect = yes
@@ -1313,45 +1165,8 @@ focus_tree = {
 			clr_country_flag = ABY_descision_focus_czecho_line_doing_flag
 			set_country_flag = ABY_descision_focus_czecho_8_completed_flag
 			#중점 완료시 얻는 보상
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command
-				}
-				country_event = {
-					id = ABY_descision_focus_event.25
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_2
-				}
-				country_event = {
-					id = ABY_descision_focus_event.26
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_3
-				}
-				country_event = {
-					id = ABY_descision_focus_event.27
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_4
-				}
-				country_event = {
-					id = ABY_descision_focus_event.28
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ABY_idea_no_command_5
-				}
-				country_event = {
-					id = ABY_descision_focus_event.29
-				}
+			country_event = {
+				id = ABY_descision_focus_event.29
 			}
 			every_state = {
 				limit = {
@@ -2089,6 +1904,17 @@ focus_tree = {
 					add_idea = ABY_idea_army_new_empty
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_modifier_army_sub_unit_militia_defence_factor = -0.1
+				}
+				add_to_variable = {
+					ABY_var_land_reinforce_rate = -0.03
+				}
+				add_to_variable = {
+					ABY_var_modifier_army_sub_unit_militia_attack_factor = -0.1
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2124,6 +1950,11 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_army_new_attack
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_army_attack_factor = 0.1
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -2163,6 +1994,11 @@ focus_tree = {
 					add_idea = ABY_idea_army_new_defence
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_army_defence_factor = 0.1
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2200,6 +2036,14 @@ focus_tree = {
 					add_idea = ABY_idea_army_new_4
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_dig_in_speed_factor = 0.15
+				}
+				add_to_variable = {
+					ABY_var_max_dig_in = 5
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2235,6 +2079,14 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_army_new_5
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_command_power_gain = 0.25
+				}
+				add_to_variable = {
+					ABY_var_command_power_gain_mult = 0.15
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -2275,6 +2127,11 @@ focus_tree = {
 					add_idea = ABY_idea_army_new_6
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_conscription_factor = 0.1
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2310,6 +2167,14 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_army_new_7
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_army_artillery_attack_factor = 0.15
+				}
+				add_to_variable = {
+					ABY_var_army_artillery_defence_factor = 0.15
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -2352,6 +2217,11 @@ focus_tree = {
 					add_idea = ABY_idea_army_new_8
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_max_planning_factor = 0.1	
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2387,6 +2257,14 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_army_new_9
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_out_of_supply_factor = -0.05
+				}
+				add_to_variable = {
+					ABY_var_supply_consumption_factor = -0.1
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -2426,6 +2304,11 @@ focus_tree = {
 					add_idea = ABY_idea_army_new_10
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_army_org_regain = 0.1
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2461,6 +2344,11 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_army_new_11
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_supply_node_range = 0.10
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -2500,6 +2388,14 @@ focus_tree = {
 					add_idea = ABY_idea_army_new_12
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_army_org_factor = 0.05
+				}
+				add_to_variable = {
+					ABY_var_breakthrough_factor = 0.05
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2536,6 +2432,20 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_army_new_13
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_command_power_gain = 0.25
+				}
+				add_to_variable = {
+					ABY_var_command_power_gain_mult = 0.1
+				}
+				add_to_variable = {
+					ABY_var_dig_in_speed_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_max_dig_in = 5
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -2579,6 +2489,23 @@ focus_tree = {
 					add_idea = ABY_idea_army_new_14
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_minimum_training_level = -0.1
+				}
+				add_to_variable = {
+					ABY_var_army_org_regain = 0.05
+				}
+				add_to_variable = {
+					ABY_var_supply_consumption_factor = -0.05
+				}
+				add_to_variable = {
+					ABY_var_conscription_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_out_of_supply_factor = -0.05
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2618,6 +2545,23 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_army_new_15
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_army_artillery_defence_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_army_artillery_attack_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_supply_node_range = 0.05
+				}
+				add_to_variable = {
+					ABY_var_breakthrough_factor = 0.05
+				}
+				add_to_variable = {
+					ABY_var_army_org_factor = 0.05
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -2699,6 +2643,11 @@ focus_tree = {
 					province = 3700
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_modifier_army_sub_unit_category_halo_attack_factor = 0.25
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2732,6 +2681,20 @@ focus_tree = {
 				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
 				BA_halo_infantry_cap_edit_effect = yes
 			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_halo_new_3
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_modifier_army_sub_unit_category_halo_speed_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_modifier_army_sub_unit_category_halo_max_org_factor = 0.25
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2764,6 +2727,20 @@ focus_tree = {
 			hidden_effect = {
 				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
 				BA_halo_infantry_cap_edit_effect = yes
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_new_empty
+					add_idea = ABY_idea_halo_new_4
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_modifier_army_sub_unit_category_halo_org_recovery_cap_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_modifier_army_sub_unit_category_halo_defence_factor = 0.25
+				}
 			}
 			#중점 완료시 얻는 보상
 		}
@@ -2851,6 +2828,14 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_halo_new_6
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_modifier_army_sub_unit_halo_infantry_defence_factor = 0.05
+				}
+				add_to_variable = {
+					ABY_var_modifier_army_sub_unit_halo_infantry_attack_factor = 0.05
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -3004,6 +2989,14 @@ focus_tree = {
 					add_idea = ABY_idea_halo_new_10
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_modifier_army_sub_unit_halo_infantry_defence_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_modifier_army_sub_unit_halo_infantry_attack_factor = 0.1
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3088,6 +3081,8 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = ABY_tt_kivotos_army_recruit
+			set_country_flag = ABY_flag_kivotos_army_recruit
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3163,6 +3158,35 @@ focus_tree = {
 					add_idea = ABY_idea_air_new_1
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_air_cas_present_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_air_range_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_air_agility_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_air_mission_efficiency = 0.25
+				}
+				add_to_variable = {
+					ABY_var_air_weather_penalty = -0.25
+				}
+				add_to_variable = {
+					ABY_var_air_accidents_factor = -0.25
+				}
+				add_to_variable = {
+					ABY_var_air_mission_xp_gain_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_air_night_penalty = -0.25
+				}
+				add_to_variable = {
+					ABY_var_army_attack_factor = -0.1
+				}
+			}
 			custom_effect_tooltip = ABY_new_tt_2_1
 			hidden_effect = {
 				set_technology = {
@@ -3235,6 +3259,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3263,6 +3292,8 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = ABY_tt_kivotos_fighter_get
+			set_country_flag = ABY_flag_kivotos_fighter_get
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3301,6 +3332,17 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_air_new_4
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_air_cas_present_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_air_mission_xp_gain_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_air_mission_efficiency = 0.1
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -3343,6 +3385,17 @@ focus_tree = {
 					add_idea = ABY_idea_air_new_5
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_air_agility_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_air_mission_xp_gain_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_air_mission_efficiency = 0.1
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3375,6 +3428,11 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_air_new_6
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_air_cas_present_factor = 0.05
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -3411,6 +3469,11 @@ focus_tree = {
 					add_idea = ABY_idea_air_new_7
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_air_range_factor = 0.05
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3443,6 +3506,11 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_air_new_8
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_air_agility_factor = 0.05
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -3479,6 +3547,11 @@ focus_tree = {
 					add_idea = ABY_idea_air_new_9
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_air_accidents_factor = -0.1
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3511,6 +3584,17 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_air_new_10
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_air_weather_penalty = -0.1
+				}
+				add_to_variable = {
+					ABY_var_air_night_penalty = -0.1
+				}
+				add_to_variable = {
+					ABY_var_air_cas_present_factor = 0.05
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -3550,6 +3634,11 @@ focus_tree = {
 					add_idea = ABY_idea_air_new_11
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_air_accidents_factor = -0.25
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3587,6 +3676,11 @@ focus_tree = {
 					add_idea = ABY_idea_air_new_12
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_air_range_factor = 0.15
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3619,6 +3713,17 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_air_new_13
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_air_weather_penalty = -0.1
+				}
+				add_to_variable = {
+					ABY_var_air_night_penalty = -0.1
+				}
+				add_to_variable = {
+					ABY_var_air_agility_factor = 0.05
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -3656,6 +3761,32 @@ focus_tree = {
 					add_idea = ABY_idea_navy_new_1
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_navy_org_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_navy_max_range_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_navy_submarine_attack_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_navy_submarine_defence_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_navy_screen_attack_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_navy_screen_defence_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_navy_capital_ship_attack_factor = 0.25
+				}
+				add_to_variable = {
+					ABY_var_navy_capital_ship_defence_factor = 0.25
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3684,6 +3815,41 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = ABY_new_tt_3_1
+			random_owned_state = {
+				limit = {
+					any_state = {
+						is_coastal = yes
+						is_controlled_by = ABY
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			create_equipment_variant = {
+				name = "Ersatz Monarch"					
+				type = ship_hull_heavy_1
+				name_group = AUS_BB_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_1
+					fixed_ship_secondaries_slot =ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_bb_1
+					front_1_custom_slot = ship_heavy_battery_1
+					mid_1_custom_slot = empty
+					mid_2_custom_slot = empty
+					rear_1_custom_slot = empty
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3719,6 +3885,14 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_navy_new_3
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_navy_max_range_factor = 0.15
+				}
+				add_to_variable = {
+					ABY_var_navy_org_factor = 0.05
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -3758,6 +3932,14 @@ focus_tree = {
 					add_idea = ABY_idea_navy_new_4
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_navy_max_range_factor = 0.05
+				}
+				add_to_variable = {
+					ABY_var_navy_org_factor = 0.15
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3790,6 +3972,14 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_navy_new_5
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_navy_max_range_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_navy_org_factor = 0.05
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -3826,6 +4016,14 @@ focus_tree = {
 					add_idea = ABY_idea_navy_new_6
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_navy_capital_ship_defence_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_navy_capital_ship_attack_factor = 0.1
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3854,6 +4052,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3882,6 +4085,20 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			random_owned_state = {
+				limit = {
+					any_state = {
+						is_coastal = yes
+						is_controlled_by = ABY
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3913,6 +4130,51 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			if = {
+				limit = {
+					not = { has_dlc = "Man the Guns" }
+				}
+				add_tech_bonus = {
+					bonus = 3.0
+					uses = 1
+					category = shbb_tech
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						not = { has_tech = ship_hull_super_heavy }
+					}
+					set_technology = {
+						ship_hull_super_heavy = 1
+					}
+				}
+				custom_effect_tooltip = ABY_yamato_tt
+				hidden_effect = {
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "ABY"
+							version_name = "Hoshino Class"
+						}
+						name = "Danubia"
+						requested_factories = 1
+						progress = 0.75
+						amount = 1
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "ABY"
+							version_name = "Hoshino Class"
+						}
+						name = "Abydos"
+						requested_factories = 1
+						progress = 0.75
+						amount = 1
+					}
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3941,6 +4203,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			air_experience = 75
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = light_air
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3973,6 +4241,14 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_navy_new_11
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_navy_submarine_defence_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_navy_submarine_attack_factor = 0.1
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -4009,6 +4285,14 @@ focus_tree = {
 					add_idea = ABY_idea_navy_new_12
 				}
 			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_navy_screen_defence_factor = 0.1
+				}
+				add_to_variable = {
+					ABY_var_navy_screen_attack_factor = 0.1
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -4041,6 +4325,11 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = ABY_idea_army_new_empty
 					add_idea = ABY_idea_navy_new_13
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_navy_org_factor = 0.1
 				}
 			}
 			#중점 완료시 얻는 보상
@@ -4695,6 +4984,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = ABY_tt_research_focus
+			add_timed_idea = {
+				idea = ABY_idea_research_infantry
+				days = 360
+			}
 			#중점 완료시 얻는 보상
 		}
 	}

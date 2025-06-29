@@ -23696,19 +23696,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 50
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_german_1		
 		}
@@ -23722,19 +23723,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 100
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_german_3		
 		}
@@ -23748,19 +23750,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 470
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_german_2		
 		}
@@ -23774,19 +23777,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 520
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_german_4		
 		}
@@ -23800,19 +23804,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 570
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_german_5		
 		}
@@ -23826,19 +23831,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 620
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_german_6		
 		}
@@ -23852,19 +23858,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 670
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_german_8		
 		}
@@ -23878,19 +23885,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 720
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_german_7		
 		}
@@ -23904,19 +23912,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 770
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_german_9		
 		}
@@ -23930,19 +23939,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 50
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_czecho_1		
 		}
@@ -23956,19 +23966,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 100
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_czecho_2		
 		}
@@ -23982,19 +23993,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 150
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_czecho_3		
 		}
@@ -24008,19 +24020,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 200
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_czecho_4		
 		}
@@ -24034,19 +24047,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 250
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_czecho_5		
 		}
@@ -24060,19 +24074,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 300
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_czecho_6		
 		}
@@ -24086,19 +24101,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 350
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_czecho_7		
 		}
@@ -24112,19 +24128,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 400
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_czecho_8		
 		}
@@ -24138,19 +24155,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 450
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_czecho_9		
 		}
@@ -24164,19 +24182,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 500
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_czecho_10		
 		}
@@ -24190,19 +24209,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 550
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_czecho_11		
 		}
@@ -24216,20 +24236,21 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			has_country_flag = ABY_flag_recovered_land
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 50
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_czecho_12		
 		}
@@ -24243,19 +24264,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 50
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_abydos_3		
 		}
@@ -24269,19 +24291,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 100
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_abydos_6		
 		}
@@ -24295,19 +24318,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 150
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_abydos_1		
 		}
@@ -24321,19 +24345,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 200
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_abydos_2		
 		}
@@ -24347,19 +24372,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 250
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_abydos_5		
 		}
@@ -24373,19 +24399,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 300
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_abydos_9		
 		}
@@ -24399,19 +24426,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 350
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_abydos_4		
 		}
@@ -24425,19 +24453,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 400
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_abydos_7		
 		}
@@ -24451,19 +24480,20 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 820
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_abydos_11		
 		}
@@ -24477,7 +24507,7 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			HYA = {
 				exists = no
@@ -24486,13 +24516,14 @@ ABY_descision_category_focus = {
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 50
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_abydos_14		
 		}
@@ -24506,20 +24537,21 @@ ABY_descision_category_focus = {
         }
 
 		activation = {
-			has_country_flag = ABY_flag_in_develop
+			
 			has_country_flag = ABY_descision_focus_first_completed_flag
 			has_country_flag = ABY_descision_focus_czecho_12_completed_flag
 			is_ai = yes
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 50
 
-		complete_effect = {		
+		timeout_effect = {		
 			add_political_power = -49
 			complete_national_focus = ABY_focus_abydos_15		
 		}
@@ -24535,20 +24567,21 @@ ABY_descision_category_masaryk = {
         }
 
 		activation = {                                                                                                             
-			has_country_flag = ABY_flag_in_develop  
+			  
 			NOT = {
 				has_idea = ABY_idea_czecho_1_person
 			}
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 5
 
-		complete_effect = {		
+		timeout_effect = {		
 			country_event = {
 				id = ABY_descision_focus_event.42
 			}		
@@ -24563,7 +24596,7 @@ ABY_descision_category_masaryk = {
         }
 
 		activation = {                                                                                                             
-			has_country_flag = ABY_flag_in_develop  
+			  
 			NOT = {
 				has_idea = ABY_idea_czecho_1_person
 			}
@@ -24571,13 +24604,14 @@ ABY_descision_category_masaryk = {
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 30
 
-		complete_effect = {		
+		timeout_effect = {		
 			country_event = {
 				id = ABY_descision_focus_event.43
 			}		
@@ -24592,7 +24626,7 @@ ABY_descision_category_masaryk = {
         }
 
 		activation = {                                                                                                             
-			has_country_flag = ABY_flag_in_develop  
+			  
 			NOT = {
 				has_idea = ABY_idea_czecho_1_person
 			}
@@ -24600,13 +24634,14 @@ ABY_descision_category_masaryk = {
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 30
 
-		complete_effect = {		
+		timeout_effect = {		
 			country_event = {
 				id = ABY_descision_focus_event.44
 			}		
@@ -24621,7 +24656,7 @@ ABY_descision_category_masaryk = {
         }
 
 		activation = {                                                                                                             
-			has_country_flag = ABY_flag_in_develop  
+			  
 			NOT = {
 				has_idea = ABY_idea_czecho_1_person
 			}
@@ -24630,13 +24665,14 @@ ABY_descision_category_masaryk = {
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 30
 
-		complete_effect = {		
+		timeout_effect = {		
 			country_event = {
 				id = ABY_descision_focus_event.45
 			}		
@@ -24651,7 +24687,7 @@ ABY_descision_category_masaryk = {
         }
 
 		activation = {                                                                                                             
-			has_country_flag = ABY_flag_in_develop  
+			  
 			NOT = {
 				has_idea = ABY_idea_czecho_1_person
 			}
@@ -24660,13 +24696,14 @@ ABY_descision_category_masaryk = {
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 30
 
-		complete_effect = {		
+		timeout_effect = {		
 			country_event = {
 				id = ABY_descision_focus_event.46
 			}		
@@ -24681,7 +24718,7 @@ ABY_descision_category_masaryk = {
         }
 
 		activation = {                                                                                                             
-			has_country_flag = ABY_flag_in_develop  
+			  
 			NOT = {
 				has_idea = ABY_idea_czecho_1_person
 			}
@@ -24689,13 +24726,14 @@ ABY_descision_category_masaryk = {
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 30
 
-		complete_effect = {		
+		timeout_effect = {		
 			country_event = {
 				id = ABY_descision_focus_event.47
 			}		
@@ -24710,7 +24748,7 @@ ABY_descision_category_masaryk = {
         }
 
 		activation = {                                                                                                             
-			has_country_flag = ABY_flag_in_develop  
+			  
 			NOT = {
 				has_idea = ABY_idea_czecho_1_person
 			}
@@ -24718,13 +24756,14 @@ ABY_descision_category_masaryk = {
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 30
 
-		complete_effect = {		
+		timeout_effect = {		
 			country_event = {
 				id = ABY_descision_focus_event.48
 			}		
@@ -24739,7 +24778,7 @@ ABY_descision_category_masaryk = {
         }
 
 		activation = {                                                                                                             
-			has_country_flag = ABY_flag_in_develop  
+			  
 			NOT = {
 				has_idea = ABY_idea_czecho_1_person
 			}
@@ -24748,13 +24787,14 @@ ABY_descision_category_masaryk = {
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 30
 
-		complete_effect = {		
+		timeout_effect = {		
 			country_event = {
 				id = ABY_descision_focus_event.49
 			}		
@@ -24769,7 +24809,7 @@ ABY_descision_category_masaryk = {
         }
 
 		activation = {                                                                                                             
-			has_country_flag = ABY_flag_in_develop  
+			  
 			NOT = {
 				has_idea = ABY_idea_czecho_1_person
 			}
@@ -24778,13 +24818,14 @@ ABY_descision_category_masaryk = {
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 30
 
-		complete_effect = {		
+		timeout_effect = {		
 			country_event = {
 				id = ABY_descision_focus_event.50
 			}		
@@ -24799,7 +24840,7 @@ ABY_descision_category_masaryk = {
         }
 
 		activation = {                                                                                                             
-			has_country_flag = ABY_flag_in_develop  
+			  
 			NOT = {
 				has_idea = ABY_idea_czecho_1_person
 			}
@@ -24811,13 +24852,14 @@ ABY_descision_category_masaryk = {
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 30
 
-		complete_effect = {		
+		timeout_effect = {		
 			country_event = {
 				id = ABY_descision_focus_event.51
 			}		
@@ -24832,7 +24874,7 @@ ABY_descision_category_masaryk = {
         }
 
 		activation = {                                                                                                             
-			has_country_flag = ABY_flag_in_develop  
+			  
 			NOT = {
 				has_idea = ABY_idea_czecho_1_person
 			}
@@ -24840,13 +24882,14 @@ ABY_descision_category_masaryk = {
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 30
 
-		complete_effect = {		
+		timeout_effect = {		
 			country_event = {
 				id = ABY_descision_focus_event.52
 			}		
@@ -24861,7 +24904,7 @@ ABY_descision_category_masaryk = {
         }
 
 		activation = {                                                                                                             
-			has_country_flag = ABY_flag_in_develop  
+			  
 			NOT = {
 				has_idea = ABY_idea_czecho_1_person
 			}
@@ -24869,13 +24912,14 @@ ABY_descision_category_masaryk = {
 		}
 
         available = {
+			always = no
         }
 
 		fire_only_once = yes
  
 		days_mission_timeout = 30
 
-		complete_effect = {		
+		timeout_effect = {		
 			country_event = {
 				id = ABY_descision_focus_event.53
 			}		
@@ -24977,6 +25021,7 @@ ABY_descision_category_two_world = {
                 compare = less_than
 				tooltip = ABY_tt_getsokku_less_100
             }
+            num_of_civilian_factories > 5
         }
 
 		fire_only_once = no
@@ -25020,6 +25065,7 @@ ABY_descision_category_two_world = {
                 compare = less_than
 				tooltip = ABY_tt_getsokku_less_100
             }
+            num_of_civilian_factories > 5
         }
 
 		fire_only_once = no
@@ -25038,5 +25084,180 @@ ABY_descision_category_two_world = {
 			ABY_scripted_effect_getsokku_plus_effect = yes
 			ABY_scripted_effect_getsokku_plus_effect = yes
         }
+	}
+}
+ABY_descision_category_kivotos = {
+	ABY_descision_recruit_halo = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		on_map_mode = map_and_decisions_view
+
+		state_target = yes
+
+		target_trigger = {
+			FROM = { 
+				OR = {
+					state = 9
+					state = 75
+					state = 152
+					state = 976
+					state = 4
+					state = 52
+					state = 55
+					state = 59
+					state = 1022
+					state = 64
+					state = 86
+					state = 85
+					state = 763
+					state = 8
+					state = 34
+					state = 6
+					state = 977
+					state = 35
+					state = 7
+					state = 36
+					state = 16
+					state = 24
+					state = 14
+					state = 141
+				}
+			}
+		}
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			tag = ABY
+			has_country_flag = ABY_flag_kivotos_army_recruit
+		}
+
+		available = {
+			has_country_flag = ABY_flag_kivotos_army_recruit
+			FROM = {
+				is_controlled_by = ABY
+			}
+			has_completed_focus = ABY_focus_halo_1
+		}
+
+		fire_only_once = yes
+
+		days_remove = 75
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -25
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			FROM = {
+				create_unit = {
+					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
+		}
+	}
+	ABY_descision_get_fighter = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		on_map_mode = map_and_decisions_view
+
+		state_target = yes
+
+		target_trigger = {
+			FROM = { 
+				OR = {
+					state = 9
+					state = 75
+					state = 152
+					state = 976
+					state = 4
+					state = 52
+					state = 55
+					state = 59
+					state = 1022
+					state = 64
+					state = 86
+					state = 85
+					state = 763
+					state = 8
+					state = 34
+					state = 6
+					state = 977
+					state = 35
+					state = 7
+					state = 36
+					state = 16
+					state = 24
+					state = 14
+					state = 141
+				}
+			}
+		}
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			tag = ABY
+			has_country_flag = ABY_flag_kivotos_fighter_get
+		}
+
+		available = {
+			has_country_flag = ABY_flag_kivotos_fighter_get
+			FROM = {
+				is_controlled_by = ABY
+			}
+			has_completed_focus = ABY_focus_air_3
+		}
+
+		fire_only_once = yes
+
+		days_remove = 75
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -25
+			}
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_5
+				amount = 25
+				variant_name = "Kivotos-J.011"
+				producer = KBT
+			}
+		}
 	}
 }

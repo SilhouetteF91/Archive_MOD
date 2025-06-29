@@ -1281,7 +1281,7 @@ country_event = {
 	trigger = {
 		tag = ABY
 		date > 1937.01.01
-
+		always = no
 	}
 
 	option = {
@@ -1345,6 +1345,7 @@ country_event = {
 	trigger = {
 		date > 1937.09.14
 		tag = ABY
+		always = no
 	}
 
 	option = {
@@ -16236,7 +16237,7 @@ country_event = {
 	trigger = {
 		date > 1937.09.14
 		tag = ABY
-		has_country_flag = ABY_flag_in_develop
+		
 	}
 	fire_only_once = yes
 
@@ -16685,7 +16686,7 @@ country_event = {
 		152 = {is_controlled_by = ABY}
 		153 = {is_controlled_by = ABY}
 		848 = {is_controlled_by = ABY}
-		has_country_flag = ABY_flag_in_develop
+		
 	}
 	fire_only_once = yes
 
@@ -16897,7 +16898,7 @@ country_event = {
 	trigger = {
 		date > 1937.01.01
 		tag = ABY
-		has_country_flag = ABY_flag_in_develop
+		
 	}
 	fire_only_once = yes
 
@@ -16943,7 +16944,7 @@ country_event = {
 	trigger = {
 		date > 1937.03.08
 		tag = ABY
-		has_country_flag = ABY_flag_in_develop
+		
 	}
 	fire_only_once = yes
 
@@ -17757,6 +17758,9 @@ country_event = {
 	option = {
 		name = ABY_descision_focus_event.63.a
 		ai_chance = { factor = 100 }
+		set_technology = {
+			pre_modern_infantry_equipment = 1
+		}
 	}
 }
 
@@ -18285,7 +18289,7 @@ country_event = {
 
 	trigger = {
 		tag = ABY
-		has_country_flag = ABY_flag_in_develop
+		
 		has_country_flag = ABY_flag_research_TRM
 		has_completed_focus = ABY_focus_halo_2
 		controls_state = 55
@@ -18306,7 +18310,7 @@ country_event = {
 
 	trigger = {
 		tag = ABY
-		has_country_flag = ABY_flag_in_develop
+		
 		has_country_flag = ABY_flag_research_GEH
 		has_completed_focus = ABY_focus_halo_2
 		controls_state = 16
@@ -18327,7 +18331,7 @@ country_event = {
 
 	trigger = {
 		tag = ABY
-		has_country_flag = ABY_flag_in_develop
+		
 		has_country_flag = ABY_flag_research_MIL
 		has_completed_focus = ABY_focus_halo_2
 	}
@@ -18355,7 +18359,7 @@ country_event = {
 
 	trigger = {
 		tag = ABY
-		has_country_flag = ABY_flag_in_develop
+		
 		has_completed_focus = ABY_focus_halo_2
 		controls_state = 64
 	}

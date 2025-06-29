@@ -7420,6 +7420,22 @@ ideas = {
 				stability_factor = -0.2
 			}
 		}
+		ABY_idea_research_infantry = {
+			allowed_civil_war = {
+                always = yes
+            }
+
+			on_remove = {
+				country_event = {
+					id = ABY_descision_focus_event.63
+				}
+			}
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				research_speed_factor = -0.05
+			}
+		}
 	}
 	industrial_concern = {
 		ABY_industrial_concern_neptis_group = {
