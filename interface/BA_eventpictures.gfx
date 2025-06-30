@@ -299,6 +299,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_GEI_world_message.png"
 	}
 
+	spriteType = { 
+		name = "GFX_news_event_GEI_invasion"
+		texturefile = "gfx/event_pictures/news_event_GEI_invasion.png"
+	}
+
 
   #
 

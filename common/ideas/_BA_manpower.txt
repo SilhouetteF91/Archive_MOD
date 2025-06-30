@@ -35,6 +35,35 @@ ideas = {
 			cancel_if_invalid = no
 		}
 
+		GEI_DEC_robot_army = { # 오토마톤 생산 
+
+			picture = GFX_idea_GEI_erosion_army
+
+			cost = 150
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.4
+				weekly_manpower = 1000
+				mobilization_speed = 0.5
+				training_time_factor = -0.2
+				ai_focus_aggressive_factor = 3
+				ai_desired_divisions_factor = 7.5
+				no_supply_grace = 500
+				attrition = -0.4
+				supply_consumption_factor = -0.6
+			}
+			cancel_if_invalid = no
+		}
+
 		ARI_manpower = {
 			picture = volunteer_only
 			cost = 150
