@@ -3313,6 +3313,15 @@ leader_traits = {
 		max_planning_factor = 0.10
 		planning_speed = 0.10
 	}
+	SHA_western_maoist = { #서방의 마오주의자
+		random = no
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+		}
+	}
 	SHA_chairman = {
 		random = no
 		political_advisor_cost_factor = -0.1

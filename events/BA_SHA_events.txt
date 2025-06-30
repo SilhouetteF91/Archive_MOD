@@ -607,11 +607,17 @@ country_event = { #대약진 운동의 결과
 	title = shacom.26.t
 	desc = shacom.26.d
 	picture = GFX_report_event_tur_political_rally
-    is_triggered_only = yes
+	trigger = {
+		has_country_flag = SHA_glm_agriculture_flag
+		has_country_flag = SHA_glm_arming_flag
+		has_country_flag = SHA_glm_culture_flag
+		has_country_flag = SHA_glm_military_flag
+	}
 	fire_only_once = yes
 
 	option = { #ㄱㄱ
 		name = shacom.26.a
+		set_country_flag = SHA_stop_coleective_agri
 		if = {
 			limit = {
 				has_country_flag = SHA_glm_agriculture_flag
@@ -713,6 +719,19 @@ country_event = { #가톨릭교도 저항 분쇄
 	option = { #굿
 		name = shacom.28.a
 		remove_ideas = SHA_resistance_of_catholics_1
+	}
+}
+country_event = { #농촌사회주의 설명
+	id = shacom.29
+	title = shacom.29.t
+	desc = shacom.29.d
+	picture = GFX_report_event_SWE_pajala_bombed_building
+    is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #굿
+		name = shacom.29.a
+		add_political_power = 10
 	}
 }
 

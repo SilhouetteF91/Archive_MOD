@@ -645,4 +645,28 @@ characters={
 			}
 		}
 	}
+	SHA_soviet_military_advisors = {
+		name = SHA_soviet_military_advisors
+		advisor = {
+			slot = theorist
+			traits = {
+				HND_soviet_helper_trait
+			}
+			idea_token = SHA_soviet_military_advisors
+			allowed = { 
+				original_tag = SHA
+			}
+			available = {
+				has_completed_focus = SHA_soviet_diplo_6
+			}
+			visible = {
+				has_completed_focus = SHA_soviet_diplo_6
+			}
+		}
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_communist_army"
+			}
+		}
+	}
 }
