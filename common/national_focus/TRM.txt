@@ -6692,7 +6692,7 @@ focus_tree = {
 				TRN_tmwmal = { 
 					unit_leader_event = { id = trnfla.17 days = 14 } 
 				}
-				country_event = { id = trnfla.6 days = 180 }
+				country_event = { id = trnfla.6 days = 365 }
 			}
 		}
 	}
@@ -7259,6 +7259,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = TRN_new_trinity_culture_tt
+			IF = {
+				limit ={ has_active_mission = TRN_Mika_honor_social_problem }
+				add_days_mission_timeout = {
+					mission = add_days_mission_timeout
+					days = 180
+				}
+			}
 			hidden_effect = {
 
 			}
@@ -7934,7 +7941,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = party_popularity_100@fascism
-
+			custom_effect_tooltip = tooltip_white_line
 			swap_ideas = {
 				remove_idea = TRN_trinity_cause_2_ns
 				add_idea = TRN_trinity_cause_3_ns
@@ -8236,7 +8243,7 @@ focus_tree = {
 			activate_targeted_decision = { target = TRM decision = TRN_lend_our_support }
 			activate_targeted_decision = { target = TRM decision = TRN_international_propaganda }
 			hidden_effect = {
-				country_event = { id = trinity.44 days = 14 }
+				country_event = { id = trinity.44 days = 14 random_days = 35 }
 			}
 		}
 	}
@@ -8844,39 +8851,6 @@ focus_tree = {
 				type = puppet_wargoal_focus
 			}
 			activate_targeted_decision = { decision = TRN_sha_attack_use_austrian target = TRM }
-		}
-	}
-
-	focus = { #
-		id = TRN_secure_yugoslavia
-		icon = GFX_focus_generic_attack_yugoslavia
-		x = -1
-		y = 1
-		relative_position_id = TRN_Breaking_Sanhaijing_treaty
-		cost = 5
-
-		bypass = {
-
-		}
-
-		available = {
-			is_subject = no
-			YUG = {
-				is_subject = no
-				NOT = { is_in_faction_with = ROOT }
-			}
-		}
-		prerequisite = { 
-			focus = TRN_Breaking_Sanhaijing_treaty 
-			focus = TRN_secure_hungary
-		}
-		mutually_exclusive = {  }
-
-		ai_will_do = {
-
-		}
-		completion_reward = {
-
 		}
 	}
 

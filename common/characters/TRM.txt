@@ -19,7 +19,9 @@ characters={
 			planning_skill=3
 			logistics_skill=2
 			desc = TRN_Nagisa_advisor_desc
-			 
+			visible = {
+				NOT = { has_character_flag = TRN_nagisa_in_jail } # 실제로 감옥에 간건 아님
+			}
 		}
 		country_leader={
 			ideology=tea_party_neutrality_ideology
