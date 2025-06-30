@@ -2402,6 +2402,24 @@ country_event = { #내부의적 동시다발테러 이벤트
 	}
 }
 
+country_event = { # 카이저 코퍼레이션 반란 
+	id = GEI_DEC_event.16
+	title = GEI_DEC_event.16.t
+	desc = GEI_DEC_event.16.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.16.a
+		add_timed_idea = {
+				idea = GEI_DEC_homefront
+				days = 365
+			}
+		
+	}
+}
+
 
 
 
