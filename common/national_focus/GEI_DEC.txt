@@ -1138,10 +1138,12 @@ focus_tree = {
 				retire_character = GEH_gndnzk
 				retire_character = GEH_dlqnzl
 				retire_character = GEH_motomiya_chiaki
+				country_event = {id = GEI_DEC_event.17}
 			}
 
 			GEH = {
 				retire_character = GEH_ann_fudou
+				country_event = {id = GEI_DEC_event.19}
 			}
 
 			MIL = {
@@ -1154,6 +1156,7 @@ focus_tree = {
 				retire_character = TRN_dlclzk
 				retire_character = TRN_dnxkwmal_tkznfkzh
 				retire_character = TRN_dkdhahfl_alsp
+				country_event = {id = GEI_DEC_event.18}
 			}
 		}
 	}

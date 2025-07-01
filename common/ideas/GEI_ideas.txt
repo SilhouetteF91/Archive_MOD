@@ -1711,8 +1711,8 @@ ideas = {
 			}
 
 			modifier = {
-				army_defence_factor = -0.35
-                army_attack_factor = -0.35
+				army_defence_factor = -0.4
+                army_attack_factor = -0.4
 				army_strength_factor = -0.3
 
 			}
@@ -1746,5 +1746,26 @@ ideas = {
 
 			cancel_if_invalid = no
 		}
+
+		GEI_DEC_terror = { # 공격
+            picture = GEI_DEC_metrix
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+            modifier = {
+                max_planning = -0.3
+				stability_factor = -0.1
+				army_defence_factor = -0.1
+                army_attack_factor = -0.1
+            }
+        }
 	}
 }
