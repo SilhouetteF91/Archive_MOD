@@ -286,14 +286,6 @@ ideas = {
 				tag = GEK
 				attack_bonus_against = 0.1
 			}
-			targeted_modifier = {
-				tag = KPD
-				attack_bonus_against = 0.1
-			}
-			targeted_modifier = {
-				tag = NSD
-				attack_bonus_against = 0.1
-			}
 			cancel = {
 				owns_state = 64
 			}

@@ -2357,7 +2357,7 @@ focus_tree = {
 			hidden_effect = {
 				country_event = {
 					id = shacom.29
-					days = 2
+					days = 6
 				}
 			}
 		}
@@ -5581,10 +5581,10 @@ focus_tree = {
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 				
-				else = {
+				
+			}else = {
 					remove_ideas = SHA_austria_unemployment_problem
 				}
-			}
 		}
 	}
 
@@ -5714,9 +5714,12 @@ focus_tree = {
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 				
-				else = {
-					remove_ideas = SHA_austria_unemployment_problem
+			}
+			else_if = {
+				limit = {
+					has_idea = SHA_austria_unemployment_problem
 				}
+				remove_ideas = SHA_austria_unemployment_problem
 			}
 		}
 	}
@@ -5754,9 +5757,12 @@ focus_tree = {
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 				
-				else = {
-					remove_ideas = SHA_austria_unemployment_problem
+			}
+			else_if = {
+				limit = {
+					has_idea = SHA_austria_unemployment_problem
 				}
+				remove_ideas = SHA_austria_unemployment_problem
 			}
 		}
 	}
@@ -5844,9 +5850,12 @@ focus_tree = {
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 				
-				else = {
-					remove_ideas = SHA_austria_unemployment_problem
+			}
+			else_if = {
+				limit = {
+					has_idea = SHA_austria_unemployment_problem
 				}
+				remove_ideas = SHA_austria_unemployment_problem
 			}
 
 			976 = {
@@ -5908,9 +5917,12 @@ focus_tree = {
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 				
-				else = {
-					remove_ideas = SHA_austria_unemployment_problem
+			}
+			else_if = {
+				limit = {
+					has_idea = SHA_austria_unemployment_problem
 				}
+				remove_ideas = SHA_austria_unemployment_problem
 			}
 
 			152 = {
@@ -6757,9 +6769,12 @@ focus_tree = {
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 				
-				else = {
-					remove_ideas = SHA_austria_unemployment_problem
+			}
+			else_if = {
+				limit = {
+					has_idea = SHA_austria_unemployment_problem
 				}
+				remove_ideas = SHA_austria_unemployment_problem
 			}
 		}
 	}

@@ -160,7 +160,7 @@ SHA_communism_cat = {
 		icon = GFX_decision_generic_military
 		available = {
 			has_army_manpower = {
-				size > 450000
+				size > 400000
 			}
 		}
 		is_good = no
