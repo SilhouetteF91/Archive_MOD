@@ -295,7 +295,9 @@ focus_tree = {
 		cost = 10
 		available = {
 			is_subject = no
-			date > 1940.1.1
+			has_army_manpower = {
+				size > 249999
+			}
 			NOT = {
 				is_in_faction_with = TRM
 			}
@@ -316,27 +318,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARI_use_hanran
 		completion_reward = {
-			if = {
-				limit = {
-					has_tech = nukes
-				}
-				news_event = {
-					id = BA_news.36
-					hours = 6
-				}
-				TRM = {
-					launch_nuke = {
-						province = 6521
-						state = capital
-						controller = TRM
-						use_nuke = no
-					}
-					add_timed_idea = {
-						idea = ARI_make_collapse
-						days = 120
-					}
-				}
-			}
 			create_wargoal = {
 				target = TRM
 				type = annex_everything
@@ -588,7 +569,7 @@ focus_tree = {
 		id = ARI_TRM_penetration		#트리니티 침투
 		icon = GFX_focus_prc_infiltration
 		dynamic = yes
-		cost = 10
+		cost = 5
 		available = {
 			has_war = no
 			NOT = {
@@ -615,6 +596,38 @@ focus_tree = {
 			}
 			set_variable = {
 				ARI_penetration_per_var = 0.05
+			}
+		}
+	}
+	focus = {
+		id = ARI_TRM_attack		#천국의 창
+		icon = GFX_focus_rocketry
+		dynamic = yes
+		cost = 2
+		available = {
+			has_war_with = TRM
+		}
+		prerequisite = {
+			focus = ARI_TRM_penetration
+			focus = ARI_contact_with_azusa
+		}
+		x = 1
+		y = 1
+		relative_position_id = ARI_TRM_penetration
+		completion_reward = {
+			news_event = {
+				id = BA_news.36
+				hours = 6
+			}
+			every_country = {
+				limit = {
+					original_tag = TRM
+					has_war_with = ROOT
+				}
+				add_timed_idea = {
+					idea = ARI_make_collapse
+					days = 120
+				}
 			}
 		}
 	}
@@ -1056,7 +1069,7 @@ focus_tree = {
 		# 사태 파악
 		id = ARI_emergency_now
 		icon = GFX_goal_generic_neutrality_focus
-		cost = 5
+		cost = 2
 		x = 30
 		y = 0
 		available = {
@@ -1078,7 +1091,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARI_emergency_now
 		}
-		cost = 5
+		cost = 2
 		x = 1
 		y = 1
 		relative_position_id = ARI_emergency_now
@@ -1098,7 +1111,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARI_emergency_now
 		}
-		cost = 5
+		cost = 2
 		x = -1
 		y = 1
 		relative_position_id = ARI_emergency_now
@@ -1121,7 +1134,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARI_contact_with_workers_protest_groups
 		}
-		cost = 5
+		cost = 2
 		x = 0
 		y = 2
 		relative_position_id = ARI_emergency_now
@@ -1156,7 +1169,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ARI_exercise_of_dominance
 		}
-		cost = 5
+		cost = 2
 		x = -2
 		y = 3
 		relative_position_id = ARI_emergency_now
@@ -1199,7 +1212,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 5
+		cost = 2
 		x = 2
 		y = 3
 		relative_position_id = ARI_emergency_now
