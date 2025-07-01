@@ -1552,7 +1552,7 @@ news_event = { #
 	}
 }
 
-news_event = { #에덴 핵폭발
+news_event = { #에덴 공습
 	id = BA_news.36
 	title = BA_news.36.t
 	desc = BA_news.36.d
