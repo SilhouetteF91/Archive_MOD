@@ -380,14 +380,23 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARI_deceptive_operation
 		available = {
-			TRM = {
-				has_completed_focus = TRN_yurijono_seia
+			custom_trigger_tooltip = {
+				tooltip = ARI_contact_with_azusa_trigger_tt
+				TRM = {
+					OR = {
+						has_idea = TRM_great_depression
+						has_idea = TRN_broken_balance_ns
+					}
+				}
 			}
 		}
+		bypass = {
+			has_country_flag = ARI_azusa_comeback
+		}
 		completion_reward = {
-			TRM = {
-				TRN_dkwmtk = {
-					set_nationality = ARI
+			effect_tooltip = {
+				TRM = {
+					TRN_Shirasu_Azusa = { set_nationality = ARI }
 				}
 			}
 		}

@@ -8484,7 +8484,7 @@ focus_tree = {
 	focus = { 
 		id = TRN_winter_warfare
 		icon = GFX_focus_generic_winter_warfare
-		x = 0
+		x = -2
 		y = 2
 		relative_position_id = TRN_northern_kivotos_diplomacy
 		cost = 5
@@ -8513,6 +8513,38 @@ focus_tree = {
 				add_max_trait = 1
 				add_unit_leader_trait = winter_expert
 			}
+
+		}
+	}
+
+	focus = {
+		id = TRN_finland_focus
+		icon = GFX_focus_TRN_finland_focus
+		x = 0
+		y = 2
+		relative_position_id = TRN_northern_kivotos_diplomacy
+		cost = 5
+
+		bypass = {
+			
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+			FIN = { exists = yes }
+			NOT = { has_war_with = FIN }
+		}
+		prerequisite = { 
+			focus = TRN_denmark_or_war
+			focus = TRN_use_of_nordic_association
+		}
+		mutually_exclusive = {  }
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
 
 		}
 	}

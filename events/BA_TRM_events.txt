@@ -10253,7 +10253,7 @@ country_event = { # 아리우스 분교의 운명
 		TRN_add_Honor = yes
 		add_war_support = 0.02
 		IF = { 
-			limit = { has_character = TRN_dkwmtk }
+			limit = { has_character = TRN_Shirasu_Azusa }
 			custom_effect_tooltip = TRN_trinity_44_b_tt 
 		}
 	}
@@ -11147,8 +11147,8 @@ country_event = { # 본연으로
 		name = trnfla.29.a
 		effect_tooltip = {
 			IF ={
-				limit = { TRM = { has_character = TRN_dkwmtk }}
-				TRN_dkwmtk = { set_nationality = ARI }
+				limit = { TRM = { has_character = TRN_Shirasu_Azusa }}
+				TRN_Shirasu_Azusa = { set_nationality = ARI }
 			}
 		}
 		hidden_effect = {
@@ -11173,22 +11173,17 @@ country_event = { # 본연으로 - 2
 		set_country_flag = ARI_azusa_comeback
 		effect_tooltip = {
 			IF = {
-				limit = { has_character = TRN_dkwmtk }
+				limit = { has_character = ARI_Shirasu_Azusa }
 				add_advisor_role = {
-					character = TRN_dkwmtk
+					character = ARI_Shirasu_Azusa
 					advisor = {
 						slot = high_command
 						desc = TRN_Azusa_advisor_desc
-						idea_token = TRN_dkwmtk_high_command
+						idea_token = ARI_Shirasu_Azusa_high_command
 						traits = { army_commando_2 }
 						cost = 100
 					}
 				}
-			}
-			set_portraits = {
-				character = TRN_dkwmtk
-				army = { small ="GFX_ARI_Shirasu_Azusa_idea" }
-				civilian = { small ="GFX_ARI_Shirasu_Azusa_idea" }
 			}
 		}
 	}
