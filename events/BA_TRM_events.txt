@@ -11147,7 +11147,7 @@ country_event = { # 본연으로
 		name = trnfla.29.a
 		effect_tooltip = {
 			IF ={
-				limit = { TRN = { has_character = TRN_dkwmtk }}
+				limit = { TRM = { has_character = TRN_dkwmtk }}
 				TRN_dkwmtk = { set_nationality = ARI }
 			}
 		}
