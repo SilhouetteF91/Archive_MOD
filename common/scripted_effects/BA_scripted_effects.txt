@@ -130,6 +130,132 @@ BA_halo_special_forces_cap_edit_effect = {
 	}
 }
 
+BA_kuroko_infantry_cap_edit_effect = {
+	#쿠로코 특수 사단 제한 시스템 - 헤일로 보병 시스템을 참고하여 구현
+	#이것은 수정하려는 국가 범위에서 변수와 함께 실행해야 합니다. 그리고 이 효과는 히든 이펙트로 감싸져 있기에 보이지 않습니다.
+	#예시:
+	# custom_effect_tooltip = kivotos_kuroko_add1_tt
+	# set_variable = { BA_kuroko_infantry_cap_edit_var = 1 }
+	# BA_kuroko_infantry_cap_edit_effect = yes
+	#
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = BA_ban_kuroko_infantry_flag }
+			}
+			if = {
+				limit = {
+					has_template = "Kuroko Special Division"
+				}
+				add_to_variable = { kuroko_infantry_cap = BA_kuroko_infantry_cap_edit_var }
+				set_division_template_cap = {
+					division_template = "Kuroko Special Division"
+					division_cap = kuroko_infantry_cap
+				}
+			}
+			else_if = {
+				limit = { has_tech = kuroko_raid_technology }
+				division_template = {
+					name = "Kuroko Special Division"
+					division_names_group = GEI_INF_01
+					is_locked = yes
+					force_allow_recruiting = yes
+					division_cap = 0
+					regiments = {
+						kuroko_infantry = { x = 0 y = 0 }
+						kuroko_infantry = { x = 0 y = 1 }
+						kuroko_infantry = { x = 1 y = 0 }
+						kuroko_infantry = { x = 1 y = 1 }
+					}
+					support = {
+						halo_recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						signal_company = { x = 0 y = 2 }
+					}
+				}
+				add_to_variable = { kuroko_infantry_cap = BA_kuroko_infantry_cap_edit_var }
+				set_division_template_cap = {
+					division_template = "Kuroko Special Division"
+					division_cap = kuroko_infantry_cap
+				}
+			}
+		}
+		else = {
+			set_division_template_cap = {
+				division_template = "Kuroko Special Division"
+				division_cap = 0
+			}
+		}
+		set_variable = { BA_kuroko_infantry_cap_edit_var = 0 }
+	}
+}
+
+BA_kuroko_infantry_ban_effect = { #실행된 범위의 쿠로코 특수 사단을 0으로 만들고 쿠로코 사단 추가 효과에 영향을 받지 않게 만듭니다.
+	custom_effect_tooltip = BA_kuroko_infantry_ban_effect_tt
+	hidden_effect = {
+		set_country_flag = BA_ban_kuroko_infantry_flag # 쿠로코 사단 밴
+		if = {
+			limit = {
+				has_template = "Kuroko Special Division"
+			}
+			set_division_template_cap = {
+				division_template = "Kuroko Special Division"
+				division_cap = 0
+			}
+		}
+	}
+}
+
+BA_kuroko_infantry_unban_effect = { #이것은 단순히 실행된 범위의 쿠로코 사단 밴을 제거합니다
+	hidden_effect = {
+		if = { # 쿠로코 사단 밴 해제 하는 것
+			limit = { has_country_flag = BA_ban_kuroko_infantry_flag }
+			clr_country_flag = BA_ban_kuroko_infantry_flag # 쿠로코 사단 밴 해제
+		}
+		if = {
+			limit = {
+				has_template = "Kuroko Special Division"
+			}
+			set_division_template_cap = {
+				division_template = "Kuroko Special Division"
+				division_cap = kuroko_infantry_cap
+			}
+		}
+		else_if = { #만약 편제가 없지만 연구가 되어있다면 편제를 만들어 줍니다.
+			limit = { has_tech = kuroko_raid_technology }
+			hidden_effect = {
+				set_variable = { ROOT.kuroko_infantry_cap = 0 } # 사단 제한, 쿠로코 사단의 사단 제한과 같아야 함'
+				if = {
+					limit = {
+						NOT = { has_template = "Kuroko Special Division" }
+					}
+					
+					division_template = {
+						name = "Kuroko Special Division"
+						division_names_group = GEI_INF_01
+						is_locked = yes
+						force_allow_recruiting = yes
+						division_cap = 0
+						regiments = {
+							kuroko_infantry = { x = 0 y = 0 }
+							kuroko_infantry = { x = 0 y = 1 }
+							kuroko_infantry = { x = 1 y = 0 }
+							kuroko_infantry = { x = 1 y = 1 }
+						}
+						support = {
+							halo_recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							signal_company = { x = 0 y = 2 }
+						}
+					}
+				}
+				set_variable = { BA_kuroko_infantry_cap_edit_var = 1 }
+				BA_kuroko_infantry_cap_edit_effect = yes
+			}
+		}
+	}
+}
+
 BA_halo_infantry_ban_effect = { #실행된 범위의 헤일로 보병을 0으로 만들고 헤일로 보병 사단 추가 효과에 영향을 받지 않게 만듭니다.
 	custom_effect_tooltip = BA_halo_infantry_ban_effect_tt
 	hidden_effect = {

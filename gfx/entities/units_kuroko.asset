@@ -43,7 +43,7 @@ entity = {
 }
 
 entity = {
-	name = "GEI_infantry_2_entity"
+	name = "GEI_kuroko_infantry_2_entity"
 	pdxmesh = "GEI_kuroko_infantry_mg_mesh"
 
 	default_state = "idle"
