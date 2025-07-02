@@ -17,7 +17,7 @@
  ARI_war_with_trinity_desc: ""
  ARI_contact_with_azusa: "아즈사와 접촉"
  ARI_contact_with_azusa_desc: ""
- ARI_contact_with_azusa_trigger_tt: "§Y[TRM.GetNameWithFlag]§!: 정치적 문제가 발생 했습니다."
+ ARI_contact_with_azusa_trigger_tt: "§Y[TRM.GetNameWithFlag]§!: 정치적 혼란이 발생 했습니다."
  ARI_azusa_comeback: "§Y$TRN_Shirasu_Azusa$§!가 복귀함."
  ARI_deny_trinity: "삼위일체 부정"
  ARI_deny_trinity_desc: "삼위일체 부정"

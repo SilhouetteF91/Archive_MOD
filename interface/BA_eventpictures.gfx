@@ -764,6 +764,10 @@ spriteTypes = {
      	name = "GFX_report_event_atsuko"
      	texturefile = "gfx/event_pictures/report_event_atsuko.tga"
     }
+    spriteType = {
+     	name = "GFX_report_event_TRN_hasumi_renge"
+     	texturefile = "gfx/event_pictures/report_event_TRN_hasumi_renge.tga"
+    }
 
 
     spriteType = {

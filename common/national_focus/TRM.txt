@@ -7172,7 +7172,7 @@ focus_tree = {
 				country_event = { id = trinity.35 days = 15 } # 보안국 재편
 				TRM_hans_zehrer = { unit_leader_event = { id = trinity.39 days = 25 random_days = 25 } } # 한스 프리체
 				country_event = { id = trinity.37 days = 35 random_days = 125 } # 소규모 동아리들의 운명
-				country_event = { id = trnfla.28 days = 35 random_days = 65 }
+				country_event = { id = trinity.45 days = 35 random_days = 65 }
 				country_event = { id = trinity.36 days = 210 } # 안보 상황
 				country_event = { id = trnfla.12 days = 365 } # 세이아 음모론
 			}
@@ -7259,13 +7259,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = TRN_new_trinity_culture_tt
-			IF = {
-				limit ={ has_active_mission = TRN_Mika_honor_social_problem }
-				add_days_mission_timeout = {
-					mission = add_days_mission_timeout
-					days = 180
-				}
-			}
 			hidden_effect = {
 
 			}
@@ -7317,6 +7310,7 @@ focus_tree = {
 				}
 				activate_targeted_decision = { target = TRM decision = TRN_honor_sovereign_dictatorship }
 			}
+			custom_effect_tooltip = TRN_Has_Active_TRN_Mika_honor_social_problem_When_Complete_This_Focus_tt
 
 			#add_power_balance_value = {
 			#	id = TRM_power_balance
@@ -7371,6 +7365,10 @@ focus_tree = {
 					has_power_balance = { id = TRM_power_balance }
 				}
 				activate_targeted_decision = { target = TRM decision = TRN_honor_utilize_the_church_authority }
+			}
+			custom_effect_tooltip = TRN_Has_Active_TRN_Mika_honor_social_problem_When_Complete_This_Focus_tt
+			IF = {
+				limit = { has_active_mission = TRN_Mika_honor_social_problem }
 			}
 			#add_power_balance_value = {
 			#	id = TRM_power_balance
@@ -8536,8 +8534,7 @@ focus_tree = {
 			NOT = { has_war_with = FIN }
 		}
 		prerequisite = { 
-			focus = TRN_denmark_or_war
-			focus = TRN_use_of_nordic_association
+			focus = TRN_northern_kivotos_diplomacy
 		}
 		mutually_exclusive = {  }
 

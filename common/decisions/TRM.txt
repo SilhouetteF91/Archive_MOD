@@ -7073,16 +7073,15 @@ TRN_Mika_honor_decision_cat = {
 	TRN_Mika_honor_social_problem = {
 		icon = GFX_decision_SWI_consolidate_council_power
 		allowed = { always = no } #manually activated
-		available = { hidden_trigger = { always = no } }
-		selectable_mission = no
-		is_good = no
-		fire_only_once = no
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = yes
 		days_mission_timeout = 365
-		cancel_trigger = {
-			
+		available = {
+			has_completed_focus = TRN_new_trinity_culture
 		}
-		cancel_effect = {
-
+		complete_effect = {
+			add_political_power = 100
 		}
 		timeout_effect = {
 

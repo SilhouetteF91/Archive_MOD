@@ -10259,6 +10259,38 @@ country_event = { # 아리우스 분교의 운명
 	}
 }
 
+country_event = { # 중앙구에서 대규모 시위
+	id = trinity.45
+	title = trinity.45.t
+	desc = trinity.45.desc
+	picture = GFX_report_event_arius
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+
+	option = {
+		name = trinity.45.a
+		trigger = {
+			has_country_leader = {
+				ruling_only = yes
+				character = TRN_Misono_Mika
+			}
+		}
+		activate_mission = TRN_Mika_honor_social_problem
+	}
+
+	option = {
+		name = trinity.45.b
+		trigger = {
+			has_country_leader = {
+				ruling_only = yes
+				character = TRN_Kirifuji_Nagisa
+			}
+		}
+	}
+}
+
 news_event = { # 세이아 피습 사건
 	id = trinitynews.1
 	title = trinitynews.1.t
@@ -10283,45 +10315,14 @@ news_event = { # 세이아 피습 사건
 		name = trinitynews.1.b
 		trigger = {
 			NOT = { tag = TRM }
-			OR = {
-				TAG = SHE
-				TAG = GEI
-				TAG = ARI
-				TAG = RED
-				TAG = KAI
-				TAG = MIL
-				TAG = GEH
-				TAG = GEM
-				TAG = SRT
-				TAG = KSP
-				TAG = HEU
-				TAG = ABY
-				TAG = HYA
-				TAG = SHA
-			}
+			Kivotos_school_tag = yes
 		}
 	}
 	option = {
 		name = BA_news.1.d
 		trigger = {
 			NOT = {
-				OR = {
-					TAG = SHE
-					TAG = GEI
-					TAG = ARI
-					TAG = RED
-					TAG = KAI
-					TAG = MIL
-					TAG = GEH
-					TAG = GEM
-					TAG = TRM
-					TAG = SRT
-					TAG = KSP
-					TAG = HEU
-					TAG = ABY
-					TAG = HYA
-					TAG = SHA
-				}
+				Kivotos_school_tag = yes
 			}
 		}
 	}
@@ -11094,16 +11095,17 @@ country_event = { # 백화요란 - 정의실현부 공동 훈련
 	id = trnfla.27
 	title = trnfla.27.t
 	desc = trnfla.27.desc
+	picture = GFX_report_event_TRN_hasumi_renge
 	
 	is_triggered_only = yes
-    fire_only_once = no
+    	fire_only_once = no
 
 	option = {
 		name = trnfla.27.a 
 	}
 }
 
-country_event = { # 중앙구에서의 충돌
+country_event = { # 백화요란 - 정의실현부 공동 훈련 - 2일차
 	id = trnfla.28
 	title = trnfla.28.t
 	desc = trnfla.28.desc
@@ -11120,7 +11122,7 @@ country_event = { # 중앙구에서의 충돌
 				character = TRN_Misono_Mika
 			}
 		}
-		activate_mission = TRN_Mika_honor_social_problem
+		#activate_mission = TRN_Mika_honor_social_problem
 	}
 
 	option = {
