@@ -1,0 +1,185 @@
+equipments = {
+
+	kuroko_equipment = {
+		year = 1936
+
+		is_archetype = yes
+		is_convertable = no
+		picture = archetype_infantry_equipment
+		is_buildable = no
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_armor
+		
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			mech_cost_upgrade
+		}
+
+		active = no
+		
+		#Misc Abilities
+		reliability = 0.8
+		maximum_speed = 0
+
+		#Defensive Abilities
+		defense = 300		# 60 * 5 (Decagrammaton base * 5)
+		breakthrough = 500	# 100 * 5 (Decagrammaton base * 5)
+		hardness = 0.99
+		armor_value = 875	# 175 * 5 (Decagrammaton base * 5)
+
+		#Offensive Abilities
+		soft_attack = 625	# 125 * 5 (Decagrammaton base * 5)
+		hard_attack = 700	# 140 * 5 (Decagrammaton base * 5)
+		ap_attack = 1875	# 375 * 5 (Decagrammaton base * 5)
+		air_attack = 62.5	# 12.5 * 5 (Decagrammaton base * 5)
+
+		#Space taken in convoy
+		lend_lease_cost = 999
+		
+		build_cost_ic = 0	# Cannot be built normally - WoW Raid Boss
+
+		fuel_consumption = 175	# 35 * 5
+		resources = {
+			# Special raid boss materials - extremely rare
+			tungsten = 10
+			aluminium = 10
+			steel = 15
+			chromium = 15
+		}
+	}
+
+	kuroko_equipment_0 = {
+		year = 1936
+	
+		archetype = kuroko_equipment
+		active = no
+		priority = 999		# Highest priority - Raid Boss
+		visual_level = 0
+	}
+
+	kuroko_equipment_1 = {
+		year = 1940
+	
+		archetype = kuroko_equipment
+		is_buildable = yes
+		active = no
+		priority = 999
+		visual_level = 1
+
+		#Misc Abilities
+		reliability = 0.85
+		maximum_speed = 0
+
+		#Defensive Abilities - Enhanced Raid Boss Form
+		defense = 360		# 20% increase from base
+		breakthrough = 600	# 20% increase from base
+		hardness = 0.99
+		armor_value = 1050	# 20% increase from base
+
+		#Offensive Abilities - Enhanced Form
+		soft_attack = 750	# 20% increase from base
+		hard_attack = 840	# 20% increase from base
+		ap_attack = 2250	# 20% increase from base
+		air_attack = 75.0	# 20% increase from base
+
+		#Space taken in convoy
+		lend_lease_cost = 999
+		
+		# 매우 비싼 레이드 보스 장비 - 색채 중점 완료 후에만 생산 가능
+		build_cost_ic = 5000
+		
+		fuel_consumption = 210	# 20% increase from base
+		resources = {
+			tungsten = 12
+			aluminium = 12
+			steel = 18
+			chromium = 18
+		}
+	}
+
+	kuroko_equipment_2 = {
+		year = 1942
+	
+		archetype = kuroko_equipment
+		is_buildable = yes
+		active = no
+		priority = 999
+		visual_level = 2
+
+		#Misc Abilities
+		reliability = 0.95
+		maximum_speed = 0
+
+		#Defensive Abilities - Final Raid Boss Form
+		defense = 450		# 50% increase from base
+		breakthrough = 750	# 50% increase from base
+		hardness = 0.99
+		armor_value = 1312	# 50% increase from base
+
+		#Offensive Abilities - Final Form
+		soft_attack = 937	# 50% increase from base
+		hard_attack = 1050	# 50% increase from base
+		ap_attack = 2812	# 50% increase from base
+		air_attack = 93.7	# 50% increase from base
+
+		#Space taken in convoy
+		lend_lease_cost = 999
+		
+		# 극도로 비싼 최종 형태 레이드 보스 장비
+		build_cost_ic = 8000
+		
+		fuel_consumption = 262	# 50% increase from base
+		resources = {
+			tungsten = 15
+			aluminium = 15
+			steel = 22
+			chromium = 22
+		}
+	}
+
+	# 쿠로코 최종 형태 (새로 추가)
+	kuroko_equipment_3 = {
+		year = 1944
+	
+		archetype = kuroko_equipment
+		is_buildable = yes
+		active = no
+		priority = 999
+		visual_level = 3
+
+		#Misc Abilities
+		reliability = 0.99
+		maximum_speed = 0
+
+		#Defensive Abilities - Ultimate Raid Boss Form
+		defense = 600		# 100% increase from base
+		breakthrough = 1000	# 100% increase from base
+		hardness = 0.99
+		armor_value = 1750	# 100% increase from base
+
+		#Offensive Abilities - Ultimate Form
+		soft_attack = 1250	# 100% increase from base
+		hard_attack = 1400	# 100% increase from base
+		ap_attack = 3750	# 100% increase from base
+		air_attack = 125.0	# 100% increase from base
+
+		#Space taken in convoy
+		lend_lease_cost = 999
+		
+		# 궁극의 레이드 보스 장비 - 국가 경제를 파탄낼 수 있는 비용
+		build_cost_ic = 12000
+		
+		fuel_consumption = 350	# 100% increase from base
+		resources = {
+			tungsten = 20
+			aluminium = 20
+			steel = 30
+			chromium = 30
+		}
+	}
+
+}

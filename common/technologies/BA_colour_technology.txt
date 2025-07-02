@@ -1,0 +1,26 @@
+technologies = {
+	# 쿠로코 레이드 보스 기술
+	kuroko_raid_technology = {
+		allow = {
+			always = no
+		}
+		
+		enable_equipments = {
+			kuroko_equipment_1
+			kuroko_equipment_2
+			kuroko_equipment_3
+		}
+		
+		research_cost = 5
+		start_year = 1940
+		
+		folder = {
+			name = mystic_engineering_folder
+			position = { x = 6 y = 8 }
+		}
+		
+		categories = {
+			mystic_engineering
+		}
+	}
+}

@@ -23,6 +23,35 @@ armored_GEI = {
 	}
 
 	# match_to_count = 0.5
+
+	kuroko_infantry_default_GEI = {
+
+		upgrade_prio = {
+			factor = 200
+			modifier = {
+				factor = 0
+				stockpile_ratio = { 
+					archetype = kuroko_equipment
+					ratio < 5
+				}
+			}
+		}
+		
+		target_template = {
+			# weight = 0.5
+			# match_value = 5000.0
+			
+			support = {
+				halo_recon = 1
+				engineer = 1
+				signal_company = 1
+			}
+			
+			regiments = {
+				kuroko_infantry = 1
+			}
+		}
+	}
 	
 	super_heavy_armor_default_GEI = {
 	
@@ -93,8 +122,7 @@ armored_GEI = {
 			regiments = {
 				decagrammaton_armor = 3
 			}
-		}
-		
+		}		
 		# allowed_types = {
 		# 	decagrammaton_armor
 

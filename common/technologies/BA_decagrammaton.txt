@@ -1,28 +1,82 @@
 technologies = {
 	decagrammaton_weapons = {
+		# 기본 데카그라마톤 무기 - 1940년부터 연구 가능
 		allow = {
-            always = no
-        }
+			date > 1940.1.1
+		}
+		
+		research_cost = 2000
+		start_year = 1940
+		folder = {
+			name = mystic_engineering_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
 		enable_equipments = {
 			decagrammaton_equipment_0
+		}
+		
+		categories = {
+			armor
+			cat_anti_tank
 		}
 	}
 
 	decagrammaton_weapons_2 = {
+		# 고급 데카그라마톤 무기 - 기본 데카그라마톤 연구 후 가능
 		allow = {
-            always = no
-        }
+			has_tech = decagrammaton_weapons
+		}
+		
+		research_cost = 3000
+		start_year = 1942
+		folder = {
+			name = mystic_engineering_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
 		enable_equipments = {
 			decagrammaton_equipment_1
+		}
+		
+		categories = {
+			armor
+			cat_anti_tank
 		}
 	}
 
 	decagrammaton_weapons_3 = {
+		# 최고급 데카그라마톤 무기 - 고급 데카그라마톤 연구 후 가능
 		allow = {
-            always = no
-        }
+			has_tech = decagrammaton_weapons_2
+		}
+		
+		research_cost = 4000
+		start_year = 1944
+		folder = {
+			name = mystic_engineering_folder
+			position = { x = 0 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
 		enable_equipments = {
 			decagrammaton_equipment_2
+		}
+		
+		categories = {
+			armor
+			cat_anti_tank
 		}
 	}
 }

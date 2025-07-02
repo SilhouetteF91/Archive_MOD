@@ -1,0 +1,267 @@
+###########################
+# Kuroko WoW Raid Boss Events
+# 비활성화됨 - 특수 사단 시스템으로 교체
+###########################
+
+add_namespace = kuroko_raid
+
+# 기존 레이드 보스 시스템 비활성화
+# 쿠로코는 이제 헤일로 보병과 같은 특수 사단 시스템 사용
+
+# Kuroko Raid Boss Spawn Event - DISABLED
+# country_event = {
+# 	id = kuroko_raid.1
+# 	title = kuroko_raid.1.t
+# 	desc = kuroko_raid.1.d
+# 	picture = GFX_report_event_generic_read_write
+#
+# 	is_triggered_only = yes
+#
+# 	trigger = {
+# 		has_global_flag = kuroko_raid_system_active
+# 		NOT = { has_country_flag = kuroko_boss_active }
+# 		NOT = { has_global_flag = kuroko_boss_defeated_recently }
+# 	}
+#
+# 	option = {
+# 		name = kuroko_raid.1.a	# "The Raid Boss has appeared!"
+#
+# 		set_country_flag = kuroko_boss_active
+# 		set_country_flag = kuroko_boss_phase_1
+# 		set_global_flag = kuroko_boss_spawned
+#
+# 		# Give special equipment for raid boss
+# 		add_equipment_to_stockpile = {
+# 			type = kuroko_equipment
+# 			amount = 500
+# 		}
+#
+# 		# Create special division template
+# 		hidden_effect = {
+# 			division_template = {
+# 				name = "Kuroko - Death God"
+# 				regiments = {
+# 					kuroko_infantry = { x = 0 y = 0 }
+# 					kuroko_infantry = { x = 0 y = 1 }
+# 					kuroko_infantry = { x = 0 y = 2 }
+# 				}
+# 			}
+# 		}
+#
+# 		# Start raid boss timer
+# 		country_event = { id = kuroko_raid.5 days = 30 }
+# 	}
+# }
+
+# Kuroko Raid Boss Phase 2 Evolution - DISABLED
+# country_event = {
+# 	id = kuroko_raid.2
+# 	title = kuroko_raid.2.t
+# 	desc = kuroko_raid.2.d
+# 	picture = GFX_report_event_generic_read_write
+#
+# 	is_triggered_only = yes
+#
+# 	trigger = {
+# 		has_country_flag = kuroko_boss_active
+# 		has_country_flag = kuroko_boss_phase_1
+# 		NOT = { has_country_flag = kuroko_boss_phase_2 }
+# 	}
+#
+# 	option = {
+# 		name = kuroko_raid.2.a	# "The Death God evolves!"
+#
+# 		clr_country_flag = kuroko_boss_phase_1
+# 		set_country_flag = kuroko_boss_phase_2
+#
+# 		# Upgrade equipment to Phase 2
+# 		add_equipment_to_stockpile = {
+# 			type = kuroko_equipment_1
+# 			amount = 300
+# 		}
+#
+# 		# Phase 2 evolution complete
+# 		custom_effect_tooltip = kuroko_raid.2.a_tt
+# 	}
+# }
+
+# Kuroko Raid Boss Final Phase Evolution - DISABLED
+# country_event = {
+# 	id = kuroko_raid.3
+# 	title = kuroko_raid.3.t
+# 	desc = kuroko_raid.3.d
+# 	picture = GFX_report_event_generic_read_write
+#
+# 	is_triggered_only = yes
+#
+# 	trigger = {
+# 		has_country_flag = kuroko_boss_active
+# 		has_country_flag = kuroko_boss_phase_2
+# 		NOT = { has_country_flag = kuroko_boss_phase_3 }
+# 	}
+#
+# 	option = {
+# 		name = kuroko_raid.3.a	# "The True Death God awakens!"
+#
+# 		clr_country_flag = kuroko_boss_phase_2
+# 		set_country_flag = kuroko_boss_phase_3
+#
+# 		# Final form equipment
+# 		add_equipment_to_stockpile = {
+# 			type = kuroko_equipment_2
+# 			amount = 500
+# 		}
+#
+# 		# Final phase evolution complete
+# 		custom_effect_tooltip = kuroko_raid.3.a_tt
+# 	}
+# }
+
+# Kuroko Raid Boss Defeated - DISABLED
+# country_event = {
+# 	id = kuroko_raid.4
+# 	title = kuroko_raid.4.t
+# 	desc = kuroko_raid.4.d
+# 	picture = GFX_report_event_generic_read_write
+#
+# 	trigger = {
+# 		has_country_flag = kuroko_boss_active
+# 		# Additional defeat conditions can be added here
+# 	}
+#
+# 	mean_time_to_happen = {
+# 		days = 60
+# 		modifier = {
+# 			factor = 0.5
+# 			has_country_flag = kuroko_boss_phase_3
+# 		}
+# 	}
+#
+# 	option = {
+# 		name = kuroko_raid.4.a	# "The Death God has been defeated!"
+#
+# 		clr_country_flag = kuroko_boss_active
+# 		clr_country_flag = kuroko_boss_phase_1
+# 		clr_country_flag = kuroko_boss_phase_2
+# 		clr_country_flag = kuroko_boss_phase_3
+# 		set_global_flag = kuroko_boss_defeated_recently
+#
+# 		# Raid Boss Rewards
+# 		add_political_power = 500
+# 		army_experience = 100
+# 		add_command_power = 200
+#
+# 		# Special Technology Unlock
+# 		if = {
+# 			limit = { has_country_flag = kuroko_boss_phase_3 }
+# 			add_tech_bonus = {
+# 				name = kuroko_raid_mastery
+# 				bonus = 2.0
+# 				uses = 3
+# 				#category = electronics_tech
+# 			}
+# 		}
+#
+# 		# Resource Rewards
+# 		add_equipment_to_stockpile = {
+# 			type = kuroko_equipment
+# 			amount = 100
+# 		}
+#
+# 		# Schedule respawn
+# 		country_event = { id = kuroko_raid.6 days = 90 }
+# 	}
+# }
+
+# Raid Boss Timeout/Escape - DISABLED
+# country_event = {
+# 	id = kuroko_raid.5
+# 	title = kuroko_raid.5.t
+# 	desc = kuroko_raid.5.d
+# 	picture = GFX_report_event_generic_read_write
+#
+# 	is_triggered_only = yes
+#
+# 	trigger = {
+# 		has_country_flag = kuroko_boss_active
+# 	}
+#
+# 	option = {
+# 		name = kuroko_raid.5.a	# "The Death God retreats into the shadows..."
+#
+# 		clr_country_flag = kuroko_boss_active
+# 		clr_country_flag = kuroko_boss_phase_1
+# 		clr_country_flag = kuroko_boss_phase_2
+# 		clr_country_flag = kuroko_boss_phase_3
+#
+# 		# Boss escaped - minor penalty
+# 		add_political_power = -50
+#
+# 		# Schedule next spawn
+# 		country_event = { id = kuroko_raid.6 days = 60 }
+# 	}
+# }
+
+# Raid Boss Respawn Timer - DISABLED
+# country_event = {
+# 	id = kuroko_raid.6
+# 	title = kuroko_raid.6.t
+# 	desc = kuroko_raid.6.d
+# 	picture = GFX_report_event_generic_read_write
+#
+# 	is_triggered_only = yes
+#
+# 	option = {
+# 		name = kuroko_raid.6.a	# "The Death God stirs once again..."
+#
+# 		clr_global_flag = kuroko_boss_defeated_recently
+#
+# 		# Schedule next spawn
+# 		random_list = {
+# 			30 = { country_event = { id = kuroko_raid.1 days = 7 } }
+# 			30 = { country_event = { id = kuroko_raid.1 days = 14 } }
+# 			30 = { country_event = { id = kuroko_raid.1 days = 21 } }
+# 			10 = { country_event = { id = kuroko_raid.1 days = 30 } }
+# 		}
+# 	}
+# }
+
+# Raid Boss System Activation - DISABLED
+# country_event = {
+# 	id = kuroko_raid.7
+# 	title = kuroko_raid.7.t
+# 	desc = kuroko_raid.7.d
+# 	picture = GFX_report_event_generic_read_write
+#
+# 	fire_only_once = yes
+#
+# 	trigger = {
+# 		date > 1937.1.1
+# 		has_tech = electronic_mechanical_engineering
+# 	}
+#
+# 	mean_time_to_happen = {
+# 		days = 30
+# 	}
+#
+# 	option = {
+# 		name = kuroko_raid.7.a	# "Activate the Kuroko Raid System"
+#
+# 		set_global_flag = kuroko_raid_system_active
+#
+# 		# Initial spawn
+# 		country_event = { id = kuroko_raid.1 days = 7 }
+#
+# 		# System activation bonus
+# 		add_political_power = 200
+# 		custom_effect_tooltip = kuroko_raid.7.a_tt
+# 	}
+#
+# 	option = {
+# 		name = kuroko_raid.7.b	# "Keep the Death God sealed"
+#
+# 		add_political_power = 100
+# 		add_stability = 0.05
+# 		# System remains inactive
+# 	}
+# }

@@ -1,0 +1,445 @@
+###########################
+# Kuroko Regeneration System Events
+# 쿠로코 리젠 시스템 이벤트
+###########################
+
+add_namespace = kuroko_regen
+
+# 쿠로코 존재 확인 이벤트 (매 30일)
+country_event = {
+	id = kuroko_regen.1
+	title = kuroko_regen.1.t
+	desc = kuroko_regen.1.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		tag = GEI
+		has_tech = kuroko_raid_technology
+		NOT = { has_country_flag = kuroko_regen_in_progress }
+	}
+
+	immediate = {
+		# 쿠로코 사단 존재 여부 확인 (쿠로코 캡이 1 이상이면 존재)
+		if = {
+			limit = {
+				check_variable = { kuroko_infantry_cap > 0 }
+				has_template = "Kuroko Special Division"
+			}
+			# 쿠로코가 존재함 - 다음 확인 스케줄
+			country_event = { id = kuroko_regen.1 days = 30 }
+		}
+		else = {
+			# 쿠로코가 없음 - 리젠 타이머 시작
+			country_event = { id = kuroko_regen.2 hours = 1 }
+		}
+	}
+}
+
+# 쿠로코 부재 감지 및 타이머 시작
+country_event = {
+	id = kuroko_regen.2
+	title = kuroko_regen.2.t
+	desc = kuroko_regen.2.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = GEI
+		has_tech = kuroko_raid_technology
+		NOT = { has_country_flag = kuroko_regen_in_progress }
+	}
+
+	option = {
+		name = kuroko_regen.2.a	# "죽음의 여신의 흔적을 찾아야 한다..."
+
+		set_country_flag = kuroko_regen_in_progress
+		set_variable = { kuroko_regen_timer = 180 }
+		
+		custom_effect_tooltip = kuroko_regen_timer_start_tt
+		
+		# 180일 후 리젠 실행
+		country_event = { id = kuroko_regen.3 days = 180 }
+		
+		# 중간 경고 이벤트들
+		country_event = { id = kuroko_regen.10 days = 90 }
+		country_event = { id = kuroko_regen.11 days = 150 }
+	}
+}
+
+# 쿠로코 리젠 실행 (180일 후)
+country_event = {
+	id = kuroko_regen.3
+	title = kuroko_regen.3.t
+	desc = kuroko_regen.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = GEI
+		has_tech = kuroko_raid_technology
+		has_country_flag = kuroko_regen_in_progress
+	}
+
+	option = {
+		name = kuroko_regen.3.a	# "죽음의 여신이 돌아왔다!"
+
+		clr_country_flag = kuroko_regen_in_progress
+		
+		# 쿠로코 사단 리젠 실행
+		hidden_effect = {
+			# 색채 영토에서 적절한 주 찾기
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = GEI
+					is_coastal = yes
+				}
+				prioritize = { 100 }  # 색채 본토 우선
+				save_event_target_as = kuroko_spawn_location
+			}
+			
+			# 해안 지역이 없으면 아무 핵심 영토나
+			if = {
+				limit = {
+					NOT = { has_event_target = kuroko_spawn_location }
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = GEI
+					}
+					save_event_target_as = kuroko_spawn_location
+				}
+			}
+		}
+		
+		# 쿠로코 특수 사단 1개 추가
+		custom_effect_tooltip = kivotos_kuroko_add1_tt
+		set_variable = { BA_kuroko_infantry_cap_edit_var = 1 }
+		BA_kuroko_infantry_cap_edit_effect = yes
+		
+		# 배치 이벤트 실행
+		country_event = { id = kuroko_regen.4 hours = 1 }
+		
+		# 다음 확인 스케줄 재시작
+		country_event = { id = kuroko_regen.1 days = 30 }
+		
+		# 리젠 성공 보너스
+		add_command_power = 50
+		add_war_support = 0.05
+	}
+}
+
+# 색채 진영 배치 시스템
+country_event = {
+	id = kuroko_regen.4
+	title = kuroko_regen.4.t
+	desc = kuroko_regen.4.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = GEI
+		has_event_target = kuroko_spawn_location
+	}
+
+	option = {
+		name = kuroko_regen.4.a	# "아누비스가 색채 영토에 강림했다"
+
+		# 해당 위치에 쿠로코 사단 생성
+		event_target:kuroko_spawn_location = {
+			create_unit = {
+				division = "division_template = \"Kuroko Special Division\" start_experience_factor = 0.8"
+				owner = GEI
+				count = 1
+			}
+		}
+		
+		custom_effect_tooltip = kuroko_deployed_to_colour_territory_tt
+		
+		# 배치 성공 시 특별 효과
+		# 배치 성공 보너스
+		add_command_power = 75
+		add_war_support = 0.05
+	}
+}
+
+# 긴급 쿠로코 소환 (색채 본토가 위험할 때)
+country_event = {
+	id = kuroko_regen.5
+	title = kuroko_regen.5.t
+	desc = kuroko_regen.5.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		tag = GEI
+		has_tech = kuroko_raid_technology
+		NOT = { has_country_flag = kuroko_regen_in_progress }
+		NOT = {
+			check_variable = { kuroko_infantry_cap > 0 }
+			has_template = "Kuroko Special Division"
+		}
+		OR = {
+			# 색채가 전쟁 중이고 전세가 불리할 때
+			AND = {
+				has_war = yes
+				surrender_progress > 0.15
+			}
+			# 색채 본토가 적에게 점령당했을 때
+			NOT = { controls_state = 100 }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+		modifier = {
+			factor = 0.5
+			surrender_progress > 0.25
+		}
+		modifier = {
+			factor = 0.3
+			surrender_progress > 0.5
+		}
+	}
+
+	option = {
+		name = kuroko_regen.5.a	# "위기의 순간, 죽음의 여신을 소환한다!"
+
+		# 즉시 쿠로코 리젠
+		custom_effect_tooltip = kivotos_kuroko_add1_tt
+		set_variable = { BA_kuroko_infantry_cap_edit_var = 1 }
+		BA_kuroko_infantry_cap_edit_effect = yes
+		
+		# 긴급 배치
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = GEI
+			}
+			create_unit = {
+				division = "division_template = \"Kuroko Special Division\" start_experience_factor = 1.0"
+				owner = GEI
+				count = 1
+			}
+		}
+		
+		# 긴급 소환 보너스
+		add_command_power = 100
+		add_war_support = 0.10
+		# 긴급 소환 임시 보너스
+		add_command_power = 50
+		
+		# 다음 확인 스케줄
+		country_event = { id = kuroko_regen.1 days = 30 }
+	}
+
+	option = {
+		name = kuroko_regen.5.b	# "아직 때가 아니다"
+		
+		# 일반 리젠 타이머 시작
+		country_event = { id = kuroko_regen.2 hours = 1 }
+	}
+}
+
+# 쿠로코 시스템 초기화 (게임 시작 시)
+country_event = {
+	id = kuroko_regen.6
+	title = kuroko_regen.6.t
+	desc = kuroko_regen.6.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		tag = GEI
+		has_tech = kuroko_raid_technology
+	}
+
+	immediate = {
+		# 30일 후 첫 번째 확인 시작
+		country_event = { id = kuroko_regen.1 days = 30 }
+	}
+}
+
+# 쿠로코 강화 이벤트 (리젠 시 확률적 발생)
+country_event = {
+	id = kuroko_regen.7
+	title = kuroko_regen.7.t
+	desc = kuroko_regen.7.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		tag = GEI
+		has_tech = kuroko_raid_technology
+		# 쿠로코가 존재할 때만
+		check_variable = { kuroko_infantry_cap > 0 }
+		has_template = "Kuroko Special Division"
+	}
+
+	mean_time_to_happen = {
+		days = 120
+		modifier = {
+			factor = 0.7
+			has_war = yes
+		}
+	}
+
+	option = {
+		name = kuroko_regen.7.a	# "죽음의 여신이 더욱 강해졌다"
+
+		# 쿠로코 장비 업그레이드
+		add_equipment_to_stockpile = {
+			type = kuroko_equipment_1
+			amount = 100
+			producer = GEI
+		}
+		
+		# 경험치 보너스 (전체 육군 경험치 증가로 대체)
+		army_experience = 25
+		
+		add_command_power = 25
+	}
+
+	option = {
+		name = kuroko_regen.7.b	# "현재 상태로도 충분하다"
+		
+		add_stability = 0.02
+		add_war_support = 0.02
+	}
+}
+
+# 쿠로코 진화 이벤트 (장기간 생존 시)
+country_event = {
+	id = kuroko_regen.8
+	title = kuroko_regen.8.t
+	desc = kuroko_regen.8.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		tag = GEI
+		has_tech = kuroko_raid_technology
+		# 쿠로코가 360일 이상 생존
+		has_country_flag = kuroko_long_survival
+		check_variable = { kuroko_infantry_cap > 0 }
+		has_template = "Kuroko Special Division"
+	}
+
+	mean_time_to_happen = {
+		days = 180
+	}
+
+	option = {
+		name = kuroko_regen.8.a	# "진정한 죽음의 여신으로 각성했다!"
+
+		# 최상급 쿠로코 장비 제공
+		add_equipment_to_stockpile = {
+			type = kuroko_equipment_2
+			amount = 50
+			producer = GEI
+		}
+		
+		# 추가 쿠로코 사단 해금
+		custom_effect_tooltip = kivotos_kuroko_add1_tt
+		set_variable = { BA_kuroko_infantry_cap_edit_var = 1 }
+		BA_kuroko_infantry_cap_edit_effect = yes
+		
+		# 특별 효과
+		# 특별 효과 (임시)
+		add_command_power = 100
+		add_war_support = 0.10
+		
+		clr_country_flag = kuroko_long_survival
+	}
+
+	option = {
+		name = kuroko_regen.8.b	# "지금의 힘으로도 충분하다"
+		
+		add_command_power = 100
+		add_war_support = 0.05
+	}
+}
+
+# 쿠로코 손실 경고 (사단이 거의 전멸했을 때)
+country_event = {
+	id = kuroko_regen.9
+	title = kuroko_regen.9.t
+	desc = kuroko_regen.9.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		tag = GEI
+		has_tech = kuroko_raid_technology
+		check_variable = { kuroko_infantry_cap > 0 }
+		has_template = "Kuroko Special Division"
+		# 전반적인 전투 상황이 나쁠 때
+		OR = {
+			surrender_progress > 0.1
+			has_war_with_major = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = kuroko_regen.9.a	# "죽음의 여신을 안전한 곳으로 후퇴시켜야 한다"
+
+		# 경험치와 보급 지원
+		army_experience = 10
+		
+		# 긴급 장비 지원
+		add_equipment_to_stockpile = {
+			type = kuroko_equipment
+			amount = 50
+			producer = GEI
+		}
+		
+		add_command_power = -25  # 지원 비용
+	}
+
+	option = {
+		name = kuroko_regen.9.b	# "죽음의 여신은 스스로를 지킬 것이다"
+		
+		add_war_support = 0.02
+	}
+}
+
+# 리젠 타이머 중간 경고 - 90일 남음
+country_event = {
+	id = kuroko_regen.10
+	title = kuroko_regen.10.t
+	desc = kuroko_regen.10.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = kuroko_regen.10.a	# "죽음의 여신의 귀환이 가까워지고 있다..."
+		
+		custom_effect_tooltip = kuroko_regen_90_days_left_tt
+	}
+}
+
+# 리젠 타이머 중간 경고 - 30일 남음
+country_event = {
+	id = kuroko_regen.11
+	title = kuroko_regen.11.t
+	desc = kuroko_regen.11.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = kuroko_regen.11.a	# "곧 죽음의 여신이 돌아올 것이다!"
+		
+		custom_effect_tooltip = kuroko_regen_30_days_left_tt
+		
+		# 준비 보너스
+		add_command_power = 25
+	}
+}
