@@ -1009,10 +1009,6 @@
  FRA_focus_12_tt:0 "§4더 이상 대규모 저항이 일지 않습니다.§!"
  BA_FRA_no_change_tt:0 "\n§g페텡이 권력을 굳힘에 따라, 큰 정치적 변화는 더 이상 일어나지 않습니다.§!"
  FRA_focus_12_tt_tri:0 "§Y산업화 갈무리 결정§!을 모두 완료했습니다."
- FRA_focus_13:0 "마다가스카르 투자"
- FRA_focus_13_desc:0 "본토에서 쫓겨났지만, 우리는 거대한 아프리카 땅에서 다시 일어섰습니다. 이젠 식민지 따위가 아닌 지중해로 눈을 돌릴 때입니다."
- FRA_focus_14:0 "인도차이나 투자"
- FRA_focus_14_desc:0 "우리의 식민지 개발엔 바다 건너 아시아에도 적용해야 합니다. 인도차이나반도를 강화하여 부족한 물자를 수급합시다."
  FRA_focus_15:0 "호치민과의 타협"
  FRA_focus_15_desc: "우리는 더 이상 인도차이나를 유지할 수 없다는 것은 분명해지고 있습니다. 우리는 질서있는 철수를 통해 최대한 이익을 보전한 채로 식민지를 포기할 것입니다."
 
@@ -1272,8 +1268,14 @@
 
 
  #인물 중점
- FRA_petain_focus_0: "베르됭의 사자"
- FRA_petain_focus_1: "베르됭의 사자"
+ FRA_petain_focus_0: "'베르됭의 사자'"
+ FRA_petain_focus_1: "국가혁명\n (Révolution nationale)"
+ FRA_petain_focus_2: "노동(Travail)"
+ FRA_petain_focus_3: "가족(Famille)"
+ FRA_petain_focus_4: "조국(Patrie)"
+
+ FRA_laval_focus_0: "피에르 라발"
+ FRA_laval_focus_1: "반공 태세 강화"
 
 
  FRA_focus_resistance_7:0 "광범위한 선전"

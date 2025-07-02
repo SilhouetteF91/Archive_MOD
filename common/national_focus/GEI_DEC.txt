@@ -1115,6 +1115,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			news_event = { id = BA_news.142 hours = 24}
+			news_event = { id = BA_news.146 days = 14}
 
 			every_country = {
                 limit = {
@@ -1132,6 +1133,31 @@ focus_tree = {
 
                 country_event = {id = GEI_DEC_event.15}
             }
+			GEM = {
+				retire_character = GEH_satsuki
+				retire_character = GEH_gndnzk
+				retire_character = GEH_dlqnzl
+				retire_character = GEH_motomiya_chiaki
+				country_event = {id = GEI_DEC_event.17}
+			}
+
+			GEH = {
+				retire_character = GEH_ann_fudou
+				country_event = {id = GEI_DEC_event.19}
+			}
+
+			MIL = {
+				retire_character = MIL_dbdnzk
+				retire_character = MIL_dktmsk
+			}
+
+			TRM = {
+				retire_character = TRN_akfl
+				retire_character = TRN_dlclzk
+				retire_character = TRN_dnxkwmal_tkznfkzh
+				retire_character = TRN_dkdhahfl_alsp
+				country_event = {id = GEI_DEC_event.18}
+			}
 		}
 	}
 
@@ -1187,7 +1213,6 @@ focus_tree = {
         }
 
         completion_reward = {
-            
         }
 	}
 
