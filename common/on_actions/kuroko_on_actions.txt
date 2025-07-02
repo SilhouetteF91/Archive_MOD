@@ -41,7 +41,7 @@ on_actions = {
 					has_tech = kuroko_raid_technology
 					NOT = { 
 						check_variable = { kuroko_infantry_cap > 0 }
-						has_template = "Kuroko Special Division"
+						has_template = "Shiroko Terror"
 					}
 				}
 				# 전쟁 시작 시 긴급 쿠로코 소환 고려
@@ -82,7 +82,7 @@ on_actions = {
 					limit = {
 						NOT = { 
 							check_variable = { kuroko_infantry_cap > 0 }
-							has_template = "Kuroko Special Division"
+							has_template = "Shiroko Terror"
 						}
 						NOT = { has_country_flag = kuroko_regen_in_progress }
 					}
@@ -96,7 +96,7 @@ on_actions = {
 						surrender_progress > 0.2
 						NOT = { 
 							check_variable = { kuroko_infantry_cap > 0 }
-							has_template = "Kuroko Special Division"
+							has_template = "Shiroko Terror"
 						}
 					}
 					country_event = { id = kuroko_regen.5 days = 7 }
@@ -106,7 +106,7 @@ on_actions = {
 				if = {
 					limit = {
 						check_variable = { kuroko_infantry_cap > 0 }
-						has_template = "Kuroko Special Division"
+						has_template = "Shiroko Terror"
 						NOT = { has_country_flag = kuroko_long_survival }
 						# 게임이 시작된 지 1년 이상 경과
 						has_war_together_with = GEI

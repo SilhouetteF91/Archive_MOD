@@ -3,12 +3,12 @@ objectTypes = {
 		name = "generic_forgotten_ark_mesh"
 		file = "gfx/models/ships/forgotten_ark.mesh"
 		
-		animation = { id = "idle"			type = "generic_super_heavy_battleship_idle_animation" }
-		animation = { id = "attack"			type = "generic_super_heavy_battleship_attack_animation" }
-		animation = { id = "defend"			type = "generic_super_heavy_battleship_defend_animation" }
-		animation = { id = "damaged_attack"	type = "generic_super_heavy_battleship_attack_animation" }
-		animation = { id = "damaged_defend"	type = "generic_super_heavy_battleship_defend_animation" }
-		animation = { id = "death"			type = "generic_super_heavy_battleship_death_animation" }		
+		# animation = { id = "idle"			type = "generic_super_heavy_battleship_idle_animation" }
+		# animation = { id = "attack"			type = "generic_super_heavy_battleship_attack_animation" }
+		# animation = { id = "defend"			type = "generic_super_heavy_battleship_defend_animation" }
+		# animation = { id = "damaged_attack"	type = "generic_super_heavy_battleship_attack_animation" }
+		# animation = { id = "damaged_defend"	type = "generic_super_heavy_battleship_defend_animation" }
+		# animation = { id = "death"			type = "generic_super_heavy_battleship_death_animation" }		
 
 		scale = 1.5
 	}

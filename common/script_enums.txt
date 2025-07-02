@@ -682,4 +682,9 @@ script_enum_equipment_bonus_type = {
 	amphibious_tank_equipment_1
 	amphibious_tank_equipment_2
 	supersonic_fighter_equipment_1
+	kuroko_equipment
+	kuroko_equipment_0
+	kuroko_equipment_1
+	kuroko_equipment_2
+	kuroko_equipment_3
 }

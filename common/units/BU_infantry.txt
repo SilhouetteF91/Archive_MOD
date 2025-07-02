@@ -4,7 +4,7 @@
 
 sub_units = {
 
-	# Kuroko Special Division Infantry
+	# Shiroko Terror Infantry
 	kuroko_infantry = {
 		abbreviation = "KRKO"
 		sprite = kuroko_infantry

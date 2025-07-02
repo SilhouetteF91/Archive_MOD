@@ -87,3 +87,26 @@ GEI_HAL_01 =
 		78 = { "%d. Arius Infantry Division" }
 	}
 }
+GEI_STR_01 = 
+{
+	name = "Shiroko Terror"
+
+	for_countries = { GEI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { YUG_GAR_01 }
+
+	fallback_name = "%d. Shiroko Terror"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d. Shiroko Terror" }
+		2 = { "%d. Shiroko Terror" }
+	}
+}

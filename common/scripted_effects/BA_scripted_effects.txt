@@ -145,19 +145,19 @@ BA_kuroko_infantry_cap_edit_effect = {
 			}
 			if = {
 				limit = {
-					has_template = "Kuroko Special Division"
+					has_template = "Shiroko Terror"
 				}
 				add_to_variable = { kuroko_infantry_cap = BA_kuroko_infantry_cap_edit_var }
 				set_division_template_cap = {
-					division_template = "Kuroko Special Division"
+					division_template = "Shiroko Terror"
 					division_cap = kuroko_infantry_cap
 				}
 			}
 			else_if = {
 				limit = { has_tech = kuroko_raid_technology }
 				division_template = {
-					name = "Kuroko Special Division"
-					division_names_group = GEI_INF_01
+					name = "Shiroko Terror"
+					division_names_group = GEI_STR_01
 					is_locked = yes
 					force_allow_recruiting = yes
 					division_cap = 0
@@ -175,14 +175,14 @@ BA_kuroko_infantry_cap_edit_effect = {
 				}
 				add_to_variable = { kuroko_infantry_cap = BA_kuroko_infantry_cap_edit_var }
 				set_division_template_cap = {
-					division_template = "Kuroko Special Division"
+					division_template = "Shiroko Terror"
 					division_cap = kuroko_infantry_cap
 				}
 			}
 		}
 		else = {
 			set_division_template_cap = {
-				division_template = "Kuroko Special Division"
+				division_template = "Shiroko Terror"
 				division_cap = 0
 			}
 		}
@@ -196,10 +196,10 @@ BA_kuroko_infantry_ban_effect = { #실행된 범위의 쿠로코 특수 사단�
 		set_country_flag = BA_ban_kuroko_infantry_flag # 쿠로코 사단 밴
 		if = {
 			limit = {
-				has_template = "Kuroko Special Division"
+				has_template = "Shiroko Terror"
 			}
 			set_division_template_cap = {
-				division_template = "Kuroko Special Division"
+				division_template = "Shiroko Terror"
 				division_cap = 0
 			}
 		}
@@ -214,10 +214,10 @@ BA_kuroko_infantry_unban_effect = { #이것은 단순히 실행된 범위의 쿠
 		}
 		if = {
 			limit = {
-				has_template = "Kuroko Special Division"
+				has_template = "Shiroko Terror"
 			}
 			set_division_template_cap = {
-				division_template = "Kuroko Special Division"
+				division_template = "Shiroko Terror"
 				division_cap = kuroko_infantry_cap
 			}
 		}
@@ -227,12 +227,12 @@ BA_kuroko_infantry_unban_effect = { #이것은 단순히 실행된 범위의 쿠
 				set_variable = { ROOT.kuroko_infantry_cap = 0 } # 사단 제한, 쿠로코 사단의 사단 제한과 같아야 함'
 				if = {
 					limit = {
-						NOT = { has_template = "Kuroko Special Division" }
+						NOT = { has_template = "Shiroko Terror" }
 					}
 					
 					division_template = {
-						name = "Kuroko Special Division"
-						division_names_group = GEI_INF_01
+						name = "Shiroko Terror"
+						division_names_group = GEI_STR_01
 						is_locked = yes
 						force_allow_recruiting = yes
 						division_cap = 0
