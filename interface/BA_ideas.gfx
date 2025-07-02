@@ -855,6 +855,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/geh/GEH_gehenna_council.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_GEH_gehenna_order_department"
+		textureFile = "gfx/interface/ideas/geh/GEH_gehenna_order_department.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_BA_a_divided_academy"
 		textureFile = "gfx/interface/ideas/geh/BA_a_divided_academy.tga"
 	}
