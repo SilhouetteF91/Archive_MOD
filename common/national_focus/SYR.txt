@@ -248,6 +248,9 @@ focus_tree = {
 		relative_position_id = SYR_focus_6
 		x = 1
 		y = 1
+		ai_will_do = {
+			base = 10
+		}
 		prerequisite = {
 			focus = SYR_focus_6
 		}
@@ -929,7 +932,12 @@ focus_tree = {
 			focus = SYR_focus_12
 		}
 		available = {
-			fascism > 0.6
+			if = {
+				limit = {
+					is_ai = no
+				}
+				fascism > 0.6
+			}
 		}
 		mutually_exclusive = {
 			focus = SYR_focus_fas_1

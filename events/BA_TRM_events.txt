@@ -1573,9 +1573,8 @@ country_event = {  # 미카..너..!!
 	option = { #
 		name = TRM_event.67.a
 			TRN_Kirifuji_Nagisa = {
-				remove_country_leader_role = {
-					ideology = tea_party_neutrality_ideology
-				}
+				remove_country_leader_role = { ideology = tea_party_neutrality_ideology }
+				set_character_flag = TRN_nagisa_in_jail
 			}
 		hidden_effect = {
 			load_oob = "TRM_focus_2"
@@ -2644,6 +2643,7 @@ country_event = { # 모스크바 총독부는 누굴로?
         event_target:Trinity_Puppet_RUS = {
             TRM = {
                 TRN_Kirifuji_Nagisa = {
+				clr_character_flag = TRN_nagisa_in_jail
                     set_portraits = {
 				        civilian = { large = "gfx/leaders/TRN/TRN_Kirihuji_Nagisa_angry_Portrait.tga" }
                     }
@@ -9235,6 +9235,9 @@ country_event = { # 필리우스 분파의 운명
 			character = TRN_Kirifuji_Nagisa
 			slot = political_advisor
 		}
+		hidden_effect = {
+			TRN_Kirifuji_Nagisa = { set_character_flag = TRN_nagisa_in_jail }
+		}
     }
 
 	option = {
@@ -9252,6 +9255,9 @@ country_event = { # 필리우스 분파의 운명
 		remove_advisor_role = {
 			character = TRN_Kirifuji_Nagisa
 			slot = political_advisor
+		}
+		hidden_effect = {
+			TRN_Kirifuji_Nagisa = { set_character_flag = TRN_nagisa_in_jail }
 		}
     }
 }
@@ -10227,7 +10233,7 @@ country_event = { # 아리우스 분교의 운명
 	id = trinity.44
 	title = trinity.44.t
 	desc = trinity.44.desc
-	picture = GFX_report_event_generic_trinity_building
+	picture = GFX_report_event_arius
 
 	is_triggered_only = yes
 	fire_only_once = no
@@ -10246,25 +10252,10 @@ country_event = { # 아리우스 분교의 운명
 		set_temp_variable = { TRN_Honor_change = -1 }
 		TRN_add_Honor = yes
 		add_war_support = 0.02
-	}
-}
-
-country_event = { # 아리우스 분교의 운명
-	id = trinity.45
-	title = trinity.45.t
-	desc = trinity.45.desc
-	picture = GFX_report_event_generic_trinity_building
-
-	is_triggered_only = yes
-	fire_only_once = no
-
-	option = {
-		name = trinity.45.a
-
-	}
-	option = {
-		name = trinity.45.b
-
+		IF = { 
+			limit = { has_character = TRN_Shirasu_Azusa }
+			custom_effect_tooltip = TRN_trinity_44_b_tt 
+		}
 	}
 }
 
@@ -11143,17 +11134,58 @@ country_event = { # 중앙구에서의 충돌
 	}
 }
 
-country_event = { # 중앙구에서의 충돌
+country_event = { # 본연으로
 	id = trnfla.29
 	title = trnfla.29.t
 	desc = trnfla.29.desc
-	picture = GFX_report_event_generic_kivotos_city_2
+	picture = GFX_report_event_generic_azusa
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
 		name = trnfla.29.a
+		effect_tooltip = {
+			IF ={
+				limit = { TRM = { has_character = TRN_Shirasu_Azusa }}
+				TRN_Shirasu_Azusa = { set_nationality = ARI }
+			}
+		}
+		hidden_effect = {
+			ARI = {
+				country_event = { id = trnfla.30 days = 30 }
+			}
+		}
+	}
+}
+
+country_event = { # 본연으로 - 2
+	id = trnfla.30
+	title = trnfla.30.t
+	desc = trnfla.30.desc
+	picture = GFX_report_event_generic_azusa
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnfla.30.a
+		set_country_flag = ARI_azusa_comeback
+		effect_tooltip = {
+			IF = {
+				limit = { has_character = ARI_Shirasu_Azusa }
+				add_advisor_role = {
+					character = ARI_Shirasu_Azusa
+					advisor = {
+						slot = high_command
+						desc = TRN_Azusa_advisor_desc
+						idea_token = ARI_Shirasu_Azusa_high_command
+						traits = { army_commando_2 }
+						cost = 100
+					}
+				}
+			}
+		}
 	}
 }
 

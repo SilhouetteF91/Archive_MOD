@@ -762,6 +762,10 @@ spriteTypes = {
 		name = "GFX_TRN_Shirasu_Azusa_idea"
 		textureFile = "gfx/interface/advisors/TRN/TRN_Shirasu_Azusa_idea.tga"
 	}
+	spriteType = { # 아즈사 - 아리우스 용
+		name = "GFX_ARI_Shirasu_Azusa_idea"
+		textureFile = "gfx/interface/advisors/TRN/ARI_Shirasu_Azusa_idea.tga"
+	}
 	spriteType = { # 이치카
 		name = "GFX_TRN_Ichika_idea"
 		textureFile = "gfx/interface/advisors/TRN/TRN_Ichika_idea.tga"
@@ -801,10 +805,6 @@ spriteTypes = {
 	spriteType = { # 나츠
 		name = "GFX_TRN_Yutori_Natsu_idea"
 		textureFile = "gfx/interface/advisors/TRN/TRN_Yutori_Natsu_idea.tga"
-	}	
-	spriteType = { # 아즈사
-		name = "GFX_TRN_Shirasu_Azusa_idea"
-		textureFile = "gfx/interface/advisors/TRN/TRN_Shirasu_Azusa_idea.tga"
 	}
 	spriteType = { # 스즈미
 		name = "GFX_TRN_Morizuki_Suzumi_idea"

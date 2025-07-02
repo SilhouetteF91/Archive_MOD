@@ -1044,6 +1044,7 @@ focus_tree = {
                 set_division_template_cap = {  division_template = "Helmet gang" division_cap = ROOT.halo_militia_cap }
             }
             add_ideas = BLM_resistance_of_helmet_gang
+            add_ideas = BLM_brittany_independence_group
         }
     }
 
@@ -1110,6 +1111,7 @@ focus_tree = {
         }
 
         completion_reward = {
+            remove_ideas = BLM_brittany_independence_group
         }
     }
 
@@ -1221,7 +1223,7 @@ focus_tree = {
             focus = BLM_skeban_victory
             focus = BLM_bretagne_revolution
         }
-        x = 5
+        x = 8
         y = 1
         relative_position_id = BLM_gang_thugs_war_focus
         cost = 5
@@ -1237,6 +1239,7 @@ focus_tree = {
                 set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap_skevan }
             }
             add_ideas = BLM_resistance_of_skeban
+            add_ideas = BLM_brittany_independence_group
         }
     }
 
@@ -1293,6 +1296,7 @@ focus_tree = {
         }
 
         completion_reward = {
+            remove_ideas = BLM_brittany_independence_group
         }
     }
 
@@ -1426,7 +1430,7 @@ focus_tree = {
 				always = no
 			}
         }
-        x = 18
+        x = 24
         y = 1
         relative_position_id = BLM_gang_thugs_war_focus
         cost = 5
@@ -1505,6 +1509,234 @@ focus_tree = {
         completion_reward = {
             set_politics = {
                 ruling_party = fascism
+            }
+        }
+    }
+
+    focus = { #
+        id = BLM_keyvotos_occupation
+        icon = GFX_focus_TRN_savior_of_kivotos
+        prerequisite = {
+            focus = BLM_tough_ruler
+            focus = BLM_centralized_criminal_organization
+        }
+        mutually_exclusive = {
+            focus = BLM_advance_forward
+            focus = BLM_brittany_s_dawn
+        }
+        x = 0
+        y = 5
+        relative_position_id = BLM_gang_thugs_war_focus
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+            add_country_leader_trait = BLM_keyvotos_occupation_traits
+        }
+    }
+
+    focus = { #
+        id = BLM_brittany_s_dawn
+        icon = GFX_goal_GEH_Looking_Forward
+        prerequisite = {
+            focus = BLM_tough_ruler
+            focus = BLM_centralized_criminal_organization
+        }
+        mutually_exclusive = {
+            focus = BLM_keyvotos_occupation
+            focus = BLM_advance_forward
+        }
+        x = 14
+        y = 5
+        relative_position_id = BLM_gang_thugs_war_focus
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+            add_country_leader_trait = BLM_brittany_s_dawn_traits
+        }
+    }
+
+    focus = { #
+        id = BLM_advance_forward
+        icon = GFX_goal_FRA_revolution_to_the_utmost
+        prerequisite = {
+            focus = BLM_bretagne_revolution
+        }
+        mutually_exclusive = {
+            focus = BLM_keyvotos_occupation
+            focus = BLM_brittany_s_dawn
+        }
+        x = 20
+        y = 5
+        relative_position_id = BLM_gang_thugs_war_focus
+        cost = 5
+        available = {
+            has_government = fascism
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_total_struggle
+        icon = GFX_focus_generic_workers_and_farmers_rise
+        prerequisite = {
+            focus = BLM_keyvotos_occupation
+        }
+        x = 2
+        y = 1
+        relative_position_id = BLM_keyvotos_occupation
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_handicraft_firearms
+        icon = GFX_focus_generic_modernize_industry
+        prerequisite = {
+            focus = BLM_total_struggle
+        }
+        x = 1
+        y = 1
+        relative_position_id = BLM_total_struggle
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_industrial_cooperative_system
+        icon = GFX_focus_generic_communist
+        prerequisite = {
+            focus = BLM_total_struggle
+        }
+        x = 3
+        y = 1
+        relative_position_id = BLM_total_struggle
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_perpetual_criminal_state
+        icon = GFX_focus_generic_annex_country
+        prerequisite = {
+            focus = BLM_handicraft_firearms
+            focus = BLM_industrial_cooperative_system
+        }
+        x = 4
+        y = 2
+        relative_position_id = BLM_total_struggle
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_central_industrial_committee
+        icon = GFX_focus_generic_low_cost_housing
+        prerequisite = {
+            focus = BLM_brittany_s_dawn
+        }
+        x = -2
+        y = 1
+        relative_position_id = BLM_brittany_s_dawn
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_discipline_and_rules
+        icon = GFX_focus_generic_subjugation
+        prerequisite = {
+            focus = BLM_central_industrial_committee
+        }
+        x = -1
+        y = 1
+        relative_position_id = BLM_central_industrial_committee
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_systematic_military_industry
+        icon = GFX_focus_generic_armored_air_support
+        prerequisite = {
+            focus = BLM_central_industrial_committee
+        }
+        x = -3
+        y = 1
+        relative_position_id = BLM_central_industrial_committee
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_world_war_preparation
+        icon = GFX_focus_generic_advanced_military_studies
+        prerequisite = {
+            focus = BLM_systematic_military_industry
+            focus = BLM_discipline_and_rules
+        }
+        x = -4
+        y = 2
+        relative_position_id = BLM_central_industrial_committee
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_millennium_invasion
+        icon = GFX_focus_attack_MIL
+        prerequisite = {
+            focus = BLM_perpetual_criminal_state
+            focus = BLM_world_war_preparation
+        }
+        x = 1
+        y = 1
+        relative_position_id = BLM_perpetual_criminal_state
+        cost = 5
+        available = {
+        }
+
+        completion_reward = {
+            create_wargoal = {
+                target = MIL
+                type = annex_everything
             }
         }
     }
