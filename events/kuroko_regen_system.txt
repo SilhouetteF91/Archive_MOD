@@ -26,7 +26,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = { kuroko_infantry_cap > 0 }
-				has_template = "Kuroko Special Division"
+				has_template = "Shiroko Terror"
 			}
 			# 쿠로코가 존재함 - 다음 확인 스케줄
 			country_event = { id = kuroko_regen.1 days = 30 }
@@ -153,7 +153,7 @@ country_event = {
 		# 해당 위치에 쿠로코 사단 생성
 		event_target:kuroko_spawn_location = {
 			create_unit = {
-				division = "division_template = \"Kuroko Special Division\" start_experience_factor = 0.8"
+				division = "division_template = \"Shiroko Terror\" start_experience_factor = 0.8"
 				owner = GEI
 				count = 1
 			}
@@ -181,7 +181,7 @@ country_event = {
 		NOT = { has_country_flag = kuroko_regen_in_progress }
 		NOT = {
 			check_variable = { kuroko_infantry_cap > 0 }
-			has_template = "Kuroko Special Division"
+			has_template = "Shiroko Terror"
 		}
 		OR = {
 			# 색채가 전쟁 중이고 전세가 불리할 때
@@ -220,7 +220,7 @@ country_event = {
 				is_core_of = GEI
 			}
 			create_unit = {
-				division = "division_template = \"Kuroko Special Division\" start_experience_factor = 1.0"
+				division = "division_template = \"Shiroko Terror\" start_experience_factor = 1.0"
 				owner = GEI
 				count = 1
 			}
@@ -277,7 +277,7 @@ country_event = {
 		has_tech = kuroko_raid_technology
 		# 쿠로코가 존재할 때만
 		check_variable = { kuroko_infantry_cap > 0 }
-		has_template = "Kuroko Special Division"
+		has_template = "Shiroko Terror"
 	}
 
 	mean_time_to_happen = {
@@ -325,7 +325,7 @@ country_event = {
 		# 쿠로코가 360일 이상 생존
 		has_country_flag = kuroko_long_survival
 		check_variable = { kuroko_infantry_cap > 0 }
-		has_template = "Kuroko Special Division"
+		has_template = "Shiroko Terror"
 	}
 
 	mean_time_to_happen = {
@@ -374,7 +374,7 @@ country_event = {
 		tag = GEI
 		has_tech = kuroko_raid_technology
 		check_variable = { kuroko_infantry_cap > 0 }
-		has_template = "Kuroko Special Division"
+		has_template = "Shiroko Terror"
 		# 전반적인 전투 상황이 나쁠 때
 		OR = {
 			surrender_progress > 0.1
