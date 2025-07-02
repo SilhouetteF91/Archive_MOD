@@ -1990,9 +1990,6 @@ focus_tree = {
 		prerequisite = { focus = SHA_communism_focus_9 }
 		bypass = { }
 		relative_position_id = SHA_communism_focus_9
-		available = {
-			is_ally_with = SOV
-		}
 		completion_reward = {
 			SOU = {
 				random_owned_controlled_state = {
@@ -2030,9 +2027,6 @@ focus_tree = {
 		prerequisite = { focus = SHA_communism_focus_9 }
 		bypass = { }
 		relative_position_id = SHA_communism_focus_9
-		available = {
-			is_ally_with = SOV
-		}
 
 		completion_reward = {
 			976 = {
@@ -2120,11 +2114,11 @@ focus_tree = {
 				limit = { has_idea = disarmed_nation }
 				add_ideas = volunteer_only
 			}
-			if = {
+			else_if = {
 				limit = { has_idea = volunteer_only }
 				add_ideas = limited_conscription
 			}
-			if = {
+			else_if = {
 				limit = { has_idea = limited_conscription }
 				add_ideas = extensive_conscription
 			}
@@ -2359,6 +2353,12 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = SHA_antifa
 				add_idea = SHA_antifa_1
+			}
+			hidden_effect = {
+				country_event = {
+					id = shacom.29
+					days = 6
+				}
 			}
 		}
 	}
@@ -2860,7 +2860,9 @@ focus_tree = {
 				ideology = ROOT
 				popularity = 0.03
 			}
-			news_event = shanews.05
+			hidden_effect = {
+				news_event = shanews.05
+			}
 		}
 	}
 
@@ -4754,7 +4756,7 @@ focus_tree = {
 			}
 		}
 	}
-	# 파르티잔 전술
+	# 산악 파르티잔 전술
 	focus = {
 		id = SHA_communism_diplo_8
 		icon = GFX_focus_GER_support_the_proletarian_uprising
@@ -4775,6 +4777,89 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = SHA_socialist_society
 				add_idea = SHA_socialist_society_1
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.35
+				uses = 1
+				category = cat_mountaineers_doctrine
+			}
+			division_template = {
+				name = "Mountain Ranger"
+				regiments = {
+					mountaineers = {
+						x = 0
+						y = 0
+					}
+					mountaineers = {
+						x = 0
+						y = 1
+					}
+					mountaineers = {
+						x = 0
+						y = 2
+					}
+					mountaineers = {
+						x = 1
+						y = 0
+					}
+					mountaineers = {
+						x = 1
+						y = 1
+					}
+					mountaineers = {
+						x = 1
+						y = 2
+					}
+					mountaineers = {
+						x = 1
+						y = 3
+					}
+					artillery_brigade = {
+						x = 2
+						y = 0
+					}
+					artillery_brigade = {
+						x = 2
+						y = 1
+					}
+					artillery_brigade = {
+						x = 2
+						y = 2
+					}
+					artillery_brigade = {
+						x = 3
+						y = 0
+					}
+					artillery_brigade = {
+						x = 3
+						y = 1
+					}
+					artillery_brigade = {
+						x = 3
+						y = 2
+					}
+					artillery_brigade = {
+						x = 3
+						y = 3
+					}
+				}
+				support = {
+					artillery = {
+						x = 0
+						y = 0
+					}
+					recon = {
+						x = 0
+						y = 1
+					}
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Mountain Ranger\" division_template = \"Mountain Ranger\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = SHA
+					count = 2
+				}
 			}
 		}
 	}
@@ -4808,6 +4893,7 @@ focus_tree = {
 				}
 				add_claim_by = SHA
 			}
+			unlock_decision_tooltip = SHA_danubian_decision
 		}
 	}
 
@@ -4870,6 +4956,8 @@ focus_tree = {
 		relative_position_id = SHA_soviet_diplo_0
 
 		completion_reward = {
+			add_country_leader_trait = SHA_western_maoist
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			country_event = {
 				id =shacom.22
 				days = 3
@@ -4984,6 +5072,8 @@ focus_tree = {
 				remove_idea = SHA_stalinism_program 
 				add_idea = SHA_marx-leninism 
 			}
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = SHA_soviet_military_advisors
 		}
 	}
 
@@ -5039,22 +5129,18 @@ focus_tree = {
 				add_ideas = SHA_will_to_danubian
 				custom_effect_tooltip = SHA_will_to_danubian_tt_3
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							any_state = {
-								OR = {
-									is_core_of = HUN
-									is_core_of = YUG
-									is_core_of = SLO
-								}
-								is_owned_by = PREV
-							}
+					SHA = {
+						declare_war_on = {
+							target = YUG
+							type = take_claimed_state
 						}
-						SHA = {
-							declare_war_on = {
-								target = PREV
-								type = take_claimed_state
-							}
+						declare_war_on = {
+							target = HUN
+							type = take_claimed_state
+						}
+						declare_war_on = {
+							target = SLO
+							type = take_claimed_state
 						}
 					}
 				}
@@ -5119,8 +5205,18 @@ focus_tree = {
 					has_completed_focus = SHA_soviet_diplo_6
 				}
 				custom_effect_tooltip = SHA_will_to_comintern_tt_2
-				dismantle_faction = yes
-				leave_faction = yes
+				if = {
+					limit = {
+						is_faction_leader = yes
+					}
+					dismantle_faction = yes
+				}
+				else_if = {
+					limit = {
+						is_in_faction = yes
+					}
+					leave_faction = yes
+				}
 				SOU = {
 					country_event = {
 						id = generic.2
@@ -5129,8 +5225,18 @@ focus_tree = {
 			}
 			else = {
 				custom_effect_tooltip = SHA_will_to_comintern_tt_1
-				dismantle_faction = yes
-				leave_faction = yes
+				if = {
+					limit = {
+						is_faction_leader = yes
+					}
+					dismantle_faction = yes
+				}
+				else_if = {
+					limit = {
+						is_in_faction = yes
+					}
+					leave_faction = yes
+				}
 				effect_tooltip = {
 					SOU = {
 						country_event = {
@@ -5475,10 +5581,10 @@ focus_tree = {
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 				
-				else = {
+				
+			}else = {
 					remove_ideas = SHA_austria_unemployment_problem
 				}
-			}
 		}
 	}
 
@@ -5608,9 +5714,12 @@ focus_tree = {
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 				
-				else = {
-					remove_ideas = SHA_austria_unemployment_problem
+			}
+			else_if = {
+				limit = {
+					has_idea = SHA_austria_unemployment_problem
 				}
+				remove_ideas = SHA_austria_unemployment_problem
 			}
 		}
 	}
@@ -5648,9 +5757,12 @@ focus_tree = {
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 				
-				else = {
-					remove_ideas = SHA_austria_unemployment_problem
+			}
+			else_if = {
+				limit = {
+					has_idea = SHA_austria_unemployment_problem
 				}
+				remove_ideas = SHA_austria_unemployment_problem
 			}
 		}
 	}
@@ -5738,9 +5850,12 @@ focus_tree = {
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 				
-				else = {
-					remove_ideas = SHA_austria_unemployment_problem
+			}
+			else_if = {
+				limit = {
+					has_idea = SHA_austria_unemployment_problem
 				}
+				remove_ideas = SHA_austria_unemployment_problem
 			}
 
 			976 = {
@@ -5802,9 +5917,12 @@ focus_tree = {
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 				
-				else = {
-					remove_ideas = SHA_austria_unemployment_problem
+			}
+			else_if = {
+				limit = {
+					has_idea = SHA_austria_unemployment_problem
 				}
+				remove_ideas = SHA_austria_unemployment_problem
 			}
 
 			152 = {
@@ -6651,9 +6769,12 @@ focus_tree = {
 				set_temp_variable = { SHA_anger_change = -1 }
 				SHA_change_aup_anger = yes
 				
-				else = {
-					remove_ideas = SHA_austria_unemployment_problem
+			}
+			else_if = {
+				limit = {
+					has_idea = SHA_austria_unemployment_problem
 				}
+				remove_ideas = SHA_austria_unemployment_problem
 			}
 		}
 	}

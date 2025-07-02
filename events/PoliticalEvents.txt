@@ -75,6 +75,9 @@ country_event = {
 		}
 		#/BA_MOD_FIX
 			BA_no_use_PoliticalEvent_trigger = yes
+			NOT = {
+				tag = SHA
+			} #작동원리모르니까야매로모딩하고자합니다만,혹시문제라도(※문제가아닐지도?!)
 		#BA_MOD_FIX/
 	}
 

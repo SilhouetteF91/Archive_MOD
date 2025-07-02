@@ -147,7 +147,7 @@ recruit_character = TRN_aktlfh
 recruit_character = TRN_Kurimura_Airi
 recruit_character = TRN_cmfnrl #츠루기
 recruit_character = TRN_empty
-recruit_character = TRN_dkwmtk
+recruit_character = TRN_Shirasu_Azusa
 recruit_character = TRN_dytlal
 recruit_character = TRN_gktmal
 recruit_character = TRN_Hifumi
@@ -209,6 +209,8 @@ add_timed_idea = {
     idea = BA_exiles_of_the_future
     days = 210
 }
+
+country_event = { id = trnfla.29 days = 7 }
 
 # 스토리 아카이브 사용 시 정의
 set_variable = {

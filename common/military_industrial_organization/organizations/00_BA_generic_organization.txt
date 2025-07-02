@@ -276,3 +276,22 @@ generic_kivotos_infantry_equipment_organization = {
 		}
 	}
 }
+
+generic_kivotos_kazeyama_organization = {
+	icon = GFX_idea_generic_kivotos_equipment_manufacturer_kazeyama
+
+	allowed = {
+		Kivotos_tag = yes
+		NOT = {
+			tag = KSP
+			tag = KAI
+		}
+	}
+
+	equipment_type = {
+		kivotos_infantry_equipment infantry_equipment 
+	}
+	research_categories = { infantry_weapons }
+
+	include = generic_infantry_equipment_organization
+}

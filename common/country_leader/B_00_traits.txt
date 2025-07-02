@@ -166,6 +166,16 @@ leader_traits = {
 		army_core_attack_factor = 0.20
 		army_core_defence_factor = 0.20 
 	}
+	BLM_keyvotos_occupation_traits = {
+		random = no
+		army_org_factor = 0.05
+		research_speed_factor = 0.05
+	}
+	BLM_brittany_s_dawn_traits = {
+		random = no
+		stability_factor = 0.05
+		consumer_goods_factor = -0.15
+	}
 	BLM_kurihama_akemi_traits = {
 		random = no
 		stability_factor = 0.10
@@ -3312,6 +3322,15 @@ leader_traits = {
 		army_artillery_defence_factor = 0.05
 		max_planning_factor = 0.10
 		planning_speed = 0.10
+	}
+	SHA_western_maoist = { #서방의 마오주의자
+		random = no
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+		}
 	}
 	SHA_chairman = {
 		random = no

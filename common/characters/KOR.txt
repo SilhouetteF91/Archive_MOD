@@ -59,7 +59,7 @@ characters = {
 		name = KOR_kim_won_bong
 		portraits = {
 			army = {
-				large = "GFX_Portrait_Asia_Generic_land_5"
+				large = "gfx/leaders/KOR/KOR_kim_won_bong.png"
 			}
 		}
 		
@@ -80,7 +80,7 @@ characters = {
 		name = KOR_kim_hong_il
 		portraits = {
 			army = {
-				large = "GFX_Portrait_Asia_Generic_land_6"
+				large = "gfx/leaders/KOR/KOR_kim_hong_il.png"
 			}
 		}
 		
@@ -119,7 +119,7 @@ characters = {
 		name = KOR_sohn_won_yil
 		portraits = {
 			navy = {
-				large = "GFX_Portrait_Asia_Generic_navy_2"
+				large = "gfx/leaders/KOR/KOR_sohn_won_yil.png"
 			}
 		}
 		

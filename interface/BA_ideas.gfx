@@ -120,8 +120,8 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/idea_generic_kivotos_equipment_manufacturer_1.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_generic_kivotos_equipment_manufacturer_1"
-		textureFile = "gfx/interface/ideas/idea_generic_kivotos_equipment_manufacturer_1.tga"
+		name = "GFX_idea_generic_kivotos_equipment_manufacturer_kazeyama"
+		textureFile = "gfx/interface/ideas/generic/kazeyama.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_PASTA_signatories_of_the_stresa_idea"
@@ -853,6 +853,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GEH_gehenna_council"
 		textureFile = "gfx/interface/ideas/geh/GEH_gehenna_council.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_gehenna_order_department"
+		textureFile = "gfx/interface/ideas/geh/GEH_gehenna_order_department.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_BA_a_divided_academy"

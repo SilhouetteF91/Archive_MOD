@@ -7,6 +7,10 @@ focus_tree = {
 			tag = FRA
 		}
 	}
+	inlay_window = {
+		id = fra_inner_circle_inlay_window
+		position = { x = 4500 y = 1150 }
+	}
 	continuous_focus_position = {
 		x = 1500
 		y = 2000
@@ -521,224 +525,6 @@ focus_tree = {
 					type = steel
 					amount = 2
 				}
-			}
-		}
-	}
-	focus = {
-		#지중해를 바라보며
-		id = FRA_focus_12
-		icon = GFX_goal_generic_mediterranean
-		cost = 4.4
-		x = 2
-		y = 7
-		ai_will_do = {
-			factor = 100
-		}
-		available = {
-			NOT = {
-				has_country_flag = FRA_emergency_flag
-			}
-			custom_trigger_tooltip = {
-				tooltip = FRA_focus_12_tt_tri
-				has_country_flag = FRA_alz_core
-				has_country_flag = FRA_mor_core
-				has_country_flag = FRA_tun_core
-				has_country_flag = FRA_waf_core
-			}
-		}
-		completion_reward = {
-			every_state = {
-				limit = {
-					is_owned_by = FRA
-					is_on_continent = africa
-					NOT = {
-						state = 514
-						state = 515
-						state = 775
-						state = 782
-						state = 786
-						state = 543
-						state = 708
-						state = 706
-					}
-				}
-				add_core_of = FRA
-			}
-			every_state = {
-				limit = {
-					is_owned_by = FRA
-					has_resistance = yes
-				}
-				add_resistance = -100
-			}
-			hidden_effect = {
-				country_event = {
-					id = FRA_prov_event.114
-					days = 3
-				}
-			}
-			add_popularity = {
-				ideology = var:current_party_ideology_group
-				popularity = 0.2
-			}
-			add_stability = 0.2
-			if = {
-				limit = {
-					has_country_leader = {
-						character = FRA_military_conference
-						ruling_only = yes
-					}
-				}
-				custom_effect_tooltip = BA_FRA_no_change_tt
-			}
-		}
-	}
-	focus = {
-		#마다가스카르 개발
-		id = FRA_focus_13
-		cost = 5.8
-		x = 4
-		y = 7
-		relative_position_id = FRA_focus_10
-		icon = GFX_goal_FRA_Madagascar_tooja
-		prerequisite = {
-			focus = FRA_focus_10
-		}
-		completion_reward = {
-			add_manpower = -1000
-			543 = {
-				BA_increase_state_category_by_one_level = yes
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-				add_building_construction = {
-					type = dockyard
-					level = 1
-				}
-			}
-			every_state = {
-				limit = {
-					OR = {
-						state = 708
-						state = 543
-						state = 706
-					}
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 1
-				}
-				add_compliance = 100
-			}
-		}
-	}
-	focus = {
-		#인도차이나 개발
-		id = FRA_focus_14
-		cost = 5.8
-		relative_position_id = FRA_focus_10
-		x = 3
-		y = 6
-		icon = GFX_goal_FRA_Indochina_tooja
-		prerequisite = {
-			focus = FRA_focus_13
-		}
-		mutually_exclusive = {
-			focus = FRA_focus_15
-		}
-		bypass = {
-			VIN = {
-				has_government = communism
-			}
-		}
-		available = {
-			VIN = {
-				exists = yes
-				has_war = no
-			}
-		}
-		completion_reward = {
-			add_manpower = -1000
-			286 = {
-				BA_increase_state_category_by_one_level = yes
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-				add_building_construction = {
-					type = dockyard
-					level = 1
-				}
-			}
-			every_state = {
-				limit = {
-					OR = {
-						state = 671
-						state = 286
-						state = 741
-					}
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 1
-				}
-			}
-			hidden_effect = {
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_government = communism
-					}
-				}
-				country_event = {
-					id = FRA_prov_event.45
-					days = 4
-				}
-			}
-		}
-	}
-	focus = {
-		#호치민과의 타협
-		id = FRA_focus_15
-		cost = 2
-		x = 5
-		y = 6
-		relative_position_id = FRA_focus_10
-		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = {
-			focus = FRA_focus_10
-		}
-		mutually_exclusive = {
-			focus = FRA_focus_14
-		}
-		available = {
-			VIN = {
-				exists = yes
-				has_war = no
-			}
-		}
-		completion_reward = {
-			country_event = {
-				id = FRA_prov_event.99
-				days = 2
 			}
 		}
 	}
@@ -2066,11 +1852,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#저항
+		#거센 저항
 		icon = GFX_focus_spr_crush_the_revolution
 		id = FRA_focus_resist_1
 		cost = 2
-		x = 42
+		x = 50
 		y = 0
 		available = {
 			always = no
@@ -5242,10 +5028,11 @@ focus_tree = {
 
 
 	#인물 중점
+		#군사지도자 자리
 	focus = { #베르됭의 사자
 		id = FRA_petain_focus_0
 		cost = 1
-		x = 20
+		x = 23
 		y = 1
 		relative_position_id = FRA_focus.1 icon = {
 		    trigger = {
@@ -5267,6 +5054,11 @@ focus_tree = {
 		    }
 		    value = GFX_goal_FRA_nomoremangmyung_anime
         }
+		allow_branch = {
+			FRA_military_conference = {
+				is_country_leader = yes
+			}
+		}
 		prerequisite = {
 			focus = FRA_focus.1
 		}
@@ -5274,6 +5066,200 @@ focus_tree = {
 			always = no
 		}
 		completion_reward = {
+		}
+	}
+	focus = { #국가혁명
+		id = FRA_petain_focus_1
+		cost = 4
+		x = 0
+		y = 1
+		relative_position_id = FRA_petain_focus_0
+		icon = GFX_focus_SWE_counter_revolution
+		prerequisite = {
+			focus = FRA_petain_focus_0
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #노동
+		id = FRA_petain_focus_2
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = FRA_petain_focus_1
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		prerequisite = {
+			focus = FRA_petain_focus_1
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #가족
+		id = FRA_petain_focus_3
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = FRA_petain_focus_1
+		icon = GFX_goal_generic_national_unity
+		prerequisite = {
+			focus = FRA_petain_focus_1
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #조국
+		id = FRA_petain_focus_4
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = FRA_petain_focus_1
+		icon = GFX_focus_generic_vichy_france_triumphant_focus
+		prerequisite = {
+			focus = FRA_petain_focus_1
+		}
+		completion_reward = {
+		}
+	}
+
+		#정치지도자 자리
+		
+	focus = { #피에르 라발
+		id = FRA_laval_focus_0
+		cost = 1
+		x = 27
+		y = 1
+		relative_position_id = FRA_focus.1
+		icon = GFX_focus_generic_treaty
+		prerequisite = { 
+			focus = FRA_focus.1
+		}
+		available = {
+			always = no
+		}
+		allow_branch = {
+			FRA_pierre_laval = {
+				is_hired_as_advisor = yes
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #반공 태세 강화
+		id = FRA_laval_focus_1
+		cost = 4
+		x = 0
+		y = 3
+		relative_position_id = FRA_laval_focus_0
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = { 
+			focus = FRA_laval_focus_0
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#지중해를 바라보며
+		id = FRA_focus_12
+		icon = GFX_goal_generic_mediterranean
+		cost = 4.4
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = FRA_petain_focus_3
+		}
+		prerequisite = {
+			focus = FRA_laval_focus_1
+		}
+		allow_branch = {
+			always = yes
+		}
+		relative_position_id = FRA_petain_focus_3
+		available = {
+			NOT = {
+				has_country_flag = FRA_emergency_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = FRA_focus_12_tt_tri
+				has_country_flag = FRA_alz_core
+				has_country_flag = FRA_mor_core
+				has_country_flag = FRA_tun_core
+				has_country_flag = FRA_waf_core
+			}
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_owned_by = FRA
+					is_on_continent = africa
+					NOT = {
+						state = 514
+						state = 515
+						state = 775
+						state = 782
+						state = 786
+						state = 543
+						state = 708
+						state = 706
+					}
+				}
+				add_core_of = FRA
+			}
+			every_state = {
+				limit = {
+					is_owned_by = FRA
+					has_resistance = yes
+				}
+				add_resistance = -100
+			}
+			hidden_effect = {
+				country_event = {
+					id = FRA_prov_event.114
+					days = 3
+				}
+			}
+			add_popularity = {
+				ideology = var:current_party_ideology_group
+				popularity = 0.2
+			}
+			add_stability = 0.2
+			if = {
+				limit = {
+					has_country_leader = {
+						character = FRA_military_conference
+						ruling_only = yes
+					}
+				}
+				custom_effect_tooltip = BA_FRA_no_change_tt
+			}
+		}
+	}
+	focus = {
+		#호치민과의 타협
+		id = FRA_focus_15
+		cost = 4
+		x = -2
+		y = 1
+		relative_position_id = FRA_petain_focus_0
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = {
+			focus = FRA_petain_focus_0
+		}
+		available = {
+			VIN = {
+				exists = yes
+				has_war = no
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = FRA_prov_event.99
+				days = 2
+			}
 		}
 	}
 

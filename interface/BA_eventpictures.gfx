@@ -304,6 +304,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_GEI_invasion.png"
 	}
 
+	spriteType = { 
+		name = "GFX_news_event_GEI_ibuki_die"
+		texturefile = "gfx/event_pictures/news_event_GEI_ibuki_die.png"
+	}
+
 
   #
 
@@ -379,9 +384,18 @@ spriteTypes = {
 		name = "GFX_report_event_generic_kivotos_city_3"
 		texturefile = "gfx/event_pictures/report_event_generic_kivotos_city_3.tga"
 	}
+	spriteType = {
+		name = "GFX_report_event_generic_arius"
+		texturefile = "gfx/event_pictures/report_event_generic_arius.tga"
+	}
 	
 	
 	##
+
+	spriteType = {
+		name = "GFX_report_event_generic_azusa"
+		texturefile = "gfx/event_pictures/report_event_generic_azusa.tga"
+	}
 
 	spriteType = {
 		name = "GFX_report_event_yakushi_saya_memorial"
@@ -749,6 +763,10 @@ spriteTypes = {
     spriteType = {
      	name = "GFX_report_event_atsuko"
      	texturefile = "gfx/event_pictures/report_event_atsuko.tga"
+    }
+    spriteType = {
+     	name = "GFX_report_event_TRN_hasumi_renge"
+     	texturefile = "gfx/event_pictures/report_event_TRN_hasumi_renge.tga"
     }
 
 

@@ -209,6 +209,48 @@ characters={
 			}
 		}
 	}
+	ARI_Shirasu_Azusa = {
+		name=TRN_Shirasu_Azusa
+		portraits={
+			army={
+				large= GFX_TRN_Shirasu_Azusa_Portrait
+				small= GFX_ARI_Shirasu_Azusa_idea
+			}
+			civilian={
+				large= GFX_TRN_Shirasu_Azusa_Portrait
+				small= GFX_ARI_Shirasu_Azusa_idea
+			}
+		}
+		gender = female
+		
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = ARI_Shirasu_Azusai_high_command
+			allowed = {
+				original_tag = ARI
+			}
+			traits = {
+				army_commando_2
+			}
+			visible = {
+				has_country_flag = ARI_azusa_comeback
+			}
+		}
+		corps_commander={
+			traits={ commando }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			desc = TRN_Azusa_advisor_desc
+			visible = {
+				has_country_flag = ARI_azusa_comeback
+			}
+		}
+
+	}
 	ARI_reinhard_heydrich={
 		name=reinhard_heydrich
 		portraits={
