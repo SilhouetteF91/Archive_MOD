@@ -1,0 +1,76 @@
+# 색채(The Colour) 장비 시스템
+# GEI_The_Colour 전용 장비 및 네트워크 시스템
+
+equipments = {
+	# 잊힌 방주 (기존 유지)
+	# 기억은 해두고 나중에 붙이자..
+	# forgotten_ark = {
+	# 	abbreviation = "FAK"
+	# 	year = 1944
+	# 	is_buildable = yes
+	# 	archetype = ship_hull_heavy
+
+	# 	priority = 2000
+	# 	parent = ship_hull_heavy_4
+	# 	#alias = destroyer_4
+	# 	sprite = "GFX_valkyrie_ship_hull_light_0_medium"
+		
+	# 	module_slots = {
+	# 		front_1_custom_slot = {
+	# 			required = no
+	# 			allowed_module_categories = {
+	# 				ship_depth_charge
+	# 				ship_anti_air
+	# 				ship_light_battery
+	# 				dp_light_battery
+	# 			}
+	# 		}
+	# 		mid_1_custom_slot = {
+	# 			required = no
+	# 			allowed_module_categories = {
+	# 				ship_torpedo
+	# 				ship_mine_warfare
+	# 				ship_mine_layer
+	# 				ship_depth_charge
+	# 				ship_anti_air
+	# 				ship_light_battery
+	# 				dp_light_battery
+	# 			}
+	# 		}
+	# 		mid_2_custom_slot = mid_1_custom_slot
+	# 		rear_1_custom_slot = {
+	# 			required = no
+	# 			allowed_module_categories = {
+	# 				ship_torpedo
+	# 				ship_mine_warfare
+	# 				ship_mine_layer
+	# 				ship_depth_charge
+	# 				ship_anti_air
+	# 				ship_light_battery
+	# 				dp_light_battery
+	# 			}
+	# 		}
+	# 	}
+	# 	default_modules = {
+	# 		fixed_ship_battery_slot = ship_light_battery_4
+	# 		fixed_ship_anti_air_slot = ship_anti_air_4
+	# 		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+	# 		fixed_ship_radar_slot = empty
+	# 		fixed_ship_engine_slot = light_ship_engine_4
+	# 		fixed_ship_torpedo_slot = ship_torpedo_4
+	# 		mid_1_custom_slot = empty
+	# 		rear_1_custom_slot = ship_depth_charge_4
+	# 	}
+
+	# 	surface_detection = 20
+	# 	reliability = 0.92
+	# 	naval_range = 2500
+	# 	max_strength = 60
+	# 	build_cost_ic = 600
+	# 	resources = {
+	# 		steel = 4
+	# 		chromium = 1
+	# 	}
+	# 	manpower = 500
+	# }
+}

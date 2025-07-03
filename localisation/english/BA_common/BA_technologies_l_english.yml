@@ -47,6 +47,9 @@
  land_cruiser_juggernaut:0 "육상 모함 기술"
  land_cruiser_juggernaut_short:0 "육상 모함 기술"
 
+ repeater_battalion_tech:0 "신호 중계기"
+ repeater_battalion_tech_short:0 "광역 데이터를 수신하는 전문 운용 부대를 만들어 우리의 명령 체계가 더 빠르게 동작하도록 보정합니다."
+
  mystery_correspondence:0 "신비 대응 기술"
  mystery_correspondence_desc:0 "적의 신비 기술에 대응할 기술을 연구합니다."
  mystery_analysis:0 "신비 심층 탐구"

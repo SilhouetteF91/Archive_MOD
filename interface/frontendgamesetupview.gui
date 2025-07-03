@@ -946,103 +946,307 @@ guiTypes = {
 
 		containerWindowType = {
 			name = highlight_major_1
+			position = { x = 153 y = 325 }
+			## x: ± 171 한 칸을 왼쪽이나 오른쪽으로 이동하려면
+			
+
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_BA_game_rule_flag_RED_medium"
+				position = { x = 0  y = 0 }
+				rotation = 25
+				scale = 0.8
+				pdx_tooltip = highlight_major_1_tt
+			}
+
+			iconType = {
+				name = "highlight_major_button_overlay"
+				quadTextureSprite = "GFX_flag_small2_not_masked"
+				position = { x = 0  y = 0 }
+				rotation = 25
+				scale = 0.8
+				pdx_tooltip = highlight_major_1_tt
+			}
+
+			iconType = {
+				name = "highlight_major_button_frame"
+				quadTextureSprite = "GFX_small_flag_frame_thin2_gold"
+				position = { x = -4  y = -4 }
+				rotation = 25
+				scale = 0.8
+				pdx_tooltip = highlight_major_1_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_major_2
+			position = { x = 324 y = 325 }
+			## x: ± 171 한 칸을 왼쪽이나 오른쪽으로 이동하려면
+			
+
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_BA_game_rule_flag_MIL_medium"
+				position = { x = 0  y = 0 }
+				rotation = 25
+				scale = 0.8
+				pdx_tooltip = highlight_major_2_tt
+			}
+
+			iconType = {
+				name = "highlight_major_button_overlay"
+				quadTextureSprite = "GFX_flag_small2_not_masked"
+				position = { x = 0  y = 0 }
+				rotation = 25
+				scale = 0.8
+				pdx_tooltip = highlight_major_2_tt
+			}
+
+			iconType = {
+				name = "highlight_major_button_frame"
+				quadTextureSprite = "GFX_small_flag_frame_thin2_gold"
+				position = { x = -4  y = -4 }
+				rotation = 25
+				scale = 0.8
+				pdx_tooltip = highlight_major_2_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_major_3
 			position = { x = 495 y = 325 }
 			## x: ± 171 한 칸을 왼쪽이나 오른쪽으로 이동하려면
-			## x: ± 86 to move one slot left or right
-#
+			
+
 			iconType = {
 				name = "highlight_major_button"
 				quadTextureSprite = "GFX_BA_game_rule_flag_TRM_medium"
 				position = { x = 0  y = 0 }
 				rotation = 25
 				scale = 0.8
-				pdx_tooltip = highlight_major_1_tt
+				pdx_tooltip = highlight_major_3_tt
 			}
-#
+
 			iconType = {
 				name = "highlight_major_button_overlay"
 				quadTextureSprite = "GFX_flag_small2_not_masked"
 				position = { x = 0  y = 0 }
 				rotation = 25
 				scale = 0.8
-				pdx_tooltip = highlight_major_1_tt
+				pdx_tooltip = highlight_major_3_tt
 			}
-#
+
 			iconType = {
 				name = "highlight_major_button_frame"
 				quadTextureSprite = "GFX_small_flag_frame_thin2_gold"
 				position = { x = -4  y = -4 }
 				rotation = 25
 				scale = 0.8
-				pdx_tooltip = highlight_major_1_tt
+				pdx_tooltip = highlight_major_3_tt
 			}
 		}
-#
+
 		containerWindowType = {
-			name = highlight_major_2
+			name = highlight_major_4
 			position = { x = 666 y = 325 }
 			## x: ± 171 한 칸을 왼쪽이나 오른쪽으로 이동하려면
-			## x: ± 86 to move one slot left or right
-#
+			
+
 			iconType = {
 				name = "highlight_major_button"
 				quadTextureSprite = "GFX_BA_game_rule_flag_COU_medium"
 				position = { x = 0  y = 0 }
 				rotation = 25
 				scale = 0.8
-				pdx_tooltip = highlight_major_2_tt
+				pdx_tooltip = highlight_major_4_tt
 			}
-#
+
 			iconType = {
 				name = "highlight_major_button_overlay"
 				quadTextureSprite = "GFX_flag_small2_not_masked"
 				position = { x = 0  y = 0 }
 				rotation = 25
 				scale = 0.8
-				pdx_tooltip = highlight_major_2_tt
+				pdx_tooltip = highlight_major_4_tt
 			}
-#
+
 			iconType = {
 				name = "highlight_major_button_frame"
 				quadTextureSprite = "GFX_small_flag_frame_thin2_gold"
 				position = { x = -4  y = -4 }
 				rotation = 25
 				scale = 0.8
-				pdx_tooltip = highlight_major_2_tt
+				pdx_tooltip = highlight_major_4_tt
 			}
 		}
-#
+
 		containerWindowType = {
-			name = highlight_major_3
+			name = highlight_major_5
 			position = { x = 837 y = 325 }
 			## x: ± 171 한 칸을 왼쪽이나 오른쪽으로 이동하려면
-			## x: ± 86 to move one slot left or right
-#
+			
+
 			iconType = {
 				name = "highlight_major_button"
 				quadTextureSprite = "GFX_BA_game_rule_flag_GEM_medium"
 				position = { x = 0  y = 0 }
 				rotation = 25
 				scale = 0.8
-				pdx_tooltip = highlight_major_3_tt
+				pdx_tooltip = highlight_major_5_tt
 			}
-#
+
 			iconType = {
 				name = "highlight_major_button_overlay"
 				quadTextureSprite = "GFX_flag_small2_not_masked"
 				position = { x = 0  y = 0 }
 				rotation = 25
 				scale = 0.8
-				pdx_tooltip = highlight_major_3_tt
+				pdx_tooltip = highlight_major_5_tt
 			}
-#
+
 			iconType = {
 				name = "highlight_major_button_frame"
 				quadTextureSprite = "GFX_small_flag_frame_thin2_gold"
 				position = { x = -4  y = -4 }
 				rotation = 25
 				scale = 0.8
-				pdx_tooltip = highlight_major_3_tt
+				pdx_tooltip = highlight_major_5_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_major_6
+			position = { x = 1008 y = 325 }
+			## x: ± 171 한 칸을 왼쪽이나 오른쪽으로 이동하려면
+			
+
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_BA_game_rule_flag_HYA_medium"
+				position = { x = 0  y = 0 }
+				rotation = 25
+				scale = 0.8
+				pdx_tooltip = highlight_major_6_tt
+			}
+
+			iconType = {
+				name = "highlight_major_button_overlay"
+				quadTextureSprite = "GFX_flag_small2_not_masked"
+				position = { x = 0  y = 0 }
+				rotation = 25
+				scale = 0.8
+				pdx_tooltip = highlight_major_6_tt
+			}
+
+			iconType = {
+				name = "highlight_major_button_frame"
+				quadTextureSprite = "GFX_small_flag_frame_thin2_gold"
+				position = { x = -4  y = -4 }
+				rotation = 25
+				scale = 0.8
+				pdx_tooltip = highlight_major_6_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_major_7
+			position = { x = 1179 y = 325 }
+			## x: ± 171 한 칸을 왼쪽이나 오른쪽으로 이동하려면
+			
+
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_BA_game_rule_flag_SHA_medium"
+				position = { x = 0  y = 0 }
+				rotation = 25
+				scale = 0.8
+				pdx_tooltip = highlight_major_7_tt
+			}
+
+			iconType = {
+				name = "highlight_major_button_overlay"
+				quadTextureSprite = "GFX_flag_small2_not_masked"
+				position = { x = 0  y = 0 }
+				rotation = 25
+				scale = 0.8
+				pdx_tooltip = highlight_major_7_tt
+			}
+
+			iconType = {
+				name = "highlight_major_button_frame"
+				quadTextureSprite = "GFX_small_flag_frame_thin2_gold"
+				position = { x = -4  y = -4 }
+				rotation = 25
+				scale = 0.8
+				pdx_tooltip = highlight_major_7_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_1
+			position = { x = 712 y = 276 }
+			## x: ± 171 한 칸을 왼쪽이나 오른쪽으로 이동하려면
+			
+
+			iconType = {
+				name = "highlight_minor_button"
+				quadTextureSprite = "GFX_BA_game_rule_flag_HEU_medium"
+				position = { x = 0  y = 0 }
+				rotation = -25
+				scale = 0.6
+				pdx_tooltip = highlight_minor_1_tt
+			}
+
+			iconType = {
+				name = "highlight_minor_button_overlay"
+				quadTextureSprite = "GFX_flag_small2_not_masked"
+				position = { x = 0  y = 0 }
+				rotation = -25
+				scale = 0.6
+				pdx_tooltip = highlight_minor_1_tt
+			}
+
+			iconType = {
+				name = "highlight_minor_button_frame"
+				quadTextureSprite = "GFX_small_flag_frame_thin2_gold"
+				position = { x = -4  y = -4 }
+				rotation = -25
+				scale = 0.6
+				pdx_tooltip = highlight_minor_1_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_2
+			position = { x = 797 y = 276 }
+			## x: ± 171 한 칸을 왼쪽이나 오른쪽으로 이동하려면
+			
+
+			iconType = {
+				name = "highlight_minor_button"
+				quadTextureSprite = "GFX_BA_game_rule_flag_GEH_medium"
+				position = { x = 0  y = 0 }
+				rotation = -25
+				scale = 0.6
+				pdx_tooltip = highlight_minor_2_tt
+			}
+
+			iconType = {
+				name = "highlight_minor_button_overlay"
+				quadTextureSprite = "GFX_flag_small2_not_masked"
+				position = { x = 0  y = 0 }
+				rotation = -25
+				scale = 0.6
+				pdx_tooltip = highlight_minor_2_tt
+			}
+
+			iconType = {
+				name = "highlight_minor_button_frame"
+				quadTextureSprite = "GFX_small_flag_frame_thin2_gold"
+				position = { x = -4  y = -4 }
+				rotation = -25
+				scale = 0.6
+				pdx_tooltip = highlight_minor_2_tt
 			}
 		}
 
@@ -1051,7 +1255,7 @@ guiTypes = {
 		containerWindowType = {
 			name = highlight_minor_0
 			position = { x = 540 y = 330 }
-			## x: ± 86 to move one slot left or right
+			
 			## y: ± 45 to move one slot up or down
 			## make a copy of this element if you want to highlight a second minor
 			hide = yes
@@ -1076,7 +1280,7 @@ guiTypes = {
 		containerWindowType = {
 			name = highlight_minor_1
 			position = { x = 626 y = 330 }
-			## x: ± 86 to move one slot left or right
+			
 			## y: ± 45 to move one slot up or down
 			## make a copy of this element if you want to highlight a second minor
 			hide = yes
@@ -1101,7 +1305,7 @@ guiTypes = {
 		containerWindowType = {
 			name = highlight_minor_2
 			position = { x = 1056 y = 330 }
-			## x: ± 86 to move one slot left or right
+			
 			## y: ± 45 to move one slot up or down
 			## make a copy of this element if you want to highlight a second minor
 			hide = yes

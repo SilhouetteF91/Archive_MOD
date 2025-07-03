@@ -59,7 +59,8 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-
+			set_variable = { BA_halo_infantry_cap_edit_var = 8 }
+			BA_halo_infantry_cap_edit_effect = yes
 		}
 	}
 
@@ -112,8 +113,9 @@ focus_tree = {
 			add_command_power = 100
 			add_war_support = 0.15
 			add_stability = 0.05
-			add_manpower = 30000
+			add_manpower = 100000
 			add_ideas = GEI_DEC_otomaton
+			add_ideas = GEI_DEC_robot_army
 		}
 	}
 	# 강철대륙
@@ -195,7 +197,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = BA_decagrammaton_division_cap
-				value = 4
+				value = 2
 			}
 			# 대충 데카그라마톤을 생성하는 디시전 추가
 			set_division_template_cap = {
@@ -238,7 +240,7 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
+	
 		}
 	}
 
@@ -427,6 +429,28 @@ focus_tree = {
 							version_name = "Prophet Class"
 						}
 						name = "예리코" 
+						requested_factories = 1
+						progress = 0.95
+						amount = 1
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "GEI" 
+							version_name = "Prophet Class"
+						}
+						name = "구원" 
+						requested_factories = 1
+						progress = 0.95
+						amount = 1
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "GEI" 
+							version_name = "Prophet Class"
+						}
+						name = "천로" 
 						requested_factories = 1
 						progress = 0.95
 						amount = 1
@@ -747,6 +771,126 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			GEI = {
+                division_template = {
+                    name = "OTOMATON"
+                    division_names_group = KIV_SEC_01
+                    regiments = {
+                        Infantry = {x = 0 y = 0}
+                        Infantry = {x = 0 y = 1}
+                        Infantry = {x = 0 y = 2}
+						Infantry = {x = 1 y = 0}
+						Infantry = {x = 1 y = 1}
+						Infantry = {x = 1 y = 2}
+						Infantry = {x = 2 y = 0}
+						Infantry = {x = 2 y = 1}
+						Infantry = {x = 2 y = 2}
+                    }
+					support = {
+						recon = { x = 0 y = 0 }
+						artillery = {x = 0 y = 1}
+						engineer = {x = 0 y = 2 }
+						}
+                    priority = 1
+                }
+
+                capital_scope = {
+				create_unit = {
+					division = "name = \"1. 오토마톤 1부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"2. 오토마톤 2부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"3. 오토마톤 3부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"4. 오토마톤 4부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"5. 오토마톤 5부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"6. 오토마톤 6부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"7. 오토마톤 7부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"8. 오토마톤 8부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 9부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 10부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 12부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 13부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 14부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 15부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 16부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 17부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 18부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 19부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 20부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 21부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 22부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 23부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"9. 오토마톤 24부대\" division_template = \"OTOMATON\" start_experience_factor = 0.5 start_equipment_factor = 0.5" 
+					owner = GEI
+				}
+
+				
+			}
+        }
 			
 		}
 	}
@@ -772,6 +916,9 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			KAI = {
+				country_event = {id = GEI_DEC_event.16}
+			}
 			declare_war_on = {
 				target = KAI
 				type = annex_everything
@@ -791,7 +938,13 @@ focus_tree = {
 				owns_state = 127
 				owns_state = 126
 			}
-		}	
+		}
+		capital_scope = {
+			create_unit = {
+					division = "name = \"1. 게부라\" division_template = \"Decagrammaton Division\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = GEI
+				}
+		}
 	  }
 	}
 
@@ -833,7 +986,7 @@ focus_tree = {
 			}
 
 			news_event = { id = BA_news.127 hours = 6 }
-			add_manpower = 200000
+			add_manpower = 250000
 			
 		}
 	}
@@ -853,6 +1006,7 @@ focus_tree = {
 		
 
 		available = {
+			KAI = { exists = no }
 		}
 
 		search_filters = {
@@ -907,12 +1061,21 @@ focus_tree = {
 
 			DE1 = {
 				transfer_state = 15
+				transfer_state = 29
+				transfer_state = 785
 				division_template = {
 					name = "Security Guard"
 					division_names_group = KIV_SEC_01
 					regiments = {
 						militia = {x = 0 y = 0}
 						militia = {x = 0 y = 1}
+						militia = {x = 0 y = 2}
+						militia = {x = 1 y = 0}
+						militia = {x = 1 y = 1}
+						militia = {x = 1 y = 2}
+						militia = {x = 2 y = 0}
+						militia = {x = 2 y = 1}
+						militia = {x = 2 y = 2}
 					}
 					priority = 0
 				}
@@ -952,6 +1115,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			news_event = { id = BA_news.142 hours = 24}
+			news_event = { id = BA_news.146 days = 14}
 
 			every_country = {
                 limit = {
@@ -969,6 +1133,31 @@ focus_tree = {
 
                 country_event = {id = GEI_DEC_event.15}
             }
+			GEM = {
+				retire_character = GEH_satsuki
+				retire_character = GEH_gndnzk
+				retire_character = GEH_dlqnzl
+				retire_character = GEH_motomiya_chiaki
+				country_event = {id = GEI_DEC_event.17}
+			}
+
+			GEH = {
+				retire_character = GEH_ann_fudou
+				country_event = {id = GEI_DEC_event.19}
+			}
+
+			MIL = {
+				retire_character = MIL_dbdnzk
+				retire_character = MIL_dktmsk
+			}
+
+			TRM = {
+				retire_character = TRN_akfl
+				retire_character = TRN_dlclzk
+				retire_character = TRN_dnxkwmal_tkznfkzh
+				retire_character = TRN_dkdhahfl_alsp
+				country_event = {id = GEI_DEC_event.18}
+			}
 		}
 	}
 
@@ -1024,7 +1213,6 @@ focus_tree = {
         }
 
         completion_reward = {
-            
         }
 	}
 
@@ -1090,7 +1278,7 @@ focus_tree = {
 		
 
 		available = {
-			
+			MIL = { exists = no }
 		}
 		search_filters = {
 			
@@ -1161,6 +1349,7 @@ focus_tree = {
                 target = MIL
                 type = annex_everything
             }
+		 news_event = { id = BA_news.145 hours = 12 }
 		}
 	}
 
@@ -1185,6 +1374,9 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION		
 		}
 		completion_reward = {
+			DE1 = {
+				add_ideas = { GEI_DEC_help_to_me }
+			}
 		}
 	}
 

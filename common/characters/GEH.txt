@@ -734,4 +734,70 @@ characters={
 			logistics_skill=1
 		}
 	}
+
+	GEH_nyaomoto_kan ={ #냐오모토 캔
+		name=GEH_nyaomoto_kan 
+		portraits={
+			army={
+				large="gfx/leaders/GEH/GEH_nyaomoto_kan.dds"
+				small="gfx/interface/advisors/GEH/GEH_nyaomoto_kan.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = GEH_nyaomoto_kan
+			allowed = { 
+				OR = { 
+                    original_tag = GEH 
+                    original_tag = GEM 
+					original_tag = HEU
+                } 
+			}
+
+			available = {
+				NOT = { has_idea = GEH_owner_of_suzume }
+			}
+			traits = { armaments_organizer }
+
+			ai_will_do = {
+				base = 0.300
+			}
+		}
+
+	}
+
+	GEH_owner_of_suzume ={ #참새정 주인
+		name=GEH_owner_of_suzume 
+		portraits={
+			army={
+				large="gfx/leaders/GEH/GEH_owner_of_suzume.dds"
+				small="gfx/interface/advisors/GEH/GEH_owner_of_suzume.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = GEH_owner_of_suzume
+			allowed = { 
+				OR = { 
+                    original_tag = GEH 
+                    original_tag = GEM 
+					original_tag = HEU
+                } 
+			}
+
+			available = {
+				NOT = { has_idea = GEH_nyaomoto_kan }
+			}
+
+			traits = { old_figurehead }
+
+			ai_will_do = {
+				base = 0.300
+			}
+		}
+
+		gender = female
+	}
 }

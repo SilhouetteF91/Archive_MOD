@@ -709,6 +709,16 @@ technologies = {
 		}
 	}
 
+	repeater_battalion_tech = {
+		allow = {
+            always = no
+        }
+		
+		enable_subunits = {
+			repeater_battalion
+		}
+	}
+
 	land_cruiser_juggernaut = {
 		allow = {
             always = no

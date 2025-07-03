@@ -224,6 +224,8 @@
 #블랙마켓
  BLA_crime_syndicate_traits: "배후의 모략가"
  BLM_kurihama_akemi_traits: "전설의 스케반"
+ BLM_keyvotos_occupation_traits: "흑색의 기수"
+ BLM_brittany_s_dawn_traits: "국가 통합주의자"
 #독일공산당
  BA_militia_commander: "민간인 지휘관"
  BA_militia_commander_desc: "§L훈련받지 못한 지휘관입니다. 상황의 심각성에 의해 군대를 지휘하는 역할을 부여받았으나 미숙하고 실수가 많을 것입니다.§!"
@@ -360,7 +362,7 @@
  SHA_Genryumon_t: "현룡문"
  SHA_Genryumon_t_desc: "현룡문과의 연줄이 있습니다."
  SHA_Black_Tortoise_Promenade_t: "현무상회"
- SHA_Black_Tortoise_Promenade_t_desc: "현룡문과의 연줄이 있습니다."
+ SHA_Black_Tortoise_Promenade_t_desc: "현무상회와의 연줄이 있습니다."
 
 #시리아
  SYR_divided_politic: "분열된 정치"

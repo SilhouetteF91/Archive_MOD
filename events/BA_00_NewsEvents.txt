@@ -1552,7 +1552,7 @@ news_event = { #
 	}
 }
 
-news_event = { #에덴 핵폭발
+news_event = { #에덴 공습
 	id = BA_news.36
 	title = BA_news.36.t
 	desc = BA_news.36.d
@@ -5314,7 +5314,7 @@ news_event = { # 비에노 조약
 news_event = { # 키보토스 기계해방전선의 결성
     id = BA_news.139
     title = BA_news.139.t
-    desc = BA_news.139.d
+    desc = BA_news.139.desc
     picture = GFX_news_event_GEI_army
 
     major = yes
@@ -5545,6 +5545,70 @@ news_event = { # 게헨나 재통일
 			Kivotos_tag = no
 		}
 	}
+}
+
+news_event = { # 전면침공
+    id = BA_news.145
+    title = BA_news.145.t
+    desc = BA_news.145.desc
+    picture = GFX_news_event_GEI_invasion
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.145.a # 이제 시작 
+		trigger = {
+			tag = GEI
+        }
+    }
+
+    option = {
+        name = BA_news.145.b # 예리두 방어
+		trigger = {
+			tag = MIL
+        }
+    }
+
+	option = {
+        name = BA_news.145.b # 살육
+		trigger = {
+			NOT = { tag = GEI }
+			NOT = { tag = MIL }
+        }
+    }
+}
+
+news_event = { # 이부키 실종 
+    id = BA_news.146
+    title = BA_news.146.t
+    desc = BA_news.146.desc
+    picture = GFX_news_event_GEI_ibuki_die
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.146.a # 안타깝군
+		trigger = {
+			tag = GEI
+        }
+    }
+
+    option = {
+        name = BA_news.146.b # 이부키...
+		trigger = {
+			tag = GEM
+        }
+    }
+
+	option = {
+        name = BA_news.146.b # 어린 생명이 희생되었구나
+		trigger = {
+			NOT = { tag = GEI }
+			NOT = { tag = GEM }
+        }
+    }
 }
 
 

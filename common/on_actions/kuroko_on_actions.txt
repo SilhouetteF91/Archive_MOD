@@ -1,0 +1,121 @@
+###########################
+# Kuroko Regeneration System On Actions
+# 쿠로코 리젠 시스템 온액션
+###########################
+
+on_actions = {
+	
+	# 게임 시작 시 쿠로코 시스템 초기화
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					tag = GEI
+					has_tech = kuroko_raid_technology
+				}
+				# 게임 시작 시 시스템 초기화
+				country_event = { id = kuroko_regen.6 hours = 1 }
+			}
+		}
+	}
+	
+	# 매월 확인
+	on_monthly_GEI = {
+		effect = {
+			every_country = {
+				limit = {
+					has_tech = kuroko_raid_technology
+				}
+				# 월별 쿠로코 존재 확인
+				country_event = { id = kuroko_regen.1 hours = 6 }
+			}
+		}
+	}
+	
+	# 전쟁 관계 추가 시 (전쟁 시작)
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					tag = GEI
+					has_tech = kuroko_raid_technology
+					NOT = { 
+						check_variable = { kuroko_infantry_cap > 0 }
+						has_template = "Shiroko Terror"
+					}
+				}
+				# 전쟁 시작 시 긴급 쿠로코 소환 고려
+				country_event = { id = kuroko_regen.5 days = 30 }
+			}
+		}
+	}
+	
+	# 수도 함락 시
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					tag = GEI
+					has_tech = kuroko_raid_technology
+				}
+				# 수도 함락 시 쿠로코 시스템 일시 중단
+				set_country_flag = kuroko_system_suspended
+				
+				# 모든 예정된 쿠로코 이벤트 취소
+				clr_country_flag = kuroko_regen_in_progress
+			}
+		}
+	}
+	
+	# 주간 확인 (사단 상태 모니터링)
+	on_weekly = {
+		effect = {
+			every_country = {
+				limit = {
+					tag = GEI
+					has_tech = kuroko_raid_technology
+					NOT = { has_country_flag = kuroko_system_suspended }
+				}
+				
+				# 쿠로코가 없는데 리젠 타이머도 없는 경우 시스템 재시작
+				if = {
+					limit = {
+						NOT = { 
+							check_variable = { kuroko_infantry_cap > 0 }
+							has_template = "Shiroko Terror"
+						}
+						NOT = { has_country_flag = kuroko_regen_in_progress }
+					}
+					country_event = { id = kuroko_regen.2 days = 1 }
+				}
+				
+				# 긴급 상황 체크
+				if = {
+					limit = {
+						has_war = yes
+						surrender_progress > 0.2
+						NOT = { 
+							check_variable = { kuroko_infantry_cap > 0 }
+							has_template = "Shiroko Terror"
+						}
+					}
+					country_event = { id = kuroko_regen.5 days = 7 }
+				}
+				
+				# 장기 생존 플래그 설정 (매주 체크)
+				if = {
+					limit = {
+						check_variable = { kuroko_infantry_cap > 0 }
+						has_template = "Shiroko Terror"
+						NOT = { has_country_flag = kuroko_long_survival }
+						# 게임이 시작된 지 1년 이상 경과
+						has_war_together_with = GEI
+					}
+					# 1년 생존 시 장기 생존 플래그 설정
+					set_country_flag = kuroko_long_survival
+				}
+			}
+		}
+	}
+	
+}

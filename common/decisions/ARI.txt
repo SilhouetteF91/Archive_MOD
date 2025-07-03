@@ -263,6 +263,14 @@ ARI_penetration = {
 	ARI_penetration_complet = {
 		icon = GFX_decision_generic_form_nation
 
+		highlight_states = {
+			highlight_states_trigger = {
+				state = FROM
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
 		state_target = yes
 
 		on_map_mode = map_only
@@ -285,12 +293,68 @@ ARI_penetration = {
 			}
 		}
 	}
-	ARI_penetration_TRM = {
-		icon = generic_operation
+	ARI_penetration_get_pol = {
+		icon = GFX_decision_generic_ignite_civil_war
+
+		highlight_states = {
+			highlight_states_trigger = {
+				state = FROM
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		state_target = yes
 
-		on_map_mode = map_only
+		on_map_mode = decision_view_only
+
+		target_array = TRM.core_states
+
+		target_trigger = {
+			FROM = {
+				has_state_flag = penetration_complet
+			}
+		}
+
+		custom_cost_text = decision_cost_CP_50
+		
+		custom_cost_trigger = {
+			command_power > 49
+		}
+
+		available = {
+		}
+
+		days_re_enable = 200
+
+		visible = {
+			NOT = {
+				has_completed_focus = ARI_deny_trinity
+				has_global_flag = ARI_penetration_stop_flag
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+			}
+			add_political_power = 30
+        }
+	}
+	ARI_penetration_TRM = {
+		icon = generic_operation
+
+		highlight_states = {
+			highlight_states_trigger = {
+				state = FROM
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		state_target = yes
+
+		on_map_mode = map_and_decisions_view
 
 		target_array = TRM.core_states
 

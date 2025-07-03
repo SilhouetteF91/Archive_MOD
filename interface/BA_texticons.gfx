@@ -266,4 +266,60 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+	### 게임 루트 ###
+	
+	spriteType = {
+		name = "GFX_GEH_path_texticon"
+		texturefile = "gfx/texticons/introscreen/GEH_path_texticon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_COU_path_texticon"
+		texturefile = "gfx/texticons/introscreen/COU_path_texticon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_GEM_path_texticon"
+		texturefile = "gfx/texticons/introscreen/GEM_path_texticon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_HEU_path_texticon"
+		texturefile = "gfx/texticons/introscreen/HEU_path_texticon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_HYA_path_texticon"
+		texturefile = "gfx/texticons/introscreen/HYA_path_texticon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_MIL_path_texticon"
+		texturefile = "gfx/texticons/introscreen/MIL_path_texticon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_SHA_path_texticon"
+		texturefile = "gfx/texticons/introscreen/SHA_path_texticon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_RED_path_texticon"
+		texturefile = "gfx/texticons/introscreen/RED_path_texticon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_TRM_path_texticon"
+		texturefile = "gfx/texticons/introscreen/TRM_path_texticon.dds"
+		legacy_lazy_load = no
+	}
+
 }

@@ -1564,11 +1564,10 @@ ideas = {
 			}
 
 			modifier = {
-				army_defence_factor = 0.2
-                army_attack_factor = 0.2
-				no_supply_grace = 300
+				army_defence_factor = 0.35
+                army_attack_factor = 0.35
 				ai_desired_divisions_factor = 7.5
-				army_strength_factor = 0.5
+				army_strength_factor = 0.3
 
 			}
 
@@ -1687,8 +1686,85 @@ ideas = {
 			removal_cost = -1
 
             modifier = {
-                army_speed_factor = 0.05
-                max_planning = 0.3
+                army_speed_factor = 0.1
+                max_planning = 0.4
+            }
+        }
+
+		GEI_DEC_homefront = { # 내부의 적 
+
+			picture = GEI_DEC_metrix
+
+			allowed = {
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_defence_factor = -0.4
+                army_attack_factor = -0.4
+				army_strength_factor = -0.3
+
+			}
+
+			cancel_if_invalid = no
+		}
+
+		GEI_DEC_help_to_me = { # 신이 도우신다 
+
+			picture = GEI_DEC_metrix
+
+			allowed = {
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_defence_factor = 0.2
+                army_attack_factor = 0.2
+			}
+
+			cancel_if_invalid = no
+		}
+
+		GEI_DEC_terror = { # 공격
+            picture = GEI_DEC_metrix
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+            modifier = {
+                max_planning = -0.3
+				stability_factor = -0.1
+				army_defence_factor = -0.1
+                army_attack_factor = -0.1
             }
         }
 	}
