@@ -110,6 +110,9 @@
  ABY_KHF:0 "카를 헤르만 프랑크"
 
  #특성#
+ ABY_trait_three_head:0 "삼두정"
+ ABY_trait_emergency_war_economy:0 "비상 전시 경제"
+
  b_wkaRnfjrl:0 "잠꾸러기"
  b_rkaalfhdnszhtshfo:0 "징병의 달인"
  b_tlqktpzl:0 "라멘 가게"
@@ -1429,6 +1432,7 @@
  ABY_final_tt:0 "§R당신의 국가는 합병됩니다. 당신으로 인해 게임이 종료됩니다.§!" 
  ABY_autofocus_flag:0 "§R추후 자동으로 완료됨§!" 
  ABY_tt_give_state:0 "우리는 주를 제공하는 대가로 트리니티와 불가침조약을 맺을 것입니다." 
+ ABY_flag_recovered_land:0 "체코와 오스트리아 영토를 수복함"
  #########################
  #####아비도스 신 이벤트#####
  #########################
@@ -2927,8 +2931,8 @@
  ABY_descision_focus_event.28.a:0 ""...네. 선생님의 유산을 지킬게요.""
 
  ABY_descision_focus_event.29.t:0 "심모원려"
- ABY_descision_focus_event.29.d:0 ""
- ABY_descision_focus_event.29.a:0 ""
+ ABY_descision_focus_event.29.d:0 "“후우... 역시 서류작업은 어려워...”\n\n서류에서 잠시 눈을 뗀 세리카는 기지개를 쭉 폈다.\n대전이가 발생한 지도 꽤 지난 지금, 세리카는 '이남8주위원회' 설립 업무를 맡고 있었다. 선생님과 아야네의 도움으로 지금은 서류 작업에도 어느 정도 요령이 생겼지만, 여전히 일은 많고, 익숙하지 않았다.\n\n“역시 나는 서류하고는 맞지 않는지도 몰라...”\n“아닙니다, 세리카 양. 세리카 양은 최선을 다해주고 있어요.”\n“엣, 선생님!?”\n\n어느새 마사리크가 문 앞에 서 있었다.\n\n“내무부 차관이라는 중책을 맡고 지금까지 큰 문제 없이 잘 해준 것 만으로도 세리카 양은 충분히 능력이 있어요.”\n\n“그렇지만 내가 스스로 알아챌 수 있는 건 자그마한 정도의 누락이라던가, 대놓고 과장된 내용 정도뿐인데...”\n\n“허허, 원래 작은 발전이 하나하나 모여서 더욱 성장하는 법이죠.”\n\n마사리크의 위로에도 세리카는 고민이 풀리지 않은 표정이었다.\n\n“흠, 뭔가 고민이 있는 표정이군요. 말해 줄 수 있겠나요?”\n\n마사리크의 말을 들은 세리카는 잠시 주저하더니 대뜸 이렇게 물었다.\n\n“만약 선생님께 물어볼 수 없는 상황에서 중요한 선택을 해야 한다면, 나는 어떻게 해야 할까?”\n\n마사리크는 조금 놀랐지만, 일단 세리카의 말을 경청했다.\n\n“요즘 들어서, 어떤 상황이 벌어져도 이상하지 않다는 생각이 들거든. 최악의 경우에 내가 모두를 책임져야 할 상황이 올 수도 있다는 생각도. 선생님이 도와준 덕분에 이제 나도 무조건 속지는 않지만, 그런 상황이 당장 닥친다면, 그리고 그 상황에서 조언해 줄 사람이 없다면 나는 잘못된 선택을 하고 말 거야. 그러니까 선생님, 만약을 대비해서... 내가 어떻게 해야 할지 알려줘.”\n\n마사리크는 이미 자신의 죽음을 염두에 두고 있었기에 그에 대해서는 많은 생각이 있었으나, 세리카가 염려하는 것은 그보다 훨씬 심각한 상황인 듯했다.\n마사리크는 잠시 생각에 잠겼고, 이윽고 이렇게 조언해주었다.\n\n“세리카 양이 한 선택이 어떤 결과를 불러올지 충분히 깊게 생각해줬으면 합니다. 특히...”\n\n“그런 상황이 온다면 자신의 안전이 제일 중요하다는 점 또한 명심하고요.”"
+ ABY_descision_focus_event.29.a:0 "“우리가 책임지고 있는 사람들을 생각해서 결정을 내렸으면 합니다.”"
 
  ABY_descision_focus_event.30.t:0 "영토 수복"
  ABY_descision_focus_event.30.d:0 ""
@@ -3263,6 +3267,14 @@
  ABY_hidden_event.1.t: "중점 시간 히든 이벤트"
  ABY_hidden_event.1.desc: "이것이 보인다면 버그에 해당하므로 디스코드에 제보를 부탁합니다."
  ABY_hidden_event.1.a: "감사합니다."
+ 
+ ABY_hidden_event.2.t: "중점 시간 히든 이벤트"
+ ABY_hidden_event.2.desc: "이것이 보인다면 버그에 해당하므로 디스코드에 제보를 부탁합니다."
+ ABY_hidden_event.2.a: "감사합니다."
+ 
+ ABY_hidden_event.3.t: "중점 시간 히든 이벤트"
+ ABY_hidden_event.3.desc: "이것이 보인다면 버그에 해당하므로 디스코드에 제보를 부탁합니다."
+ ABY_hidden_event.3.a: "감사합니다."
 
  SOV_bcerossiya:0 "전러시아 임시위원회"
  #########################
@@ -3660,22 +3672,21 @@
  ABY_german_focustree_tt:0 "주데텐란트 위원회"
  ABY_czecho_focustree_tt:0 "체코 임시정부"
  ABY_tt_not_ongoing: "§Y세력중점 선택 필요!§!"
- ABY_tt_ongoing: "§G세력중점 진행 중!"
+ ABY_tt_ongoing: "§G세력중점 진행 중§!\n매일 정치력 비용: §R+1§!"
  
  ABY_days_1:0 "49일"
- ABY_days_2:0 "진행도 §Y[?var:ABY_focus_time_flag_var]§!/§Y49§! 일"
- ABY_days_3:0 "완료까지 §Y[?ABY_focus_time_flag:days_left|Y0]§!일"
+ ABY_days_2:0 "진행도 §Y[?var:ABY_focus_time_flag_abydos_var]§!/§Y49§! 일"
+ ABY_days_3:0 "완료까지 §Y[?ABY_focus_time_flag_abydos:days_left|Y0]§!일"
+ ABY_days_2_C:0 "진행도 §Y[?var:ABY_focus_time_flag_czecho_var]§!/§Y49§! 일"
+ ABY_days_3_C:0 "완료까지 §Y[?ABY_focus_time_flag_czecho:days_left|Y0]§!일"
+ ABY_days_2_G:0 "진행도 §Y[?var:ABY_focus_time_flag_german_var]§!/§Y49§! 일"
+ ABY_days_3_G:0 "완료까지 §Y[?ABY_focus_time_flag_german:days_left|Y0]§!일"
 
  ABY_czech_head_1_trait: "§Y보헤미아의 아버지§!\n	안정도: §G+30.00%§!\n	정치력 획득: §G+15%§!\n	매일 민주주의 지지도: §G+0.10§!\n\n토마시 가리크 마사리크는 1850년 3월 7일 모라비아의 홀도닌에서 태어났다. 청년기에 접어든 그는 철학자이자 사회 개혁가로서 오스트로슬라브주의에 입각한 체코 민족주의 운동에 선도적인 역할을 하였다. 오스트리아-헝가리 제국 내 체코 민족의 자치를 위하여 헌신하였으나, 1차 세계대전 중 국제 정세를 반영하여 체코슬로바키아의 독립 노선으로 전환하였고, 1918년 10월 28일 독립 선언에 이바지한 바, 같은 해 11월 14일 초대 대통령으로 취임하여 국가 건설과 민주주의 확립에 결정적인 역할을 하고 1935년 대통령직을 사임하였다. 하지만 대전이와 함께 그는 다시 체코 임시정부의 지도자가 되었고, 다시금 체코의 해방을 위해 노구를 이끌고 노력하고 있다."
  ABY_czech_head_2_trait: "§Y저항운동가§!\n	징병 가능 인구 변동치: §G+15%§!\n	전쟁 지지도: §G+10.00%§!\n\n에드바르트 베네시는 1884년 5월 28일 오스트리아-헝가리 제국 보헤미아 지역에서 태어났다. 그는 토마시 마사리크의 제자로서 체코 민족 해방운동에 매진하였다. 그는 외교와 내정 분야에서 두각을 나타내며 여러 정부 요직을 역임한 후, 국제 외교 무대에서 체코슬로바키아의 위상을 높이는 데 힘쓰다가 1935년에 제2대 대통령으로 취임하였다. 대전이로 인해 체코슬로바키아가 붕괴되고 체코 임시정부가 설립되고 1937년 마사리크의 대통령직 사임 이후 새로이 체코인들의 지도자가 된 베네시는 마사리크의 후계자로써 체코 해방에 매진하고 있다."
  ABY_german_head_1_trait: "§Y민주주의의 조율자§!\n	매주 안정도: §G+0.50%§!\n	매일 파시즘 지지도: §R-0.10§!\n	매일 민주주의 지지도: §G+0.10§!\n\n루트비히 체흐는 1870년 2월 14일 리볼에서 태어났다. 독일어를 사용하는 유대인 출신의 변호사이자 정치인으로서 오스트리아-헝가리 말기의 사회민주주의 전통을 계승하여 체코슬로바키아 건국 이후 1929년부터 사회 복지 분야의 장관으로 활동하였으며, 이후 공공 사업 부문에서도 중책을 맡아 독일계 체코슬로바키아인의 권익 신장을 위하여 헌신하였다. 다만 대전이 이후 체코슬로바키아 정부 내 독일계 최고위직이었던 그는 주데텐란트 독일계 시민들의 대변자가 되었다. 하지만 대전이 과정에서 흉탄에 맞은 여파로 그의 건강은 날로 안좋아지고 있다."
  ABY_german_head_2_trait: "§Y주데텐 민족주의자§!\n	안정도: §G+15.00%§!\n	정치력 획득: §R-10%§!\n	징병 가능 인구: §Y-0.50%§!\n	매일 비동맹주의 지지도: §R-0.10§!\n\n콘라트 헨라인은 1898년 5월 24일 오스트리아-헝가리 제국 내 독일계 거주 지역에서 태어났다. 그는 젊은 몸으로 체코슬로바키아 내 독일계 자치 운동의 선두주자로 부상하였다. 1930년대 초, 주데텐 독일인당의 당수로서 당의 조직력과 단결을 강화하기 위하여 적극적으로 활동하였으며, 주데텐란트 시민의 정치적 자각을 고취하는 데 중심적인 역할을 하였다. 대전이 이후 졸지에 주데텐 독일인들 대다수의 지지를 받는 그는 연립정부 내에서 마사리크 다음으로 정치적 영향력이 큰 사람이 되었다. 체흐의 사망 이후, 그는 공식적으로 독일계 대표로 올라섰으나 그는 이 상황에 큰 부담을 느끼고 있다."
  ABY_abydos_head_trait: "§Y아비도스의 방패§!\n	전쟁 지지도: §G+10.00%§!\n	핵심 영토에서 사단 공격: §G+10.0%§!\n	방어전쟁 불이익의 안정도 변동치: §G+20.00%§!\n\n아비도스 고등학교의 유일한 3학년 이자 대책위원회의 정신적 지주인 타카나씨 호시노는 얼핏 보면 그저 잠을 좋아하는 귀여운 게으름 뱅이로 보입니다. 그녀의 느긋한 행동을 보고 있자면 선배의 위엄보다는 귀여운 후배로서의 느낌이 더 강합니다. 하지만 그녀가 사랑에 맞지 않는 아비도스 고등학교와 후배들에게 위함에 처하면 그녀는 전에 귀엽고 나긋한 모습은 어디 갔냐는 듯 강인하고 강직한. 강한 모습을 보일 것입니다. 다소 감정에 휘둘리는 경향이 있지만 그녀의 뛰어난 전투력은 그 무모함도 무마하고 가로막는 모든 것을 부수고 나아갈 그런 강인해 보이는 그녀도 가끔은 어벙하고 이상한 모습을 보일 때가 있습니다. 후배들이 이에 대해 물어보더라도 그녀는 대답을 회피하고 맙니다. 그녀가 마음에 담아두고 있는 말 못할 사연은 무엇일까요?"
- ABY_idea_czecho_1: "토마시 마사리크"
- ABY_idea_czecho_2: "에드바르트 베네시"
- ABY_idea_german_1: "루트비히 체흐"
- ABY_idea_german_2: "콘라트 헨라인"
- ABY_idea_abydos_1: "타카나시 호시노"
 
  ABY_focus_delayed_tt: "§G세부 사항을 보려면 클릭하세요§!"
 
@@ -3917,11 +3928,11 @@
  ABY_descision_focus_czecho_3_need_no: "§R[GetABY_descision_focus_czecho_3_name] 필요§!"
  ABY_descision_focus_czecho_3_need_yes: "§G[GetABY_descision_focus_czecho_3_name] 필요§!"
 
- ABY_descision_focus_czecho_8_need_no: "§R[GetABY_descision_focus_abydos_8_name] 필요§!"
- ABY_descision_focus_czecho_8_need_yes: "§G[GetABY_descision_focus_abydos_8_name] 필요§!"
+ ABY_descision_focus_czecho_8_need_no: "§R[GetABY_descision_focus_czecho_8_name] 필요§!"
+ ABY_descision_focus_czecho_8_need_yes: "§G[GetABY_descision_focus_czecho_8_name] 필요§!"
 
- ABY_descision_focus_czecho_9_need_no: "§R[GetABY_descision_focus_abydos_9_name] 필요§!"
- ABY_descision_focus_czecho_9_need_yes: "§G[GetABY_descision_focus_abydos_9_name] 필요§!"
+ ABY_descision_focus_czecho_9_need_no: "§R[GetABY_descision_focus_czecho_9_name] 필요§!"
+ ABY_descision_focus_czecho_9_need_yes: "§G[GetABY_descision_focus_czecho_9_name] 필요§!"
 
  ABY_descision_focus_german_1_need_no: "§R[GetABY_descision_focus_german_1_name] 필요§!"
  ABY_descision_focus_german_1_need_yes: "§G[GetABY_descision_focus_german_1_name] 필요§!"
@@ -4600,6 +4611,15 @@ ABY_idea_two_01:0 "두 세계의 국가"
 ABY_idea_two_000:0 "두 세계의 국가"
 ABY_idea_two_0000:0 "두 세계의 국가"
 ABY_idea_two_001:0 "두 세계의 국가"
+
+ABY_idea_czecho_1_person:0 "토마시 마사리크"
+ABY_idea_czecho_2_person:0 "에드바르트 베네시"
+ABY_idea_german_1_person:0 "루트비히 체흐"
+ABY_idea_german_2_person:0 "콘라트 헨라인"
+ABY_idea_abydos_1_person:0 "타카나시 호시노"
+ABY_idea_great_germanist:0 "대독일주의 반대파"
+ABY_idea_great_germanist_2:0 "대독일주의 반대파"
+ABY_idea_great_germanist_3:0 "대독일주의 반대파"
 #########################
 #####아비도스 신 국가중점#####
 #########################

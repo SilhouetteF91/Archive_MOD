@@ -17226,6 +17226,10 @@ country_event = {
 				NOT = {has_country_flag = ABY_flag_two_world_complete}
 			}
 			custom_effect_tooltip = ABY_30_days_tt
+			custom_effect_tooltip = ABY_tt_getsokku_minus_3
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
 			random_list = {
 				1 = {
 					country_event = {
@@ -17298,6 +17302,10 @@ country_event = {
 				NOT = {has_country_flag = ABY_flag_two_world_complete}
 			}
 			custom_effect_tooltip = ABY_30_days_tt
+			custom_effect_tooltip = ABY_tt_getsokku_minus_3
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
 			random_list = {
 				1 = {
 					country_event = {
@@ -17370,6 +17378,10 @@ country_event = {
 				NOT = {has_country_flag = ABY_flag_two_world_complete}
 			}
 			custom_effect_tooltip = ABY_30_days_tt
+			custom_effect_tooltip = ABY_tt_getsokku_minus_3
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
 			random_list = {
 				1 = {
 					country_event = {
@@ -17442,6 +17454,10 @@ country_event = {
 				NOT = {has_country_flag = ABY_flag_two_world_complete}
 			}
 			custom_effect_tooltip = ABY_30_days_tt
+			custom_effect_tooltip = ABY_tt_getsokku_minus_3
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
 			random_list = {
 				1 = {
 					country_event = {
@@ -17514,6 +17530,10 @@ country_event = {
 				NOT = {has_country_flag = ABY_flag_two_world_complete}
 			}
 			custom_effect_tooltip = ABY_30_days_tt
+			custom_effect_tooltip = ABY_tt_getsokku_minus_3
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
 			random_list = {
 				1 = {
 					country_event = {
@@ -17586,6 +17606,10 @@ country_event = {
 				NOT = {has_country_flag = ABY_flag_two_world_complete}
 			}
 			custom_effect_tooltip = ABY_30_days_tt
+			custom_effect_tooltip = ABY_tt_getsokku_minus_3
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
 			random_list = {
 				1 = {
 					country_event = {
@@ -17658,6 +17682,10 @@ country_event = {
 				NOT = {has_country_flag = ABY_flag_two_world_complete}
 			}
 			custom_effect_tooltip = ABY_30_days_tt
+			custom_effect_tooltip = ABY_tt_getsokku_minus_3
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
+			ABY_scripted_effect_getsokku_minus_effect = yes
 			random_list = {
 				1 = {
 					country_event = {
@@ -18384,10 +18412,11 @@ country_event = {
 		name = ABY_hidden_event.1.a 
 		if = {
 			limit = {
-				has_country_flag = ABY_focus_time_flag
+				has_country_flag = ABY_focus_time_flag_abydos
 			}
+			add_political_power = -1
 			add_to_variable = {
-        	    var = ABY_focus_time_flag_var
+        	    var = ABY_focus_time_flag_abydos_var
         	    value = 1
         	}
 			country_event = {
@@ -18397,10 +18426,11 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = {has_country_flag = ABY_focus_time_flag}
+				NOT = {has_country_flag = ABY_focus_time_flag_abydos}
 			}
+			add_political_power = -1
 			set_variable = {
-				var = ABY_focus_time_flag_var
+				var = ABY_focus_time_flag_abydos_var
 				value = 0
 			}
 			if = {
@@ -18499,6 +18529,42 @@ country_event = {
 				}
 				complete_national_focus = ABY_focus_abydos_15
 			}
+		}
+	}
+}
+country_event = {
+	id = ABY_hidden_event.2
+	title = ABY_hidden_event.2.t
+	desc = ABY_hidden_event.2.desc
+
+	hidden = yes
+    is_triggered_only = yes
+	
+	option = { 
+		name = ABY_hidden_event.2.a 
+		if = {
+			limit = {
+				has_country_flag = ABY_focus_time_flag_czecho
+			}
+			add_political_power = -1
+			add_to_variable = {
+        	    var = ABY_focus_time_flag_czecho_var
+        	    value = 1
+        	}
+			country_event = {
+				id = ABY_hidden_event.2
+				days = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {has_country_flag = ABY_focus_time_flag_czecho}
+			}
+			add_political_power = -1
+			set_variable = {
+				var = ABY_focus_time_flag_czecho_var
+				value = 0
+			}
 			if = {
 				limit = {
 					has_country_flag = ABY_descision_focus_czecho_1_ongoing_flag
@@ -18570,6 +18636,42 @@ country_event = {
 					has_country_flag = ABY_descision_focus_czecho_12_ongoing_flag
 				}
 				complete_national_focus = ABY_focus_czecho_12
+			}
+		}
+	}
+}
+country_event = {
+	id = ABY_hidden_event.3
+	title = ABY_hidden_event.3.t
+	desc = ABY_hidden_event.3.desc
+
+	hidden = yes
+    is_triggered_only = yes
+	
+	option = { 
+		name = ABY_hidden_event.3.a 
+		if = {
+			limit = {
+				has_country_flag = ABY_focus_time_flag_german
+			}
+			add_political_power = -1
+			add_to_variable = {
+        	    var = ABY_focus_time_flag_german_var
+        	    value = 1
+        	}
+			country_event = {
+				id = ABY_hidden_event.3
+				days = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {has_country_flag = ABY_focus_time_flag_german}
+			}
+			add_political_power = -1
+			set_variable = {
+				var = ABY_focus_time_flag_german_var
+				value = 0
 			}
 			if = {
 				limit = {

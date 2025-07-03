@@ -4229,11 +4229,11 @@ defined_text = {
 }
 
 defined_text = {
-    name = Getabydosfocustime
+    name = Getabydosfocustime_A
     text = {
         trigger = {
             OR = {
-                NOT = {has_country_flag = ABY_focus_time_flag}
+                NOT = {has_country_flag = ABY_focus_time_flag_abydos}
                 OR = {
 				    AND = {
 				    	has_country_flag = ABY_descision_focus_first_selected_flag
@@ -4299,102 +4299,6 @@ defined_text = {
 				    	has_country_flag = ABY_descision_focus_abydos_15_selected_flag
 				    	NOT = {has_country_flag = ABY_descision_focus_abydos_15_ongoing_flag}
 				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_czecho_1_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_czecho_1_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_czecho_2_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_czecho_2_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_czecho_3_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_czecho_3_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_czecho_4_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_czecho_4_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_czecho_5_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_czecho_5_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_czecho_6_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_czecho_6_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_czecho_7_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_czecho_7_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_czecho_8_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_czecho_8_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_czecho_9_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_czecho_9_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_czecho_10_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_czecho_10_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_czecho_11_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_czecho_11_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_czecho_12_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_czecho_12_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_german_1_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_german_1_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_german_2_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_german_2_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_german_3_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_german_3_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_german_4_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_german_4_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_german_5_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_german_5_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_german_6_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_german_6_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_german_7_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_german_7_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_german_8_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_german_8_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_german_9_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_german_9_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_german_10_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_german_10_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_german_11_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_german_11_ongoing_flag}
-				    }
-				    AND = {
-				    	has_country_flag = ABY_descision_focus_german_12_selected_flag
-				    	NOT = {has_country_flag = ABY_descision_focus_german_12_ongoing_flag}
-				    }
                 }
             }
         }
@@ -4403,7 +4307,7 @@ defined_text = {
     text = {
         trigger = {
             AND = {
-                has_country_flag = ABY_focus_time_flag
+                has_country_flag = ABY_focus_time_flag_abydos
                 OR = {
 				    AND = {
 				    	has_country_flag = ABY_descision_focus_first_selected_flag
@@ -4469,6 +4373,78 @@ defined_text = {
 				    	has_country_flag = ABY_descision_focus_abydos_15_selected_flag
 				    	has_country_flag = ABY_descision_focus_abydos_15_ongoing_flag
 				    }
+                }
+            }
+        }
+        localization_key = ABY_days_2
+    }
+}
+
+defined_text = {
+    name = Getabydosfocustime_C
+    text = {
+        trigger = {
+            OR = {
+                NOT = {has_country_flag = ABY_focus_time_flag_czecho}
+                OR = {
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_czecho_1_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_czecho_1_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_czecho_2_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_czecho_2_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_czecho_3_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_czecho_3_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_czecho_4_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_czecho_4_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_czecho_5_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_czecho_5_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_czecho_6_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_czecho_6_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_czecho_7_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_czecho_7_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_czecho_8_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_czecho_8_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_czecho_9_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_czecho_9_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_czecho_10_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_czecho_10_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_czecho_11_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_czecho_11_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_czecho_12_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_czecho_12_ongoing_flag}
+				    }
+                }
+            }
+        }
+        localization_key = ABY_days_1
+    }
+    text = {
+        trigger = {
+            AND = {
+                has_country_flag = ABY_focus_time_flag_czecho
+                OR = {
 				    AND = {
 				    	has_country_flag = ABY_descision_focus_czecho_1_selected_flag
 				    	has_country_flag = ABY_descision_focus_czecho_1_ongoing_flag
@@ -4517,6 +4493,78 @@ defined_text = {
 				    	has_country_flag = ABY_descision_focus_czecho_12_selected_flag
 				    	has_country_flag = ABY_descision_focus_czecho_12_ongoing_flag
 				    }
+                }
+            }
+        }
+        localization_key = ABY_days_2_C
+    }
+}
+
+defined_text = {
+    name = Getabydosfocustime_G
+    text = {
+        trigger = {
+            OR = {
+                NOT = {has_country_flag = ABY_focus_time_flag_german}
+                OR = {
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_german_1_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_german_1_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_german_2_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_german_2_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_german_3_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_german_3_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_german_4_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_german_4_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_german_5_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_german_5_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_german_6_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_german_6_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_german_7_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_german_7_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_german_8_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_german_8_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_german_9_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_german_9_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_german_10_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_german_10_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_german_11_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_german_11_ongoing_flag}
+				    }
+				    AND = {
+				    	has_country_flag = ABY_descision_focus_german_12_selected_flag
+				    	NOT = {has_country_flag = ABY_descision_focus_german_12_ongoing_flag}
+				    }
+                }
+            }
+        }
+        localization_key = ABY_days_1
+    }
+    text = {
+        trigger = {
+            AND = {
+                has_country_flag = ABY_focus_time_flag_german
+                OR = {
 				    AND = {
 				    	has_country_flag = ABY_descision_focus_german_1_selected_flag
 				    	has_country_flag = ABY_descision_focus_german_1_ongoing_flag
@@ -4568,7 +4616,7 @@ defined_text = {
                 }
             }
         }
-        localization_key = ABY_days_2
+        localization_key = ABY_days_2_G
     }
 }
 
