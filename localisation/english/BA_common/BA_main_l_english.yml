@@ -307,6 +307,7 @@
  THE_COLOUR_RILE_DESC:0 "게마트리아 Ai가 색채 루트를 진행할 수 있는지 설정합니다."
  THE_COLOUR_RILE_ON_NAME:0 "색채 활성화"
  THE_COLOUR_RILE_OFF_NAME:0 "색채 비활성화"
+ THE_COLOUR_RILE_DEC_ON_NAME:0 "데카그라마톤 활성화"
 
  PROJECT_KV_RILE_NAME:0 "@KAP §t프§!§9로§!§H젝§!§6트§!§2K§!§0V§!" 
  PROJECT_KV_RILE_DESC:0 "§t프§!§9로§!§H젝§!§6트§!§2K§!§0V§!\n\n해당 국가를 활성화 할 수 있습니다!"
