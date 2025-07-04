@@ -3621,6 +3621,102 @@ GEH_finding_alliance_category = {
 }
 GEH_hina_corruption_category = {
 
+	GEH_hina_corruption_meeting_with_perfect_team = {
+		icon = GFX_decision_Prefect_team
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+			#has_completed_focus = GEH_prefect_team_democracy
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_democratic_system_4th_end_tt
+				NOT = { has_completed_focus = GEH_three_congress_focus }
+			}
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_democratic_system_numerical_limit_tt
+				AND = {
+					check_variable = { GEH_hina_corruption_var > -5 }
+					check_variable = { GEH_hina_corruption_var < 5 }
+				}
+			}
+		}
+
+		visible = {
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 0
+
+		days_remove = 30
+
+		remove_effect = {
+			add_to_variable = {
+				GEH_hina_corruption_var = -1
+				tooltip = GEH_hina_corruption_anti_baal_tt
+			}
+		}
+
+		modifier = {
+			political_power_factor = -0.15
+		}
+	}
+
+	GEH_hina_corruption_meeting_with_zealot = {
+		icon = GFX_decision_generic_political_rally
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+			#has_completed_focus = GEH_prefect_team_democracy
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_democratic_system_4th_end_tt
+				NOT = { has_completed_focus = GEH_three_congress_focus }
+			}
+			custom_trigger_tooltip = {
+				tooltip = GEH_ako_democratic_system_numerical_limit_tt
+				AND = {
+					check_variable = { GEH_hina_corruption_var > -5 }
+					check_variable = { GEH_hina_corruption_var < 5 }
+				}
+			}
+		}
+
+		visible = {
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 0
+
+		days_remove = 30
+
+		remove_effect = {
+			add_to_variable = {
+				GEH_hina_corruption_var = 1
+				tooltip = GEH_hina_corruption_pro_baal_tt
+			}
+		}
+
+		modifier = {
+			political_power_factor = -0.15
+		}
+	}
+
 	GEH_hina_corruption_thought_cabinet_advanced_race_theory = {
 		icon = GFX_decision_eng_blackshirt_march
 
