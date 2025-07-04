@@ -3318,12 +3318,11 @@ country_event = { #[ROOT.GetName] 수도 결정
 	}
 
 	option = { 
-		name = GEH.event.1038.a
+		name = GEH.event.1038.b
 	    ai_chance = {
 		    base = 3
 	    }
 		add_political_power = 25
-		
 		
 		set_capital = {
 			state = 55
