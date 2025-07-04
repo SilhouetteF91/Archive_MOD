@@ -70,7 +70,10 @@ GEH_trinity_integration = {
         tag = GEH
     }
     visible = {
-        has_completed_focus = GEH_trinity_focus_5
+        OR = {
+            has_completed_focus = GEH_three_congress_focus #4차 총회 (히나 있음)
+            has_completed_focus = GEH_three_congress_focus_no_hina_diplomacy #4차 총회 (히나 없음)
+        }
     }
 }
 
