@@ -21,6 +21,10 @@ add_namespace = GEH.event
 add_namespace = GEH.war_event
 #히나 마법소녀 이벤트
 add_namespace = GEH.hina.magic_event
+#히나 스토리 이벤트
+add_namespace = GEH.hina.story_event
+#히나 정부 이벤트
+add_namespace = GEH.hina.gov_event
 #아코 정부 이벤트
 add_namespace = GEH.ako.gov_event
 #선도부 뉴스 이벤트
@@ -4224,6 +4228,117 @@ country_event = {
 		custom_effect_tooltip = GEH_ako_route_ending_tt
 
 		add_country_leader_trait = GEH_pioneer_of_science
+	}
+}
+
+#########################
+### 히나 (전제정) 루트 ###
+#########################
+
+unit_leader_event = { #계속되는 꿈
+	id = GEH.hina.story_event.1
+	title = GEH.hina.story_event.1.t
+	desc = GEH.hina.story_event.1.desc
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.1.a 
+
+		GEH_hina = {
+			unit_leader_event = { id = GEH.hina.story_event.2 days = 4 }
+		}
+	}
+}
+
+unit_leader_event = { #바알
+	id = GEH.hina.story_event.2
+	title = GEH.hina.story_event.2.t
+	desc = GEH.hina.story_event.2.desc
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.2.a 
+
+		GEH_hina = {
+			unit_leader_event = { id = GEH.hina.story_event.3 days = 3 }
+		}
+	}
+}
+
+unit_leader_event = { #증오가 꼭 나쁠까?
+	id = GEH.hina.story_event.3
+	title = GEH.hina.story_event.3.t
+	desc = GEH.hina.story_event.3.desc
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.3.a 
+		set_country_flag = GEH_hina_corruption_flag
+		custom_effect_tooltip = GEH_hina_corruption_tt
+		GEH_hina = {
+			unit_leader_event = { id = GEH.hina.story_event.4 days = 14 }
+		}
+	}
+}
+
+unit_leader_event = { #건강 상태
+	id = GEH.hina.story_event.4
+	title = GEH.hina.story_event.4.t
+	desc = GEH.hina.story_event.4.desc
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.4.a 
+
+	}
+}
+
+country_event = { #제3차 선도부 총회 기념 파티
+	id = GEH.hina.story_event.5
+	title = GEH.hina.story_event.5.t
+	desc = GEH.hina.story_event.5.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_1
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.5.a 
+
+	}
+}
+
+country_event = { #생각 캐비닛
+	id = GEH.hina.gov_event.1
+	title = GEH.hina.gov_event.1.t
+	desc = GEH.hina.gov_event.1.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_1
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.gov_event.1.a 
+
+	}
+}
+
+country_event = { #내면화
+	id = GEH.hina.gov_event.2
+	title = GEH.hina.gov_event.2.t
+	desc = GEH.hina.gov_event.2.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_1
+
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.gov_event.2.a 
+
 	}
 }
 

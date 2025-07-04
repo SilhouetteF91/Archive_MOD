@@ -70,7 +70,7 @@ GEH_trinity_integration = {
         tag = GEH
     }
     visible = {
-        always = no
+        has_completed_focus = GEH_trinity_focus_5
     }
 }
 
@@ -194,7 +194,10 @@ GEH_hina_corruption_category = {
     }
 
     visible = {
-        is_debug = yes
+        has_dynamic_modifier = {
+            modifier = GEH_gehenna_order_department_idea
+        }
+        has_country_flag = GEH_hina_corruption_flag
     }
 
     visible_when_empty = yes
