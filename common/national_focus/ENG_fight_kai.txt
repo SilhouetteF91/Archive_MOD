@@ -6308,7 +6308,7 @@ focus_tree = {
     			popularity = 0.45
 			}
 			unlock_decision_category_tooltip = britian_post_war_devastation
-			activate_decision = reconstrct_britian
+			#activate_decision = reconstrct_britian
 		}
 	}
 	#재건회의

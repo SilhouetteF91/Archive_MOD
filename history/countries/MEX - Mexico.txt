@@ -2,10 +2,10 @@
 #### BA MOD
 ####
 
-focus = {
-	current = "MEX_focus_purge_of_calles"
-	progress = 0
-}
+# focus = {
+# 	current = "MEX_focus_purge_of_calles"
+# 	progress = 0
+# }
 
 set_variable = { country_intro_page_count = 4 } #Intro screen
 

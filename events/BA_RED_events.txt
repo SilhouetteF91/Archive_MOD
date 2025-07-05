@@ -6286,7 +6286,7 @@ country_event = { #혁명군사평의회 해산
 	trigger = {
 		tag = RED
 		has_completed_focus = RED_council_for_worker
-		has_idea = RED_RMC_idea
+		# has_idea = RED_RMC_idea
 		NOT = {
 			has_completed_focus = RED_soldier_union
 		}

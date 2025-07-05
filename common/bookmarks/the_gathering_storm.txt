@@ -168,7 +168,8 @@ bookmarks = {
 			ideas = {
 				FRA_emergency_mobil
 				FRA_resist_strike
-				FRA_exile
+				# 에러나서 일단 치움
+				# FRA_exile
 			}
 			focuses = {
 				FRA_start_0

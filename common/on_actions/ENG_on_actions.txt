@@ -9,7 +9,7 @@ on_actions = {
 					remove_core_of = ROOT
 					ENG = { country_event = ENG_ba.100 }
 					ENG = { country_event = ENG_ba.101 }
-					mark_focus_tree_layout_dirty = yes
+					# mark_focus_tree_layout_dirty = yes
 				}
 			}
 		}

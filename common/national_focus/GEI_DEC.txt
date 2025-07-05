@@ -567,8 +567,8 @@ focus_tree = {
 					set_technology = { fighter2 = 1 }
 					set_technology = { CAS1 = 1 }
 					set_technology = { early_bomber = 1 }
-					set_technology = { naval_bomber = 1 }
-					set_technology = { naval_bomber = 2 }
+					set_technology = { naval_bomber1 = 1 }
+					set_technology = { naval_bomber2 = 1 }
 					set_technology = { fighter2 = 1 }
 					set_technology = { aircraft_construction = 1 }
 					set_technology = {
@@ -923,8 +923,15 @@ focus_tree = {
 				target = KAI
 				type = annex_everything
 			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1. 게부라\" division_template = \"Decagrammaton Division\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = GEI
+				}
+			}
+		}
 
-			bypass = {
+		bypass = {
 			OR = {
 				NOT = { country_exists = KAI }
 				owns_state = 131
@@ -939,13 +946,6 @@ focus_tree = {
 				owns_state = 126
 			}
 		}
-		capital_scope = {
-			create_unit = {
-					division = "name = \"1. 게부라\" division_template = \"Decagrammaton Division\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-					owner = GEI
-				}
-		}
-	  }
 	}
 
 

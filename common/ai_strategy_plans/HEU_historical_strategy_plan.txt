@@ -5,19 +5,9 @@ HEU_hsitorical = {
 		original_tag = HEU
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = HEU_ai_behavior
-					option = DEFAULT
-				}
-			}
-			has_game_rule = {
-				rule = HEU_ai_behavior
-				option = HISTORICAL
-			}
-		}
+        OR = {
+		    is_historical_focus_on = yes
+        }
 	}
 	abort = {
 	}
