@@ -274,23 +274,6 @@
  Megacity.13.desc: "아리우스 바실리카는 키보토스의 아리우스 분교에 위치한 중심 건물로, 고딕 양식의 장엄한 건축물이 특징입니다. 이곳은 아리우스 분교의 주요 행정과 종교 활동이 이루어지는 장소로, 학생들에게 중요한 정신적 지주 역할을 합니다.\n\n아리우스 바실리카는 내부에 웅장한 성당과 신비로운 분위기의 회랑을 갖추고 있으며, 학생들은 이곳에서 명상과 기도를 통해 마음의 평화를 찾습니다. 성당의 스테인드글라스 창문과 세밀한 조각들은 바실리카의 신성함을 더욱 강조합니다.\n\n아리우스 분교의 학생들은 고강도의 훈련과 엄격한 교육을 받습니다. 바실리카는 이러한 교육의 중심지로서, 학생들에게 중요한 교육적, 정신적 지침을 제공하는 역할을 합니다.\n\n바실리카 내부에는 다양한 종교적 상징과 예술 작품들이 전시되어 있어, 방문객들에게 깊은 인상을 남깁니다. 또한, 이곳은 아리우스 분교의 비밀스러운 의식과 행사들이 자주 열리는 장소입니다."
 
  
- custom_diff_strong_ABY: "£GFX_BA_game_rule_flag_ABY  아비도스 고등학교 강화"
- custom_diff_strong_GEM: "£GFX_BA_game_rule_flag_GEM  판데모니움 소사이어티 강화"
- custom_diff_strong_GEH: "£GFX_BA_game_rule_flag_GEH  게헨나 선도부 강화"
- custom_diff_strong_HEU: "£GFX_BA_game_rule_flag_HEU  흥신소 강화"
- custom_diff_strong_Gehenna: "£GFX_BA_game_rule_flag_GEM  게헨나 학원 강화"
- custom_diff_strong_MIL: "£GFX_BA_game_rule_flag_MIL  밀레니엄 사이언스 스쿨 강화"
- custom_diff_strong_TRN: "£GFX_BA_game_rule_flag_TRM  트리니티 종합학원 강화"
- custom_diff_strong_ARI: "£GFX_BA_game_rule_flag_ARI  아리우스 분교 강화"
- custom_diff_strong_HYA: "£GFX_BA_game_rule_flag_HYA  백귀야행 연합학원 강화"
- custom_diff_strong_SHA: "£GFX_BA_game_rule_flag_SHA  산해경 고급중학교 강화"
- custom_diff_strong_RED: "£GFX_BA_game_rule_flag_RED  붉은겨울 연방학원 강화"
- custom_diff_strong_SHE: "£GFX_BA_game_rule_flag_SHE  샬레 강화"
- custom_diff_strong_COU: "£GFX_BA_game_rule_flag_COU  키보토스 총학생회 강화"
- custom_diff_strong_KSP: "£GFX_BA_game_rule_flag_KSP  발키리 경찰학원 강화"
- custom_diff_strong_BLM: "£GFX_BA_game_rule_flag_BLM  블랙마켓 강화"
- custom_diff_strong_GEI: "£GFX_BA_game_rule_flag_GEI  게마트리아 강화"
- custom_diff_strong_KAI: "£GFX_BA_game_rule_flag_KAI  카이저 코퍼레이션 강화"
  Debug_BA_gathering_storm_desc: "제가 보인다면 버그 리포트를 작성해주세요."
  highlight_major_1_tt: "@RED §Y붉은겨울 연방학원§! 경로: \n\n\n\n\n\n£GFX_RED_path_texticon\n\n\n\n\n\n\n이곳에 푸딩 입력"
  highlight_major_2_tt: "@MIL §Y밀레니엄 사이언스 스쿨§! 경로: \n\n\n\n\n\n£GFX_MIL_path_texticon\n\n\n\n\n\n\n100kg"
@@ -302,69 +285,6 @@
  highlight_minor_1_tt: "@LUX §Y룩셈부르크 대공국 (흥신소 68)§! 경로: \n\n\n\n\n\n£GFX_HEU_path_texticon\n\n\n\n\n\n\n §g친게헨나 정부§!\n  £white_dot 룩셈부르크 68혁명 - §G(기본 설정)§!\n    £white_dot §Y2개§!의 엔딩 보유.\n\n §g반게헨나 정부§!\n  £white_dot §Y민권법§!의 가결\n    £white_dot §Y1개§!의 엔딩 보유.\n  £white_dot §g민권법의 부결§! - §R(플레이 불가능)§!\n\n§g========================================§!\n\n§Y안내§!: §R매우 도전적§!인 난이도의 국가이며, 다양한 이벤트와 스토리텔링 중심의 서사형 국가입니다. 블루 아카이브 모드에서 새로운 경험을 하고 싶거나, 또는 §Y흥신소 68§!의 이세계 이야기에 대해 관심이 있는 유저들에게 추천합니다."
  highlight_minor_2_tt: "@GEH §Y게헨나 선도부§! 경로: \n\n\n\n\n\n£GFX_GEH_path_texticon\n\n\n\n\n\n\n §g소라사키 히나의 정부§!\n  £white_dot §g시로미 이오리의 군국주의 정부§! - §R(미완성)§!\n  £white_dot §g열성부원들에 의한 소라사키 히나 독재§! - §R(미완성)§!\n  £white_dot 아마우 아코와 기획부 기술관료정\n    £white_dot §Y2개§!의 엔딩 보유.\n  £white_dot §g현상유지§! - §R(미완성)§!\n\n §g소라사키 히나의 사임§!\n  £white_dot §g시로미 이오리 선도부장§! - §R(플레이 불가능)§!\n  £white_dot §g열성부원 집단지도체제§! - §R(플레이 불가능)§!\n  £white_dot 로봇 소라사키 히나의 집권\n    £white_dot §Y1개§!의 엔딩 보유. 히나 루트에서의 사임으로 분기.\n  £white_dot 기획부 집단지도체제\n    £white_dot §Y1개§!의 엔딩 보유. 아코 루트에서의 사임으로 분기.\n  £white_dot 현상유지\n    £white_dot §Y1개§!의 엔딩 보유. 현상유지에서의 사임으로 분기.\n\n§g========================================§!\n\n§Y안내§!: §R도전적§!인 난이도의 국가이며, 스토리텔링 중심의 서사형 국가입니다. 소라사키 히나의 사임까지 시간 제한이 있습니다. 어려운 게임 플레이를 원하는 게이머들에게 추천합니다."
 
- BA_game_rule: "블루 아카이브 모드 커스텀 게임 규칙"
- THE_COLOUR_RILE_NAME:0 "@GEI 색채 허용" 
- THE_COLOUR_RILE_DESC:0 "게마트리아 Ai가 색채 루트를 진행할 수 있는지 설정합니다."
- THE_COLOUR_RILE_ON_NAME:0 "색채 활성화"
- THE_COLOUR_RILE_OFF_NAME:0 "색채 비활성화"
- THE_COLOUR_RILE_DEC_ON_NAME:0 "데카그라마톤 활성화"
-
- PROJECT_KV_RILE_NAME:0 "@KAP §t프§!§9로§!§H젝§!§6트§!§2K§!§0V§!" 
- PROJECT_KV_RILE_DESC:0 "§t프§!§9로§!§H젝§!§6트§!§2K§!§0V§!\n\n해당 국가를 활성화 할 수 있습니다!"
- PROJECT_KV_RILE_ON_NAME:0 "§t프§!§9로§!§H젝§!§6트§!§2K§!§0V§! 활성화"
- PROJECT_KV_RILE_OFF_NAME:0 "§t프§!§9로§!§H젝§!§6트§!§2K§!§0V§! 비활성화"
-
- PROJECT_SENSEI_RULE_NAME:0 "§C비학원 국가 지도자 선생화§!" 
- PROJECT_SENSEI_RULE_DESC:0 "플레이어가 플레이하는 비학원 국가 지도자를 선생으로 만듭니다.\n\n이 기능은 플레이어가 비학원 국가를 플레이할 때만 활성화됩니다."
- PROJECT_SENSEI_RULE_ON_NAME:0 "활성화"
- PROJECT_SENSEI_RULE_OFF_NAME:0 "비활성화"
-
- trn_collapse_rule_Name:0 "@TRM 트리니티 붕괴"
- trn_collapse_rule_Off_DESC:0 "트리니티는 붕괴하지 않습니다."
- trn_collapse_rule_On_DESC:0 "트리니티가 붕괴한다! 다들 피해~~"
- TRINITY_COLLAPSE_DESC:0 "트리니티 Ai가 붕괴를 할 수 있는지 설정합니다."
-
- KAI_NO_NAME:0 "@KAI 카이저 코퍼레이션 활성화"
- KAI_NO_OFF_NAME:0 "활성화"
- KAI_NO_ON_NAME:0 "비활성화"
- KAI_NO_DESC:0 "카이저 코퍼레이션을 활성화할지 설정합니다."
- KAI_NO_OFF_DESC:0 "카이저 코퍼레이션을 활성화합니다."
- KAI_NO_ON_DESC:0 "카이저 코퍼레이션을 비활성화합니다."
-
- Trinity_Mika_Portrait_rule_name: "@TRM 미소노 미카 초상화 변경"
- Trinity_Mika_Portrait_OFF_NAME: "변경하지 않음"
- Trinity_Mika_Portrait_Off_DESC: "미소노 미카의 초상화는 공식 사진으로 유지됩니다."
- Trinity_Mika_Portrait_ON_NAME: "변경 함"
- 
- Trinity_Mika_Portrait_ON_3_DESC: "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n\n\n\n\n\n\n\n£GFX_TRN_Misono_Mika_Portrait_Kon_ka\n\n\n\n\n\n\n\n\n미소노 미카의 초상화가 2차 창작물으로 변경됩니다."
- Trinity_Mika_Portrait_Maki_NAME: "분명 미카였는데"
- Trinity_Mika_Portrait_Maki_DESC: "미소노 미카의 초상화를 코누리 마키로 변경합니다."
-
- Trinity_Nagisa_Portrait_rule_name: "@TRM 키리후지 나기사 초상화 변경"
- Trinity_Nagisa_Portrait_Off_DESC: "키리후지 나기사의 초상화는 공식 사진으로 유지됩니다."
- Trinity_Nagisa_Portrait_ON_DESC: "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n\n\n\n\n\n\n\n£GFX_TRN_Kirihuji_Nagisa_Portrait_Kon_ka\n\n\n\n\n\n\n\n\n키리후지 나기사의 초상화가 2차 창작물으로 변경 됩니다."
- 
- Trinity_Seia_Portrait_rule_name: "@TRM 유리조노 세이아 초상화 변경"
- Trinity_Seia_Portrait_Off_DESC: "유리조노 세이아의 초상화는 공식 사진으로 유지됩니다."
- Trinity_Seia_Portrait_ON_DESC: "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n\n\n\n\n\n\n\n£GFX_TRN_Yurizono_Seia_Portrait_Kon_ka\n\n\n\n\n\n\n\n\n유리조노 세이아의 초상화가 2차 창작물으로 변경됩니다."
- 
- Mil_Key_Portrait_rule_name: "@MIL 케이 초상화 변경"
- Mil_Key_Portrait_Off_DESC: "케이의 초상화는 공식 사진으로 유지됩니다."
- Mil_Key_Portrait_ON_DESC: "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n\n\n\n\n\n\n\n£GFX_MIL_AL_1S_Fanmade_Portrait\n\n\n\n\n\n\n\n\n케이의 초상화가 2차 창작물으로 변경됩니다."
-
- HEU_dress_Portrait_Rule_name: "@HEU 흥신소 68 초상화 변경"
- HEU_dress_Portrait_Rule_off_DESC: "흥신소 68 캐릭터들의 초상화는 일반 사진으로 유지됩니다."
- HEU_dress_Portrait_Rule_on_DESC: "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n\n\n\n\n\n\n\n£GFX_HEU_ARU_DRESS_Portrait\n\n\n\n\n\n\n\n\n흥신소 68 캐릭터들의 초상화가 드레스 의상으로 변경됩니다."
-
- GEH_dress_Portrait_Rule_name: "@GEH 선도부 초상화 변경"
- GEH_dress_Portrait_Rule_off_DESC: "선도부 캐릭터들의 초상화는 일반 사진으로 유지됩니다."
- GEH_dress_Portrait_Rule_on_DESC: "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n\n\n\n\n\n\n\n£GFX_GEH_dress_portrait\n\n\n\n\n\n\n\n\n히나와 아코의 초상화가 드레스 의상으로 변경됩니다."
- 
- FRA_Anime_Portrait_Rule_name: "@FRA 프랑스 페텡 초상화 변경"
- FRA_Anime_Portrait_Rule_off_DESC: "필리프 페텡의 초상화가 유지됩니다."
- FRA_Anime_Portrait_Rule_on_DESC: "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n\n\n\n\n\n\n\n£GFX_Portrait_FRA_Anime_Petain\n\n\n\n\n\n\n\n\n필리프 페텡의 초상화가 아니메로 변경됩니다.\n그림의 저작권은 PzKpfwI(kampfwagen_I) 님에게 있습니다."
- FRA_Anime_Portrait_Rule_Vanilla_DESC: "필리프 페텡의 초상화가 호이4 본편로 변경됩니다."
-
  HYA_GATHERING_STORM_DESC: "문화와 축제의 학원, 오랜 역사와 전통을 자랑하는 학원. 백귀야행은 대전이 이전이나 이후나 여전히 문화의 축제의 불빛으로 바쁜 나날들을 이어가고 있습니다.\n\n하지만 언제까지나 축제를 즐기기에는 이제는 현실을 받아들어야만 합니다. 대전이라는 전대미문의 대사건은 키보토스의 뿌리를 뒤흔들었으니, 나무의 가지로서 매달린 백귀야행 또한 변화를 받아들어야만 합니다.\n\n전통적으로 백귀야행의 학생회를 대신했던 음양부, 대전이 이후 부상한 백화요란, 그리고 수많은 이들이 기회를 찾고자 투쟁합니다."
  
  #발키리 경찰학교
@@ -372,8 +292,6 @@
  #SRT
  SRT_GATHERING_STORM_DESC: "엄격한 훈련과 혹독한 선발과정으로 유명한 SRT 특수학원은 각 학원의 중대한 범죄 상황에 유연하게 대처하기 위해서 총학생회장이 특별히 설립한 특수부대 양성 학원입니다. 그러나 SRT의 존재는 각 학원의 자치권을 침해하는 행위이기에 논란이 있었지만, 총학생회장의 인망으로 각 학원은 반발을 하진 않았습니다.\n\n대전이의 혼란으로 인해 SRT는 총학생회와 떨어진 곳에 자리 잡게 되었습니다. 이 상황에서 총학생회장의 신변에 위협이 생긴다면, SRT의 존재 여부는 불투명해질 것입니다..."
  OTHER_THE_GATHERING_STORM_DESC: ""
-
-
 
  increase_state_category_by_one_level_tt: "§G1§!개의 추가 기본 건설 슬롯 제공.\n"
  increase_state_category_by_two_levels_tt: "§G2§!개의 추가 기본 건설 슬롯 제공.\n"

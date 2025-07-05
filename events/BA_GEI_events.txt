@@ -15,8 +15,8 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 0
-				NOT = { has_game_rule = { rule = the_colour_rule option = the_colour_rule_on } }
-				NOT = { has_game_rule = { rule = the_colour_rule option = the_colour_rule_off } }
+				NOT = { has_game_rule = { rule = GEI_ai_behavior option = DEFAULT } }
+				NOT = { has_game_rule = { rule = GEI_ai_behavior option = GEI_PATH_COULOUR } }
 			}
 		}
         set_country_flag = GEI_Beatrice
@@ -30,7 +30,8 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 0
-				NOT = { has_game_rule = { rule = the_colour_rule option = the_colour_rule_dec_on } }
+				NOT = { has_game_rule = { rule = GEI_ai_behavior option = DEFAULT } }
+				NOT = { has_game_rule = { rule = GEI_ai_behavior option = GEI_PATH_DEECAGRAMMATON } }
 			}
 		}
         set_country_flag = GEI_DEC
