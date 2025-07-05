@@ -2746,10 +2746,24 @@ guiTypes = {
 		}
 		
 		iconType = {
-			name = "ABY_focus_progressbar"
+			name = "ABY_focus_progressbar_abydos"
 			spriteType = "GFX_ABY_focus_progressbar"
 			position = { x=204 y=58 }
 			pdx_tooltip_delayed = ABY_days_3
+		}
+		
+		iconType = {
+			name = "ABY_focus_progressbar_czecho"
+			spriteType = "GFX_ABY_focus_progressbar"
+			position = { x=204 y=58 }
+			pdx_tooltip_delayed = ABY_days_3_C
+		}
+		
+		iconType = {
+			name = "ABY_focus_progressbar_german"
+			spriteType = "GFX_ABY_focus_progressbar"
+			position = { x=204 y=58 }
+			pdx_tooltip_delayed = ABY_days_3_G
 		}
 
 		iconType = {
@@ -2760,11 +2774,33 @@ guiTypes = {
 		}		
 		
 		instantTextboxType = {
-			name = "status"
+			name = "status_A"
 			position = { x = 208 y = 60 }
 			font = "hoi_20b"
 			borderSize = {x = 0 y = 0}
-			text = "[Getabydosfocustime]"
+			text = "[Getabydosfocustime_A]"
+			maxWidth = 170
+			maxHeight = 13
+			format = center
+		}
+		
+		instantTextboxType = {
+			name = "status_C"
+			position = { x = 208 y = 60 }
+			font = "hoi_20b"
+			borderSize = {x = 0 y = 0}
+			text = "[Getabydosfocustime_C]"
+			maxWidth = 170
+			maxHeight = 13
+			format = center
+		}
+		
+		instantTextboxType = {
+			name = "status_G"
+			position = { x = 208 y = 60 }
+			font = "hoi_20b"
+			borderSize = {x = 0 y = 0}
+			text = "[Getabydosfocustime_G]"
 			maxWidth = 170
 			maxHeight = 13
 			format = center

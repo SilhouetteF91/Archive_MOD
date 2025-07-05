@@ -24,23 +24,30 @@
 #/BA_MOD_FIX 모드 커스텀 규칙 들
 the_colour_rule = {
 	name = "THE_COLOUR_RILE_NAME"
-	group = "BA_game_rule"					# Used for filtering. A single rule can be in multiple groups 
+	group = "BA_game_rule"
 
-	default = {										# Unless other specified, the first option is the default option
+	default = {
 		name = the_colour_rule_on
 		text = "THE_COLOUR_RILE_ON_NAME"
 		desc = "THE_COLOUR_RILE_DESC"
-													# If not specified, this is set to yes for default options and no for all other options.
+		allow_achievements = yes
 	}
-	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+	option = {
 		name = the_colour_rule_off
 		text = "THE_COLOUR_RILE_OFF_NAME"
 		desc = "THE_COLOUR_RILE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = the_colour_rule_dec_on
+		text = "THE_COLOUR_RILE_DEC_ON_NAME"
+		desc = "THE_COLOUR_RILE_DESC"
+		allow_achievements = yes
 	}
 }
 shit_project_KV_rule = {
 	name = "PROJECT_KV_RILE_NAME"
-	group = "BA_game_rule"					
+	group = "BA_game_rule"			
 
 	default = {
 		name = shit_project_KV_rule_off

@@ -70,7 +70,10 @@ GEH_trinity_integration = {
         tag = GEH
     }
     visible = {
-        always = no
+        OR = {
+            has_completed_focus = GEH_three_congress_focus #4차 총회 (히나 있음)
+            has_completed_focus = GEH_three_congress_focus_no_hina_diplomacy #4차 총회 (히나 없음)
+        }
     }
 }
 
@@ -194,7 +197,10 @@ GEH_hina_corruption_category = {
     }
 
     visible = {
-        is_debug = yes
+        has_dynamic_modifier = {
+            modifier = GEH_gehenna_order_department_idea
+        }
+        has_country_flag = GEH_hina_corruption_flag
     }
 
     visible_when_empty = yes

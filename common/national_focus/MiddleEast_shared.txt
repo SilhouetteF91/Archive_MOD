@@ -6,7 +6,6 @@ shared_focus = { #중동 외교
 	icon = GFX_focus_generic_influence_middle_east
 	available = {
 		date > 1937.1.1
-		has_country_flag = GAEBALJUNG
 	}
 	completion_reward = {
 		add_political_power = 10
@@ -31,6 +30,7 @@ shared_focus = { #서방과의 제휴
 		focus = BA_ME_focus_5
 		focus = BA_ME_focus_8
 		focus = BA_ME_focus_17
+		focus = BA_ME_road_to_islam_revolution
 	}
 	icon = GFX_focus_generic_democratic_europe
 	completion_reward = {
@@ -89,7 +89,7 @@ shared_focus = { #무역 협정
 shared_focus = { #영연방의 일원
 	id = BA_ME_focus_3
 	cost = 5
-	x = -1
+	x = 1
 	y = 1
 	prerequisite = {
 		focus = BA_ME_focus_1
@@ -113,7 +113,7 @@ shared_focus = { #영연방의 일원
 shared_focus = { #서방의 투자
 	id = BA_ME_focus_4
 	cost = 5
-	x = 1
+	x = 3
 	y = 1
 	prerequisite = {
 		focus = BA_ME_focus_1
@@ -131,6 +131,25 @@ shared_focus = { #서방의 투자
 		}
 	}
 }
+shared_focus = { #이슬람 혁명으로의 길
+	id = BA_ME_road_to_islam_revolution
+	cost = 5
+	x = -1
+	y = 1
+	prerequisite = {
+		focus = BA_ME_focus_-1
+	}
+	relative_position_id = BA_ME_focus_-1
+	icon = GFX_focus_PER_islamic_solidarity
+	mutually_exclusive = {
+		focus = BA_ME_focus_0
+		focus = BA_ME_focus_5
+		focus = BA_ME_focus_8
+		focus = BA_ME_focus_17
+	}
+	completion_reward = {
+	}
+}
 shared_focus = { #아랍 정체성
 	id = BA_ME_focus_5
 	cost = 5
@@ -144,14 +163,29 @@ shared_focus = { #아랍 정체성
 		focus = BA_ME_focus_0
 		focus = BA_ME_focus_8
 		focus = BA_ME_focus_17
+		focus = BA_ME_road_to_islam_revolution
 	}
-	icon = GFX_focus_PER_islamic_solidarity
+	icon = GFX_focus_IRQ_hashemite_arab_federation
 	completion_reward = {
 		add_stability = 0.05
 	}
 }
-shared_focus = { #범아랍주의에 호소
+shared_focus = { #무슬림 형제들
 	id = BA_ME_focus_6
+	cost = 5
+	x = 1
+	y = 1
+	relative_position_id = BA_ME_road_to_islam_revolution
+	prerequisite = {
+		focus = BA_ME_road_to_islam_revolution
+	}
+	icon = GFX_focus_generic_befriend_saudi_arabia
+	completion_reward = {
+
+	}
+}
+shared_focus = { #범아랍주의 대오
+	id = BA_ME_focus_7
 	cost = 5
 	x = 1
 	y = 1
@@ -159,24 +193,10 @@ shared_focus = { #범아랍주의에 호소
 	prerequisite = {
 		focus = BA_ME_focus_5
 	}
-	icon = GFX_focus_IRQ_hashemite_arab_federation
-	completion_reward = {
-		add_political_power = 100
-	}
-}
-shared_focus = { #느슨하지만 단일한 대오
-	id = BA_ME_focus_7
-	cost = 5
-	x = -1
-	y = 1
-	relative_position_id = BA_ME_focus_6
-	prerequisite = {
-		focus = BA_ME_focus_6
-	}
 	available = {
 		
 	}
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_focus_IRQ_rally_the_arab_world
 	completion_reward = {
 		custom_effect_tooltip = BA_ME_focus_7_tt
 		add_to_array = {
@@ -221,7 +241,7 @@ shared_focus = { #느슨하지만 단일한 대오
 shared_focus = { #레닌의 유산
 	id = BA_ME_focus_8
 	cost = 5
-	x = 1
+	x = 2
 	y = 1
 	relative_position_id = BA_ME_focus_-1
 	prerequisite = {
@@ -234,28 +254,16 @@ shared_focus = { #레닌의 유산
 		focus = BA_ME_focus_0
 		focus = BA_ME_focus_5
 		focus = BA_ME_focus_17
+		focus = BA_ME_road_to_islam_revolution
 	}
 	icon = GFX_focus_HUN_reinstate_the_lenin_boys
-	completion_reward = {
-	}
-}
-shared_focus = { #혁명전위대
-	id = BA_ME_focus_9
-	cost = 5
-	x = -1
-	y = 1
-	relative_position_id = BA_ME_focus_8
-	prerequisite = {
-		focus = BA_ME_focus_8
-	}
-	icon = GFX_focus_generic_spur_communist_revolutions
 	completion_reward = {
 	}
 }
 shared_focus = { #노동자 국제주의
 	id = BA_ME_focus_10
 	cost = 5
-	x = 1
+	x = 0
 	y = 1
 	relative_position_id = BA_ME_focus_8
 	prerequisite = {
@@ -301,12 +309,13 @@ shared_focus = { #자력갱생
 shared_focus = { #반제국주의 연대
 	id = BA_ME_focus_13
 	cost = 5
-	x = 1
-	y = 1
-	relative_position_id = BA_ME_focus_6
+	x = 0
+	y = 2
+	relative_position_id = BA_ME_road_to_islam_revolution
 	prerequisite = {
-		focus = BA_ME_focus_6
-		focus = BA_ME_focus_9
+		focus = BA_ME_focus_7
+		focus = BA_ME_road_to_islam_revolution
+		focus = BA_ME_focus_10
 	}
 	icon = GFX_focus_eng_decolonization
 	completion_reward = {
@@ -364,9 +373,11 @@ shared_focus = { #중립 고수
 		focus = BA_ME_focus_0
 		focus = BA_ME_focus_8
 		focus = BA_ME_focus_5
+		focus = BA_ME_road_to_islam_revolution
 	}
 	icon = GFX_goal_generic_neutrality_focus
 	completion_reward = {
+		add_stability = 0.1
 	}
 }
 shared_focus = { #고립주의 채택
@@ -399,6 +410,7 @@ shared_focus = { #새로운 물결
 	}
 	icon = GFX_focus_renounce_the_treaty_of_trianon
 	completion_reward = {
+		add_stability = -0.15
 	}
 }
 shared_focus = { #개각

@@ -9,8 +9,16 @@ country_event = {
 
     is_triggered_only = yes
 
-    option = { 
+    option = {
         name = GEI_event.1.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				NOT = { has_game_rule = { rule = the_colour_rule option = the_colour_rule_on } }
+				NOT = { has_game_rule = { rule = the_colour_rule option = the_colour_rule_off } }
+			}
+		}
         set_country_flag = GEI_Beatrice
         complete_national_focus = GEI_beateulicheuiseungli
         custom_effect_tooltip = GEI_Beatrice_tt
@@ -18,6 +26,13 @@ country_event = {
 
     option = { 
         name = GEI_event.1.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				NOT = { has_game_rule = { rule = the_colour_rule option = the_colour_rule_dec_on } }
+			}
+		}
         set_country_flag = GEI_DEC
         complete_national_focus = GEI_DEC_victory
     }

@@ -10,14 +10,10 @@ fra_inner_circle_inlay_window = {
     scripted_images = {
         #FUHRER
         fuhrer_portrait = {
-            GFX_inner_circle_leader_fritz_todt = {
-                always = yes
+            GFX_inner_circle_leader_Philippe_Petain = {
             }
             GFX_inner_circle_leader_albert_speer = {
-                has_country_leader = {
-    				ruling_only = yes
-	    			character = GER_albert_speer
-			    }
+                always = yes
             }
             GFX_inner_circle_leader_hermann_goring = {
                 has_country_leader = {
