@@ -1,0 +1,20 @@
+characters={
+
+	TRK_government_general={
+		name=TRN_military_junta_name
+		portraits={
+			civilian={
+				large= "gfx/leaders/TRK/TRK_government_general.dds"
+			}
+		}
+
+		country_leader={
+			ideology=technocracy
+			traits={  }
+			expire="1965.1.1"
+		}
+
+		gender = female
+	}
+}
+
