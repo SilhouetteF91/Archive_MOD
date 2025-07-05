@@ -2487,6 +2487,58 @@ country_event = { # 선도부
 	}
 }
 
+country_event = { # 메트릭스
+	id = GEI_DEC_event.20
+	title = GEI_DEC_event.20.t
+	desc = GEI_DEC_event.20.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.20.a
+	}
+}
+
+country_event = { # 이로하-마코토 
+	id = GEI_DEC_event.21
+	title = GEI_DEC_event.21.t
+	desc = GEI_DEC_event.21.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.21.a
+	}
+}
+
+country_event = { # 마코토 추억
+	id = GEI_DEC_event.22
+	title = GEI_DEC_event.22.t
+	desc = GEI_DEC_event.22.desc
+	picture = GFX_report_event_memory
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.22.a
+	}
+}
+
+country_event = { # 마리 죄악
+	id = GEI_DEC_event.23
+	title = GEI_DEC_event.23.t
+	desc = GEI_DEC_event.23.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.23.a
+	}
+}
+
 
 
 

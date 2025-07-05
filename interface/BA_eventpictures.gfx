@@ -309,6 +309,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_GEI_ibuki_die.png"
 	}
 
+	spriteType = { 
+		name = "GFX_news_event_GEI_newtype"
+		texturefile = "gfx/event_pictures/news_event_GEI_newtype.png"
+	}
+
 
   #
 
@@ -535,6 +540,10 @@ spriteTypes = {
 	spriteType = { 
 		name = "GFX_report_event_w_t_f"
 		texturefile = "gfx/event_pictures/report_event_w_t_f.dds"
+	}
+	spriteType = { 
+		name = "GFX_report_event_memory"
+		texturefile = "gfx/event_pictures/report_event_memory.png"
 	}
     spriteType = {
       name = "GFX_event_none_picture"

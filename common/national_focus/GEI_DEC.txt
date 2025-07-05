@@ -604,8 +604,9 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			news_event = { id = BA_news.141 hours = 3 }
+			news_event = { id = BA_news.141 hours = 72 }
 			add_ideas = GEI_DEC_metrix
+			country_event = { id = GEI_DEC_event.20 hours = 3 }
 		}
 	}
 
@@ -1015,23 +1016,7 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			news_event = { id = BA_news.130 hours = 3}
-
-            every_country = {
-                limit = {
-                    NOT = {
-                        kivotos_tag = no
-                        tag = GEI
-                    }
-                }
-
-                country_event = {id = GEI_DEC_event.10}
-				country_event = {id = GEI_DEC_event.13 hours = 24}
-                add_opinion_modifier = {
-                    target = GEI
-                    modifier = GEI_DEC_hostile_ai
-                }
-            }
+			news_event = { id = BA_news.147 hours = 3}
 		}
 	}
 
@@ -1139,6 +1124,8 @@ focus_tree = {
 				retire_character = GEH_dlqnzl
 				retire_character = GEH_motomiya_chiaki
 				country_event = {id = GEI_DEC_event.17}
+				country_event = {id = GEI_DEC_event.21 hours = 48}
+				country_event = {id = GEI_DEC_event.22 hours = 72}
 			}
 
 			GEH = {
@@ -1157,6 +1144,7 @@ focus_tree = {
 				retire_character = TRN_dnxkwmal_tkznfkzh
 				retire_character = TRN_dkdhahfl_alsp
 				country_event = {id = GEI_DEC_event.18}
+				country_event = {id = GEI_DEC_event.23 days = 7}
 			}
 		}
 	}
@@ -1213,7 +1201,24 @@ focus_tree = {
         }
 
         completion_reward = {
-        }
+			news_event = { id = BA_news.130 hours = 3}
+
+            every_country = {
+                limit = {
+                    NOT = {
+                        kivotos_tag = no
+                        tag = GEI
+                    }
+                }
+
+                country_event = {id = GEI_DEC_event.10}
+				country_event = {id = GEI_DEC_event.13 hours = 24}
+                add_opinion_modifier = {
+                    target = GEI
+                    modifier = GEI_DEC_hostile_ai
+                }
+            }
+		}
 	}
 
 	focus = {
