@@ -2829,7 +2829,6 @@ scripted_gui = {
 						has_country_flag = ABY_descision_focus_abydos_14_selected_flag
 						has_country_flag = ABY_descision_focus_abydos_15_selected_flag
 					}
-				}
 			}
 			status_C_visible = {
 				OR = {

@@ -14848,21 +14848,22 @@ focus_tree = {
 		x = -1
 		y = 3
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = RED_RMC_idea
-				}
-				swap_ideas = {
-					remove_idea = RED_RMC_idea
-					add_idea = RED_soldier_union
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = RED_the_threats_abound_idea
-					add_idea = RED_soldier_union
-				}
-			}
+			# if = {
+			# 	limit = {
+			# 		has_idea = RED_RMC_idea
+			# 	}
+			# 	swap_ideas = {					
+			# 		remove_idea = RED_RMC_idea
+			# 		add_idea = RED_soldier_union
+			# 	}
+			# }
+			# else = {
+			# 	swap_ideas = {
+			# 		remove_idea = RED_the_threats_abound_idea
+			# 		add_idea = RED_soldier_union
+			# 	}
+			# }
+			add_ideas = RED_soldier_union
 		}
 	}
 	focus = {

@@ -1614,7 +1614,7 @@ focus_tree = {
 		relative_position_id = FRA_focus_london_bridge
 		available = {
 			has_idea = PASTA_signatories_of_the_stresa_idea
-			has_completed_focus = FRA_focus_german_1
+			#has_completed_focus = FRA_focus_german_1
 		}
 		prerequisite = {
 			focus = FRA_focus_london_0
@@ -1842,7 +1842,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_focus_spain_3
 			focus = FRA_focus_spain_2
-			focus = FRA_focus_resistance_11
+			#focus = FRA_focus_resistance_11
 		}
 		available = {
 			always = no
@@ -3613,15 +3613,15 @@ focus_tree = {
 				remove_idea = FRA_com_constitution_1
 				add_idea = FRA_collective_farm
 			}
-			if = {
-				limit = {
-					has_idea = FRA_agricultural_company
-				}
-				swap_ideas = {
-					remove_idea = FRA_agricultural_company
-					add_idea = FRA_agricultural_corporation
-				}
-			}
+			# if = {
+			# 	limit = {
+			# 		has_idea = FRA_agricultural_company
+			# 	}
+			# 	swap_ideas = {
+			# 		remove_idea = FRA_agricultural_company
+			# 		add_idea = FRA_agricultural_corporation
+			# 	}
+			# }
 		}
 	}
 	focus = {
@@ -3889,15 +3889,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = FRA_con_company_agri
-			if = {
-				limit = {
-					has_idea = FRA_agricultural_corporation
-				}
-				swap_ideas = {
-					remove_idea = FRA_agricultural_corporation
-					add_idea = FRA_agricultural_company
-				}
-			}
+			# if = {
+			# 	limit = {
+			# 		has_idea = FRA_agricultural_corporation
+			# 	}
+			# 	swap_ideas = {
+			# 		remove_idea = FRA_agricultural_corporation
+			# 		add_idea = FRA_agricultural_company
+			# 	}
+			# }
 		}
 	}
 	focus = {
@@ -4870,6 +4870,9 @@ focus_tree = {
 		cost = 6
 		x = 14
 		y = 8
+		mutually_exclusive = {
+			focus = FRA_focus_com_10 
+		}
 		allow_branch = {
             OR = {
 			    has_country_flag = FRA_exile_is_over

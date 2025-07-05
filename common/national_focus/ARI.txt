@@ -8,6 +8,7 @@ focus_tree = {
 	shared_focus = Eden_formation_of_alliance_treaty_organization
 	shared_focus = NSAR_danzigs_ss
 	shared_focus = NSAR_german_ss
+
 	country = {
 		factor = 0
 		modifier = {
@@ -1209,9 +1210,10 @@ focus_tree = {
 		}
 		available = {
 		}
-		cancel_effect = {
-			complete_national_focus = ARI_from_the_bottom_up
-		}
+		# 이 효과는 디시전밖에 없는듯
+		# cancel_effect = {
+		# 	complete_national_focus = ARI_from_the_bottom_up
+		# }
 		cancel = {
 			NSD = {
 				exists = yes

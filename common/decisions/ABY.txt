@@ -19975,7 +19975,7 @@ ABY_descision_category_debug = {
 				data_link_tech = 1
 				land_cruiser_juggernaut = 1
 				drone_special_forces_tech = 1
-				drone_collaboration_tech = 1
+				#drone_collaboration_tech = 1
 				kivotos_dron_tech = 1
 			}
 			add_ideas = {

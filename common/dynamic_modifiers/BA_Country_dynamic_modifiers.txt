@@ -970,7 +970,7 @@ COU_RIN_policy_lead_create_military_idea = { #린 루트 - 행정관의 주도 -
 	conscription = COU_RIN_policy_lead_idea_create_military_idea_conscription #징병가능인구 기본 0%
 }
 
-COU_RIN_policy_lead_idea = { #린 루트 - 균형 잡힌 행정 [균형 잡힌 행정]
+COU_RIN_policy_balance_idea = { #린 루트 - 균형 잡힌 행정 [균형 잡힌 행정]
 
 	icon = GFX_idea_COU_RIN_policy_lead_idea #수정 필요
 

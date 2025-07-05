@@ -790,7 +790,7 @@ characters={
 
 	HYA_Nanakado_Ayame_1 = { #황혼의 나나카도 아야메
 		name = HYA_Nanakado_Ayame_1
-		gender = famale
+		gender = female
 		portraits={
 			civilian={
 				large="gfx/leaders/HYA/HYA_Nanakado_Ayame_1.tga"

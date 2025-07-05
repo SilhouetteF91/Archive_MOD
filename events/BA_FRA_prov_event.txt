@@ -5306,10 +5306,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = FRA_prov_event.129.a
-		add_timed_idea = {
-			idea = FRA_invest_for_fra
-			days = 120
-		}
+		# add_timed_idea = {
+		# 	idea = FRA_invest_for_fra
+		# 	days = 120
+		# }
 		FRA= {
 			country_event = {
 				id = FRA_prov_event.130
@@ -5343,10 +5343,10 @@ country_event = {
 					tag = USA
 				}
 			}
-			add_timed_idea = {
-				idea = FRA_invest_from_usa
-				days = 360
-			}
+			# add_timed_idea = {
+			# 	idea = FRA_invest_from_usa
+			# 	days = 360
+			# }
 		}
 		if = {
 			limit = {
@@ -5354,10 +5354,10 @@ country_event = {
 					tag = ENG
 				}
 			}
-			add_timed_idea = {
-				idea = FRA_invest_from_eng
-				days = 360
-			}
+			# add_timed_idea = {
+			# 	idea = FRA_invest_from_eng
+			# 	days = 360
+			# }
 		}
 		if = {
 			limit = {
@@ -5365,10 +5365,10 @@ country_event = {
 					tag = ITA
 				}
 			}
-			add_timed_idea = {
-				idea = FRA_invest_from_ita
-				days = 360
-			}
+			# add_timed_idea = {
+			# 	idea = FRA_invest_from_ita
+			# 	days = 360
+			# }
 		}
 	}
 }
@@ -6850,12 +6850,12 @@ country_event = {
 	option = {
 		name = FRA_ex_event.13.a
 		add_political_power = -5
-		ALG = {
-			add_timed_idea = {
-				idea = FRA_invest_from_ita
-				days = 360
-			}
-		}
+		# ALG = {
+		# 	add_timed_idea = {
+		# 		idea = FRA_invest_from_ita
+		# 		days = 360
+		# 	}
+		# }
 		ITA = {
 			add_ai_strategy = {
 				type = send_volunteers_desire
