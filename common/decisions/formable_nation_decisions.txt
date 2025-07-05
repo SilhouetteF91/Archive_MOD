@@ -8249,6 +8249,13 @@ form_rattanakosin_kingdom_category = {
 			controls_state = 724
 			# Cambodia
 			controls_state = 741
+			controls_state = 1036
+			controls_state = 1037
+			controls_state = 1038
+			controls_state = 1039
+			controls_state = 1040
+			controls_state = 1041
+			controls_state = 1042
 			# Laos
 			controls_state = 670
 		}
@@ -8261,6 +8268,13 @@ form_rattanakosin_kingdom_category = {
 		complete_effect = {
 			set_cosmetic_tag = RAT_UNIFIED
 			741 = { add_core_of = ROOT }
+			1036 = { add_core_of = ROOT }
+			1037 = { add_core_of = ROOT }
+			1038 = { add_core_of = ROOT }
+			1039 = { add_core_of = ROOT }
+			1040 = { add_core_of = ROOT }
+			1041 = { add_core_of = ROOT }
+			1042 = { add_core_of = ROOT }
 			670 = { add_core_of = ROOT }
 			hidden_effect = {
 				news_event = { id = wtt_news.69 hours = 6 }

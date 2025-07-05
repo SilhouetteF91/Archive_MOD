@@ -1,22 +1,22 @@
 state={
-	id=741
-	name="STATE_741"
+	id=1042
+	name="STATE_1042"
 	history = {
 		owner = CAM
         add_core_of = CAM   
 		victory_points = {
-			7376 5
+			4639 3
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 1
 			}
 	}
 	provinces={
-		7376 10317 12260 12288 
+		1324 4330 4639 5236 10204 
 	}
-	manpower=2449000
+	manpower=200000
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=rural
 
-	local_supplies=0.0 
+	local_supplies=0.000
 }
