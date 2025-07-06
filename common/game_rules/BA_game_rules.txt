@@ -38,12 +38,6 @@ the_colour_rule = {
 		desc = "THE_COLOUR_RILE_DESC"
 		allow_achievements = yes
 	}
-	option = {
-		name = the_colour_rule_dec_on
-		text = "THE_COLOUR_RILE_DEC_ON_NAME"
-		desc = "THE_COLOUR_RILE_DESC"
-		allow_achievements = yes
-	}
 }
 shit_project_KV_rule = {
 	name = "PROJECT_KV_RILE_NAME"
@@ -74,21 +68,6 @@ kai_no_rule = {
 		name = kai_no_rule_on
 		text = "KAI_NO_ON_NAME"
 		desc = "KAI_NO_ON_DESC"
-	}
-}
-trn_collapse_rule = {
-	name = "trn_collapse_rule_Name"
-	group = "RULE_GROUP_AI_BEHAVIOR"
-
-	default = {	
-		name = trn_collapse_rule_off
-		text = "KAI_NO_ON_NAME"
-		desc = "trn_collapse_rule_Off_DESC"
-	}
-	option = {
-		name = trn_collapse_rule_on
-		text = "KAI_NO_OFF_NAME"
-		desc = "trn_collapse_rule_On_DESC"
 	}
 }
 
@@ -223,62 +202,6 @@ FRA_Anime_Portrait_Rule = {
 		name = FRA_Anime_Portrait_Rule_Vanilla
 		text = "Trinity_Mika_Portrait_ON_NAME"
 		desc = "FRA_Anime_Portrait_Rule_Vanilla_DESC"
-	}
-}
-HEU_ai_behavior = {
-	name = "HEU_AI_BEHAVIOR"
-	group = "RULE_GROUP_AI_BEHAVIOR"
-	default = {
-		name = DEFAULT
-		text = "RULE_OPTION_DEFAULT"
-		desc = "RULE_OPTION_DEFAULT_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = HEU_PRO_GEH_FASCISM
-		text = "RULE_OPTION_PRO_GEH_FASCISM"
-		desc = "RULE_OPTION_HISTORICAL_HEU_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = HEU_ANTI_GEH_COMMUNISM
-		text = "RULE_OPTION_ANTI_GEH_COMMUNISM"
-		desc = "RULE_OPTION_ANTI_GEH_COMMUNISM_DESC"
-		allow_achievements = yes
-	}
-}
-GEH_ai_behavior = {
-	name = "GEH_AI_BEHAVIOR"
-	group = "RULE_GROUP_AI_BEHAVIOR"
-	default = {
-		name = DEFAULT
-		text = "RULE_OPTION_DEFAULT"
-		desc = "RULE_OPTION_HISTORICAL_GEH_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = GEH_AKO_AI_BEHAVIOR
-		text = "RULE_OPTION_GEH_AKO"
-		desc = "RULE_OPTION_GEH_AKO_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = GEH_HINA_AI_BEHAVIOR
-		text = "RULE_OPTION_GEH_HINA"
-		desc = "RULE_OPTION_GEH_HINA_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = GEH_IORI_AI_BEHAVIOR
-		text = "RULE_OPTION_GEH_IORI"
-		desc = "RULE_OPTION_GEH_IORI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = GEH_GENERIC_AI_BEHAVIOR
-		text = "RULE_OPTION_GEH_GENERIC"
-		desc = "RULE_OPTION_GEH_GENERIC_DESC"
-		allow_achievements = yes
 	}
 }
 #BA_MOD_FIX/

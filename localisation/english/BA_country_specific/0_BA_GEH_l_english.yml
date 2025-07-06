@@ -2537,21 +2537,6 @@
  GEH_hina_corruption_pro_baal_tt: "§g이 결정은 §O바알의 욕구를 충족§!§g하는 결정입니다.§!"
  GEH_hina_corruption_anti_baal_tt: "§g이 결정은 §G히나 자신의 의지를 관철§!§g하는 결정입니다.§!"
 
- # 커스텀 패스
-
- GEH_AI_BEHAVIOR:0 "@GEH 게헨나 선도부"
- RULE_OPTION_HISTORICAL_GEH_DESC:0 "게헨나 선도부 AI는 무작위로 자신들의 길을 선택합니다."
-
- RULE_OPTION_GEH_AKO:0 "선도부 총회 - §C아코§!의 승리"
- RULE_OPTION_GEH_HINA:0 "선도부 총회 - §R열성부원들§!의 승리"
- RULE_OPTION_GEH_IORI:0 "선도부 총회 - §O이오리§!의 승리"
- RULE_OPTION_GEH_GENERIC:0 "선도부 총회 - §Y경합§!"
-
- RULE_OPTION_GEH_AKO_DESC:0 "선도부 AI는 §C아마우 아코§!와 기획부가 정권을 획득한 이후, 선도부를 관료제 국가로 개혁하는 것과 관련 있는 중점 계통도를 따라 내려갈 것입니다."
- RULE_OPTION_GEH_HINA_DESC:0 "선도부 AI는 §R소라사키 히나§!를 찬양하는 광신도들로 정부가 장악되어, 히나에게 철인 독재를 강요하는 것과 관련 있는 중점 계통도를 따라 내려갈 것입니다."
- RULE_OPTION_GEH_IORI_DESC:0 "선도부 AI는 §O시로미 이오리§!와 실행부가 정권을 획득한 이후, 선도부를 군국주의 국가로 변화시키는 것과 관련 있는 중점 계통도를 따라 내려갈 것입니다."
- RULE_OPTION_GEH_GENERIC_DESC:0 "선도부 AI는 여러 파벌들의 논쟁이 §Y경합§!을 일으켜, 어떠한 개혁도 이루지 못하는 §Y현상유지§!를 실시하는 것과 관련 있는 중점 계통도를 따라 내려갈 것입니다."
-
  ### 훈장 ###
  GEH_royal_order_of_the_crown: "십자훈장"
  GEH_pour_le_merite: "푸르 르 메리트"

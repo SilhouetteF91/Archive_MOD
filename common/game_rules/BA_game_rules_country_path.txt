@@ -1,0 +1,96 @@
+GEH_ai_behavior = {
+	name = "GEH_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_HISTORICAL_GEH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GEH_AKO_AI_BEHAVIOR
+		text = "RULE_OPTION_GEH_AKO"
+		desc = "RULE_OPTION_GEH_AKO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GEH_HINA_AI_BEHAVIOR
+		text = "RULE_OPTION_GEH_HINA"
+		desc = "RULE_OPTION_GEH_HINA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GEH_IORI_AI_BEHAVIOR
+		text = "RULE_OPTION_GEH_IORI"
+		desc = "RULE_OPTION_GEH_IORI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GEH_GENERIC_AI_BEHAVIOR
+		text = "RULE_OPTION_GEH_GENERIC"
+		desc = "RULE_OPTION_GEH_GENERIC_DESC"
+		allow_achievements = yes
+	}
+}
+
+HEU_ai_behavior = {
+	name = "HEU_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = HEU_PRO_GEH_FASCISM
+		text = "RULE_OPTION_PRO_GEH_FASCISM"
+		desc = "RULE_OPTION_HISTORICAL_HEU_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = HEU_ANTI_GEH_COMMUNISM
+		text = "RULE_OPTION_ANTI_GEH_COMMUNISM"
+		desc = "RULE_OPTION_ANTI_GEH_COMMUNISM_DESC"
+		allow_achievements = yes
+	}
+}
+
+trn_collapse_rule = {
+	name = "trn_collapse_rule_Name"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+
+	default = {	
+		name = trn_collapse_rule_off
+		text = "KAI_NO_ON_NAME"
+		desc = "trn_collapse_rule_Off_DESC"
+	}
+	option = {
+		name = trn_collapse_rule_on
+		text = "KAI_NO_OFF_NAME"
+		desc = "trn_collapse_rule_On_DESC"
+	}
+}
+
+GEI_ai_behavior = {
+	name = "GEI_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_HISTORICAL_GEI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GEI_PATH_COULOUR
+		text = "RULE_OPTION_COLOUR_PATH_COULOUR"
+		desc = "RULE_OPTION_COLOUR_PATH_COULOUR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GEI_PATH_DEECAGRAMMATON
+		text = "RULE_OPTION_COLOUR_PATH_DEECAGRAMMATON"
+		desc = "RULE_OPTION_COLOUR_PATH_DEECAGRAMMATON_DESC"
+		allow_achievements = yes
+	}
+}

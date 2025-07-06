@@ -15,8 +15,8 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 0
-				NOT = { has_game_rule = { rule = the_colour_rule option = the_colour_rule_on } }
-				NOT = { has_game_rule = { rule = the_colour_rule option = the_colour_rule_off } }
+				NOT = { has_game_rule = { rule = GEI_ai_behavior option = DEFAULT } }
+				NOT = { has_game_rule = { rule = GEI_ai_behavior option = GEI_PATH_COULOUR } }
 			}
 		}
         set_country_flag = GEI_Beatrice
@@ -30,7 +30,8 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 0
-				NOT = { has_game_rule = { rule = the_colour_rule option = the_colour_rule_dec_on } }
+				NOT = { has_game_rule = { rule = GEI_ai_behavior option = DEFAULT } }
+				NOT = { has_game_rule = { rule = GEI_ai_behavior option = GEI_PATH_DEECAGRAMMATON } }
 			}
 		}
         set_country_flag = GEI_DEC
@@ -2483,6 +2484,58 @@ country_event = { # 선도부
 				idea = GEI_DEC_terror
 				days = 365
 			}
+	}
+}
+
+country_event = { # 메트릭스
+	id = GEI_DEC_event.20
+	title = GEI_DEC_event.20.t
+	desc = GEI_DEC_event.20.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.20.a
+	}
+}
+
+country_event = { # 이로하-마코토 
+	id = GEI_DEC_event.21
+	title = GEI_DEC_event.21.t
+	desc = GEI_DEC_event.21.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.21.a
+	}
+}
+
+country_event = { # 마코토 추억
+	id = GEI_DEC_event.22
+	title = GEI_DEC_event.22.t
+	desc = GEI_DEC_event.22.desc
+	picture = GFX_report_event_memory
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.22.a
+	}
+}
+
+country_event = { # 마리 죄악
+	id = GEI_DEC_event.23
+	title = GEI_DEC_event.23.t
+	desc = GEI_DEC_event.23.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.23.a
 	}
 }
 
