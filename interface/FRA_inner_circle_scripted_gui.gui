@@ -29,7 +29,7 @@ guiTypes = {
 		#BACKGROUND
 		background = {
 			name = "background"
-			quadTextureSprite="GFX_inner_circle_decor_bg"
+			quadTextureSprite="GFX_fra_inner_circle_decor_bg"
 			alwaystransparent = yes
 		}
 
@@ -47,7 +47,7 @@ guiTypes = {
 			orientation = center_up
 			position = { x = -280 y = 20 }
 			font = "hoi_36header"
-			text = "GER_inner_circle_title_text"
+			text = "FRA_inner_circle_title_text"
 			format = center
 			maxWidth = 600
 		}
@@ -94,22 +94,22 @@ guiTypes = {
 				#FRAME
 				iconType = {
 					name ="fuhrer_frame"
-					spriteType = "GFX_circular_frame_fuhrer"
+					spriteType = "GFX_circular_frame_marshal"
 					orientation = center
 					position = { x=0	 y=0 }
 					centerposition = yes
-					context_aware_tooltip = GER_fuhrer_tooltip
+					context_aware_tooltip = FRA_marshal_tooltip
 				}
 			}
 
 			#FUHRER NAME BOX
 			iconType = {
 				name ="fuhrer_name_box"
-				spriteType = "GFX_fuhrer_name_ribbon"
+				spriteType = "GFX_marshal_name_ribbon"
 				orientation = center
 				position = { x=0	 y=95 }
 				centerposition = yes
-				context_aware_tooltip = GER_fuhrer_tooltip
+				context_aware_tooltip = FRA_marshal_tooltip
 			}
 
 			#FUHRER NAME
@@ -131,7 +131,7 @@ guiTypes = {
 				orientation = center
 				position = { x=0	 y=111 }
 				centerposition = yes
-				context_aware_tooltip = GER_fuhrer_tooltip
+				context_aware_tooltip = FRA_marshal_tooltip
 			}
 
 			#FUHRER TITLE
@@ -140,7 +140,7 @@ guiTypes = {
 				orientation = center_down
 				position = { x = -100 y = 20 }
 				font = "hoi_18mbs"
-				context_aware_text = [GetFuhrerGenderedName]
+				context_aware_text = FRA_marshal #원수
 				format = center
 				maxWidth = 200
 				alwaystransparent = yes
@@ -170,7 +170,7 @@ guiTypes = {
 				#FRAME
 				iconType = {
 					name ="ascended_advisor_1_frame"
-					spriteType = "GFX_ascended_advisors_unappointed_frame"
+					spriteType = "GFX_fra_ascended_advisors_unappointed_frame"
 					orientation = center
 					position = { x=0	 y=@ASCENDED_ADVISOR_FRAME_POS_Y }
 					centerPosition = yes
@@ -251,7 +251,7 @@ guiTypes = {
 				#FRAME
 				iconType = {
 					name ="ascended_advisor_2_frame"
-					spriteType = "GFX_ascended_advisors_unappointed_frame"
+					spriteType = "GFX_fra_ascended_advisors_unappointed_frame"
 					orientation = center
 					position = { x=0	 y=@ASCENDED_ADVISOR_FRAME_POS_Y }
 					centerPosition = yes
@@ -331,7 +331,7 @@ guiTypes = {
 				#FRAME
 				iconType = {
 					name ="ascended_advisor_3_frame"
-					spriteType = "GFX_ascended_advisors_unappointed_frame"
+					spriteType = "GFX_fra_ascended_advisors_unappointed_frame"
 					orientation = center
 					position = { x=0	 y=@ASCENDED_ADVISOR_FRAME_POS_Y }
 					centerPosition = yes

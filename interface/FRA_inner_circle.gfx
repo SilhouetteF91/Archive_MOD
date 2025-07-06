@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_circular_frame_marshal"
+		textureFile = "gfx/interface/inner_circle/circular_frame_marshal.dds"
+	}
+	spriteType = {
+		name = "GFX_marshal_name_ribbon"
+		textureFile = "gfx/interface/inner_circle/marshal_name_ribbon.dds"
+	}
+	spriteType = {
+		name = "GFX_fra_inner_circle_decor_bg"
+		textureFile = "gfx/interface/inner_circle/fra_inner_circle_decor_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_fra_ascended_advisors_unappointed_frame"
+		textureFile = "gfx/interface/inner_circle/fra_ascended_advisors_unappointed_frame.dds"
+	}
+}

@@ -4,7 +4,7 @@ fra_inner_circle_inlay_window = {
 
     internal = yes
     visible = {
-        always = yes
+        has_government = neutrality
     }
 
     scripted_images = {
@@ -138,19 +138,19 @@ fra_inner_circle_inlay_window = {
             GFX_ascended_advisors_frame = {
                 check_variable = { GER_ascended_advisor_1 = 0 compare = not_equals }	
             }
-            GFX_ascended_advisors_unappointed_frame = yes
+            GFX_fra_ascended_advisors_unappointed_frame = yes
         }
         ascended_advisor_2_frame = {
             GFX_ascended_advisors_frame = {
                 check_variable = { GER_ascended_advisor_2 = 0 compare = not_equals }	
             }
-            GFX_ascended_advisors_unappointed_frame = yes
+            GFX_fra_ascended_advisors_unappointed_frame = yes
         }
         ascended_advisor_3_frame = {
             GFX_ascended_advisors_frame = {
                 check_variable = { GER_ascended_advisor_3 = 0 compare = not_equals }	
             }
-            GFX_ascended_advisors_unappointed_frame = yes
+            GFX_fra_ascended_advisors_unappointed_frame = yes
         }
 
         #ADVISOR

@@ -6,7 +6,7 @@ focus_tree = {
 			add = 100
 			tag = FRA
 		}
-	}
+	} 
 	inlay_window = {
 		id = fra_inner_circle_inlay_window
 		position = { x = 2000 y = 1180 }
@@ -5189,7 +5189,7 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
-	focus = {
+	focus = {	
 		#지중해를 바라보며
 		id = FRA_focus_12
 		icon = GFX_goal_generic_mediterranean
@@ -5936,12 +5936,7 @@ focus_tree = {
 			add_war_support = -0.1
 			add_stability = -0.1
 			hidden_effect = {
-				set_country_flag =  FRA_exile_is_over
-				mark_focus_tree_layout_dirty = yes
-				load_focus_tree = {
-					tree = FRA_focus
-					
-				}
+				country_event = FRA_prov_event.120
 			}
 		}
 	}
