@@ -1,23 +1,25 @@
-state={
-	id=1040
-	name="STATE_1040"
+state = {
+	id = 1040
+	name = "STATE_1040"
 	history = {
-		owner = VIN
-        add_core_of = CAM
-		add_core_of = VIN   
+		owner = CAM
+		add_core_of = CAM
 		victory_points = {
-			7645 2
+			7645
+			2
 		}
 		buildings = {
 			infrastructure = 1
-			}
+		}
 	}
-	provinces={
-		7645 12167 12447 12475 
+	provinces = {
+		7645
+		12167
+		12447
+		12475
 	}
-	manpower=251000
-	buildings_max_level_factor=1.000
-	state_category=rural
-
-	local_supplies=0.000
+	manpower = 251000
+	buildings_max_level_factor = 1
+	state_category = rural
+	local_supplies = 0
 }

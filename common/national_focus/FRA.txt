@@ -9,11 +9,11 @@ focus_tree = {
 	}
 	inlay_window = {
 		id = fra_inner_circle_inlay_window
-		position = { x = 4500 y = 1150 }
+		position = { x = 2000 y = 1180 }
 	}
 	continuous_focus_position = {
-		x = 1500
-		y = 2000
+		x = 3200
+		y = 200
 	}
 	initial_show_position = {
         x = 10
@@ -5043,12 +5043,23 @@ focus_tree = {
 
 	#인물 중점
 		#군사지도자 자리
+	focus = { #조국의 영도
+		id = FRA_leading_of_fatherland
+		cost = 1
+		x = 29
+		y = 9
+		icon = GFX_focus_generic_industrialists
+		completion_reward = {
+			add_political_power = 5
+		}
+	}
 	focus = { #베르됭의 사자
 		id = FRA_petain_focus_0
 		cost = 1
-		x = 23
+		x = -1
 		y = 1
-		relative_position_id = FRA_focus.1 icon = {
+		relative_position_id = FRA_leading_of_fatherland
+		icon = {
 		    trigger = {
                 NOT = {
                     has_game_rule = {
@@ -5074,7 +5085,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = FRA_focus.1
+			focus = FRA_leading_of_fatherland
 		}
 		available = {
 			always = no
@@ -5087,6 +5098,7 @@ focus_tree = {
 		cost = 4
 		x = 0
 		y = 1
+		text_icon = GER_inner_circle_focus_style
 		relative_position_id = FRA_petain_focus_0
 		icon = GFX_focus_SWE_counter_revolution
 		prerequisite = {
@@ -5101,6 +5113,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = FRA_petain_focus_1
+		text_icon = GER_inner_circle_focus_style
 		icon = GFX_focus_ICE_embrace_the_workers_revolution
 		prerequisite = {
 			focus = FRA_petain_focus_1
@@ -5114,6 +5127,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = FRA_petain_focus_1
+		text_icon = GER_inner_circle_focus_style
 		icon = GFX_goal_generic_national_unity
 		prerequisite = {
 			focus = FRA_petain_focus_1
@@ -5127,6 +5141,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = FRA_petain_focus_1
+		text_icon = GER_inner_circle_focus_style
 		icon = GFX_focus_generic_vichy_france_triumphant_focus
 		prerequisite = {
 			focus = FRA_petain_focus_1
@@ -5140,12 +5155,12 @@ focus_tree = {
 	focus = { #피에르 라발
 		id = FRA_laval_focus_0
 		cost = 1
-		x = 27
+		x = 1
 		y = 1
-		relative_position_id = FRA_focus.1
+		relative_position_id = FRA_leading_of_fatherland
 		icon = GFX_focus_generic_treaty
 		prerequisite = { 
-			focus = FRA_focus.1
+			focus = FRA_leading_of_fatherland
 		}
 		available = {
 			always = no
@@ -5165,6 +5180,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_laval_focus_0
 		icon = GFX_focus_ger_bulwark_against_bolshevism
+		text_icon = GER_inner_circle_focus_style
 		prerequisite = { 
 			focus = FRA_laval_focus_0
 		}
@@ -5178,13 +5194,13 @@ focus_tree = {
 		id = FRA_focus_12
 		icon = GFX_goal_generic_mediterranean
 		cost = 4.4
-		x = 2
-		y = 1
+		x = 0
+		y = 5
 		ai_will_do = {
 			factor = 100
 		}
 		prerequisite = {
-			focus = FRA_petain_focus_3
+			focus = FRA_petain_focus_4
 		}
 		prerequisite = {
 			focus = FRA_laval_focus_1
@@ -5192,7 +5208,7 @@ focus_tree = {
 		allow_branch = {
 			always = yes
 		}
-		relative_position_id = FRA_petain_focus_3
+		relative_position_id = FRA_leading_of_fatherland
 		available = {
 			NOT = {
 				has_country_flag = FRA_emergency_flag

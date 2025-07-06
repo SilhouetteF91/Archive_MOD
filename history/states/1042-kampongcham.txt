@@ -2,9 +2,8 @@ state={
 	id=1042
 	name="STATE_1042"
 	history = {
-		owner = VIN
+		owner = CAM
         add_core_of = CAM
-		add_core_of = VIN   
 		victory_points = {
 			4639 3
 		}

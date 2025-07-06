@@ -163,6 +163,13 @@ give_resource_rights = {
 		tungsten chromium
 	}
 }
-
+set_autonomy = {
+	target = LAO
+	autonomy_state = autonomy_colony
+}
+set_autonomy = {
+	target = CAM
+	autonomy_state = autonomy_colony
+}
 
 
