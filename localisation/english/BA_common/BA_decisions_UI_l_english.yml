@@ -398,6 +398,7 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  TRM_pater_loyalty_5_tt:0 "§Y파테르 분파§! 충성도: §G+5§!"
  TRM_pater_loyalty_10_tt:0 "§Y파테르 분파§! 충성도: §G+10§!"
  TRM_pater_loyalty_30_tt:0 "§Y파테르 분파§! 충성도: §G+30§!"
+ TRM_pater_loyalty_60_tt:0 "§Y파테르 분파§! 충성도: §G+60§!"
 
  TRM_pater_popularity__25_tt:0 "§Y파테르 분파§! 영향력: §Y-25§!"
  TRM_pater_popularity__20_tt:0 "§Y파테르 분파§! 영향력: §Y-20§!"
@@ -409,6 +410,7 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
 
 
 #sanctus, 1
+ TRM_sanctus_loyalty__50_tt:0 "§Y상투스 분파§! 충성도: §R-50§!"
  TRM_sanctus_loyalty__10_tt:0 "§Y상투스 분파§! 충성도: §R-10§!"
  TRM_sanctus_loyalty_5_tt:0 "§Y상투스 분파§! 충성도: §G+5§!"
  TRM_sanctus_loyalty_10_tt:0 "§Y상투스 분파§! 충성도: §G+10§!"
@@ -427,10 +429,12 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  TRM_filius_loyalty_5_tt:0 "§Y필리우스 분파§! 충성도: §G+5§!"
  TRM_filius_loyalty_10_tt:0 "§Y필리우스 분파§! 충성도: §G+10§!"
  TRM_filius_loyalty_15_tt:0 "§Y필리우스 분파§! 충성도: §G+15§!"
+ TRM_filius_loyalty_15_tt:0 "§Y필리우스 분파§! 충성도: §G+15§!"
 
- TRM_filius_popularity__5_tt:0 "§Y필리우스 분파§! 영향력: §Y-5§!"
+ TRM_filius_popularity__40_tt:0 "§Y필리우스 분파§! 영향력: §Y-40§!"
  TRM_filius_popularity__20_tt:0 "§Y필리우스 분파§! 영향력: §Y-20§!"
  TRM_filius_popularity__15_tt:0 "§Y필리우스 분파§! 영향력: §Y-15§!"
+ TRM_filius_popularity__5_tt:0 "§Y필리우스 분파§! 영향력: §Y-5§!"
  TRM_filius_popularity_5_tt:0 "§Y필리우스 분파§! 영향력: §Y+5§!"
  TRM_filius_popularity_10_tt:0 "§Y필리우스 분파§! 영향력: §Y+10§!"
  TRM_filius_popularity_15_tt:0 "§Y필리우스 분파§! 영향력: §Y+15§!"

@@ -6681,16 +6681,16 @@ focus_tree = {
 				set_variable = { TRN_completed_industrial_decisions = 0 }
 			}
 			add_to_variable = {
-				global.NSD_country_collapse_decisions_value = -5
+				global.NSD_country_collapse_decisions_value = -15
 				tooltip = NSD_country_collapse_value_tt
 			}
 			add_to_variable = {
-				global.KPD_country_collapse_decisions_value = -10
+				global.KPD_country_collapse_decisions_value = -5
 				tooltip = KPD_country_collapse_value_tt
 			}
 			hidden_effect = {
 				TRN_tmwmal = { 
-					unit_leader_event = { id = trnfla.17 days = 14 } 
+					unit_leader_event = { id = trnfla.17 days = 35 } 
 				}
 				country_event = { id = trnfla.6 days = 365 }
 			}
@@ -6716,10 +6716,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = { id = trnfla.23 }
-			swap_ideas = {
-				add_idea = TRN_agrarian_2_ns
-				remove_idea = TRN_agrarian_ns
-			}
 			63 = { #힌터포메른
 				BA_increase_state_category_by_one_level = yes
 			}
@@ -6982,7 +6978,7 @@ focus_tree = {
 		completion_reward = {
 			modify_timed_idea = {
 				idea = BA_railway_gauge_issue
-				days = -720
+				days = -1440
 			}
 		}
 	}
@@ -7113,7 +7109,7 @@ focus_tree = {
 			custom_effect_tooltip = TRN_necessary_revenge_tt
 			
 			hidden_effect = {
-				country_event = { id = trinity.22 days = 15 } # 충성조항
+				country_event = { id = trinity.22 days = 15 random_days = 15 } # 충성조항
 			}
 		}
 	}
@@ -7125,7 +7121,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = TRN_Justice_Task_Force_on_leash
-		cost = 5
+		cost = 6
 
 		available = {
 			has_country_leader = {
@@ -7172,7 +7168,7 @@ focus_tree = {
 				country_event = { id = trinity.35 days = 15 } # 보안국 재편
 				TRM_hans_zehrer = { unit_leader_event = { id = trinity.39 days = 25 random_days = 25 } } # 한스 프리체
 				country_event = { id = trinity.37 days = 35 random_days = 125 } # 소규모 동아리들의 운명
-				country_event = { id = trinity.45 days = 35 random_days = 65 }
+				country_event = { id = trinity.45 days = 35 } # 중앙구에서 소요
 				country_event = { id = trinity.36 days = 210 } # 안보 상황
 				country_event = { id = trnfla.12 days = 365 } # 세이아 음모론
 			}
@@ -7194,7 +7190,7 @@ focus_tree = {
 		x = -3
 		y = 2
 		relative_position_id = TRN_Mika_basic_law
-		cost = 5
+		cost = 6
 
 		available = {
 			has_government = fascism
@@ -7310,7 +7306,11 @@ focus_tree = {
 				}
 				activate_targeted_decision = { target = TRM decision = TRN_honor_sovereign_dictatorship }
 			}
-			custom_effect_tooltip = TRN_Has_Active_TRN_Mika_honor_social_problem_When_Complete_This_Focus_tt
+			
+			IF = {
+				limit = { has_active_mission = TRN_Mika_social_problem }
+				custom_effect_tooltip = TRN_Has_Active_TRN_Mika_honor_social_problem_When_Complete_This_Focus_tt
+			}
 
 			#add_power_balance_value = {
 			#	id = TRM_power_balance
@@ -7366,9 +7366,10 @@ focus_tree = {
 				}
 				activate_targeted_decision = { target = TRM decision = TRN_honor_utilize_the_church_authority }
 			}
-			custom_effect_tooltip = TRN_Has_Active_TRN_Mika_honor_social_problem_When_Complete_This_Focus_tt
+			
 			IF = {
-				limit = { has_active_mission = TRN_Mika_honor_social_problem }
+				limit = { has_active_mission = TRN_Mika_social_problem }
+				custom_effect_tooltip = TRN_Has_Active_TRN_Mika_honor_social_problem_When_Complete_This_Focus_tt
 			}
 			#add_power_balance_value = {
 			#	id = TRM_power_balance
@@ -7384,7 +7385,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = TRN_hiring_german_thinkers
-		cost = 5
+		cost = 8
 
 		available = {
 			has_government = fascism
@@ -7448,7 +7449,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = TRN_hiring_german_thinkers
-		cost = 5
+		cost = 8
 
 		available = {
 			has_government = fascism
@@ -7566,8 +7567,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TRN_ministry_of_industrial_development
-		prerequisite = { focus = TRN_ministry_of_industrial_development }
-		prerequisite = { focus = TRN_second_trintiy }
+		prerequisite = { focus = TRN_second_trintiy focus = TRN_ministry_of_industrial_development }
 		cost = 5
 
 		available = {
@@ -7598,7 +7598,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = TRN_improving_academy_industry
-		cost = 5
+		cost = 7
 
 		available = {
 		}
@@ -7617,6 +7617,9 @@ focus_tree = {
 				TRM_industries_dynamic_production_speed_buildings_factor = 0.15
 				tooltip = production_speed_buildings_factor_tt
 			}
+			custom_effect_tooltip = tooltip_white_line
+			set_temp_variable = { TRN_Honor_change = 3 }
+			TRN_add_Honor = yes
 		}
 	}
 
@@ -7627,7 +7630,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = TRN_improving_academy_industry
-		cost = 5
+		cost = 7
 
 		available = {
 		}
@@ -7655,6 +7658,9 @@ focus_tree = {
 				TRM_industries_dynamic_production_factory_start_efficiency_factor = 0.1
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
+			custom_effect_tooltip = tooltip_white_line
+			set_temp_variable = { TRN_Honor_change = -3 }
+			TRN_add_Honor = yes
 		}
 	}
 
@@ -7672,13 +7678,17 @@ focus_tree = {
 
 		available = {
 			num_subjects > 0
+			custom_trigger_tooltip = {
+				tooltip = THIS_IS_WIP_TT
+				always = no
+			}
 		}
 
 		ai_will_do = {
 
 		}
 		completion_reward = {
-
+			custom_effect_tooltip = TRN_exploit_of_puppet_economies_not_available
 		}
 	}
 
@@ -7721,7 +7731,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = TRN_second_trintiy
-		cost = 5
+		cost = 7
 
 		available = {
 			has_global_flag = TRINITY_WON_THE_GEHENNA
@@ -7788,7 +7798,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = TRN_Integrity_of_Trinity
-		cost = 5
+		cost = 10
 
 		available = {
 			has_country_leader = {
@@ -7820,7 +7830,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = TRN_Integrity_of_Trinity
-		cost = 5
+		cost = 10
 
 		available = {
 			has_country_leader = {
@@ -7854,7 +7864,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = TRN_supreme_leader
-		cost = 5
+		cost = 6
 
 		available = {
 
@@ -7927,7 +7937,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = TRN_codification_of_regime
-		cost = 5
+		cost = 6
 
 		available = {
 
@@ -7937,7 +7947,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			add_stability = 0.05
+			add_war_support = 0.05
 			add_political_power = party_popularity_100@fascism
 			custom_effect_tooltip = tooltip_white_line
 			swap_ideas = {
@@ -7991,7 +8001,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = TRN_codification_of_regime
-		cost = 5
+		cost = 8
 
 		available = {
 
@@ -8014,7 +8024,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = TRN_supreme_leader
-		cost = 5
+		cost = 8
 
 		available = {
 
@@ -8068,7 +8078,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = TRN_Integrity_of_Trinity
-		cost = 5
+		cost = 6
 
 		available = {
 			num_of_nukes > 0
@@ -8326,7 +8336,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = TRN_poland_problem
-		cost = 5
+		cost = 8
 
 		available = { }
 		prerequisite = { focus = TRN_poland_problem }
@@ -8668,7 +8678,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = TRN_annex_the_bandit_states
-		cost = 5
+		cost = 8
 
 		prerequisite = { 
 			focus = TRN_annex_the_bandit_states 
@@ -8906,6 +8916,16 @@ focus_tree = {
 				target = GEM
 				modifier = BUL_old_enemies
 			}
+			add_opinion_modifier = {
+				target = GEH
+				modifier = BUL_old_enemies
+			}
+			activate_targeted_decision = { target = GEM decision = TRN_anti_pandemonium_society }
+			activate_targeted_decision = { target = GEM decision = TRN_create_pro_trinity_group }
+			activate_targeted_decision = { target = GEM decision = TRN_pandemonium_society_approach_club_Gourmet_Research_Society }
+			activate_targeted_decision = { target = GEM decision = TRN_pandemonium_society_approach_club_Hot_Springs_Department }
+
+			activate_targeted_decision = { target = GEH decision = TRN_prefect_team_discipline_decline }
 
 		}
 	}
@@ -10945,7 +10965,7 @@ shared_focus = {
 	icon = GFX_focus_TRN_navy
 	cost = 8
 	relative_position_id = TRN_Luftwaffe
-	x = 8
+	x = 6
 	y = 0
 	ai_will_do = {
 		factor = 1
@@ -10973,7 +10993,7 @@ shared_focus = {
 	cost = 8
 
 	relative_position_id = TRN_Take_To_The_Seas
-	x = -4
+	x = -2
 	y = 1
 
 	prerequisite = {
@@ -11009,7 +11029,7 @@ shared_focus = {
 	cost = 8
 
 	relative_position_id = TRN_Take_To_The_Seas
-	x = -2
+	x = 0
 	y = 1
 
 	prerequisite = {
@@ -11050,7 +11070,7 @@ shared_focus = {
 	cost = 8
 
 	relative_position_id = TRN_Take_To_The_Seas
-	x = 0
+	x = 2
 	y = 1
 
 	prerequisite = {
@@ -11090,7 +11110,7 @@ shared_focus = {
 	cost = 8
 
 	relative_position_id = TRN_Take_To_The_Seas
-	x = -3
+	x = -1
 	y = 2
 
 	prerequisite = {
@@ -11122,7 +11142,7 @@ shared_focus = {
 	cost = 8
 
 	relative_position_id = TRN_Take_To_The_Seas
-	x = -1
+	x = 1
 	y = 2
 
 	prerequisite = {
@@ -11154,7 +11174,7 @@ shared_focus = {
 	cost = 8
 
 	relative_position_id = TRN_Take_To_The_Seas
-	x = -4
+	x = -2
 	y = 3
 
 	allow_branch = { has_dlc = "Man the Guns" }
@@ -11198,7 +11218,7 @@ shared_focus = {
 	cost = 8
 
 	relative_position_id = TRN_Take_To_The_Seas
-	x = -1
+	x = 1
 	y = 3
 
 	offset = {
@@ -11261,7 +11281,7 @@ shared_focus = {
 	cost = 8
 
 	relative_position_id = TRN_Take_To_The_Seas
-	x = -3
+	x = -1
 	y = 4
 
 	allow_branch = { has_dlc = "Man the Guns" }
@@ -11295,7 +11315,7 @@ shared_focus = {
 	cost = 8
 
 	relative_position_id = TRN_Take_To_The_Seas
-	x = -1
+	x = 1
 	y = 4
 
 	allow_branch = { has_dlc = "Man the Guns" }
@@ -11327,7 +11347,7 @@ shared_focus = {
 	cost = 8
 
 	relative_position_id = TRN_Take_To_The_Seas
-	x = -4
+	x = -2
 	y = 5
 
 	allow_branch = { has_dlc = "Man the Guns" }
@@ -11364,7 +11384,7 @@ shared_focus = {
 	cost = 8
 
 	relative_position_id = TRN_Take_To_The_Seas
-	x = -2
+	x = 0
 	y = 5
 
 	allow_branch = { has_dlc = "Man the Guns" }
@@ -11526,7 +11546,7 @@ shared_focus = {
 	prerequisite = { 
 		#focus = TRM_localization 
 	}
-	x = 10
+	x = 7
 	y = 1
 	offset = {
 		trigger = { has_completed_focus = TRM_newfocus_7 }
@@ -11538,7 +11558,7 @@ shared_focus = {
 	}
 	offset = {
 		trigger = { has_focus_tree = Trinity_focus }
-		x = 5
+		x = 8
 		y = 11
 	}
 	#relative_position_id = TRN_kickstart_the_civilian_industry

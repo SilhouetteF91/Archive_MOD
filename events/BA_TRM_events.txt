@@ -10,6 +10,7 @@ add_namespace = trnfla # 플레이버 이벤트
 add_namespace = trinity 
 add_namespace = trinitynews # 뉴스 이벤트
 add_namespace = trinitypartyconvention # 전당대회용
+add_namespace = trnsocial # 사회문제발생!!
 ##
 # TRMDIP 1 ~ 49 리워크 이전 외교 이벤트
 # TRMDIP 50~ 리워크 이후 외교 이벤트
@@ -8810,7 +8811,6 @@ country_event = { # 티파티 통제
 			remove_idea = TRM_safe_trinity
 			add_idea = TRN_political_instability_ns
 		}
-		add_ideas = TRN_agrarian_ns
 		if = {
 			limit = {
 				NOT = { has_focus_tree = Trinity_focus }
@@ -8838,6 +8838,39 @@ country_event = { # 티파티 통제
 			trait = b_cjstkdmldusgkq
 		}
 
+		custom_effect_tooltip = TRM_filius_popularity__40_tt
+		set_variable = { TRM_internal_factions_popularity_target = 2 }
+		set_variable = { TRM_internal_factions_popularity_var = -40 }
+		TRM_internal_factions_popularity_add = yes
+
+		custom_effect_tooltip = TRM_pater_popularity_20_tt
+		set_variable = { TRM_internal_factions_popularity_target = 0 }
+		set_variable = { TRM_internal_factions_popularity_var = 20 }
+		TRM_internal_factions_popularity_add = yes
+
+		custom_effect_tooltip = TRM_sanctus_popularity__20_tt
+		set_variable = { TRM_internal_factions_popularity_target = 1 }
+		set_variable = { TRM_internal_factions_popularity_var = -20 }
+		TRM_internal_factions_popularity_add = yes
+			
+		custom_effect_tooltip = TRM_pater_loyalty_30_tt
+		set_variable = { TRM_internal_factions_loyalty_target = 0 }
+		set_variable = { TRM_internal_factions_loyalty_var = 30 }
+		TRM_internal_factions_loyalty_add = yes
+
+		custom_effect_tooltip = TRM_sanctus_loyalty__50_tt
+		set_variable = { TRM_internal_factions_loyalty_target = 1 }
+		set_variable = { TRM_internal_factions_loyalty_var = -50 }
+		TRM_internal_factions_loyalty_add = yes
+
+		custom_effect_tooltip = TRM_filius_loyalty__40_tt
+		set_variable = { TRM_internal_factions_loyalty_target = 2 }
+		set_variable = { TRM_internal_factions_loyalty_var = -40 }
+		TRM_internal_factions_loyalty_add = yes
+			
+
+
+
 		hidden_effect = {
 			country_event = { id = trinity.2 days = 04 }
 		}
@@ -8863,6 +8896,16 @@ country_event = { # 바시스 스콜라 시위
 			ideology = fascism
 			popularity = -0.03
 		}
+
+		custom_effect_tooltip = TRM_filius_loyalty_5_tt
+		set_variable = { TRM_internal_factions_loyalty_target = 2 }
+		set_variable = { TRM_internal_factions_loyalty_var = -5 }
+		TRM_internal_factions_loyalty_add = yes
+
+		custom_effect_tooltip = TRM_filius_popularity_5_tt
+		set_variable = { TRM_internal_factions_popularity_target = 2 }
+		set_variable = { TRM_internal_factions_popularity_var = 5 }
+		TRM_internal_factions_popularity_add = yes
     }
 	option = {
 		name = trinity.2.b
@@ -9107,12 +9150,26 @@ unit_leader_event = { # 미카의 호스트 취임
 				desc = TRN_Misono_Mika_leader_desc
 			}
 		}
-		effect_tooltip = {
-			country_event = { id = trinity.13 days = 04 } # 정의실현부 음모
-		}
+
+		#custom_effect_tooltip = TRM_pater_loyalty_60_tt
+		#set_variable = { TRM_internal_factions_loyalty_target = 0 }
+		#set_variable = { TRM_internal_factions_loyalty_var = 60 }
+		#TRM_internal_factions_loyalty_add = yes
+#
+		#custom_effect_tooltip = TRM_pater_popularity_20_tt
+		#set_variable = { TRM_internal_factions_popularity_target = 0 }
+		#set_variable = { TRM_internal_factions_popularity_var = 20 }
+		#TRM_internal_factions_popularity_add = yes
+		
+
+		custom_effect_tooltip = TRM_sanctus_loyalty_zero_tt
+		set_variable = { TRM_internal_factions_popularity_target = 1 }
+		set_variable = { TRM_internal_factions_popularity_var = -10 }
+		TRM_internal_factions_popularity_add = yes
+
 		hidden_effect = {
 			TRN_cmfnrl = {
-				unit_leader_event = { id = trinity.13 days = 04 } # 정의실현부 음모
+				unit_leader_event = { id = trinity.13 days = 08 } # 정의실현부 음모
 			}
 		}
     }
@@ -9495,6 +9552,8 @@ country_event = { # 전당 대회 - 1
 			id = TRM_power_balance
 			value = -0.05
 		}
+		set_temp_variable = { TRN_Honor_change = 3 }
+		TRN_add_Honor = yes
 		hidden_effect = {
 			country_event = { id = trinitypartyconvention.2 days = 03 }
 		}
@@ -9506,6 +9565,8 @@ country_event = { # 전당 대회 - 1
 			id = TRM_power_balance
 			value = 0.05
 		}
+		set_temp_variable = { TRN_Honor_change = -1 }
+		TRN_add_Honor = yes
 		hidden_effect = {
 			country_event = { id = trinitypartyconvention.2 days = 03 }
 		}
@@ -9662,6 +9723,7 @@ country_event = { # 트리니티 교육과정
 			value = 0.05
 		}
 		add_ideas = TRN_new_culture_militarism_ns
+		custom_effect_tooltip = TRN_honor_spread_of_militarism_upgrade_tt
     }
 
 	option = {
@@ -9674,7 +9736,7 @@ country_event = { # 트리니티 교육과정
 			value = -0.05
 		}
 		add_ideas = TRN_new_culture_culture_technology_ns
-		
+		activate_targeted_decision = { target = TRM decision = TRN_honor_new_curriculum_support }
     }
 }
 
@@ -9904,7 +9966,7 @@ country_event = { # 보안국 재편
 			else = { gain_random_agency_upgrade = yes }
 		}
 		hidden_effect = {
-			country_event = { id =  trinity.23 days = 150 }
+			country_event = { id =  trinity.23 days = 180 }
 		}
 
     }
@@ -10263,7 +10325,7 @@ country_event = { # 중앙구에서 대규모 시위
 	id = trinity.45
 	title = trinity.45.t
 	desc = trinity.45.desc
-	picture = GFX_report_event_arius
+	picture = GFX_report_event_generic_trinity_front_gate
 
 	is_triggered_only = yes
 	fire_only_once = no
@@ -10277,7 +10339,10 @@ country_event = { # 중앙구에서 대규모 시위
 				character = TRN_Misono_Mika
 			}
 		}
-		activate_mission = TRN_Mika_honor_social_problem
+		set_variable = { TRN_Mika_social_problem_var = 0 }
+		add_ideas = TRN_social_problem_ns
+		activate_mission = TRN_Mika_social_problem
+		add_war_support = -0.05
 	}
 
 	option = {
@@ -10290,6 +10355,41 @@ country_event = { # 중앙구에서 대규모 시위
 		}
 	}
 }
+
+country_event = { # 중앙구에서 대규모 시위
+	id = trinity.46
+	title = trinity.46.t
+	desc = trinity.46.desc
+	picture = GFX_report_event_generic_trinity_front_gate
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+
+	option = {
+		name = trinity.46.a
+
+	}
+}
+
+country_event = { # 사회문제해결을위한최종해결책
+	id = trnsocial.1
+	title = trnsocial.1.t
+	desc = trnsocial.1.desc
+	picture = GFX_report_event_generic_trinity_front_gate
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+
+	option = {
+		name = trnsocial.1.a
+
+	}
+}
+
+
+
 
 news_event = { # 세이아 피습 사건
 	id = trinitynews.1
@@ -11188,6 +11288,21 @@ country_event = { # 본연으로 - 2
 				}
 			}
 		}
+	}
+}
+
+country_event = { # 
+	id = trnfla.31
+	title = trnfla.31.t
+	desc = trnfla.31.desc
+	picture = GFX_report_event_generic_trinity_front_gate
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnfla.31.a
+		add_stability = 0.01
 	}
 }
 
