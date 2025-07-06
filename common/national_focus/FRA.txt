@@ -5088,7 +5088,10 @@ focus_tree = {
 			focus = FRA_leading_of_fatherland
 		}
 		available = {
-			always = no
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
 		}
 		completion_reward = {
 		}
@@ -5163,7 +5166,10 @@ focus_tree = {
 			focus = FRA_leading_of_fatherland
 		}
 		available = {
-			always = no
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
 		}
 		allow_branch = {
 			FRA_pierre_laval = {

@@ -15,4 +15,8 @@ spriteTypes = {
 		name = "GFX_fra_ascended_advisors_unappointed_frame"
 		textureFile = "gfx/interface/inner_circle/fra_ascended_advisors_unappointed_frame.dds"
 	}
+	spriteType = {
+		name = "GFX_inner_circle_leader_Philippe_Petain"
+		textureFile = "gfx/interface/inner_circle/inner_circle_leader_philippe_petain.dds"
+	}
 }

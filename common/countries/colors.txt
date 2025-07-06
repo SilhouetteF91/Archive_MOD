@@ -1360,11 +1360,3 @@ TWN = {
 	color = rgb { 57  147  23 }
 	color_ui = rgb { 57  147  23 }
 }
-CAM = {
-	color = rgb { 0 18 127 }
-	color_ui = rgb { 0 18 127 }
-}
-LAO = {
-	color = rgb { 0 18 127 }
-	color_ui = rgb { 0 18 127 }
-}
