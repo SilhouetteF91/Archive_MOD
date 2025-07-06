@@ -677,7 +677,11 @@ focus_tree = {
 			# 쿠로코 리젠 시스템 활성화
 			set_country_flag = kuroko_regen_system_active
 			country_event = { id = kuroko_regen.2 }
+		
 			
+			# 쿠로코가 오는 이벤트
+			news_event = { id = BA_news.147 hours = 4 }
+
 			add_corps_commander_role = {
 				character = GEI_kuroko
 				traits = { front_line_general brilliant_strategist war_hero trait_reckless trickster desert_fox legendary_sublime }
