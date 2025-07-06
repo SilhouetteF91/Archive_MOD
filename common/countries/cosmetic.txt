@@ -2797,6 +2797,6 @@ GEH_revolutionary_government = {
 	color_ui = rgb { 10 15 70 }
 }
 GEI_DEC = {
-	color = RGB { 242 99 34 }
-	color_ui = RGB { 242 99 34 }
+	color = HSV { 0.071 1.0 1.0 }
+	color_ui = HSV { 0.071 1.0 1.0 }
 }
