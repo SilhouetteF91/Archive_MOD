@@ -3295,7 +3295,7 @@ GEH_ako_democratic_system_category = {
 			}
 			add_to_variable = {
 				GEH_gehenna_council_idea_fascism_acceptance = -25
-				#tooltip = fascism_acceptance_tt
+				tooltip = fascism_acceptance_tt
 			}
 
 		}	
@@ -3756,7 +3756,7 @@ GEH_hina_corruption_category = {
 			}
 			add_to_variable = {
 				GEH_gehenna_order_department_idea_fascism_acceptance = 25
-				#tooltip = fascism_acceptance_tt
+				tooltip = fascism_acceptance_tt
 			}
 			
 			custom_effect_tooltip = enter_tt
@@ -4131,7 +4131,7 @@ GEH_hina_corruption_category = {
 			custom_effect_tooltip = GEH_gehenna_order_department_idea_tt
 			add_to_variable = {
 				GEH_gehenna_order_department_idea_factory_max_efficiency_factor = 0.1
-				tooltip = factory_max_efficiency_factor_tt
+				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = {
 				GEH_gehenna_order_department_idea_consumer_goods_factor = 0.1
