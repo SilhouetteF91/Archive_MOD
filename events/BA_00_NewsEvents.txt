@@ -5009,7 +5009,7 @@ news_event = { # SRT 폐쇄
 news_event = { # 키보토스 전역에서 발생한 소요사태
     id = BA_news.130
     title = BA_news.130.t
-    desc = BA_news.130.d
+    desc = BA_news.130.desc
     picture = GFX_GEI_DEC_riot
 
     major = yes

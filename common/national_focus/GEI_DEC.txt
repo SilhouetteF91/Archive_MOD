@@ -495,6 +495,11 @@ focus_tree = {
 						Infantry = {x = 1 y = 1}
 						Infantry = {x = 1 y = 2}
                     }
+					support = {
+						recon = { x = 0 y = 0 }
+						artillery = {x = 0 y = 1}
+						engineer = {x = 0 y = 2 }
+						}
                     priority = 2
                 }
 
@@ -1242,10 +1247,11 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION		
 		}
 		completion_reward = {
+			country_event = {id = GEI_DEC_event.25}
 		}
 	}
 
-	focus = {
+	focus = { # 명예 영광 승리
 		id = GEI_DEC_glory
 		icon = GFX_GEI_DEC_glory
 
@@ -1266,6 +1272,45 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION		
 		}
 		completion_reward = {
+			country_event = {id = GEI_DEC_event.24}
+
+			GEI = {
+                division_template = {
+                    name = "CRUSADE"
+                    division_names_group = KIV_SEC_01
+                    regiments = {
+                        Infantry = {x = 0 y = 0}
+                        Infantry = {x = 0 y = 1}
+                        Infantry = {x = 0 y = 2}
+						Infantry = {x = 1 y = 0}
+						Infantry = {x = 1 y = 1}
+						Infantry = {x = 1 y = 2}
+                    }
+					support = {
+						recon = { x = 0 y = 0 }
+						artillery = {x = 0 y = 1}
+						engineer = {x = 0 y = 2 }
+						}
+                    priority = 2
+                }
+
+                capital_scope = {
+				create_unit = {
+					division = "name = \"1. 인간 의용군단\" division_template = \"CRUSADE\" start_experience_factor = 0.6 start_equipment_factor = 0.6" 
+					owner = GEI
+				}
+				create_unit = {
+					ddivision = "name = \"2. 인간 의용군단\" division_template = \"CRUSADE\" start_experience_factor = 0.6 start_equipment_factor = 0.6"  
+					owner = GEI
+				}
+				create_unit = {
+					division = "name = \"3. 인간 의용군단\" division_template = \"CRUSADE\" start_experience_factor = 0.6 start_equipment_factor = 0.6" 
+					owner = GEI
+				}
+				
+			}
+        }
+	
 		}
 	}
 
@@ -1409,7 +1454,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { # 레퀴엠
 		id = GEI_DEC_requiem
 		icon = GFX_GEI_DEC_requiem
 
@@ -1434,6 +1479,8 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION		
 		}
 		completion_reward = {
+			country_event = {id = GEI_DEC_event.26}
+			add_ideas = GEI_DEC_crime_ideas
 		}
 	}
 }
