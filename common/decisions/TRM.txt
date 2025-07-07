@@ -8421,7 +8421,7 @@ TRN_Mika_social_problem_cat = {
 		selectable_mission = yes
 		is_good = no
 		fire_only_once = yes
-		days_mission_timeout = 60
+		days_mission_timeout = TRN_Mika_social_problem_days
 		fixed_random_seed = no
 		cancel_trigger = {
 			NOT = { has_idea = TRN_social_problem_ns }
@@ -8429,7 +8429,15 @@ TRN_Mika_social_problem_cat = {
 		ai_will_do = { base = 1000 }
 
 		available = {
-			has_completed_focus = TRN_new_trinity_culture # 임시용
+			OR = {
+				has_completed_focus = TRN_cult_of_Mika
+				has_completed_focus = TRN_new_trinity_culture
+			}
+			OR = {
+				has_completed_focus = TRN_reconstruction_of_collapsed_industry
+				has_completed_focus = TRN_confiscation_distribution_collectivization
+				has_completed_focus = TRN_cooperation_with_junker
+			}
 		}
 		complete_effect = {
 			add_political_power = 50
@@ -8439,12 +8447,40 @@ TRN_Mika_social_problem_cat = {
 		}
 		timeout_effect = {
 			custom_effect_tooltip =TRN_Mika_social_problem_tt
-			add_to_variable = { RUS_SVR_var = 1 }
+			add_to_variable = { TRN_Mika_social_problem_var = 1 }
 
 			add_stability = -0.03
 		}
 		cancel_effect = {
 			clear_variable = TRN_Mika_social_problem_var
+		}
+	}
+
+	TRN_Mika_sp_national_guard = {
+		icon = GFX_decision_generic_reorganize_irregulars
+		allowed = { }
+		available = { has_completed_focus = TRN_national_guard }
+
+		cost = 40
+		days_remove = 60
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = TRN_Mika_social_problem
+			}
+			modifier = {
+				factor = 0
+			}
+		}
+		complete_effect = {
+			add_to_variable = {
+				TRN_Mika_social_problem_days = 15
+				tooltip = TRN_Mika_social_problem_days_tt 
+			}
 		}
 	}
 

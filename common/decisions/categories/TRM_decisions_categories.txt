@@ -162,7 +162,7 @@ TRN_trinity_world_cat = {
 	visible_when_empty = yes
 }
 TRN_Mika_social_problem_cat = {
-	icon = GFX_decision_category_Trinity_border
+	icon = GFX_decision_category_generic_crisis
 	priority = 280
 
 	allowed = { original_tag = TRM }

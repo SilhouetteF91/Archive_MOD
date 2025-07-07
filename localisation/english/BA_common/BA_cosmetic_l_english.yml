@@ -64,9 +64,9 @@
  TRM_hifumi_DEF: "페로로 교단"
  TRM_hifumi_ADJ: "페로로"
 
- TRN_the_fourth_reich: "트리니티 제4제국"
- TRN_the_fourth_reich_DEF: "트리니티 제4제국"
- TRN_the_fourth_reich_ADJ: "트리니티 제4제국"
+ TRN_the_fourth_reich: "트리니티 기사단국"
+ TRN_the_fourth_reich_DEF: "트리니티 기사단국"
+ TRN_the_fourth_reich_ADJ: "트리니티 기사단국"
 
 #모모카
  COU_go_to_left_democracy_fascism: "키보토스국" #모모카 우파
@@ -530,8 +530,8 @@
  COR_lose_fra_DEF: "프랑스 구국정부"
  COR_lose_fra_ADJ: "프랑스 구국정부" 
 
- TRINITY_REICH: "트리니티 기사단국"
- TRINITY_REICH_DEF: "트리니티 기사단국"
+ TRINITY_REICH: "트리니티 종합학원"
+ TRINITY_REICH_DEF: "트리니티 종합학원"
  TRINITY_REICH_ADJ: "트리니티"
 
  TRM_pater: "파테르 분파"

@@ -9260,6 +9260,8 @@ country_event = { # 상투스 분파의 운명
 
 	option = {
 		name = trinity.16.a
+		set_temp_variable = { TRN_Honor_change = -3 }
+		TRN_add_Honor = yes
 		add_popularity = { ideology = communism popularity = -0.06 }
 		custom_effect_tooltip = TRM_sanctus_del_tt
 		set_variable = { TRM_internal_factions_remove_var = 1 } #지울 세력 코드
@@ -9280,7 +9282,7 @@ country_event = { # 필리우스 분파의 운명
 		ai_chance = {
 			base = 0
 		}
-		set_temp_variable = { TRN_Honor_change = -7 }
+		set_temp_variable = { TRN_Honor_change = -3 }
 		TRN_add_Honor = yes
 		add_popularity = { ideology = neutrality popularity = -0.06 }
 		custom_effect_tooltip = TRM_filius_del_tt
@@ -10339,10 +10341,15 @@ country_event = { # 중앙구에서 대규모 시위
 				character = TRN_Misono_Mika
 			}
 		}
+		set_variable = { TRN_Mika_social_problem_days = 50 }
 		set_variable = { TRN_Mika_social_problem_var = 0 }
 		add_ideas = TRN_social_problem_ns
 		activate_mission = TRN_Mika_social_problem
 		add_war_support = -0.05
+
+		hidden_effect = {
+			news_event = { id = trinitynews.6 hours = 04 }
+		}
 	}
 
 	option = {
@@ -10356,7 +10363,7 @@ country_event = { # 중앙구에서 대규모 시위
 	}
 }
 
-country_event = { # 중앙구에서 대규모 시위
+country_event = { # 아리우스용
 	id = trinity.46
 	title = trinity.46.t
 	desc = trinity.46.desc
@@ -10376,7 +10383,7 @@ country_event = { # 사회문제해결을위한최종해결책
 	id = trnsocial.1
 	title = trnsocial.1.t
 	desc = trnsocial.1.desc
-	picture = GFX_report_event_generic_trinity_front_gate
+	picture = GFX_report_event_generic_trinity_building
 
 	is_triggered_only = yes
 	fire_only_once = no
@@ -10638,6 +10645,52 @@ news_event = { # 트리니티 - 게헨나 전쟁
 					days = 15
 				}
 			}
+		}
+	}
+}
+news_event = { # 트리니티 - 트리니티에서 발생한 독일인 봉기
+	id = trinitynews.6
+	title = trinitynews.6.t
+	desc = trinitynews.6.desc
+	picture = GFX_news_event_trinity_germany_uprising
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+
+	option = {
+		name = trinitynews.6.a
+		trigger = {
+			TAG = TRM
+		}
+	}
+	option = {
+		name = trinitynews.6.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = TRM }
+			NOT = { original_tag = GEH }
+			NOT = { original_tag = GEM }
+			NOT = { original_tag = HEU }
+		}
+	}
+	option = {
+		name = trinitynews.6.c
+		trigger = {
+			OR = {
+				original_tag = GEM
+				original_tag = GEH
+				original_tag = HEU
+			}
+		}
+	}
+	option = {
+		name = trinitynews.6.d
+		trigger = {
+			NOT = { Kivotos_tag = yes }
 		}
 	}
 }
