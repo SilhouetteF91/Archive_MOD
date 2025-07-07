@@ -2450,6 +2450,26 @@
  GEH_hina_corruption_meeting_with_zealot: "선도부 열성당원들과의 만남"
  GEH_hina_corruption_meeting_with_zealot_desc: "열성당원들은 '위대한 히나 부장님 없이는 게헨나도 없다'고 떠들어대는 바보들이지. 좋은 점이 있다면 질서부라는 쓰레기통에 몰아넣은 그 열성당원들을 직접 만나면... 게헨나 선도부가 내 생각처럼 좋기만 한 조직이 아니라는 걸 깨달을 수 있다는 거야.\n\n그리고 또 다른 좋은 점이 있다면, 그것들과의 '대화'를 이어가다보면 내 머릿속이 증오로 활활 타오른다는 점일까. 그게 좋은 점인 이유? 내 감정에 솔직해질 수 있거든. 나 자신이 내가 되는 기분이야."
 
+ ## 일반 법률
+
+ GEH_hina_corruption_law_civil_surveillance_act: "시민감시법"
+ GEH_hina_corruption_law_civil_surveillance_act_desc: "게헨나의 치안과 질서를 지키기 위해서는 다소의 자유는 침해될 수 있어. 우리가 밀레니엄처럼 완벽한 미래적 감시 조직을 갖추지는 못하겠지만, 모든 골목, 거리, 도로, 공공기관, 학교 내부에 CCTV를 설치하고 예비 범죄자들을 잡아낼 거야. 무슨 대가가 따르더라도."
+
+ GEH_hina_corruption_law_violence_act: "강제 교화 허가"
+ GEH_hina_corruption_law_violence_act_desc: "나치나 다른 반정부적 조직에 가담되어 있을 수 있는 예비 범죄자들을 잡아내기 위하여, 체포된 용의자들 심문에 무력을 사용하는 것이 허가될 거야. 뭐, 억울하다면 범죄를 저지르지 말았어야겠지."
+
+ GEH_hina_corruption_law_special_religious_tax: "종교특별세"
+ GEH_hina_corruption_law_special_religious_tax_desc: "가톨릭과 프로테스탄트는 대전이로 전이된 키보토스계를 적대하기 때문에, 그 영향력을 감소시킬 필요가 있어. 신앙을 가진 것으로 등록된 인구는 무거운 인두세를 내게 될 거야. 피할 방법은 없겠지."
+
+ GEH_hina_corruption_law_no_zealot_law: "질서부 평시 무장 약화"
+ GEH_hina_corruption_law_no_zealot_law_desc: "질서부는 실행부와 분리되어 있는 준군사조직으로서 게헨나 내부의 분열을 일으키고 있어. 그리고 그 녀석들이 내 이름을 팔아 저지르는 폭력, 범죄 등의 행동도 용납할 수 없고. 질서부의 평시 무장을 더 가볍게 경량화하는 것은 질서부가 게헨나 시민들에게 저지르는 악행을 막고, 또 게헨나 선도부의 화합을 이루어낼 수도 있을 거야.\n\n싸우는 것보다는, 서로 사이 좋게 지내는 편이 낫잖아."
+
+ GEH_hina_corruption_law_sophisticated_judicial_system: "현지 사법 제도 존중"
+ GEH_hina_corruption_law_sophisticated_judicial_system_desc: "대전이 이전 게헨나에서는 선도부가 곧 법률이었지. 재판은 없고, 내 명령서에 따라 범죄자들이 게헨나 선도부 지하 감옥에 처박혔어. 뭐, 중범죄자들은 발키리 교정국으로 보내지는 게 원칙이기는 했지만... 어쨌거나 형사재판이 없었다는 건 변하지 않지.\n\n하지만 여기에서는 그러지 않는 게 나을 거야. 현지 사법 제도와 3심제를 존중하고, 그것이 아무리 시간이 오래 걸리고 귀찮은 과정이라 해도 따르도록 지시할 거야."
+
+ GEH_hina_corruption_law_esperanto: "에스페란토 교육"
+ GEH_hina_corruption_law_esperanto_desc: "현지인들의 문화를 배우고 서로 다른 언어를 가진 민족끼리의 더 효율적인 소통을 위해, 인류의 '국제어'인 에스페란토를 정규 교육 과정에 넣어 모두에게 가르칠 생각이야. 지금 세대에게 바로 효과가 나타나지는 않겠지만, 다음 세대는 서로를 조금 더 잘 이해하게 되겠지."
+
  ## 선도부 동맹국 디시전
  #### 발칸 국가 ####
  GEH_finding_alliance_YUG: "[YUG.GetNameDef] 측에 동맹 제안"
@@ -2536,6 +2556,9 @@
 
  GEH_hina_corruption_pro_baal_tt: "§g이 결정은 §O바알의 욕구를 충족§!§g하는 결정입니다.§!"
  GEH_hina_corruption_anti_baal_tt: "§g이 결정은 §G히나 자신의 의지를 관철§!§g하는 결정입니다.§!"
+
+ GEH_hina_corruption_law_available_pro_hina_tt: "바알의 욕구가 §Y$GEH_hina_corruption_loc_level_1$§!나 §Y$GEH_hina_corruption_loc_level_2$§! 중 하나여야 합니다."
+ GEH_hina_corruption_law_available_pro_baal_tt: "바알의 욕구가 §Y$GEH_hina_corruption_loc_level_2$§!나 §Y$GEH_hina_corruption_loc_level_3$§! 중 하나여야 합니다."
 
  ### 훈장 ###
  GEH_royal_order_of_the_crown: "십자훈장"
