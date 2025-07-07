@@ -1009,25 +1009,38 @@ country_event = {
 }
 
 country_event = {
-	#안 씀
+	#군사 독재에 반대하는 야당
 	id = FRA_prov_event.6
 	title = FRA_prov_event.6.t
 	desc = FRA_prov_event.6.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	hidden = no
+	picture = GFX_report_event_generic_rally
 	option = {
 		name = FRA_prov_event.6.a
-		add_popularity = {
-			ideology = communism
-			popularity = 0.01
+		FRA_vincent_auriol = {
+			custom_effect_tooltip = FRA_custody
+			set_country_flag = FRA_custody
 		}
-	}
-	option = {
-		name = FRA_prov_event.6.b
-		add_popularity = {
+		FRA_roger_salengro = {
+			custom_effect_tooltip = FRA_custody
+			set_country_flag = FRA_custody
+		}
+		FRA_felix_gouin = {
+			custom_effect_tooltip = FRA_custody
+			set_country_flag = FRA_custody
+		}
+		set_party_name = {
 			ideology = democratic
-			popularity = 0.01
+			long_name = FRA_democratic_party_mil_gov_long
+			name = FRA_democratic_party_mil_gov
+		}
+		hidden_effect = {
+			country_event = {
+				id = FRA_prov_event.100
+				days = 5
+			}
 		}
 	}
 }
@@ -4270,15 +4283,26 @@ country_event = {
 }
 
 country_event = {
-	#안 씀
+	#저항평의회
 	id = FRA_prov_event.100
 	title = FRA_prov_event.100.t
 	desc = FRA_prov_event.100.d
 	is_triggered_only = yes
-	hidden = yes
+	hidden = no
+	picture = GFX_report_event_french_resistance_01
 	option = {
 		name = FRA_prov_event.100.a
-		clr_country_flag = FRA_vin_action
+		add_war_support = 0.03
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		set_party_name = {
+			ideology = communism
+			long_name = FRA_CGT_long
+			name = FRA_CGT
+		}
+		unlock_decision_category_tooltip = FRA_prepare_war
 	}
 }
 
@@ -5026,8 +5050,12 @@ country_event = {
 		hidden_effect = {
 			set_party_name = {
 				ideology = neutrality
-				long_name = FRA_neutrality_party_mil_gov
+				long_name = FRA_neutrality_party_mil_gov_long
 				name = FRA_neutrality_party_mil_gov
+			}
+			country_event = {
+				id = FRA_prov_event.6
+				days = 5
 			}
 			country_event = {
 				id = FRA_prov_event.86
@@ -5075,32 +5103,21 @@ country_event = {
 		activate_advisor = FRA_pierre
 		set_party_name = {
 			ideology = neutrality
-			long_name = FRA_neutrality_party_mil_gov
+			long_name = FRA_neutrality_party_mil_gov_long
 			name = FRA_neutrality_party_mil_gov
-		}
-		set_party_name = {
-			ideology = democratic
-			long_name = FRA_democratic_party_mil_gov
-			name = FRA_democratic_party_mil_gov
 		}
 		add_popularity = {
 			ideology = democratic
 			popularity = -0.1
 		}
 		hidden_effect = {
-            news_event = { id = BA_news.66 days = 3 }
+            news_event = { id = BA_news.66 hours = 3 }
 			set_country_flag = FRA_exile_is_over
-			load_focus_tree = {
-				tree = FRA_focus
-				keep_completed = yes
-			}
 			mark_focus_tree_layout_dirty = yes
-		}
-		custom_effect_tooltip = FRA_prov_event.120_tt
-		hidden_effect = {
-			complete_national_focus = FRA_petain_focus_0
+			complete_national_focus = FRA_leading_of_fatherland
 			complete_national_focus = FRA_laval_focus_0
 		}
+		custom_effect_tooltip = FRA_prov_event.120_tt
 	}
 }
 
@@ -6191,6 +6208,9 @@ unit_leader_event = {
 	option = {
 		name = FRA_pet.1.a
 		add_country_leader_trait = FRA_leader
+		hidden_effect = {
+			complete_national_focus = FRA_petain_focus_0
+		}
 	}
 }
 

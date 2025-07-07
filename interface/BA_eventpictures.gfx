@@ -308,6 +308,10 @@ spriteTypes = {
 		name = "GFX_news_event_GEI_ibuki_die"
 		texturefile = "gfx/event_pictures/news_event_GEI_ibuki_die.png"
 	}
+	spriteType = { 
+		name = "GFX_news_event_GEI_shiroko_terror"
+		texturefile = "gfx/event_pictures/news_event_GEI_anubis_kuroko.png"
+	}
 
 	spriteType = { 
 		name = "GFX_news_event_GEI_newtype"
@@ -768,6 +772,10 @@ spriteTypes = {
     spriteType = {
      	name = "GFX_report_event_generic_trinity_building"
      	texturefile = "gfx/event_pictures/report_event_generic_trinity_building.tga"
+    }
+    spriteType = {
+     	name = "GFX_report_event_generic_trinity_front_gate"
+     	texturefile = "gfx/event_pictures/report_event_generic_trinity_front_gate.tga"
     }
     spriteType = {
      	name = "GFX_report_event_atsuko"

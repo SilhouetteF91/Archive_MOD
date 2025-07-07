@@ -1470,7 +1470,7 @@ focus_tree = {
 		id = SHA_hold_elections
 		icon = GFX_focus_AFG_pashtunistan_referendum
 		x = 0
-		y = 2
+		y = 1
 		cost = 5
 
 		prerequisite = { focus = SHA_transplanting_capitalist_system }

@@ -1470,7 +1470,7 @@ characters={
 			}
 			available  = {
 				NOT = {
-					has_government = neutrality
+					has_character_flag = FRA_custody
 				}
 			}
 			traits  = {
@@ -1501,7 +1501,7 @@ characters={
 			}
 			available  = {
 				NOT = {
-					has_government = neutrality
+					has_character_flag = FRA_custody
 				}
 			}
 			traits  = {
@@ -1555,6 +1555,11 @@ characters={
 			idea_token = FRA_felix_gouin
 			allowed  = {
 				original_tag  = FRA
+			}
+			available = {
+				NOT = {
+					has_character_flag = FRA_custody
+				}
 			}
 			traits  = {
 				captain_of_industry 

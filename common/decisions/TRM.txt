@@ -7070,23 +7070,6 @@ TRN_Mika_honor_decision_cat = {
 			TRN_add_Honor = yes
 		}
 	}
-	TRN_Mika_honor_social_problem = {
-		icon = GFX_decision_SWI_consolidate_council_power
-		allowed = { always = no } #manually activated
-		selectable_mission = yes
-		is_good = yes
-		fire_only_once = yes
-		days_mission_timeout = 365
-		available = {
-			has_completed_focus = TRN_new_trinity_culture
-		}
-		complete_effect = {
-			add_political_power = 100
-		}
-		timeout_effect = {
-
-		}
-	}
 
 	TRN_honor_populist_policies = {
 		icon = GFX_decision_hol_attract_foreign_investors
@@ -7094,7 +7077,7 @@ TRN_Mika_honor_decision_cat = {
 		allowed = { always = no } #activated by effect
 
 		cost = 10
-		days_remove = 70
+		days_remove = 90
 		modifier = {
 			consumer_goods_factor = 0.1
 			production_speed_infrastructure_factor = 0.05
@@ -7123,7 +7106,7 @@ TRN_Mika_honor_decision_cat = {
 		allowed = { always = no } #activated by effect
 
 		cost = 10
-		days_remove = 70
+		days_remove = 90
 		modifier = {
 			political_power_factor = -0.1
 			consumer_goods_factor = -0.1
@@ -7146,7 +7129,7 @@ TRN_Mika_honor_decision_cat = {
 		allowed = { always = no } #activated by effect
 
 		cost = 10
-		days_remove = 70
+		days_remove = 90
 		modifier = {
 			political_power_factor = -0.05
 			consumer_goods_factor = 0.1
@@ -7180,7 +7163,7 @@ TRN_Mika_honor_decision_cat = {
 		allowed = { always = no } #activated by effect
 
 		cost = 10
-		days_remove = 70
+		days_remove = 90
 		modifier = {
 			political_power_factor = -0.15
 			war_support_weekly = 0.001
@@ -7193,17 +7176,36 @@ TRN_Mika_honor_decision_cat = {
 			set_temp_variable = { TRN_Honor_change = -4 }
 			TRN_add_Honor = yes
 
-			add_war_support = 0.02
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.02
-			}
+			IF = {
+				limit = { has_idea = TRN_new_culture_militarism_ns }
+				add_war_support = 0.04
 
-       		add_power_balance_value = {
-       		    id = TRM_power_balance
-       		    value = 0.02
-       		    tooltip_side = TRM_tirinty_nazism
-       		}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.04
+				}
+
+       			add_power_balance_value = {
+       			    id = TRM_power_balance
+       			    value = 0.04
+       			    tooltip_side = TRM_tirinty_nazism
+       			}
+			}
+			else = {
+				add_war_support = 0.02
+				add_stability  = -0.02
+
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.02
+				}
+
+       			add_power_balance_value = {
+       			    id = TRM_power_balance
+       			    value = 0.02
+       			    tooltip_side = TRM_tirinty_nazism
+       			}
+			}
 		}
 	}
 
@@ -7213,7 +7215,7 @@ TRN_Mika_honor_decision_cat = {
 		allowed = { always = no } #activated by effect
 
 		cost = 10
-		days_remove = 70
+		days_remove = 90
 		modifier = {
 			consumer_goods_factor = 0.1
 			stability_factor = 0.05
@@ -7229,6 +7231,32 @@ TRN_Mika_honor_decision_cat = {
        		    id = TRM_power_balance
        		    value = 0.02
        		    tooltip_side = TRM_tirinty_nazism
+       		}
+		}
+	}
+
+	TRN_honor_new_curriculum_support = {
+		icon = GFX_decision_advanced_activity_report
+
+		allowed = { always = no } #activated by effect
+
+		cost = 10
+		days_remove = 90
+		modifier = {
+			political_power_factor = 0.05
+			power_balance_weekly = -0.01
+		}
+
+		ai_will_do = { base = 0 }
+
+		complete_effect = {
+			add_political_power = 15
+			
+
+       		add_power_balance_value = {
+       		    id = TRM_power_balance
+       		    value = -0.06
+       		    tooltip_side = TRM_tirinty_socialism
        		}
 		}
 	}
@@ -7403,11 +7431,14 @@ TRN_economic_decisions_category = {
 		allowed = { always = no } #activated by effect
 
 		available = {
-			FROM = { is_owned_and_controlled_by = ROOT }
+			FROM = { 
+				is_owned_and_controlled_by = ROOT 
+				infrastructure < 5
+			}
 		}
 
 		cost = 35
-		days_remove = 35
+		days_remove = 49
 		fire_only_once = yes
 		state_target = yes
 
@@ -7420,6 +7451,12 @@ TRN_economic_decisions_category = {
 			modifier = {
 				factor = 0
 				has_political_power < 159
+			}
+		}
+		complete_effect = {
+			set_country_flag = {
+				flag = TRN_Infrastructure_Development_active_flag
+				days = 49
 			}
 		}
 		remove_effect = {
@@ -7440,6 +7477,9 @@ TRN_economic_decisions_category = {
 		available = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 			num_of_civilian_factories_available_for_projects > 1
+			NOT = {
+				has_country_flag = TRN_industry_deicision_active
+			}
 		}
 
 		cost = 35
@@ -7453,6 +7493,14 @@ TRN_economic_decisions_category = {
 
 		ai_will_do = {
 			base = 120
+		}
+
+		complete_effect = {
+			set_country_flag = {
+				flag = TRN_industry_deicision_active
+				value = 1
+				days = 70
+			}
 		}
 		remove_effect = {
 			FROM = {
@@ -7479,6 +7527,7 @@ TRN_economic_decisions_category = {
 				is_owned_and_controlled_by = ROOT
 			}
 			num_of_civilian_factories_available_for_projects > 2
+			NOT = { has_country_flag = TRN_industry_deicision_active }
 		}
 
 		cost = 40
@@ -7495,6 +7544,14 @@ TRN_economic_decisions_category = {
 			modifier = {
 				factor = 0
 				has_political_power < 159
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = TRN_industry_deicision_active
+				value = 1
+				days = 70
 			}
 		}
 
@@ -7534,6 +7591,9 @@ TRN_economic_decisions_category = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 			62 = { is_owned_and_controlled_by = ROOT }
 			num_of_civilian_factories_available_for_projects > 2
+			NOT = {
+				has_country_flag = TRN_industry_deicision_active
+			}
 		}
 
 		cost = 40
@@ -7550,6 +7610,14 @@ TRN_economic_decisions_category = {
 			modifier = {
 				factor = 0
 				has_political_power < 159
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = TRN_industry_deicision_active
+				value = 1
+				days = 70
 			}
 		}
 
@@ -7577,6 +7645,9 @@ TRN_economic_decisions_category = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 			61 = { is_owned_and_controlled_by = ROOT }
 			num_of_civilian_factories_available_for_projects > 1
+			NOT = {
+				has_country_flag = TRN_industry_deicision_active
+			}
 		}
 
 		cost = 40
@@ -7595,7 +7666,14 @@ TRN_economic_decisions_category = {
 				has_political_power < 159
 			}
 		}
-
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = TRN_industry_deicision_active
+				value = 1
+				days = 70
+			}
+		}
 		remove_effect = {
 			FROM = {
 				add_extra_state_shared_building_slots = 1
@@ -7619,6 +7697,9 @@ TRN_economic_decisions_category = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 			66 = { is_owned_and_controlled_by = ROOT }
 			num_of_civilian_factories_available_for_projects > 2
+			NOT = {
+				has_country_flag = TRN_industry_deicision_active
+			}
 		}
 
 		cost = 30
@@ -7638,6 +7719,13 @@ TRN_economic_decisions_category = {
 			}
 		}
 
+		complete_effect = {
+			set_country_flag = {
+				flag = TRN_industry_deicision_active
+				value = 1
+				days = 70
+			}
+		}
 		remove_effect = {
 			add_to_variable = { TRN_completed_industrial_decisions = 1 }
 			FROM = {
@@ -7666,6 +7754,9 @@ TRN_economic_decisions_category = {
 		available = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 			num_of_civilian_factories_available_for_projects > 2
+			NOT = {
+				has_country_flag = TRN_industry_deicision_active
+			}
 		}
 
 		cost = 40
@@ -7682,6 +7773,14 @@ TRN_economic_decisions_category = {
 			modifier = {
 				factor = 0
 				has_political_power < 159
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = TRN_industry_deicision_active
+				value = 1
+				days = 70
 			}
 		}
 
@@ -7705,6 +7804,9 @@ TRN_economic_decisions_category = {
 		available = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 			num_of_civilian_factories_available_for_projects > 2
+			NOT = {
+				has_country_flag = TRN_industry_deicision_active
+			}
 		}
 
 		cost = 40
@@ -7718,6 +7820,14 @@ TRN_economic_decisions_category = {
 
 		ai_will_do = {
 			base = 0
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = TRN_industry_deicision_active
+				value = 1
+				days = 70
+			}
 		}
 
 		remove_effect = {
@@ -7770,6 +7880,9 @@ TRN_economic_decisions_category = {
 
 		available = {
 			FROM = { is_owned_and_controlled_by = ROOT }
+			NOT = {
+				has_country_flag = TRN_industry_deicision_active
+			}
 		}
 
 		cost = 35
@@ -7783,6 +7896,14 @@ TRN_economic_decisions_category = {
 
 		ai_will_do = {
 			base = 0
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = TRN_industry_deicision_active
+				value = 1
+				days = 70
+			}
 		}
 
 		remove_effect = {
@@ -8235,6 +8356,44 @@ TRN_trinity_world_cat = {
 		}
 	}
 
+	TRN_pandemonium_society_approach_club_Hot_Springs_Department = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		allowed = { always = no }
+		available = {
+			NOT = { has_completed_focus = TRN_spiritual_warfare }
+		}
+		visible = {
+			country_exists = GEM
+		}
+		fire_only_once = yes
+		cost = 20
+
+		ai_will_do = { base = 100 }
+
+		complete_effect = {
+			set_country_flag = TRN_pandemonium_society_approach_club_Hot_Springs_Department_flag
+		}
+	}
+
+	TRN_pandemonium_society_approach_club_Gourmet_Research_Society = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		allowed = { always = no }
+		available = {
+			NOT = { has_completed_focus = TRN_spiritual_warfare }
+		}
+		visible = {
+			country_exists = GEM
+		}
+		fire_only_once = yes
+		cost = 20
+
+		ai_will_do = { base = 100 }
+
+		complete_effect = {
+			set_country_flag = TRN_pandemonium_society_approach_club_Gourmet_Research_Society_flag
+		}
+	}
+
 	TRN_prefect_team_discipline_decline = {
 		icon = GFX_decision_eng_propaganda_campaigns
 		allowed = { always = no }
@@ -8251,6 +8410,41 @@ TRN_trinity_world_cat = {
 
 		complete_effect = {
 			set_country_flag = TRN_create_pro_trinity_group_flag
+		}
+	}
+
+}
+TRN_Mika_social_problem_cat = {
+	TRN_Mika_social_problem = {
+		icon = GFX_decision_SWI_consolidate_council_power
+		allowed = { always = no } #manually activated
+		selectable_mission = yes
+		is_good = no
+		fire_only_once = yes
+		days_mission_timeout = 60
+		fixed_random_seed = no
+		cancel_trigger = {
+			NOT = { has_idea = TRN_social_problem_ns }
+		}
+		ai_will_do = { base = 1000 }
+
+		available = {
+			has_completed_focus = TRN_new_trinity_culture # 임시용
+		}
+		complete_effect = {
+			add_political_power = 50
+			hidden_effect = {
+				country_event = { id = trnfla.31 days = 70 }
+			}
+		}
+		timeout_effect = {
+			custom_effect_tooltip =TRN_Mika_social_problem_tt
+			add_to_variable = { RUS_SVR_var = 1 }
+
+			add_stability = -0.03
+		}
+		cancel_effect = {
+			clear_variable = TRN_Mika_social_problem_var
 		}
 	}
 

@@ -332,6 +332,14 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/TRN/TRN_arius_problem_ns.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_TRN_political_instability_ns"
+		textureFile = "gfx/interface/ideas/TRN/idea_TRN_political_instability_ns.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_TRN_social_problem_ns"
+		textureFile = "gfx/interface/ideas/TRN/idea_TRN_social_problem_ns.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_TRM_Trinity_Grande_Armee"
 		textureFile = "gfx/interface/ideas/Trinity_Grande_Armee.tga"
 	}
@@ -359,10 +367,6 @@ spriteTypes = {
 		name = "GFX_idea_TRM_bonus_poland_war"
 		texturefile = "gfx/interface/ideas/trn/Trinity_flag.tga"
 	}
-	#spriteType = {
-	#  name = "GFX_idea_TRM_safe_trinity"
-	#	texturefile = "gfx/interface/ideas/trn/tea_party.tga"
-	#}
 	spriteType = {
 		name = "GFX_after_school_sweets_club"
 		texturefile = "gfx/interface/decisions/after_school_sweets_club.png"

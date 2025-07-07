@@ -1446,8 +1446,8 @@ scripted_gui = {
 			ABY_descision_focus_czecho_2_available_visible = {
 				AND = {
 					OR = {
-						NOT = {has_country_flag = ABY_descision_focus_czecho_1_completed_flag}
-						has_country_flag = ABY_descision_focus_czecho_1_ongoing_flag
+						NOT = {has_country_flag = ABY_descision_focus_czecho_2_completed_flag}
+						has_country_flag = ABY_descision_focus_czecho_2_ongoing_flag
 					}
 					has_country_flag = ABY_descision_focus_first_completed_flag
 				}

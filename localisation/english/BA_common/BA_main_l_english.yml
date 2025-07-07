@@ -297,7 +297,7 @@
  increase_state_category_by_two_levels_tt: "§G2§!개의 추가 기본 건설 슬롯 제공.\n"
  decrease_state_category_by_one_level_tt: "1개의 기본 건설 슬롯 §R제거§!.\n"
 
- debug_event_scopes:0 " "
+ #debug_event_scopes:0 " "
  BA_Auto_complete_tt: "§Y이 중점§!은 §Y사건§!과 §Y결정§!을 통해 자동으로 통과됩니다."
 
  BA_form_iberia_category: "이베리아 연방"
