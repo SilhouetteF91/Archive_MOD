@@ -395,6 +395,16 @@ GEM_club_problem_decision_modifier_reload = {
 	set_temp_variable = { temp_GEH_resistance_strength_hot_spring_department = modifier@GEH_resistance_strength_hot_spring_department }
 	set_temp_variable = { temp_GEH_resistance_strength_gourmet_research_society = modifier@GEH_resistance_strength_gourmet_research_society }
 
+	multiply_temp_variable = {
+		temp_GEH_resistance_strength_hot_spring_department = 0.40
+	}
+	multiply_temp_variable = {
+		temp_GEH_resistance_strength_gourmet_research_society = 0.40
+	}
+
+	add_to_temp_variable = { temp_GEH_resistance_strength_hot_spring_department = 0.8 }
+	add_to_temp_variable = { temp_GEH_resistance_strength_gourmet_research_society = 0.8 }
+
 	clamp_temp_variable = {
 		var = temp_GEH_resistance_strength_hot_spring_department
 		min = 0
@@ -403,14 +413,6 @@ GEM_club_problem_decision_modifier_reload = {
 		var = temp_GEH_resistance_strength_gourmet_research_society
 		min = 0
 	}
-
-	add_to_temp_variable = { temp_GEH_resistance_strength_hot_spring_department = 1 }
-	add_to_temp_variable = { temp_GEH_resistance_strength_gourmet_research_society = 1 }
-
-	set_variable = { gui_GEH_resistance_strength_hot_spring_department = temp_GEH_resistance_strength_hot_spring_department }
-	set_variable = { gui_GEH_resistance_strength_gourmet_research_society = temp_GEH_resistance_strength_gourmet_research_society }
-	add_to_variable = { gui_GEH_resistance_strength_hot_spring_department = 1 }
-	add_to_variable = { gui_GEH_resistance_strength_gourmet_research_society = 1 }
 
 	multiply_temp_variable = { temp_GEH_HSD_var_stability_factor = temp_GEH_resistance_strength_hot_spring_department }
 	multiply_temp_variable = { temp_GEH_HSD_var_surrender_limit = temp_GEH_resistance_strength_hot_spring_department }

@@ -45,37 +45,40 @@ defined_text = {
 	text = {
 		trigger = {
 			check_variable = {
-				modifier@GEH_resistance_strength_gourmet_research_society = 1
+				modifier@GEH_resistance_strength_gourmet_research_society < 3
 			}
 		}
-		localization_key = gem_club_problem_decision_lv1
+		localization_key = gem_club_problem_decision_lvG_GRS
 	}
 	text = {
 		trigger = {
 			check_variable = {
-				modifier@GEH_resistance_strength_gourmet_research_society = 2
+				modifier@GEH_resistance_strength_gourmet_research_society > 2
+			}
+			check_variable = {
+				modifier@GEH_resistance_strength_gourmet_research_society < 5
 			}
 		}
-		localization_key = gem_club_problem_decision_lv2
+		localization_key = gem_club_problem_decision_lvY_GRS
 	}
 	text = {
 		trigger = {
 			check_variable = {
-				modifier@GEH_resistance_strength_gourmet_research_society = 3
+				modifier@GEH_resistance_strength_gourmet_research_society > 4
+			}
+			check_variable = {
+				modifier@GEH_resistance_strength_gourmet_research_society < 7
 			}
 		}
-		localization_key = gem_club_problem_decision_lv3
+		localization_key = gem_club_problem_decision_lvO_GRS
 	}
 	text = {
 		trigger = {
 			check_variable = {
-				modifier@GEH_resistance_strength_gourmet_research_society = 4
+				modifier@GEH_resistance_strength_gourmet_research_society > 6
 			}
 		}
-		localization_key = gem_club_problem_decision_lv4
-	}
-	text = {
-		localization_key = gem_club_problem_decision_lvO
+		localization_key = gem_club_problem_decision_lvR_GRS
 	}
 }
 defined_text = {
@@ -83,36 +86,56 @@ defined_text = {
 	text = {
 		trigger = {
 			check_variable = {
-				modifier@GEH_resistance_strength_hot_spring_department = 1
+				modifier@GEH_resistance_strength_hot_spring_department < 3
 			}
 		}
-		localization_key = gem_club_problem_decision_lv1
+		localization_key = gem_club_problem_decision_lvG_HSD
 	}
 	text = {
 		trigger = {
 			check_variable = {
-				modifier@GEH_resistance_strength_hot_spring_department = 2
+				modifier@GEH_resistance_strength_hot_spring_department > 2
+			}
+			check_variable = {
+				modifier@GEH_resistance_strength_hot_spring_department < 5
 			}
 		}
-		localization_key = gem_club_problem_decision_lv2
+		localization_key = gem_club_problem_decision_lvY_HSD
 	}
 	text = {
 		trigger = {
 			check_variable = {
-				modifier@GEH_resistance_strength_hot_spring_department = 3
+				modifier@GEH_resistance_strength_hot_spring_department > 4
+			}
+			check_variable = {
+				modifier@GEH_resistance_strength_hot_spring_department < 7
 			}
 		}
-		localization_key = gem_club_problem_decision_lv3
+		localization_key = gem_club_problem_decision_lvO_HSD
 	}
 	text = {
 		trigger = {
 			check_variable = {
-				modifier@GEH_resistance_strength_hot_spring_department = 4
+				modifier@GEH_resistance_strength_hot_spring_department > 6
 			}
 		}
-		localization_key = gem_club_problem_decision_lv4
+		localization_key = gem_club_problem_decision_lvR_HSD
+	}
+}
+defined_text = {
+	name = gem_club_problem_decision_trigger_loc
+	text = {
+		trigger = {
+			has_political_power > 49
+		}
+		localization_key = gem_club_problem_decision_trigger_text
 	}
 	text = {
-		localization_key = gem_club_problem_decision_lvO
+		trigger = {
+			NOT = {
+				has_political_power > 49
+			}
+		}
+		localization_key = gem_club_problem_decision_trigger_text_blocked
 	}
 }

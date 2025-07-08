@@ -397,13 +397,13 @@ spriteTypes = {
 		name = "GFX_decisions_idea_GEH_gourmet_research_society_process"
 		texturefile = "gfx/interface/ideas/geh/idea_GEH_gourmet_research_society_process.tga"
 		legacy_lazy_load = no
-		noOfFrames = 5
+		noOfFrames = 8
 	}
 	spriteType = {
 		name = "GFX_decisions_idea_GEH_hot_spring_department_process"
 		texturefile = "gfx/interface/ideas/geh/idea_GEH_hot_spring_department_process.tga"
 		legacy_lazy_load = no
-		noOfFrames = 5
+		noOfFrames = 8
 	}
 	
 	spriteType = {
@@ -419,6 +419,53 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_GEM_club_problem_button_3_button"
 		texturefile = "gfx/interface/decisions/GEM/GEM_club_problem_button_3_button.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_GEM_club_problem_button_1_select"
+		texturefile = "gfx/interface/decisions/GEM/GEM_club_problem_button_1_select.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_GEM_club_problem_button_2_select"
+		texturefile = "gfx/interface/decisions/GEM/GEM_club_problem_button_2_select.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_GEM_club_problem_button_3_select"
+		texturefile = "gfx/interface/decisions/GEM/GEM_club_problem_button_3_select.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_club_problem_progress_point_cp"
+		texturefile = "gfx/interface/decisions/GEM/club_problem_progress_point_cp.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_club_problem_progress_point_def"
+		texturefile = "gfx/interface/decisions/GEM/club_problem_progress_point_def.tga"
+	}
+	progressbartype = {
+		name = "GFX_club_problem_progress_bar_GEM_side"
+		textureFile1 = "gfx/interface/decisions/GEM/club_problem_progress_bar_GEM_side.tga"
+		textureFile2 = "gfx/interface/decisions/GEM/club_problem_progress_bar_bg.dds"
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+		size = { 
+			x = 440
+			y = 15
+		}
+	}
+	progressbartype = {
+		name = "GFX_club_problem_progress_bar_GEH_side"
+		textureFile1 = "gfx/interface/decisions/GEM/club_problem_progress_bar_GEH_side.tga"
+		textureFile2 = "gfx/interface/decisions/GEM/club_problem_progress_bar_bg.dds"
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+		size = { 
+			x = 440
+			y = 15
+		}
 	}
 	#spriteType = {
 	#	name = "GFX_decisions_fra_resistance"

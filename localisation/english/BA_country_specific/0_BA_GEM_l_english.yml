@@ -906,15 +906,42 @@
  gem_club_problem_decision_gourmet_research_society_escape: "§C미식연구회는 현재 우리를 따르고 있습니다!§!\n미식연구회로 인한 효과:\n - 안정도: §R-5.00%§!\n징병 가능 인구 변동치: §G10%§!"
  gem_club_problem_decision_hot_spring_department_escape: "§C온천개발부는 현재 우리를 따르고 있습니다!§!\n온천개발부로 인한 효과:\n - 안정도: §R-5.00%§!\n - 건설 속도: §G10.00%§!"
 
+ gem_club_problem_decision_gourmet_research_society_idea_1: "£decision_icon_small 미식연구회 협력 접근 방식"
+
+ gem_club_problem_decision_gourmet_research_society_idea_2: "£decision_icon_small 미식연구회 관찰 접근 방식"
+
+ gem_club_problem_decision_gourmet_research_society_idea_3: "£decision_icon_small 미식연구회 탄압 접근 방식"
+
+ gem_club_problem_decision_hot_spring_department_idea_1: "£decision_icon_small 온천개발부 협력 접근 방식"
+
+ gem_club_problem_decision_hot_spring_department_idea_2: "£decision_icon_small 온천개발부 관찰 접근 방식"
+
+ gem_club_problem_decision_hot_spring_department_idea_3: "£decision_icon_small 온천개발부 탄압 접근 방식"
+
+ gem_club_problem_decision_select_1: "§Y협력§!\n\n동아리 저항: §R+1§!\n환심 획득: §G+50%§!\n안정도: §G+5.00%§!\n\n[gem_club_problem_decision_trigger_loc]"
+ gem_club_problem_decision_select_2: "§Y감시§!\n\n안정도: §G+2.00%§!\n\n[gem_club_problem_decision_trigger_loc]"
+ gem_club_problem_decision_select_3: "§Y협력§!\n\n동아리 저항: §G-1§!\n환심 획득: §R-50%§!\n안정도: §R-5.00%§!\n\n[gem_club_problem_decision_trigger_loc]"
+
+ gem_club_problem_decision_select_1_cp: "§Y협력§!\n\n동아리 저항: §R+1§!\n환심 획득: §G+50%§!\n안정도: §G+5.00%§!"
+ gem_club_problem_decision_select_2_cp: "§Y감시§!\n\n안정도: §G+2.00%§!"
+ gem_club_problem_decision_select_3_cp: "§Y협력§!\n\n동아리 저항: §G-1§!\n환심 획득: §R-50%§!\n안정도: §R-5.00%§!"
+
+ gem_club_problem_decision_trigger_text: "접근 방식 변경에 £pol_power §Y50§! 소모"
+ gem_club_problem_decision_trigger_text_blocked: "접근 방식 변경에 £pol_power §R50§! 소모"
+
  gem_club_problem_decision_lv_text: "저항 단계"
  gem_club_problem_decision_gourmet_research_society_lv: "[gem_club_problem_decision_gourmet_research_society_lv_loc]"
  gem_club_problem_decision_hot_spring_department_lv: "[gem_club_problem_decision_hot_spring_department_lv_loc]"
 
- gem_club_problem_decision_lvO: "§ROV§!"
- gem_club_problem_decision_lv4: "§R3§!"
- gem_club_problem_decision_lv3: "§O3§!"
- gem_club_problem_decision_lv2: "§Y2§!"
- gem_club_problem_decision_lv1: "§G1§!"
+ gem_club_problem_decision_lvR_GRS: "§R[?modifier@GEH_resistance_strength_gourmet_research_society]§!"
+ gem_club_problem_decision_lvO_GRS: "§O[?modifier@GEH_resistance_strength_gourmet_research_society]§!"
+ gem_club_problem_decision_lvY_GRS: "§Y[?modifier@GEH_resistance_strength_gourmet_research_society]§!"
+ gem_club_problem_decision_lvG_GRS: "§G[?modifier@GEH_resistance_strength_gourmet_research_society]§!"
+
+ gem_club_problem_decision_lvR_HSD: "§R[?modifier@GEH_resistance_strength_hot_spring_department]§!"
+ gem_club_problem_decision_lvO_HSD: "§O[?modifier@GEH_resistance_strength_hot_spring_department]§!"
+ gem_club_problem_decision_lvY_HSD: "§Y[?modifier@GEH_resistance_strength_hot_spring_department]§!"
+ gem_club_problem_decision_lvG_HSD: "§G[?modifier@GEH_resistance_strength_hot_spring_department]§!"
 
  GEM_hot_spring_department_dynamic: "£decision_icon_small 온천개발부"
  GEM_gourmet_research_society_dynamic: "£decision_icon_small 미식연구회"
