@@ -961,6 +961,7 @@ country_event = {
 	fire_only_once = no
 	is_triggered_only = yes
 	hidden = no
+	picture = GFX_report_event_DEN_resistance
 	option = {
 		FRA_local_resistance_bad = yes
 		add_popularity = {
@@ -1019,17 +1020,25 @@ country_event = {
 	picture = GFX_report_event_generic_rally
 	option = {
 		name = FRA_prov_event.6.a
+		FRA_leon_blum = {
+			custom_effect_tooltip = FRA_custody
+			set_character_flag = FRA_custody
+		}
+		FRA_jacques_duclos = {
+			custom_effect_tooltip = FRA_custody
+			set_character_flag = FRA_custody
+		}
 		FRA_vincent_auriol = {
 			custom_effect_tooltip = FRA_custody
-			set_country_flag = FRA_custody
+			set_character_flag = FRA_custody
 		}
 		FRA_roger_salengro = {
 			custom_effect_tooltip = FRA_custody
-			set_country_flag = FRA_custody
+			set_character_flag = FRA_custody
 		}
 		FRA_felix_gouin = {
 			custom_effect_tooltip = FRA_custody
-			set_country_flag = FRA_custody
+			set_character_flag = FRA_custody
 		}
 		set_party_name = {
 			ideology = democratic
@@ -2619,7 +2628,7 @@ news_event = {
 }
 
 country_event = {
-	#안 씀
+	#파시즘 운동의 여명
 	id = FRA_prov_event.47
 	title = FRA_prov_event.47.t
 	desc = FRA_prov_event.47.d
@@ -5256,12 +5265,13 @@ country_event = {
 }
 
 country_event = {
-	#니스 주자
+	#스트레사 전선
 	id = FRA_prov_event.126
 	title = FRA_prov_event.126.t
 	desc = FRA_prov_event.126.d
 	fire_only_once = yes
 	is_triggered_only = yes
+	picture = GFX_report_event_gre_allied_diplomacy_military
 	option = {
 		name = FRA_prov_event.126.a
 		add_war_support = -0.1
