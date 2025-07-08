@@ -827,3 +827,20 @@ ENG_Africa_autonomy = {
 	compliance_growth_on_our_occupied_states = 0.05
 	required_garrison_factor = -0.5
 }
+FRA_Viet_Nam_Colony = {
+	icon = GFX_modifiers_FRA_Viet_Nam_Colony
+	enable = {
+		is_controlled_by = FRA
+	}
+	remove_trigger = {
+		NOT = {
+			is_owned_by = FRA
+			owner = { has_war_with = FRA }
+		}
+	}
+	state_resources_factor = -0.5
+	local_factories = -0.5
+
+	recruitable_population_factor = -1
+	resistance_growth = -0.50
+}

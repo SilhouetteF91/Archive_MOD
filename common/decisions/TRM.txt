@@ -7393,7 +7393,7 @@ TRN_Mika_honor_decision_cat = {
 		}
 	}
 }
-TRN_economic_decisions_category = {
+TRN_economic_evelopment_department = {
 	TRN_Industrial_Regions= {
 		icon = GFX_decision_generic_merge_plant_materiel
 
@@ -7437,6 +7437,13 @@ TRN_economic_decisions_category = {
 			}
 		}
 
+		visible = {
+			FROM = { 
+				is_owned_and_controlled_by = ROOT 
+				infrastructure < 5
+			}
+		}
+
 		cost = 35
 		days_remove = 49
 		fire_only_once = yes
@@ -7469,6 +7476,8 @@ TRN_economic_decisions_category = {
 			}
 		}
 	}
+}
+TRN_economic_plan_cat = {
 	TRN_Opelwerk_Brandenburg = {
 		icon = GFX_decision_generic_motorized
 
@@ -7921,6 +7930,7 @@ TRN_economic_decisions_category = {
 			}
 		}
 	}
+
 }
 TRN_trinity_world_cat = {
 	TRN_lend_our_support = {

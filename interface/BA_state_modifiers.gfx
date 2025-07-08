@@ -59,4 +59,10 @@ spriteTypes = {
 	   name = "GFX_modifiers_GEK_spirit_of_capitalism"
 	   textureFile = "gfx/interface/state_modifiers/modifiers_GEK_spirit_of_capitalism.tga"
 	}
+	
+	
+	spriteType = { 
+	   name = "GFX_modifiers_FRA_Viet_Nam_Colony"
+	   textureFile = "gfx/interface/state_modifiers/modifiers_FRA_Viet_Nam_Colony.tga"
+	}
 }

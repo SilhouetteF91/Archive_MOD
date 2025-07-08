@@ -4,6 +4,8 @@ oob = "VIN_1936"
 
 set_research_slots = 3
 
+set_cosmetic_tag = VIN_french
+
 # Starting tech
 # clone of France
 set_technology = {
