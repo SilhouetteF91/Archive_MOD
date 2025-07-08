@@ -19,8 +19,6 @@
  GEM_second_class_citizenship_tt:0 "§Y$GEM_pandemonium_modifier$§! 변동치\n징병 가능 인구: §Y+1.00%§!\n\n"
  GEH_hot_spring_cooperation_GEM:0 "§Y$GEM_pandemonium_modifier$§! 변동치\n소비재 공장: §Y-2.0%§!\n주 내 최대 공장 수: §G+10%§!\n건설 속도: §G+5.00%§!\n\n"
  GEH_representation_GEM:0 "§Y$GEM_pandemonium_modifier$§! 변동치\n동원 속도: §G+5.00%§!\n최소 항복 한계치: §G+5.00%§!\n방어전쟁 불이익의 안정도 변동치: §G+25.00%§!\n\n"
- GEM_policing_tt:0 "§Y온천개발부§!와 §Y미식연구회§!가 학원에서 §Y위협 세력§!으로 활동중임."
- GEM_policing_tt_NOT:0 "해당하지 않음: §Y온천개발부§!와 §Y미식연구회§!가 학원에서 §Y위협 세력§!으로 활동중임."
  GEH_gastronomy_research_group_arrested_tt:0 "국민정신 없이도 §Y미식연구회§!의 활동이 보장됨"
  GEH_hot_spring_cooperation_tt:0 "국민정신 없이도 §Y온천개발부§!의 활동이 보장됨"
 #
@@ -584,8 +582,10 @@
  GEM_german_officer_corps_tt:0 "§Y독일 국방군§!의 장교진을 일부 흡수합니다."
  GEM_autobahn_tt:0 "§Y하노버§!, §Y헤센§!에 최대 등급의 §Y기반시설§! 추가.\n\n"
  GEH_german_company_tt:0 "\n§Y독일의 군수산업체§!를 사용할 수 있습니다."
- has_hot_spring_department_tt:0 "§Y온천개발부§!가 학원에서 문제 없이 활동중"
- has_gourmet_research_society_tt:0 "§Y미식연구회§!가 학원에서 문제 없이 활동중"
+ has_hot_spring_department_tt:0 "§Y온천개발부§!가 학원에서 문제 없이 활동중임"
+ has_gourmet_research_society_tt:0 "§Y미식연구회§!가 학원에서 문제 없이 활동중임"
+ has_hot_spring_department_tt_NOT:0 "§Y온천개발부§!가 학원에서 활동중이지 않음"
+ has_gourmet_research_society_tt_NOT:0 "§Y미식연구회§!가 학원에서 활동중이지 않음"
  GEH_hina_hotspringdepartment_tt: "§Y소라사키 히나§!가 §Y온천개발부§!에게 §Y타협점을 제공§!할 것입니다.\n§Y결과§!가 나오기까지 시간이 걸립니다."
  GEH_School_Lunch_Club_tt: "§Y급양부§! 인원들이 장군이 됩니다.\n§Y아이키요 후우카§!(이)가 정치고문이 됩니다. "
  GEH_subjugation_tt:0 "§R즉시 국방군이 전쟁에 돌입할 것입니다.§!"
@@ -924,7 +924,13 @@
 
  gem_club_problem_decision_select_1_cp: "§Y협력§!\n\n동아리 저항: §R+1§!\n환심 획득: §G+50%§!\n안정도: §G+5.00%§!"
  gem_club_problem_decision_select_2_cp: "§Y감시§!\n\n안정도: §G+2.00%§!"
- gem_club_problem_decision_select_3_cp: "§Y협력§!\n\n동아리 저항: §G-1§!\n환심 획득: §R-50%§!\n안정도: §R-5.00%§!"
+ gem_club_problem_decision_select_3_cp: "§Y탄압§!\n\n동아리 저항: §G-1§!\n환심 획득: §R-50%§!\n안정도: §R-5.00%§!"
+
+ gem_club_problem_decision_GEH_GRS_tt: "현재 저항 단계: [gem_club_problem_decision_gourmet_research_society_lv_loc]\n\n기본 저항 단계: [?GEH_HSD_var_GEH_resistance_strength_gourmet_research_society|Y]"
+ gem_club_problem_decision_GEH_HSD_tt: "현재 저항 단계: [gem_club_problem_decision_hot_spring_department_lv_loc]\n\n기본 저항 단계: [?GEH_HSD_var_GEH_resistance_strength_hot_spring_department|Y.0]"
+
+ GEH_resistance_strength_hot_spring_department_var_tt: "기본 $GEH_resistance_strength_hot_spring_department$: $RIGHT|-=.0$"
+ GEH_resistance_strength_gourmet_research_society_var_tt: "기본 $GEH_resistance_strength_gourmet_research_society$: $RIGHT|-=.0$"
 
  gem_club_problem_decision_trigger_text: "접근 방식 변경에 £pol_power §Y50§! 소모"
  gem_club_problem_decision_trigger_text_blocked: "접근 방식 변경에 £pol_power §R50§! 소모"

@@ -39,6 +39,7 @@ guiTypes = {
 					font = "hoi_16mbs"
 					text = "gem_club_problem_decision_lv_text"
 					format = center
+					pdx_tooltip = gem_club_problem_decision_GEH_GRS_tt
 				}
 				instantTextBoxType = {
 					name ="gem_club_problem_decision_gourmet_research_society_lv"
@@ -47,6 +48,7 @@ guiTypes = {
 					font = "hoi_30header"
 					text = "gem_club_problem_decision_gourmet_research_society_lv"
 					format = center
+					pdx_tooltip = gem_club_problem_decision_GEH_GRS_tt
 				}
 
 				buttonType = {
@@ -216,6 +218,7 @@ guiTypes = {
 					font = "hoi_16mbs"
 					text = "gem_club_problem_decision_lv_text"
 					format = center
+					pdx_tooltip = gem_club_problem_decision_GEH_HSD_tt
 				}
 				instantTextBoxType = {
 					name ="gem_club_problem_decision_hot_spring_department_lv"
@@ -224,6 +227,7 @@ guiTypes = {
 					font = "hoi_30header"
 					text = "gem_club_problem_decision_hot_spring_department_lv"
 					format = center
+					pdx_tooltip = gem_club_problem_decision_GEH_HSD_tt
 				}
 
 				buttonType = {

@@ -1292,7 +1292,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEH_hyungzipa_ak
 		completion_reward = {
-			GEH_gourmet_research_society_down_effect = yes
+			add_to_variable = {
+				GEH_HSD_var_GEH_resistance_strength_gourmet_research_society = -1
+				tooltip = GEH_resistance_strength_gourmet_research_society_var_tt
+			}
+			GEM_club_problem_decision_modifier_reload = yes
 		}
 	}
 	focus = {
@@ -1317,7 +1321,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEH_hyungzipa_ak
 		completion_reward = {
-			GEH_hot_spring_department_down_effect = yes
+			add_to_variable = {
+				GEH_HSD_var_GEH_resistance_strength_hot_spring_department = -1
+				tooltip = GEH_resistance_strength_hot_spring_department_var_tt
+			}
+			GEM_club_problem_decision_modifier_reload = yes
 		}
 	}
 	focus = {
@@ -1353,9 +1361,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_food_supply_network
 		completion_reward = {
-			GEH_gourmet_research_society_down_effect = yes
-			custom_effect_tooltip = GEM_upscale_strategy_tt
-			add_to_variable = { GEH_gourmet_research_society_up_days = 60 }
+			add_to_variable = {
+				GEH_HSD_var_GEH_resistance_strength_gourmet_research_society = 1
+				tooltip = GEH_resistance_strength_gourmet_research_society_var_tt
+			}
+			GEM_club_problem_decision_modifier_reload = yes
 		}
 	}
 	focus = {
@@ -1380,7 +1390,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_digging_new_hot_springs
 		completion_reward = {
-			GEH_hot_spring_department_down_effect = yes
+			add_to_variable = {
+				GEH_HSD_var_GEH_resistance_strength_hot_spring_department = -1
+				tooltip = GEH_resistance_strength_hot_spring_department_var_tt
+			}
+			GEM_club_problem_decision_modifier_reload = yes
 		}
 	}
 	focus = {
@@ -1405,9 +1419,6 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_war_support = 0.05
-			custom_effect_tooltip = GEM_club_of_gehenna_tt
-			add_to_variable = { GEH_gourmet_research_society_up_days = 60 }
-			add_to_variable = { GEH_hot_spring_department_up_days = 60 }
 		}
 	}
 	focus = {
@@ -2002,35 +2013,13 @@ focus_tree = {
 			focus = GEM_suppression_of_german
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = GEM_policing_tt
-				OR = {
-					has_idea = GEH_hot_spring_department_1
-					has_idea = GEH_hot_spring_department_2
-					has_idea = GEH_hot_spring_department_3
-					has_idea = GEH_hot_spring_department_4
-					has_idea = GEH_gourmet_research_society_1
-					has_idea = GEH_gourmet_research_society_2
-					has_idea = GEH_gourmet_research_society_3
-					has_idea = GEH_gourmet_research_society_4
-				}
-			}
+			has_hot_spring_department = yes
+			has_gourmet_research_society = yes
 		}
 		bypass = {
 			NOT = {
-				custom_trigger_tooltip = {
-					tooltip = GEM_policing_tt
-					OR = {
-						has_idea = GEH_hot_spring_department_1
-						has_idea = GEH_hot_spring_department_2
-						has_idea = GEH_hot_spring_department_3
-						has_idea = GEH_hot_spring_department_4
-						has_idea = GEH_gourmet_research_society_1
-						has_idea = GEH_gourmet_research_society_2
-						has_idea = GEH_gourmet_research_society_3
-						has_idea = GEH_gourmet_research_society_4
-					}
-				}
+				has_hot_spring_department = yes
+				has_gourmet_research_society = yes
 			}
 		}
 		bypass_effect = {
@@ -2045,11 +2034,6 @@ focus_tree = {
 		relative_position_id = GEM_suppression_of_german
 		completion_reward = {
 			GEH_Manmajun_Bupae_down_effect = yes
-			GEH_gourmet_research_society_down_effect = yes
-			GEH_hot_spring_department_down_effect = yes
-			custom_effect_tooltip = GEM_club_of_gehenna_tt
-			add_to_variable = { GEH_gourmet_research_society_up_days = 60 }
-			add_to_variable = { GEH_hot_spring_department_up_days = 60 }
 		}
 	}
 	focus = {

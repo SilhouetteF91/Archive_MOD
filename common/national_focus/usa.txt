@@ -7222,8 +7222,17 @@ focus = {
 			}
 		}
 		completion_reward = {
-			GEM = { GEH_hot_spring_department_down_effect = yes}
-			GEM = { GEH_gourmet_research_society_down_effect = yes}
+			GEM = {
+				add_to_variable = {
+					GEH_HSD_var_GEH_resistance_strength_hot_spring_department = -1
+					tooltip = GEH_resistance_strength_hot_spring_department_var_tt
+				}
+				add_to_variable = {
+					GEH_HSD_var_GEH_resistance_strength_gourmet_research_society = -1
+					tooltip = GEH_resistance_strength_gourmet_research_society_var_tt
+				}
+				GEM_club_problem_decision_modifier_reload = yes
+			}
 			add_ideas = usa_make_GEM_club_lobby
 			
 	}

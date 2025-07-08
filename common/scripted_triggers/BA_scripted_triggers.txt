@@ -88,6 +88,14 @@ Kivotos_school_tag = {
 		}
 	}
 }
+is_can_germay_country_tag_allowed = {
+	OR = {
+		original_tag = GEK
+		original_tag = GEA
+		original_tag = NSD
+		original_tag = KPD
+	}
+}
 is_can_germay_country_tag = {
 	custom_trigger_tooltip = {
 		tooltip = is_can_germay_country_tag_tt

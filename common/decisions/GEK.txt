@@ -2735,7 +2735,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_Gehenna_Emblem
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -2763,7 +2763,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -2797,7 +2797,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -2831,7 +2831,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_Gehenna_Emblem
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -2859,7 +2859,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -2894,7 +2894,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -2929,7 +2929,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -2964,7 +2964,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_Gehenna_Emblem
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -2992,7 +2992,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3027,7 +3027,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3062,7 +3062,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3097,7 +3097,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_Trinity_Emblem
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3125,7 +3125,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3160,7 +3160,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3195,7 +3195,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3230,7 +3230,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_Trinity_Emblem
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3258,7 +3258,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3293,7 +3293,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3328,7 +3328,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3363,7 +3363,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_Trinity_Emblem
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3391,7 +3391,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {
@@ -3425,7 +3425,7 @@ GEAF_student_collaborator_category = {
 		icon = GFX_decision_generic_army_support
 
 		allowed = {
-			is_can_germay_country_tag = yes
+			is_can_germay_country_tag_allowed = yes
 		}
 
 		available = {

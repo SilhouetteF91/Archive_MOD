@@ -707,10 +707,6 @@ GEH_hot_spring_department_down_effect = {
 		}
 	}
 	else = {
-		add_days_mission_timeout = {
-			mission = GEH_hot_spring_department_up
-			days = 30
-		}
 	}
 	GEM_club_problem_decision_modifier_reload = yes
 }
@@ -738,10 +734,6 @@ GEH_gourmet_research_society_down_effect = {
 		}
 	}
 	else = {
-		add_days_mission_timeout = {
-			mission = GEH_gourmet_research_society_up
-			days = 30
-		}
 	}
 	GEM_club_problem_decision_modifier_reload = yes
 }
