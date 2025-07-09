@@ -90,20 +90,6 @@ characters={
 			traits = {FRA_conservatist }
 		}
 	}
-	FRA_Africa_resistance = {
-		name = FRA_Africa_resistance
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/FRA/AFRICA_Resistance.png"
-			}
-		}
-		country_leader={
-			ideology=fascism_ideology
-			traits={  }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
 
 	FRA_edouard_daladier={
 		name=FRA_edouard_daladier
@@ -157,6 +143,9 @@ characters={
 				}
 				FRA_maurice_thorez = {
 					is_country_leader = no
+				}
+				NOT = {
+					has_character_flag = FRA_custody
 				}
 			}
 			traits  = {
@@ -1184,6 +1173,9 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
+				NOT = {
+					has_character_flag = FRA_custody
+				}
 				democratic > 0.05
 				FRA_leon_blum = {
 					is_country_leader = no
@@ -1419,6 +1411,11 @@ characters={
 			idea_token = FRA_jacques_duclos
 			allowed  = {
 				original_tag  = FRA
+			}
+			available = {
+				NOT = {
+					has_character_flag = FRA_custody
+				}
 			}
 			traits  = {
 				backroom_backstabber 
