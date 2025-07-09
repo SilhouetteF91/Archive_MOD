@@ -2604,6 +2604,32 @@ country_event = { # 자정이 온다
 	}
 }
 
+country_event = { # 교전
+	id = GEI_DEC_event.29
+	title = GEI_DEC_event.29.t
+	desc = GEI_DEC_event.29.desc
+	picture = GFX_report_event_picture_road
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.29.a
+	}
+}
+
+country_event = { # 교전
+	id = GEI_DEC_event.30
+	title = GEI_DEC_event.30.t
+	desc = GEI_DEC_event.30.desc
+	picture = GFX_report_event_picture_road
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.30.a
+	}
+}
+
 
 
 

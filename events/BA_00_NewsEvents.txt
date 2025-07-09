@@ -5675,6 +5675,38 @@ news_event = { # 아이슬랜드의 은빛 사신
     }
 }
 
+news_event = { # 브리타뉴 평화작전
+    id = BA_news.149
+    title = BA_news.149.t
+    desc = BA_news.149.desc
+    picture = GFX_event_GEI_military_operation
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.149.a # 평화를 위하여
+		trigger = {
+			tag = GEI
+        }
+    }
+
+    option = {
+        name = BA_news.149.b # 우려스럽군
+		trigger = {
+			NOT = { tag = GEI }
+			Kivotos_tag = yes
+		}
+    }
+
+	option = {
+        name = BA_news.149.b # 무정부지대 삭제 
+		trigger = {
+			Kivotos_tag = not
+        }
+    }
+}
+
 
 
 

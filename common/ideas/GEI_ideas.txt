@@ -1802,9 +1802,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-            army_defence_factor = -0.2
-            army_attack_factor = -0.3
-			max_planning = -0.3
+            army_defence_factor = -0.1
+            army_attack_factor = -0.1
+			max_planning = -0.2
         }
        }
 	}

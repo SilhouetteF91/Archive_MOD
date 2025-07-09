@@ -318,6 +318,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_GEI_newtype.png"
 	}
 
+	spriteType = { 
+		name = "GFX_event_GEI_military_operation"
+		texturefile = "gfx/event_pictures/news_event_GEI_military_operation.png"
+	}
+
 
   #
 

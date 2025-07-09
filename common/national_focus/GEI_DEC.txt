@@ -1021,7 +1021,17 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			news_event = { id = BA_news.147 hours = 3}
+
+			declare_war_on = {
+				target = BLM
+				type = annex_everything
+			}
+
+			news_event = { id = BA_news.147 days = 14}
+			news_event = { id = BA_news.149}
+		}
+
+		bypass = {
 		}
 	}
 
@@ -1300,7 +1310,7 @@ focus_tree = {
 					owner = GEI
 				}
 				create_unit = {
-					ddivision = "name = \"2. 인간 의용군단\" division_template = \"CRUSADE\" start_experience_factor = 0.6 start_equipment_factor = 0.6"  
+					division = "name = \"2. 인간 의용군단\" division_template = \"CRUSADE\" start_experience_factor = 0.6 start_equipment_factor = 0.6"  
 					owner = GEI
 				}
 				create_unit = {
@@ -1371,6 +1381,7 @@ focus_tree = {
 						FOCUS_FILTER_ANNEXATION		
 		}
 		completion_reward = {
+
 		}
 	}
 
@@ -1427,6 +1438,13 @@ focus_tree = {
 			DE1 = {
 				add_ideas = { GEI_DEC_help_to_me }
 			}
+			country_event = {id = GEI_DEC_event.29}
+			country_event = {id = GEI_DEC_event.30 days = 3}
+
+			MIL = {
+				country_event = {id = GEI_DEC_event.29}
+				country_event = {id = GEI_DEC_event.30 days = 3}
+			}
 		}
 	}
 
@@ -1472,7 +1490,7 @@ focus_tree = {
 		
 
 		available = {
-			
+			SHE = { exists = no }
 		}
 		search_filters = {
 			
