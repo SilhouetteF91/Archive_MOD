@@ -6053,7 +6053,7 @@ focus_tree = {
 		}
 		
 		offset = {
-			x = 7
+			x = 5
 			trigger = {
 				is_debug = yes
 			}
@@ -6119,13 +6119,15 @@ focus_tree = {
 		}
 	}
 
+	### 히나 (학생 인민의 의지)
+
     focus = {
 		id = GEH_hina_ishbosheth
 		icon = GFX_focus_BEL_government_resigns
 		cost = 3
 
 		relative_position_id = GEH_last_focus_effect_h_rout
-		x = 4
+		x = 6
 		y = 1
 
 		available = {
@@ -6156,12 +6158,359 @@ focus_tree = {
 		}
 	}
 
+    focus = {
+		id = GEH_hina_jacobinisme_reform
+		icon = GFX_focus_PER_march_on_saadabad
+		cost = 5
+
+		relative_position_id = GEH_hina_ishbosheth
+		x = -2
+		y = 1
+
+        prerequisite = {
+            focus = GEH_hina_ishbosheth
+        }
+
+		mutually_exclusive = {
+			focus = GEH_hina_state_capitalism
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_national_syndicalism
+		icon = GFX_focus_GER_anschluss
+		cost = 5
+
+		relative_position_id = GEH_hina_ishbosheth
+		x = -3
+		y = 2
+
+        prerequisite = {
+            focus = GEH_hina_jacobinisme_reform
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_state_capitalism
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia
+		cost = 5
+
+		relative_position_id = GEH_hina_ishbosheth
+		x = 2
+		y = 1
+
+        prerequisite = {
+            focus = GEH_hina_ishbosheth
+        }
+
+		mutually_exclusive = {
+			focus = GEH_hina_jacobinisme_reform
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_patriotic_entrepreneur
+		icon = GFX_focus_generic_price_controls
+		cost = 5
+
+		relative_position_id = GEH_hina_ishbosheth
+		x = 3
+		y = 2
+
+        prerequisite = {
+            focus = GEH_hina_state_capitalism
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_new_constitution
+		icon = GFX_focus_generic_court
+		cost = 5
+
+		relative_position_id = GEH_hina_ishbosheth
+		x = 0
+		y = 2
+
+        prerequisite = {
+            focus = GEH_hina_ishbosheth
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_a_ending_4
+		icon = GFX_focus_AUS_ban_dnsap
+		cost = 5
+
+		relative_position_id = GEH_hina_new_constitution
+		x = -2
+		y = 1
+
+        prerequisite = {
+            focus = GEH_hina_new_constitution
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_youth_gehenna_party
+		icon = GFX_goal_HEU_gehenna
+		cost = 5
+
+		relative_position_id = GEH_hina_new_constitution
+		x = 0
+		y = 1
+
+        prerequisite = {
+            focus = GEH_hina_new_constitution
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_a_ending_6
+		icon = GFX_focus_AUS_ban_dnsap
+		cost = 5
+
+		relative_position_id = GEH_hina_new_constitution
+		x = 2
+		y = 1
+
+        prerequisite = {
+            focus = GEH_hina_new_constitution
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_a_ending_7
+		icon = GFX_focus_AUS_ban_dnsap
+		cost = 4
+
+		relative_position_id = GEH_hina_new_constitution
+		x = -1
+		y = 2
+
+        prerequisite = {
+            focus = GEH_hina_a_ending_4
+        }
+
+        prerequisite = {
+            focus = GEH_hina_youth_gehenna_party
+        }
+
+        prerequisite = {
+            focus = GEH_hina_a_ending_6
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_a_ending_8
+		icon = GFX_focus_AUS_ban_dnsap
+		cost = 4
+
+		relative_position_id = GEH_hina_new_constitution
+		x = 1
+		y = 2
+
+        prerequisite = {
+            focus = GEH_hina_a_ending_4
+        }
+
+        prerequisite = {
+            focus = GEH_hina_youth_gehenna_party
+        }
+
+        prerequisite = {
+            focus = GEH_hina_a_ending_6
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_ishbosheth_route_ending
+		icon = GFX_focus_TRN_cause_of_trinity
+		cost = 5
+
+		relative_position_id = GEH_hina_new_constitution
+		x = 0
+		y = 3
+
+        prerequisite = {
+            focus = GEH_hina_a_ending_7
+        }
+
+        prerequisite = {
+            focus = GEH_hina_a_ending_8
+        }
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
 	### 히나 공용 ###
 
     focus = {
 		id = GEH_hina_panopticon_institution
 		icon = GFX_focus_AUS_ban_dnsap
-		cost = 3
+		cost = 4
 
 		relative_position_id = GEH_last_focus_effect_h_rout
 		x = 0
@@ -6169,7 +6518,6 @@ focus_tree = {
 
         prerequisite = {
             focus = GEH_hina_we_must_dissent
-            focus = GEH_hina_ishbosheth
         }
 
 		ai_will_do = {
@@ -6191,7 +6539,7 @@ focus_tree = {
     focus = {
 		id = GEH_hina_national_delusion
 		icon = GFX_focus_AFG_adopt_nufus
-		cost = 3
+		cost = 5
 
 		relative_position_id = GEH_hina_panopticon_institution
 		x = -1
@@ -6224,7 +6572,7 @@ focus_tree = {
     focus = {
 		id = GEH_hina_cult_of_leader
 		icon = GFX_focus_RAJ_a_private_military
-		cost = 3
+		cost = 5
 
 		relative_position_id = GEH_hina_national_delusion
 		x = -1
@@ -6253,7 +6601,7 @@ focus_tree = {
     focus = {
 		id = GEH_hina_extermination_german
 		icon = GFX_focus_GER_the_four_year_plan
-		cost = 3
+		cost = 5
 
 		relative_position_id = GEH_hina_national_delusion
 		x = 0
@@ -6282,7 +6630,7 @@ focus_tree = {
     focus = {
 		id = GEH_hina_two_class_society
 		icon = GFX_focus_AUS_disregard_the_treaties
-		cost = 3
+		cost = 5
 
 		relative_position_id = GEH_hina_panopticon_institution
 		x = 1
@@ -6315,7 +6663,7 @@ focus_tree = {
     focus = {
 		id = GEH_hina_nationalist_education
 		icon = GFX_focus_generic_university_1
-		cost = 3
+		cost = 5
 
 		relative_position_id = GEH_hina_two_class_society
 		x = 1
@@ -6344,7 +6692,7 @@ focus_tree = {
     focus = {
 		id = GEH_hina_planned_backwardness
 		icon = GFX_focus_generic_agricultural_subsidies
-		cost = 3
+		cost = 5
 
 		relative_position_id = GEH_hina_two_class_society
 		x = 0
@@ -6373,7 +6721,7 @@ focus_tree = {
     focus = {
 		id = GEH_hina_eradication_of_decadent_individualism
 		icon = GFX_focus_BRA_anaue
-		cost = 3
+		cost = 5
 
 		relative_position_id = GEH_hina_panopticon_institution
 		x = 0
@@ -6402,8 +6750,8 @@ focus_tree = {
 
     focus = {
 		id = GEH_hina_one_for_all
-		icon = GFX_focus_GER_anschluss
-		cost = 3
+		icon = GFX_focus_PER_communist_afghanistan_intervention 
+		cost = 4
 
 		relative_position_id = GEH_hina_panopticon_institution
 		x = 0
