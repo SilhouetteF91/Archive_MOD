@@ -3295,7 +3295,7 @@ GEH_ako_democratic_system_category = {
 			}
 			add_to_variable = {
 				GEH_gehenna_council_idea_fascism_acceptance = -25
-				#tooltip = fascism_acceptance_tt
+				tooltip = fascism_acceptance_tt
 			}
 
 		}	
@@ -3756,7 +3756,7 @@ GEH_hina_corruption_category = {
 			}
 			add_to_variable = {
 				GEH_gehenna_order_department_idea_fascism_acceptance = 25
-				#tooltip = fascism_acceptance_tt
+				tooltip = fascism_acceptance_tt
 			}
 			
 			custom_effect_tooltip = enter_tt
@@ -4056,6 +4056,254 @@ GEH_hina_corruption_category = {
 					country_event = { id = GEH.hina.gov_event.2 }
 				}
 			} 
+		}	
+	}
+
+	GEH_hina_corruption_law_civil_surveillance_act = {
+		icon = GFX_decision_SWI_consolidate_council_power
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_hina_corruption_law_available_pro_baal_tt
+				check_variable = { GEH_hina_corruption_var > 3 }
+			}
+		}
+
+		visible = {
+			check_variable = { hina_thought_cabinet_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		cost = 75
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_order_department_idea_tt
+			add_to_variable = {
+				GEH_gehenna_council_idea_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_order_department_idea_industry_repair_factor = -0.05
+				tooltip = industry_repair_factor_tt
+			}
+
+		}	
+	}
+
+	GEH_hina_corruption_law_violence_act = {
+		icon = GFX_decision_generic_arrest
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_hina_corruption_law_available_pro_baal_tt
+				check_variable = { GEH_hina_corruption_var > 3 }
+			}
+		}
+
+		visible = {
+			check_variable = { hina_thought_cabinet_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		cost = 75
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_order_department_idea_tt
+			add_to_variable = {
+				GEH_gehenna_order_department_idea_factory_max_efficiency_factor = 0.1
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_order_department_idea_consumer_goods_factor = 0.1
+				tooltip = consumer_goods_factor_tt
+			}
+
+		}	
+	}
+
+	GEH_hina_corruption_law_special_religious_tax = {
+		icon = GFX_decision_generic_political_rally
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_hina_corruption_law_available_pro_baal_tt
+				check_variable = { GEH_hina_corruption_var > 3 }
+			}
+		}
+
+		visible = {
+			check_variable = { hina_thought_cabinet_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 75
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_order_department_idea_tt
+			add_to_variable = {
+				GEH_gehenna_order_department_idea_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_order_department_idea_political_power_factor = -0.05
+				tooltip = political_power_factor_tt
+			}
+
+		}	
+	}
+
+	GEH_hina_corruption_law_no_zealot_law = {
+		icon = GFX_decision_eng_install_government
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_hina_corruption_law_available_pro_hina_tt
+				check_variable = { GEH_hina_corruption_var < 3 }
+			}
+		}
+
+		visible = {
+			check_variable = { hina_thought_cabinet_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		cost = 75
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_order_department_idea_tt
+			add_to_variable = {
+				GEH_gehenna_order_department_idea_land_reinforce_rate = 0.03
+				tooltip = land_reinforce_rate_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_order_department_idea_max_dig_in = 1
+				tooltip = max_dig_in_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_order_department_idea_political_power_factor = -0.07
+				tooltip = political_power_factor_tt
+			}
+
+		}	
+	}
+
+	GEH_hina_corruption_law_sophisticated_judicial_system = {
+		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_hina_corruption_law_available_pro_hina_tt
+				check_variable = { GEH_hina_corruption_var < 3 }
+			}
+		}
+
+		visible = {
+			check_variable = { hina_thought_cabinet_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		cost = 75
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_order_department_idea_tt
+			add_to_variable = {
+				GEH_gehenna_order_department_idea_production_lack_of_resource_penalty_factor = -0.03
+				tooltip = production_lack_of_resource_penalty_factor_tt
+			}
+			add_to_variable = {
+				GEH_gehenna_order_department_idea_conscription_factor = -0.05
+				tooltip = conscription_factor_tt
+			}
+		}	
+	}
+
+	GEH_hina_corruption_law_esperanto = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_hina_corruption_law_available_pro_hina_tt
+				check_variable = { GEH_hina_corruption_var < 3 }
+			}
+		}
+
+		visible = {
+			check_variable = { hina_thought_cabinet_point > 2 }
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		cost = 75
+
+		complete_effect = {
+
+			custom_effect_tooltip = GEH_gehenna_order_department_idea_tt
+			add_to_variable = {
+				GEH_gehenna_order_department_idea_non_core_manpower = 0.02
+				tooltip = non_core_manpower_tt
+			}
+
+			add_to_variable = {
+				GEH_gehenna_order_department_idea_consumer_goods_factor = 0.1
+				tooltip = consumer_goods_factor_tt
+			}
 		}	
 	}
 

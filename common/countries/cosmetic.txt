@@ -2153,6 +2153,10 @@ CAM_french = {
 	color = rgb { 0 18 127  }
 	color_ui = rgb { 0 18 127 }
 }
+VIN_french = {
+	color = rgb { 0 18 127  }
+	color_ui = rgb { 0 18 127 }
+}
 POL_intermarium = {
 	color = rgb { 212  33  61 }
 	color_ui = rgb { 212  33  61 }

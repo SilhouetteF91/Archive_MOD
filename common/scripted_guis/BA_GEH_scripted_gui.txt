@@ -17,10 +17,198 @@ scripted_gui = {
 		
 		properties = {
 			gem_club_problem_decision_gourmet_research_society_icon = {
-				frame = gui_GEH_resistance_strength_gourmet_research_society
+				frame = modifier@GEH_resistance_strength_gourmet_research_society
 			}
 			gem_club_problem_decision_hot_spring_department_icon = {
-				frame = gui_GEH_resistance_strength_hot_spring_department
+				frame = modifier@GEH_resistance_strength_hot_spring_department
+			}
+			gem_club_problem_gourmet_research_society_progress_bar_GEM_side = {
+				frame = global.gourmet_research_society_progress_bar_GEM_side_var
+			}
+			gem_club_problem_gourmet_research_society_progress_bar_GEH_side = {
+				frame = global.gourmet_research_society_progress_bar_GEH_side_var
+			}
+			gem_club_problem_hot_spring_department_progress_bar_GEM_side = {
+				frame = global.hot_spring_department_progress_bar_GEM_side_var
+			}
+			gem_club_problem_hot_spring_department_progress_bar_GEH_side = {
+				frame = global.hot_spring_department_progress_bar_GEH_side_var
+			}
+		}
+
+		triggers = {
+			# 방식 선택
+			gem_club_problem_decision_gourmet_research_society_select_1_visible = {
+				has_idea = gem_club_problem_decision_gourmet_research_society_idea_1
+			}
+			gem_club_problem_decision_gourmet_research_society_select_2_visible = {
+				has_idea = gem_club_problem_decision_gourmet_research_society_idea_2
+			}
+			gem_club_problem_decision_gourmet_research_society_select_3_visible = {
+				has_idea = gem_club_problem_decision_gourmet_research_society_idea_3
+			}
+			gem_club_problem_decision_hot_spring_department_select_1_visible = {
+				has_idea = gem_club_problem_decision_hot_spring_department_idea_1
+			}
+			gem_club_problem_decision_hot_spring_department_select_2_visible = {
+				has_idea = gem_club_problem_decision_hot_spring_department_idea_2
+			}
+			gem_club_problem_decision_hot_spring_department_select_3_visible = {
+				has_idea = gem_club_problem_decision_hot_spring_department_idea_3
+			}
+
+			# 달성도 포인트
+			## 미식연구회, 만마전
+			gem_club_problem_gourmet_research_society_progress_point_1_GEM_side_cp_visible = {
+				check_variable = {
+					global.gourmet_research_society_progress_bar_GEM_side_var > 30
+				}
+			}
+			gem_club_problem_gourmet_research_society_progress_point_2_GEM_side_cp_visible = {
+				check_variable = {
+					global.gourmet_research_society_progress_bar_GEM_side_var > 50
+				}
+			}
+			gem_club_problem_gourmet_research_society_progress_point_3_GEM_side_cp_visible = {
+				check_variable = {
+					global.gourmet_research_society_progress_bar_GEM_side_var > 90
+				}
+			}
+			## 미식연구회, 선도부
+			gem_club_problem_gourmet_research_society_progress_point_1_GEH_side_cp_visible = {
+				check_variable = {
+					global.gourmet_research_society_progress_bar_GEH_side_var > 30
+				}
+			}
+			gem_club_problem_gourmet_research_society_progress_point_2_GEH_side_cp_visible = {
+				check_variable = {
+					global.gourmet_research_society_progress_bar_GEH_side_var > 50
+				}
+			}
+			gem_club_problem_gourmet_research_society_progress_point_3_GEH_side_cp_visible = {
+				check_variable = {
+					global.gourmet_research_society_progress_bar_GEH_side_var > 90
+				}
+			}
+			## 온천개발부, 만마전
+			gem_club_problem_hot_spring_department_progress_point_1_GEM_side_cp_visible = {
+				check_variable = {
+					global.hot_spring_department_progress_bar_GEM_side_var > 30
+				}
+			}
+			gem_club_problem_hot_spring_department_progress_point_2_GEM_side_cp_visible = {
+				check_variable = {
+					global.hot_spring_department_progress_bar_GEM_side_var > 50
+				}
+			}
+			gem_club_problem_hot_spring_department_progress_point_3_GEM_side_cp_visible = {
+				check_variable = {
+					global.hot_spring_department_progress_bar_GEM_side_var > 90
+				}
+			}
+			## 온천개발부, 선도부
+			gem_club_problem_hot_spring_department_progress_point_1_GEH_side_cp_visible = {
+				check_variable = {
+					global.hot_spring_department_progress_bar_GEH_side_var > 30
+				}
+			}
+			gem_club_problem_hot_spring_department_progress_point_2_GEH_side_cp_visible = {
+				check_variable = {
+					global.hot_spring_department_progress_bar_GEH_side_var > 50
+				}
+			}
+			gem_club_problem_hot_spring_department_progress_point_3_GEH_side_cp_visible = {
+				check_variable = {
+					global.hot_spring_department_progress_bar_GEH_side_var > 90
+				}
+			}
+		}
+		effects = {
+			gem_club_problem_decision_gourmet_research_society_button_1_click = {
+				if = {
+					limit = { has_political_power > 49 }
+					add_political_power = -50
+					
+
+					if = { limit = { has_idea = gem_club_problem_decision_gourmet_research_society_idea_2 }
+						remove_ideas = gem_club_problem_decision_gourmet_research_society_idea_2
+					}
+					if = { limit = { has_idea = gem_club_problem_decision_gourmet_research_society_idea_3 }
+						remove_ideas = gem_club_problem_decision_gourmet_research_society_idea_3
+					}
+					add_ideas = gem_club_problem_decision_gourmet_research_society_idea_1
+					GEM_club_problem_decision_modifier_reload = yes
+				}
+			}
+			gem_club_problem_decision_gourmet_research_society_button_2_click = {
+				if = {
+					limit = { has_political_power > 49 }
+					add_political_power = -50
+					if = { limit = { has_idea = gem_club_problem_decision_gourmet_research_society_idea_1 }
+						remove_ideas = gem_club_problem_decision_gourmet_research_society_idea_1
+					}
+					if = { limit = { has_idea = gem_club_problem_decision_gourmet_research_society_idea_3 }
+						remove_ideas = gem_club_problem_decision_gourmet_research_society_idea_3
+					}
+					add_ideas = gem_club_problem_decision_gourmet_research_society_idea_2
+					GEM_club_problem_decision_modifier_reload = yes
+				}
+			}
+			gem_club_problem_decision_gourmet_research_society_button_3_click = {
+				if = {
+					limit = { has_political_power > 49 }
+					add_political_power = -50
+					if = { limit = { has_idea = gem_club_problem_decision_gourmet_research_society_idea_1 }
+						remove_ideas = gem_club_problem_decision_gourmet_research_society_idea_1
+					}
+					if = { limit = { has_idea = gem_club_problem_decision_gourmet_research_society_idea_2 }
+						remove_ideas = gem_club_problem_decision_gourmet_research_society_idea_2
+					}
+					add_ideas = gem_club_problem_decision_gourmet_research_society_idea_3
+					GEM_club_problem_decision_modifier_reload = yes
+				}
+			}
+			gem_club_problem_decision_hot_spring_department_button_1_click = {
+				if = {
+					limit = { has_political_power > 49 }
+					add_political_power = -50
+					if = { limit = { has_idea = gem_club_problem_decision_hot_spring_department_idea_2 }
+						remove_ideas = gem_club_problem_decision_hot_spring_department_idea_2
+					}
+					if = { limit = { has_idea = gem_club_problem_decision_hot_spring_department_idea_3 }
+						remove_ideas = gem_club_problem_decision_hot_spring_department_idea_3
+					}
+					add_ideas = gem_club_problem_decision_hot_spring_department_idea_1
+					GEM_club_problem_decision_modifier_reload = yes
+				}
+			}
+			gem_club_problem_decision_hot_spring_department_button_2_click = {
+				if = {
+					limit = { has_political_power > 49 }
+					add_political_power = -50
+					if = { limit = { has_idea = gem_club_problem_decision_hot_spring_department_idea_1 }
+						remove_ideas = gem_club_problem_decision_hot_spring_department_idea_1
+					}
+					if = { limit = { has_idea = gem_club_problem_decision_hot_spring_department_idea_3 }
+						remove_ideas = gem_club_problem_decision_hot_spring_department_idea_3
+					}
+					add_ideas = gem_club_problem_decision_hot_spring_department_idea_2
+					GEM_club_problem_decision_modifier_reload = yes
+				}
+			}
+			gem_club_problem_decision_hot_spring_department_button_3_click = {
+				if = {
+					limit = { has_political_power > 49 }
+					add_political_power = -50
+					if = { limit = { has_idea = gem_club_problem_decision_hot_spring_department_idea_1 }
+						remove_ideas = gem_club_problem_decision_hot_spring_department_idea_1
+					}
+					if = { limit = { has_idea = gem_club_problem_decision_hot_spring_department_idea_2 }
+						remove_ideas = gem_club_problem_decision_hot_spring_department_idea_2
+					}
+					add_ideas = gem_club_problem_decision_hot_spring_department_idea_3
+					GEM_club_problem_decision_modifier_reload = yes
+				}
 			}
 		}
 	}

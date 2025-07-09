@@ -7,6 +7,76 @@ ideas = {
 				ai_desired_divisions_factor = 50
 			}
 		}
+        
+		gem_club_problem_decision_gourmet_research_society_idea_1 = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no } 
+
+			cancel = { has_country_flag = club_problem_gourmet_research_society_escape_flag }
+
+			modifier = {
+				stability_factor = 0.05
+				GEH_resistance_strength_gourmet_research_society = 1
+			}
+		}
+        
+		gem_club_problem_decision_gourmet_research_society_idea_2 = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no } 
+
+			cancel = { has_country_flag = club_problem_gourmet_research_society_escape_flag }
+
+			modifier = {
+				stability_factor = 0.02
+			}
+		}
+        
+		gem_club_problem_decision_gourmet_research_society_idea_3 = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no } 
+
+			cancel = { has_country_flag = club_problem_gourmet_research_society_escape_flag }
+
+			modifier = {
+				stability_factor = -0.05
+				GEH_resistance_strength_gourmet_research_society = -1
+			}
+		}
+        
+		gem_club_problem_decision_hot_spring_department_idea_1 = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no } 
+
+			cancel = { has_country_flag = club_problem_hot_spring_department_escape_flag }
+
+			modifier = {
+				stability_factor = 0.05
+				GEH_resistance_strength_hot_spring_department = 1
+			}
+		}
+        
+		gem_club_problem_decision_hot_spring_department_idea_2 = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no } 
+
+			cancel = { has_country_flag = club_problem_hot_spring_department_escape_flag }
+
+			modifier = {
+				stability_factor = 0.02
+			}
+		}
+        
+		gem_club_problem_decision_hot_spring_department_idea_3 = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no } 
+
+			cancel = { has_country_flag = club_problem_hot_spring_department_escape_flag }
+
+			modifier = {
+				stability_factor = -0.05
+				GEH_resistance_strength_hot_spring_department = -1
+			}
+		}
 	}
 	country = {
 		

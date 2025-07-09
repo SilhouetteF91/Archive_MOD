@@ -6860,13 +6860,6 @@ focus_tree = {
 			activate_targeted_decision = { target = 65 decision = TRN_Lehnmuhle_Dam } # 작센
 			activate_targeted_decision = { target = 64 decision = TRN_dessert_shop_expansion } # 브란덴부르크 
 			activate_targeted_decision = { target = 61 decision = TRN_agricultural_support } # 메클렌부르크
-			
-
-			activate_targeted_decision = { target = 65 decision = TRN_Infrastructure_Development } # 작센
-			activate_targeted_decision = { target = 60 decision = TRN_Infrastructure_Development } # 튀링겐
-			activate_targeted_decision = { target = 64 decision = TRN_Infrastructure_Development } # 브란덴부르크
-			activate_targeted_decision = { target = 68 decision = TRN_Infrastructure_Development } # 오스트마르크
-			activate_targeted_decision = { target = 86 decision = TRN_Infrastructure_Development } # 포즈난
 
 			add_stability = 0.03
 			add_tech_bonus = {
@@ -6978,7 +6971,7 @@ focus_tree = {
 		completion_reward = {
 			modify_timed_idea = {
 				idea = BA_railway_gauge_issue
-				days = -1440
+				days = -1085
 			}
 		}
 	}
@@ -7378,7 +7371,7 @@ focus_tree = {
 		}
 	}
 	
-	focus = { # 4제국 선언
+	focus = { # 기사단국 선언
 		id = TRN_Fourth_Reich
 		icon = GFX_goal_TRN_towards_national_revolution
 		prerequisite = { focus = TRN_hiring_german_thinkers }
@@ -7425,6 +7418,9 @@ focus_tree = {
 						is_core_of = NOR # 노르웨이
 						is_core_of = SWE # 스웨덴
 						is_core_of = AUS # 오스트리아
+						is_core_of = LIT # 리투아니아
+						is_core_of = LAT # 라트비아
+						is_core_of = EST # 에스토니아
 					}
 				}
 				add_claim_by = TRM
@@ -7587,7 +7583,14 @@ focus_tree = {
 				days = 365
 			}
 			add_political_power = 50
+			
+			
 
+			activate_targeted_decision = { target = 65 decision = TRN_Infrastructure_Development } # 작센
+			activate_targeted_decision = { target = 60 decision = TRN_Infrastructure_Development } # 튀링겐
+			activate_targeted_decision = { target = 64 decision = TRN_Infrastructure_Development } # 브란덴부르크
+			activate_targeted_decision = { target = 68 decision = TRN_Infrastructure_Development } # 오스트마르크
+			activate_targeted_decision = { target = 86 decision = TRN_Infrastructure_Development } # 포즈난
 		}
 	}
 
@@ -7601,6 +7604,7 @@ focus_tree = {
 		cost = 7
 
 		available = {
+			has_dynamic_modifier = { modifier = TRM_industries_dynamic }
 		}
 
 		ai_will_do = {
@@ -7633,6 +7637,7 @@ focus_tree = {
 		cost = 7
 
 		available = {
+			has_dynamic_modifier = { modifier = TRM_industries_dynamic }
 		}
 
 		ai_will_do = {

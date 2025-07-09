@@ -399,8 +399,8 @@ INS = {
 }
 
 VIN = {
-	color = rgb { 0 18 127 }
-	color_ui = rgb { 0 18 127 }
+	color = rgb { 218 37 29 }
+	color_ui = rgb { 218 37 29 }
 }
 
 CAM = {

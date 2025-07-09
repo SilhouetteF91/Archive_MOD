@@ -510,6 +510,39 @@
  GEH_last_focus_effect_h_rout: "소라사키 히나의 위대한 기록"
  GEH_last_focus_effect_h_rout_desc: "<설명 필요>"
 
+ GEH_hina_we_must_dissent: "우리는 저항해야 한다"
+ GEH_hina_we_must_dissent_desc: "누가, 무엇을 상대로 저항해야 하는 걸까? 내가 바알에게? 바알이 나에게?"
+
+ GEH_hina_ishbosheth: "이스보셋"
+ GEH_hina_ishbosheth_desc: "위대한 기록이 아닌 부끄럽고 저주받은 기록일지라도."
+
+ GEH_hina_panopticon_institution: "파놉티콘 기관"
+ GEH_hina_panopticon_institution_desc: "예비 범죄자라고 할 수 있는 노동자들의 조직화된 반란, 태업을 막기 위하여 모든 노동자들을 감시할 수 있는 파놉티콘 기관을 각 공장에 의무적으로 설치합니다. 헬멧을 이용해 시선을 가린 질서부의 감시 요원들이 공업지대에 영구적으로 상주할 것입니다."
+
+ GEH_hina_national_delusion: "민족이라는 망상"
+ GEH_hina_national_delusion_desc: "여러 키보토스 학원 국가의 개념들과 도이칠란트의 문화적 역사적 기록. 그 모든 것은 위대한 대게헨나국의 부품들에게 무의미한 새로운 가치관을 심어주며 다양한 범죄 가능성을 증대시킵니다."
+
+ GEH_hina_cult_of_leader: "히나 숭배"
+ GEH_hina_cult_of_leader_desc: "개인은 위대한 지도자 앞에서는 아무런 가치가 없습니다. 특히 개인의 의지는 더더욱 그렇습니다. 게헨나의 모든 국민들은 지도자를 위하여 움직이는 부품이 되어야 합니다."
+
+ GEH_hina_extermination_german: "도이치 말살"
+ GEH_hina_extermination_german_desc: "현지 도이치인들의 독립 의지를 꺾기 위하여, 모든 도이칠란트 아동들은 가정으로부터 분리되어 집단 교육 시설에서 특수한 '게헨나화' 교육을 받게 될 것입니다. 이는 장기적으로 도이치 현지 문화의 영구적 말살과 도이칠란트 분리주의의 소멸을 일으킬 것입니다."
+
+ GEH_hina_two_class_society: "계급사회"
+ GEH_hina_two_class_society_desc: "우리는 귀족 제도를 만들어내지 않을 것입니다. 하지만 사실상 귀족 제도와 같은, 현지인들을 차별하기 위한 유사 신분제를 만들 수 있습니다."
+
+ GEH_hina_nationalist_education: "게헨나화 교육"
+ GEH_hina_nationalist_education_desc: "우리는 자랑스러운 게헨나의 신민으로서, 위대한 지도자의 영도 아래에서 하나로서 단결됩니다. 도이칠란트 문화의 말살은 초등교육 단계에서부터 단계적으로 진행될 것이며, 1세기 안에 완전한 문화적 동화가 완료될 것입니다."
+
+ GEH_hina_planned_backwardness: "계획적 후진화"
+ GEH_hina_planned_backwardness_desc: "키보토스의 인구는 지구의 현지인들에 비하여 상대적으로 적은 인구를 가지고 있습니다. 우리는 현지인 인구가 거주하는 지역의 의료 시설을 철거하고, 그들을 농업과 공업의 지옥으로 밀어넣을 것입니다. 그들의 삶의 질을 떨어뜨림으로서 그들의 인구는 점점... 키보토스계와 균형을 맞출 것입니다."
+
+ GEH_hina_eradication_of_decadent_individualism: "퇴폐적 개인주의 금지"
+ GEH_hina_eradication_of_decadent_individualism_desc: "방종과 혼돈은 게헨나를 범죄의 학원으로 만들었습니다. 더는 그러한 방종이 허가되는 일은 없을 것입니다. 위대한 통합과 질서 아래에서 우리는 번영하리라."
+
+ GEH_hina_one_for_all: "하나는 전체를 위하여"
+ GEH_hina_one_for_all_desc: "단순히 개인주의에 대한 탄압만이 아니라, 대게헨나국의 모든 신민들은 스스로를 위대한 지도자를 위하여 사용되는 '인적 자원'으로서 생각하도록 교육되어야만 합니다. 게헨나인들은 광산에서 캐내는 석탄과 같이 불태워 소모할 수 있는 자원이며, 히나 의장은 그들이 마지막 불꽃으로 타오르도록 지켜볼 것입니다."
+
 #아코
  GEH_last_focus_effect_a_rout: "선도부의 새로운 개혁"
  GEH_last_focus_effect_a_rout_desc: "아마우 아코의 관료제 개혁은 선도부를 군대가 통제하는 군벌 국가에서 근대적인 관료제 국가로 변화시켰습니다. 선도부라는 이름은 여전히 역사에 남을 것이지만, 이제 경찰 조직이 관료를 이끄는 것이 아닌 관료가 경찰 조직을 이끌 것입니다. 기술관료들의 관리 아래에서 우리가 계속해서 번영할 수 있기를!"
@@ -2450,6 +2483,26 @@
  GEH_hina_corruption_meeting_with_zealot: "선도부 열성당원들과의 만남"
  GEH_hina_corruption_meeting_with_zealot_desc: "열성당원들은 '위대한 히나 부장님 없이는 게헨나도 없다'고 떠들어대는 바보들이지. 좋은 점이 있다면 질서부라는 쓰레기통에 몰아넣은 그 열성당원들을 직접 만나면... 게헨나 선도부가 내 생각처럼 좋기만 한 조직이 아니라는 걸 깨달을 수 있다는 거야.\n\n그리고 또 다른 좋은 점이 있다면, 그것들과의 '대화'를 이어가다보면 내 머릿속이 증오로 활활 타오른다는 점일까. 그게 좋은 점인 이유? 내 감정에 솔직해질 수 있거든. 나 자신이 내가 되는 기분이야."
 
+ ## 일반 법률
+
+ GEH_hina_corruption_law_civil_surveillance_act: "시민감시법"
+ GEH_hina_corruption_law_civil_surveillance_act_desc: "게헨나의 치안과 질서를 지키기 위해서는 다소의 자유는 침해될 수 있어. 우리가 밀레니엄처럼 완벽한 미래적 감시 조직을 갖추지는 못하겠지만, 모든 골목, 거리, 도로, 공공기관, 학교 내부에 CCTV를 설치하고 예비 범죄자들을 잡아낼 거야. 무슨 대가가 따르더라도."
+
+ GEH_hina_corruption_law_violence_act: "강제 교화 허가"
+ GEH_hina_corruption_law_violence_act_desc: "나치나 다른 반정부적 조직에 가담되어 있을 수 있는 예비 범죄자들을 잡아내기 위하여, 체포된 용의자들 심문에 무력을 사용하는 것이 허가될 거야. 뭐, 억울하다면 범죄를 저지르지 말았어야겠지."
+
+ GEH_hina_corruption_law_special_religious_tax: "종교특별세"
+ GEH_hina_corruption_law_special_religious_tax_desc: "가톨릭과 프로테스탄트는 대전이로 전이된 키보토스계를 적대하기 때문에, 그 영향력을 감소시킬 필요가 있어. 신앙을 가진 것으로 등록된 인구는 무거운 인두세를 내게 될 거야. 피할 방법은 없겠지."
+
+ GEH_hina_corruption_law_no_zealot_law: "질서부 평시 무장 약화"
+ GEH_hina_corruption_law_no_zealot_law_desc: "질서부는 실행부와 분리되어 있는 준군사조직으로서 게헨나 내부의 분열을 일으키고 있어. 그리고 그 녀석들이 내 이름을 팔아 저지르는 폭력, 범죄 등의 행동도 용납할 수 없고. 질서부의 평시 무장을 더 가볍게 경량화하는 것은 질서부가 게헨나 시민들에게 저지르는 악행을 막고, 또 게헨나 선도부의 화합을 이루어낼 수도 있을 거야.\n\n싸우는 것보다는, 서로 사이 좋게 지내는 편이 낫잖아."
+
+ GEH_hina_corruption_law_sophisticated_judicial_system: "현지 사법 제도 존중"
+ GEH_hina_corruption_law_sophisticated_judicial_system_desc: "대전이 이전 게헨나에서는 선도부가 곧 법률이었지. 재판은 없고, 내 명령서에 따라 범죄자들이 게헨나 선도부 지하 감옥에 처박혔어. 뭐, 중범죄자들은 발키리 교정국으로 보내지는 게 원칙이기는 했지만... 어쨌거나 형사재판이 없었다는 건 변하지 않지.\n\n하지만 여기에서는 그러지 않는 게 나을 거야. 현지 사법 제도와 3심제를 존중하고, 그것이 아무리 시간이 오래 걸리고 귀찮은 과정이라 해도 따르도록 지시할 거야."
+
+ GEH_hina_corruption_law_esperanto: "에스페란토 교육"
+ GEH_hina_corruption_law_esperanto_desc: "현지인들의 문화를 배우고 서로 다른 언어를 가진 민족끼리의 더 효율적인 소통을 위해, 인류의 '국제어'인 에스페란토를 정규 교육 과정에 넣어 모두에게 가르칠 생각이야. 지금 세대에게 바로 효과가 나타나지는 않겠지만, 다음 세대는 서로를 조금 더 잘 이해하게 되겠지."
+
  ## 선도부 동맹국 디시전
  #### 발칸 국가 ####
  GEH_finding_alliance_YUG: "[YUG.GetNameDef] 측에 동맹 제안"
@@ -2536,6 +2589,9 @@
 
  GEH_hina_corruption_pro_baal_tt: "§g이 결정은 §O바알의 욕구를 충족§!§g하는 결정입니다.§!"
  GEH_hina_corruption_anti_baal_tt: "§g이 결정은 §G히나 자신의 의지를 관철§!§g하는 결정입니다.§!"
+
+ GEH_hina_corruption_law_available_pro_hina_tt: "바알의 욕구가 §Y$GEH_hina_corruption_loc_level_1$§!나 §Y$GEH_hina_corruption_loc_level_2$§! 중 하나여야 합니다."
+ GEH_hina_corruption_law_available_pro_baal_tt: "바알의 욕구가 §Y$GEH_hina_corruption_loc_level_2$§!나 §Y$GEH_hina_corruption_loc_level_3$§! 중 하나여야 합니다."
 
  ### 훈장 ###
  GEH_royal_order_of_the_crown: "십자훈장"

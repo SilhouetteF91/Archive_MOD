@@ -6,6 +6,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_ENG_stresa_front.tga"
 	}
 	spriteType = {
+		name = "GFX_news_event_trinity_germany_uprising"
+		texturefile = "gfx/event_pictures/news_event_trinity_germany_uprising.tga"
+	}
+	spriteType = {
 		name = "GFX_news_event_trinity_building"
 		texturefile = "gfx/event_pictures/news_event_trinity_building.tga"
 	}

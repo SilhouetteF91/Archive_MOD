@@ -169,7 +169,7 @@ FRA_urbanization = {
 			}
 			set_country_flag = FRA_alz_core
 		}
-		cost = 150
+		cost = 120
 	}
 	FRA_mor_infra = { #모로코
 		ai_will_do = {
@@ -271,7 +271,7 @@ FRA_urbanization = {
 			clear_variable = FRA_mor
 			set_country_flag = FRA_mor_core
 		}
-		cost = 150
+		cost = 120
 	}
 	FRA_waf_infra = {
 		ai_will_do = {
@@ -378,7 +378,7 @@ FRA_urbanization = {
 			}
 			set_country_flag = FRA_waf_core
 		}
-		cost = 150
+		cost = 120
 	}
 	FRA_tun_infra = {
 		ai_will_do = {
@@ -471,7 +471,7 @@ FRA_urbanization = {
 			}
 			set_country_flag = FRA_tun_core
 		}
-		cost = 150
+		cost = 120
 	}
 	FRA_africa_agri = {
 		#대규모 토지 개간

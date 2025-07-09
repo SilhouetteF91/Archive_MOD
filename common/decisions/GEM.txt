@@ -934,313 +934,315 @@ GEH_nego_wehrmacht_decisions = {
 	}
 }
 GEM_club_problem_decision = {
-	GEM_club_problem_decision_debug = {
-		icon = GFX_decision_category_power_struggle
-		allowed = {
-		}
-		ai_will_do = {
-			factor = 0
-		}
-    	available = {
-    	} 
-		
-
-		visible = {
-			is_debug = yes
-		}
-		
-		fire_only_once = yes
-		complete_effect = {
-			activate_mission = GEH_gourmet_research_society_up
-			activate_mission = GEH_hot_spring_department_up
-		}
-	}
-	GEH_gourmet_research_society_up = {
-		icon = {
-			key = GFX_decision_SWI_consolidate_council_power
-			trigger = {
-				has_idea = GEH_gourmet_research_society_4
-			}
-		}
-
-		icon = {
-			key = GFX_decision_generic_political_rally
-			trigger = {
-				has_idea = GEH_gourmet_research_society_3
-			}
-		}
-
-		icon = {
-			key = GFX_decision_generic_assassination
-			trigger = {
-				has_idea = GEH_gourmet_research_society_2
-			}
-		}
-
-		icon = {
-			key = GFX_decision_generic_arrest
-			trigger = {
-				has_idea = GEH_gourmet_research_society_1
-			}
-		}
-
-		days_mission_timeout = GEH_gourmet_research_society_up_days
-   		activation = {
-			always = no
-    	}
-    	available = {
-			NOT = {
-				has_idea = GEH_gourmet_research_society_4
-				has_idea = GEH_gourmet_research_society_3
-				has_idea = GEH_gourmet_research_society_2
-				has_idea = GEH_gourmet_research_society_1
-			}
-    	}
-		is_good = no
-    	cancel_trigger = {
-    	}
-		visible = {
-		}
-		
-		timeout_effect = {
-			GEH_gourmet_research_society_up_effect = yes
-			activate_mission = GEH_gourmet_research_society_up
-		}
-	}
-	GEH_hot_spring_department_up = {
-		icon = {
-			key = GFX_decision_SWI_consolidate_council_power
-			trigger = {
-				has_idea = GEH_hot_spring_department_4
-			}
-		}
-
-		icon = {
-			key = GFX_decision_generic_political_rally
-			trigger = {
-				has_idea = GEH_hot_spring_department_3
-			}
-		}
-
-		icon = {
-			key = GFX_decision_generic_assassination
-			trigger = {
-				has_idea = GEH_hot_spring_department_2
-			}
-		}
-
-		icon = {
-			key = GFX_decision_generic_arrest
-			trigger = {
-				has_idea = GEH_hot_spring_department_1
-			}
-		}
-
-		days_mission_timeout = GEH_hot_spring_department_up_days
-   		activation = {
-			always = no
-    	}
-    	available = {
-			NOT = {
-				has_idea = GEH_hot_spring_department_4
-				has_idea = GEH_hot_spring_department_3
-				has_idea = GEH_hot_spring_department_2
-				has_idea = GEH_hot_spring_department_1
-			}
-    	}
-		is_good = no
-    	cancel_trigger = {
-    	}
-		visible = {
-		}
-		
-		timeout_effect = {
-			GEH_hot_spring_department_up_effect = yes
-			activate_mission = GEH_hot_spring_department_up
-		}
-	}
-	GEH_gourmet_research_society_down = {
-		icon = GFX_decision_infiltrate_state
-		allowed = {
-			tag = GEM
-		}
-		available = {
-		} 
-
-		cost = var:GEH_gourmet_research_society_down_cost?70
-		fire_only_once = no
-		days_remove = 50
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 0
-				has_idea = GEH_gourmet_research_society_1
-			}
-			modifier = {
-				factor = 50
-				has_idea = GEH_gourmet_research_society_3
-			}
-			modifier = {
-				factor = 200
-				has_idea = GEH_gourmet_research_society_4
-			}
-		}
-
-		visible = {
-		}
-
-		modifier = {
-			political_power_cost = 0.05
-			communism_drift = -0.10
-		}
-		
-		complete_effect = {
-			GEH_gourmet_research_society_down_effect = yes
-			add_days_mission_timeout = {
-				mission = GEH_hot_spring_department_up
-				days = -50
-			}
-			if = {
-				limit = { NOT = { has_variable = GEH_gourmet_research_society_down_cost } }
-				set_variable = { GEH_gourmet_research_society_down_cost = 65 }
-			}
-			else_if = {
-				limit = { check_variable = { GEH_gourmet_research_society_down_cost > 25 } }
-				add_to_variable = { GEH_gourmet_research_society_down_cost = -5 }
-			}
-		}
-	}
-	GEH_hot_spring_department_down = {
-		icon = GFX_decision_infiltrate_state
-		allowed = {
-			tag = GEM
-		}
-		available = {
-		} 
-
-		cost = var:GEH_hot_spring_department_down_cost?70
-		fire_only_once = no
-		days_remove = 50
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 0
-				has_idea = GEH_hot_spring_department_1
-			}
-			modifier = {
-				factor = 50
-				has_idea = GEH_hot_spring_department_3
-			}
-			modifier = {
-				factor = 200
-				has_idea = GEH_hot_spring_department_4
-			}
-		}
-
-		visible = {
-		}
-
-		modifier = {
-			political_power_cost = 0.05
-			democratic_drift = -0.10
-		}
-		
-		complete_effect = {
-			GEH_hot_spring_department_down_effect = yes
-			add_days_mission_timeout = {
-				mission = GEH_gourmet_research_society_up
-				days = -50
-			}
-			hidden_effect = {
-				set_country_flag = GEH_hot_spring_department_down_flag				
-			}
-			if = {
-				limit = { NOT = { has_variable = GEH_hot_spring_department_down_cost } }
-				set_variable = { GEH_hot_spring_department_down_cost = 65 }
-			}
-			else_if = {
-				limit = { check_variable = { GEH_hot_spring_department_down_cost > 25 } }
-				add_to_variable = { GEH_hot_spring_department_down_cost = -5 }
-			}
-		}
-	}
-	GEH_has_defensive_war_with_trm = {
-		icon = GFX_decision_generic_civil_support
-		allowed = {
-			tag = GEM
-		}
-		available = {
-			has_defensive_war_with = TRM
-		} 
-
-		fire_only_once = yes
-		days_remove = 120
-		ai_will_do = {
-			factor = 4000
-		}
-
-		visible = {
-		}
-
-		modifier = {
-			political_power_cost = 0.05
-			democratic_drift = -0.10
-			communism_drift = -0.10
-		}
-		
-		complete_effect = {
-			GEH_hot_spring_department_down_effect = yes
-			GEH_gourmet_research_society_down_effect = yes
-			custom_effect_tooltip = enter_tt
-			add_days_mission_timeout = {
-				mission = GEH_gourmet_research_society_up
-				days = 365
-			}
-			add_days_mission_timeout = {
-				mission = GEH_hot_spring_department_up
-				days = 365
-			}
-			set_country_flag = GEH_has_defensive_war_with_trm_flag
-			unlock_decision_tooltip = GEH_has_defensive_war_with_trm_2
-		}
-	}
-	GEH_has_defensive_war_with_trm_2 = {
-		icon = GFX_decision_generic_prepare_civil_war
-		allowed = {
-			tag = GEM
-		}
-		available = {
-			has_defensive_war_with = TRM
-			OR = {
-				has_idea = GEH_hot_spring_department_4
-				has_idea = GEH_hot_spring_department_3
-				has_idea = GEH_gourmet_research_society_4
-				has_idea = GEH_gourmet_research_society_3
-			}
-			has_country_flag = {
-				flag = GEH_has_defensive_war_with_trm_flag
-				days > 280
-			}
-		} 
-
-		fire_only_once = yes
-
-		cost = 70
-
-		ai_will_do = {
-			factor = 4000
-		}
-
-		visible = {
-			has_country_flag = GEH_has_defensive_war_with_trm_flag
-		}
-		
-		complete_effect = {
-			GEH_hot_spring_department_down_effect = yes
-			GEH_gourmet_research_society_down_effect = yes
-		}
-	}
-
+#
+	#	GEM_club_problem_decision_debug = {
+	#		icon = GFX_decision_category_power_struggle
+	#		allowed = {
+	#		}
+	#		ai_will_do = {
+	#			factor = 0
+	#		}
+	#    	available = {
+	#    	} 
+	#		
+	#
+	#		visible = {
+	#			is_debug = yes
+	#		}
+	#		
+	#		fire_only_once = yes
+	#		complete_effect = {
+	#			activate_mission = GEH_gourmet_research_society_up
+	#			activate_mission = GEH_hot_spring_department_up
+	#		}
+	#	}
+	#	GEH_gourmet_research_society_up = {
+	#		icon = {
+	#			key = GFX_decision_SWI_consolidate_council_power
+	#			trigger = {
+	#				has_idea = GEH_gourmet_research_society_4
+	#			}
+	#		}
+	#
+	#		icon = {
+	#			key = GFX_decision_generic_political_rally
+	#			trigger = {
+	#				has_idea = GEH_gourmet_research_society_3
+	#			}
+	#		}
+	#
+	#		icon = {
+	#			key = GFX_decision_generic_assassination
+	#			trigger = {
+	#				has_idea = GEH_gourmet_research_society_2
+	#			}
+	#		}
+	#
+	#		icon = {
+	#			key = GFX_decision_generic_arrest
+	#			trigger = {
+	#				has_idea = GEH_gourmet_research_society_1
+	#			}
+	#		}
+	#
+	#		days_mission_timeout = GEH_gourmet_research_society_up_days
+	#   		activation = {
+	#			always = no
+	#    	}
+	#    	available = {
+	#			NOT = {
+	#				has_idea = GEH_gourmet_research_society_4
+	#				has_idea = GEH_gourmet_research_society_3
+	#				has_idea = GEH_gourmet_research_society_2
+	#				has_idea = GEH_gourmet_research_society_1
+	#			}
+	#    	}
+	#		is_good = no
+	#    	cancel_trigger = {
+	#    	}
+	#		visible = {
+	#		}
+	#		
+	#		timeout_effect = {
+	#			GEH_gourmet_research_society_up_effect = yes
+	#			activate_mission = GEH_gourmet_research_society_up
+	#		}
+	#	}
+	#	GEH_hot_spring_department_up = {
+	#		icon = {
+	#			key = GFX_decision_SWI_consolidate_council_power
+	#			trigger = {
+	#				has_idea = GEH_hot_spring_department_4
+	#			}
+	#		}
+	#
+	#		icon = {
+	#			key = GFX_decision_generic_political_rally
+	#			trigger = {
+	#				has_idea = GEH_hot_spring_department_3
+	#			}
+	#		}
+	#
+	#		icon = {
+	#			key = GFX_decision_generic_assassination
+	#			trigger = {
+	#				has_idea = GEH_hot_spring_department_2
+	#			}
+	#		}
+	#
+	#		icon = {
+	#			key = GFX_decision_generic_arrest
+	#			trigger = {
+	#				has_idea = GEH_hot_spring_department_1
+	#			}
+	#		}
+	#
+	#		days_mission_timeout = GEH_hot_spring_department_up_days
+	#   		activation = {
+	#			always = no
+	#    	}
+	#    	available = {
+	#			NOT = {
+	#				has_idea = GEH_hot_spring_department_4
+	#				has_idea = GEH_hot_spring_department_3
+	#				has_idea = GEH_hot_spring_department_2
+	#				has_idea = GEH_hot_spring_department_1
+	#			}
+	#    	}
+	#		is_good = no
+	#    	cancel_trigger = {
+	#    	}
+	#		visible = {
+	#		}
+	#		
+	#		timeout_effect = {
+	#			GEH_hot_spring_department_up_effect = yes
+	#			activate_mission = GEH_hot_spring_department_up
+	#		}
+	#	}
+	#	GEH_gourmet_research_society_down = {
+	#		icon = GFX_decision_infiltrate_state
+	#		allowed = {
+	#			tag = GEM
+	#		}
+	#		available = {
+	#		} 
+	#
+	#		cost = var:GEH_gourmet_research_society_down_cost?70
+	#		fire_only_once = no
+	#		days_remove = 50
+	#		ai_will_do = {
+	#			factor = 2
+	#			modifier = {
+	#				factor = 0
+	#				has_idea = GEH_gourmet_research_society_1
+	#			}
+	#			modifier = {
+	#				factor = 50
+	#				has_idea = GEH_gourmet_research_society_3
+	#			}
+	#			modifier = {
+	#				factor = 200
+	#				has_idea = GEH_gourmet_research_society_4
+	#			}
+	#		}
+	#
+	#		visible = {
+	#		}
+	#
+	#		modifier = {
+	#			political_power_cost = 0.05
+	#			communism_drift = -0.10
+	#		}
+	#		
+	#		complete_effect = {
+	#			GEH_gourmet_research_society_down_effect = yes
+	#			add_days_mission_timeout = {
+	#				mission = GEH_hot_spring_department_up
+	#				days = -50
+	#			}
+	#			if = {
+	#				limit = { NOT = { has_variable = GEH_gourmet_research_society_down_cost } }
+	#				set_variable = { GEH_gourmet_research_society_down_cost = 65 }
+	#			}
+	#			else_if = {
+	#				limit = { check_variable = { GEH_gourmet_research_society_down_cost > 25 } }
+	#				add_to_variable = { GEH_gourmet_research_society_down_cost = -5 }
+	#			}
+	#		}
+	#	}
+	#	GEH_hot_spring_department_down = {
+	#		icon = GFX_decision_infiltrate_state
+	#		allowed = {
+	#			tag = GEM
+	#		}
+	#		available = {
+	#		} 
+	#
+	#		cost = var:GEH_hot_spring_department_down_cost?70
+	#		fire_only_once = no
+	#		days_remove = 50
+	#		ai_will_do = {
+	#			factor = 2
+	#			modifier = {
+	#				factor = 0
+	#				has_idea = GEH_hot_spring_department_1
+	#			}
+	#			modifier = {
+	#				factor = 50
+	#				has_idea = GEH_hot_spring_department_3
+	#			}
+	#			modifier = {
+	#				factor = 200
+	#				has_idea = GEH_hot_spring_department_4
+	#			}
+	#		}
+	#
+	#		visible = {
+	#		}
+	#
+	#		modifier = {
+	#			political_power_cost = 0.05
+	#			democratic_drift = -0.10
+	#		}
+	#		
+	#		complete_effect = {
+	#			GEH_hot_spring_department_down_effect = yes
+	#			add_days_mission_timeout = {
+	#				mission = GEH_gourmet_research_society_up
+	#				days = -50
+	#			}
+	#			hidden_effect = {
+	#				set_country_flag = GEH_hot_spring_department_down_flag				
+	#			}
+	#			if = {
+	#				limit = { NOT = { has_variable = GEH_hot_spring_department_down_cost } }
+	#				set_variable = { GEH_hot_spring_department_down_cost = 65 }
+	#			}
+	#			else_if = {
+	#				limit = { check_variable = { GEH_hot_spring_department_down_cost > 25 } }
+	#				add_to_variable = { GEH_hot_spring_department_down_cost = -5 }
+	#			}
+	#		}
+	#	}
+	#	GEH_has_defensive_war_with_trm = {
+	#		icon = GFX_decision_generic_civil_support
+	#		allowed = {
+	#			tag = GEM
+	#		}
+	#		available = {
+	#			has_defensive_war_with = TRM
+	#		} 
+	#
+	#		fire_only_once = yes
+	#		days_remove = 120
+	#		ai_will_do = {
+	#			factor = 4000
+	#		}
+	#
+	#		visible = {
+	#		}
+	#
+	#		modifier = {
+	#			political_power_cost = 0.05
+	#			democratic_drift = -0.10
+	#			communism_drift = -0.10
+	#		}
+	#		
+	#		complete_effect = {
+	#			GEH_hot_spring_department_down_effect = yes
+	#			GEH_gourmet_research_society_down_effect = yes
+	#			custom_effect_tooltip = enter_tt
+	#			add_days_mission_timeout = {
+	#				mission = GEH_gourmet_research_society_up
+	#				days = 365
+	#			}
+	#			add_days_mission_timeout = {
+	#				mission = GEH_hot_spring_department_up
+	#				days = 365
+	#			}
+	#			set_country_flag = GEH_has_defensive_war_with_trm_flag
+	#			unlock_decision_tooltip = GEH_has_defensive_war_with_trm_2
+	#		}
+	#	}
+	#	GEH_has_defensive_war_with_trm_2 = {
+	#		icon = GFX_decision_generic_prepare_civil_war
+	#		allowed = {
+	#			tag = GEM
+	#		}
+	#		available = {
+	#			has_defensive_war_with = TRM
+	#			OR = {
+	#				has_idea = GEH_hot_spring_department_4
+	#				has_idea = GEH_hot_spring_department_3
+	#				has_idea = GEH_gourmet_research_society_4
+	#				has_idea = GEH_gourmet_research_society_3
+	#			}
+	#			has_country_flag = {
+	#				flag = GEH_has_defensive_war_with_trm_flag
+	#				days > 280
+	#			}
+	#		} 
+	#
+	#		fire_only_once = yes
+	#
+	#		cost = 70
+	#
+	#		ai_will_do = {
+	#			factor = 4000
+	#		}
+	#
+	#		visible = {
+	#			has_country_flag = GEH_has_defensive_war_with_trm_flag
+	#		}
+	#		
+	#		complete_effect = {
+	#			GEH_hot_spring_department_down_effect = yes
+	#			GEH_gourmet_research_society_down_effect = yes
+	#		}
+	#	}
+	#
+#
 }
 GEM_state_government_takeover_categorie = {
 	GEM_state_government_takeover = {
@@ -1401,8 +1403,15 @@ political_actions = {
 					}
 				}
 				custom_effect_tooltip = GEM_expulsion_of_security_organization_tt
-				GEH_gourmet_research_society_up_effect = yes
-				GEH_hot_spring_department_up_effect = yes
+				add_to_variable = {
+					GEH_HSD_var_GEH_resistance_strength_hot_spring_department = 2
+					tooltip = GEH_resistance_strength_hot_spring_department_var_tt
+				}
+				add_to_variable = {
+					GEH_HSD_var_GEH_resistance_strength_gourmet_research_society = 2
+					tooltip = GEH_resistance_strength_gourmet_research_society_var_tt
+				}
+				GEM_club_problem_decision_modifier_reload = yes
 			}
 		}
 

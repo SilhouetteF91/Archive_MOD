@@ -260,14 +260,15 @@ add_ideas = {
 	BA_isolation
 	civilian_economy
 	GEH_Manmajun_Bupae
-	GEH_hot_spring_department_3
-	GEH_gourmet_research_society_2
 	GEH_individualism
 	GEH_german_nationalism_issue_2
 	BA_a_divided_academy
 	GEM_geh_leadership
 	GEM_maginot_line_french_army
 }
+
+set_variable = { GEH_HSD_var_GEH_resistance_strength_hot_spring_department = 5 }
+set_variable = { GEH_HSD_var_GEH_resistance_strength_gourmet_research_society = 3 }
 
 add_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic }
 add_dynamic_modifier = { modifier = GEM_gourmet_research_society_dynamic }

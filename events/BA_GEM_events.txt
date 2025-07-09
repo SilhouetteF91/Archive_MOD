@@ -1244,7 +1244,11 @@ country_event = { # 연방 국가 제안 - 수락
 		add_political_power = 20
 		add_stability = 0.05
 		set_country_flag = GEH_federal_unification_flag
-		GEH_gourmet_research_society_up_effect = yes
+		add_to_variable = {
+			GEH_HSD_var_GEH_resistance_strength_gourmet_research_society = 2
+			tooltip = GEH_resistance_strength_gourmet_research_society_var_tt
+		}
+		GEM_club_problem_decision_modifier_reload = yes
         GEH = {
             country_event = { id = hina.7 hours = 12 }
         }
@@ -1903,9 +1907,8 @@ country_event = { # 크아악 선도부
 			limit = { has_idea = GEM_geh_leadership }
 			remove_ideas = GEM_geh_leadership
 		}
-		add_war_support = 0.05
-		GEH_gourmet_research_society_up_effect = yes
-		GEH_hot_spring_department_up_effect = yes
+		add_war_support = 0.10
+		GEM_club_problem_decision_modifier_reload = yes
 	}
 	option = {
 		name = GEH_event.70.b
@@ -1925,8 +1928,15 @@ country_event = { # 크아악 선도부
 			limit = { has_idea = GEM_geh_leadership }
 			remove_ideas = GEM_geh_leadership
 		}
-		GEH_gourmet_research_society_up_effect = yes
-		GEH_hot_spring_department_up_effect = yes
+		add_to_variable = {
+			GEH_HSD_var_GEH_resistance_strength_hot_spring_department = 1
+			tooltip = GEH_resistance_strength_hot_spring_department_var_tt
+		}
+		add_to_variable = {
+			GEH_HSD_var_GEH_resistance_strength_gourmet_research_society = 1
+			tooltip = GEH_resistance_strength_gourmet_research_society_var_tt
+		}
+		GEM_club_problem_decision_modifier_reload = yes
 	}
 }
 country_event = { # 만마전의 국경 봉쇄
