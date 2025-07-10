@@ -98,6 +98,16 @@ set_variable = { geh_discipline_var = 40 }
 #기획부 평의회
 set_variable = { GEH_ako_democratic_var = 3 } 
 
+#동아리 활성화
+set_country_flag = GEM_club_problem_decision_allowed_flag
+
+set_variable = { GEH_HSD_var_GEH_resistance_strength_hot_spring_department = 5 }
+set_variable = { GEH_HSD_var_GEH_resistance_strength_gourmet_research_society = 3 }
+
+add_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic }
+add_dynamic_modifier = { modifier = GEM_gourmet_research_society_dynamic }
+GEM_club_problem_decision_modifier_reload = yes
+
 ### 디시전 ###
 
 add_ideas = BA_student_conscription_idea

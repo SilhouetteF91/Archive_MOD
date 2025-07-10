@@ -313,128 +313,130 @@ GEH_military_tradition_effect = {
 }
 
 GEM_club_problem_decision_modifier_reload = {
-	if = {
-		limit = { 
-			NOT = { 
-				has_country_flag = club_problem_gourmet_research_society_escape_flag 
-				has_dynamic_modifier = { modifier = GEM_gourmet_research_society_dynamic }
-			} 
-		}
-   	 	add_dynamic_modifier = { modifier = GEM_gourmet_research_society_dynamic }
-	}
-
-	if = {
-		limit = {
-			NOT = {
-				has_country_flag = club_problem_hot_spring_department_escape_flag
-				has_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic}
+	hidden_effect = {
+		if = {
+			limit = { 
+				NOT = { 
+					has_country_flag = club_problem_gourmet_research_society_escape_flag 
+					has_dynamic_modifier = { modifier = GEM_gourmet_research_society_dynamic }
+				} 
 			}
+			add_dynamic_modifier = { modifier = GEM_gourmet_research_society_dynamic }
 		}
-   	 	add_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic }
-	}
 
-	#기본값 설정
-	set_variable = { GEH_ORI_GRS_var_stability_factor = -0.004 }
-	set_variable = { GEH_ORI_GRS_var_surrender_limit = -0.004 }
-	set_variable = { GEH_ORI_GRS_var_political_power_cost = 0.003 }
-	set_variable = { GEH_ORI_GRS_var_consumer_goods_factor = 0.005 }
-	set_variable = { GEH_ORI_GRS_var_production_speed_buildings_factor = -0.005 }
-
-	set_variable = { GEH_ORI_HSD_var_stability_factor = -0.004 }
-	set_variable = { GEH_ORI_HSD_var_conscription_factor = -0.005 }
-	set_variable = { GEH_ORI_HSD_var_research_speed_factor = -0.005 }
-	set_variable = { GEH_ORI_HSD_var_resistance_target = 0.004 }
-	
-	#주 수에 따른 곱셈: 주 수 계산
-	set_temp_variable = { GEM_club_problem_decision_state_var = 0 }
-
-	every_owned_state = {
-		limit = {
-			OR = {
-				state = 56
-				state = 59
-				state = 57
-				state = 55
-				state = 51
-				state = 978
-				state = 1022
-				state = 1025
-				state = 42
-				state = 50
-				state = 52
-				state = 53
-				state = 54
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = club_problem_hot_spring_department_escape_flag
+					has_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic}
+				}
 			}
+			add_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic }
 		}
-		add_to_temp_variable = { PREV.GEM_club_problem_decision_state_var = 1 }
+
+		#기본값 설정
+		set_variable = { GEH_ORI_GRS_var_stability_factor = -0.004 }
+		set_variable = { GEH_ORI_GRS_var_surrender_limit = -0.004 }
+		set_variable = { GEH_ORI_GRS_var_political_power_cost = 0.003 }
+		set_variable = { GEH_ORI_GRS_var_consumer_goods_factor = 0.005 }
+		set_variable = { GEH_ORI_GRS_var_production_speed_buildings_factor = -0.005 }
+
+		set_variable = { GEH_ORI_HSD_var_stability_factor = -0.004 }
+		set_variable = { GEH_ORI_HSD_var_conscription_factor = -0.005 }
+		set_variable = { GEH_ORI_HSD_var_research_speed_factor = -0.005 }
+		set_variable = { GEH_ORI_HSD_var_resistance_target = 0.004 }
+		
+		#주 수에 따른 곱셈: 주 수 계산
+		set_temp_variable = { GEM_club_problem_decision_state_var = 0 }
+
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 56
+					state = 59
+					state = 57
+					state = 55
+					state = 51
+					state = 978
+					state = 1022
+					state = 1025
+					state = 42
+					state = 50
+					state = 52
+					state = 53
+					state = 54
+				}
+			}
+			add_to_temp_variable = { PREV.GEM_club_problem_decision_state_var = 1 }
+		}
+
+		#기본값으로 주 수에 따른 곱셈 연산을 수행할 템프 변수 복제
+		set_temp_variable = { temp_GEH_HSD_var_stability_factor = GEH_ORI_GRS_var_stability_factor }
+		set_temp_variable = { temp_GEH_HSD_var_surrender_limit = GEH_ORI_GRS_var_surrender_limit }
+		set_temp_variable = { temp_GEH_HSD_var_political_power_cost = GEH_ORI_GRS_var_political_power_cost }
+		set_temp_variable = { temp_GEH_HSD_var_consumer_goods_factor = GEH_ORI_GRS_var_consumer_goods_factor }
+		set_temp_variable = { temp_GEH_HSD_var_production_speed_buildings_factor = GEH_ORI_GRS_var_production_speed_buildings_factor }
+		set_temp_variable = { temp_GEH_GRS_var_stability_factor = GEH_ORI_HSD_var_stability_factor }
+		set_temp_variable = { temp_GEH_GRS_var_conscription_factor = GEH_ORI_HSD_var_conscription_factor }
+		set_temp_variable = { temp_GEH_GRS_var_research_speed_factor = GEH_ORI_HSD_var_research_speed_factor }
+		set_temp_variable = { temp_GEH_GRS_var_resistance_target = GEH_ORI_HSD_var_resistance_target }
+
+		#주 수에 따른 곱셈 연산: 수행
+		multiply_temp_variable = { temp_GEH_HSD_var_stability_factor = GEM_club_problem_decision_state_var }
+		multiply_temp_variable = { temp_GEH_HSD_var_surrender_limit = GEM_club_problem_decision_state_var }
+		multiply_temp_variable = { temp_GEH_HSD_var_political_power_cost = GEM_club_problem_decision_state_var }
+		multiply_temp_variable = { temp_GEH_HSD_var_consumer_goods_factor = GEM_club_problem_decision_state_var }
+		multiply_temp_variable = { temp_GEH_HSD_var_production_speed_buildings_factor = GEM_club_problem_decision_state_var }
+		multiply_temp_variable = { temp_GEH_GRS_var_stability_factor = GEM_club_problem_decision_state_var }
+		multiply_temp_variable = { temp_GEH_GRS_var_conscription_factor = GEM_club_problem_decision_state_var }
+		multiply_temp_variable = { temp_GEH_GRS_var_research_speed_factor = GEM_club_problem_decision_state_var }
+		multiply_temp_variable = { temp_GEH_GRS_var_resistance_target = GEM_club_problem_decision_state_var }
+		
+		#가중치 연산 수행
+		set_temp_variable = { temp_GEH_resistance_strength_hot_spring_department = modifier@GEH_resistance_strength_hot_spring_department }
+		set_temp_variable = { temp_GEH_resistance_strength_gourmet_research_society = modifier@GEH_resistance_strength_gourmet_research_society }
+
+		multiply_temp_variable = {
+			temp_GEH_resistance_strength_hot_spring_department = 0.40
+		}
+		multiply_temp_variable = {
+			temp_GEH_resistance_strength_gourmet_research_society = 0.40
+		}
+
+		add_to_temp_variable = { temp_GEH_resistance_strength_hot_spring_department = 0.8 }
+		add_to_temp_variable = { temp_GEH_resistance_strength_gourmet_research_society = 0.8 }
+
+		clamp_temp_variable = {
+			var = temp_GEH_resistance_strength_hot_spring_department
+			min = 0
+		}
+		clamp_temp_variable = {
+			var = temp_GEH_resistance_strength_gourmet_research_society
+			min = 0
+		}
+
+		multiply_temp_variable = { temp_GEH_HSD_var_stability_factor = temp_GEH_resistance_strength_hot_spring_department }
+		multiply_temp_variable = { temp_GEH_HSD_var_surrender_limit = temp_GEH_resistance_strength_hot_spring_department }
+		multiply_temp_variable = { temp_GEH_HSD_var_political_power_cost = temp_GEH_resistance_strength_hot_spring_department }
+		multiply_temp_variable = { temp_GEH_HSD_var_consumer_goods_factor = temp_GEH_resistance_strength_hot_spring_department }
+		multiply_temp_variable = { temp_GEH_HSD_var_production_speed_buildings_factor = temp_GEH_resistance_strength_hot_spring_department }
+		multiply_temp_variable = { temp_GEH_GRS_var_stability_factor = temp_GEH_resistance_strength_gourmet_research_society }
+		multiply_temp_variable = { temp_GEH_GRS_var_conscription_factor = temp_GEH_resistance_strength_gourmet_research_society }
+		multiply_temp_variable = { temp_GEH_GRS_var_research_speed_factor = temp_GEH_resistance_strength_gourmet_research_society }
+		multiply_temp_variable = { temp_GEH_GRS_var_resistance_target = temp_GEH_resistance_strength_gourmet_research_society }
+		
+		#연산 완료된 템프 변수를 모디파이어 변수에 삽입
+		set_variable = { GEH_HSD_var_stability_factor = temp_GEH_HSD_var_stability_factor }
+		set_variable = { GEH_HSD_var_surrender_limit = temp_GEH_HSD_var_surrender_limit }
+		set_variable = { GEH_HSD_var_political_power_cost = temp_GEH_HSD_var_political_power_cost }
+		set_variable = { GEH_HSD_var_consumer_goods_factor = temp_GEH_HSD_var_consumer_goods_factor }
+		set_variable = { GEH_HSD_var_production_speed_buildings_factor = temp_GEH_HSD_var_production_speed_buildings_factor }
+		
+		set_variable = { GEH_GRS_var_stability_factor = temp_GEH_GRS_var_stability_factor }
+		set_variable = { GEH_GRS_var_conscription_factor = temp_GEH_GRS_var_conscription_factor }
+		set_variable = { GEH_GRS_var_research_speed_factor = temp_GEH_GRS_var_research_speed_factor }
+		set_variable = { GEH_GRS_var_resistance_target = temp_GEH_GRS_var_resistance_target }
 	}
-
-	#기본값으로 주 수에 따른 곱셈 연산을 수행할 템프 변수 복제
-	set_temp_variable = { temp_GEH_HSD_var_stability_factor = GEH_ORI_GRS_var_stability_factor }
-	set_temp_variable = { temp_GEH_HSD_var_surrender_limit = GEH_ORI_GRS_var_surrender_limit }
-	set_temp_variable = { temp_GEH_HSD_var_political_power_cost = GEH_ORI_GRS_var_political_power_cost }
-	set_temp_variable = { temp_GEH_HSD_var_consumer_goods_factor = GEH_ORI_GRS_var_consumer_goods_factor }
-	set_temp_variable = { temp_GEH_HSD_var_production_speed_buildings_factor = GEH_ORI_GRS_var_production_speed_buildings_factor }
-	set_temp_variable = { temp_GEH_GRS_var_stability_factor = GEH_ORI_HSD_var_stability_factor }
-	set_temp_variable = { temp_GEH_GRS_var_conscription_factor = GEH_ORI_HSD_var_conscription_factor }
-	set_temp_variable = { temp_GEH_GRS_var_research_speed_factor = GEH_ORI_HSD_var_research_speed_factor }
-	set_temp_variable = { temp_GEH_GRS_var_resistance_target = GEH_ORI_HSD_var_resistance_target }
-
-	#주 수에 따른 곱셈 연산: 수행
-	multiply_temp_variable = { temp_GEH_HSD_var_stability_factor = GEM_club_problem_decision_state_var }
-	multiply_temp_variable = { temp_GEH_HSD_var_surrender_limit = GEM_club_problem_decision_state_var }
-	multiply_temp_variable = { temp_GEH_HSD_var_political_power_cost = GEM_club_problem_decision_state_var }
-	multiply_temp_variable = { temp_GEH_HSD_var_consumer_goods_factor = GEM_club_problem_decision_state_var }
-	multiply_temp_variable = { temp_GEH_HSD_var_production_speed_buildings_factor = GEM_club_problem_decision_state_var }
-	multiply_temp_variable = { temp_GEH_GRS_var_stability_factor = GEM_club_problem_decision_state_var }
-	multiply_temp_variable = { temp_GEH_GRS_var_conscription_factor = GEM_club_problem_decision_state_var }
-	multiply_temp_variable = { temp_GEH_GRS_var_research_speed_factor = GEM_club_problem_decision_state_var }
-	multiply_temp_variable = { temp_GEH_GRS_var_resistance_target = GEM_club_problem_decision_state_var }
-	
-	#가중치 연산 수행
-	set_temp_variable = { temp_GEH_resistance_strength_hot_spring_department = modifier@GEH_resistance_strength_hot_spring_department }
-	set_temp_variable = { temp_GEH_resistance_strength_gourmet_research_society = modifier@GEH_resistance_strength_gourmet_research_society }
-
-	multiply_temp_variable = {
-		temp_GEH_resistance_strength_hot_spring_department = 0.40
-	}
-	multiply_temp_variable = {
-		temp_GEH_resistance_strength_gourmet_research_society = 0.40
-	}
-
-	add_to_temp_variable = { temp_GEH_resistance_strength_hot_spring_department = 0.8 }
-	add_to_temp_variable = { temp_GEH_resistance_strength_gourmet_research_society = 0.8 }
-
-	clamp_temp_variable = {
-		var = temp_GEH_resistance_strength_hot_spring_department
-		min = 0
-	}
-	clamp_temp_variable = {
-		var = temp_GEH_resistance_strength_gourmet_research_society
-		min = 0
-	}
-
-	multiply_temp_variable = { temp_GEH_HSD_var_stability_factor = temp_GEH_resistance_strength_hot_spring_department }
-	multiply_temp_variable = { temp_GEH_HSD_var_surrender_limit = temp_GEH_resistance_strength_hot_spring_department }
-	multiply_temp_variable = { temp_GEH_HSD_var_political_power_cost = temp_GEH_resistance_strength_hot_spring_department }
-	multiply_temp_variable = { temp_GEH_HSD_var_consumer_goods_factor = temp_GEH_resistance_strength_hot_spring_department }
-	multiply_temp_variable = { temp_GEH_HSD_var_production_speed_buildings_factor = temp_GEH_resistance_strength_hot_spring_department }
-	multiply_temp_variable = { temp_GEH_GRS_var_stability_factor = temp_GEH_resistance_strength_gourmet_research_society }
-	multiply_temp_variable = { temp_GEH_GRS_var_conscription_factor = temp_GEH_resistance_strength_gourmet_research_society }
-	multiply_temp_variable = { temp_GEH_GRS_var_research_speed_factor = temp_GEH_resistance_strength_gourmet_research_society }
-	multiply_temp_variable = { temp_GEH_GRS_var_resistance_target = temp_GEH_resistance_strength_gourmet_research_society }
-	
-	#연산 완료된 템프 변수를 모디파이어 변수에 삽입
-	set_variable = { GEH_HSD_var_stability_factor = temp_GEH_HSD_var_stability_factor }
-	set_variable = { GEH_HSD_var_surrender_limit = temp_GEH_HSD_var_surrender_limit }
-	set_variable = { GEH_HSD_var_political_power_cost = temp_GEH_HSD_var_political_power_cost }
-	set_variable = { GEH_HSD_var_consumer_goods_factor = temp_GEH_HSD_var_consumer_goods_factor }
-	set_variable = { GEH_HSD_var_production_speed_buildings_factor = temp_GEH_HSD_var_production_speed_buildings_factor }
-	
-	set_variable = { GEH_GRS_var_stability_factor = temp_GEH_GRS_var_stability_factor }
-	set_variable = { GEH_GRS_var_conscription_factor = temp_GEH_GRS_var_conscription_factor }
-	set_variable = { GEH_GRS_var_research_speed_factor = temp_GEH_GRS_var_research_speed_factor }
-	set_variable = { GEH_GRS_var_resistance_target = temp_GEH_GRS_var_resistance_target }
 }
 
 GEH_german_nationalism_issue_down_effect = {
@@ -578,164 +580,73 @@ GEH_hot_spring_department_remove_effect = {
 	}
 }
 
-GEH_hot_spring_department_up_effect = {
+GEH_gourmet_research_society_effect = {
+	if = {
+		#특정 상황에서 흥신소는 만마전을 대체합니다.
+		limit = {
+			original_tag = HEU
+		}
+		clamp_variable = {
+			var = global.gourmet_research_society_progress_bar_GEM_side_var
+			min = 0
+			max = 100
+		}
+	}
 	if = {
 		limit = {
-			has_idea = GEH_hot_spring_department_1
+			original_tag = GEM
 		}
-		swap_ideas = {
-			remove_idea = GEH_hot_spring_department_1
-			add_idea = GEH_hot_spring_department_2
+		clamp_variable = {
+			var = global.gourmet_research_society_progress_bar_GEH_side_var
+			min = 0
+			max = 100
 		}
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_idea = GEH_hot_spring_department_2
+			original_tag = GEH
 		}
-		swap_ideas = {
-			remove_idea = GEH_hot_spring_department_2
-			add_idea = GEH_hot_spring_department_3
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = GEH_hot_spring_department_3
-		}
-		swap_ideas = {
-			remove_idea = GEH_hot_spring_department_3
-			add_idea = GEH_hot_spring_department_4
-		}
-	}
-	else = {
-		start_civil_war = {
-			ideology = democratic
-			size = 0.5
-			army_ratio = 0.25
-			keep_unit_leaders_trigger = {
-				NOT = { has_trait = GEM_trait_hot_spring_department }
-			}
-			GEH_gourmet_research_society_remove_effect = yes
-			GEH_hot_spring_department_remove_effect = yes
-			GEH_Manmajun_Bupae_remove_effect = yes
-		}
-		GEH_hot_spring_department_remove_effect = yes
-		add_timed_idea = {
-			idea = GEH_hot_spring_department_0
-			days = 1080
-		}
-		add_popularity = {
-			ideology = democratic
-			popularity = -1.00
+		clamp_variable = {
+			var = global.gourmet_research_society_progress_bar_GEH_side_var
+			min = 0
+			max = 100
 		}
 	}
 	GEM_club_problem_decision_modifier_reload = yes
 }
 
-GEH_gourmet_research_society_up_effect = {
+GEH_hot_spring_department_effect = {
 	if = {
-		limit = { has_idea = GEH_gourmet_research_society_1 }
-		swap_ideas = {
-			remove_idea = GEH_gourmet_research_society_1
-			add_idea = GEH_gourmet_research_society_2
+		#특정 상황에서 흥신소는 만마전을 대체합니다.
+		limit = {
+			original_tag = HEU
+		}
+		clamp_variable = {
+			var = global.hot_spring_department_progress_bar_GEM_side_var
+			min = 0
+			max = 100
 		}
 	}
-	else_if = {
-		limit = { has_idea = GEH_gourmet_research_society_2 }
-		swap_ideas = {
-			remove_idea = GEH_gourmet_research_society_2
-			add_idea = GEH_gourmet_research_society_3
-		}
-	}
-	else_if = {
-		limit = { has_idea = GEH_gourmet_research_society_3 }
-		swap_ideas = {
-			remove_idea = GEH_gourmet_research_society_3
-			add_idea = GEH_gourmet_research_society_4
-		}
-	}
-	else = {
-		start_civil_war = {
-			ideology = communism
-			size = 0.5
-			army_ratio = 0.25
-			keep_unit_leaders_trigger = {
-				NOT = { has_trait = GEM_trait_gourmet_research_society }
-			}
-			GEH_gourmet_research_society_remove_effect = yes
-			GEH_hot_spring_department_remove_effect = yes
-			GEH_Manmajun_Bupae_remove_effect = yes
-		}
-		GEH_gourmet_research_society_remove_effect = yes
-		add_timed_idea = {
-			idea = GEH_gourmet_research_society_0
-			days = 1080
-		}
-		add_popularity = {
-			ideology = communism
-			popularity = -1.00
-		}
-	}
-	GEM_club_problem_decision_modifier_reload = yes
-}
-
-GEH_hot_spring_department_down_effect = {
 	if = {
 		limit = {
-			has_idea = GEH_hot_spring_department_4
+			original_tag = GEM
 		}
-		swap_ideas = {
-			remove_idea = GEH_hot_spring_department_4
-			add_idea = GEH_hot_spring_department_3
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = GEH_hot_spring_department_3
-		}
-		swap_ideas = {
-			remove_idea = GEH_hot_spring_department_3
-			add_idea = GEH_hot_spring_department_2
+		clamp_variable = {
+			var = global.hot_spring_department_progress_bar_GEM_side_var
+			min = 0
+			max = 100
 		}
 	}
-	else_if = {
-		limit = {
-			has_idea = GEH_hot_spring_department_2
-		}
-		swap_ideas = {
-			remove_idea = GEH_hot_spring_department_2
-			add_idea = GEH_hot_spring_department_1
-		}
-	}
-	else = {
-	}
-	GEM_club_problem_decision_modifier_reload = yes
-}
-
-GEH_gourmet_research_society_down_effect = {
 	if = {
-		limit = { has_idea = GEH_gourmet_research_society_4 }
-		swap_ideas = {
-			remove_idea = GEH_gourmet_research_society_4
-			add_idea = GEH_gourmet_research_society_3
+		limit = {
+			original_tag = GEH
+		}
+		clamp_variable = {
+			var = global.hot_spring_department_progress_bar_GEH_side_var
+			min = 0
+			max = 100
 		}
 	}
-	else_if = {
-		limit = { has_idea = GEH_gourmet_research_society_3 }
-		swap_ideas = {
-			remove_idea = GEH_gourmet_research_society_3
-			add_idea = GEH_gourmet_research_society_2
-		}
-	}
-	else_if = {
-		limit = { has_idea = GEH_gourmet_research_society_2 }
-		swap_ideas = {
-			remove_idea = GEH_gourmet_research_society_2
-			add_idea = GEH_gourmet_research_society_1
-		}
-	}
-	else = {
-	}
-	GEM_club_problem_decision_modifier_reload = yes
 }
 
 GEH_popular_support_up_effect = {

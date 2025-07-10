@@ -918,15 +918,23 @@
 
  gem_club_problem_decision_hot_spring_department_idea_3: "£decision_icon_small 온천개발부 탄압 접근 방식"
 
- gem_club_problem_decision_select_1: "§Y협력§!\n\n동아리 저항: §R+1§!\n환심 획득: §G+50%§!\n안정도: §G+5.00%§!\n\n[gem_club_problem_decision_trigger_loc]"
+ gem_club_problem_decision_select_1: "§Y협력§!\n\n동아리 저항: §R+1§!\n환심 획득: §G+25%§!\n안정도: §G+5.00%§!\n\n[gem_club_problem_decision_trigger_loc]"
  gem_club_problem_decision_select_2: "§Y감시§!\n\n안정도: §G+2.00%§!\n\n[gem_club_problem_decision_trigger_loc]"
- gem_club_problem_decision_select_3: "§Y협력§!\n\n동아리 저항: §G-1§!\n환심 획득: §R-50%§!\n안정도: §R-5.00%§!\n\n[gem_club_problem_decision_trigger_loc]"
+ gem_club_problem_decision_select_3: "§Y탄압§!\n\n동아리 저항: §G-1§!\n환심 획득: §R-25%§!\n안정도: §R-5.00%§!\n\n[gem_club_problem_decision_trigger_loc]"
 
- gem_club_problem_decision_select_1_cp: "§Y협력§!\n\n동아리 저항: §R+1§!\n환심 획득: §G+50%§!\n안정도: §G+5.00%§!"
+ gem_club_problem_decision_select_1_cp: "§Y협력§!\n\n동아리 저항: §R+1§!\n환심 획득: §G+25%§!\n안정도: §G+5.00%§!"
  gem_club_problem_decision_select_2_cp: "§Y감시§!\n\n안정도: §G+2.00%§!"
- gem_club_problem_decision_select_3_cp: "§Y탄압§!\n\n동아리 저항: §G-1§!\n환심 획득: §R-50%§!\n안정도: §R-5.00%§!"
+ gem_club_problem_decision_select_3_cp: "§Y탄압§!\n\n동아리 저항: §G-1§!\n환심 획득: §R-25%§!\n안정도: §R-5.00%§!"
 
- gem_club_problem_decision_GEH_GRS_tt: "현재 저항 단계: [gem_club_problem_decision_gourmet_research_society_lv_loc]\n\n기본 저항 단계: [?GEH_HSD_var_GEH_resistance_strength_gourmet_research_society|Y]"
+ gourmet_research_society_progress_bar_HEU_side_var_tt: " §Y@HEU 흥신소§!를 향한 §Y미식연구회§!의 환심: $RIGHT|+=.0$\n"
+ gourmet_research_society_progress_bar_GEM_side_var_tt: " §Y@GEM 만마전§!을 향한 §Y미식연구회§!의 환심: $RIGHT|+=.0$\n"
+ gourmet_research_society_progress_bar_GEH_side_var_tt: " §Y@GEH 선도부§!를 향한 §Y미식연구회§!의 환심: $RIGHT|+=.0$\n"
+
+ hot_spring_department_progress_bar_HEU_side_var_tt: " §Y@HEU 흥신소§!를 향한 §Y온천개발부§!의 환심: $RIGHT|+=.0$\n"
+ hot_spring_department_progress_bar_GEM_side_var_tt: " §Y@GEM 만마전§!을 향한 §Y온천개발부§!의 환심: $RIGHT|+=.0$\n"
+ hot_spring_department_progress_bar_GEH_side_var_tt: " §Y@GEH 선도부§!를 향한 §Y온천개발부§!의 환심: $RIGHT|+=.0$\n"
+
+ gem_club_problem_decision_GEH_GRS_tt: "현재 저항 단계: [gem_club_problem_decision_gourmet_research_society_lv_loc]\n\n기본 저항 단계: [?GEH_HSD_var_GEH_resistance_strength_gourmet_research_society|Y.0]"
  gem_club_problem_decision_GEH_HSD_tt: "현재 저항 단계: [gem_club_problem_decision_hot_spring_department_lv_loc]\n\n기본 저항 단계: [?GEH_HSD_var_GEH_resistance_strength_hot_spring_department|Y.0]"
 
  GEH_resistance_strength_hot_spring_department_var_tt: "기본 $GEH_resistance_strength_hot_spring_department$: $RIGHT|-=.0$"
@@ -952,8 +960,8 @@
  GEM_hot_spring_department_dynamic: "£decision_icon_small 온천개발부"
  GEM_gourmet_research_society_dynamic: "£decision_icon_small 미식연구회"
 
- GEH_gourmet_research_society_up:0 "미식연구회 활동 격화"
- GEH_hot_spring_department_up:0 "온천개발부 활동 격화"
+ GEH_gourmet_research_society_up:0 "미식연구회 활동 묵인"
+ GEH_hot_spring_department_up:0 "온천개발부 활동 묵인"
  GEH_gourmet_research_society_down:0 "미식연구회 단속"
  GEH_hot_spring_department_down:0 "온천개발부 단속"
  GEH_has_defensive_war_with_trm:0 "대전쟁 동원"

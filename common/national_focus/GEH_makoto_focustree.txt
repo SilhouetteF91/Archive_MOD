@@ -895,10 +895,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 120
 			country_event = { id = GEH_event.1 }
-			activate_mission = GEH_gourmet_research_society_up
-			activate_mission = GEH_hot_spring_department_up
-			unlock_decision_tooltip = GEH_gourmet_research_society_down
-			unlock_decision_tooltip = GEH_hot_spring_department_down
 		}
 	}
 	focus = {
@@ -1455,15 +1451,6 @@ focus_tree = {
 			add_stability = -0.10
 			add_political_power = 25
 			GEH_Manmajun_Bupae_down_effect = yes
-			if = {
-				limit = {
-					NOT = { has_completed_focus = GEH_warning_wuiongwuiong }
-				}
-				activate_mission = GEH_gourmet_research_society_up
-				activate_mission = GEH_hot_spring_department_up
-				unlock_decision_tooltip = GEH_gourmet_research_society_down
-				unlock_decision_tooltip = GEH_hot_spring_department_down
-			}
 		}
 	}
 	focus = {
@@ -1627,15 +1614,6 @@ focus_tree = {
 					remove_idea = GEH_Manmajun_Bupae
 					add_idea = GEH_Manmajun_Bupae_2
 				}
-			}
-			if = {
-				limit = {
-					NOT = { has_completed_focus = GEH_warning_wuiongwuiong }
-				}
-				activate_mission = GEH_gourmet_research_society_up
-				activate_mission = GEH_hot_spring_department_up
-				unlock_decision_tooltip = GEH_gourmet_research_society_down
-				unlock_decision_tooltip = GEH_hot_spring_department_down
 			}
 		}
 	}

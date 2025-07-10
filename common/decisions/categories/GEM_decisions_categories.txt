@@ -43,12 +43,17 @@ GEH_nego_wehrmacht_decisions = {
 		}
 	}
 }
-GEM_club_problem_decision = { 
+GEM_club_problem_decision = {
 	icon = GFX_decision_category_eng_organize_the_blackshirts
 	allowed = {
-		original_tag = GEM
+		OR = {
+			original_tag = GEM
+			original_tag = GEH
+			original_tag = HEU
+		}
 	}
 	visible = {
+		has_country_flag = GEM_club_problem_decision_allowed_flag
 	}
 	priority = 998
 
