@@ -1284,7 +1284,7 @@ GEM_club_problem_decision = {
 					original_tag = GEH
 				}
 				add_to_variable = {
-					global.gourmet_research_society_progress_bar_GEH_side_var = -5
+					global.gourmet_research_society_progress_bar_GEH_side_var = 3
 					tooltip = gourmet_research_society_progress_bar_GEH_side_var_tt
 				}
 			}
