@@ -6193,7 +6193,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_hina_the_darkest_hour_3
-		icon = GFX_focus_GEH_expulsion_of_pandemonium
+		icon = GFX_focus_AUS_lawmaking_leniency
 		cost = 4
 
 		relative_position_id = GEH_hina_the_darkest_hour
@@ -6226,7 +6226,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_hina_the_darkest_hour_4
-		icon = GFX_focus_GEH_expulsion_of_pandemonium
+		icon = GFX_focus_generic_university_2
 		cost = 4
 
 		relative_position_id = GEH_hina_the_darkest_hour
@@ -6259,7 +6259,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_hina_the_darkest_hour_route_ending
-		icon = GFX_focus_GEH_expulsion_of_pandemonium
+		icon = GFX_focus_CHL_union_of_hispanic_republics
 		cost = 5
 
 		relative_position_id = GEH_hina_the_darkest_hour
@@ -6333,7 +6333,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_hina_terror_route_1
-		icon = GFX_goal_hmmngshinso_broken
+		icon = GFX_goal_GEH_amau_seminar
 		cost = 5
 
 		relative_position_id = GEH_hina_terror_route_start
@@ -6399,7 +6399,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_hina_terror_route_3
-		icon = GFX_goal_hmmngshinso_broken
+		icon = GFX_focus_RAJ_a_policy_of_silence
 		cost = 4
 
 		relative_position_id = GEH_hina_terror_route_start

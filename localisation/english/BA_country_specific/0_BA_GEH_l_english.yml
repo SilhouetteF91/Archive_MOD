@@ -554,10 +554,34 @@
  ## 게헨나의 지도자 ##
 
  GEH_hina_terror_route_start: "§R종막§!"
- GEH_hina_terror_route_start_desc: "<여기에 멋있는 설명 입력>"
+ GEH_hina_terror_route_start_desc: "§R드디어 승리했다.§!"
+
+ GEH_hina_terror_route_1: "선도부 질서 재정립"
+ GEH_hina_terror_route_1_desc: "게헨나의 질서는 선도부가 통제하며, 선도부는 소라사키 히나가 통제합니다. 그것을 이해하지 못하는 선도부 내부의 반대파들은 제거될 필요가 있습니다. 그들이 누구를 위하여 그곳에서 복무하는 것인지는 이해해야지요."
+
+ GEH_hina_terror_route_2: "나의 질서 강요"
+ GEH_hina_terror_route_2_desc: ""
+
+ GEH_hina_terror_route_3: "자아의 말살"
+ GEH_hina_terror_route_3_desc: ""
+
+ GEH_hina_terror_route_4: "완성"
+ GEH_hina_terror_route_4_desc: ""
 
  GEH_hina_the_darkest_hour: "어두운 시간을 지나"
  GEH_hina_the_darkest_hour_desc: "<여기에 멋있는 설명 입력>"
+
+ GEH_hina_the_darkest_hour_2: "쓰러지되 굴복하지 않았다"
+ GEH_hina_the_darkest_hour_2_desc: ""
+
+ GEH_hina_the_darkest_hour_3: "선도부 중심의 질서"
+ GEH_hina_the_darkest_hour_3_desc: ""
+
+ GEH_hina_the_darkest_hour_4: "잘못을 되짚어가기"
+ GEH_hina_the_darkest_hour_4_desc: ""
+
+ GEH_hina_the_darkest_hour_route_ending: "노블레스 오블리주"
+ GEH_hina_the_darkest_hour_route_ending_desc: ""
 
  GEH_hina_panopticon_institution: "파놉티콘 기관"
  GEH_hina_panopticon_institution_desc: "예비 범죄자라고 할 수 있는 노동자들의 조직화된 반란, 태업을 막기 위하여 모든 노동자들을 감시할 수 있는 파놉티콘 기관을 각 공장에 의무적으로 설치합니다. 헬멧을 이용해 시선을 가린 질서부의 감시 요원들이 공업지대에 영구적으로 상주할 것입니다."
