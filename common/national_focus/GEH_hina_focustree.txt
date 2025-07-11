@@ -6119,6 +6119,354 @@ focus_tree = {
 		}
 	}
 
+	### 히나 (게헨나의 지도자) ###
+
+    focus = {
+		id = GEH_hina_the_darkest_hour
+		icon = GFX_focus_RAJ_a_tiger_unchained
+		cost = 5
+
+		relative_position_id = GEH_hina_we_must_dissent
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_hina_we_must_dissent
+        }
+
+		mutually_exclusive = {
+			focus = GEH_hina_terror_route_start
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_the_darkest_hour_2
+		icon = GFX_goal_HEU_don_arancino_2
+		cost = 5
+
+		relative_position_id = GEH_hina_the_darkest_hour
+		x = 0
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_hina_the_darkest_hour
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_the_darkest_hour_3
+		icon = GFX_focus_GEH_expulsion_of_pandemonium
+		cost = 4
+
+		relative_position_id = GEH_hina_the_darkest_hour
+		x = 0
+		y = 3
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_hina_the_darkest_hour_2
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_the_darkest_hour_4
+		icon = GFX_focus_GEH_expulsion_of_pandemonium
+		cost = 4
+
+		relative_position_id = GEH_hina_the_darkest_hour
+		x = -1
+		y = 2
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_hina_the_darkest_hour_2
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_the_darkest_hour_route_ending
+		icon = GFX_focus_GEH_expulsion_of_pandemonium
+		cost = 5
+
+		relative_position_id = GEH_hina_the_darkest_hour
+		x = -1
+		y = 4
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_hina_the_darkest_hour_3
+		}
+
+        prerequisite = {
+            focus = GEH_hina_the_darkest_hour_4
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_terror_route_start
+		icon = GFX_goal_hmmngshinso_broken
+		cost = 5
+
+		relative_position_id = GEH_hina_we_must_dissent
+		x = -3
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_hina_we_must_dissent
+        }
+
+		mutually_exclusive = {
+			focus = GEH_hina_the_darkest_hour
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_terror_route_1
+		icon = GFX_goal_hmmngshinso_broken
+		cost = 5
+
+		relative_position_id = GEH_hina_terror_route_start
+		x = 0
+		y = 1
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_hina_terror_route_start
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_terror_route_2
+		icon = GFX_goal_hmmngshinso_broken
+		cost = 4
+
+		relative_position_id = GEH_hina_terror_route_start
+		x = -1
+		y = 3
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_hina_terror_route_1
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_terror_route_3
+		icon = GFX_goal_hmmngshinso_broken
+		cost = 4
+
+		relative_position_id = GEH_hina_terror_route_start
+		x = 1
+		y = 3
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_hina_terror_route_1
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_hina_terror_route_ending
+		icon = GFX_focus_AFG_retire_the_uncles
+		cost = 5
+
+		relative_position_id = GEH_hina_terror_route_start
+		x = 0
+		y = 4
+
+		available = {
+
+		}
+
+        prerequisite = {
+            focus = GEH_hina_terror_route_2
+		}
+
+        prerequisite = {
+            focus = GEH_hina_terror_route_3
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
 	### 히나 (학생 인민의 의지)
 
     focus = {
@@ -6312,8 +6660,8 @@ focus_tree = {
 	}
 
     focus = {
-		id = GEH_hina_a_ending_4
-		icon = GFX_focus_AUS_ban_dnsap
+		id = GEH_hina_freie_gehenna_jugend
+		icon = GFX_focus_GER_form_the_stasi
 		cost = 5
 
 		relative_position_id = GEH_hina_new_constitution
@@ -6370,8 +6718,8 @@ focus_tree = {
 	}
 
     focus = {
-		id = GEH_hina_a_ending_6
-		icon = GFX_focus_AUS_ban_dnsap
+		id = GEH_hina_country_for_the_public
+		icon = GFX_focus_GER_customs_union
 		cost = 5
 
 		relative_position_id = GEH_hina_new_constitution
@@ -6399,8 +6747,8 @@ focus_tree = {
 	}
 
     focus = {
-		id = GEH_hina_a_ending_7
-		icon = GFX_focus_AUS_ban_dnsap
+		id = GEH_hina_friendship
+		icon = GFX_focus_TRN_kivotos_dip
 		cost = 4
 
 		relative_position_id = GEH_hina_new_constitution
@@ -6408,7 +6756,7 @@ focus_tree = {
 		y = 2
 
         prerequisite = {
-            focus = GEH_hina_a_ending_4
+            focus = GEH_hina_freie_gehenna_jugend
         }
 
         prerequisite = {
@@ -6416,7 +6764,7 @@ focus_tree = {
         }
 
         prerequisite = {
-            focus = GEH_hina_a_ending_6
+            focus = GEH_hina_country_for_the_public
         }
 
 		ai_will_do = {
@@ -6436,8 +6784,8 @@ focus_tree = {
 	}
 
     focus = {
-		id = GEH_hina_a_ending_8
-		icon = GFX_focus_AUS_ban_dnsap
+		id = GEH_hina_solidarity
+		icon = GFX_goal_GEH_4th_ako_second_weimar_republic
 		cost = 4
 
 		relative_position_id = GEH_hina_new_constitution
@@ -6445,7 +6793,7 @@ focus_tree = {
 		y = 2
 
         prerequisite = {
-            focus = GEH_hina_a_ending_4
+            focus = GEH_hina_freie_gehenna_jugend
         }
 
         prerequisite = {
@@ -6453,7 +6801,7 @@ focus_tree = {
         }
 
         prerequisite = {
-            focus = GEH_hina_a_ending_6
+            focus = GEH_hina_country_for_the_public
         }
 
 		ai_will_do = {
@@ -6474,7 +6822,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_hina_ishbosheth_route_ending
-		icon = GFX_focus_TRN_cause_of_trinity
+		icon = GFX_focus_PER_strengthen_the_tudeh
 		cost = 5
 
 		relative_position_id = GEH_hina_new_constitution
@@ -6482,11 +6830,11 @@ focus_tree = {
 		y = 3
 
         prerequisite = {
-            focus = GEH_hina_a_ending_7
+            focus = GEH_hina_friendship
         }
 
         prerequisite = {
-            focus = GEH_hina_a_ending_8
+            focus = GEH_hina_solidarity
         }
 
 		ai_will_do = {
@@ -6544,6 +6892,10 @@ focus_tree = {
 		relative_position_id = GEH_hina_panopticon_institution
 		x = -1
 		y = 1
+
+		available = {
+			has_completed_focus = GEH_hina_terror_route_start
+		}
 
         prerequisite = {
             focus = GEH_hina_panopticon_institution
@@ -6635,6 +6987,10 @@ focus_tree = {
 		relative_position_id = GEH_hina_panopticon_institution
 		x = 1
 		y = 1
+
+		available = {
+			has_completed_focus = GEH_hina_the_darkest_hour
+		}
 
         prerequisite = {
             focus = GEH_hina_panopticon_institution
