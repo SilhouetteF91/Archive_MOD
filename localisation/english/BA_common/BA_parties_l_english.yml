@@ -287,6 +287,10 @@
 
  GEH_pro_robot_hina_party:0 "게헨나 친위부"
  GEH_pro_robot_hina_party_long:0 "게헨나 친위부"
+ GEH_pro_hina_party:0 "청년 게헨나당"
+ GEH_pro_hina_party_long:0 "청년 게헨나당"
+ GEH_hina_terror_party:0 "게헨나 질서부"
+ GEH_hina_terror_party_long:0 "게헨나 질서부"
 
  KaiserCorporationGeneralMeeting:0 "카이저 노동자 협동조합 운영위원회"
  GeneralMeeting:0 "협동조합 운영위원회"
