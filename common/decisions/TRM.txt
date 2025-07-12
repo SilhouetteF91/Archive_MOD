@@ -7168,6 +7168,7 @@ TRN_Mika_honor_decision_cat = {
 			political_power_factor = -0.15
 			war_support_weekly = 0.001
 			army_org_factor = 0.03
+			stability_factor = -0.05
 		}
 
 		ai_will_do = { base = 0 }
@@ -7179,6 +7180,7 @@ TRN_Mika_honor_decision_cat = {
 			IF = {
 				limit = { has_idea = TRN_new_culture_militarism_ns }
 				add_war_support = 0.04
+				add_stability  = -0.02
 
 				add_popularity = {
 					ideology = fascism
@@ -7193,7 +7195,7 @@ TRN_Mika_honor_decision_cat = {
 			}
 			else = {
 				add_war_support = 0.02
-				add_stability  = -0.02
+				add_stability  = -0.04
 
 				add_popularity = {
 					ideology = fascism
@@ -7352,7 +7354,7 @@ TRN_Mika_honor_decision_cat = {
 		icon = GFX_decision_generic_reorganize_irregulars
 
 		allowed = { always = no }
-		available = { has_completed_focus = TRN_national_guard }
+		available = { has_completed_focus = TRN_intelligence_agency }
 		visible = {
 			has_idea = TRN_trinity_volunteer_corps_ns
 		}
@@ -7474,6 +7476,225 @@ TRN_economic_evelopment_department = {
 					instant_build = yes
 				}
 			}
+		}
+	}
+	
+	
+	TRN_ammo_factory_decision  = {
+		priority = 100
+		icon = GFX_decision_generic_factory
+
+		ai_will_do = { 
+			base = 40 
+			modifier = {
+				arms_factory < 50
+				add = 100
+			}
+		}
+		allowed = { original_tag = TRM }
+
+		visible = { }
+
+		available = { }
+
+		cost = 35
+		days_remove = 70
+		fire_only_once = yes
+
+		modifier = {
+
+		}
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+			}
+		}
+	}
+	
+	TRN_air_factory_decision  = {
+		priority = 100
+		icon = GFX_decision_generic_merge_plant_aircraft
+
+		ai_will_do = { 
+			base = 40 
+			modifier = {
+				arms_factory < 50
+				add = 100
+			}
+		}
+		allowed = { original_tag = TRM }
+
+		visible = { }
+
+		available = { }
+
+		cost = 35
+		days_remove = 70
+
+		modifier = {
+
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+
+			air_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = air_equipment
+			}
+		}
+	}
+	
+	TRN_design_bureau_and_arsenal_expansion  = {
+		priority = 100
+		icon = GFX_decision_gre_investment_decisions
+
+		ai_will_do = { 
+			base = 3
+		}
+		allowed = { original_tag = TRM }
+
+		visible = {
+			NOT = { has_country_flag = TRN_design_bureau_and_arsenal_expansion_completed }
+		}
+
+		available = { }
+
+		cost = 35
+		days_remove = 70
+
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			set_country_flag = TRN_design_bureau_and_arsenal_expansion_completed
+			mio:TRM_royal_arsenal_organization = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.25
+				add_mio_research_bonus = 0.05
+			}
+			mio:TRM_infantry_equipment_organization = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.25
+				add_mio_research_bonus = 0.05
+			}
+			mio:TRM_support_equipment_organization = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.25
+				add_mio_research_bonus = 0.05
+			}
+		}
+	}
+	
+	TRN_takeover_of_german_tank_factories  = {
+		priority = 100
+		icon = GFX_decision_gre_investment_decisions
+
+		ai_will_do = { 
+			base = 3
+		}
+		allowed = { original_tag = TRM }
+
+		visible = {
+			
+		}
+
+		available = { }
+
+		cost = 35
+		days_remove = 70
+
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			mio:TRM_royal_arsenal_organization = {
+				add_mio_size = 2
+			}
+			mio:TRM_vickers_armstrong_eng_organization = {
+				add_mio_size = 1
+			}
+
+			army_experience = 25
+			
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cat_medium_armor
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+			}
+
+
 		}
 	}
 }
@@ -8167,6 +8388,7 @@ TRN_trinity_world_cat = {
 			FROM = { 
 				check_variable = { TRN_support_HYA_var < 3 } 
 			}
+			has_completed_focus = TRN_support_HYA
 		}
 		fire_only_once = no
 
@@ -8423,6 +8645,55 @@ TRN_trinity_world_cat = {
 		}
 	}
 
+	TRN_invite_alliance = {
+		name = invite_country
+		icon = GFX_decision_SWI_support_humanitarian_efforts
+		allowed = { always = no } 
+
+		available = {
+			FROM = {
+				has_war = no 
+				NOT = { any_claim = yes } 
+				is_in_faction = no
+			}
+		}
+
+		visible = {
+			is_faction_leader = yes
+			FROM = {
+				exists = yes
+				is_subject = no
+				OR = {
+					is_in_faction = no
+					is_faction_leader = yes
+				}
+				NOT = { has_war_with = ROOT }
+				has_government = communism
+			}
+		}
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				FROM = { 
+					any_owned_state = { 
+						OR = {
+							is_claimed_by = ROOT
+							is_core_of = ROOT
+						}
+					} 
+				}
+			}
+			modifier = {
+				factor = 0
+				surrender_progress > 0.05
+			}
+		}
+	}
+
 }
 TRN_Mika_social_problem_cat = {
 	TRN_Mika_social_problem = {
@@ -8463,34 +8734,6 @@ TRN_Mika_social_problem_cat = {
 		}
 		cancel_effect = {
 			clear_variable = TRN_Mika_social_problem_var
-		}
-	}
-
-	TRN_Mika_sp_national_guard = {
-		icon = GFX_decision_generic_reorganize_irregulars
-		allowed = { }
-		available = { has_completed_focus = TRN_national_guard }
-
-		cost = 40
-		days_remove = 60
-
-		fire_only_once = yes
-
-		ai_will_do = {
-			base = 10
-			modifier = {
-				factor = 4
-				has_active_mission = TRN_Mika_social_problem
-			}
-			modifier = {
-				factor = 0
-			}
-		}
-		complete_effect = {
-			add_to_variable = {
-				TRN_Mika_social_problem_days = 15
-				tooltip = TRN_Mika_social_problem_days_tt 
-			}
 		}
 	}
 

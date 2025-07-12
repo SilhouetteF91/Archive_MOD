@@ -1025,6 +1025,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_3_tt
+				pdx_tooltip_delayed = highlight_major_3_2_tt
 			}
 
 			iconType = {
@@ -1034,6 +1035,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_3_tt
+				pdx_tooltip_delayed = highlight_major_3_2_tt
 			}
 
 			iconType = {
@@ -1043,6 +1045,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_3_tt
+				pdx_tooltip_delayed = highlight_major_3_2_tt
 			}
 		}
 

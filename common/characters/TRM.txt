@@ -349,8 +349,8 @@ characters={
             ai_will_do = { factor = 30 }
 		}
 	}
-	TRN_dnxkwmal_tkznfkzh={ #우타즈미 사쿠라코
-		name=TRN_dnxkwmal_tkznfkzh
+	TRN_Utazumi_Sakurako={ #우타즈미 사쿠라코
+		name=TRN_Utazumi_Sakurako
 		portraits={
 			civilian={
 				large= GFX_TRN_Utazumi_Sakurako_Portrait

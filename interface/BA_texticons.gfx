@@ -321,5 +321,11 @@ spriteTypes = {
 		texturefile = "gfx/texticons/introscreen/TRM_path_texticon.dds"
 		legacy_lazy_load = no
 	}
+	
+	spriteType = {
+		name = "GFX_white"
+		texturefile = "gfx/texticons/introscreen/white.png"
+		legacy_lazy_load = no
+	}
 
 }

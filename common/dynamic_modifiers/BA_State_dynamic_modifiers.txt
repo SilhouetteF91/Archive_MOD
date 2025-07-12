@@ -547,6 +547,7 @@ TRM_industrial_region_state = {
 	
 	state_production_speed_buildings_factor = 0.1
 	local_building_slots = 1
+	state_resources_factor = 0.1
 }
 
 GEK_protestant_state = { # 주 모디파이어
