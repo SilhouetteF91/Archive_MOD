@@ -936,7 +936,6 @@ GEH_gehenna_order_department_idea = { #[ROOT.GetAdjective] 질서부
 	cas_damage_reduction = GEH_gehenna_order_department_idea_cas_damage_reduction
 	max_dig_in = GEH_gehenna_order_department_idea_max_dig_in
 	dig_in_speed_factor = GEH_gehenna_order_department_idea_dig_in_speed_factor
-	training_time_factor = GEH_gehenna_order_department_idea_training_time_factor
 	
 	non_core_manpower = GEH_gehenna_order_department_idea_non_core_manpower
 	conscription_factor = GEH_gehenna_order_department_idea_conscription_factor
