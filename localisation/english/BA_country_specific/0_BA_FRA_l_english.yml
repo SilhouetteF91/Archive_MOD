@@ -774,6 +774,10 @@
  FRA_rebuild_dec_desc:0 "우리는 프랑스를 재건하여야 합니다. 만약 재건이 지체된다면, 프랑스의 민중들이 피로감에 휩싸여 새로운 정권을 갈구하게 될 것입니다."
 
  #국민정신
+    #이너써클
+ FRA_laval_prime_minister: "내각 총리"
+ FRA_laval_prime_minister_desc: "왜뜨다맒"
+
     #산업
  FRA_controlled_economy: "통제 경제"
  FRA_compagnie_algerienne: "알제리 신용 및 금융 회사"

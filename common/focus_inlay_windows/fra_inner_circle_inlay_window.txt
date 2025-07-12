@@ -59,6 +59,10 @@ fra_inner_circle_inlay_window = {
 
         #ASCENDED
         ascended_advisor_1_portrait = {
+            GFX_portrait_fra_pierre_laval = {
+       			check_variable = { FRA_ascended_advisor_1 = 1 }
+            }
+
             GFX_blank_leader_portrait = {
                 check_variable = { GER_ascended_advisor_1 = 0 }
             }

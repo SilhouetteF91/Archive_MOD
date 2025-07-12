@@ -19,6 +19,11 @@ ideas = {
 	}
 	country = {
 		#식민지인들의 저항
+		FRA_laval_prime_minister = {
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
 		FRA_resistance_of_locals_8 = { #식민지인들의 저항
 			name = FRA_resistance_of_locals
 			picture = chi_war_of_resistance3

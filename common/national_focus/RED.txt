@@ -3928,7 +3928,7 @@ focus_tree = {
 					level = 1
 				}
 				add_building_construction = {
-					type = BA_onsen
+					type = dam
 					level = 1
 					province = 11148
 				}
