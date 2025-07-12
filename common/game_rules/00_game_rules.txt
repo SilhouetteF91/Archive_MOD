@@ -30,7 +30,7 @@ allow_wargoals = {
 		text = RULE_OPTION_ALWAYS_FREE
 		desc = "RULE_ALLOW_WARGOALS_ALWAYS_FREE_DESC"
 	}
-	default = {
+	option = {
 		name = "LIMITED"
 		text = "RULE_OPTION_LIMITED"
 		desc = "RULE_ALLOW_WARGOALS_LIMITED_DESC"
@@ -60,7 +60,7 @@ allow_wargoals = {
 		text = RULE_OPTION_FOCUSES_ONLY
 		desc = "RULE_ALLOW_WARGOALS_FOCUSES_ONLY_DESC"
 	}
-	option = {
+	default = {
 		name = "FOCUSES_ONLY_UNTIL_38"
 		text = RULE_OPTION_FOCUSES_ONLY_38
 		desc = "RULE_ALLOW_WARGOALS_FOCUSES_ONLY_38_DESC"
@@ -2783,6 +2783,24 @@ AFG_ai_behavior = {
 		name = COMMUNIST
 		text = "RULE_OPTION_COMMUNIST"
 		desc = "RULE_OPTION_COMMUNIST_AFG_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = CALIPHATE
+		text = "RULE_OPTION_CALIPHATE_AFG"
+		desc = "RULE_OPTION_CALIPHATE_AFG_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = EMPIRE
+		text = "RULE_OPTION_EMPIRE_AFG"
+		desc = "RULE_OPTION_EMPIRE_AFG_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = MUGHALS
+		text = "RULE_OPTION_MUGHAL_AFG"
+		desc = "RULE_OPTION_MUGHAL_AFG_AI_DESC"
 		allow_achievements = no
 	}
 	option = {
