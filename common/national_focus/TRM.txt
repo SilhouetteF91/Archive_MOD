@@ -6898,7 +6898,6 @@ focus_tree = {
 		icon = GFX_focus_generic_university_3
 		prerequisite = { 
 			focus = TRN_bring_in_vigilantes 
-			focus = TRN_fight_with_junker
 		}
 		x = 1
 		y = 1
@@ -6933,7 +6932,6 @@ focus_tree = {
 		icon = GFX_focus_generic_energy
 		prerequisite = { 
 			focus = TRN_bring_in_vigilantes 
-			focus = TRN_fight_with_junker
 		}
 		x = 0
 		y = 2
@@ -6970,7 +6968,6 @@ focus_tree = {
 		icon = GFX_focus_generic_railroad
 		prerequisite = { 
 			focus = TRN_bring_in_vigilantes 
-			focus = TRN_fight_with_junker
 		}
 		x = 2
 		y = 2
