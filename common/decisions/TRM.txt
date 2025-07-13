@@ -7120,6 +7120,11 @@ TRN_Mika_honor_decision_cat = {
 			TRN_add_Honor = yes
 
 			add_political_power = 25
+
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
 		}
 	}
 
@@ -7251,6 +7256,8 @@ TRN_Mika_honor_decision_cat = {
 
 		ai_will_do = { base = 0 }
 
+		fire_only_once = yes
+
 		complete_effect = {
 			add_political_power = 15
 			
@@ -7276,9 +7283,10 @@ TRN_Mika_honor_decision_cat = {
 		}
 
 		ai_will_do = { base = 0 }
+		fire_only_once = yes
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = -2 }
+			set_temp_variable = { TRN_Honor_change = -7 }
 			TRN_add_Honor = yes
 
        		add_power_balance_value = {
@@ -8731,6 +8739,8 @@ TRN_Mika_social_problem_cat = {
 			add_to_variable = { TRN_Mika_social_problem_var = 1 }
 
 			add_stability = -0.03
+
+			activate_mission = TRN_Mika_social_problem
 		}
 		cancel_effect = {
 			clear_variable = TRN_Mika_social_problem_var

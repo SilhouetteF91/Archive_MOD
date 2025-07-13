@@ -10085,6 +10085,8 @@ country_event = { # 우리만의 자본가
 			id = TRM_power_balance
 			value = -0.05
 		}
+		set_temp_variable = { TRN_Honor_change = -3 }
+		TRN_add_Honor = yes
     }
 
 	option = { 
@@ -10356,13 +10358,20 @@ country_event = { # 아리우스용
 	desc = trinity.46.desc
 	picture = GFX_report_event_generic_trinity_front_gate
 
-	is_triggered_only = yes
-	fire_only_once = no
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = TRM
+		any_country = {
+			check_variable = { ARI_eye_var = 2 }
+		}
+	}
 
 
 	option = {
 		name = trinity.46.a
-
+		custom_effect_tooltip = TRN_after_this_operation_against_arius_tt
 	}
 }
 
