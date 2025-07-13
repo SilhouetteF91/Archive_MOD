@@ -145,7 +145,7 @@ fra_inner_circle_inlay_window = {
             GFX_ascended_advisors_frame = {
                 check_variable = { GER_ascended_advisor_1 = 0 compare = not_equals }	
             }
-            GFX_fra_ascended_advisors_unappointed_frame = yes
+            GFX_fra_ascended_ministers_unappointed_frame = yes
         }
         ascended_advisor_2_frame = {
             GFX_ascended_advisors_frame = {
