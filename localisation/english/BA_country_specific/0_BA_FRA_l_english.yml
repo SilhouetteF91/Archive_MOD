@@ -777,6 +777,9 @@
     #이너써클
  FRA_laval_prime_minister: "내각 총리"
  FRA_laval_prime_minister_desc: "왜뜨다맒"
+ FRA_ascended_advisor_1_name_text: "§Y[BA_GetAscendedAdvisorName1]§!"
+ FRA_ascended_advisor_2_name_text: "§Y[BA_GetAscendedAdvisorName2]§!"
+ FRA_ascended_advisor_3_name_text: "§Y[BA_GetAscendedAdvisorName3]§!"
 
     #산업
  FRA_controlled_economy: "통제 경제"

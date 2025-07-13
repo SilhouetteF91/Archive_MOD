@@ -5143,8 +5143,7 @@ country_event = {
             news_event = { id = BA_news.66 hours = 3 }
 			set_country_flag = FRA_exile_is_over
 			mark_focus_tree_layout_dirty = yes
-			complete_national_focus = FRA_leading_of_fatherland
-			complete_national_focus = FRA_laval_focus_0
+			unlock_national_focus = FRA_leading_of_fatherland
 		}
 		custom_effect_tooltip = FRA_prov_event.120_tt
 	}
