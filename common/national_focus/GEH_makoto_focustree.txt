@@ -1358,7 +1358,7 @@ focus_tree = {
 		relative_position_id = GEM_food_supply_network
 		completion_reward = {
 			add_to_variable = {
-				GEH_HSD_var_GEH_resistance_strength_gourmet_research_society = 1
+				GEH_HSD_var_GEH_resistance_strength_gourmet_research_society = -1
 				tooltip = GEH_resistance_strength_gourmet_research_society_var_tt
 			}
 			GEM_club_problem_decision_modifier_reload = yes

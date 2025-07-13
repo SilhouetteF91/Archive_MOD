@@ -926,13 +926,13 @@
  gem_club_problem_decision_select_2_cp: "§Y감시§!\n\n안정도: §G+2.00%§!"
  gem_club_problem_decision_select_3_cp: "§Y탄압§!\n\n동아리 저항: §G-1§!\n환심 획득: §R-25%§!\n안정도: §R-5.00%§!"
 
- gourmet_research_society_progress_bar_HEU_side_var_tt: " §Y@HEU 흥신소§!를 향한 §Y미식연구회§!의 환심: $RIGHT|+=.0$\n"
- gourmet_research_society_progress_bar_GEM_side_var_tt: " §Y@GEM 만마전§!을 향한 §Y미식연구회§!의 환심: $RIGHT|+=.0$\n"
- gourmet_research_society_progress_bar_GEH_side_var_tt: " §Y@GEH 선도부§!를 향한 §Y미식연구회§!의 환심: $RIGHT|+=.0$\n"
+ gourmet_research_society_progress_bar_HEU_side_var_tt: " §Y@HEU 흥신소§!를 향한 §Y미식연구회§!의 환심: $RIGHT|+=.2$\n"
+ gourmet_research_society_progress_bar_GEM_side_var_tt: " §Y@GEM 만마전§!을 향한 §Y미식연구회§!의 환심: $RIGHT|+=.2$\n"
+ gourmet_research_society_progress_bar_GEH_side_var_tt: " §Y@GEH 선도부§!를 향한 §Y미식연구회§!의 환심: $RIGHT|+=.2$\n"
 
- hot_spring_department_progress_bar_HEU_side_var_tt: " §Y@HEU 흥신소§!를 향한 §Y온천개발부§!의 환심: $RIGHT|+=.0$\n"
- hot_spring_department_progress_bar_GEM_side_var_tt: " §Y@GEM 만마전§!을 향한 §Y온천개발부§!의 환심: $RIGHT|+=.0$\n"
- hot_spring_department_progress_bar_GEH_side_var_tt: " §Y@GEH 선도부§!를 향한 §Y온천개발부§!의 환심: $RIGHT|+=.0$\n"
+ hot_spring_department_progress_bar_HEU_side_var_tt: " §Y@HEU 흥신소§!를 향한 §Y온천개발부§!의 환심: $RIGHT|+=.2$\n"
+ hot_spring_department_progress_bar_GEM_side_var_tt: " §Y@GEM 만마전§!을 향한 §Y온천개발부§!의 환심: $RIGHT|+=.2$\n"
+ hot_spring_department_progress_bar_GEH_side_var_tt: " §Y@GEH 선도부§!를 향한 §Y온천개발부§!의 환심: $RIGHT|+=.2$\n"
 
  gem_club_problem_decision_GEH_GRS_tt: "현재 저항 단계: [gem_club_problem_decision_gourmet_research_society_lv_loc]\n\n기본 저항 단계: [?GEH_HSD_var_GEH_resistance_strength_gourmet_research_society|Y.0]"
  gem_club_problem_decision_GEH_HSD_tt: "현재 저항 단계: [gem_club_problem_decision_hot_spring_department_lv_loc]\n\n기본 저항 단계: [?GEH_HSD_var_GEH_resistance_strength_hot_spring_department|Y.0]"

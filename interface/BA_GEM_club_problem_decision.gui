@@ -93,6 +93,20 @@ guiTypes = {
 					pdx_tooltip = gem_club_problem_decision_select_3_cp
 				}
 			}
+				
+			iconType = {
+				name = "gem_club_problem_gourmet_research_society_progress_bar_GEM_side"
+				spriteType = "GFX_club_problem_progress_bar_GEM_side"
+				pdx_tooltip = red_second_great_northern_war_re1_progressbar_tt
+				position = { x=20 y=120 }
+			}
+			
+			iconType = {
+				name = "gem_club_problem_gourmet_research_society_progress_bar_GEH_side"
+				spriteType = "GFX_club_problem_progress_bar_GEH_side"
+				pdx_tooltip = red_second_great_northern_war_re1_progressbar_tt
+				position = { x=20 y=145 }
+			}
 
 			iconType = {
 				name = "gem_club_problem_gourmet_research_society_progress_point_1_GEM_side_def"
@@ -128,20 +142,6 @@ guiTypes = {
 				name = "gem_club_problem_gourmet_research_society_progress_point_3_GEH_side_def"
 				spriteType = "GFX_club_problem_progress_point_def"
 				position = { x=450 y=143 }
-			}
-				
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_bar_GEM_side"
-				spriteType = "GFX_club_problem_progress_bar_GEM_side"
-				pdx_tooltip = red_second_great_northern_war_re1_progressbar_tt
-				position = { x=20 y=120 }
-			}
-			
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_bar_GEH_side"
-				spriteType = "GFX_club_problem_progress_bar_GEH_side"
-				pdx_tooltip = red_second_great_northern_war_re1_progressbar_tt
-				position = { x=20 y=145 }
 			}
 
 			iconType = {
@@ -272,6 +272,20 @@ guiTypes = {
 					pdx_tooltip = gem_club_problem_decision_select_3_cp
 				}
 			}
+				
+			iconType = {
+				name = "gem_club_problem_hot_spring_department_progress_bar_GEM_side"
+				spriteType = "GFX_club_problem_progress_bar_GEM_side"
+				pdx_tooltip = red_second_great_northern_war_re1_progressbar_tt
+				position = { x=20 y=120 }
+			}
+			
+			iconType = {
+				name = "gem_club_problem_hot_spring_department_progress_bar_GEH_side"
+				spriteType = "GFX_club_problem_progress_bar_GEH_side"
+				pdx_tooltip = red_second_great_northern_war_re1_progressbar_tt
+				position = { x=20 y=145 }
+			}
 
 			iconType = {
 				name = "gem_club_problem_hot_spring_department_progress_point_1_GEM_side_def"
@@ -307,20 +321,6 @@ guiTypes = {
 				name = "gem_club_problem_hot_spring_department_progress_point_3_GEH_side_def"
 				spriteType = "GFX_club_problem_progress_point_def"
 				position = { x=450 y=143 }
-			}
-				
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_bar_GEM_side"
-				spriteType = "GFX_club_problem_progress_bar_GEM_side"
-				pdx_tooltip = red_second_great_northern_war_re1_progressbar_tt
-				position = { x=20 y=120 }
-			}
-			
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_bar_GEH_side"
-				spriteType = "GFX_club_problem_progress_bar_GEH_side"
-				pdx_tooltip = red_second_great_northern_war_re1_progressbar_tt
-				position = { x=20 y=145 }
 			}
 
 			iconType = {

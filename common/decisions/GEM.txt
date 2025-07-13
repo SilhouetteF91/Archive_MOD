@@ -1247,7 +1247,9 @@ GEM_club_problem_decision = {
 			}
 		}
 		available = {
-			NOT = { has_decision = GEH_gourmet_research_society_down }
+			NOT = {
+				has_decision = GEH_gourmet_research_society_down
+			}
 		}
 		cost = 0
 		fire_only_once = no
@@ -1261,32 +1263,8 @@ GEM_club_problem_decision = {
 			GEH_resistance_strength_gourmet_research_society = 1
 		}
 		complete_effect = {
-			if = { #특정 상황에서 흥신소는 만마전을 대체합니다.
-				limit = {
-					original_tag = HEU
-				}
-				add_to_variable = {
-					global.gourmet_research_society_progress_bar_GEM_side_var = 3
-					tooltip = gourmet_research_society_progress_bar_HEU_side_var_tt
-				}
-			}
-			if = {
-				limit = {
-					original_tag = GEM
-				}
-				add_to_variable = {
-					global.gourmet_research_society_progress_bar_GEM_side_var = 3
-					tooltip = gourmet_research_society_progress_bar_GEM_side_var_tt
-				}
-			}
-			if = {
-				limit = {
-					original_tag = GEH
-				}
-				add_to_variable = {
-					global.gourmet_research_society_progress_bar_GEH_side_var = 3
-					tooltip = gourmet_research_society_progress_bar_GEH_side_var_tt
-				}
+			set_temp_variable = {
+				gem_club_problem_progress_bar_temp = 3
 			}
 			GEH_gourmet_research_society_effect = yes
 			GEM_club_problem_decision_modifier_reload = yes
@@ -1306,7 +1284,9 @@ GEM_club_problem_decision = {
 			}
 		}
 		available = {
-			NOT = { has_decision = GEH_gourmet_research_society_up }
+			NOT = {
+				has_decision = GEH_gourmet_research_society_up
+			}
 		}
 		cost = var:GEH_gourmet_research_society_down_cost
 		fire_only_once = no
@@ -1324,62 +1304,36 @@ GEM_club_problem_decision = {
 			add_to_variable = {
 				GEH_gourmet_research_society_down_cost = 5
 			}
-			if = { #특정 상황에서 흥신소는 만마전을 대체합니다.
+			if = {
+				#특정 상황에서 흥신소는 만마전을 대체합니다.
 				limit = {
 					original_tag = HEU
-				}
-				if = {
-					limit = {
-						check_variable = {
-							global.gourmet_research_society_progress_bar_GEM_side_var < 1
-						}
-					}
-					add_war_support = -0.01
-				}
-				else = {
-					add_to_variable = {
-						global.gourmet_research_society_progress_bar_GEM_side_var = -5
-						tooltip = gourmet_research_society_progress_bar_HEU_side_var_tt
+					check_variable = {
+						global.gourmet_research_society_progress_bar_GEM_side_var < 1
 					}
 				}
+				add_war_support = -0.01
 			}
 			if = {
 				limit = {
 					original_tag = GEM
-				}
-				if = {
-					limit = {
-						check_variable = {
-							global.gourmet_research_society_progress_bar_GEM_side_var < 1
-						}
-					}
-					add_war_support = -0.01
-				}
-				else = {
-					add_to_variable = {
-						global.gourmet_research_society_progress_bar_GEM_side_var = -5
-						tooltip = gourmet_research_society_progress_bar_GEM_side_var_tt
+					check_variable = {
+						global.gourmet_research_society_progress_bar_GEM_side_var < 1
 					}
 				}
+				add_war_support = -0.01
 			}
 			if = {
 				limit = {
 					original_tag = GEH
-				}
-				if = {
-					limit = {
-						check_variable = {
-							global.gourmet_research_society_progress_bar_GEH_side_var < 1
-						}
-					}
-					add_war_support = -0.01
-				}
-				else = {
-					add_to_variable = {
-						global.gourmet_research_society_progress_bar_GEH_side_var = -5
-						tooltip = gourmet_research_society_progress_bar_GEH_side_var_tt
+					check_variable = {
+						global.gourmet_research_society_progress_bar_GEH_side_var < 1
 					}
 				}
+				add_war_support = -0.01
+			}
+			set_temp_variable = {
+				gem_club_problem_progress_bar_temp = -5
 			}
 			GEH_gourmet_research_society_effect = yes
 			GEM_club_problem_decision_modifier_reload = yes
@@ -1399,7 +1353,9 @@ GEM_club_problem_decision = {
 			}
 		}
 		available = {
-			NOT = { has_decision = GEH_hot_spring_department_down }
+			NOT = {
+				has_decision = GEH_hot_spring_department_down
+			}
 		}
 		cost = 0
 		fire_only_once = no
@@ -1413,32 +1369,8 @@ GEM_club_problem_decision = {
 			GEH_resistance_strength_hot_spring_department = 1
 		}
 		complete_effect = {
-			if = { #특정 상황에서 흥신소는 만마전을 대체합니다.
-				limit = {
-					original_tag = HEU
-				}
-				add_to_variable = {
-					global.hot_spring_department_progress_bar_GEM_side_var = 3
-					tooltip = gourmet_research_society_progress_bar_HEU_side_var_tt
-				}
-			}
-			if = {
-				limit = {
-					original_tag = GEM
-				}
-				add_to_variable = {
-					global.hot_spring_department_progress_bar_GEM_side_var = 3
-					tooltip = hot_spring_department_progress_bar_GEM_side_var_tt
-				}
-			}
-			if = {
-				limit = {
-					original_tag = GEH
-				}
-				add_to_variable = {
-					global.hot_spring_department_progress_bar_GEH_side_var = 3
-					tooltip = hot_spring_department_progress_bar_GEH_side_var_tt
-				}
+			set_temp_variable = {
+				gem_club_problem_progress_bar_temp = 3
 			}
 			GEH_hot_spring_department_effect = yes
 			GEM_club_problem_decision_modifier_reload = yes
@@ -1458,7 +1390,9 @@ GEM_club_problem_decision = {
 			}
 		}
 		available = {
-			NOT = { has_decision = GEH_hot_spring_department_up }
+			NOT = {
+				has_decision = GEH_hot_spring_department_up
+			}
 		}
 		cost = var:GEH_hot_spring_department_down_cost
 		fire_only_once = no
@@ -1476,62 +1410,36 @@ GEM_club_problem_decision = {
 			add_to_variable = {
 				GEH_hot_spring_department_down_cost = 5
 			}
-			if = { #특정 상황에서 흥신소는 만마전을 대체합니다.
+			if = {
+				#특정 상황에서 흥신소는 만마전을 대체합니다.
 				limit = {
 					original_tag = HEU
-				}
-				if = {
-					limit = {
-						check_variable = {
-							global.hot_spring_department_progress_bar_GEM_side_var < 1
-						}
-					}
-					add_war_support = -0.01
-				}
-				else = {
-					add_to_variable = {
-						global.hot_spring_department_progress_bar_GEM_side_var = -5
-						tooltip = hot_spring_department_progress_bar_HEU_side_var_tt
+					check_variable = {
+						global.hot_spring_department_progress_bar_GEM_side_var < 1
 					}
 				}
+				add_war_support = -0.01
 			}
 			if = {
 				limit = {
 					original_tag = GEM
-				}
-				if = {
-					limit = {
-						check_variable = {
-							global.hot_spring_department_progress_bar_GEM_side_var < 1
-						}
-					}
-					add_war_support = -0.01
-				}
-				else = {
-					add_to_variable = {
-						global.hot_spring_department_progress_bar_GEM_side_var = -5
-						tooltip = hot_spring_department_progress_bar_GEM_side_var_tt
+					check_variable = {
+						global.hot_spring_department_progress_bar_GEM_side_var < 1
 					}
 				}
+				add_war_support = -0.01
 			}
 			if = {
 				limit = {
 					original_tag = GEH
-				}
-				if = {
-					limit = {
-						check_variable = {
-							global.hot_spring_department_progress_bar_GEH_side_var < 1
-						}
-					}
-					add_war_support = -0.01
-				}
-				else = {
-					add_to_variable = {
-						global.hot_spring_department_progress_bar_GEH_side_var = -5
-						tooltip = hot_spring_department_progress_bar_GEH_side_var_tt
+					check_variable = {
+						global.hot_spring_department_progress_bar_GEH_side_var < 1
 					}
 				}
+				add_war_support = -0.01
+			}
+			set_temp_variable = {
+				gem_club_problem_progress_bar_temp = -5
 			}
 			GEH_hot_spring_department_effect = yes
 			GEM_club_problem_decision_modifier_reload = yes
