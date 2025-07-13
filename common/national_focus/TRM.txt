@@ -6697,25 +6697,37 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 융커와의 투쟁
-		id = TRN_fight_with_junker
-		icon = GFX_focus_generic_workers_and_farmers_rise
-		#prerequisite = { focus = TRN_bring_in_vigilantes }
-		x = 4
-		y = 0
+	focus = { # 몰수, 분배, 집단화
+		id = TRN_confiscation_distribution_collectivization
+		icon = GFX_focus_generic_land_reclamation
+		prerequisite = { focus = TRN_bring_in_vigilantes }
+		x = 3
+		y = 1
 		relative_position_id = TRN_bring_in_vigilantes
-		cost = 4
+		cost = 5
 
 		available = {
 			has_full_control_of_state = 68
 			has_full_control_of_state = 63
+			
 		}
+		mutually_exclusive = { focus = TRN_cooperation_with_junker }
 
 		ai_will_do = {
 
 		}
-		completion_reward = {
+		select_effect = {
+			add_stability = -0.02
 			country_event = { id = trnfla.23 }
+		}
+		completion_reward = {
+			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
+			effect_tooltip = {
+				add_stability = -0.02
+			}
+			custom_effect_tooltip = tooltip_effect_upon_focus_completion
+			add_ideas = TRM_trinity_farm_ns
+			
 			63 = { #힌터포메른
 				BA_increase_state_category_by_one_level = yes
 			}
@@ -6746,46 +6758,18 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 몰수, 분배, 집단화
-		id = TRN_confiscation_distribution_collectivization
-		icon = GFX_focus_generic_land_reclamation
-		prerequisite = { focus = TRN_fight_with_junker }
-		x = -1
-		y = 1
-		relative_position_id = TRN_fight_with_junker
-		cost = 8
-
-		available = {
-			
-		}
-		mutually_exclusive = { focus = TRN_cooperation_with_junker }
-
-		ai_will_do = {
-
-		}
-		select_effect = {
-			add_stability = -0.02
-		}
-		completion_reward = {
-			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
-			effect_tooltip = {
-				add_stability = -0.02
-			}
-			custom_effect_tooltip = tooltip_effect_upon_focus_completion
-			add_ideas = TRM_trinity_farm_ns
-		}
-	}
-
 	focus = { # 융커와의 협력
 		id = TRN_cooperation_with_junker
 		icon = GFX_focus_BRA_reach_out_to_military_dem
-		prerequisite = { focus = TRN_fight_with_junker }
-		x = 1
+		prerequisite = { focus = TRN_bring_in_vigilantes }
+		x = 5
 		y = 1
-		relative_position_id = TRN_fight_with_junker
+		relative_position_id = TRN_bring_in_vigilantes
 		cost = 5
 
 		available = {
+			has_full_control_of_state = 68
+			has_full_control_of_state = 63
 			
 		}
 		mutually_exclusive = { focus = TRN_confiscation_distribution_collectivization }
@@ -6793,8 +6777,39 @@ focus_tree = {
 		ai_will_do = {
 
 		}
+		select_effect = {
+			country_event = { id = trnfla.23 }
+		}
 		completion_reward = {
-				add_ideas = TRM_cop_of_junker_ns
+			add_ideas = TRM_cop_of_junker_ns
+				
+			63 = { #힌터포메른
+				BA_increase_state_category_by_one_level = yes
+			}
+			if = {
+				limit = { 
+					63 = { infrastructure < 5 }  # 힌터포메른
+				}
+				63 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					68 = { infrastructure < 5 }  # 오스트마르크
+				}
+				68 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -6805,9 +6820,9 @@ focus_tree = {
 			focus = TRN_cooperation_with_junker 
 			focus = TRN_confiscation_distribution_collectivization
 		}
-		x = 0
+		x = 4
 		y = 2
-		relative_position_id = TRN_fight_with_junker
+		relative_position_id = TRN_bring_in_vigilantes
 		cost = 7
 
 		available = {
