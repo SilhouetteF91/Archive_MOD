@@ -2023,6 +2023,22 @@ spriteTypes = {
 		name = "GFX_goal_GEH_distinction_of_zealous_members"
 		textureFile = "gfx/interface/goals/GEH/GEH_distinction_of_zealous_members.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_GEH_hina_country_for_the_public"
+		textureFile = "gfx/interface/goals/GEH/GEH_hina_country_for_the_public.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_hina_freie_gehenna_jugend"
+		textureFile = "gfx/interface/goals/GEH/GEH_hina_freie_gehenna_jugend.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_hina_ishbosheth"
+		textureFile = "gfx/interface/goals/GEH/GEH_hina_ishbosheth.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_hina_jacobinisme_reform"
+		textureFile = "gfx/interface/goals/GEH/GEH_hina_jacobinisme_reform.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_focus_GEH_unified_gehenna_makoto"

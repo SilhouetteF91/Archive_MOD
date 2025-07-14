@@ -6471,7 +6471,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_hina_ishbosheth
-		icon = GFX_focus_BEL_government_resigns
+		icon = GFX_goal_GEH_hina_ishbosheth
 		cost = 3
 
 		relative_position_id = GEH_last_focus_effect_h_rout
@@ -6510,7 +6510,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_hina_jacobinisme_reform
-		icon = GFX_focus_PER_march_on_saadabad
+		icon = GFX_goal_GEH_hina_jacobinisme_reform
 		cost = 5
 
 		relative_position_id = GEH_hina_ishbosheth
@@ -6713,7 +6713,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_hina_freie_gehenna_jugend
-		icon = GFX_focus_GER_form_the_stasi
+		icon = GFX_goal_GEH_hina_freie_gehenna_jugend
 		cost = 5
 
 		relative_position_id = GEH_hina_new_constitution
@@ -6779,7 +6779,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_hina_country_for_the_public
-		icon = GFX_focus_GER_customs_union
+		icon = GFX_goal_GEH_hina_country_for_the_public
 		cost = 5
 
 		relative_position_id = GEH_hina_new_constitution

@@ -1537,41 +1537,6 @@ war_measures = {
 }
 
 political_actions = {
-	GEH_suspension_of_public_order_maintenance = {
-		priority = 99
-		icon = GFX_decision_generic_ignite_civil_war
-		allowed = {
-			original_tag = GEH
-		}
-		visible = {
-			GEM = {
-				has_idea = GEM_geh_leadership
-			}
-		}
-		cost = 25
-		complete_effect = {
-			GEM = {
-				country_event = {
-					id = GEH_event.70
-					hours = 8
-				}
-				remove_ideas = GEM_geh_leadership
-			}
-		}
-		ai_will_do = {
-			base = 0
-			modifier = {
-				GEM = {
-					has_offensive_war_with = TRM
-				}
-				add = 400
-			}
-			modifier = {
-				has_war_with = GEM
-				add = 400
-			}
-		}
-	}
 	GEM_expulsion_of_security_organization = {
 		priority = 99
 		icon = GFX_decision_generic_ignite_civil_war

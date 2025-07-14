@@ -4711,6 +4711,35 @@ country_event = { #룩셈부르크 대공국의 멸망
 	desc = HEU_event.2002.desc
 	picture = GFX_report_event_aru_rikuhachima_senaka 
 
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.2002.a
+		add_manpower = -12
+		8 = {
+			add_compliance = -25
+			#add_resistance = 30
+		}
+		HEU = {
+			retire_character = HEU_aru
+			retire_character = HEU_zkdyzh
+			retire_character = HEU_ancmzl
+			retire_character = HEU_gkfnzk
+			#retire_character = HEU_emile_speller
+			set_cosmetic_tag = HEU_luxembourg
+		}
+		hidden_effect = {
+			set_global_flag = HEU_aru_dead_flag
+		}
+	}
+}
+
+country_event = { #룩셈부르크 대공국의 멸망
+	id = HEU_event.2003
+	title = HEU_event.2003.t
+	desc = HEU_event.2003.desc
+	picture = GFX_report_event_luxembourg_city
+
 	immediate = {
 		hidden_effect = {
 			set_global_flag = HEU_game_over_flag
@@ -4738,18 +4767,39 @@ country_event = { #룩셈부르크 대공국의 멸망
 	}
 
 	option = { 
-		name = HEU_event.2002.a
-		add_manpower = -12
-		8 = {
-			add_compliance = -25
-			#add_resistance = 30
+		name = HEU_event.2003.a
+		ai_chance = {
+			base = 10
 		}
+		set_temp_variable = { TRN_Honor_change = 3 }
+		TRN_add_Honor = yes
+		
+		country_event = { id = HEU_event.2004 hours = 8 }
+	}
+
+	option = { 
+		name = HEU_event.2003.b
+		ai_chance = {
+			base = 0
+		}
+		set_temp_variable = { TRN_Honor_change = -3 }
+		TRN_add_Honor = yes
+
+		country_event = { id = HEU_event.2002 hours = 8 }
+	}
+}
+
+country_event = { #점령 그 이후
+	id = HEU_event.2004
+	title = HEU_event.2004.t
+	desc = HEU_event.2004.desc
+	picture = GFX_report_event_generic_kivotos_city_2
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.2004.a
 		HEU = {
-			retire_character = HEU_aru
-			retire_character = HEU_zkdyzh
-			retire_character = HEU_ancmzl
-			retire_character = HEU_gkfnzk
-			#retire_character = HEU_emile_speller
 			set_cosmetic_tag = HEU_luxembourg
 		}
 	}

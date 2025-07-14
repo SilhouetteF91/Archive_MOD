@@ -957,6 +957,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_1_tt
+				pdx_tooltip_delayed = highlight_major_1_2_tt
 			}
 
 			iconType = {
@@ -966,6 +967,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_1_tt
+				pdx_tooltip_delayed = highlight_major_1_2_tt
 			}
 
 			iconType = {
@@ -975,6 +977,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_1_tt
+				pdx_tooltip_delayed = highlight_major_1_2_tt
 			}
 		}
 
@@ -991,6 +994,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_2_tt
+				pdx_tooltip_delayed = highlight_major_2_2_tt
 			}
 
 			iconType = {
@@ -1000,6 +1004,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_2_tt
+				pdx_tooltip_delayed = highlight_major_2_2_tt
 			}
 
 			iconType = {
@@ -1009,6 +1014,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_2_tt
+				pdx_tooltip_delayed = highlight_major_2_2_tt
 			}
 		}
 
@@ -1062,6 +1068,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_4_tt
+				pdx_tooltip_delayed = highlight_major_4_2_tt
 			}
 
 			iconType = {
@@ -1071,6 +1078,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_4_tt
+				pdx_tooltip_delayed = highlight_major_4_2_tt
 			}
 
 			iconType = {
@@ -1080,6 +1088,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_4_tt
+				pdx_tooltip_delayed = highlight_major_4_2_tt
 			}
 		}
 
@@ -1096,6 +1105,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_5_tt
+				pdx_tooltip_delayed = highlight_major_5_2_tt
 			}
 
 			iconType = {
@@ -1105,6 +1115,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_5_tt
+				pdx_tooltip_delayed = highlight_major_5_2_tt
 			}
 
 			iconType = {
@@ -1114,6 +1125,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_5_tt
+				pdx_tooltip_delayed = highlight_major_5_2_tt
 			}
 		}
 
@@ -1130,6 +1142,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_6_tt
+				pdx_tooltip_delayed = highlight_major_6_2_tt
 			}
 
 			iconType = {
@@ -1139,6 +1152,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_6_tt
+				pdx_tooltip_delayed = highlight_major_6_2_tt
 			}
 
 			iconType = {
@@ -1148,6 +1162,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_6_tt
+				pdx_tooltip_delayed = highlight_major_6_2_tt
 			}
 		}
 
@@ -1164,6 +1179,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_7_tt
+				pdx_tooltip_delayed = highlight_major_7_2_tt
 			}
 
 			iconType = {
@@ -1173,6 +1189,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_7_tt
+				pdx_tooltip_delayed = highlight_major_7_2_tt
 			}
 
 			iconType = {
@@ -1182,6 +1199,7 @@ guiTypes = {
 				rotation = 25
 				scale = 0.8
 				pdx_tooltip = highlight_major_7_tt
+				pdx_tooltip_delayed = highlight_major_7_2_tt
 			}
 		}
 
@@ -1198,6 +1216,7 @@ guiTypes = {
 				rotation = -25
 				scale = 0.6
 				pdx_tooltip = highlight_minor_1_tt
+				pdx_tooltip_delayed = highlight_minor_1_2_tt
 			}
 
 			iconType = {
@@ -1207,6 +1226,7 @@ guiTypes = {
 				rotation = -25
 				scale = 0.6
 				pdx_tooltip = highlight_minor_1_tt
+				pdx_tooltip_delayed = highlight_minor_1_2_tt
 			}
 
 			iconType = {
@@ -1216,6 +1236,7 @@ guiTypes = {
 				rotation = -25
 				scale = 0.6
 				pdx_tooltip = highlight_minor_1_tt
+				pdx_tooltip_delayed = highlight_minor_1_2_tt
 			}
 		}
 
@@ -1232,6 +1253,7 @@ guiTypes = {
 				rotation = -25
 				scale = 0.6
 				pdx_tooltip = highlight_minor_2_tt
+				pdx_tooltip_delayed = highlight_minor_2_2_tt
 			}
 
 			iconType = {
@@ -1241,6 +1263,7 @@ guiTypes = {
 				rotation = -25
 				scale = 0.6
 				pdx_tooltip = highlight_minor_2_tt
+				pdx_tooltip_delayed = highlight_minor_2_2_tt
 			}
 
 			iconType = {
@@ -1250,6 +1273,7 @@ guiTypes = {
 				rotation = -25
 				scale = 0.6
 				pdx_tooltip = highlight_minor_2_tt
+				pdx_tooltip_delayed = highlight_minor_2_2_tt
 			}
 		}
 

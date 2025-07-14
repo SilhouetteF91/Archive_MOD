@@ -141,226 +141,7 @@ GEH_State_government_dismantlement_work_category = {
 		}
 	}
 }
-political_actions = {
-    GEH_exile_Wehrmacht_decision = {
 
-		priority = 90
-		icon = GFX_decision_Prefect_team
-		allowed = {
-			original_tag = GEH
-		}
-        fire_only_once = yes
-
-		visible = {
-            custom_trigger_tooltip = {
-                tooltip = GEH_exile_Wehrmacht_tt
-                OR = {
-                    GEA = { controls_state = 59 }
-                    GEK = { controls_state = 59 }
-                    GEF = { controls_state = 59 }
-                }
-            }
-            NOT = { has_completed_focus = GEH_hit_wehrmacht }
-		}
-        available = {
-            custom_trigger_tooltip = {
-                tooltip = GEH_exile_Wehrmacht_tt
-                OR = {
-                    GEA = { controls_state = 59 }
-                    GEK = { controls_state = 59 }
-                    GEF = { controls_state = 59 }
-                }
-            }
-            GEH = { owns_state = 55 }
-            NOT = { has_completed_focus = GEH_hit_wehrmacht }
-        }
-		
-		cost = 25
-
-		complete_effect = {
-            set_country_flag = Complete_exile_wehrmacht
-            every_country = {
-                limit = {
-                    controls_state = 59
-                    OR = {
-                        tag = GEK
-                        tag = GEA
-                        tag = GEF
-                    }
-                }
-                GEH = {
-                    declare_war_on = {
-				        target = PREV
-				        type = annex_everything
-                    }
-                }
-            }
-		}
-
-		ai_will_do = {
-			base = 50
-			modifier = {
-                NOT = {
-    				GEM = { controls_state = 59 }
-    				GEH = { controls_state = 59 }
-                }
-                GEH ={ owns_state = 55 }
-				add = 400
-			}
-		}
-    }
-    GEH_Conquer_the_Central_decision = {
-        priority = 100
-
-		icon = GFX_decision_generic_ignite_civil_war
-
-		allowed = {
-			original_tag = GEH
-		}
-        available = {
-            has_completed_focus = GEH_Conquer_the_Central
-        }
-		
-		cost = 25
-        fire_only_once = yes
-
-		complete_effect = {
-            55 = {
-                add_dynamic_modifier = {
-                    modifier = GEH_Senter_aggressive 
-                    days = 183
-                    scope = GEH
-                }
-            }
-		}
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-				has_war_with = GEM
-				add = 400
-			}
-		}
-
-    }
-    GEH_GEM_armistice = {
-        priority = 200
-
-		icon = GFX_decision_eng_trade_unions_support
-
-		allowed = {
-			OR = {
-				original_tag = GEH
-				original_tag = GEM
-			}
-		}
-
-		visible = {
-			any_country = {
-				has_war_with = ROOT
-				is_major = yes
-				any_country = {
-					NOT = { tag = ROOT }
-					OR = {
-						original_tag = GEM
-						original_tag = GEH
-					}
-					has_war_with = PREV
-				}
-			}
-			any_country = {
-				has_war_with = ROOT
-				OR = {
-					original_tag = GEM
-					original_tag = GEH
-				}
-			}
-		}
-		
-		available = {
-			is_subject = no
-		}
-
-		cost = 0
-
-		complete_effect = {
-			custom_effect_tooltip = GEH_GEM_armistice_tt
-			set_country_flag = GEH_GEM_armistice_flag
-			if = {
-				limit = {
-					any_country = {
-						NOT = { tag = ROOT }
-						has_country_flag = GEH_GEM_armistice_flag
-						has_war_with = ROOT
-					}
-				}
-				country_event = GEH_event.22
-			}
-		}
-
-		ai_will_do = {
-			base = 4000
-		}
-    }
-    GEH_GEM__war_with_TRM = {
-        priority = 210
-
-		icon = GFX_decision_eng_trade_unions_support
-
-		allowed = {
-			OR = {
-				original_tag = GEH
-				original_tag = GEM
-			}
-		}
-
-		visible = {
-			any_country = {
-				NOT = { tag = ROOT }
-				OR = {
-					original_tag = GEM
-					original_tag = GEH
-				}
-				has_war_with = TRM
-				NOT = { has_war_with = ROOT }
-			}
-		}
-
-		available = {
-			NOT = { has_war_with = TRM }
-		}
-		
-		cost = 50
-
-		war_with_on_complete = TRM
-
-		complete_effect = {
-			random_enemy_country = {
-				limit = {
-					tag = TRM
-					any_enemy_country = {
-						NOT = { tag = ROOT }
-						OR = {
-							original_tag = GEM
-							original_tag = GEH
-						}
-						NOT = { has_war_with = ROOT }
-					}
-				}
-				ROOT = {
-					declare_war_on = {
-						target = PREV
-						type = puppet_wargoal_focus
-					}
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 4000
-		}
-    }
-}
 GEH_external_activities = {
 	GEH_preparations_for_operation_countenance = { # Mission for SOV (or SOV + ENG) to prepare the invasion of Iran
 		priority = 50
@@ -1257,6 +1038,111 @@ GEH_discipline_system_category = {
 		}
 	}
 
+	GEH_discipline_system_alliance_with_hitler = {
+		icon = GFX_decision_ger_reichskommissariats
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				has_completed_focus = GEH_ako_route_focus
+				has_completed_focus = GEH_main_route_focus
+			}
+		}
+
+		visible = {
+			NOT = { has_country_flag = GEH_end_discipline }
+		}
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_to_variable = {
+				geh_discipline_var = 4
+				tooltip = geh_discipline_system_tt
+			}
+			geh_discipline_system_setting_effect = yes
+
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 300
+			}
+		}
+	}
+
+	GEH_discipline_system_alliance_with_nyaomoto = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_idea = GEH_nyaomoto_kan
+			OR = {
+				has_completed_focus = GEH_iori_route_focus
+				has_completed_focus = GEH_hina_route_focus
+			}
+		}
+
+		visible = {
+			NOT = { has_country_flag = GEH_end_discipline }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 100
+
+		complete_effect = {
+			add_to_variable = {
+				geh_discipline_var = -10
+				tooltip = geh_discipline_system_tt
+			}
+			geh_discipline_system_setting_effect = yes
+
+			set_variable = {
+				var = halo_militia_cap
+				value = 12
+			}
+
+			division_template = { #헬멧단 용병
+				name = "Helmet Gang Söldner" 
+				division_names_group = KIV_SEC_01
+				is_locked = yes
+				force_allow_recruiting = yes
+				division_cap = 0
+
+				regiments = { 
+					halo_militia = { x = 0 y = 0 }
+					halo_militia = { x = 0 y = 1 }
+					halo_militia = { x = 0 y = 2 }
+					halo_militia = { x = 1 y = 0 }
+					halo_militia = { x = 1 y = 1 }
+					halo_militia = { x = 1 y = 2 }
+				}
+				support = { 
+					halo_recon = { x = 0 y = 0 }
+				}
+			}
+			set_division_template_cap = {
+				division_template = "Helmet Gang Söldner"
+				division_cap = halo_militia_cap
+			}
+
+		}
+	}
 }
 
 GEH_military_power_category = {
@@ -1737,6 +1623,7 @@ GEH_military_power_category = {
 					name = "Gehenna Wehrmacht-Division"
 					division_names_group = GEH_PEN_01
 					is_locked = yes
+					force_allow_recruiting = yes
 					#template_counter = 67
 					regiments = {
 						penal_battalion = { x = 0 y = 0 }
@@ -1765,6 +1652,242 @@ GEH_military_power_category = {
 		}
 	}
 
+    GEH_exile_Wehrmacht_decision = {
+
+		priority = 90
+		icon = GFX_decision_Prefect_team
+		allowed = {
+			original_tag = GEH
+		}
+        fire_only_once = yes
+
+		visible = {
+            custom_trigger_tooltip = {
+                tooltip = GEH_exile_Wehrmacht_tt
+                OR = {
+                    GEA = { controls_state = 59 }
+                    GEK = { controls_state = 59 }
+                    GEF = { controls_state = 59 }
+                }
+            }
+            NOT = { has_completed_focus = GEH_hit_wehrmacht }
+		}
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = GEH_exile_Wehrmacht_tt
+                OR = {
+                    GEA = { controls_state = 59 }
+                    GEK = { controls_state = 59 }
+                    GEF = { controls_state = 59 }
+                }
+            }
+            GEH = { owns_state = 55 }
+            NOT = { has_completed_focus = GEH_hit_wehrmacht }
+        }
+		
+		cost = 25
+
+		complete_effect = {
+            set_country_flag = Complete_exile_wehrmacht
+            every_country = {
+                limit = {
+                    controls_state = 59
+                    OR = {
+                        tag = GEK
+                        tag = GEA
+                        tag = GEF
+                    }
+                }
+                GEH = {
+                    declare_war_on = {
+				        target = PREV
+				        type = annex_everything
+                    }
+                }
+            }
+		}
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+                NOT = {
+    				GEM = { controls_state = 59 }
+    				GEH = { controls_state = 59 }
+                }
+                GEH ={ owns_state = 55 }
+				add = 400
+			}
+		}
+    }
+
+    GEH_Conquer_the_Central_decision = {
+        priority = 100
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		allowed = {
+			original_tag = GEH
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 55
+			}
+		}
+
+		on_map_mode = map_and_decisions_view
+
+        available = {
+            has_completed_focus = GEH_Conquer_the_Central
+        }
+
+		visible = {
+			NOT = {
+				ROOT ={ owns_state = 55 }
+			}
+		}
+		
+		cost = 25
+        fire_only_once = yes
+
+		complete_effect = {
+            55 = {
+                add_dynamic_modifier = {
+                    modifier = GEH_Senter_aggressive 
+                    days = 183
+                    scope = GEH
+                }
+            }
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_war_with = GEM
+				add = 400
+			}
+		}
+
+    }
+
+    GEH_GEM_armistice = {
+        priority = 200
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			OR = {
+				original_tag = GEH
+				original_tag = GEM
+			}
+		}
+
+		visible = {
+			any_country = {
+				has_war_with = ROOT
+				is_major = yes
+				any_country = {
+					NOT = { tag = ROOT }
+					OR = {
+						original_tag = GEM
+						original_tag = GEH
+					}
+					has_war_with = PREV
+				}
+			}
+			any_country = {
+				has_war_with = ROOT
+				OR = {
+					original_tag = GEM
+					original_tag = GEH
+				}
+			}
+		}
+		
+		available = {
+			is_subject = no
+		}
+
+		cost = 0
+
+		complete_effect = {
+			custom_effect_tooltip = GEH_GEM_armistice_tt
+			set_country_flag = GEH_GEM_armistice_flag
+			if = {
+				limit = {
+					any_country = {
+						NOT = { tag = ROOT }
+						has_country_flag = GEH_GEM_armistice_flag
+						has_war_with = ROOT
+					}
+				}
+				country_event = GEH_event.22
+			}
+		}
+
+		ai_will_do = {
+			base = 4000
+		}
+    }
+
+    GEH_GEM__war_with_TRM = {
+        priority = 210
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			OR = {
+				original_tag = GEH
+				original_tag = GEM
+			}
+		}
+
+		visible = {
+			any_country = {
+				NOT = { tag = ROOT }
+				OR = {
+					original_tag = GEM
+					original_tag = GEH
+				}
+				has_war_with = TRM
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		available = {
+			NOT = { has_war_with = TRM }
+		}
+		
+		cost = 50
+
+		war_with_on_complete = TRM
+
+		complete_effect = {
+			random_enemy_country = {
+				limit = {
+					tag = TRM
+					any_enemy_country = {
+						NOT = { tag = ROOT }
+						OR = {
+							original_tag = GEM
+							original_tag = GEH
+						}
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = puppet_wargoal_focus
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 4000
+		}
+    }
 }
 
 GEH_gehenna_art_category = {
@@ -2487,6 +2610,7 @@ GEH_gehenna_art_category = {
 GEH_gehenna_legitimacy_category = {
 	
 	GEH_gehenna_legitimacy_up = {
+		priority = 3
 		icon = GFX_decision_Prefect_team
 
 		allowed = {
@@ -2521,6 +2645,48 @@ GEH_gehenna_legitimacy_category = {
 		complete_effect = {
 			army_experience = -100						
 		}	
+	}
+	
+
+	GEH_suspension_of_public_order_maintenance = {
+		icon = GFX_decision_Prefect_team
+
+		allowed = {
+			original_tag = GEH
+		}
+
+		visible = {
+			GEM = {
+				has_idea = GEM_geh_leadership
+			}
+			country_exists = GEM
+		}
+
+		cost = 25
+
+		complete_effect = {
+			GEM = {
+				country_event = {
+					id = GEH_event.70
+					hours = 8
+				}
+				remove_ideas = GEM_geh_leadership
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				GEM = {
+					has_offensive_war_with = TRM
+				}
+				add = 400
+			}
+			modifier = {
+				has_war_with = GEM
+				add = 400
+			}
+		}
 	}
 }
 

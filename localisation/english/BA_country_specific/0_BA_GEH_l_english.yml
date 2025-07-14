@@ -2353,6 +2353,12 @@
  GEH_discipline_system_boom_weapons: "나치 수공업 군사공장 폭파"
  GEH_discipline_system_boom_weapons_desc: "나치당원 조직이 만들어낸 수공업 공장을 장악해 철저하게 파괴합니다."
 
+ GEH_discipline_system_alliance_with_hitler: "히틀러와의 동맹"
+ GEH_discipline_system_alliance_with_hitler_desc: "반나치, 친유대 성향의 자본가인 앙겔라 히틀러는 대중들에게 두 가지 이야기로 유명합니다 - 성공한 담배 공장 사업가이자, 대전이 때 사망한 아돌프 히틀러 나치당 당수의 누나라는 점입니다.\n\n히틀러는 유대인 학생들을 아리아인 우월주의자들로부터 보호하기 위한 유다이카 기숙사 운영을 위한 자금을 원하며, 우리는 그 대신 게헨나 내부의 나치 잔당 탄압을 위한 물자 지원을 받을 수 있습니다."
+
+ GEH_discipline_system_alliance_with_nyaomoto: "냐오푸드와의 계약"
+ GEH_discipline_system_alliance_with_nyaomoto_desc: "냐오푸드는 단순한 식료품 기업이 아닙니다. 그들은 자신들에게 반항하는 세력을 탄압하기 위한 일종의 '헬멧단 부대'를 사기업 소속 부대로 편성하고 있습니다.\n\n냐오푸드와의 계약은 이러한 사기업 소속 부대를 우리가 운용할 수 있도록 하는 용역 계약입니다. 게헨나의 질서를 위해 활동한다는 우리의 대의를 어기는 일이 되겠지만, 현지인 범죄 조직들에 비하면 헬멧단 같은 잡범들을 고용하는 것은 사소한 문제 아니겠습니까?"
+
  geh_discipline_system_tt: "우리의 §Y규율§!이 $RIGHT|+=1$ 변화"
  GEH_discipline_system_weak_discipline_tt: "\n§g$GEH_first_congress_focus$ 중점이 완료된다면 감소하는 규율의 양이 절반(소숫점 반올림)으로 감소합니다.§!"
  GEH_end_discipline: "규율은 $GEH_Army_focus_7$ 중점을 완료하면 최대치로 고정되며, 더 이상 감소하지 않습니다."
