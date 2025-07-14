@@ -3681,6 +3681,8 @@ country_event = { #데카그라마톤
 			base = 70
 		}
 
+		leave_faction = yes
+
 		GEI = { 
 			set_rule = { can_create_factions = yes }
 			create_faction = GEI_Federation 
