@@ -2434,7 +2434,7 @@
 
  TRN_social_problem_ns: "트리니티 사회 문제"
  TRN_Mika_social_problem_cat: "트리니티 사상누각"
- TRN_Mika_social_problem_cat_desc: "\n\n£GFX_decision_header_TRN_ruin_street\n\n\n\n\n물론, 독일인들은 우리의 지배를 순순히 받아들이지 않았습니다. 트리니티는 예전과 다름없이 그대로였지만, 그들이 살던 ‘독일’은 극적으로 변모하였습니다. 새롭게 태동한 두 번째 트리니티가 다가올 역사의 두 번째 시험에서 실패할 것인지, 아니면 학원을 전례 없는 위대함의 경지로 이끌어낼 것인지는 오직 시간이 말해줄 것입니다.\n\n§R저항이 10에 도달하면 정부가 붕괴할 것입니다.§!"
+ TRN_Mika_social_problem_cat_desc: "\n\n£GFX_decision_header_TRN_ruin_street\n\n\n\n\n물론, 독일인들은 우리의 지배를 순순히 받아들이지 않았습니다. 트리니티는 예전과 다름없이 그대로였지만, 그들이 살던 ‘독일’은 극적으로 변모하였습니다. 새롭게 태동한 두 번째 트리니티가 다가올 역사의 두 번째 시험에서 실패할 것인지, 아니면 학원을 전례 없는 위대함의 경지로 이끌어낼 것인지는 오직 시간이 말해줄 것입니다.\n\n§R저항이 5에 도달하면 정부가 붕괴할 것입니다.§!"
  TRN_Mika_social_problem_days_tt: "$TRN_Mika_social_problem$ 임무는 이제 $RIGHT|=Y0$일의 시간이 더 요구 됩니다."
  TRN_Mika_social_problem: "§p사회 문제§!"
  TRN_Mika_social_problem_tt: "@WGR 독일계 저항이 §t격화§!되고 있습니다.\n현재 저항 강도: §t[?TRN_Mika_social_problem_var]§!"

@@ -10330,7 +10330,7 @@ country_event = { # 중앙구에서 대규모 시위
 				character = TRN_Misono_Mika
 			}
 		}
-		set_variable = { TRN_Mika_social_problem_days = 50 }
+		set_variable = { TRN_Mika_social_problem_days = 120 }
 		set_variable = { TRN_Mika_social_problem_var = 0 }
 		add_ideas = TRN_social_problem_ns
 		activate_mission = TRN_Mika_social_problem
