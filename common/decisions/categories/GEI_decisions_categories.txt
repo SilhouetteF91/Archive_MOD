@@ -274,3 +274,28 @@ GEI_reality_manipulation_decisions = {
 
 	visible_when_empty = yes
 }
+
+GEI_reality_manipulation_decisions = {
+	icon = GFX_decision_category_generic_propaganda
+	
+	visible = {
+		has_completed_focus = COLOUR_reality_erosion
+	}
+
+	visible_when_empty = yes
+}
+
+GEI_decagramaton_alliance_decision_category = {
+	icon = GFX_decision_category_generic_propaganda
+
+	allowed = {
+		has_cosmetic_tag = GEI_DEC
+	}
+
+	visible = {
+		has_country_leader = {
+			character = GEI_DEC_decagramaton
+			ruling_only = yes
+		}
+	}
+}

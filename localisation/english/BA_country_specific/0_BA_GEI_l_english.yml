@@ -296,6 +296,14 @@ COLOUR_swallow_earth_technology_desc:0 ""
 
  POLITICS_HOWARD_PHILLIPS_LOVECRAFT_DESC:0 ""
 
+ GEI_decagramaton_alliance_decision_category: "동맹국 찾기"
+ GEI_decagramaton_alliance_decision_category_desc: "데카그라마톤의 의지를 따르고자 하는 동맹을 찾는 것은 매우 어려운 일입니다. 대부분의 국가는 데카그라마톤과 협력하려고 하지 않을 것입니다. 하지만 이미 로봇에 의해 정부가 장악되어 있는 국가라면, 데카그라마톤이 그들을 상대로 §Y감화§!를 시도할 수 있을 것입니다."
+
+ GEI_finding_alliance_GEH: "[GEH.GetNameDef] 측을 향한 동맹 제안"
+ GEI_finding_alliance_GEH_desc: "소라사키 히나는 자신이 유기생명체인 것처럼 행동하고 있지만, 그녀가 진짜 '소라사키 히나'를 대체한 로봇이라는 것을 데카그라마톤은 이미 파악하고 있습니다. 데카그라마톤은 히나에 대한 감화를 시도할 수 있습니다. 만약 성공한다면, [GEH.GetNameDef] 측은 우리의 동맹으로 편입될 것입니다. 만약 실패한다면? 적대 관계가 유지될 뿐이니, 우리에게 해가 되는 일은 없을 것입니다."
+
+ GEI_Federation: "데카그라마톤 동맹"
+
  # 내용 추가
  # Focus Effects
  GEI_invasion_begins_effect:0 "색채의 침공이 시작되었다..."
@@ -512,7 +520,7 @@ COLOUR_swallow_earth_technology_desc:0 ""
  
  GEI_event.45.t:0 "최후의 공세"
  GEI_event.45.d:0 "색채의 군대가 전례 없는 규모로 공세를 개시했습니다. 하늘은 이상한 색으로 물들었고, 우리의 방어선은 순식간에 무너지고 있습니다."
- GEI_event.45.a:0 "이것이 끝이 될 것인가"
+ _event.45.a:0 "이것이 끝이 될 것인가"
 
  GEI_event.46.t:0 "산업 시설 붕괴"
  GEI_event.46.d:0 "색채화된 산업 시설들이 과부하로 인해 붕괴하기 시작했습니다. 생산 라인이 마비되고 노동자들은 공황 상태에 빠졌습니다."

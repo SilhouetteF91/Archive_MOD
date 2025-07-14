@@ -3668,6 +3668,77 @@ country_event = { # 에덴 결전 - 질서의 비상
 	}
 }
 
+country_event = { #데카그라마톤
+	id = GEH.war_event.9
+	title = GEH.war_event.9.t
+	desc = GEH.war_event.9.desc
+	picture = GFX_report_event_hina_sorasaki_generic_1
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.war_event.9.a 
+		ai_chance = {
+			base = 70
+		}
+
+		GEI = { 
+			set_rule = { can_create_factions = yes }
+			create_faction = GEI_Federation 
+			add_to_faction = GEH
+			add_ai_strategy = {
+				type = alliance
+				id = "GEH"
+				value = 200
+			}
+		}
+		
+		hidden_effect = {
+			news_event = { id = GEH_news.18 hours = 3 }
+		}
+
+		GEI = {
+			country_event = { id = GEH.war_event.10 hours = 8 }
+		}
+	}
+
+	option = {
+		name = GEH.war_event.9.b
+		ai_chance = {
+			base = 30
+		}
+
+		GEI = {
+			country_event = { id = GEH.war_event.11 hours = 8 }
+		}
+	}
+}
+
+country_event = { #[GEH.GetNameDef]의 합류
+	id = GEH.war_event.10
+	title = GEH.war_event.10.t
+	desc = GEH.war_event.10.desc
+	picture = GFX_report_event_hina_sorasaki_generic_1
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.war_event.10.a 
+
+	}
+}
+
+country_event = { #소라사키 히나의 답장
+	id = GEH.war_event.11
+	title = GEH.war_event.11.t
+	desc = GEH.war_event.11.desc
+	picture = GFX_report_event_hina_sorasaki_generic_1
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.war_event.11.a 
+
+	}
+}
+
 country_event = { # 참회할 수 있도록
 	id = GEH.hina.magic_event.1
 	title = GEH.hina.magic_event.1.t
@@ -5029,6 +5100,38 @@ news_event = {
 	}
 	option = {
 		name = GEH_news.17.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 데카그라마톤의 세력에 합류한 [GEH.GetNameDef]
+news_event = {
+	id = GEH_news.18
+	title = GEH_news.18.t
+	desc = GEH_news.18.desc
+	picture = GFX_news_event_GEH_news_congress_1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.18.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.18.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.18.c
 		trigger = {
 			Kivotos_tag = no
 		}
