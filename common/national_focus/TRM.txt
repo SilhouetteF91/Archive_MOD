@@ -6718,7 +6718,7 @@ focus_tree = {
 		}
 		select_effect = {
 			add_stability = -0.02
-			country_event = { id = trnfla.23 }
+			country_event = { id = trnfla.23 days = 7 }
 		}
 		completion_reward = {
 			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
@@ -6778,7 +6778,7 @@ focus_tree = {
 
 		}
 		select_effect = {
-			country_event = { id = trnfla.23 }
+			country_event = { id = trnfla.23 days = 7 }
 		}
 		completion_reward = {
 			add_ideas = TRM_cop_of_junker_ns
@@ -7655,9 +7655,6 @@ focus_tree = {
 				TRM_industries_dynamic_production_speed_buildings_factor = 0.15
 				tooltip = production_speed_buildings_factor_tt
 			}
-			custom_effect_tooltip = tooltip_white_line
-			set_temp_variable = { TRN_Honor_change = 3 }
-			TRN_add_Honor = yes
 		}
 	}
 
@@ -7697,9 +7694,6 @@ focus_tree = {
 				TRM_industries_dynamic_production_factory_start_efficiency_factor = 0.1
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
-			custom_effect_tooltip = tooltip_white_line
-			set_temp_variable = { TRN_Honor_change = -3 }
-			TRN_add_Honor = yes
 		}
 	}
 

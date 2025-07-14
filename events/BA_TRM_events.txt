@@ -10356,22 +10356,16 @@ country_event = { # 아리우스용
 	id = trinity.46
 	title = trinity.46.t
 	desc = trinity.46.desc
-	picture = GFX_report_event_generic_trinity_front_gate
+	picture = GFX_report_event_generic_top_secret
 
-	is_triggered_only = no
+	is_triggered_only = yes
 	fire_only_once = yes
-
-	trigger = {
-		tag = TRM
-		any_country = {
-			check_variable = { ARI_eye_var = 2 }
-		}
-	}
-
 
 	option = {
 		name = trinity.46.a
 		custom_effect_tooltip = TRN_after_this_operation_against_arius_tt
+		
+	   add_command_power = 5
 	}
 }
 

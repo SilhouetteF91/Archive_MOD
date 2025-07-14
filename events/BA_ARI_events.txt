@@ -474,6 +474,13 @@ country_event = { #걸림 ㅎ
 		else = {
 			set_global_flag = ARI_event_14_flag
 		}
+		hidden_effect = {
+			TRM = { 
+				country_event = {
+					id = trinity.46 hours = 02
+				}
+			}
+		}
 	}
 }
 country_event = { #2번 걸림 ㅎ

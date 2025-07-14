@@ -563,6 +563,10 @@ spriteTypes = {
        texturefile = "gfx/event_pictures/event_none.tga"
     }
     spriteType = {
+      name = "GFX_report_event_generic_top_secret"
+       texturefile = "gfx/event_pictures/report_event_generic_top_secret.tga"
+    }
+    spriteType = {
       name = "GFX_report_event_she_cou_integration"
        texturefile = "gfx/event_pictures/report_event_she_cou_integration.dds"
     } 

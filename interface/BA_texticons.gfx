@@ -327,5 +327,11 @@ spriteTypes = {
 		texturefile = "gfx/texticons/introscreen/white.png"
 		legacy_lazy_load = no
 	}
+	
+	spriteType = {
+		name = "GFX_report_event_TRN_IA"
+		texturefile = "gfx/texticons/report_event_TRN_IA.tga"
+		legacy_lazy_load = no
+	}
 
 }
