@@ -9611,7 +9611,7 @@ country_event = { # 전당 대회 - 2
 
 	option = {
 		name = trinitypartyconvention.3.a 
-		set_temp_variable = { TRN_Honor_change = 5 }
+		set_temp_variable = { TRN_Honor_change = 2 }
 		TRN_add_Honor = yes
 		add_power_balance_value = {
 			id = TRM_power_balance
@@ -11070,7 +11070,7 @@ country_event = { # 부작용
 		add_political_power = -50
 		add_stability = 0.03
 		
-		set_temp_variable = { TRN_Honor_change = 3 }
+		set_temp_variable = { TRN_Honor_change = 2 }
 		TRN_add_Honor = yes
 	}
 

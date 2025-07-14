@@ -7052,24 +7052,6 @@ debug_decisions = {
     }
 }
 TRN_Mika_honor_decision_cat = {
-	TRN_debug_get_honor = {
-		icon = GFX_decision_generic_reorganize_irregulars
-
-		allowed = { original_tag = TRM }
-		available = {
-			is_debug = yes
-			is_ai = no
-		}
-		visible = {
-			is_debug = yes
-			is_ai = no
-		}
-
-		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = -8 }
-			TRN_add_Honor = yes
-		}
-	}
 
 	TRN_honor_populist_policies = {
 		icon = GFX_decision_hol_attract_foreign_investors
@@ -7086,7 +7068,7 @@ TRN_Mika_honor_decision_cat = {
 		ai_will_do = { base = 0 }
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = 4 }
+			set_temp_variable = { TRN_Honor_change = 2 }
 			TRN_add_Honor = yes
 
 			add_stability = 0.02
@@ -7116,7 +7098,7 @@ TRN_Mika_honor_decision_cat = {
 		ai_will_do = { base = 0 }
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = 4 }
+			set_temp_variable = { TRN_Honor_change = 2 }
 			TRN_add_Honor = yes
 
 			add_political_power = 25
@@ -7286,7 +7268,7 @@ TRN_Mika_honor_decision_cat = {
 		fire_only_once = yes
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = -7 }
+			set_temp_variable = { TRN_Honor_change = -5 }
 			TRN_add_Honor = yes
 
        		add_power_balance_value = {
@@ -7341,7 +7323,7 @@ TRN_Mika_honor_decision_cat = {
 		fire_only_once = yes 
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = 2 }
+			set_temp_variable = { TRN_Honor_change = 1 }
 			TRN_add_Honor = yes
 
 			add_war_support = -0.02
@@ -7394,7 +7376,7 @@ TRN_Mika_honor_decision_cat = {
 		}
 
 		remove_effect = {
-			set_temp_variable = { TRN_Honor_change = 7 }
+			set_temp_variable = { TRN_Honor_change = 5 }
 			TRN_add_Honor = yes
 			hidden_effect = {
 				remove_targeted_decision = { decision = TRN_destroy_TVC target = ROOT }
