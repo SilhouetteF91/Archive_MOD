@@ -8632,6 +8632,15 @@ TRN_trinity_world_cat = {
 
 		complete_effect = {
 			set_country_flag = TRN_create_pro_trinity_group_flag
+
+			hidden_effect = {
+				GEM = {
+					country_event = {
+						id = TRMDIP.24 
+						days = 01
+					}
+				}
+			}
 		}
 	}
 

@@ -8341,7 +8341,7 @@ focus_tree = {
 			activate_targeted_decision = { target = TRM decision = TRN_lend_our_support }
 			activate_targeted_decision = { target = TRM decision = TRN_international_propaganda }
 			hidden_effect = {
-				country_event = { id = trinity.44 days = 14 random_days = 35 }
+				#country_event = { id = trinity.44 days = 14 random_days = 35 }
 			}
 		}
 	}
