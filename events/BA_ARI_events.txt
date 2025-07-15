@@ -475,9 +475,14 @@ country_event = { #걸림 ㅎ
 			set_global_flag = ARI_event_14_flag
 		}
 		hidden_effect = {
-			TRM = { 
-				country_event = {
-					id = trinity.46 hours = 02
+			IF = {
+				limit = { 
+					TRM = { has_focus_tree = Trinity_focus }
+				}
+				TRM = { 
+					country_event = {
+						id = trinity.46 hours = 02
+					}
 				}
 			}
 		}

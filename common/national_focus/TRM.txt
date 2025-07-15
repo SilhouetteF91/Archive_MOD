@@ -8871,7 +8871,8 @@ focus_tree = {
 				target = ABY
 				modifier = BUL_threatening_neighbor
 			}
-			activate_targeted_decision = { target = TRM decision = TRN_south_kivotos_propaganda }
+
+			add_war_support = 0.05
 		}
 	}
 

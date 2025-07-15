@@ -4114,6 +4114,60 @@ country_event = { # 백귀야행 - 트리니티 공동훈련 - 백귀야행의 �
 	}
 }
 
+country_event = { # 세력 초대
+	id = TRMDIP.69
+	title = TRMDIP.69.t
+	desc = TRMDIP.69.d
+	picture = GFX_report_event_generic_trinity_building
+
+	fire_only_once = no
+	is_triggered_only = yes 
+
+	option = { #
+		name = TRMDIP.67.a
+		ai_chance = {
+			base = 1
+		}
+		add_war_support = 0.05
+		effect_tooltip = {
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+		custom_effect_tooltip = TRM_eng_event_chain_tt
+	}
+
+	option = { #
+		name = TRMDIP.64.c
+		ai_chance = {
+			base = 99
+		}
+		custom_effect_tooltip = TRM_eng_event_chain_tt
+		FROM = { country_event = TRMDIP.65 }
+	}
+}
+
+country_event = { # 수락
+	id = TRMDIP.70
+	title = TRMDIP.70.t
+	desc = TRMDIP.70.d
+	picture = GFX_report_event_generic_trinity_building
+
+	fire_only_once = no
+	is_triggered_only = yes 
+
+	option = { #
+		name = TRMDIP.70.a
+		ai_chance = {
+			base = 1
+		}
+		add_war_support = 0.05
+		ROOT  = {
+			add_to_faction = FROM
+		}
+	}
+}
+
 ##############################
 #####IRON SWORD OPERATION#####
 ##############################
@@ -9253,7 +9307,7 @@ country_event = { # 상투스 분파의 운명
 	id = trinity.16
 	title = trinity.16.t
 	desc = trinity.16.desc
-	picture = GFX_report_event_generic_funeral
+	picture = GFX_report_event_generic_trinity_prison
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -9272,7 +9326,7 @@ country_event = { # 필리우스 분파의 운명
 	id = trinity.17
 	title = trinity.17.t
 	desc = trinity.17.desc
-	picture = GFX_report_event_generic_funeral
+	picture = GFX_report_event_generic_trinity_prison
 	
 	is_triggered_only = yes
     fire_only_once = no

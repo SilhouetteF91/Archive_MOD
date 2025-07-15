@@ -8303,41 +8303,6 @@ TRN_trinity_world_cat = {
 		}
 	}
 
-	TRN_south_kivotos_propaganda = {
-		icon = GFX_decision_eng_propaganda_campaigns
-		allowed = { always = no }
-		available = {
-			has_war = no
-		}
-		visible = {
-		}
-		fire_only_once = yes
-		cost = 35
-		days_remove = 35
-		modifier = {
-			war_support_weekly = 0.005
-			political_power_factor = 0.1
-		}
-		ai_will_do = { base = 1 }
-		complete_effect = {
-			add_opinion_modifier = {
-				target = SHA
-				modifier = medium_increase
-			}
-			add_opinion_modifier = {
-				target = HYA
-				modifier = medium_increase
-			}
-			IF = {
-				limit = { NOT = { has_completed_focus = TRN_fate_of_abydos } }
-				add_opinion_modifier = {
-					target = ABY
-					modifier =medium_increase
-				}
-			}
-		}
-	}
-
 	TRN_support_HYA_decision = {
 		icon = {
 			key = GFX_decision_hya_flag_1
@@ -8406,16 +8371,16 @@ TRN_trinity_world_cat = {
 				}
 				HYA = {  country_event = { id = TRMDIP.67 hours = 05 } }
 			}
-			#IF = {
-			#	limit = { 
-			#		FROM = {
-			#			check_variable = { TRN_support_HYA_var = 2 }
-			#		}
-			#	}
-			#	HYA = { 
-			#		country_event = { id = TRMDIP.66 days = 05 } 
-			#	}
-			#}
+			IF = {
+				limit = { 
+					FROM = {
+						check_variable = { TRN_support_HYA_var = 2 }
+					}
+				}
+				HYA = { 
+					country_event = { id = TRMDIP.69 days = 05 } 
+				}
+			}
 		}
 		remove_effect = {
 			IF = {
