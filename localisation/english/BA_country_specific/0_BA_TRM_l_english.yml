@@ -2426,7 +2426,7 @@
 
  TRN_support_HYA_decision: "[HYA.GetNameDef] 측과 협력"
  TRN_support_HYA_var_tt: "§Y[HYA.GetNameWithFlag]§! 측에게 §Y[TRM.GetNameWithFlag]§! 측과 협력하는 §Y사건이 발생§!합니다. 최대 횟수는 §Y3회§!이며 현재 §Y[?TRN_support_HYA_var]회§! 협력했습니다.\n\n만약 §Y3회§! 이상 협력했다면, §Y결정이 제거§!됩니다."
- TRN_support_HYA_decision_remove_tt: "현재 §Y[?TRN_support_HYA_var]회 협력§!했습니다. 조건을 만족했기 때문에 다음의 효과가 나타납니다:"
+ TRN_support_HYA_decision_remove_tt: "현재 §Y[?TRN_support_HYA_var]회 협력§!했습니다. 조건을 만족하였기에 다음의 효과가 나타납니다:"
  TRN_influence_baltics_decision: "[FROM.GetName] 측에게 영향력 행사"
  TRN_influence_the_baltics_unlock_tt: "£decision_icon_small §Y결정 해금§!: 발트 국가에게 영향력 행사"
  TRN_german_influence: "트리니티의 영향력"
@@ -2437,7 +2437,9 @@
  TRN_Mika_social_problem_days_tt: "$TRN_Mika_social_problem$ 임무는 이제 $RIGHT|=Y0$일의 시간이 더 요구 됩니다."
  TRN_Mika_social_problem: "§p사회 문제§!"
  TRN_Mika_social_problem_tt: "@WGR 독일계 저항이 §t격화§!되고 있습니다.\n현재 저항 강도: §t[?TRN_Mika_social_problem_var]§!"
- TRN_Mika_sp_national_guard: "학원방위대 동원"
+ TRN_Mika_social_trinity_language_decision: "키보토스어 강요"
+ TRN_Mika_social_trinity_language_flag: "키보토스어 강요 활성화"
+ TRN_Mika_sp_national_guard: "정의실현부 동원 확대"
 
  trnsocial.1.t: "천사 참칭자 금지."
  trnsocial.1.desc: "중앙구에서 시위가 촉발 되고 중앙구를 비롯한 여러 트리니티의 지역에서 독일계 주민들의 반발이 나오고 있습니다. "

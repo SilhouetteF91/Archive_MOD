@@ -8378,7 +8378,7 @@ TRN_trinity_world_cat = {
 					}
 				}
 				HYA = { 
-					country_event = { id = TRMDIP.69 days = 05 } 
+					country_event = { id = TRMDIP.69 hours = 05 } 
 				}
 			}
 		}
@@ -8683,6 +8683,7 @@ TRN_Mika_social_problem_cat = {
 				has_completed_focus = TRN_confiscation_distribution_collectivization
 				has_completed_focus = TRN_cooperation_with_junker
 			}
+			has_country_flag = TRN_Mika_social_trinity_language_flag
 		}
 		complete_effect = {
 			add_political_power = 50
@@ -8697,9 +8698,38 @@ TRN_Mika_social_problem_cat = {
 			add_stability = -0.03
 
 			activate_mission = TRN_Mika_social_problem
+			# 분노마다 있는 이벤트들
 		}
 		cancel_effect = {
 			clear_variable = TRN_Mika_social_problem_var
+		}
+	}
+
+	TRN_Mika_social_trinity_language_decision = {
+		icon = GFX_decision_generic_motorized
+
+		allowed = { original_tag = TRM } #activated by effect
+
+		available = {
+			has_idea = TRN_social_problem_ns
+		}
+
+		days_remove = 365
+		fire_only_once = yes
+
+		modifier = {
+
+		}
+
+		ai_will_do = {
+			base = 120
+		}
+
+		complete_effect = {
+
+		}
+		remove_effect = {
+			set_country_flag = TRN_Mika_social_trinity_language_flag
 		}
 	}
 
