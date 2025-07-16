@@ -1109,7 +1109,7 @@ ideas = {
 
 		HEU_financial_difficulties = { #1935년 룩셈부르크 대공황
 
-			picture = usa_great_depression_3
+			picture = SHA_austria_unemployment_problem
 
 			allowed = { always = no }
 			allowed_civil_war = { always = yes 	} 
