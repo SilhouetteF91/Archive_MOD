@@ -289,7 +289,7 @@ generic_kivotos_kazeyama_organization = {
 	}
 
 	equipment_type = {
-		kivotos_infantry_equipment infantry_equipment 
+		infantry_equipment 
 	}
 	research_categories = { infantry_weapons }
 
