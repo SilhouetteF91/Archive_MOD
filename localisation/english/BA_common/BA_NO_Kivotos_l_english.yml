@@ -983,11 +983,8 @@
  BA_SOV_eastpoland_core_1: "폴란드 점령지 편입"
  BA_SOV_eastpoland_core_tt: "§Y[97.GetName]§!, §Y[96.GetName]§!, §Y[95.GetName]§!, §Y[94.GetName]§!, §Y[93.GetName]§! 주를 소유하고 있고, 순응도가 50% 이상입니다."
  BA_SOV_eastpoland_2_core_tt: "§Y[91.GetName]§!, §Y[89.GetName]§! 주를 소유하고 있고, 순응도가 50% 이상입니다."
- SOV_Surrender_to_TRM: "무조건 항복"
- SOV_Surrender_to_TRM_desc: "인민들의 노력에도 전황은 불리했습니다. 첨단무기와 뛰어난 전술로 우리는 패배를 반복하였고 우리들의 의지는 꺾였고 내부에서는 반전 여론이 들끓고 있습니다."
  SOV_Surrender_to_ABY: "무조건 항복"
  SOV_Surrender_to_ABY_desc: "인민들의 노력에도 전황은 불리했습니다. 첨단무기와 뛰어난 전술로 우리는 패배를 반복하였고 우리들의 의지는 꺾였고 내부에서는 반전 여론이 들끓고 있습니다."
- TRM_surrender: "무조건 항복"
  #나치당 중점
  NSD_focus_0: "친위대 동원"
  NSD_focus_1: "게슈타포의 지원"

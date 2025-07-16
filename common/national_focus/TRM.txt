@@ -1631,8 +1631,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_state_core = 66 
-			add_state_core = 61
 			every_state = {
 				limit = { 
 					BA_is_GER_core = yes 
@@ -3224,8 +3222,6 @@ focus_tree = {
 			add_manpower = 50000
 			add_stability = -0.05
 			country_event = { id = TRM_event.365 hours = 8 }
-			add_state_core = 66 
-			add_state_core = 61
 		}
 	}
 
@@ -6868,9 +6864,6 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			add_state_core = 66 
-			add_state_core = 61
-
 			activate_targeted_decision = { target = 64 decision = TRN_Opelwerk_Brandenburg } # 브란덴부르크
 			activate_targeted_decision = { target = 65 decision = TRN_Lehnmuhle_Dam } # 작센
 			activate_targeted_decision = { target = 64 decision = TRN_dessert_shop_expansion } # 브란덴부르크 
@@ -11874,9 +11867,7 @@ shared_focus = {
 	id = TRM_Reorganise_Armament_Production
 	icon = GFX_focus_generic_reorient_production
 	available = {
-        has_dynamic_modifier = {
-			modifier = TRM_industries_dynamic
-		}
+
     }
 	ai_will_do = {
 		base = 300
@@ -11904,8 +11895,7 @@ shared_focus = {
 		    uses = 2
 		    category = support_tech
 	    }
-        custom_effect_tooltip = TRM_Reorganise_Armament_Production_tt
-        add_to_variable = { TRM_industries_dynamic_production_factory_max_efficiency_factor = 0.05 }
+	    add_ideas = TRN_army_industry_ns
 	}
 }
 shared_focus = {
@@ -11944,14 +11934,24 @@ shared_focus = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 		}
-        custom_effect_tooltip = TRM_heer_modifier_change
-        set_variable = { 
-			TRM_army_out_of_supply_factor = -0.1 
-			tooltip = out_of_supply_factor_tt
+		IF = {
+			limit = {
+				has_idea = TRN_army_local_workshops_ns
+			}
+			swap_ideas = {
+				add_idea = TRN_army_industry_upgarde_ns
+				remove_idea = TRN_army_local_workshops_ns
+			}
 		}
-        set_variable = { 
-			TRM_army_supply_node_range = 0.1 
-			tooltip = supply_node_range_tt
+		else = {
+			swap_ideas = {
+				add_idea = TRN_army_industry_expand_logistics_ns
+				remove_idea = TRN_army_industry_ns
+			}
+			swap_ideas = {
+				add_idea = TRN_army_local_workshops_ns
+				remove_idea = TRN_army_industry_ns
+			}
 		}
 	}
 }
@@ -11980,9 +11980,22 @@ shared_focus = {
 	relative_position_id = TRM_Reorganise_Armament_Production
     cost = 5
 	completion_reward = {
-        custom_effect_tooltip = TRM_Local_Workshops_tt
-        add_to_variable = { TRM_industries_dynamic_production_factory_max_efficiency_factor = 0.05 }
-        add_to_variable = { TRM_industries_dynamic_conversion_cost_civ_to_mil_factor = -0.2 }
+		IF = {
+			limit = {
+				has_idea = TRN_army_industry_expand_logistics_ns
+			}
+			swap_ideas = {
+				add_idea = TRN_army_industry_upgarde_ns
+				remove_idea = TRN_army_industry_expand_logistics_ns
+			}
+		}
+		else = {
+			swap_ideas = {
+				add_idea = TRN_army_local_workshops_ns
+				remove_idea = TRN_army_industry_ns
+			}
+		}
+
 	}
 }
 shared_focus = {
@@ -12015,7 +12028,10 @@ shared_focus = {
 		    uses = 2
 			category = armor
 	    }
-        add_ideas = TRM_Terrestrial_Dreadnoughts_idea
+        mio:TRM_vickers_armstrong_eng_organization = {
+			add_mio_size = 1
+			# 나중에 누가 트레잇 좀 추가 해봐라
+	   }
 	}
 }
 shared_focus = {

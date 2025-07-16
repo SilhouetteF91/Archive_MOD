@@ -56,7 +56,27 @@ TRM_vickers_armstrong_eng_organization = {
 			production_efficiency_cap_factor = 0.1
 			production_efficiency_gain_factor = 0.1
 		}
-		
+	}
+
+	add_trait = { 
+		token = TRM_mio_trait_more_expanded_production_facilities
+		name = TRM_mio_trait_more_expanded_production_facilities
+		icon = GFX_generic_mio_department_icon_tank_medium_tank_engine
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = TRM_mio_trait_expanded_production_facilities
+
+		all_parents = { TRM_mio_trait_expanded_production_facilities }
+		limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
+
+		equipment_bonus = {
+			breakthrough = 0.05
+			maximum_speed = 0.05
+		}
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
 	}
 }
 

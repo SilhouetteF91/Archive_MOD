@@ -795,6 +795,10 @@ spriteTypes = {
      	texturefile = "gfx/event_pictures/report_event_generic_trinity_prison.tga"
     }
     spriteType = {
+     	name = "GFX_report_event_generic_library"
+     	texturefile = "gfx/event_pictures/report_event_generic_library.tga"
+    }
+    spriteType = {
      	name = "GFX_report_event_atsuko"
      	texturefile = "gfx/event_pictures/report_event_atsuko.tga"
     }

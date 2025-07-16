@@ -457,6 +457,8 @@ shared_focus = {
 				}
 			}
 		}
+		custom_effect_tooltip = tooltip_white_line
+		add_ideas = { BALTIC_carrying_the_western_revolution }
 		hidden_effect = {
 			random_list = {
 				1 = { scoped_play_song = BA_prairie }

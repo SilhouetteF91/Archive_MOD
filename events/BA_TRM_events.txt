@@ -10375,6 +10375,10 @@ country_event = { # 중앙구에서 대규모 시위
 	is_triggered_only = yes
 	fire_only_once = no
 
+	immediate = {
+		set_variable = { TRN_Mika_social_problem_days = 60 }
+		set_variable = { TRN_Mika_social_problem_var = 0 }
+	}
 
 	option = {
 		name = trinity.45.a
@@ -10384,15 +10388,7 @@ country_event = { # 중앙구에서 대규모 시위
 				character = TRN_Misono_Mika
 			}
 		}
-		set_variable = { TRN_Mika_social_problem_days = 120 }
-		set_variable = { TRN_Mika_social_problem_var = 0 }
-		add_ideas = TRN_social_problem_ns
 		activate_mission = TRN_Mika_social_problem
-		add_war_support = -0.05
-
-		hidden_effect = {
-			news_event = { id = trinitynews.6 hours = 04 }
-		}
 	}
 
 	option = {
@@ -10403,6 +10399,14 @@ country_event = { # 중앙구에서 대규모 시위
 				character = TRN_Kirifuji_Nagisa
 			}
 		}
+	}
+	after = {
+		add_war_support = -0.05
+		hidden_effect = {
+			news_event = { id = trinitynews.6 hours = 04 }
+			country_event = { id = trnsocial.1 days = 15 }
+		}
+		add_ideas = TRN_social_problem_ns
 	}
 }
 
@@ -10427,7 +10431,7 @@ country_event = { # 타협의 끝
 	id = trinity.47
 	title = trinity.47.t
 	desc = trinity.47.desc
-	picture = GFX_event_Trinity_Campus # 나중에 이미지 바꿔야 함
+	picture = GFX_report_event_generic_library
 	
 	is_triggered_only = yes
      fire_only_once = no
@@ -10438,7 +10442,22 @@ country_event = { # 타협의 끝
     }
 }
 
-country_event = { # 사회문제해결을위한최종해결책
+country_event = { # 타협의 끝
+	id = trinity.48
+	title = trinity.48.t
+	desc = trinity.48.desc
+	picture = GFX_report_event_generic_library
+	
+	is_triggered_only = yes
+     fire_only_once = no
+
+	option = { 
+		name = trinity.49.a
+
+    }
+}
+
+country_event = { # 문제 - 1
 	id = trnsocial.1
 	title = trnsocial.1.t
 	desc = trnsocial.1.desc
@@ -10450,6 +10469,17 @@ country_event = { # 사회문제해결을위한최종해결책
 
 	option = {
 		name = trnsocial.1.a
+		add_to_variable = { 
+			TRN_Mika_social_problem_var = 1
+			tooltip = TRN_Mika_social_problem_var_plus
+		}
+		clamp_variable = {
+			var = TRN_Mika_social_problem_var
+			min = 0
+			max = 10
+		}
+		custom_effect_tooltip = tooltip_white_line
+		add_stability = -0.03
 
 	}
 }

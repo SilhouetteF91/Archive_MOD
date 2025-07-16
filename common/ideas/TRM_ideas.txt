@@ -959,17 +959,6 @@ ideas = {
 				}
 			}
 		}
-		TRM_Terrestrial_Dreadnoughts_idea = { #
-			picture = generic_acquire_tanks
-			allowed = { always = no }
-			equipment_bonus = {
-				armor = {
-					defense = 0.05
-					breakthrough = 0.05
-					instant = yes
-				}
-			}
-		}
 		TRM_superb_training_idea_1 = { #initial
 			name = TRM_superb_training_idea
 			picture = SWE_varnplikt
@@ -1616,6 +1605,51 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.15
+			}
+		}
+
+		TRN_army_industry_ns = { 
+			picture = generic_improved_industries
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		TRN_army_industry_expand_logistics_ns = { 
+			name = TRN_army_industry_ns
+			picture = generic_improved_industries
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				 
+				out_of_supply_factor = -0.1
+				supply_node_range = 0.1
+			}
+		}
+
+		TRN_army_local_workshops_ns = { 
+			name = TRN_army_industry_ns
+			picture = generic_improved_industries
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.2
+			}
+		}
+
+		TRN_army_industry_upgarde_ns = { 
+			name = TRN_army_industry_ns
+			picture = generic_improved_industries
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+
+				conversion_cost_civ_to_mil_factor = -0.2
+				
+				 
+				out_of_supply_factor = -0.1
+				supply_node_range = 0.1
 			}
 		}
 

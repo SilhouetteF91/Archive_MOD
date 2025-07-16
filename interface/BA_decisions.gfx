@@ -593,6 +593,14 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_decision_trinity_skill_disc"
+		texturefile = "gfx/interface/decisions/decision_trinity_skill_disc.tga"
+	}
+	spriteType = {
+		name = "GFX_decision_trinity_skill_books"
+		texturefile = "gfx/interface/decisions/decision_trinity_skill_books.tga"
+	}
+	spriteType = {
 		name = "GFX_decisions_TRN_library_committee"
 		texturefile = "gfx/interface/decisions/TRN_library_committee.tga"
 		legacy_lazy_load = no

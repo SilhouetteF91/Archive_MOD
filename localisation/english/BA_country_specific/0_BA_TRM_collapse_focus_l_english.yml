@@ -227,6 +227,7 @@
 
  TRM_declaration_of_extermination_campaign_KPD: "유격대 파괴"
  TRM_declaration_of_extermination_campaign_NSD: "친위대 파괴"
+ TRN_add_core_of_FROM: "[FROM.GetName]주 트리니티화"
 
  KPD_declaration_of_resistance_flag: "@KPD 저항군이 집단 봉기함"
  NSD_declaration_of_resistance_flag: "@NSD 저항군이 집단 봉기함"
