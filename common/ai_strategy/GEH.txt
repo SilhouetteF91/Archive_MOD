@@ -1,0 +1,681 @@
+
+
+### 게헨나 외교 전략 ###
+
+# 선도부-트리니티 우호
+# 로어적: 소라사키 히나는 "에덴 조약" 체결을 주도적으로 추진하고 있었음
+GEH_we_love_trinity = {
+	allowed = {
+		original_tag = GEH
+	}
+
+	abort = {
+		TRM = {
+			has_country_leader = {
+				character = TRN_Misono_Mika
+				ruling_only = yes
+			}
+		}
+	}
+
+    ai_strategy = {
+        type = befriend
+        id = "TRM"
+        value = 20
+    }
+}
+
+# 세이아를죽인트리니티를죽인다오직그것뿐이다
+GEH_we_hate_trinity = {
+	allowed = {
+		original_tag = GEH
+	}
+
+	enable = {
+		TRM = {
+			has_country_leader = {
+				character = TRN_Misono_Mika
+				ruling_only = yes
+			}
+		}
+	}
+
+	abort = {
+		TRM = {
+			NOT = { has_country_leader = {
+				character = TRN_Misono_Mika
+				ruling_only = yes
+			} }
+		}
+	}
+
+    ai_strategy = {
+        type = befriend
+        id = "TRM"
+        value = -200
+    }
+
+    ai_strategy = {
+        type = alliance
+        id = "TRM"
+        value = -200
+    }
+}
+
+# 에덴 결전 승리 이후 만마전 경멸
+# 트리니티가 사라진 이후 AI 선도부는 필연적으로 만마전과 동맹을 풀고 전쟁 준비
+GEH_we_hate_pandemonium_society = {
+	allowed = {
+		original_tag = GEH
+	}
+
+	enable = {
+		country_exists = TRK
+		country_exists = GEM
+	}
+
+	abort = {
+		NOT = { country_exists = GEM }
+	}
+
+    ai_strategy = {
+        type = befriend
+        id = "GEM"
+        value = -200
+    }
+
+    ai_strategy = {
+        type = alliance
+        id = "GEM"
+        value = -200
+    }
+	
+	ai_strategy = {
+        type = antagonize
+        id = "GEM"
+        value = 100
+    }
+}
+
+### 게헨나 기본 AI 전략 ###
+
+GEH_we_are_bad_at_espionage_because_it_is_expensive_and_not_tanks = {
+	allowed = {
+		original_tag = GEH
+		has_dlc = "La Resistance"
+	}
+	enable = {
+		has_intelligence_agency = yes
+		num_of_civilian_factories < 75
+		num_of_civilian_factories > 30
+	}
+	abort = {
+		num_of_civilian_factories > 75
+	}
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = -20
+	}
+}
+
+GEH_infantry_equipment_3_is_bad = {
+	enable = {
+		tag = GEH
+		GEH = { has_equipment = { infantry_equipment < 80000 } }
+	}
+
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = production_upgrade_desire_offset
+		id = infantry_equipment_3
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = production_upgrade_desire_offset
+		id = infantry_equipment_2
+		value = 100
+	}
+}
+
+GEH_prepare_for_the_eden_war = {
+	allowed = { 
+		tag = GEH
+	}
+	enable = {
+		has_army_manpower = { size < 700000 }
+		TRM = { has_country_leader = {
+				character = TRN_Misono_Mika
+				ruling_only = yes
+		} }
+	}
+	abort = {
+		has_army_manpower = { size > 700000 }
+		NOT = { country_exists = TRM }
+	}
+	
+	ai_strategy = {
+        	type = force_build_armies
+        	value = 100
+	}
+}
+
+GEH_industry_we_are_the_baddies = {
+	allowed = {
+		original_tag = GEH
+	}
+	enable = {
+		date > 1937.5.1
+	}
+	abort ={
+		date > 1942.1.1
+	}
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 50
+	}
+	ai_strategy = {
+		type = air_factory_balance
+		value = 30
+	}	
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 2  # Germany needs a minimum production of fighters
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 2  # Germany needs a minimum production of CAS planes
+	}
+}
+
+
+GEH_unit_production = {
+	allowed = {
+		original_tag = GEH
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 2
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = 0 
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 0 
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 40 
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 80 
+	}
+
+	# Naval unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 15
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = -50 #because doctrine this = 50
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 20
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 20
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = naval_bomber
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 35 #30 to 50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor 
+		value = 10
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_tank
+		value = 10
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_air
+		value = 20
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 5 #20 to 40
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized
+		value = 5
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = support
+		value = 25
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories #Build these up over time, don't stall
+		id = infantry
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories #Build these up over time, don't stall
+		id = anti_air
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = support_equipment
+		value = 5
+	}
+
+	ai_strategy = { #added to railway gun define (set to 0 by default, increased in default strategies)
+		type = railway_gun_divisions_ratio
+		value = 1
+	}
+
+}
+
+GEH_template_design = {
+	allowed = {
+		original_tag = GEH
+	}
+	enable = {
+		date < 1940.1.1
+	}
+	abort = {
+		date > 1940.1.1
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 20
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = artillery
+		value = 20
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = -50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 30
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = -50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -50
+	}
+}
+
+GEH_dont_die_in_mountains = {
+	allowed = {
+		original_tag = GEH
+	}
+	enable = {
+		date < 1942.5.1
+		country_exists = SWI
+	}
+	abort = {
+		OR = {
+			AND = {
+				NOT = { country_exists = MIL }
+				date > 1942.5.1
+			}
+			SWI = {	
+				NOT = { has_idea = SWI_swiss_neutrality }
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = ignore
+		id = "SWI"
+		value = 1000
+	}
+}
+
+GEH_anti_armor = {
+	allowed = {
+		original_tag = GEH
+	}
+	enable = {
+		ai_wants_divisions > 5 #Decreasing the amount of motorized the AI wants
+
+		any_enemy_country = {
+			ROOT = {
+				estimated_intel_max_armor = {
+					tag = PREV
+					value > 25
+				}
+			}
+		}
+	}
+	abort = {
+		ai_wants_divisions < 6 #Decreasing the amount of motorized the AI wants
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = 15
+	}
+}
+
+GEH_armored_production = {
+	allowed = {
+		original_tag = GEH
+	}
+	enable = {
+		date > 1938.8.1
+		ai_wants_divisions > 10 #Decreasing the amount of tanks the AI wants
+	}
+	abort = {
+		OR = {
+			ai_wants_divisions < 10 #Decreasing the amount of tanks the AI wants
+		}
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 2
+	}
+}
+
+GEH_halt_light_armor_production_in_transitioning = {
+	allowed = {
+		original_tag = GEH
+	}
+	enable = {
+		has_template_majority_unit = medium_armor
+		OR = {
+			has_equipment = { light_tank_chassis > 600 }
+			date > 1938.8.1
+		}
+	}
+	abort = {
+		always = no  # once we start we never go back to light armor
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_chassis
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = medium_tank_chassis
+		value = 50
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = -50 #downprio this for some more tanks
+	}
+	
+}
+
+GEH_stockpile_less_early_game = {
+	allowed = {
+		original_tag = GEH
+	}
+
+	enable = {
+		date < 1940.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		value = -20 # reduce while we build up in case of CZE or Austria issues
+	}
+}
+
+GEH_highered_armored_production = {
+	allowed = {
+		original_tag = GEH
+	}
+	enable = {
+		num_of_military_factories > 59
+	}
+	abort = {
+		num_of_military_factories < 60
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 2
+	}
+}
+
+GEH_dont_waste_xp_until_medium_armor = {
+	allowed = {
+		original_tag = GEH
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		has_template_majority_unit = medium_armor
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratrooper
+		value = -100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mountaineers
+		value = -100
+	}
+}
+
+GEH_super_boost_light_for_med_armor = {
+	allowed = {
+		original_tag = GEH
+	}
+	enable = {
+		OR = {
+			has_tech = basic_medium_tank
+			has_tech = basic_medium_tank_chassis
+		}
+		NOT = { has_template_ai_majority_unit = medium_armor }
+	}
+
+	abort = {
+		has_template_ai_majority_unit = medium_armor
+	}
+
+	# lets do changes more often during this period too
+	ai_strategy = {
+		type = land_xp_spend_priority
+		id = division_template
+		value = 100
+	}
+
+	# this is gateway
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 150
+	}
+
+	# Germany is set up to change their SS division into medium armor.
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 200
+	}
+}
+
+GEH_super_boost_light_for_modern_armor = {
+	allowed = {
+		original_tag = GEH
+	}
+	enable = {
+		OR = {
+			has_tech = main_battle_tank
+			has_tech = main_battle_tank_chassis
+		}
+		NOT = { has_template_ai_majority_unit = modern_armor }
+	}
+
+	abort = {
+		has_template_ai_majority_unit = modern_armor
+	}
+
+	# lets do changes more often during this period too
+	ai_strategy = {
+		type = land_xp_spend_priority
+		id = division_template
+		value = 100
+	}
+
+	# this is gateway
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = modern_armor
+		value = 150
+	}
+}
+
+GEH_how_about_some_more_transport_planes = {
+	allowed = {
+		original_tag = GEH
+	}
+	enable = {
+		num_of_military_factories > 50
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = air_transport
+		value = 1
+	}
+}
