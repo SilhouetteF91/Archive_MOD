@@ -1,0 +1,1045 @@
+spriteTypes = {
+
+	#아비도스 엔네아드#
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_69"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161405461175_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_9"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161405561924_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_74"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161406238360_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_72"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161406354145_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_75"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161406505499_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_972"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161406599463_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_1021"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407100481_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_975"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407196344_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_4"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407292286_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_976"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407395987_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_152"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407490287_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_153"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161407587459_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_ABY_central_state_selected_848"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412161408082834_small.tga"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_69"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405461175.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_9"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405561924.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_74"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406238360.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_72"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406354145.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_75"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406505499.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_972"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406599463.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_1021"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407100481.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_975"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407196344.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_4"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407292286.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_976"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407395987.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_152"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407490287.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_153"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407587459.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_central_state_848"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161408082834.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_develop.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	
+	progressbartype = {
+		name = "GFX_ABY_unite_state_69"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405461175.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_unite_state_9"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405561924.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_unite_state_74"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406238360.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_unite_state_72"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406354145.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_unite_state_75"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406505499.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_unite_state_972"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406599463.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_unite_state_1021"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407100481.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_unite_state_975"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407196344.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_unite_state_4"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407292286.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_unite_state_976"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407395987.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_unite_state_152"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407490287.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_unite_state_153"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407587459.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_unite_state_848"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161408082834.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_unite.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_69"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405461175.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_9"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161405561924.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_74"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406238360.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_72"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406354145.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_75"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406505499.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_972"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161406599463.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_1021"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407100481.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_975"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407196344.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_4"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407292286.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_976"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407395987.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_152"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407490287.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_153"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161407587459.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ABY_rebuild_state_848"
+		textureFile1 = "gfx/interface/decisions/aby_descision_gui/export202412161408082834.tga"
+		textureFile2 = "gfx/interface/decisions/aby_descision_gui/colors_rebuild.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 480
+			y = 270
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+
+	spriteType = {
+		name = "GFX_ABY_central_state_border"
+		textureFile = "gfx/interface/decisions/aby_descision_gui/export202412181118152962.tga"
+	}
+	
+
+	progressbartype = {
+		name = "GFX_ABY_focus_progressbar"
+		textureFile1 = "gfx/interface/decisions/ABY_focus_gui/ABY_progressbar.dds"
+		textureFile2 = "gfx/interface/decisions/ABY_focus_gui/ABY_progressbar_bg.dds"
+		size = { x = 175 y = 25 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 49
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tiled_focus_bg_small"
+		size= { x=800 y=800 }
+		textureFile = "gfx/interface/decisions/icon/tiled_focus_bg_small.tga"
+		borderSize = { x=400 y=400 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}	
+
+	spriteType = {
+		name = "GFX_ABY_portrait_base"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_portrait_base.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_ABY_portrait_czech"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_portrait_czech.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_ABY_portrait_german"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_portrait_german.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_first"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_first.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_german_base_unavailable"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_german_base_unavailable.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_czech_base_unavailable"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_czech_base_unavailable.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_abydos_base_unavailable"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_abydos_base_unavailable.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_german_base_available"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_german_base_available.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_czech_base_available"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_czech_base_available.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_abydos_base_available"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_abydos_base_available.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_german_base_completed"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_german_base_completed.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_czech_base_completed"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_czech_base_completed.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_abydos_base_completed"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_abydos_base_completed.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_ongoing"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_ongoing.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_unavailable"
+		texturefile = "gfx/interface/decisions/icon/X.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_available"
+		texturefile = "gfx/interface/decisions/icon/V.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_divide_line"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/divide_Line.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_base_line"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161056284480.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_mutual_normal"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161056385892.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_mutual_left"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161056463132.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_mutual_right"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161056546884.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_1"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161302423332.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_2"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161302548502.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_3"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161303074412.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_4"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161303181126.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_5"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161303293242.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_6"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161303409047.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_7"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161309240206.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_8"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161303513107.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_9"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161304016095.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_10"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161304125010.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_11"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161304224310.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_12"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161304325983.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_13"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161304433674.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_14"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161304527909.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_15"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161305098515.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_16"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161305188568.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_17"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161305283145.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_18"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161305375714.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_19"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161305470595.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_20"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161305567597.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_21"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161306059526.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_22"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161306180541.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_23"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161306291241.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_24"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161306379594.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_25"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161306465471.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_26"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161306561340.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_27"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161307053653.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_28"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161307137895.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_29"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161307223570.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_30"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161307311436.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_31"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161307397301.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_32"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161307492549.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_33"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161308072039.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_34"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161308182923.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_35"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161308324613.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_36"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161308420150.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_37"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161308502628.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_38"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161308584736.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_39"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161309077059.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_completed_line_40"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/lines/export202504161309155872.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+}
