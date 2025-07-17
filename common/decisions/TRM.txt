@@ -8704,7 +8704,13 @@ TRN_Mika_social_problem_cat = {
 			activate_mission = TRN_Mika_social_problem
 			if = {
 				limit = { check_variable = { TRN_Mika_social_problem_var < 1 } }
+				add_popularity = { ideology = communism popularity = 0.025 }
+				country_event = { id = trnsocial.2 }
+			}
+			else_if = {
+				limit = { check_variable = { TRN_Mika_social_problem_var < 2 } }
 				add_popularity = { ideology = ROOT popularity = -0.025 }
+				country_event = { id = trnsocial.3 }
 			}
 		}
 		cancel_effect = {

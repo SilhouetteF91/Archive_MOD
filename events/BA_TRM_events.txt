@@ -10484,6 +10484,50 @@ country_event = { # 문제 - 1
 	}
 }
 
+country_event = { # 문제 - 노조 파업
+	id = trnsocial.2
+	title = trnsocial.2.t
+	desc = trnsocial.2.desc
+	picture = GFX_report_event_generic_trinity_building
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+
+	option = { # 탄압한다
+		name = trnsocial.2.a
+
+	}
+	option = { # 타협한다
+		name = trnsocial.2.b
+
+	}
+}
+
+country_event = { # 문제 - 민병대
+	id = trnsocial.3
+	title = trnsocial.3.t
+	desc = trnsocial.3.desc
+	picture = GFX_report_event_generic_trinity_building
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+
+	option = { # 빨갱이를 주력으로 조진다
+		name = trnsocial.3.a
+
+	}
+	option = { # 파쇼를 주력으로
+		name = trnsocial.3.b
+
+	}
+	option = { # 둘 다
+		name = trnsocial.3.b
+
+	}
+}
+
 
 
 
