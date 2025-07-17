@@ -71,7 +71,7 @@ guiTypes = {
 		## 1사이드
 		iconType = {
 			name = "red_second_great_northern_war_1side_icon_red"
-			spriteType = "GFX_red_northern_sovereignty_war_1side_icon_cherino"
+			spriteType = "GFX_red_second_great_northern_war_1side_icon"
 			position = { x = 170 y = 22 }
 			scale = 0.6
 			pdx_tooltip = red_second_great_northern_war_RED_side_icon_tt
@@ -80,7 +80,7 @@ guiTypes = {
 		## 2사이드
 		iconType = {
 			name = "red_second_great_northern_war_2side_icon_fin"
-			spriteType = "GFX_red_northern_sovereignty_war_2side_icon"
+			spriteType = "GFX_red_second_great_northern_war_2side_icon"
 			position = { x = 435 y = 22 }
 			scale = 0.6
 			pdx_tooltip = red_second_great_northern_war_FIN_side_icon_tt

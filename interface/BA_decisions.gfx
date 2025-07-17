@@ -2185,6 +2185,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/RED/RED_northern_sovereignty_war_2side_icon.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_red_second_great_northern_war_1side_icon"
+		texturefile = "gfx/interface/decisions/RED/RED_second_great_northern_war_1side_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_red_second_great_northern_war_2side_icon"
+		texturefile = "gfx/interface/decisions/RED/RED_second_great_northern_war_2side_icon.dds"
+		legacy_lazy_load = no
+	}
 
 
 	spriteType = {
