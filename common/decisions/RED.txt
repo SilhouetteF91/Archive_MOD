@@ -3068,10 +3068,96 @@ RED_second_great_northern_war = {
 	RED_second_great_northern_war_debug = {
 		complete_effect = {
 			set_variable = {
-				global.red_re1_second_great_northern_war_fin_var = 25
+				global.red_re1_second_great_northern_war_fin_var = 50
 			}
 			set_variable = {
 				global.red_re1_second_great_northern_war_red_var = 34
+			}
+			hidden_effect = { #핀란드와 붉은겨울의 나머지 값 계산
+				#RE1
+				set_temp_variable = { #핀란드 시점의 최대 확보 가능한 값 (최대값 - 붉은겨울 현재값)
+					re1_second_great_northern_war_max_finside = 100
+				}
+				subtract_from_temp_variable = {
+					re1_second_great_northern_war_max_finside = global.red_re1_second_great_northern_war_red_var
+				}
+				set_temp_variable = { #붉은겨울 시점의 최대 확보 가능한 값 (최대값 - 핀란드 현재값)
+					re1_second_great_northern_war_max_redside = 100
+				}
+				subtract_from_temp_variable = {
+					re1_second_great_northern_war_max_redside = global.red_re1_second_great_northern_war_fin_var
+				}
+				#RE2
+				set_temp_variable = { #핀란드 시점의 최대 확보 가능한 값 (최대값 - 붉은겨울 현재값)
+					re2_second_great_northern_war_max_finside = 100
+				}
+				subtract_from_temp_variable = {
+					re2_second_great_northern_war_max_finside = global.red_re2_second_great_northern_war_red_var
+				}
+				set_temp_variable = { #붉은겨울 시점의 최대 확보 가능한 값 (최대값 - 핀란드 현재값)
+					re2_second_great_northern_war_max_redside = 100
+				}
+				subtract_from_temp_variable = {
+					re2_second_great_northern_war_max_redside = global.red_re2_second_great_northern_war_fin_var
+				}
+				#RE3
+				set_temp_variable = { #핀란드 시점의 최대 확보 가능한 값 (최대값 - 붉은겨울 현재값)
+					re3_second_great_northern_war_max_finside = 100
+				}
+				subtract_from_temp_variable = {
+					re3_second_great_northern_war_max_finside = global.red_re3_second_great_northern_war_red_var
+				}
+				set_temp_variable = { #붉은겨울 시점의 최대 확보 가능한 값 (최대값 - 핀란드 현재값)
+					re3_second_great_northern_war_max_redside = 100
+				}
+				subtract_from_temp_variable = {
+					re3_second_great_northern_war_max_redside = global.red_re3_second_great_northern_war_fin_var
+				}
+			}
+			###################################################################
+			#  /  여기가 실질 값 연산부 시작
+			###################################################################
+			add_to_variable = {
+				global.red_re1_second_great_northern_war_red_var = 100
+				tooltip = red_second_great_northern_war_RED_tt
+			}
+			###################################################################
+			#     여기가 실질 값 연산부 끝   /
+			###################################################################
+			hidden_effect = { #합이 100 이상이 되는걸 방지 (상대 값 침범 금지)
+				#RE1
+				clamp_variable = { #핀란드 값이 핀란드 최대값을 넘지 않게
+					var = global.red_re1_second_great_northern_war_fin_var
+					min = 0
+					max = re1_second_great_northern_war_max_finside
+				}
+				clamp_variable = { #붉은겨울 값이 붉은겨울 최대값을 넘지 않게 
+					var = global.red_re1_second_great_northern_war_red_var
+					min = 0
+					max = re1_second_great_northern_war_max_redside
+				}
+				#RE2
+				clamp_variable = { #핀란드 값이 핀란드 최대값을 넘지 않게
+					var = global.red_re2_second_great_northern_war_fin_var
+					min = 0
+					max = re2_second_great_northern_war_max_finside
+				}
+				clamp_variable = { #붉은겨울 값이 붉은겨울 최대값을 넘지 않게 
+					var = global.red_re2_second_great_northern_war_red_var
+					min = 0
+					max = re2_second_great_northern_war_max_redside
+				}
+				#RE3
+				clamp_variable = { #핀란드 값이 핀란드 최대값을 넘지 않게
+					var = global.red_re3_second_great_northern_war_fin_var
+					min = 0
+					max = re3_second_great_northern_war_max_finside
+				}
+				clamp_variable = { #붉은겨울 값이 붉은겨울 최대값을 넘지 않게 
+					var = global.red_re3_second_great_northern_war_red_var
+					min = 0
+					max = re3_second_great_northern_war_max_redside
+				}
 			}
 		}
 	}
