@@ -209,6 +209,25 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 		}
+		
+		advisor={
+			slot = army_chief
+			idea_token = GEH_wnszh
+			allowed = { 
+				OR = { 
+					original_tag = GEH 
+					original_tag = GEM 
+					original_tag = HEU 
+				} 
+			}
+			traits = {
+				army_chief_morale_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 	GEH_motomiya_chiaki={ #모토미야 치아키
 		name=GEH_motomiya_chiaki
@@ -233,10 +252,22 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 		}
+		corps_commander={
+			traits={ GEM_trait_gourmet_research_society career_officer trickster }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				has_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
+			}
+		}
 	}
 	
-	GEH_gkfnsk={ # 하루나
-		name=GEH_gkfnsk
+	GEM_kurodate_haruna={ # 하루나 :미식연구회 부장
+		name=GEH_kurodate_haruna
 		portraits={
 			army={
 				large="gfx/leaders/GEH/GEH_gkfnsk.dds"
@@ -244,18 +275,16 @@ characters={
 			}
 		}
 		gender = female
-		country_leader={
-			ideology=anarchist_communism
-			traits={  }
-			expire="1965.1.1.1"
-		}
 		corps_commander={
 			traits={ GEM_trait_gourmet_research_society }
 			skill=2
-			attack_skill=2
-			defense_skill=2
+			attack_skill=3
+			defense_skill=3
 			planning_skill=3
-			logistics_skill=1
+			logistics_skill=3
+			visible = {
+				has_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
+			}
 		}
 		advisor={
 			slot = political_advisor
@@ -268,6 +297,7 @@ characters={
 				}
 			}
 			available = {
+				has_country_flag = gem_club_problem_gourmet_research_society_progress_point_2_visible
 			}
 			traits = {
 				GEM_gourmet_research_society_trait
@@ -277,8 +307,8 @@ characters={
 			}
 		}
 	}
-	GEH_dkzkfl={ #아카리
-		name=GEH_dkzkfl
+	GEM_wanibuchi_akari={ #아카리 :미식연구회
+		name=GEH_wanibuchi_akari
 		portraits={
 			army={
 				large= "gfx/leaders/GEH/GEH_dkzkfl.dds"
@@ -287,31 +317,19 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			traits={ GEM_trait_gourmet_research_society career_officer trickster }
+			traits={ GEM_trait_gourmet_research_society }
 			skill=2
 			attack_skill=3
 			defense_skill=2
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=120
-		}
-		advisor={	
-			slot = high_command
-			idea_token = GEH_dkzkfl
-			allowed = { 
-				OR = { 
-					original_tag = GEH 
-					original_tag = GEM 
-					original_tag = HEU 
-				} 
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				has_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
 			}
-			traits = { army_infantry_1 }
-			cost = 50
-			ai_will_do = { factor = 1.000 }
 		}
 	}
-	GEH_dlwmal={ #이즈미
-		name=GEH_dlwmal
+	GEM_shishido_izumi={ #이즈미 :미식연구회
+		name=GEH_shishido_izumi
 		portraits={
 			army={
 				large= "gfx/leaders/GEH/GEH_dlwmal.dds"
@@ -322,35 +340,17 @@ characters={
 		corps_commander={
 			traits={ GEM_trait_gourmet_research_society }
 			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-		}
-		advisor={	
-			slot = high_command
-			idea_token = GEH_dlwmal
-			allowed = { 
-				OR = { 
-					original_tag = GEH 
-					original_tag = GEM 
-					original_tag = HEU 
-				} 
-			}
-			available = {
-				
-			}
-			traits = {
-				army_artillery_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
+			attack_skill=1
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			visible = {
+				has_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
 			}
 		}
 	}
-	GEH_wnszh={  # 준코
-		name=GEH_wnszh
+	GEM_akashi_junko={  # 준코 :미식연구회
+		name=GEH_akashi_junko
 		portraits={
 			army={
 				large= "gfx/leaders/GEH/GEH_wnszh.dds"
@@ -360,35 +360,19 @@ characters={
 		gender = female
 		corps_commander={
 			traits={ GEM_trait_gourmet_research_society career_officer inflexible_strategist }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=1
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=3
 			logistics_skill=1
 			legacy_id=-1
-		}
-		
-		advisor={
-			slot = army_chief
-			idea_token = GEH_wnszh
-			allowed = { 
-				OR = { 
-					original_tag = GEH 
-					original_tag = GEM 
-					original_tag = HEU 
-				} 
-			}
-			traits = {
-				army_chief_morale_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
+			visible = {
+				has_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
 			}
 		}
 	}
 	
-	GEH_kinugawa_kasumi={ #카스미
+	GEM_kinugawa_kasumi={ #카스미 :온천개발부 부장
 		name=GEH_kinugawa_kasumi
 		portraits={
 			army={
@@ -406,10 +390,13 @@ characters={
 			traits={ GEM_trait_hot_spring_department }
 			skill=2
 			attack_skill=3
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
 			legacy_id=-1
+			visible = {
+				has_country_flag = gem_club_problem_hot_spring_department_progress_point_3_visible
+			}
 		}
 		advisor={
 			slot = political_advisor
@@ -422,6 +409,7 @@ characters={
 				} 
 			}
 			available = {
+				has_country_flag = gem_club_problem_hot_spring_department_progress_point_2_visible
 			}
 			traits = {
 				GEM_hot_spring_department_trait
@@ -431,7 +419,7 @@ characters={
 			}
 		}
 	}
-	GEH_shimokura_megu={ #메구
+	GEM_shimokura_megu={ #메구 :온천개발부
 		name=GEH_shimokura_megu
 		portraits={
 			army={
@@ -443,11 +431,14 @@ characters={
 		corps_commander={
 			traits={ GEM_trait_hot_spring_department }
 			skill=1
-			attack_skill=2
-			defense_skill=1
+			attack_skill=3
+			defense_skill=2
 			planning_skill=1
 			logistics_skill=1
 			legacy_id=-1
+			visible = {
+				has_country_flag = gem_club_problem_hot_spring_department_progress_point_3_visible
+			}
 		}
 	}
 
@@ -537,9 +528,9 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 		}
-		advisor={
+		advisor={	
 			slot = high_command
-			idea_token = GEH_wnfl_idea
+			idea_token = GEH_dlwmal
 			allowed = { 
 				OR = { 
 					original_tag = GEH 
@@ -547,9 +538,16 @@ characters={
 					original_tag = HEU 
 				} 
 			}
-			traits = { army_CombinedArms_1 }
-			cost = 50
-			ai_will_do = { factor = 1.000 }
+			available = {
+				
+			}
+			traits = {
+				army_artillery_3
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	GEH_hatami_ericha={ #하타미 에리카

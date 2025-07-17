@@ -12,7 +12,7 @@ ideas = {
 			allowed = { always = no }
 			allowed_civil_war = { always = no } 
 
-			cancel = { has_country_flag = club_problem_gourmet_research_society_escape_flag }
+			cancel = { has_global_flag = club_problem_gourmet_research_society_escape_flag }
 
 			modifier = {
 				stability_factor = 0.05
@@ -24,7 +24,7 @@ ideas = {
 			allowed = { always = no }
 			allowed_civil_war = { always = no } 
 
-			cancel = { has_country_flag = club_problem_gourmet_research_society_escape_flag }
+			cancel = { has_global_flag = club_problem_gourmet_research_society_escape_flag }
 
 			modifier = {
 				stability_factor = 0.02
@@ -35,7 +35,7 @@ ideas = {
 			allowed = { always = no }
 			allowed_civil_war = { always = no } 
 
-			cancel = { has_country_flag = club_problem_gourmet_research_society_escape_flag }
+			cancel = { has_global_flag = club_problem_gourmet_research_society_escape_flag }
 
 			modifier = {
 				stability_factor = -0.05
@@ -47,7 +47,7 @@ ideas = {
 			allowed = { always = no }
 			allowed_civil_war = { always = no } 
 
-			cancel = { has_country_flag = club_problem_hot_spring_department_escape_flag }
+			cancel = { has_global_flag = club_problem_hot_spring_department_escape_flag }
 
 			modifier = {
 				stability_factor = 0.05
@@ -59,7 +59,7 @@ ideas = {
 			allowed = { always = no }
 			allowed_civil_war = { always = no } 
 
-			cancel = { has_country_flag = club_problem_hot_spring_department_escape_flag }
+			cancel = { has_global_flag = club_problem_hot_spring_department_escape_flag }
 
 			modifier = {
 				stability_factor = 0.02
@@ -70,7 +70,7 @@ ideas = {
 			allowed = { always = no }
 			allowed_civil_war = { always = no } 
 
-			cancel = { has_country_flag = club_problem_hot_spring_department_escape_flag }
+			cancel = { has_global_flag = club_problem_hot_spring_department_escape_flag }
 
 			modifier = {
 				stability_factor = -0.05

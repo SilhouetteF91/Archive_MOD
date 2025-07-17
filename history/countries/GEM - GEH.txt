@@ -221,19 +221,19 @@ recruit_character = GEH_dlqnzl
 recruit_character = GEH_dlfhgk
 recruit_character = GEH_satsuki
 recruit_character = GEH_motomiya_chiaki
-#미식연구회
-recruit_character = GEH_gkfnsk
-recruit_character = GEH_wnszh
-recruit_character = GEH_dlwmal
-recruit_character = GEH_dkzkfl
 #급양부
 recruit_character = GEH_gndnzk
 recruit_character = GEH_wnfl
 #응급의학부
 recruit_character = GEH_Himuro_Sena
+#미식연구회
+recruit_character = GEM_kurodate_haruna
+recruit_character = GEM_wanibuchi_akari
+recruit_character = GEM_shishido_izumi
+recruit_character = GEM_akashi_junko
 #온천개발부
-recruit_character = GEH_kinugawa_kasumi
-recruit_character = GEH_shimokura_megu
+recruit_character = GEM_kinugawa_kasumi
+recruit_character = GEM_shimokura_megu
 #귀가부 - 장군 X
 recruit_character = GEH_hatami_ericha
 recruit_character = GEH_kirara

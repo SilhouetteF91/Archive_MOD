@@ -1667,16 +1667,14 @@ leader_traits = {
 		justify_war_goal_time = -0.15
 		annex_cost_factor = -0.15
 		resistance_target = -0.10
-		GEH_resistance_strength_gourmet_research_society = 1
 	}
     GEM_hot_spring_department_trait = { # 온천개발부
 		sprite = 7
 		random = no
 		production_speed_infrastructure_factor = 0.25
-		production_speed_dockyard_factor = 0.05
-		production_speed_arms_factory_factor = 0.05
-		production_speed_industrial_complex_factor = 0.05
-		GEH_resistance_strength_hot_spring_department = 1
+		production_speed_dockyard_factor = 0.10
+		production_speed_arms_factory_factor = 0.10
+		production_speed_industrial_complex_factor = 0.10
 	}
 	GEM_Neutralize = {
 		random = no

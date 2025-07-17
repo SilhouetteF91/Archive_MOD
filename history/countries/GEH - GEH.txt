@@ -517,6 +517,15 @@ recruit_character = GEH_karl_schmidt_rottluff
 recruit_character = GEH_richard_strauss
 recruit_character = GEH_hertha_gordon
 
+#미식연구회
+recruit_character = GEH_kurodate_haruna
+recruit_character = GEH_wanibuchi_akari
+recruit_character = GEH_shishido_izumi
+recruit_character = GEH_akashi_junko
+#온천개발부
+recruit_character = GEH_kinugawa_kasumi
+recruit_character = GEH_shimokura_megu
+
 set_convoys = 140
 
 set_politics = {

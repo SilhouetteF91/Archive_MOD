@@ -30,12 +30,13 @@ guiTypes = {
 			containerWindowType = {
 				name = "gem_club_problem_decision_gourmet_research_society_lv_window"
 				position = { x = 350 y = 20 }	
-				size = { width = 480 height = 180 }
+				size = { width = 102 height = 100 }
 
 				instantTextBoxType = {
 					name ="gem_club_problem_decision_gourmet_research_society_lv_text"
 					position = { x = 0 y = 0 }
-					maxWidth = 100
+					maxWidth = 102
+					maxHeight = 16
 					font = "hoi_16mbs"
 					text = "gem_club_problem_decision_lv_text"
 					format = center
@@ -44,7 +45,8 @@ guiTypes = {
 				instantTextBoxType = {
 					name ="gem_club_problem_decision_gourmet_research_society_lv"
 					position = { x = 0 y = 20 }
-					maxWidth = 100
+					maxWidth = 102
+					maxHeight = 23
 					font = "hoi_30header"
 					text = "gem_club_problem_decision_gourmet_research_society_lv"
 					format = center
@@ -93,91 +95,108 @@ guiTypes = {
 					pdx_tooltip = gem_club_problem_decision_select_3_cp
 				}
 			}
+			containerWindowType = {
+				name = "gem_club_problem_gourmet_research_society_progress_bar_window"
+				position = { x = 20 y = 118 }	
+				size = { width = 440 height = 45 }
 				
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_bar_GEM_side"
-				spriteType = "GFX_club_problem_progress_bar_GEM_side"
-				pdx_tooltip = red_second_great_northern_war_re1_progressbar_tt
-				position = { x=20 y=120 }
-			}
-			
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_bar_GEH_side"
-				spriteType = "GFX_club_problem_progress_bar_GEH_side"
-				pdx_tooltip = red_second_great_northern_war_re1_progressbar_tt
-				position = { x=20 y=145 }
-			}
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_bar_GEM_side"
+					spriteType = "GFX_club_problem_progress_bar_GEM_side"
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_bar_GEM_side_tt
+					position = { x=0 y=2 }
+				}
+				
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_bar_GEH_side"
+					spriteType = "GFX_club_problem_progress_bar_GEH_side"
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_bar_GEH_side_tt
+					position = { x=0 y=27 }
+				}
 
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_point_1_GEM_side_def"
-				spriteType = "GFX_club_problem_progress_point_def"
-				position = { x=120 y=118 }
-			}
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_point_1_GEM_side_def"
+					spriteType = "GFX_club_problem_progress_point_def"
+					position = { x=100 y=0 }
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_point_1_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_point_2_GEM_side_def"
-				spriteType = "GFX_club_problem_progress_point_def"
-				position = { x=250 y=118 }
-			}
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_point_2_GEM_side_def"
+					spriteType = "GFX_club_problem_progress_point_def"
+					position = { x=232 y=0 }
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_point_2_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_point_3_GEM_side_def"
-				spriteType = "GFX_club_problem_progress_point_def"
-				position = { x=450 y=118 }
-			}
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_point_3_GEM_side_def"
+					spriteType = "GFX_club_problem_progress_point_def"
+					position = { x=430 y=0 }
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_point_3_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_point_1_GEH_side_def"
-				spriteType = "GFX_club_problem_progress_point_def"
-				position = { x=120 y=143 }
-			}
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_point_1_GEH_side_def"
+					spriteType = "GFX_club_problem_progress_point_def"
+					position = { x=100 y=25 }
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_point_1_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_point_2_GEH_side_def"
-				spriteType = "GFX_club_problem_progress_point_def"
-				position = { x=250 y=143 }
-			}
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_point_2_GEH_side_def"
+					spriteType = "GFX_club_problem_progress_point_def"
+					position = { x=232 y=25 }
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_point_2_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_point_3_GEH_side_def"
-				spriteType = "GFX_club_problem_progress_point_def"
-				position = { x=450 y=143 }
-			}
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_point_3_GEH_side_def"
+					spriteType = "GFX_club_problem_progress_point_def"
+					position = { x=430 y=25 }
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_point_3_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_point_1_GEM_side_cp"
-				spriteType = "GFX_club_problem_progress_point_cp"
-				position = { x=120 y=118 }
-			}
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_point_1_GEM_side_cp"
+					spriteType = "GFX_club_problem_progress_point_cp"
+					position = { x=100 y=0 }
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_point_1_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_point_2_GEM_side_cp"
-				spriteType = "GFX_club_problem_progress_point_cp"
-				position = { x=250 y=118 }
-			}
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_point_2_GEM_side_cp"
+					spriteType = "GFX_club_problem_progress_point_cp"
+					position = { x=232 y=0 }
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_point_2_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_point_3_GEM_side_cp"
-				spriteType = "GFX_club_problem_progress_point_cp"
-				position = { x=450 y=118 }
-			}
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_point_3_GEM_side_cp"
+					spriteType = "GFX_club_problem_progress_point_cp"
+					position = { x=430 y=0 }
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_point_3_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_point_1_GEH_side_cp"
-				spriteType = "GFX_club_problem_progress_point_cp"
-				position = { x=120 y=143 }
-			}
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_point_1_GEH_side_cp"
+					spriteType = "GFX_club_problem_progress_point_cp"
+					position = { x=100 y=25 }
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_point_1_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_point_2_GEH_side_cp"
-				spriteType = "GFX_club_problem_progress_point_cp"
-				position = { x=250 y=143 }
-			}
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_point_2_GEH_side_cp"
+					spriteType = "GFX_club_problem_progress_point_cp"
+					position = { x=232 y=25 }
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_point_2_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_gourmet_research_society_progress_point_3_GEH_side_cp"
-				spriteType = "GFX_club_problem_progress_point_cp"
-				position = { x=450 y=143 }
+				iconType = {
+					name = "gem_club_problem_gourmet_research_society_progress_point_3_GEH_side_cp"
+					spriteType = "GFX_club_problem_progress_point_cp"
+					position = { x=430 y=25 }
+					pdx_tooltip = gem_club_problem_gourmet_research_society_progress_point_3_tt
+				}
 			}
 		}
 
@@ -209,12 +228,13 @@ guiTypes = {
 			containerWindowType = {
 				name = "gem_club_problem_decision_hot_spring_department_lv_window"
 				position = { x = 350 y = 20 }	
-				size = { width = 480 height = 180 }
+				size = { width = 102 height = 100 }
 
 				instantTextBoxType = {
 					name ="gem_club_problem_decision_hot_spring_department_lv_text"
 					position = { x = 0 y = 0 }
-					maxWidth = 100
+					maxWidth = 102
+					maxHeight = 16
 					font = "hoi_16mbs"
 					text = "gem_club_problem_decision_lv_text"
 					format = center
@@ -223,7 +243,8 @@ guiTypes = {
 				instantTextBoxType = {
 					name ="gem_club_problem_decision_hot_spring_department_lv"
 					position = { x = 0 y = 20 }
-					maxWidth = 100
+					maxWidth = 102
+					maxHeight = 23
 					font = "hoi_30header"
 					text = "gem_club_problem_decision_hot_spring_department_lv"
 					format = center
@@ -272,91 +293,108 @@ guiTypes = {
 					pdx_tooltip = gem_club_problem_decision_select_3_cp
 				}
 			}
+			containerWindowType = {
+				name = "gem_club_problem_hot_spring_department_progress_bar_window"
+				position = { x = 20 y = 118 }	
+				size = { width = 440 height = 45 }
 				
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_bar_GEM_side"
-				spriteType = "GFX_club_problem_progress_bar_GEM_side"
-				pdx_tooltip = red_second_great_northern_war_re1_progressbar_tt
-				position = { x=20 y=120 }
-			}
-			
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_bar_GEH_side"
-				spriteType = "GFX_club_problem_progress_bar_GEH_side"
-				pdx_tooltip = red_second_great_northern_war_re1_progressbar_tt
-				position = { x=20 y=145 }
-			}
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_bar_GEM_side"
+					spriteType = "GFX_club_problem_progress_bar_GEM_side"
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_bar_GEM_side_tt
+					position = { x=0 y=2 }
+				}
+				
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_bar_GEH_side"
+					spriteType = "GFX_club_problem_progress_bar_GEH_side"
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_bar_GEH_side_tt
+					position = { x=0 y=27 }
+				}
 
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_point_1_GEM_side_def"
-				spriteType = "GFX_club_problem_progress_point_def"
-				position = { x=120 y=118 }
-			}
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_point_1_GEM_side_def"
+					spriteType = "GFX_club_problem_progress_point_def"
+					position = { x=100 y=0 }
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_point_1_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_point_2_GEM_side_def"
-				spriteType = "GFX_club_problem_progress_point_def"
-				position = { x=250 y=118 }
-			}
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_point_2_GEM_side_def"
+					spriteType = "GFX_club_problem_progress_point_def"
+					position = { x=232 y=0 }
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_point_2_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_point_3_GEM_side_def"
-				spriteType = "GFX_club_problem_progress_point_def"
-				position = { x=450 y=118 }
-			}
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_point_3_GEM_side_def"
+					spriteType = "GFX_club_problem_progress_point_def"
+					position = { x=430 y=0 }
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_point_3_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_point_1_GEH_side_def"
-				spriteType = "GFX_club_problem_progress_point_def"
-				position = { x=120 y=143 }
-			}
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_point_1_GEH_side_def"
+					spriteType = "GFX_club_problem_progress_point_def"
+					position = { x=100 y=25 }
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_point_1_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_point_2_GEH_side_def"
-				spriteType = "GFX_club_problem_progress_point_def"
-				position = { x=250 y=143 }
-			}
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_point_2_GEH_side_def"
+					spriteType = "GFX_club_problem_progress_point_def"
+					position = { x=232 y=25 }
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_point_2_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_point_3_GEH_side_def"
-				spriteType = "GFX_club_problem_progress_point_def"
-				position = { x=450 y=143 }
-			}
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_point_3_GEH_side_def"
+					spriteType = "GFX_club_problem_progress_point_def"
+					position = { x=430 y=25 }
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_point_3_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_point_1_GEM_side_cp"
-				spriteType = "GFX_club_problem_progress_point_cp"
-				position = { x=120 y=118 }
-			}
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_point_1_GEM_side_cp"
+					spriteType = "GFX_club_problem_progress_point_cp"
+					position = { x=100 y=0 }
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_point_1_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_point_2_GEM_side_cp"
-				spriteType = "GFX_club_problem_progress_point_cp"
-				position = { x=250 y=118 }
-			}
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_point_2_GEM_side_cp"
+					spriteType = "GFX_club_problem_progress_point_cp"
+					position = { x=232 y=0 }
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_point_2_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_point_3_GEM_side_cp"
-				spriteType = "GFX_club_problem_progress_point_cp"
-				position = { x=450 y=118 }
-			}
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_point_3_GEM_side_cp"
+					spriteType = "GFX_club_problem_progress_point_cp"
+					position = { x=430 y=0 }
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_point_3_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_point_1_GEH_side_cp"
-				spriteType = "GFX_club_problem_progress_point_cp"
-				position = { x=120 y=143 }
-			}
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_point_1_GEH_side_cp"
+					spriteType = "GFX_club_problem_progress_point_cp"
+					position = { x=100 y=25 }
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_point_1_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_point_2_GEH_side_cp"
-				spriteType = "GFX_club_problem_progress_point_cp"
-				position = { x=250 y=143 }
-			}
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_point_2_GEH_side_cp"
+					spriteType = "GFX_club_problem_progress_point_cp"
+					position = { x=232 y=25 }
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_point_2_tt
+				}
 
-			iconType = {
-				name = "gem_club_problem_hot_spring_department_progress_point_3_GEH_side_cp"
-				spriteType = "GFX_club_problem_progress_point_cp"
-				position = { x=450 y=143 }
+				iconType = {
+					name = "gem_club_problem_hot_spring_department_progress_point_3_GEH_side_cp"
+					spriteType = "GFX_club_problem_progress_point_cp"
+					position = { x=430 y=25 }
+					pdx_tooltip = gem_club_problem_hot_spring_department_progress_point_3_tt
+				}
 			}
 		}
 	}

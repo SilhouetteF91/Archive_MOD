@@ -800,4 +800,181 @@ characters={
 
 		gender = female
 	}
+	
+	
+	GEH_kurodate_haruna={ # 하루나 :미식연구회 부장
+		name=GEH_kurodate_haruna
+		portraits={
+			army={
+				large="gfx/leaders/GEH/GEH_gkfnsk.dds"
+				small= "gfx/interface/advisors/GEH/gkfnsk.dds"
+			}
+		}
+		gender = female
+		corps_commander={
+			traits={ GEM_trait_gourmet_research_society }
+			skill=2
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			visible = {
+				has_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GEH_gkfnsk
+			allowed = {
+				OR = { 
+					original_tag = GEH 
+					original_tag = GEM
+					original_tag = HEU 
+				}
+			}
+			available = {
+				has_country_flag = gem_club_problem_gourmet_research_society_progress_point_2_visible
+			}
+			traits = {
+				GEM_gourmet_research_society_trait
+			}
+			ai_will_do = {
+				factor = 24.000
+			}
+		}
+	}
+	GEH_wanibuchi_akari={ #아카리 :미식연구회
+		name=GEH_wanibuchi_akari
+		portraits={
+			army={
+				large= "gfx/leaders/GEH/GEH_dkzkfl.dds"
+				small="gfx/interface/advisors/GEH/dkzkfl.dds"
+			}
+		}
+		gender = female
+		corps_commander={
+			traits={ GEM_trait_gourmet_research_society }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				has_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
+			}
+		}
+	}
+	GEH_shishido_izumi={ #이즈미 :미식연구회
+		name=GEH_shishido_izumi
+		portraits={
+			army={
+				large= "gfx/leaders/GEH/GEH_dlwmal.dds"
+				small="gfx/interface/advisors/GEH/dlwmal.dds"
+			}
+		}
+		gender = female
+		corps_commander={
+			traits={ GEM_trait_gourmet_research_society }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			visible = {
+				has_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
+			}
+		}
+	}
+	GEH_akashi_junko={  # 준코 :미식연구회
+		name=GEH_akashi_junko
+		portraits={
+			army={
+				large= "gfx/leaders/GEH/GEH_wnszh.dds"
+				small="gfx/interface/advisors/GEH/wnszh.dds"
+			}
+		}
+		gender = female
+		corps_commander={
+			traits={ GEM_trait_gourmet_research_society career_officer inflexible_strategist }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				has_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
+			}
+		}
+	}
+	
+	GEH_kinugawa_kasumi={ #카스미 :온천개발부 부장
+		name=GEH_kinugawa_kasumi
+		portraits={
+			army={
+				large="gfx/leaders/GEH/GEH_kinugawa_kasumi_portrait.tga"
+				small="gfx/interface/advisors/GEH/GEH_kinugawa_kasumi_idea.tga"
+			}
+		}
+		gender = female
+		country_leader={
+			ideology=technocracy
+			traits={  }
+			expire="1965.1.1.1"
+		}
+		corps_commander={
+			traits={ GEM_trait_hot_spring_department }
+			skill=2
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+			visible = {
+				has_country_flag = gem_club_problem_hot_spring_department_progress_point_3_visible
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GEH_kinugawa_kasumi_political_advisor
+			allowed = { 
+				OR = { 
+					original_tag = GEH 
+					original_tag = GEM 
+					original_tag = HEU 
+				} 
+			}
+			available = {
+				has_country_flag = gem_club_problem_hot_spring_department_progress_point_2_visible
+			}
+			traits = {
+				GEM_hot_spring_department_trait
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	GEH_shimokura_megu={ #메구 :온천개발부
+		name=GEH_shimokura_megu
+		portraits={
+			army={
+				large="gfx/leaders/GEH/GEH_shimokura_megu_portrait.tga"
+				small="gfx/interface/advisors/GEH/megu.dds"
+			}
+		}
+		gender = female
+		corps_commander={
+			traits={ GEM_trait_hot_spring_department }
+			skill=1
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				has_country_flag = gem_club_problem_hot_spring_department_progress_point_3_visible
+			}
+		}
+	}
 }

@@ -20,7 +20,14 @@ defined_text = {
 	name = gem_club_problem_decision_gourmet_research_society_text_loc
 	text = {
 		trigger = {
-			has_country_flag = club_problem_gourmet_research_society_escape_flag
+			has_country_flag = club_problem_gourmet_research_society_owner_flag
+		}
+		localization_key = gem_club_problem_decision_gourmet_research_society_owner
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = club_problem_gourmet_research_society_owner_flag }
+			has_global_flag = club_problem_gourmet_research_society_escape_flag
 		}
 		localization_key = gem_club_problem_decision_gourmet_research_society_escape
 	}
@@ -32,9 +39,16 @@ defined_text = {
 	name = gem_club_problem_decision_hot_spring_department_text_loc
 	text = {
 		trigger = {
-			has_country_flag = club_problem_hot_spring_department_escape_flag
+			has_country_flag = club_problem_hot_spring_department_owner_flag
 		}
-		localization_key = gem_club_problem_decision_gourmet_research_society_escape
+		localization_key = gem_club_problem_decision_hot_spring_department_owner
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = club_problem_hot_spring_department_owner_flag }
+			has_global_flag = club_problem_hot_spring_department_escape_flag
+		}
+		localization_key = gem_club_problem_decision_hot_spring_department_escape
 	}
 	text = {
 		localization_key = gem_club_problem_decision_hot_spring_department_text

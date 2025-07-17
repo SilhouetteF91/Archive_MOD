@@ -1251,20 +1251,28 @@ GEM_club_problem_decision = {
 				has_decision = GEH_gourmet_research_society_down
 			}
 		}
+		visible = {
+			NOT = {
+				has_global_flag = club_problem_gourmet_research_society_escape_flag
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_global_flag = club_problem_gourmet_research_society_escape_flag
+			}
+		}
 		cost = 0
 		fire_only_once = no
 		days_remove = 120
 		ai_will_do = {
 			factor = 2
 		}
-		visible = {
-		}
 		modifier = {
 			GEH_resistance_strength_gourmet_research_society = 1
 		}
 		complete_effect = {
 			set_temp_variable = {
-				gem_club_problem_progress_bar_temp = 3
+				gem_club_problem_progress_bar_temp = 300
 			}
 			GEH_gourmet_research_society_effect = yes
 			GEM_club_problem_decision_modifier_reload = yes
@@ -1288,13 +1296,21 @@ GEM_club_problem_decision = {
 				has_decision = GEH_gourmet_research_society_up
 			}
 		}
+		visible = {
+			NOT = {
+				has_global_flag = club_problem_gourmet_research_society_escape_flag
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_global_flag = club_problem_gourmet_research_society_escape_flag
+			}
+		}
 		cost = var:GEH_gourmet_research_society_down_cost
 		fire_only_once = no
 		days_remove = 50
 		ai_will_do = {
 			factor = 2
-		}
-		visible = {
 		}
 		modifier = {
 			political_power_cost = 0.05
@@ -1357,13 +1373,21 @@ GEM_club_problem_decision = {
 				has_decision = GEH_hot_spring_department_down
 			}
 		}
+		visible = {
+			NOT = {
+				has_global_flag = club_problem_hot_spring_department_escape_flag
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_global_flag = club_problem_hot_spring_department_escape_flag
+			}
+		}
 		cost = 0
 		fire_only_once = no
 		days_remove = 120
 		ai_will_do = {
 			factor = 2
-		}
-		visible = {
 		}
 		modifier = {
 			GEH_resistance_strength_hot_spring_department = 1
@@ -1394,13 +1418,21 @@ GEM_club_problem_decision = {
 				has_decision = GEH_hot_spring_department_up
 			}
 		}
+		visible = {
+			NOT = {
+				has_global_flag = club_problem_hot_spring_department_escape_flag
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_global_flag = club_problem_hot_spring_department_escape_flag
+			}
+		}
 		cost = var:GEH_hot_spring_department_down_cost
 		fire_only_once = no
 		days_remove = 50
 		ai_will_do = {
 			factor = 2
-		}
-		visible = {
 		}
 		modifier = {
 			political_power_cost = 0.05

@@ -317,7 +317,8 @@ GEM_club_problem_decision_modifier_reload = {
 		if = {
 			limit = { 
 				NOT = { 
-					has_country_flag = club_problem_gourmet_research_society_escape_flag 
+					has_country_flag = club_problem_gourmet_research_society_owner_flag 
+					has_global_flag = club_problem_gourmet_research_society_escape_flag
 					has_dynamic_modifier = { modifier = GEM_gourmet_research_society_dynamic }
 				} 
 			}
@@ -327,8 +328,9 @@ GEM_club_problem_decision_modifier_reload = {
 		if = {
 			limit = {
 				NOT = {
-					has_country_flag = club_problem_hot_spring_department_escape_flag
-					has_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic}
+					has_country_flag = club_problem_hot_spring_department_owner_flag
+					has_global_flag = club_problem_hot_spring_department_escape_flag
+					has_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic }
 				}
 			}
 			add_dynamic_modifier = { modifier = GEM_hot_spring_department_dynamic }
@@ -619,6 +621,9 @@ GEH_gourmet_research_society_effect = {
 			min = 0
 			max = 100
 		}
+		set_temp_variable = {
+			gem_club_problem_effect_temp = global.gourmet_research_society_progress_bar_GEM_side_var
+		}
 	}
 	if = {
 		limit = {
@@ -629,9 +634,12 @@ GEH_gourmet_research_society_effect = {
 			tooltip = gourmet_research_society_progress_bar_GEM_side_var_tt
 		}
 		clamp_variable = {
-			var = global.gourmet_research_society_progress_bar_GEH_side_var
+			var = global.gourmet_research_society_progress_bar_GEM_side_var
 			min = 0
 			max = 100
+		}
+		set_temp_variable = {
+			gem_club_problem_effect_temp = global.gourmet_research_society_progress_bar_GEM_side_var
 		}
 	}
 	if = {
@@ -647,8 +655,52 @@ GEH_gourmet_research_society_effect = {
 			min = 0
 			max = 100
 		}
+		set_temp_variable = {
+			gem_club_problem_effect_temp = global.gourmet_research_society_progress_bar_GEH_side_var
+		}
 	}
-	GEM_club_problem_decision_modifier_reload = yes
+
+	if = {
+		limit = {
+			check_variable = {
+				gem_club_problem_effect_temp = 100
+			}
+		}
+		set_country_flag = gem_club_problem_gourmet_research_society_progress_point_1_visible
+		set_country_flag = gem_club_problem_gourmet_research_society_progress_point_2_visible
+		set_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
+
+		hidden_effect = { #효과 부분
+			set_country_flag = club_problem_gourmet_research_society_owner_flag
+			set_global_flag = club_problem_gourmet_research_society_escape_flag
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				gem_club_problem_effect_temp > 54.99
+			}
+		}
+		set_country_flag = gem_club_problem_gourmet_research_society_progress_point_1_visible
+		set_country_flag = gem_club_problem_gourmet_research_society_progress_point_2_visible
+		clr_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				gem_club_problem_effect_temp > 24.99
+			}
+		}
+		set_country_flag = gem_club_problem_gourmet_research_society_progress_point_1_visible
+		clr_country_flag = gem_club_problem_gourmet_research_society_progress_point_2_visible
+		clr_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
+	}
+	else = {
+		clr_country_flag = gem_club_problem_gourmet_research_society_progress_point_1_visible
+		clr_country_flag = gem_club_problem_gourmet_research_society_progress_point_2_visible
+		clr_country_flag = gem_club_problem_gourmet_research_society_progress_point_3_visible
+	}
+	set_temp_variable = { gem_club_problem_effect_temp = 0 }
 }
 
 GEH_hot_spring_department_effect = {
@@ -690,6 +742,9 @@ GEH_hot_spring_department_effect = {
 			min = 0
 			max = 100
 		}
+		set_temp_variable = {
+			gem_club_problem_effect_temp = global.hot_spring_department_progress_bar_GEM_side_var
+		}
 	}
 	if = {
 		limit = {
@@ -703,6 +758,9 @@ GEH_hot_spring_department_effect = {
 			var = global.hot_spring_department_progress_bar_GEM_side_var
 			min = 0
 			max = 100
+		}
+		set_temp_variable = {
+			gem_club_problem_effect_temp = global.hot_spring_department_progress_bar_GEM_side_var
 		}
 	}
 	if = {
@@ -718,7 +776,52 @@ GEH_hot_spring_department_effect = {
 			min = 0
 			max = 100
 		}
+		set_temp_variable = {
+			gem_club_problem_effect_temp = global.hot_spring_department_progress_bar_GEH_side_var
+		}
 	}
+
+	if = {
+		limit = {
+			check_variable = {
+				gem_club_problem_effect_temp = 100
+			}
+		}
+		set_country_flag = gem_club_problem_hot_spring_department_progress_point_1_visible
+		set_country_flag = gem_club_problem_hot_spring_department_progress_point_2_visible
+		set_country_flag = gem_club_problem_hot_spring_department_progress_point_3_visible
+
+		hidden_effect = { #효과 부분
+			set_country_flag = club_problem_hot_spring_department_owner_flag
+			set_global_flag = club_problem_hot_spring_department_escape_flag
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				gem_club_problem_effect_temp > 54.99
+			}
+		}
+		set_country_flag = gem_club_problem_hot_spring_department_progress_point_1_visible
+		set_country_flag = gem_club_problem_hot_spring_department_progress_point_2_visible
+		clr_country_flag = gem_club_problem_hot_spring_department_progress_point_3_visible
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				gem_club_problem_effect_temp > 24.99
+			}
+		}
+		set_country_flag = gem_club_problem_hot_spring_department_progress_point_1_visible
+		clr_country_flag = gem_club_problem_hot_spring_department_progress_point_2_visible
+		clr_country_flag = gem_club_problem_hot_spring_department_progress_point_3_visible
+	}
+	else = {
+		clr_country_flag = gem_club_problem_hot_spring_department_progress_point_1_visible
+		clr_country_flag = gem_club_problem_hot_spring_department_progress_point_2_visible
+		clr_country_flag = gem_club_problem_hot_spring_department_progress_point_3_visible
+	}
+	set_temp_variable = { gem_club_problem_effect_temp = 0 }
 }
 
 GEH_popular_support_up_effect = {
