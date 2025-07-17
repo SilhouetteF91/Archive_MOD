@@ -1272,7 +1272,7 @@ GEM_club_problem_decision = {
 		}
 		complete_effect = {
 			set_temp_variable = {
-				gem_club_problem_progress_bar_temp = 300
+				gem_club_problem_progress_bar_temp = 3
 			}
 			GEH_gourmet_research_society_effect = yes
 			GEM_club_problem_decision_modifier_reload = yes
