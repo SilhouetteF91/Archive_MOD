@@ -3803,7 +3803,7 @@ GEH_hina_corruption_category = {
 				NOT = { has_completed_focus = GEH_three_congress_focus }
 			}
 			custom_trigger_tooltip = {
-				tooltip = GEH_ako_democratic_system_numerical_limit_tt
+				tooltip = GEH_hina_corruption_numerical_limit_tt
 				AND = {
 					check_variable = { GEH_hina_corruption_var > -5 }
 					check_variable = { GEH_hina_corruption_var < 5 }
@@ -3851,7 +3851,7 @@ GEH_hina_corruption_category = {
 				NOT = { has_completed_focus = GEH_three_congress_focus }
 			}
 			custom_trigger_tooltip = {
-				tooltip = GEH_ako_democratic_system_numerical_limit_tt
+				tooltip = GEH_hina_corruption_numerical_limit_tt
 				AND = {
 					check_variable = { GEH_hina_corruption_var > -5 }
 					check_variable = { GEH_hina_corruption_var < 5 }
@@ -4237,7 +4237,7 @@ GEH_hina_corruption_category = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GEH_hina_corruption_law_available_pro_baal_tt
-				check_variable = { GEH_hina_corruption_var > 3 }
+				check_variable = { GEH_hina_corruption_var < 3 }
 			}
 		}
 
@@ -4278,7 +4278,7 @@ GEH_hina_corruption_category = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GEH_hina_corruption_law_available_pro_baal_tt
-				check_variable = { GEH_hina_corruption_var > 3 }
+				check_variable = { GEH_hina_corruption_var < 3 }
 			}
 		}
 
@@ -4319,7 +4319,7 @@ GEH_hina_corruption_category = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GEH_hina_corruption_law_available_pro_baal_tt
-				check_variable = { GEH_hina_corruption_var > 3 }
+				check_variable = { GEH_hina_corruption_var < 3 }
 			}
 		}
 
@@ -4359,7 +4359,7 @@ GEH_hina_corruption_category = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GEH_hina_corruption_law_available_pro_hina_tt
-				check_variable = { GEH_hina_corruption_var < 3 }
+				check_variable = { GEH_hina_corruption_var > 2 }
 			}
 		}
 
@@ -4404,7 +4404,7 @@ GEH_hina_corruption_category = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GEH_hina_corruption_law_available_pro_hina_tt
-				check_variable = { GEH_hina_corruption_var < 3 }
+				check_variable = { GEH_hina_corruption_var > 2 }
 			}
 		}
 
@@ -4444,7 +4444,7 @@ GEH_hina_corruption_category = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GEH_hina_corruption_law_available_pro_hina_tt
-				check_variable = { GEH_hina_corruption_var < 3 }
+				check_variable = { GEH_hina_corruption_var > 2 }
 			}
 		}
 
