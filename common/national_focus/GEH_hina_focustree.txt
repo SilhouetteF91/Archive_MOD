@@ -1970,6 +1970,10 @@ focus_tree = {
 			}
 			custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_tt
 			add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 1 }
+
+			hidden_effect = {
+				country_event = { id = GEH.hina.story_event.7 }
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2003,6 +2007,9 @@ focus_tree = {
 				add_ideas = GEH_sorasaki_hina_quotes_compilation_fascism_idea
 			}
 			
+			hidden_effect = {
+				country_event = { id = GEH.hina.story_event.8 }
+			}
         }
         ai_will_do = {
             factor = 1
@@ -2027,6 +2034,10 @@ focus_tree = {
         completion_reward = {
 			add_stability = -0.05
             GEH_military_tradition_effect = yes
+			
+			hidden_effect = {
+				country_event = { id = GEH.hina.story_event.9 }
+			}
         }
         ai_will_do = {
             factor = 1
@@ -2079,6 +2090,10 @@ focus_tree = {
         }
         completion_reward = {
 			add_political_power = 120
+			
+			hidden_effect = {
+				country_event = { id = GEH.hina.story_event.12 }
+			}
         }
         ai_will_do = {
             factor = 1
@@ -2274,6 +2289,10 @@ focus_tree = {
         }
         completion_reward = {
 			custom_effect_tooltip = GEH_distribution_of_propaganda_materials_in_gehenna_tt
+			
+			hidden_effect = {
+				country_event = { id = GEH.hina.story_event.11 }
+			}
         }
         ai_will_do = {
             factor = 1
@@ -2297,6 +2316,10 @@ focus_tree = {
         }
         completion_reward = {
 			add_ideas = GEH_national_unity_idea
+			
+			hidden_effect = {
+				country_event = { id = GEH.hina.story_event.10 }
+			}
         }
         ai_will_do = {
             factor = 1
@@ -2334,6 +2357,10 @@ focus_tree = {
 					mission = GEH_basking_in_the_brilliance_of_their_serenade_mission
 					days = 40
 				}
+			}
+			
+			hidden_effect = {
+				country_event = { id = GEH.hina.story_event.13 }
 			}
         }
         ai_will_do = {
