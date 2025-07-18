@@ -112,7 +112,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Sisavang Vong"
+	name = "Sisavang_Vong"
 	desc = ""
 	picture = GFX_portrait_Sisavang_Vong
 	expire = "1953.3.1"
