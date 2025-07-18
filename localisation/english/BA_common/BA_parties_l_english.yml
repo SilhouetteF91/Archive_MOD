@@ -200,7 +200,12 @@
  TRM_Hifumi_party:0 "페로로 결사대"
  TRM_Vigilante_party:0 "트리니티 자경단"
  TRM_CathPalug_party:0 "무법자 연합"
-
+ 
+ TRK_democratic_party:0 "게헨나 군정"
+ TRK_communism_party:0 "상투스 분파"
+ TRK_fascism_party:0 "파테르 분파"
+ TRK_neutrality_party:0 "시스터후드"
+ 
  HND_democratic_party:0 "인도국민회의 보수파"
  HND_neutrality_party:0 "인도국민회의 농본파"
  HND_communism_party:0 "바라트 공산당"
