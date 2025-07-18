@@ -10,7 +10,26 @@ characters={
 
 		country_leader={
 			ideology=technocracy
+			desc = "TRK_government_general_leader_desc"
 			traits={  }
+			expire="1965.1.1"
+		}
+
+		gender = female
+	}
+
+	TRK_Kirifuji_Nagisa={
+		name=TRN_Kirifuji_Nagisa
+		portraits={
+			civilian={
+				large= "gfx/leaders/TRK/TRK_Kirifuji_Nagisa.dds"
+			}
+		}
+
+		country_leader={
+			ideology=technocracy
+			desc = "TRK_Kirifuji_Nagisa_leader_desc"
+			traits={ TRM_Kirifuji_Nagisa_trait }
 			expire="1965.1.1"
 		}
 
