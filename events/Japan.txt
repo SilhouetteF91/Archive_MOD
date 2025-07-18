@@ -266,83 +266,26 @@ country_event = {
 	
 	option = {
 		name = japan.6.a
+		set_country_flag = JAP_annex_by_indochina
 		USA = { set_country_flag = { flag = USA_indochina_window days = 60 value = 1 } }
 		hidden_effect = {
 			news_event = { days = 5 id = news.5 }
 		}
 		JAP = {
-			if = {
-				limit = {
-					286 = {
-						CONTROLLER = {
-							OR = {
-								original_tag = FRA
-								is_subject_of = FRA
-								is_subject_of = VIC
-							}
-						}
-					}
-				}
-				transfer_state = 286
-			}
-			if = {
-				limit = {
-					670 = {
-						CONTROLLER = {
-							OR = {
-								original_tag = FRA
-								is_subject_of = FRA
-								is_subject_of = VIC
-							}
-						}
-					}
-				}
-				transfer_state = 670
-			}
-			if = {
-				limit = {
-					671 = {
-						CONTROLLER = {
-							OR = {
-								original_tag = FRA
-								is_subject_of = FRA
-								is_subject_of = VIC
-							}
-						}
-					}
-				}
-				transfer_state = 671
-			}
-			if = {
-				limit = {
-					741 = {
-						CONTROLLER = {
-							OR = {
-								original_tag = FRA
-								is_subject_of = FRA
-								is_subject_of = VIC
-							}
-						}
-					}
-				}
-				transfer_state = 741
-			}
-			if = {
-				limit = {
-					728 = {
-						CONTROLLER = {
-							OR = {
-								original_tag = FRA
-								is_subject_of = FRA
-								is_subject_of = VIC
-							}
-						}
-					}
-				}
-				transfer_state = 728
-			}
+			transfer_state = 671
+			transfer_state = 286
+			transfer_state = 1043
+			transfer_state = 741
+			transfer_state = 1036
+			transfer_state = 1037
+			transfer_state = 1038
+			transfer_state = 1039
+			transfer_state = 1040
+			transfer_state = 1041
+			transfer_state = 1042
 			add_named_threat = { threat = 3 name = france.1.t }
 		}
+		1043 = { set_demilitarized_zone = no }
 	}
 }
 

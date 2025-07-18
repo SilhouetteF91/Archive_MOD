@@ -285,6 +285,8 @@
  JAP_china_puppet_3_tt: "$BA_japan.41.t$"
  JAP_fate_of_men: "[MEN.GetName]의 운명"
  JAP_Tibet_appeasement_plan: "티베트 회유책"
+ JAP_vietnam_puppet: "인도차이나 프랑스 총독부 해체"
+ JAP_annex_by_indochina: "프랑스령 인도차이나를 할양 받음."
 
  # 일본 괴뢰국 결정
  MEN_add_core_of_mongolia: "몽골 통합"

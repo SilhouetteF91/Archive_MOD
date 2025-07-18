@@ -804,6 +804,45 @@ adjacency_rule = {
 }
 
 adjacency_rule = {
+	name = INDONESIA_STRAIT_FAKE_9
+
+	contested = {
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = {
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = {
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = {
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+
+	is_disabled = {
+		tooltip = empty
+		always = yes
+	}
+
+	required_provinces = { 1345 }
+
+	icon = 1345
+	offset = { -2000 -2000 -2000 }
+}
+
+adjacency_rule = {
 	name = RUSSIA_STRAIT_FAKE_1
 
 	contested = {
