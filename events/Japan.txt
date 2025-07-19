@@ -278,11 +278,6 @@ country_event = {
 			transfer_state = 741
 			transfer_state = 1036
 			transfer_state = 1037
-			transfer_state = 1038
-			transfer_state = 1039
-			transfer_state = 1040
-			transfer_state = 1041
-			transfer_state = 1042
 			add_named_threat = { threat = 3 name = france.1.t }
 		}
 		1043 = { set_demilitarized_zone = no }
