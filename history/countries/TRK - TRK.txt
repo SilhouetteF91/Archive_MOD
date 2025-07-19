@@ -6,13 +6,18 @@ set_war_support = 0.25
 starting_train_buffer = 2
 add_command_power = 15
 
-add_ideas = BA_three_major_academies
+add_ideas = 
 
 set_variable = { ROOT.halo_infantry_cap = 12 } # 사단 제한, 헤일로 보병의 사단 제한과 같아야 함
 
 set_country_flag = kivotos_research_on
 
-add_ideas = BA_student_conscription_idea
+add_ideas = {
+	BA_student_conscription_idea
+	BA_three_major_academies
+	TRK_economic_collapse
+	TRK_gehenna_puppet
+} 
 set_technology = {
 	kivotos_infantry_weapons = 1
 	kivotos_halo_max_upgrade = 1

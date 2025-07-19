@@ -1,0 +1,46 @@
+ideas = {	
+	country = {
+
+		TRK_economic_collapse = { #경제 붕괴
+			picture = SHA_austria_unemployment_problem
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		
+			modifier = {
+				consumer_goods_factor = 0.6
+			}
+        }
+		
+		TRK_gehenna_puppet = { #게헨나 군정
+			picture = GEH_individualism_low
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		
+			targeted_modifier = {
+				tag = GEH
+				CIC_TO_TARGET_FACTOR = 0.2
+				MIC_TO_TARGET_FACTOR = 0.3
+			}		
+			targeted_modifier = {
+				tag = GEM
+				CIC_TO_TARGET_FACTOR = 0.2
+				MIC_TO_TARGET_FACTOR = 0.3
+			}		
+			targeted_modifier = {
+				tag = HEU
+				CIC_TO_TARGET_FACTOR = 0.2
+				MIC_TO_TARGET_FACTOR = 0.3
+			}
+        }
+	}
+}
