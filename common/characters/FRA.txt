@@ -69,6 +69,7 @@ characters={
 				large="gfx/leaders/FRA/Portrait_FRA_Pierre_Laval.tga"
 			}
 			army = {
+				large="gfx/leaders/FRA/Portrait_FRA_Pierre_Laval.tga"
 				small = "gfx/interface/advisors/FRA/fra_pierre.dds"
 			}
 		}
@@ -88,6 +89,18 @@ characters={
 			slot = political_advisor
 			idea_token = FRA_pierre
 			traits = { tenacious_negotiator }
+		}
+		corps_commander = {
+			traits={}
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=0
+			visible = {
+				always = no
+			}
 		}
 	}
 

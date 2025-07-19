@@ -6306,12 +6306,18 @@ unit_leader_event = {
 		add_country_leader_trait = FRA_leader
 		hidden_effect = {
 			complete_national_focus = FRA_petain_focus_0
+			FRA_military_conference = {
+				unit_leader_event = {
+					id = FRA_pet.2
+					days = 3
+				}
+			}
 		}
 	}
 }
 
 unit_leader_event = {
-	#국민적 원수관
+	#페텡이 영토 버리는 로어 설명하기
 	id = FRA_pet.2
 	title = FRA_pet.2.t
 	desc = FRA_pet.2.d
@@ -6320,28 +6326,35 @@ unit_leader_event = {
 	hidden = no
 	option = {
 		name = FRA_pet.2.a
-		add_stability = 0.04
-	}
-	option = {
-		name = FRA_pet.2.b
-		add_war_support = 0.04
+		add_stability = 0.02
+		add_war_support = -0.02
+			FRA_pierre_laval = {
+				unit_leader_event =  FRA_pet.3
+			}
+		hidden_effect = {
+			MIL = {
+				FRA_pierre_laval = {
+					unit_leader_event = {
+						id = FRA_pet.3
+						days = 2
+					}
+				}
+			}
+		}
 	}
 }
 
-country_event = {
-	#국민청년전위대
+unit_leader_event = {
+	#피에르 라발의 도피
 	id = FRA_pet.3
 	title = FRA_pet.3.t
 	desc = FRA_pet.3.d
 	is_triggered_only = yes
-	fire_only_once = yes
 	hidden = no
 	option = {
 		name = FRA_pet.3.a
-		add_stability = -0.02
-		add_political_power = 20
-		16 = {
-			add_manpower = -20
+		FRA_pierre_laval = {
+			set_nationality = MIL
 		}
 	}
 }

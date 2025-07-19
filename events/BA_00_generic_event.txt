@@ -75,7 +75,6 @@ country_event = {
             }
         }
         JAP = {
-			transfer_state = 743
 			transfer_state = 639
 			transfer_state = 643
         }
