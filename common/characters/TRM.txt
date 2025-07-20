@@ -1080,8 +1080,8 @@ characters={
 			desc = TRN_Mari_advisor_desc
 		}
 	}
-	TRN_dytlal={ # 요시미
-		name=TRN_dytlal
+	TRN_Ibaragi_Yoshimi={ # 요시미
+		name=TRN_Ibaragi_Yoshimi
 		portraits={
 			army={
 				large= GFX_TRN_Ibaraki_Yoshimi_Portrait
@@ -1117,6 +1117,23 @@ characters={
 			cost = 50
 			ai_will_do = {
 				factor = 1.000
+			}
+		}
+	}
+	TRN_Ibaragi_Yoshimi_scientist = {
+		name=TRN_Ibaragi_Yoshimi
+		portraits={
+			army={
+				large= GFX_Portrait_BlueArchive_TRM_Ibaragi_Yoshimi
+				small= GFX_TRN_Ibaraki_Yoshimi_idea
+			}
+		}
+		gender = female
+
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist scientist_trait_fast_learner }
+			skills = {
+				specialization_air = 1
 			}
 		}
 	}

@@ -699,6 +699,10 @@ spriteTypes = {
 		name = "GFX_TRN_Ibaraki_Yoshimi_Portrait"
 		textureFile = "gfx/leaders/TRN/TRN_Ibaraki_Yoshimi_Portrait.tga"
 	}
+	spriteType = { # 요시미 - 과학자
+		name = "GFX_Portrait_BlueArchive_TRM_Ibaragi_Yoshimi"
+		textureFile = "gfx/leaders/ZZZ_scientists/Portrait_BlueArchive_TRM_Ibaragi_Yoshimi.tga"
+	}
 	# 아이리쟝~~ 하이~! 나니가 스키? 쵸코민토~ 요리모 아 나 타~
 	spriteType = {  # 아이리
 		name = "GFX_TRN_Kurimura_Airi"
