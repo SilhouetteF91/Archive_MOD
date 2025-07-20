@@ -70,6 +70,17 @@ TRM_vickers_armstrong_eng_organization = {
 		all_parents = { TRM_mio_trait_expanded_production_facilities }
 		limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
 
+		available = {
+			IF = {
+				limit = { 
+					FROM = { 
+						original_tag = TRM 
+					} 
+				}
+				FROM = { has_completed_focus = TRM_Terrestrial_Dreadnoughts }
+			}
+		}
+
 		equipment_bonus = {
 			breakthrough = 0.05
 			maximum_speed = 0.05

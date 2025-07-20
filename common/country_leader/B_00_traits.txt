@@ -1755,6 +1755,15 @@ leader_traits = {
         army_core_defence_factor = 0.10
 		political_advisor_cost_factor = -0.50
 	}
+	GEH_empress_of_gehenna_2_trait = { # 게헨나의 여제
+		random = no
+		political_power_factor = -0.1
+		stability_factor = 0.15
+		war_support_factor = 0.10
+		army_core_attack_factor = 0.1
+        	army_core_defence_factor = 0.10
+		political_advisor_cost_factor = -0.50
+	}
 	GEH_pandemonium_society_trait = { # 판데모니움
 		random = no
 		stability_factor = -0.10

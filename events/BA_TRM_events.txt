@@ -9031,7 +9031,7 @@ country_event = { # 2달 전
 	id = trinity.6
 	title = trinity.6.t
 	desc = trinity.6.desc
-	picture = GFX_report_event_spain_civil_war_volunteers_02
+	picture = GFX_report_event_generic_street_ruin
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -10421,9 +10421,21 @@ country_event = { # 아리우스용
 
 	option = {
 		name = trinity.46.a
+		trigger = {
+			has_country_leader = { character = TRN_Misono_Mika }
+		}
+	}
+
+	option = {
+		name = trinity.46.b
+		trigger = {
+			has_country_leader = { character = TRN_Kirifuji_Nagisa }
+		}
+	}
+
+	after = {
 		custom_effect_tooltip = TRN_after_this_operation_against_arius_tt
-		
-	   add_command_power = 5
+		add_command_power = 5
 	}
 }
 
@@ -10452,7 +10464,7 @@ country_event = { # 타협의 끝
      fire_only_once = no
 
 	option = { 
-		name = trinity.49.a
+		name = trinity.48.a
 
     }
 }
@@ -11498,6 +11510,21 @@ country_event = { #
 
 	option = {
 		name = trnfla.32.a
+		add_stability = -0.01
+	}
+}
+
+country_event = { # 
+	id = trnfla.33
+	title = trnfla.33.t
+	desc = trnfla.33.desc
+	picture = GFX_report_event_generic_trinity_prison
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnfla.33.a
 		add_stability = -0.01
 	}
 }

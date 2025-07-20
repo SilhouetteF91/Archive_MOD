@@ -6686,7 +6686,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 				TRN_tmwmal = { 
-					unit_leader_event = { id = trnfla.17 days = 45 } 
+					unit_leader_event = { id = trnfla.17 days = 47 } 
 				}
 				country_event = { id = trnfla.6 days = 365 }
 			}
@@ -7175,6 +7175,7 @@ focus_tree = {
 				country_event = { id = trnfla.12 days = 365 } # 세이아 음모론
 			}
 			set_country_flag = TRN_mika_honor_activate
+			activate_mission = TRN_Mika_honor_loop_decision
 			unlock_decision_category_tooltip = TRN_Mika_honor_decision_cat
 			activate_targeted_decision = { decision = TRN_honor_populist_policies target = TRM }
 			activate_targeted_decision = { decision = TRN_honor_clean_up_corruption target = TRM }
@@ -7775,6 +7776,7 @@ focus_tree = {
 				add_idea = TRN_trinity_cause_2_ns
 				remove_idea = TRN_trinity_cause_ns
 			}
+				remove_decision = TRN_Mika_honor_loop_decision
 		}
 	}
 
@@ -9138,7 +9140,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_global_flag = TRINITY_WON_THE_GEHENNA
+			has_completed_focus = TRN_Integrity_of_Trinity
 			has_government = fascism
 		}
 		bypass = {
@@ -9173,7 +9175,6 @@ focus_tree = {
 			NOT = { has_non_aggression_pact_with = MIL }
 			has_army_manpower = { size > 1500000 }
 			has_deployed_air_force_size = { size > 1999 }
-			has_completed_focus = TRN_Integrity_of_Trinity
 			country_exists = MIL
 		}
 		prerequisite = { focus = TRN_defiance_of_COU }
@@ -9236,6 +9237,14 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
+			KAI = {
+				exists = yes
+				custom_trigger_tooltip = {
+					tooltip = tooltip_KAI_maintaining_the_system
+					has_completed_focus = KAI_FOCUS_8
+					has_idea = KAI_corporate_state
+				}
+			}
 		}
 		prerequisite = { 
 			focus = TRN_curtain_across_kivotos 
@@ -9264,7 +9273,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_global_flag = TRINITY_WON_THE_GEHENNA
+			has_completed_focus = TRN_Integrity_of_Trinity
 			has_government = fascism
 		}
 		prerequisite = { 
@@ -9293,8 +9302,11 @@ focus_tree = {
 		}
 
 		available = {
-			has_global_flag = TRINITY_WON_THE_GEHENNA
 			has_government = fascism
+			any_country = {
+				has_war_with = ROOT
+				has_government = communism
+			}
 		}
 		prerequisite = { 
 			focus = TRN_TrinityMikaDiplomacySovietAttack 
@@ -9322,7 +9334,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_global_flag = TRINITY_WON_THE_GEHENNA
 			has_government = fascism
 		}
 		prerequisite = { 
@@ -9351,7 +9362,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_global_flag = TRINITY_WON_THE_GEHENNA
 			has_government = fascism
 		}
 		prerequisite = { 
@@ -9381,7 +9391,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_global_flag = TRINITY_WON_THE_GEHENNA
+			has_completed_focus = TRN_Integrity_of_Trinity
 			has_government = fascism
 		}
 		prerequisite = { 
@@ -9410,7 +9420,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_global_flag = TRINITY_WON_THE_GEHENNA
 			has_government = fascism
 		}
 		prerequisite = { 
@@ -9439,7 +9448,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_global_flag = TRINITY_WON_THE_GEHENNA
 			has_government = fascism
 		}
 		prerequisite = { 
@@ -9469,7 +9477,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_global_flag = TRINITY_WON_THE_GEHENNA
 			has_government = fascism
 		}
 		prerequisite = { 
@@ -9498,7 +9505,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_global_flag = TRINITY_WON_THE_GEHENNA
 			has_government = fascism
 		}
 		prerequisite = { 
@@ -11727,7 +11733,7 @@ shared_focus = {
 	relative_position_id = TRM_Centralised_Command
 	x = 1
 	y = 1
-	cost = 5
+	cost = 6
 	ai_will_do = {
 		base = 300
 		modifier = {
@@ -11758,7 +11764,7 @@ shared_focus = {
 	relative_position_id = TRM_Centralised_Command
 	x = -1
 	y = 1
-	cost = 5
+	cost = 6
 	ai_will_do = {
 		base = 300
 		modifier = {
@@ -11798,7 +11804,7 @@ shared_focus = {
 	relative_position_id = TRM_encourage_radio_use
 	x = 0
 	y = 1
-	cost = 5
+	cost = 6
 	ai_will_do = {
 		base = 300
 		modifier = {
@@ -11896,6 +11902,10 @@ shared_focus = {
 		    category = support_tech
 	    }
 	    add_ideas = TRN_army_industry_ns
+        mio:TRM_vickers_armstrong_eng_organization = {
+			add_mio_funds = 500
+			add_mio_research_bonus = 0.1
+	   }
 	}
 }
 shared_focus = {
@@ -12030,7 +12040,9 @@ shared_focus = {
 	    }
         mio:TRM_vickers_armstrong_eng_organization = {
 			add_mio_size = 1
-			# 나중에 누가 트레잇 좀 추가 해봐라
+			add_mio_funds = 500
+			add_mio_research_bonus = 0.1
+			unlock_mio_trait_tooltip = TRM_mio_trait_more_expanded_production_facilities
 	   }
 	}
 }
@@ -12114,7 +12126,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = TRM_Decentralised_Structure
-	cost = 5
+	cost = 6
 	completion_reward = {
         add_ideas = TRM_defense_industry_artillery_bonus
         custom_effect_tooltip = tooltip_white_line
@@ -12146,7 +12158,7 @@ shared_focus = {
 	x = 3
 	y = 1
 	relative_position_id = TRM_Decentralised_Structure
-	cost = 10
+	cost = 6
 	completion_reward = {
         custom_effect_tooltip = TRM_heer_modifier_change
         add_to_variable = { 

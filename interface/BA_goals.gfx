@@ -4,6 +4,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/material_design/material_design_1.tga"
 	}
 	spriteType = {
+		name = "GFX_focus_GEM_group_leadership_system"
+		texturefile = "gfx/interface/goals/GEH/focus_GEM_group_leadership_system.tga"
+	}
+	spriteType = {
 		name = "GFX_focus_idea_KSP_tlsfhldhkdndo"
 		texturefile = "gfx/interface/ideas/HEU/신뢰와우애.tga"
 	}

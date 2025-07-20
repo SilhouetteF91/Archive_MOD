@@ -7059,6 +7059,29 @@ debug_decisions = {
 }
 TRN_Mika_honor_decision_cat = {
 
+	TRN_Mika_honor_loop_decision = {
+		priority = 999
+		icon = GFX_decision_icon_schedule_ticke
+
+		allowed = { always = no }
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		is_good = no
+		fixed_random_seed = no
+		selectable_mission = no
+		days_mission_timeout = 100
+
+		timeout_effect = {
+			activate_mission = TRN_Mika_honor_loop_decision
+			custom_effect_tooltip = TRN_Mika_honor_loop_decision_tt
+			hidden_effect = {
+
+			}
+		}
+	}
+
 	TRN_honor_populist_policies = {
 		icon = GFX_decision_hol_attract_foreign_investors
 
@@ -7074,8 +7097,6 @@ TRN_Mika_honor_decision_cat = {
 		ai_will_do = { base = 0 }
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = 2 }
-			TRN_add_Honor = yes
 
 			add_stability = 0.02
 			add_war_support = -0.02
@@ -7104,8 +7125,6 @@ TRN_Mika_honor_decision_cat = {
 		ai_will_do = { base = 0 }
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = 2 }
-			TRN_add_Honor = yes
 
 			add_political_power = 25
 
@@ -7133,8 +7152,6 @@ TRN_Mika_honor_decision_cat = {
 		ai_will_do = { base = 0 }
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = -4 }
-			TRN_add_Honor = yes
 
 			add_stability = 0.02
 			add_popularity = {
@@ -7167,8 +7184,6 @@ TRN_Mika_honor_decision_cat = {
 		ai_will_do = { base = 0 }
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = -4 }
-			TRN_add_Honor = yes
 
 			IF = {
 				limit = { has_idea = TRN_new_culture_militarism_ns }
@@ -7274,8 +7289,6 @@ TRN_Mika_honor_decision_cat = {
 		fire_only_once = yes
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = -5 }
-			TRN_add_Honor = yes
 
        		add_power_balance_value = {
        		    id = TRM_power_balance
@@ -7302,8 +7315,6 @@ TRN_Mika_honor_decision_cat = {
 		ai_will_do = { base = 0 }
 
 		complete_effect = {
-			set_temp_variable = { TRN_Honor_change = -5 }
-			TRN_add_Honor = yes
 
        		add_power_balance_value = {
        		    id = TRM_power_balance
@@ -7382,8 +7393,6 @@ TRN_Mika_honor_decision_cat = {
 		}
 
 		remove_effect = {
-			set_temp_variable = { TRN_Honor_change = 5 }
-			TRN_add_Honor = yes
 			hidden_effect = {
 				remove_targeted_decision = { decision = TRN_destroy_TVC target = ROOT }
 			}
@@ -7420,57 +7429,6 @@ TRN_economic_evelopment_department = {
 		remove_effect = {
 			FROM = {
 				add_dynamic_modifier = { modifier = TRM_industrial_region_state }
-			}
-		}
-	}
-	TRN_Infrastructure_Development = {
-		icon = GFX_decision_generic_trucks
-
-		allowed = { always = no } #activated by effect
-
-		available = {
-			FROM = { 
-				is_owned_and_controlled_by = ROOT 
-				infrastructure < 5
-			}
-		}
-
-		visible = {
-			FROM = { 
-				is_owned_and_controlled_by = ROOT 
-				infrastructure < 5
-			}
-		}
-
-		cost = 35
-		days_remove = 49
-		fire_only_once = yes
-		state_target = yes
-
-		modifier = {
-
-		}
-
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 0
-				has_political_power < 159
-			}
-		}
-		complete_effect = {
-			set_country_flag = {
-				flag = TRN_Infrastructure_Development_active_flag
-				days = 49
-			}
-		}
-		remove_effect = {
-			FROM = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 		}
 	}
@@ -7695,6 +7653,57 @@ TRN_economic_evelopment_department = {
 	}
 }
 TRN_economic_plan_cat = {
+	TRN_Infrastructure_Development = {
+		icon = GFX_decision_generic_trucks
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = { 
+				is_owned_and_controlled_by = ROOT 
+				infrastructure < 5
+			}
+			NOT = { has_country_flag = TRN_Infrastructure_Development_active_flag }
+		}
+
+		visible = {
+			FROM = { 
+				is_owned_and_controlled_by = ROOT 
+				infrastructure < 5
+			}
+		}
+
+		cost = 35
+		days_remove = 49
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				has_political_power < 159
+			}
+		}
+		complete_effect = {
+			set_country_flag = TRN_Infrastructure_Development_active_flag
+		}
+		remove_effect = {
+			clr_country_flag = TRN_Infrastructure_Development_active_flag
+			FROM = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
 	TRN_Opelwerk_Brandenburg = {
 		icon = GFX_decision_generic_motorized
 

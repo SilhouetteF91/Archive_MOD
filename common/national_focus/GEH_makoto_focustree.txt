@@ -1638,7 +1638,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GEM_group_leadership_system
-		icon = GFX_goal_unknown
+		icon = GFX_focus_GEM_group_leadership_system
 		cost = 5.00
 		prerequisite = { focus = GEM_Neutralize_Makoto }
 		mutually_exclusive = { focus = GEM_our_leader }

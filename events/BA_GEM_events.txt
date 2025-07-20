@@ -2216,8 +2216,20 @@ country_event = { # 협력
 	
 	option = { 
 		name = GEH_event.100.a
-		add_country_leader_trait = GEM_rising_star
+		IF = {
+			limit = {
+				has_country_leader_with_trait = GEH_empress_of_gehenna_trait			
+			}
+			swap_ruler_traits = {
+				remove = GEH_empress_of_gehenna_trait
+				add = GEH_empress_of_gehenna_2_trait
+			}
+		}
+		else = {
+			add_country_leader_trait = GEM_rising_star
+		}
 	}
+
 }
 country_event = { # 협력
 	id = GEH_event.255

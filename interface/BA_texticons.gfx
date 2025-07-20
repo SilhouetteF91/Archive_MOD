@@ -333,5 +333,11 @@ spriteTypes = {
 		texturefile = "gfx/texticons/report_event_TRN_IA.tga"
 		legacy_lazy_load = no
 	}
+	
+	spriteType = {
+		name = "GFX_report_event_TRN_Sakurako_Mine"
+		texturefile = "gfx/texticons/report_event_TRN_Sakurako_Mine.tga"
+		legacy_lazy_load = no
+	}
 
 }

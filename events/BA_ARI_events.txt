@@ -481,7 +481,8 @@ country_event = { #걸림 ㅎ
 				}
 				TRM = { 
 					country_event = {
-						id = trinity.46 hours = 02
+						id = trinity.46 
+						hours = 02
 					}
 				}
 			}
