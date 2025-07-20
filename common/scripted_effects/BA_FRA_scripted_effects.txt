@@ -1,10 +1,3 @@
-FRA_debug_effect = {
-	complete_national_focus = FRA_start_0
-	complete_national_focus = FRA_start_1
-	complete_national_focus = FRA_start_2
-	complete_national_focus = FRA_start_3
-	country_event = FRA_prov_event.120
-}
 FRA_debug_effect3 = {
 	every_possible_country = {
 		limit = { has_character = FRA_charles_de_gaulle }
@@ -12,199 +5,68 @@ FRA_debug_effect3 = {
 			set_nationality = ROOT
 		}
 	}
-}FRA_local_resistance_bad = {
-	add_to_variable = {
-		FRA_resistance_of_locals_var = 1
-	}
-	if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_8
-		}
-		country_event = {
-			id = FRA_prov_event.3
-			days = 2
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_7
-		}
-		random_list = {
-			3 = {
-				country_event = {
-					id = FRA_prov_event.3
-					days = 2
-				}
-			}
-			7 = {
-				custom_effect_tooltip = FRA_local_resistance_bad_tt
-				hidden_effect = {
-					swap_ideas = {
-						remove_idea = FRA_resistance_of_locals_7
-						add_idea = FRA_resistance_of_locals_8
-					}
-				}
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_6
-		}
-		random_list = {
-			1 = {
-				country_event = {
-					id = FRA_prov_event.3
-					days = 2
-				}
-			}
-			9 = {
-				custom_effect_tooltip = FRA_local_resistance_bad_tt
-				hidden_effect = {
-					swap_ideas = {
-						remove_idea = FRA_resistance_of_locals_6
-						add_idea = FRA_resistance_of_locals_7
-					}
-				}
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_5
-		}
-		custom_effect_tooltip = FRA_local_resistance_bad_tt
-		hidden_effect = {
-			swap_ideas = {
-				remove_idea = FRA_resistance_of_locals_5
-				add_idea = FRA_resistance_of_locals_6
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_4
-		}
-		custom_effect_tooltip = FRA_local_resistance_bad_tt
-		hidden_effect = {
-			swap_ideas = {
-				remove_idea = FRA_resistance_of_locals_4
-				add_idea = FRA_resistance_of_locals_5
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_3
-		}
-		custom_effect_tooltip = FRA_local_resistance_bad_tt
-		hidden_effect = {
-			swap_ideas = {
-				remove_idea = FRA_resistance_of_locals_3
-				add_idea = FRA_resistance_of_locals_4
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_2
-		}
-		custom_effect_tooltip = FRA_local_resistance_bad_tt
-		hidden_effect = {
-			swap_ideas = {
-				remove_idea = FRA_resistance_of_locals_2
-				add_idea = FRA_resistance_of_locals_3
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_1
-		}
-		custom_effect_tooltip = FRA_local_resistance_bad_tt
-		hidden_effect = {
-			swap_ideas = {
-				remove_idea = FRA_resistance_of_locals_1
-				add_idea = FRA_resistance_of_locals_2
-			}
-		}
-	}
 }
-
-FRA_local_resistance_good = {
-	add_to_variable = {
-		FRA_resistance_of_locals_var = -1
-	}
+FRA_change_rol_anger = {
 	if = {
 		limit = {
-			has_idea = FRA_resistance_of_locals_8
+			has_idea = FRA_resistance_of_locals
+			OR = {
+				check_variable = { FRA_anger_change > 0 }
+				AND = {
+					check_variable = { FRA_anger_change < 0 }
+					check_variable = { FRA_rol_anger > 0 }
+				}
+			}
 		}
-		swap_ideas = {
-			remove_idea = FRA_resistance_of_locals_8
-			add_idea = FRA_resistance_of_locals_7
+
+		set_temp_variable = { FRA_anger_lower_limit = 1 }
+		subtract_from_temp_variable = { FRA_anger_lower_limit = FRA_rol_anger }
+
+		set_temp_variable = { FRA_anger_upper_limit = 8 }
+		subtract_from_temp_variable = { FRA_anger_upper_limit = FRA_rol_anger }
+
+		# avoid going < 1 or > 10
+		clamp_temp_variable = {
+			var = FRA_anger_change
+			min = FRA_anger_lower_limit
+			max = FRA_anger_upper_limit
 		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_7
-		}
-		swap_ideas = {
-			remove_idea = FRA_resistance_of_locals_7
-			add_idea = FRA_resistance_of_locals_6
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_6
-		}
-		swap_ideas = {
-			remove_idea = FRA_resistance_of_locals_6
-			add_idea = FRA_resistance_of_locals_5
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_5
-		}
-		swap_ideas = {
-			remove_idea = FRA_resistance_of_locals_5
-			add_idea = FRA_resistance_of_locals_4
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_4
-		}
-		swap_ideas = {
-			remove_idea = FRA_resistance_of_locals_4
-			add_idea = FRA_resistance_of_locals_3
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_3
-		}
-		swap_ideas = {
-			remove_idea = FRA_resistance_of_locals_3
-			add_idea = FRA_resistance_of_locals_2
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_2
-		}
-		swap_ideas = {
-			remove_idea = FRA_resistance_of_locals_2
-			add_idea = FRA_resistance_of_locals_1
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = FRA_resistance_of_locals_1
-		}
-		add_political_power = 10
-		add_to_variable = {
-			FRA_resistance_of_locals_var = 1
+
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_variable = FRA_rol_anger } #bypass the check when initialising
+					NOT = { check_variable = { FRA_anger_change = 0 } }
+				}
+			}
+			if = {
+				limit = { check_variable = { FRA_anger_change > 0 } }
+				custom_effect_tooltip = FRA_resistance_of_locals_up
+				log = "Popular Anger Increased"
+			}
+			else = {
+				custom_effect_tooltip = FRA_resistance_of_locals_down
+				log = "Popular Anger Decreased"
+			}
+
+			# for the tooltips
+			set_temp_variable = { FRA_rol_anger_pp_temp = 0.01 }
+			multiply_temp_variable = { FRA_rol_anger_pp_temp = FRA_anger_change }
+
+			set_temp_variable = { FRA_rol_anger_stability_temp = 0.03 }
+			multiply_temp_variable = { FRA_rol_anger_stability_temp = FRA_anger_change }
+
+			set_temp_variable = { FRA_rol_anger_factory_output_temp = -0.03 }
+			multiply_temp_variable = { FRA_rol_anger_factory_output_temp = FRA_anger_change }
+
+			# set the new variables
+			add_to_variable = { FRA_rol_anger = FRA_anger_change }
+			add_to_variable = { FRA_rol_pp = FRA_rol_anger_pp_temp }
+			add_to_variable = { FRA_rol_stability = FRA_rol_anger_factory_output_temp }
+			add_to_variable = { FRA_rol_resist = FRA_rol_anger_stability_temp }
+			add_to_variable = { FRA_rol_cg = FRA_rol_anger_factory_output_temp }
+
+			log = "Current anger levels: Military Anger = [?RUS_military_anger], Popular Anger = [?SHA_aup_anger], Right-Anger = [?RUS_right_anger], Left-Anger = [?RUS_left_anger]"
 		}
 	}
 }

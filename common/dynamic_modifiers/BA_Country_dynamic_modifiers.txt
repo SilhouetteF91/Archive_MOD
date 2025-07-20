@@ -1853,6 +1853,12 @@ FRA_future_tech_modifier = { #미래 기술
 	weekly_manpower = FRA_future_tech_weekly
 	civilian_factory_use = FRA_future_tech_civ_use
 }
+FRA_rol_modifier = { #식민지인들의 저항
+	political_power_cost = FRA_rol_pp
+	stability_factor = FRA_rol_stability
+	compliance_growth = FRA_rol_cg
+	resistance_target = FRA_rol_resist
+}
 HEU_sanupgongsa = {
 	enable = {
 		always = yes

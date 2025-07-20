@@ -712,7 +712,7 @@
  FRA_great_FRA:0 "대프랑스의 길"
 
  FRA_industrialize:0 "망명의 길"
- FRA_industrialize_desc:0 "\n\n\n\n£GFX_decisions_fra_army\n\n\n\n\n\n\n\n'본토에서의 실패' 이후 프랑스는 망명의 길에 올랐습니다. 조국은 수많은 역경을 겪어왔고, 앞으로도 겪어나갈 것이지만, 그럼에도 견뎌낼 것입니다!\n\n   £GFX_pol_violence 식민지인들의 저항: §R[?FRA_resistance_of_locals_var]§!\n   §g식민지인들의 저항이 6일 때부터 프랑스는 붕괴할 위기를 안고 나아가야 합니다!§!\n\n   £GFX_occupation_costs 프랑스의 자주권: §Y[?FRA_sovereignty_var]§!\n   §g프랑스의 자주권이 2 이하가 된다면 군부가 행동할지도 모릅니다!§!"
+ FRA_industrialize_desc:0 "\n\n\n\n£GFX_decisions_fra_army\n\n\n\n\n\n\n\n'본토에서의 실패' 이후 프랑스는 망명의 길에 올랐습니다. 조국은 수많은 역경을 겪어왔고, 앞으로도 겪어나갈 것이지만, 그럼에도 견뎌낼 것입니다!\n\n\n   £GFX_pol_violence 식민지인들의 저항: §R[?FRA_rol_anger]§!\n   §g식민지인들의 저항이 8 이상이 된다면 프랑스 식민제국은 붕괴할 것입니다!§!\n"
 
  FRA_african_rage_mission: "확산되는 저항"
  FRA_input_military: "군대 투입"
@@ -794,13 +794,12 @@
  FRA_indochina_resources: "인도차이나로부터의 자원"
 
    #저항
- FRA_resistance_of_locals: "식민지인들의 저항\n§W단계:§! §Y[?FRA_resistance_of_locals_var]§!"
- FRA_sovereignty: "프랑스의 자주권\n§W단계:§! §Y[?FRA_sovereignty_var]§!"
-
- FRA_local_resistance_bad_tt: "§R식민지인들의 저항이 1 증가합니다!§!"
- FRA_local_resistance_good_tt: "§G식민지인들의 저항이 1 감소합니다!§!"
- FRA_sovereignty_good_tt: "§G프랑스의 자주권이 1 증가합니다!§!"
- FRA_sovereignty_bad_tt: "§R프랑스의 자주권이 1 감소합니다!§!"
+ FRA_resistance_of_locals: "식민지인들의 저항"
+ FRA_rol_modifier: "$FRA_resistance_of_locals$"
+ FRA_resistance_of_locals_tt: "$MODIFIER_POLITICAL_POWER_COST$ [?FRA_rol_pp|-=]\n$MODIFIER_STABILITY_FACTOR$: [?FRA_rol_stability|+=%]\n$MODIFIER_COMPLIANCE_GROWTH$: [?FRA_rol_cg|+=%]\n$MODIFIER_RESISTANCE_TARGET$: [?FRA_rol_resist|-=%]"
+ FRA_resistance_of_locals_desc: "§C식민지인 저항 단계§!: §Y[?FRA_rol_anger|0]§!\n식민지인들이 화나게 된 프랑스의 아프리카 식민화 과정에 대해 서술해줘."
+ FRA_resistance_of_locals_up: "§R식민지인 저항 단계가 [?FRA_anger_change]만큼 변화합니다.§!"
+ FRA_resistance_of_locals_down: "§G식민지인 저항 단계가 [?FRA_anger_change]만큼 변화합니다.§!"
 
  FRA_rebuilding_army: "병종 재건"
  FRA_focus_on_field_gun: "야포 주력"
@@ -960,8 +959,8 @@
  FRA_admin_not_good:0 "행정 혼란"
  FRA_resist_of_millenium:0 "산발적인 학생들의 저항"
  #프랑스 인물 
- FRA_francois_de_la_rocque:0 "프랑수아 드 라 로크"
- FRA_military_conference:0 "필리프 페텡"
+ FRA_francois_de_la_rocque: "프랑수아 드 라 로크"
+ FRA_military_conference: "필리프 페텡"
  FRA_henri:0 "앙리 모르닥"
  FRA_borough:0 "자치행정기구"
  FRA_borough_com:0 "자치 소비에트"

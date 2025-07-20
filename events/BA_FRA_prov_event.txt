@@ -188,10 +188,14 @@ country_event = {
 	title = FRA_prov_event.3.t
 	desc = FRA_prov_event.3.d
 	fire_only_once = yes
-	is_triggered_only = yes
 	trigger = {
 		tag = FRA
 		controls_state = 459
+		check_variable = {
+			var = FRA_rol_anger
+			compare = greater_than_or_equals
+			value = 8
+		}
 	}
 
 	immediate = {
@@ -963,7 +967,13 @@ country_event = {
 	hidden = no
 	picture = GFX_report_event_DEN_resistance
 	option = {
-		FRA_local_resistance_bad = yes
+		if = {
+			limit = {
+				check_variable = { FRA_rol_anger > 0 }
+			}
+			set_temp_variable = { FRA_anger_change = 1 }
+			FRA_change_rol_anger = yes
+		}
 		add_popularity = {
 			ideology = var:current_party_ideology_group
 			popularity = -0.01
@@ -6355,6 +6365,16 @@ unit_leader_event = {
 		name = FRA_pet.3.a
 		FRA_pierre_laval = {
 			set_nationality = MIL
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				original_tag = FRA
+			}
+			add_to_variable = {
+				FRA_ascended_advisor_1 = -1
+			}
 		}
 	}
 }

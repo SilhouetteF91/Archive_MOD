@@ -238,18 +238,27 @@ set_politics = {
 add_ideas = {
 	PASTA_signatories_of_the_stresa_idea
 	FRA_legacy_of_war
-	FRA_resistance_of_locals_1
-	FRA_sovereignty
+	FRA_resistance_of_locals
 }
-set_variable = {
-	FRA_resistance_of_locals_var = 1
+add_dynamic_modifier = {
+	modifier = FRA_rol_modifier
 }
-set_variable = {
-	FRA_sovereignty_var = 6
-}
+set_variable = { FRA_rol_pp = 0.01 }
+set_variable = { FRA_rol_stability = -0.03 }
+set_variable = { FRA_rol_resist = 0.03 }
+set_variable = { FRA_rol_cg = -0.03 }
+set_variable = { FRA_rol_anger = 1 }
 activate_mission = FRA_african_rage_mission
 set_autonomy = {
 	target = VIN
+	autonomy_state = autonomy_colony
+}
+set_autonomy = {
+	target = LAO
+	autonomy_state = autonomy_colony
+}
+set_autonomy = {
+	target = CAM
 	autonomy_state = autonomy_colony
 }
 if = {

@@ -18,74 +18,24 @@ ideas = {
 		}
 	}
 	country = {
-		#식민지인들의 저항
 		FRA_laval_prime_minister = {
 			modifier = {
 				political_power_factor = 0.1
 			}
 		}
-		FRA_resistance_of_locals_8 = { #식민지인들의 저항
-			name = FRA_resistance_of_locals
-			picture = chi_war_of_resistance3
-			modifier = {
-				political_power_cost = 1.2
-				stability_factor = -0.08
-			}
-		}
-		FRA_resistance_of_locals_7 = { #식민지인들의 저항
-			name = FRA_resistance_of_locals
-			picture = chi_war_of_resistance3
-			modifier = {
-				political_power_cost = 1.05
-				stability_factor = -0.07
-			}
-		}
-		FRA_resistance_of_locals_6 = { #식민지인들의 저항
-			name = FRA_resistance_of_locals
-			picture = chi_war_of_resistance3
-			modifier = {
-				political_power_cost = 0.9
-				stability_factor = -0.06
-			}
-		}
-		FRA_resistance_of_locals_5 = { #식민지인들의 저항
-			name = FRA_resistance_of_locals
-			picture = chi_war_of_resistance2
-			modifier = {
-				political_power_cost = 0.75
-				stability_factor = -0.05
-			}
-		}
-		FRA_resistance_of_locals_4 = { #식민지인들의 저항
-			name = FRA_resistance_of_locals
-			picture = chi_war_of_resistance2
-			modifier = {
-				political_power_cost = 0.6
-				stability_factor = -0.04
-			}
-		}
-		FRA_resistance_of_locals_3 = { #식민지인들의 저항
-			name = FRA_resistance_of_locals
+		#식민지인들의 저항
+		FRA_resistance_of_locals = {
 			picture = chi_war_of_resistance
-			modifier = {
-				political_power_cost = 0.45
-				stability_factor = -0.03
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			on_add = {
+				add_dynamic_modifier = { modifier = FRA_rol_modifier }
 			}
-		}
-		FRA_resistance_of_locals_2 = { #식민지인들의 저항
-			name = FRA_resistance_of_locals
-			picture = chi_war_of_resistance
-			modifier = {
-				political_power_cost = 0.3
-				stability_factor = -0.02
+			on_remove = {
+				remove_dynamic_modifier = { modifier = FRA_rol_modifier }
 			}
-		}
-		FRA_resistance_of_locals_1 = { #식민지인들의 저항
-			name = FRA_resistance_of_locals
-			picture = chi_war_of_resistance
 			modifier = {
-				political_power_cost = 0.15
-				stability_factor = -0.01
+				custom_modifier_tooltip = FRA_resistance_of_locals_tt
 			}
 		}
 		FRA_indochina_resources = { #인도차이나로부터의 자원
@@ -98,9 +48,6 @@ ideas = {
 			available = {
 				has_country_flag = FRA_has_indochina_issue
 			}
-		}
-		FRA_sovereignty = { #프랑스의 자주권
-			picture = FRA_political_violence
 		}
 
 		FRA_civilian_industry_1 = { #민간 산업
@@ -2124,7 +2071,7 @@ ideas = {
 				has_completed_focus = FRA_focus_rad_3
 			}
 		}
-		FRA_legacy_of_war = { #대 밀레니엄 대응 교리
+		FRA_legacy_of_war = { #지난 전쟁의 교훈
 			picture = ITA_bandits_war
 			allowed = {
 				original_tag = FRA
