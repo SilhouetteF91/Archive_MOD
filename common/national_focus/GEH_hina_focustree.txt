@@ -6735,6 +6735,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_cosmetic_tag = GEH_hina_empire
+
+			swap_ruler_traits = {
+				remove = GEH_military_chairman
+				add = GEH_military_chairman_hina
+			}
 		}
 	}
 
@@ -6768,6 +6773,8 @@ focus_tree = {
 				GEH_gehenna_order_department_idea_terrain_penalty_reduction = 0.05
 				tooltip = terrain_penalty_reduction_tt
 			}
+			custom_effect_tooltip = enter_tt
+			add_ideas = GEH_hina_freie_gehenna_jugend_idea
 		}
 	}
 
@@ -6801,6 +6808,9 @@ focus_tree = {
 				long_name = GEH_pro_hina_party_long
 				name = GEH_pro_hina_party
 			}
+
+			add_country_leader_trait = GEH_puppet_leader_hina_bad
+			
 		}
 	}
 
@@ -6870,7 +6880,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-
+			add_ideas = GEH_hina_friendship_idea
 		}
 	}
 
@@ -6907,7 +6917,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-
+			add_ideas = GEH_hina_solidarity_idea
 		}
 	}
 

@@ -1372,6 +1372,15 @@
  GEH_gehenna_order_department_idea: "[ROOT.GetAdjective] 질서부"
  GEH_gehenna_order_department_idea_desc: "질서부는 위대한 철인 지도자 소라사키 히나의 직속 부대로서, 국가의 안전에 해를 끼치는 사상범에 대한 사법권을 갖는 독립적인 군 조직입니다. 게헨나 정규군과는 지휘 체계가 분리되어 있으며, 어떠한 정치적, 군사적 견제 세력도 존재하지 않습니다.\n\n[GEH.GetNameDef]의 정규군인 실행부와의 관계성 문제로 인하여 질서부는 새로운 정치적 분란을 일으키고 있습니다."
 
+ GEH_hina_freie_gehenna_jugend_idea: "자유 게헨나 청년단"
+ GEH_hina_freie_gehenna_jugend_idea_desc: "게헨나의 청년들이 강제적으로 소속되어야 하는 정치조직입니다. 이 조직은 일당 독재 체제를 유지하기 위하여 청년들을 통제하고 관리하는 역할을 맡습니다."
+
+ GEH_hina_friendship_idea: "키보토스 범민족주의"
+ GEH_hina_friendship_idea_desc: "키보토스인은 위대하며, 지구의 현지인들을 지배할 수 있는 명백한 운명을 타고났습니다. 그들은 헤일로조차 없는 미개한 종족 아니던가요?"
+
+ GEH_hina_solidarity_idea: "국민 연대"
+ GEH_hina_solidarity_idea_desc: "현지인들은 키보토스계에 비해 '덜 평등'하지만, 조국의 승리를 위하여 '국민적 연대'를 해야 할 의무를 갖습니다."
+
  ### 인물
  GEH_hina: "소라사키 히나"
  GEH_dldhfl: "시로미 이오리"

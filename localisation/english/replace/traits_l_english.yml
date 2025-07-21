@@ -114,6 +114,8 @@
  GEH_yumeji_no_hana: "꿈길 위의 꽃\n§g소라사키 히나는 선도부 정보부에서부터 도이칠란트 중앙당에 이르기까지 광범위하게 퍼져 있던 아코에 대한 비토를 모두 물리치고, 두 사람의 행복을 이루어냈습니다.§!"
  GEH_the_terrible: "뇌제"
  GEH_the_guardian_of_freedom: "자유의 수호자"
+ GEH_puppet_leader_hina_bad: "꼭두각시 의장\n§g소라사키 히나는 자신의 의지로 국가를 통치하는 것이 아닌, 그저 '대중의 의지'를 대변하는 상징적 의장일 뿐입니다.§!"
+ GEH_military_chairman_hina: "실패한 군인 행정가"
 #레드윈터 / 붉은겨울
  hate_soviet: "반소비에트 정서\n" 
  b_tjrlwkd: "체리노 서기장 동지"
