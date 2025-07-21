@@ -12,7 +12,11 @@
  LAO_democratic_party_new:0 "베트남 국민당"
  LAO_communism_party_new:0 "인도차이나 공산당"
  LAO_neutrality_party_new:0 "총독부"
+ LAO_neutrality_party_:0 "총독부"
  LAO_fascism_party_new:0 "복국동맹회"
+ CAM_democratic_party:0 "총독부"
+ CAM_neutrality_party:0 "노로돔 왕조"
+ CAM_fascism_party:0 "군국주의 크메르"
 
  MEX_democratic_party:0 "PNR - 혁신파"
  MEX_democratic_party_long:0 "PNR - 멕시코 혁명당 - 혁신파"

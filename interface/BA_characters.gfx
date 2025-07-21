@@ -1331,6 +1331,13 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+# 캄보디아
+	spriteType = {
+		name = "GFX_portrait_CAM_Norodom_Sihanouk"
+		textureFile = "gfx/leaders/CAM/Portrait_CAM_Norodom_Sihanouk.tga"
+		legacy_lazy_load = no
+	}
+	
 # 프로젝트 KV
 	spriteType = {
 		name = "GFX_portrait_KAP_Kohane"

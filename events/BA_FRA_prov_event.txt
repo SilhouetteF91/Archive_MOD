@@ -1941,40 +1941,6 @@ country_event = {
 	hidden = no
 	option = {
 		name = FRA_prov_event.34.a
-		if ={
-			limit ={
-				CAM = {
-					exists = yes
-					onerlord = VIN
-					has_autonomy_state = autonomy_colony
-				}
-			}
-			set_autonomy = {
-				target = CAM
-				autonomy_state = autonomy_free
-			}
-			CAM = {
-				end_puppet = yes
-				drop_cosmetic_tag = yes
-			}
-		}
-		if = {
-			limit = {
-				LAO = {
-					exists = yes
-					overlord = VIN
-					has_autonomy_state = autonomy_colony
-				}
-			}
-			set_autonomy = {
-				target = LAO
-				autonomy_state = autonomy_free
-			}
-			LAO = {
-				end_puppet = yes
-				drop_cosmetic_tag = yes
-			}
-		}
 		VIN = {
 			add_ideas = VIN_indochina_war_idea
 			start_civil_war = {

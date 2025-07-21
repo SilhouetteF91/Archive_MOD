@@ -1,0 +1,18 @@
+characters={
+    CAM_Norodom_Sihanouk={
+        name=CAM_Norodom_Sihanouk
+        portraits={
+            civilian={
+                large="gfx/leaders/CAM/Portrait_CAM_Norodom_Sihanouk.tga"
+            }
+        }
+        country_leader={
+            ideology = conservatism
+            expire = "1953.3.1"
+        }
+        country_leader={
+            ideology = despotism
+            expire = "1953.3.1"
+        }
+    }
+}
