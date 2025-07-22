@@ -138,6 +138,9 @@ set_variable = { TRM_ideological_rallies_days = 90 }
 set_variable = { TRM_promote_ideology_rallies_cost = 50 }
 set_variable = { TRM_unification_propaganda_re_enable = 90 }
 
+set_variable = { TRN_Mika_social_problem_days = 60 }
+set_variable = { TRN_Mika_social_problem_var = 0 }
+
 # DIPLOMACY
 recruit_character = TRN_tea_party # 티파티
 recruit_character = TRN_tpdldk # 세이아
@@ -149,7 +152,6 @@ recruit_character = TRN_cmfnrl #츠루기
 recruit_character = TRN_empty
 recruit_character = TRN_Shirasu_Azusa
 recruit_character = TRN_Ibaragi_Yoshimi
-recruit_character = TRN_Ibaragi_Yoshimi_scientist
 recruit_character = TRN_gktmal
 recruit_character = TRN_Hifumi
 recruit_character = TRN_zhgkfn

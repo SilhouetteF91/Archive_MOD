@@ -1083,6 +1083,9 @@ characters={
 	TRN_Ibaragi_Yoshimi={ # 요시미
 		name=TRN_Ibaragi_Yoshimi
 		portraits={
+			civilian = {
+				large = GFX_Portrait_BlueArchive_TRM_Ibaragi_Yoshimi
+			}
 			army={
 				large= GFX_TRN_Ibaraki_Yoshimi_Portrait
 				small= GFX_TRN_Ibaraki_Yoshimi_idea
@@ -1119,16 +1122,6 @@ characters={
 				factor = 1.000
 			}
 		}
-	}
-	TRN_Ibaragi_Yoshimi_scientist = {
-		name=TRN_Ibaragi_Yoshimi
-		portraits={
-			army={
-				large= GFX_Portrait_BlueArchive_TRM_Ibaragi_Yoshimi
-				small= GFX_TRN_Ibaraki_Yoshimi_idea
-			}
-		}
-		gender = female
 
 		scientist = {
 			traits = { scientist_trait_rocketry_specialist scientist_trait_fast_learner }
@@ -1177,6 +1170,11 @@ characters={
 			}
 		}
 	}
+
+	##########
+	### 과학자 ###
+	##########
+	
 	#############
 	### 가상 인물 ###
 	#############

@@ -6693,6 +6693,147 @@ focus_tree = {
 		}
 	}
 
+	focus = { # 무너진 산업 복구
+		id = TRN_reconstruction_of_collapsed_industry
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = TRN_bring_in_vigilantes }
+		x = -1
+		y = 1
+		relative_position_id = TRN_bring_in_vigilantes
+		cost = 5
+
+		available = {
+			owns_state = 61
+			owns_state = 66
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			activate_targeted_decision = { target = 64 decision = TRN_Opelwerk_Brandenburg } # 브란덴부르크
+			activate_targeted_decision = { target = 65 decision = TRN_Lehnmuhle_Dam } # 작센
+			activate_targeted_decision = { target = 64 decision = TRN_dessert_shop_expansion } # 브란덴부르크 
+			activate_targeted_decision = { target = 61 decision = TRN_agricultural_support } # 메클렌부르크
+
+			activate_targeted_decision = { target = 65 decision = TRN_Infrastructure_Development } # 작센
+			activate_targeted_decision = { target = 60 decision = TRN_Infrastructure_Development } # 튀링겐
+			activate_targeted_decision = { target = 64 decision = TRN_Infrastructure_Development } # 브란덴부르크
+			activate_targeted_decision = { target = 68 decision = TRN_Infrastructure_Development } # 오스트마르크
+			activate_targeted_decision = { target = 86 decision = TRN_Infrastructure_Development } # 포즈난
+
+			add_stability = 0.03
+			add_tech_bonus = {
+				name = TRN_reconstruction_of_collapsed_industry
+				bonus = 1.0
+				uses = 2
+				category = construction_tech
+			}
+			
+		}
+	}
+
+	focus = { # 카이저 빌헬름 협회
+		id = TRN_KWG_open
+		icon = GFX_focus_generic_university_3
+		prerequisite = { 
+			focus = TRN_bring_in_vigilantes 
+		}
+		x = 1
+		y = 1
+		relative_position_id = TRN_bring_in_vigilantes
+		cost = 6
+
+		available = {
+			
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			add_research_slot_until_five = yes
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			add_tech_bonus = {
+				name = TRN_KWG_open
+				bonus = 1.5
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+	focus = { # 통신망 확대
+		id = TRN_Reconnect_network_and_power
+		icon = GFX_focus_generic_energy
+		prerequisite = { 
+			focus = TRN_bring_in_vigilantes 
+		}
+		x = 0
+		y = 2
+		relative_position_id = TRN_bring_in_vigilantes
+		cost = 5
+
+		available = {
+			
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			if = {
+				limit = { NOT = { is_special_project_completed = sp:sp_air_radar } }
+				complete_special_project = sp:sp_air_radar
+			}
+			add_tech_bonus = {
+				name = TRN_Reconnect_network_and_power
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+			hidden_effect = {
+				country_event = trnfla.22
+			}
+
+		}
+	}
+
+	focus = { # 철도망 개선
+		id = TRN_railway_improvement
+		icon = GFX_focus_generic_railroad
+		prerequisite = { 
+			focus = TRN_bring_in_vigilantes 
+		}
+		x = 2
+		y = 2
+		relative_position_id = TRN_bring_in_vigilantes
+		cost = 5
+
+		ai_will_do = {
+
+		}
+
+
+		available = {
+			has_idea = BA_railway_gauge_issue
+		}
+		bypass = {
+			NOT = { has_idea = BA_railway_gauge_issue }
+		}
+
+		completion_reward = {
+			modify_timed_idea = {
+				idea = BA_railway_gauge_issue
+				days = -1085
+			}
+		}
+	}
+
 	focus = { # 몰수, 분배, 집단화
 		id = TRN_confiscation_distribution_collectivization
 		icon = GFX_focus_generic_land_reclamation
@@ -6843,147 +6984,6 @@ focus_tree = {
 			activate_targeted_decision = { target = 63 decision = TRN_Stettin_heavy_industry } # 힌터포메른
 			activate_targeted_decision = { target = 762 decision = TRN_katowice_mining } # 카토비체
 			
-		}
-	}
-
-	focus = { # 무너진 산업 복구
-		id = TRN_reconstruction_of_collapsed_industry
-		icon = GFX_focus_generic_modernize_industry
-		prerequisite = { focus = TRN_bring_in_vigilantes }
-		x = -1
-		y = 1
-		relative_position_id = TRN_bring_in_vigilantes
-		cost = 5
-
-		available = {
-			owns_state = 61
-			owns_state = 66
-		}
-
-		ai_will_do = {
-
-		}
-		completion_reward = {
-			activate_targeted_decision = { target = 64 decision = TRN_Opelwerk_Brandenburg } # 브란덴부르크
-			activate_targeted_decision = { target = 65 decision = TRN_Lehnmuhle_Dam } # 작센
-			activate_targeted_decision = { target = 64 decision = TRN_dessert_shop_expansion } # 브란덴부르크 
-			activate_targeted_decision = { target = 61 decision = TRN_agricultural_support } # 메클렌부르크
-
-			activate_targeted_decision = { target = 65 decision = TRN_Infrastructure_Development } # 작센
-			activate_targeted_decision = { target = 60 decision = TRN_Infrastructure_Development } # 튀링겐
-			activate_targeted_decision = { target = 64 decision = TRN_Infrastructure_Development } # 브란덴부르크
-			activate_targeted_decision = { target = 68 decision = TRN_Infrastructure_Development } # 오스트마르크
-			activate_targeted_decision = { target = 86 decision = TRN_Infrastructure_Development } # 포즈난
-
-			add_stability = 0.03
-			add_tech_bonus = {
-				name = TRN_reconstruction_of_collapsed_industry
-				bonus = 1.0
-				uses = 2
-				category = construction_tech
-			}
-			
-		}
-	}
-
-	focus = { # 카이저 빌헬름 협회
-		id = TRN_KWG_open
-		icon = GFX_focus_generic_university_3
-		prerequisite = { 
-			focus = TRN_bring_in_vigilantes 
-		}
-		x = 1
-		y = 1
-		relative_position_id = TRN_bring_in_vigilantes
-		cost = 6
-
-		available = {
-			
-		}
-
-		ai_will_do = {
-
-		}
-		completion_reward = {
-			add_research_slot_until_five = yes
-			custom_effect_tooltip = tooltip_white_line
-			add_breakthrough_progress = {
-				specialization = specialization_land
-				value = 0.5
-			}
-			add_tech_bonus = {
-				name = TRN_KWG_open
-				bonus = 1.5
-				uses = 1
-				category = electronics
-			}
-		}
-	}
-
-	focus = { # 통신망 확대
-		id = TRN_Reconnect_network_and_power
-		icon = GFX_focus_generic_energy
-		prerequisite = { 
-			focus = TRN_bring_in_vigilantes 
-		}
-		x = 0
-		y = 2
-		relative_position_id = TRN_bring_in_vigilantes
-		cost = 5
-
-		available = {
-			
-		}
-
-		ai_will_do = {
-
-		}
-		completion_reward = {
-			if = {
-				limit = { NOT = { is_special_project_completed = sp:sp_air_radar } }
-				complete_special_project = sp:sp_air_radar
-			}
-			add_tech_bonus = {
-				name = TRN_Reconnect_network_and_power
-				bonus = 0.5
-				uses = 2
-				category = electronics
-			}
-			hidden_effect = {
-				country_event = trnfla.22
-			}
-
-		}
-	}
-
-	focus = { # 철도망 개선
-		id = TRN_railway_improvement
-		icon = GFX_focus_generic_railroad
-		prerequisite = { 
-			focus = TRN_bring_in_vigilantes 
-		}
-		x = 2
-		y = 2
-		relative_position_id = TRN_bring_in_vigilantes
-		cost = 5
-
-		ai_will_do = {
-
-		}
-
-
-		available = {
-			has_idea = BA_railway_gauge_issue
-		}
-		bypass = {
-			NOT = { has_idea = BA_railway_gauge_issue }
-		}
-
-		completion_reward = {
-			modify_timed_idea = {
-				idea = BA_railway_gauge_issue
-				days = -1085
-			}
 		}
 	}
 	
@@ -7614,9 +7614,18 @@ focus_tree = {
 				country_event = { id = trinity.40 days = 01 }
 				country_event = { id = trnfla.16 days = 30 }
 			}
-			add_timed_idea = {
-				idea = TRN_rebuild_ns
-				days = 365
+			IF = {
+				limit = { has_completed_focus = TRN_confiscation_distribution_collectivization }
+				add_timed_idea = {
+					idea = TRN_rebuild_ns
+					days = 400
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = TRN_rebuild_ns
+					days = 365
+				}
 			}
 			add_political_power = 50
 		}

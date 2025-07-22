@@ -1654,6 +1654,17 @@ ideas = {
 			}
 		}
 
+		
+		TRN_strike_season_ns = {
+			picture = ICE_general_strike
+			modifier = {
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
 		TRN_arius_problem_ns = {
 			on_add = {
 				TRM = {

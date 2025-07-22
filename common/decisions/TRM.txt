@@ -8676,8 +8676,9 @@ TRN_trinity_world_cat = {
 }
 TRN_Mika_social_problem_cat = {
 	TRN_Mika_social_problem = {
+		priority = 999
 		icon = GFX_decision_SWI_consolidate_council_power
-		allowed = { always = no } #manually activated
+		allowed = { tag = TRM } #manually activated
 		selectable_mission = yes
 		is_good = no
 		fire_only_once = yes
@@ -8685,6 +8686,10 @@ TRN_Mika_social_problem_cat = {
 		fixed_random_seed = no
 		cancel_trigger = {
 			NOT = { has_idea = TRN_social_problem_ns }
+		}
+
+		activation = {
+			has_idea = TRN_social_problem_ns
 		}
 		ai_will_do = { base = 1000 }
 
@@ -8700,13 +8705,8 @@ TRN_Mika_social_problem_cat = {
 			}
 		}
 		timeout_effect = {
-			custom_effect_tooltip =TRN_Mika_social_problem_tt
-			add_to_variable = { TRN_Mika_social_problem_var = 1 }
-			clamp_variable = {
-				var = TRN_Mika_social_problem_var
-				min = 0
-				max = 10
-			}
+			custom_effect_tooltip = TRN_Mika_social_problem_tt
+			hidden_effect = { TRN_add_social_problem = yes }
 
 			add_stability = -0.025
 			add_popularity = { ideology = ROOT popularity = -0.025 }
@@ -8762,6 +8762,34 @@ TRN_Mika_social_problem_cat = {
 		}
 		remove_effect = {
 			set_country_flag = TRN_Mika_social_trinity_language_flag
+		}
+	}
+
+	TRN_Mika_social_appeasement_of_poor_decision = {
+		icon = GFX_decision_trinity_skill_books
+
+		allowed = { tag = TRM } #activated by effect
+
+		available = {
+			has_idea = TRN_social_problem_ns
+		}
+
+		days_remove = 85
+		fire_only_once = no
+
+		modifier = {
+
+		}
+
+		ai_will_do = {
+			base = 120
+		}
+
+		complete_effect = {
+			
+		}
+		remove_effect = {
+
 		}
 	}
 
