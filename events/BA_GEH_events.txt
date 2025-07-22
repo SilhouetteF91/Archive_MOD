@@ -4512,6 +4512,126 @@ country_event = { #인민 대중의 지지에 환호하라
 	}
 }
 
+country_event = { #위대한 대중의 승리
+	id = GEH.hina.story_event.14
+	title = GEH.hina.story_event.14.t
+	desc = GEH.hina.story_event.14.desc
+
+	picture = GFX_report_event_generic_reloading
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.14.a 
+
+	}
+}
+
+country_event = { #열성부 승리 방송
+	id = GEH.hina.story_event.15
+	title = GEH.hina.story_event.15.t
+	desc = GEH.hina.story_event.15.desc
+
+	picture = GFX_report_event_generic_door
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.15.a 
+
+	}
+}
+
+country_event = { #경제 개혁
+	id = GEH.hina.story_event.16
+	title = GEH.hina.story_event.16.t
+	desc = GEH.hina.story_event.16.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_1
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.16.a 
+
+	}
+}
+
+country_event = { #대게헨나국 헌법
+	id = GEH.hina.story_event.17
+	title = GEH.hina.story_event.17.t
+	desc = GEH.hina.story_event.17.desc
+
+	picture = GFX_report_event_prefect_team_mob_gun_1
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.17.a 
+
+	}
+}
+
+country_event = { #청년 게헨나당
+	id = GEH.hina.story_event.18
+	title = GEH.hina.story_event.18.t
+	desc = GEH.hina.story_event.18.desc
+
+	picture = GFX_report_event_prefect_team_mob_gun_2
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.18.a 
+
+	}
+}
+
+country_event = { #웃으세요! - 1
+	id = GEH.hina.story_event.19
+	title = GEH.hina.story_event.19.t
+	desc = GEH.hina.story_event.19.desc
+
+	picture = GFX_report_event_generic_city
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.19.a 
+		country_event = { id = GEH.hina.story_event.20 }
+	}
+}
+
+country_event = { #웃으세요! - 2
+	id = GEH.hina.story_event.20
+	title = GEH.hina.story_event.20.t
+	desc = GEH.hina.story_event.20.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_2
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.20.a 
+		country_event = { id = GEH.hina.story_event.21 }
+	}
+}
+
+country_event = { #웃으세요! - 3
+	id = GEH.hina.story_event.21
+	title = GEH.hina.story_event.21.t
+	desc = GEH.hina.story_event.21.desc
+
+	picture = GFX_event_GEH_event_40
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = GEH.hina.story_event.21.a 
+		custom_effect_tooltip = GEH_hina_route_ending_3_tt
+	}
+}
+
 country_event = { #생각 캐비닛
 	id = GEH.hina.gov_event.1
 	title = GEH.hina.gov_event.1.t

@@ -3531,6 +3531,13 @@ focus_tree = {
 				}
             	country_event = { id = GEH.hina.story_event.5 days = 4 }
 			}
+			if = {
+				limit = {
+					has_completed_focus = GEH_hina_route_focus
+				}
+				
+            	country_event = { id = GEH.hina.story_event.14 days = 1 }
+			}
 		}
 	}
     focus = {
@@ -6532,6 +6539,7 @@ focus_tree = {
 			add_dynamic_modifier = {
 				modifier = GEH_gehenna_order_department_idea
 			}
+            country_event = { id = GEH.hina.story_event.15 }
 		}
 	}
 
@@ -6577,6 +6585,7 @@ focus_tree = {
 				GEH_gehenna_order_department_idea_consumer_goods_factor = -0.1
 				tooltip = consumer_goods_factor_tt
 			}
+            country_event = { id = GEH.hina.story_event.16 }
 		}
 	}
 
@@ -6664,6 +6673,7 @@ focus_tree = {
 				GEH_gehenna_order_department_idea_industry_repair_factor = 0.1
 				tooltip = industry_repair_factor_tt
 			}
+            country_event = { id = GEH.hina.story_event.16 }
 		}
 	}
 
@@ -6740,6 +6750,7 @@ focus_tree = {
 				remove = GEH_military_chairman
 				add = GEH_military_chairman_hina
 			}
+            country_event = { id = GEH.hina.story_event.17 }
 		}
 	}
 
@@ -6811,6 +6822,7 @@ focus_tree = {
 
 			add_country_leader_trait = GEH_puppet_leader_hina_bad
 			
+            country_event = { id = GEH.hina.story_event.18 }
 		}
 	}
 
@@ -6950,7 +6962,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-
+            country_event = { id = GEH.hina.story_event.19 }
 		}
 	}
 
