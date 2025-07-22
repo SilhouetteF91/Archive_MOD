@@ -7137,6 +7137,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_cosmetic_tag = TRINITY_REICH
+			custom_effect_tooltip = TRM_reduce_decreasing_conscription_factor_tt
+			add_to_variable = { TRM_monthly_conscription_factor_increase = 0.005 }
+			custom_effect_tooltip = TRM_change_appeasement_germany_to_pro_german_propaganda_tt
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = TRM_appeasement_germany_modifier }
+				add_dynamic_modifier = { modifier = TRM_pro_german_propaganda_modifier }
+			}
 			if = {
 				limit = { has_idea = TRN_broken_balance_ns }
 				remove_ideas = TRN_broken_balance_ns

@@ -25,6 +25,44 @@ add_breakthrough_progress = {
 	value = 0.3
 }
 
+#친독일 프로파간다 매주 감소 징병인구
+set_variable = { TRM_propaganda_monthly_conscription_factor_start = -0.01 } #시작 시 CF 값
+set_variable = { TRM_propaganda_expected_consumer_goods_penalty = 0.1 } #징병가능인구 -50% 달성시 패널티
+set_variable = { TRM_propaganda_factory_output_penalty = 0.2 } #100% CFFF 도달 시 받는 군수공장 패널티
+set_variable = { TRM_propaganda_dockyard_output_penalty = 0.2 } #100% CFFF 도달 시 받는 조선소 패널티
+
+
+#친독일 프로파간다
+set_variable = { TRM_monthly_conscription_factor_increase = TRM_propaganda_monthly_conscription_factor_start } #매주 감소하는 양
+set_variable = { TRM_pro_german_propaganda_conscription_factor = -0.02 } #
+set_variable = { TRM_pro_german_propaganda_civilian_intel_to_others = -5 }
+set_variable = { TRM_pro_german_propaganda_army_intel_to_others = -5 }
+set_variable = { TRM_pro_german_propaganda_navy_intel_to_others = -5 }
+set_variable = { TRM_pro_german_propaganda_airforce_intel_to_others = -5 }
+set_variable = { TRM_pro_german_propaganda_mobilization_speed = 0.10 }
+set_variable = { TRM_pro_german_propaganda_production_speed_arms_factory_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_production_speed_dockyard_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_industrial_capacity_factory = 0 }
+set_variable = { TRM_pro_german_propaganda_industrial_capacity_dockyard = 0 }
+set_variable = { TRM_pro_german_propaganda_production_lack_of_resource_penalty_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_conversion_cost_civ_to_mil_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_industry_air_damage_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_resource_trade_cost_bonus_per_factory = 0 }
+set_variable = { TRM_pro_german_propaganda_production_speed_buildings_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_research_speed_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_economy_cost_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_trade_laws_cost_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_economy_modifier_local_resources_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_production_factory_max_efficiency_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_production_factory_efficiency_gain_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_production_factory_start_efficiency_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_line_change_production_efficiency_factor = 0 }
+set_variable = { TRM_pro_german_propaganda_equipment_conversion_speed = 0 }
+set_variable = { TRM_pro_german_propaganda_consumer_goods_expected_value = 0 }
+set_variable = { conscription_factor = -0.60 } #취소 시
+
+add_dynamic_modifier = { modifier = TRM_appeasement_germany_modifier }
+
 set_variable = { country_intro_page_count = 4 } #Intro screen
 
 set_variable = { TRN_opp_auto_var = 2 }

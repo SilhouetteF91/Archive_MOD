@@ -10398,11 +10398,17 @@ country_event = { # 중앙구에서 대규모 시위
 	}
 	after = {
 		add_war_support = -0.05
+		custom_effect_tooltip = TRM_increase_decreasing_conscription_factor_tt
+		add_to_variable = { TRM_monthly_conscription_factor_increase = -0.005 }
 		hidden_effect = {
 			news_event = { id = trinitynews.6 hours = 04 }
 			country_event = { id = trnsocial.1 days = 15 }
 		}
-		add_ideas = TRN_social_problem_ns
+		custom_effect_tooltip = TRM_change_pro_german_propaganda_to_trinity_social_issues_tt
+		hidden_effect = {
+			remove_dynamic_modifier = { modifier = TRM_pro_german_propaganda_modifier }
+			add_dynamic_modifier = { modifier = TRM_trinity_social_issues_modifier }
+		}
 	}
 }
 
