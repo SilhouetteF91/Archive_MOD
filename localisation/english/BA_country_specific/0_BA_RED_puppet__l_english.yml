@@ -213,7 +213,7 @@
  # 2차 대북방전쟁 - 핀란드 붉은겨울 전쟁
 
  RED_second_great_northern_war: "2차 대북방전쟁"
- RED_second_great_northern_war_desc: "§Y덴마크§!, §Y노르웨이§!, §Y스웨덴§!의 영토 위에 설립된 §Y군정청§!은 일반적으로 붉은겨울 연방학원의 일부로 여겨지나, §Y북방 주권 전쟁§!이 준비중인 현재 군정청을 §G포섭§! 하기 위한 시도가 [RENSW_RED_leader_ADJ]와 [RENSW_RE4_leader_ADJ]에 의해 주도되고 있습니다. 영향력 경쟁에서 패배한다면 §Y군정청§!은 §Y북방 주권 전쟁§!에서 §R상대 편§!으로 참여할 것입니다.\n\n영향력의 경우 §Y북방 주권 전쟁§!에서 §Y군정청§!은 §g[RENSW_RE4_leader_ADJ]§!의 편을 따르나, §S[RENSW_RED_leader_ADJ]§!의 영향력이 100에 도달할 경우 해당 §Y군정청§!은 §S[RENSW_RED_leader_ADJ]§!의 편으로 참여할 것입니다."
+ RED_second_great_northern_war_desc: "§Y덴마크§!, §Y노르웨이§!, §Y스웨덴§!의 영토 위에 설립된 §Y군정청§!은 일반적으로 붉은겨울 연방학원의 일부로 여겨지나, 핀란드가 광범위한 북유럽 망명위원회를 조직하고 §Y2차 대북방전쟁§!을 부르짖는 지금 각지에서 군정청을 §G장악§! 하기 위한 시도가 §S붉은겨울§!과 §C핀란드§!에 의해 주도되고 있습니다.\n\n영향력의 경우 §Y2차 대북방전쟁§!에서 §Y군정청§!은 일반적으로 중립을 지키나, §S붉은겨울§!과 §C핀란드§!가 모든 영향력 범위를 장악할 시 §R북유럽 내전§!이 발발하고 내전을 지원하기 위한 여러 결정이 해금됩니다."
 
  red_second_great_northern_war_RED_side_icon_tt: "현재 붉은겨울은 아래와 같은 영향력을 발휘하고 있습니다:\n §Y[RE1.GetNameWithFlag]§! 영향력 [?global.red_re1_second_great_northern_war_red_var|S.0]\n §Y[RE2.GetNameWithFlag]§! 영향력 [?global.red_re2_second_great_northern_war_red_var|S.0]\n §Y[RE3.GetNameWithFlag]§! 영향력 [?global.red_re3_second_great_northern_war_red_var|S.0]"
  red_second_great_northern_war_FIN_side_icon_tt: "현재 핀란드는 아래와 같은 영향력을 발휘하고 있습니다:\n §Y[RE1.GetNameWithFlag]§! 영향력 [?global.red_re1_second_great_northern_war_fin_var|C.0]\n §Y[RE2.GetNameWithFlag]§! 영향력 [?global.red_re2_second_great_northern_war_fin_var|C.0]\n §Y[RE3.GetNameWithFlag]§! 영향력 [?global.red_re3_second_great_northern_war_fin_var|C.0]"
@@ -229,6 +229,17 @@
  red_second_great_northern_war_FIN_tt: "§Y핀란드§!의 영향력 변동: $RIGHT|=C.0$"
  red_second_great_northern_war_FIN_var_upper_tt: "§Y핀란드§!의 영향력이 $RIGHT|C.0$ 보다 큼"
  red_second_great_northern_war_FIN_var_downer_tt: "§Y핀란드§!의 영향력이 $RIGHT|C.0$ 보다 작음"
+
+ RE4_second_great_northern_war_started: "2차 대북방전쟁이 시작됨"
+ second_great_northern_war_civilwar_flag: "§Y북유럽 내전§!이 발발함"
+
+ second_great_northern_war_FIN_military_government_RE1: "[RE1.GetName]: 민족주의 선전"
+ second_great_northern_war_FIN_military_government_RE2: "[RE2.GetName]: 민족주의 선전"
+ second_great_northern_war_FIN_military_government_RE3: "[RE3.GetName]: 민족주의 선전"
+
+ second_great_northern_war_RED_military_government_RE1: "[RE1.GetName]: 반자본주의 선전"
+ second_great_northern_war_RED_military_government_RE2: "[RE2.GetName]: 반자본주의 선전"
+ second_great_northern_war_RED_military_government_RE3: "[RE3.GetName]: 반자본주의 선전"
 
  RE4_finland_war_flag_FINWIN: "§Y동방 공세§!: [FIN.GetNameWithFlag]의 승리"
  RE4_finland_war_flag_RE4WIN: "§Y동방 공세§!: [RE4.GetNameWithFlag]의 승리"
