@@ -1,0 +1,74 @@
+defined_text = {
+	name = GetTrmCFTooltip
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = TRM_appeasement_germany_modifier }
+		}
+		localization_key = TRM_appeasement_germany_modifier_tt 
+	}
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = TRM_pro_german_propaganda_modifier }
+		}
+		localization_key = TRM_pro_german_propaganda_modifier_tt
+	}
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = TRM_trinity_social_issues_modifier }
+		}
+		localization_key = TRM_trinity_social_issues_modifier_tt 
+	}
+}
+
+defined_text = {
+	name = GetTrCFLevelText
+	text = {
+		trigger = {
+			OR = {
+				has_dynamic_modifier = { modifier = TRM_appeasement_germany_modifier }
+				has_dynamic_modifier = { modifier = TRM_pro_german_propaganda_modifier }
+				has_dynamic_modifier = { modifier = TRM_trinity_social_issues_modifier }
+			}
+			check_variable = { var = TRM_pro_german_propaganda_conscription_factor value = -0.50 compare = less_than_or_equals }
+		}
+		localization_key = TRM_max_CF_tt
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_dynamic_modifier = { modifier = TRM_appeasement_germany_modifier }
+				has_dynamic_modifier = { modifier = TRM_pro_german_propaganda_modifier }
+				has_dynamic_modifier = { modifier = TRM_trinity_social_issues_modifier }
+			}
+			check_variable = { TRM_pro_german_propaganda_conscription_factor > -0.50 }
+		}
+		localization_key = TRM_increasing_cf_tt 
+	}
+}
+
+defined_text = {
+	name = GetTrmCFPenaltiesText
+	text = {
+		trigger = {
+			OR = {
+				has_dynamic_modifier = { modifier = TRM_appeasement_germany_modifier }
+				has_dynamic_modifier = { modifier = TRM_pro_german_propaganda_modifier }
+				has_dynamic_modifier = { modifier = TRM_trinity_social_issues_modifier }
+			}
+			check_variable = { TRM_pro_german_propaganda_conscription_factor > -0.25 }
+		}
+		localization_key = TRM_CF_penalties_may_apply
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_dynamic_modifier = { modifier = TRM_appeasement_germany_modifier }
+				has_dynamic_modifier = { modifier = TRM_pro_german_propaganda_modifier }
+				has_dynamic_modifier = { modifier = TRM_trinity_social_issues_modifier }
+			}
+			check_variable = { var = TRM_pro_german_propaganda_conscription_factor value = -0.25 compare = less_than_or_equals }
+			NOT = { check_variable = { TRM_pro_german_propaganda_consumer_goods_expected_value > 0 }}
+		}
+		localization_key = TRM_CF_penalties_warning 
+	}
+}

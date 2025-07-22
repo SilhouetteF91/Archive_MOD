@@ -183,7 +183,11 @@ TRN_Mika_social_problem_cat = {
 
 	allowed = { original_tag = TRM }
 	visible = {
-		has_idea = TRN_social_problem_ns
+		OR = {
+			has_dynamic_modifier = { modifier = TRM_appeasement_germany_modifier }
+			has_dynamic_modifier = { modifier = TRM_pro_german_propaganda_modifier }
+			has_dynamic_modifier = { modifier = TRM_trinity_social_issues_modifier }
+		}
 	}
 	visible_when_empty = yes
 }

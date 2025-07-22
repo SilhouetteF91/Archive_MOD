@@ -8685,11 +8685,19 @@ TRN_Mika_social_problem_cat = {
 		days_mission_timeout = TRN_Mika_social_problem_days
 		fixed_random_seed = no
 		cancel_trigger = {
-			NOT = { has_idea = TRN_social_problem_ns }
+			NOT = {
+				has_dynamic_modifier = { modifier = TRM_appeasement_germany_modifier }
+				has_dynamic_modifier = { modifier = TRM_pro_german_propaganda_modifier }
+				has_dynamic_modifier = { modifier = TRM_trinity_social_issues_modifier }
+			}
 		}
 
 		activation = {
-			has_idea = TRN_social_problem_ns
+			OR = {
+				has_dynamic_modifier = { modifier = TRM_appeasement_germany_modifier }
+				has_dynamic_modifier = { modifier = TRM_pro_german_propaganda_modifier }
+				has_dynamic_modifier = { modifier = TRM_trinity_social_issues_modifier }
+			}
 		}
 		ai_will_do = { base = 1000 }
 
@@ -8705,8 +8713,45 @@ TRN_Mika_social_problem_cat = {
 			}
 		}
 		timeout_effect = {
+			if = {
+				limit = {
+					check_variable = { TRM_pro_german_propaganda_conscription_factor > -0.50 }
+				}
+				add_to_variable = { TRM_pro_german_propaganda_conscription_factor = TRM_monthly_conscription_factor_increase }
+				clamp_variable = {
+					var = TRM.TRM_pro_german_propaganda_conscription_factor
+					min = -0.50
+				}
+				if = { #Apply penalties if CG is 100% or more
+					limit = {
+						NOT = { has_country_flag = TRM_pro_german_propaganda_penalty_flag }
+						check_variable = { var = TRM_pro_german_propaganda_conscription_factor value = -0.50 compare = less_than_or_equals }
+					}
+					set_country_flag = TRM_pro_german_propaganda_penalty_flag
+					add_to_variable = { TRM_pro_german_propaganda_consumer_goods_expected_value = TRM_propaganda_expected_consumer_goods_penalty }
+					subtract_from_variable = { TRM_pro_german_propaganda_industrial_capacity_factory = TRM_propaganda_factory_output_penalty }
+					subtract_from_variable = { TRM_pro_german_propaganda_industrial_capacity_dockyard = TRM_propaganda_dockyard_output_penalty }
+				}
+			}
+
+			if = {
+				limit = {
+					has_country_flag = TRM_pro_german_propaganda_penalty_flag
+					check_variable = { TRM_pro_german_propaganda_conscription_factor > -0.50 }
+				}
+				clr_country_flag = TRM_pro_german_propaganda_penalty_flag
+				subtract_from_variable = { TRM_pro_german_propaganda_consumer_goods_expected_value = TRM_propaganda_expected_consumer_goods_penalty }
+				add_to_variable = { TRM_pro_german_propaganda_industrial_capacity_factory = TRM_propaganda_factory_output_penalty }
+				add_to_variable = { TRM_pro_german_propaganda_industrial_capacity_dockyard = TRM_propaganda_dockyard_output_penalty }
+			}
+
 			custom_effect_tooltip = TRN_Mika_social_problem_tt
-			hidden_effect = { TRN_add_social_problem = yes }
+			add_to_variable = { TRN_Mika_social_problem_var = 1 }
+			clamp_variable = {
+				var = TRN_Mika_social_problem_var
+				min = 0
+				max = 10
+			}
 
 			add_stability = -0.025
 			add_popularity = { ideology = ROOT popularity = -0.025 }
@@ -8734,7 +8779,11 @@ TRN_Mika_social_problem_cat = {
 		allowed = { original_tag = TRM } #activated by effect
 
 		available = {
-			has_idea = TRN_social_problem_ns
+			OR = {
+				has_dynamic_modifier = { modifier = TRM_appeasement_germany_modifier }
+				has_dynamic_modifier = { modifier = TRM_pro_german_propaganda_modifier }
+				has_dynamic_modifier = { modifier = TRM_trinity_social_issues_modifier }
+			}
 		}
 
 		days_remove = 365
@@ -8750,15 +8799,12 @@ TRN_Mika_social_problem_cat = {
 		}
 
 		complete_effect = {
-			add_to_variable = { 
-				TRN_Mika_social_problem_var = 1
-				tooltip = TRN_Mika_social_problem_var_plus
+			custom_effect_tooltip = TRM_CF_modifier_tt
+			add_to_variable = {
+				TRM_pro_german_propaganda_conscription_factor = 0.02
+				tooltip = conscription_factor_tt
 			}
-			clamp_variable = {
-				var = TRN_Mika_social_problem_var
-				min = 0
-				max = 10
-			}
+			custom_effect_tooltip = enter_tt
 		}
 		remove_effect = {
 			set_country_flag = TRN_Mika_social_trinity_language_flag
@@ -8771,7 +8817,11 @@ TRN_Mika_social_problem_cat = {
 		allowed = { tag = TRM } #activated by effect
 
 		available = {
-			has_idea = TRN_social_problem_ns
+			OR = {
+				has_dynamic_modifier = { modifier = TRM_appeasement_germany_modifier }
+				has_dynamic_modifier = { modifier = TRM_pro_german_propaganda_modifier }
+				has_dynamic_modifier = { modifier = TRM_trinity_social_issues_modifier }
+			}
 		}
 
 		days_remove = 85
@@ -8786,7 +8836,12 @@ TRN_Mika_social_problem_cat = {
 		}
 
 		complete_effect = {
-			
+			custom_effect_tooltip = TRM_CF_modifier_tt
+			add_to_variable = {
+				TRM_pro_german_propaganda_conscription_factor = 0.03
+				tooltip = conscription_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
 		}
 		remove_effect = {
 
